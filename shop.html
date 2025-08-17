@@ -60,22 +60,29 @@ section {margin-bottom: 40px;}</style>
   <footer style="padding: 20px; text-align:center; background:#f0f0f0;">
     <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
   </footer>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const symbolURL = 'league-symbol.jpeg';
-  function addIcon(el) {
-    var img = document.createElement('img');
-    img.src = symbolURL;
-    img.alt = 'League symbol';
+  const icons = {
+    'League': 'league-symbol.jpeg',
+    'Nature': 'nature-symbol.jpeg',
+    'Horde': 'horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(function(a){
-    if (a.textContent.trim() === 'League') addIcon(a);
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
   });
-  document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function(h) {
-    if (h.textContent.trim() === 'League') addIcon(h);
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
   });
 });
 </script>

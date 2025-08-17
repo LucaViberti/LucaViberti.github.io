@@ -3,46 +3,138 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TopHeroes Guidelines</title>
+  <title>TopHeroes Guide</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin: 40px; max-width: 800px; line-height: 1.6; }
-    header { margin-bottom: 20px; }
-    nav a { margin-right: 10px; }
+    body {font-family: system-ui, sans-serif; margin: 0; padding: 0; line-height: 1.6;}
+    header {background: #222; color: white; padding: 20px;}
+    nav ul {list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
+    nav ul li {position: relative; margin-right: 20px;}
+    nav ul li a {color: white; text-decoration: none; padding: 8px;}
+    nav ul li ul {display: none; position: absolute; background: #333; list-style: none; padding: 0; margin: 0; min-width: 180px;}
+    nav ul li:hover ul {display: block;}
+    nav ul li ul li a {display: block; padding: 8px; color: white;}
+    nav ul li ul li a:hover {background: #444;}
+    main {padding: 20px;}
+    section {margin-bottom: 40px;}
   </style>
 </head>
 <body>
   <header>
-    <h1>TopHeroes Guidelines</h1>
+    <h1>TopHeroes Guide</h1>
+    <p>PLD Paladins Server 10477</p>
     <nav>
-      <a href="#overview">Overview</a>
-      <a href="#principles">Principles</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#heroes">Heroes</a>
+          <ul>
+            <li><a href="#league">League</a></li>
+            <li><a href="#nature">Nature</a></li>
+            <li><a href="#horde">Horde</a></li>
+          </ul>
+        </li>
+        <li><a href="#building">Building</a></li>
+        <li><a href="#villagers">Villagers</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#gear">Gear</a>
+          <ul>
+            <li><a href="#exclusive-gear">Exclusive Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="#adventure">Adventure</a></li>
+        <li><a href="#guildboss">Guild Boss</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#guild-race">Guild Race</a></li>
+        <li><a href="#arms-race">Arms Race</a></li>
+        <li><a href="#kingdom">Kingdom vs Kingdom</a></li>
+        <li><a href="#lord-gear">Lord Gear & Relics</a></li>
+        <li><a href="#beginners">Beginners Guide</a></li>
+        <li><a href="#shop">Shop (F2P & Spending)</a></li>
+        <li><a href="#tips">Tips & More</a></li>
+      </ul>
     </nav>
   </header>
-
   <main>
     <section id="overview">
-      <h2>Overview</h2>
-      <p>Welcome to the TopHeroes project guidelines. This site outlines how to contribute and adhere to our standards.</p>
+      <h2>Welcome</h2>
+      <p>Welcome! This website is created to help you with some basic stuff in the game.</p>
     </section>
-
-    <section id="principles">
-      <h2>Principles</h2>
-      <ul>
-        <li>Strive for clarity and openness in communication.</li>
-        <li>Maintain high code quality with documentation and tests.</li>
-        <li>Collaborate respectfully with team members.</li>
-        <li>Follow best practices for security and privacy.</li>
-      </ul>
+    <section id="heroes">
+      <h2>Heroes</h2>
+      <p>Select a faction below to learn more.</p>
     </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach the TopHeroes team at <a href="mailto:contact@topheroes.example">contact@topheroes.example</a>.</p>
+    <section id="league">
+      <h3>League</h3>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="nature">
+      <h3>Nature</h3>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="horde">
+      <h3>Horde</h3>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="building">
+      <h2>Building</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="villagers">
+      <h2>Villagers</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="research">
+      <h2>Research</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="gear">
+      <h2>Gear</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="exclusive-gear">
+      <h3>Exclusive Gear</h3>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="adventure">
+      <h2>Adventure</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="guildboss">
+      <h2>Guild Boss</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="events">
+      <h2>Events</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="guild-race">
+      <h2>Guild Race</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="arms-race">
+      <h2>Arms Race</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="kingdom">
+      <h2>Kingdom vs Kingdom / 4 Nation</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="lord-gear">
+      <h2>Lord Gear and Relics</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="beginners">
+      <h2>Beginners Guide</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="shop">
+      <h2>Shop (F2P & Spending Money)</h2>
+      <p>Content coming soon.</p>
+    </section>
+    <section id="tips">
+      <h2>Tips & More</h2>
+      <p>Content coming soon.</p>
     </section>
   </main>
-
-  <footer>
+  <footer style="padding: 20px; text-align:center; background:#f0f0f0;">
     <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
   </footer>
 </body>

@@ -25,7 +25,7 @@ section {margin-bottom: 40px;}</style>
         <li><a href="index.html">Home</a></li>
         <li><a href="heroes.html">Heroes</a>
           <ul>
-            <li><a href="league.html">League <img src="league-symbol.jpeg" alt="League symbol" style="height: 1em; vertical-align: middle;"/></a></li>
+            <li><a href="league.html">League</a></li>
             <li><a href="nature.html">Nature</a></li>
             <li><a href="horde.html">Horde</a></li>
           </ul>
@@ -60,5 +60,24 @@ section {margin-bottom: 40px;}</style>
   <footer style="padding: 20px; text-align:center; background:#f0f0f0;">
     <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
   </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const symbolURL = 'league-symbol.jpeg';
+  function addIcon(el) {
+    var img = document.createElement('img');
+    img.src = symbolURL;
+    img.alt = 'League symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a){
+    if (a.textContent.trim() === 'League') addIcon(a);
+  });
+  document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(function(h) {
+    if (h.textContent.trim() === 'League') addIcon(h);
+  });
+});
+</script>
 </body>
 </html>

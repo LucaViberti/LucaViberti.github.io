@@ -351,15 +351,12 @@ footer {
     <p>For now, the best choice is to <strong>save all points</strong>. We’ll update once optimal paths are confirmed.</p>
   </section>
 
-  <div class="donation-section">
-    <p>If you'd like to support our guides, consider leaving a small tip!</p>
-    <a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer" class="donation-button">Support us on Ko‑fi</a>
-  </div>
-</main>
-
-<footer style="padding: 20px; text-align:center; background:#f0f0f0;">
-  <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
-</footer>
+  <div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

@@ -15,12 +15,14 @@
           <li><a href="nature.html">Nature</a></li>
           <li><a href="horde.html">Horde</a></li>
 
-          <!-- Gear con mini flyout affianco -->
+          <!-- Gear con flyout affianco -->
           <li class="has-flyout">
             <a href="gear.html">Gear</a>
-            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
-            <ul id="gear-flyout" class="flyout">
-              <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
+            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">
+              <span class="chev">▾</span>
+            </button>
+            <ul id="gear-flyout" class="flyout" role="menu" aria-label="Gear submenu">
+              <li><a href="exclusive-gear.html" role="menuitem">Exclusive Gear</a></li>
             </ul>
           </li>
 
@@ -76,7 +78,7 @@
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
-  /* Dropdown base (eredita lo stile del tuo tema) */
+  /* Base nav (stesso look delle altre pagine) */
   nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
   nav ul li{position:relative}
   nav ul li a{
@@ -85,53 +87,76 @@
   }
   nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
 
-  /* dropdown principale */
+  /* Dropdown principale */
   nav ul li .dropdown{
     display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;padding:10px 0;min-width:220px;z-index:1000;
+    box-shadow:0 10px 24px rgba(0,0,0,.35)
   }
-  /* mostra su hover per desktop */
+
+  /* Desktop: apri su hover */
   @media (hover:hover){
     nav ul li.has-sub:hover > .dropdown{display:block}
   }
-  /* mostra quando aperto via JS (mobile o click) */
+
+  /* Mobile/JS: apri con classe .open */
   nav ul li.has-sub.open > .dropdown{display:block}
 
-  /* voci dentro il dropdown */
+  /* Voci dentro il dropdown */
   nav ul li .dropdown li a{
-    display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
+    display:block;padding:10px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
   }
   nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
 
-  /* Gear con flyout affianco */
+  /* -------- Gear flyout: redesign sobrio -------- */
   .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
-  .has-flyout > a{flex:1;padding:8px 8px}
+  .has-flyout > a{flex:1;padding:10px 8px}
+
   .flyout-toggle{
-    background:#25314d;border:1px solid #2b2f3a;border-radius:6px;padding:6px 8px;
-    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1
+    background:transparent;border:0;cursor:pointer;line-height:1;padding:6px 8px;margin-right:4px;
+    color:#d1d1d6;border-radius:8px;transition:background .2s, transform .2s
   }
-  .flyout-toggle:hover{background:#2d3a5a;color:#fff}
+  .flyout-toggle:hover{background:#25314d;color:#fff}
+  .flyout-toggle .chev{display:inline-block;transition:transform .2s ease}
 
+  /* Card affiancata (desktop) */
   .flyout{
-    display:none;position:absolute; /* affianco */
-    top:0; left:100%; margin-left:8px;
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px; padding:8px 0; z-index:1001
+    display:none;position:absolute;top:0;left:100%;margin-left:10px;
+    background:#101525;border:1px solid #2b2f3a;border-radius:12px;min-width:200px;padding:8px 0;z-index:1001;
+    box-shadow:0 14px 34px rgba(0,0,0,.45);
+    opacity:0;transform:translateY(6px);transition:opacity .18s ease, transform .18s ease;
   }
-  .has-flyout.open > .flyout{display:block}
+  .flyout li a{
+    display:block;padding:10px 14px;color:#e5e7eb;text-transform:none;letter-spacing:0;border-radius:8px;margin:2px 8px
+  }
+  .flyout li a:hover{background:#1f2a44;color:#fff}
 
-  /* Mobile: il flyout non esce di lato ma sotto, per non “salire” fuori schermo */
+  /* Stato aperto */
+  .has-flyout.open > .flyout{display:block;opacity:1;transform:translateY(0)}
+  .has-flyout.open > .flyout-toggle .chev{transform:rotate(180deg)}
+
+  /* Mobile: mostra sotto come micro‑popup centrato */
   @media (max-width: 640px){
     .flyout{
-      position:static; margin:6px 0 0 0; left:auto; top:auto; display:none;
+      left:50%; top:100%; margin:10px 0 0 0; transform:translate(-50%,6px);
+      min-width: 220px;
     }
-    .has-flyout.open > .flyout{display:block}
+    .has-flyout.open > .flyout{transform:translate(-50%,0)}
     .has-flyout{flex-wrap:wrap}
-    .flyout-toggle{padding:6px 10px}
   }
+
+  /* Backdrop per tap‑outside (mobile & desktop click) */
+  #nav-backdrop{
+    position:fixed;inset:0;background:transparent;display:none;z-index:900;
+  }
+  #nav-backdrop.show{display:block}
 </style>
 
+<!-- Backdrop per chiudere al tap fuori -->
+<div id="nav-backdrop" aria-hidden="true"></div>
+
 <script>
-  // Evidenzia la pagina attiva (se lo usi dove includi già il nav via fetch, puoi tenerlo lì; metterlo qui rende tutto auto-portabile)
+  // evidenzia pagina attiva
   (function(){
     const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
     document.querySelectorAll('nav a[href]').forEach(a=>{
@@ -143,52 +168,78 @@
     });
   })();
 
-  // Apertura/chiusura dropdown su click (mobile) + chiusura cliccando fuori + ESC
   (function(){
-    // Apre/chiude i menu principali
+    const prefersTouch = window.matchMedia('(hover: none)').matches;
+    const nav = document.querySelector('nav');
+    const backdrop = document.getElementById('nav-backdrop');
+
+    // Apri/chiudi dropdown principali con TAP su mobile
     document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
       link.addEventListener('click', function(e){
-        // su mobile/touch preferiamo il click per aprire la tendina
-        if (window.matchMedia('(hover: none)').matches){
+        if (prefersTouch) {
           e.preventDefault();
           const li = this.parentElement;
-          li.classList.toggle('open');
-          // chiudi gli altri
-          document.querySelectorAll('nav li.has-sub').forEach(other=>{
-            if(other !== li) other.classList.remove('open');
-          });
+          const willOpen = !li.classList.contains('open');
+
+          // chiudi tutti
+          document.querySelectorAll('nav li.has-sub').forEach(x=>x.classList.remove('open'));
+          document.querySelectorAll('.has-flyout').forEach(x=>x.classList.remove('open'));
+          document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
+
+          // apri quello cliccato
+          if (willOpen) {
+            li.classList.add('open');
+            backdrop.classList.add('show');
+          } else {
+            backdrop.classList.remove('show');
+          }
         }
       });
     });
 
-    // Gear flyout
+    // Gear flyout (toggle con chevron)
     document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
       btn.addEventListener('click', function(e){
-        e.stopPropagation(); // evita di chiudere subito
+        e.preventDefault();
+        e.stopPropagation();
         const li = this.closest('.has-flyout');
         const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        li.classList.toggle('open', !expanded);
+
+        // chiudi eventuali altri flyout
+        document.querySelectorAll('.has-flyout').forEach(x=>x.classList.remove('open'));
+        document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
+
+        if (!expanded){
+          li.classList.add('open');
+          this.setAttribute('aria-expanded','true');
+          backdrop.classList.add('show');
+        } else {
+          li.classList.remove('open');
+          this.setAttribute('aria-expanded','false');
+          // mantieni backdrop se un dropdown principale è ancora aperto
+          if (!document.querySelector('nav li.has-sub.open')) backdrop.classList.remove('show');
+        }
       });
     });
 
-    // Chiudi tutto cliccando fuori
-    document.addEventListener('click', function(e){
-      const nav = document.querySelector('nav');
-      if(!nav.contains(e.target)){
-        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
-        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
-        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
-      }
-    });
+    // Click/tap fuori: chiudi tutto (mobile e desktop)
+    function closeAll(){
+      document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+      document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
+      backdrop.classList.remove('show');
+    }
 
-    // Chiudi con Esc
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){
-        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
-        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
-        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
-      }
+    backdrop.addEventListener('click', closeAll, {passive:true});
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
+
+    // Desktop: click fuori dal nav chiude
+    document.addEventListener('click', function(e){
+      if (!nav.contains(e.target)) closeAll();
     });
+    // Mobile: tap fuori (touchstart per iOS/Safari)
+    document.addEventListener('touchstart', function(e){
+      if (!nav.contains(e.target) && !backdrop.contains(e.target)) closeAll();
+    }, {passive:true});
   })();
 </script>

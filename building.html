@@ -197,44 +197,22 @@ nav ul li ul li a:hover {
 </style>
 </head>
 <body>
-<header>
-  <div class="site-info">
-    <h1>TopHeroes Guide</h1>
-    <span class="tagline">PLD Paladins Server 10477</span>
-  </div>
-  <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heroes.html">Heroes</a>
-          <ul>
-            <li><a href="league.html">League</a></li>
-            <li><a href="nature.html">Nature</a></li>
-            <li><a href="horde.html">Horde</a></li>
-</ul>
-        </li>
-        <li><a href="building.html">Building</a></li>
-        <li><a href="villagers.html">Villagers</a></li>
-        <li><a href="pets.html">Pets</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="gear.html">Gear</a>
-          <ul>
-            <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
-          </ul>
-        </li>
-        <li><a href="adventure.html">Adventure</a></li>
-        <li><a href="guildboss.html">Guild Boss</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="guild-race.html">Guild Race</a></li>
-        <li><a href="arms-race.html">Arms Race</a></li>
-        <li><a href="kingdom.html">KvK</a></li>
-        <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
-        <li><a href="beginners.html">Beginners Guide</a></li>
-        <li><a href="shop.html">Shop (F2P & Spending)</a></li>
-        <li><a href="tips.html">Tips & More</a></li>
-        <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Support Us</a></li>
-</ul>
-    </nav>
-</header>
+<div id="navbar"></div>
+<script>
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+      const current = location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll('#navbar nav a').forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.style.color = '#fff';
+          a.style.borderBottomColor = '#29abe0';
+        }
+      });
+    })
+    .catch(err => console.error('Navbar load failed:', err));
+</script>
   <main>
     <section id="building">
       <h2>Building</h2>

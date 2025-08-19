@@ -9,12 +9,18 @@
 
       <!-- HEROES -->
       <li class="has-sub">
-        <a href="heroes.html">Heroes</a>
+        <!-- tap (solo mobile) apre/chiude; su desktop resta normale -->
+        <a href="heroes.html"
+           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
+          Heroes
+        </a>
         <ul class="dropdown">
+          <!-- Close visibile solo su mobile -->
           <li class="close-btn">
             <button aria-label="Close menu"
-              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
           </li>
+
           <li><a href="heroes.html">Overview</a></li>
           <li><a href="league.html">League</a></li>
           <li><a href="nature.html">Nature</a></li>
@@ -22,14 +28,16 @@
 
           <!-- Gear con mini-flyout affianco -->
           <li class="has-flyout">
-            <a href="gear.html" class="flyout-link" aria-haspopup="true" aria-expanded="false">
+            <a href="gear.html"
+               class="flyout-link"
+               onclick="if('ontouchstart' in window){this.closest('.has-flyout').classList.toggle('open'); return false;}">
               <span>Gear</span>
               <span class="chev" aria-hidden="true">▾</span>
             </a>
             <ul class="flyout" aria-label="Gear submenu">
               <li class="close-btn">
                 <button aria-label="Close submenu"
-                  onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+                  onclick="var li=this.closest('.has-flyout'); if(li){li.classList.remove('open');}">✕ Close</button>
               </li>
               <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
             </ul>
@@ -41,15 +49,18 @@
 
       <!-- BUILDING -->
       <li class="has-sub">
-        <a href="building.html">Building</a>
+        <a href="building.html"
+           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
+          Building
+        </a>
         <ul class="dropdown">
           <li class="close-btn">
             <button aria-label="Close menu"
-              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
           </li>
           <li><a href="building.html">Overview</a></li>
           <li><a href="villagers.html">Villagers</a></li>
-          <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
+          <li><a href="lord-gear.html">Lord Gear &amp; Relics</a></li>
         </ul>
       </li>
 
@@ -58,11 +69,14 @@
 
       <!-- EVENTS -->
       <li class="has-sub">
-        <a href="events.html">Events</a>
+        <a href="events.html"
+           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
+          Events
+        </a>
         <ul class="dropdown">
           <li class="close-btn">
             <button aria-label="Close menu"
-              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
           </li>
           <li><a href="guild-race.html">Guild Race</a></li>
           <li><a href="arms-race.html">Arms Race</a></li>
@@ -101,7 +115,7 @@
   }
   .th-nav a:hover{color:#fff;border-bottom-color:#29abe0}
 
-  /* Dropdown principale */
+  /* Dropdown principale (card sobria) */
   .th-nav .dropdown{
     display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
     background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;padding:8px 0;min-width:220px;z-index:1000;
@@ -116,35 +130,40 @@
   /* Desktop: apri su hover (rimane veloce) */
   @media (hover:hover){ .th-nav .has-sub:hover > .dropdown{display:block} }
 
-  /* Flyout Exclusive Gear – pulito e leggibile */
+  /* Mobile: apri/chiudi con classe .open (toccando la voce principale) */
+  .th-nav .has-sub.open > .dropdown{display:block}
+
+  /* Close visibile solo su mobile/touch */
+  .close-btn{ display:none; text-align:right; padding:4px 8px 2px; }
+  .close-btn button{
+    background:none;border:0;color:#aab2c5;cursor:pointer;font-size:.8rem;padding:6px 8px;border-radius:8px;
+  }
+  .close-btn button:hover{ color:#fff; background:#25314d; }
+  @media (hover:none){ .close-btn{ display:block; } }
+
+  /* Flyout Exclusive Gear – sobrio e leggibile */
   .th-nav .has-flyout{position:relative}
   .th-nav .flyout-link{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px}
   .th-nav .chev{display:inline-block;transition:transform .2s ease}
 
   .th-nav .flyout{
     display:none;position:absolute;top:0;left:100%;margin-left:10px;
-    background:#101525;border:1px solid #2b2f3a;border-radius:12px;min-width:200px;padding:6px 0;z-index:1100;
-    box-shadow:0 14px 34px rgba(0,0,0,.45);
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;min-width:200px;padding:6px 0;z-index:1100;
+    box-shadow:0 12px 28px rgba(0,0,0,.35);
   }
-  /* Desktop: apri flyout con hover sulla riga Gear */
+  /* Desktop: hover sulla riga Gear */
   @media (hover:hover){
     .th-nav .has-flyout:hover > .flyout{display:block}
     .th-nav .has-flyout:hover .chev{transform:rotate(180deg)}
   }
-  /* Mobile: il flyout scende sotto centrato (usiamo display:block via click sul close/open naturale del browser) */
+  /* Mobile: apre/chiude con classe .open (tap su Gear) */
+  .th-nav .has-flyout.open > .flyout{display:block}
+  .th-nav .has-flyout.open .chev{transform:rotate(180deg)}
+
+  /* Mobile: il flyout scende sotto, centrato, più comodo da toccare */
   @media (max-width:640px){
     .th-nav .flyout{left:50%; top:100%; margin:10px 0 0 0; transform:translateX(-50%); min-width:220px}
   }
   .th-nav .flyout li a{display:block;padding:10px 14px;color:#e5e7eb;text-transform:none;letter-spacing:0;border-radius:8px;margin:2px 8px}
-  .th-nav .flyout li a:hover{background:#1f2a44;color:#fff}
-
-  /* Pulsante di chiusura sobrio */
-  .close-btn{ text-align:right; padding:4px 8px 2px; }
-  .close-btn button{
-    background:none;border:0;color:#aab2c5;cursor:pointer;font-size:.8rem;padding:6px 8px;border-radius:8px;
-  }
-  .close-btn button:hover{ color:#fff; background:#25314d; }
-
-  /* Dimensione coerente voci submenu */
-  .th-nav .dropdown li a, .th-nav .flyout li a { font-size: .85rem; }
+  .th-nav .flyout li a:hover{background:#25314d;color:#fff}
 </style>

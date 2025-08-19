@@ -2,43 +2,24 @@
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
   </div>
-
-  <nav class="th-nav">
-    <ul class="menu">
+  <nav>
+    <ul>
       <li><a href="index.html">Home</a></li>
 
       <!-- HEROES -->
       <li class="has-sub">
-        <!-- tap (solo mobile) apre/chiude; su desktop resta normale -->
-        <a href="heroes.html"
-           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
-          Heroes
-        </a>
+        <a href="heroes.html">Heroes</a>
         <ul class="dropdown">
-          <!-- Close visibile solo su mobile -->
-          <li class="close-btn">
-            <button aria-label="Close menu"
-              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
-          </li>
-
           <li><a href="heroes.html">Overview</a></li>
           <li><a href="league.html">League</a></li>
           <li><a href="nature.html">Nature</a></li>
           <li><a href="horde.html">Horde</a></li>
 
-          <!-- Gear con mini-flyout affianco -->
+          <!-- Gear con mini flyout affianco -->
           <li class="has-flyout">
-            <a href="gear.html"
-               class="flyout-link"
-               onclick="if('ontouchstart' in window){this.closest('.has-flyout').classList.toggle('open'); return false;}">
-              <span>Gear</span>
-              <span class="chev" aria-hidden="true">▾</span>
-            </a>
-            <ul class="flyout" aria-label="Gear submenu">
-              <li class="close-btn">
-                <button aria-label="Close submenu"
-                  onclick="var li=this.closest('.has-flyout'); if(li){li.classList.remove('open');}">✕ Close</button>
-              </li>
+            <a href="gear.html">Gear</a>
+            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
               <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
             </ul>
           </li>
@@ -49,18 +30,11 @@
 
       <!-- BUILDING -->
       <li class="has-sub">
-        <a href="building.html"
-           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
-          Building
-        </a>
+        <a href="building.html">Building</a>
         <ul class="dropdown">
-          <li class="close-btn">
-            <button aria-label="Close menu"
-              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
-          </li>
           <li><a href="building.html">Overview</a></li>
           <li><a href="villagers.html">Villagers</a></li>
-          <li><a href="lord-gear.html">Lord Gear &amp; Relics</a></li>
+          <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
         </ul>
       </li>
 
@@ -69,15 +43,8 @@
 
       <!-- EVENTS -->
       <li class="has-sub">
-        <a href="events.html"
-           onclick="if('ontouchstart' in window){this.parentElement.classList.toggle('open'); return false;}">
-          Events
-        </a>
+        <a href="events.html">Events</a>
         <ul class="dropdown">
-          <li class="close-btn">
-            <button aria-label="Close menu"
-              onclick="var li=this.closest('.has-sub'); if(li){li.classList.remove('open');}">✕ Close</button>
-          </li>
           <li><a href="guild-race.html">Guild Race</a></li>
           <li><a href="arms-race.html">Arms Race</a></li>
           <li><a href="kingdom.html">KvK</a></li>
@@ -94,7 +61,11 @@
 </header>
 
 <style>
-  /* Titolo elegante e responsivo */
+  /* dimensione link coerente */
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  /* Titolo */
   .site-title{
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight:700;
@@ -105,65 +76,119 @@
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
-  /* Base nav */
-  .th-nav .menu{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
-  .th-nav .menu > li{position:relative}
-  .th-nav a{
+  /* Dropdown base (eredita lo stile del tuo tema) */
+  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+  nav ul li{position:relative}
+  nav ul li a{
     color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
-    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;
-    font-size:.85rem;
+    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
   }
-  .th-nav a:hover{color:#fff;border-bottom-color:#29abe0}
+  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
 
-  /* Dropdown principale (card sobria) */
-  .th-nav .dropdown{
+  /* dropdown principale */
+  nav ul li .dropdown{
     display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;padding:8px 0;min-width:220px;z-index:1000;
-    box-shadow:0 10px 24px rgba(0,0,0,.35)
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
   }
-  .th-nav .dropdown li a{
-    display:block;padding:10px 14px;color:#d1d1d6;text-transform:none;letter-spacing:0;border-bottom:0;white-space:nowrap;
-    border-radius:8px;margin:2px 6px
-  }
-  .th-nav .dropdown li a:hover{background:#25314d;color:#fff}
-
-  /* Desktop: apri su hover (rimane veloce) */
-  @media (hover:hover){ .th-nav .has-sub:hover > .dropdown{display:block} }
-
-  /* Mobile: apri/chiudi con classe .open (toccando la voce principale) */
-  .th-nav .has-sub.open > .dropdown{display:block}
-
-  /* Close visibile solo su mobile/touch */
-  .close-btn{ display:none; text-align:right; padding:4px 8px 2px; }
-  .close-btn button{
-    background:none;border:0;color:#aab2c5;cursor:pointer;font-size:.8rem;padding:6px 8px;border-radius:8px;
-  }
-  .close-btn button:hover{ color:#fff; background:#25314d; }
-  @media (hover:none){ .close-btn{ display:block; } }
-
-  /* Flyout Exclusive Gear – sobrio e leggibile */
-  .th-nav .has-flyout{position:relative}
-  .th-nav .flyout-link{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px}
-  .th-nav .chev{display:inline-block;transition:transform .2s ease}
-
-  .th-nav .flyout{
-    display:none;position:absolute;top:0;left:100%;margin-left:10px;
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;min-width:200px;padding:6px 0;z-index:1100;
-    box-shadow:0 12px 28px rgba(0,0,0,.35);
-  }
-  /* Desktop: hover sulla riga Gear */
+  /* mostra su hover per desktop */
   @media (hover:hover){
-    .th-nav .has-flyout:hover > .flyout{display:block}
-    .th-nav .has-flyout:hover .chev{transform:rotate(180deg)}
+    nav ul li.has-sub:hover > .dropdown{display:block}
   }
-  /* Mobile: apre/chiude con classe .open (tap su Gear) */
-  .th-nav .has-flyout.open > .flyout{display:block}
-  .th-nav .has-flyout.open .chev{transform:rotate(180deg)}
+  /* mostra quando aperto via JS (mobile o click) */
+  nav ul li.has-sub.open > .dropdown{display:block}
 
-  /* Mobile: il flyout scende sotto, centrato, più comodo da toccare */
-  @media (max-width:640px){
-    .th-nav .flyout{left:50%; top:100%; margin:10px 0 0 0; transform:translateX(-50%); min-width:220px}
+  /* voci dentro il dropdown */
+  nav ul li .dropdown li a{
+    display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
   }
-  .th-nav .flyout li a{display:block;padding:10px 14px;color:#e5e7eb;text-transform:none;letter-spacing:0;border-radius:8px;margin:2px 8px}
-  .th-nav .flyout li a:hover{background:#25314d;color:#fff}
+  nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
+
+  /* Gear con flyout affianco */
+  .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
+  .has-flyout > a{flex:1;padding:8px 8px}
+  .flyout-toggle{
+    background:#25314d;border:1px solid #2b2f3a;border-radius:6px;padding:6px 8px;
+    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1
+  }
+  .flyout-toggle:hover{background:#2d3a5a;color:#fff}
+
+  .flyout{
+    display:none;position:absolute; /* affianco */
+    top:0; left:100%; margin-left:8px;
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px; padding:8px 0; z-index:1001
+  }
+  .has-flyout.open > .flyout{display:block}
+
+  /* Mobile: il flyout non esce di lato ma sotto, per non “salire” fuori schermo */
+  @media (max-width: 640px){
+    .flyout{
+      position:static; margin:6px 0 0 0; left:auto; top:auto; display:none;
+    }
+    .has-flyout.open > .flyout{display:block}
+    .has-flyout{flex-wrap:wrap}
+    .flyout-toggle{padding:6px 10px}
+  }
 </style>
+
+<script>
+  // Evidenzia la pagina attiva (se lo usi dove includi già il nav via fetch, puoi tenerlo lì; metterlo qui rende tutto auto-portabile)
+  (function(){
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    document.querySelectorAll('nav a[href]').forEach(a=>{
+      const href = a.getAttribute('href')?.toLowerCase();
+      if(href === current){
+        a.style.color = '#fff';
+        a.style.borderBottomColor = '#29abe0';
+      }
+    });
+  })();
+
+  // Apertura/chiusura dropdown su click (mobile) + chiusura cliccando fuori + ESC
+  (function(){
+    // Apre/chiude i menu principali
+    document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
+      link.addEventListener('click', function(e){
+        // su mobile/touch preferiamo il click per aprire la tendina
+        if (window.matchMedia('(hover: none)').matches){
+          e.preventDefault();
+          const li = this.parentElement;
+          li.classList.toggle('open');
+          // chiudi gli altri
+          document.querySelectorAll('nav li.has-sub').forEach(other=>{
+            if(other !== li) other.classList.remove('open');
+          });
+        }
+      });
+    });
+
+    // Gear flyout
+    document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        e.stopPropagation(); // evita di chiudere subito
+        const li = this.closest('.has-flyout');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        li.classList.toggle('open', !expanded);
+      });
+    });
+
+    // Chiudi tutto cliccando fuori
+    document.addEventListener('click', function(e){
+      const nav = document.querySelector('nav');
+      if(!nav.contains(e.target)){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+
+    // Chiudi con Esc
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+  })();
+</script>

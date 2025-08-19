@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TopHeroes Guide - Horde</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 { margin: 0; color: #f5f5f7; font-size: 1.5rem; }
+header .tagline { margin-left: 12px; color: #b0b6c7; font-size: 0.9rem; white-space: nowrap; }
+header .site-info { display: flex; flex-direction: column; align-items: center; }
+nav { width: 100%; margin-top: 10px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+nav ul li { position: relative; }
+nav ul li a {
+  color: #ccd0dd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  font-size: 0.85rem;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li a { display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section {
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e9e9ee;
+}
+section h2, section h3, section h4 { margin-top: 0; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 760px) {
+  .grid.two { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
+}
+.hero-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  border: 1px solid #e5e5ea;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #0b5ed7;
+  border: 1px solid #d6e9ff;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+ul.keylist { margin: 8px 0 0 0; padding-left: 18px; }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        const current = location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('#navbar nav a').forEach(a => {
+          if (a.getAttribute('href') === current || (current === "" && a.getAttribute('href') === "index.html")) {
+            a.style.color = "#fff";
+            a.style.borderBottomColor = "#29abe0";
+          }
+        });
+      })
+      .catch(err => console.error("Navbar load failed:", err));
+  </script>
+  <main>
+    <section id="horde-hero">
+      <h2>Horde<span class="badge">Desert Prince</span></h2>
+      <div class="grid two">
+        <div>
+          <h3>Tank /Damage Dealer</h3>
+          <h4>Skills:</h4>
+          <ul class="keylist">
+            <li>Royal Armor: Grants a Shield that absorbs Damage </li>
+            <li>Sand´s Blessing: Gains additional HP and deals % of max HP as true Damage</li>
+            <li>Royal Treasury: Increase skill damage for all allies when Royal Armor activated</li>
+            <li>Scorching Scimitar: Deals true damage </li>
+            <li>Eye of Insight: Reduce Skill Damage taken for this hero</li>
+            <li>Enthusiast: each Legendary or higher Horde hero in this queue increases enemy´s death and wounded ratio</li>
+          </ul>
+          <p>Dessert Prince is on oft the best heroes in game. He is a tank that deals great damage as well. This hero is a must have in every horde queue. As soon as you get him you should replace swordmaster or barbarian for him.</p>
+          <p>Recomandation: We would recomend you to replace swordmaster (if barbarian around same star lv) for him. Your horde team will lack in sustain at this point. Barbarian would help you more in that case as swordmaster.</p>
+        </div>
+        <div>
+          <figure>
+            <img src="Desert.jpeg" alt="Desert Prince" class="hero-img">
+            <figcaption style="font-size:.85rem;color:#666;margin-top:6px;">Desert Prince</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error("Footer load failed:", err));
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const icons = { 'League': 'league-symbol.jpeg', 'Nature': 'nature-symbol.jpeg', 'Horde': 'horde-symbol.jpeg' };
+    function addIcon(el, word) {
+      const img = document.createElement('img');
+      img.src = icons[word];
+      img.alt = word + ' symbol';
+      img.style.height = '1em';
+      img.style.marginLeft = '0.3em';
+      el.appendChild(img);
+    }
+    document.querySelectorAll('h1,h2,h3,h4').forEach(function(h) {
+      const text = h.textContent.trim();
+      if (icons[text]) addIcon(h, text);
+    });
+  });
+  </script>
+</body>
+</html>

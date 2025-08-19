@@ -2,27 +2,36 @@
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
   </div>
-  <nav>
-    <ul>
+
+  <nav class="th-nav">
+    <ul class="menu">
       <li><a href="index.html">Home</a></li>
 
       <!-- HEROES -->
       <li class="has-sub">
         <a href="heroes.html">Heroes</a>
         <ul class="dropdown">
+          <li class="close-btn">
+            <button aria-label="Close menu"
+              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+          </li>
           <li><a href="heroes.html">Overview</a></li>
           <li><a href="league.html">League</a></li>
           <li><a href="nature.html">Nature</a></li>
           <li><a href="horde.html">Horde</a></li>
 
-          <!-- Gear con flyout affianco -->
+          <!-- Gear con mini-flyout affianco -->
           <li class="has-flyout">
-            <a href="gear.html">Gear</a>
-            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">
-              <span class="chev">▾</span>
-            </button>
-            <ul id="gear-flyout" class="flyout" role="menu" aria-label="Gear submenu">
-              <li><a href="exclusive-gear.html" role="menuitem">Exclusive Gear</a></li>
+            <a href="gear.html" class="flyout-link" aria-haspopup="true" aria-expanded="false">
+              <span>Gear</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </a>
+            <ul class="flyout" aria-label="Gear submenu">
+              <li class="close-btn">
+                <button aria-label="Close submenu"
+                  onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+              </li>
+              <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
             </ul>
           </li>
 
@@ -34,6 +43,10 @@
       <li class="has-sub">
         <a href="building.html">Building</a>
         <ul class="dropdown">
+          <li class="close-btn">
+            <button aria-label="Close menu"
+              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+          </li>
           <li><a href="building.html">Overview</a></li>
           <li><a href="villagers.html">Villagers</a></li>
           <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
@@ -47,6 +60,10 @@
       <li class="has-sub">
         <a href="events.html">Events</a>
         <ul class="dropdown">
+          <li class="close-btn">
+            <button aria-label="Close menu"
+              onclick="(function(btn){var ul=btn.closest('ul'); if(ul){ul.style.display='none'; var p=ul.parentElement; if(p){p.classList.remove('open');}}})(this)">✕ Close</button>
+          </li>
           <li><a href="guild-race.html">Guild Race</a></li>
           <li><a href="arms-race.html">Arms Race</a></li>
           <li><a href="kingdom.html">KvK</a></li>
@@ -63,11 +80,7 @@
 </header>
 
 <style>
-  /* dimensione link coerente */
-  nav ul li a { font-size: 0.85rem; }
-  nav ul li ul li a { font-size: 0.85rem; }
-
-  /* Titolo */
+  /* Titolo elegante e responsivo */
   .site-title{
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight:700;
@@ -78,168 +91,60 @@
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
-  /* Base nav (stesso look delle altre pagine) */
-  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
-  nav ul li{position:relative}
-  nav ul li a{
+  /* Base nav */
+  .th-nav .menu{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+  .th-nav .menu > li{position:relative}
+  .th-nav a{
     color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
-    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
+    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;
+    font-size:.85rem;
   }
-  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
+  .th-nav a:hover{color:#fff;border-bottom-color:#29abe0}
 
   /* Dropdown principale */
-  nav ul li .dropdown{
+  .th-nav .dropdown{
     display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;padding:10px 0;min-width:220px;z-index:1000;
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;padding:8px 0;min-width:220px;z-index:1000;
     box-shadow:0 10px 24px rgba(0,0,0,.35)
   }
-
-  /* Desktop: apri su hover */
-  @media (hover:hover){
-    nav ul li.has-sub:hover > .dropdown{display:block}
+  .th-nav .dropdown li a{
+    display:block;padding:10px 14px;color:#d1d1d6;text-transform:none;letter-spacing:0;border-bottom:0;white-space:nowrap;
+    border-radius:8px;margin:2px 6px
   }
+  .th-nav .dropdown li a:hover{background:#25314d;color:#fff}
 
-  /* Mobile/JS: apri con classe .open */
-  nav ul li.has-sub.open > .dropdown{display:block}
+  /* Desktop: apri su hover (rimane veloce) */
+  @media (hover:hover){ .th-nav .has-sub:hover > .dropdown{display:block} }
 
-  /* Voci dentro il dropdown */
-  nav ul li .dropdown li a{
-    display:block;padding:10px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
-  }
-  nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
+  /* Flyout Exclusive Gear – pulito e leggibile */
+  .th-nav .has-flyout{position:relative}
+  .th-nav .flyout-link{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px}
+  .th-nav .chev{display:inline-block;transition:transform .2s ease}
 
-  /* -------- Gear flyout: redesign sobrio -------- */
-  .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
-  .has-flyout > a{flex:1;padding:10px 8px}
-
-  .flyout-toggle{
-    background:transparent;border:0;cursor:pointer;line-height:1;padding:6px 8px;margin-right:4px;
-    color:#d1d1d6;border-radius:8px;transition:background .2s, transform .2s
-  }
-  .flyout-toggle:hover{background:#25314d;color:#fff}
-  .flyout-toggle .chev{display:inline-block;transition:transform .2s ease}
-
-  /* Card affiancata (desktop) */
-  .flyout{
+  .th-nav .flyout{
     display:none;position:absolute;top:0;left:100%;margin-left:10px;
-    background:#101525;border:1px solid #2b2f3a;border-radius:12px;min-width:200px;padding:8px 0;z-index:1001;
+    background:#101525;border:1px solid #2b2f3a;border-radius:12px;min-width:200px;padding:6px 0;z-index:1100;
     box-shadow:0 14px 34px rgba(0,0,0,.45);
-    opacity:0;transform:translateY(6px);transition:opacity .18s ease, transform .18s ease;
   }
-  .flyout li a{
-    display:block;padding:10px 14px;color:#e5e7eb;text-transform:none;letter-spacing:0;border-radius:8px;margin:2px 8px
+  /* Desktop: apri flyout con hover sulla riga Gear */
+  @media (hover:hover){
+    .th-nav .has-flyout:hover > .flyout{display:block}
+    .th-nav .has-flyout:hover .chev{transform:rotate(180deg)}
   }
-  .flyout li a:hover{background:#1f2a44;color:#fff}
+  /* Mobile: il flyout scende sotto centrato (usiamo display:block via click sul close/open naturale del browser) */
+  @media (max-width:640px){
+    .th-nav .flyout{left:50%; top:100%; margin:10px 0 0 0; transform:translateX(-50%); min-width:220px}
+  }
+  .th-nav .flyout li a{display:block;padding:10px 14px;color:#e5e7eb;text-transform:none;letter-spacing:0;border-radius:8px;margin:2px 8px}
+  .th-nav .flyout li a:hover{background:#1f2a44;color:#fff}
 
-  /* Stato aperto */
-  .has-flyout.open > .flyout{display:block;opacity:1;transform:translateY(0)}
-  .has-flyout.open > .flyout-toggle .chev{transform:rotate(180deg)}
-
-  /* Mobile: mostra sotto come micro‑popup centrato */
-  @media (max-width: 640px){
-    .flyout{
-      left:50%; top:100%; margin:10px 0 0 0; transform:translate(-50%,6px);
-      min-width: 220px;
-    }
-    .has-flyout.open > .flyout{transform:translate(-50%,0)}
-    .has-flyout{flex-wrap:wrap}
+  /* Pulsante di chiusura sobrio */
+  .close-btn{ text-align:right; padding:4px 8px 2px; }
+  .close-btn button{
+    background:none;border:0;color:#aab2c5;cursor:pointer;font-size:.8rem;padding:6px 8px;border-radius:8px;
   }
+  .close-btn button:hover{ color:#fff; background:#25314d; }
 
-  /* Backdrop per tap‑outside (mobile & desktop click) */
-  #nav-backdrop{
-    position:fixed;inset:0;background:transparent;display:none;z-index:900;
-  }
-  #nav-backdrop.show{display:block}
+  /* Dimensione coerente voci submenu */
+  .th-nav .dropdown li a, .th-nav .flyout li a { font-size: .85rem; }
 </style>
-
-<!-- Backdrop per chiudere al tap fuori -->
-<div id="nav-backdrop" aria-hidden="true"></div>
-
-<script>
-  // evidenzia pagina attiva
-  (function(){
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    document.querySelectorAll('nav a[href]').forEach(a=>{
-      const href = a.getAttribute('href')?.toLowerCase();
-      if(href === current){
-        a.style.color = '#fff';
-        a.style.borderBottomColor = '#29abe0';
-      }
-    });
-  })();
-
-  (function(){
-    const prefersTouch = window.matchMedia('(hover: none)').matches;
-    const nav = document.querySelector('nav');
-    const backdrop = document.getElementById('nav-backdrop');
-
-    // Apri/chiudi dropdown principali con TAP su mobile
-    document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
-      link.addEventListener('click', function(e){
-        if (prefersTouch) {
-          e.preventDefault();
-          const li = this.parentElement;
-          const willOpen = !li.classList.contains('open');
-
-          // chiudi tutti
-          document.querySelectorAll('nav li.has-sub').forEach(x=>x.classList.remove('open'));
-          document.querySelectorAll('.has-flyout').forEach(x=>x.classList.remove('open'));
-          document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
-
-          // apri quello cliccato
-          if (willOpen) {
-            li.classList.add('open');
-            backdrop.classList.add('show');
-          } else {
-            backdrop.classList.remove('show');
-          }
-        }
-      });
-    });
-
-    // Gear flyout (toggle con chevron)
-    document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        const li = this.closest('.has-flyout');
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-
-        // chiudi eventuali altri flyout
-        document.querySelectorAll('.has-flyout').forEach(x=>x.classList.remove('open'));
-        document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
-
-        if (!expanded){
-          li.classList.add('open');
-          this.setAttribute('aria-expanded','true');
-          backdrop.classList.add('show');
-        } else {
-          li.classList.remove('open');
-          this.setAttribute('aria-expanded','false');
-          // mantieni backdrop se un dropdown principale è ancora aperto
-          if (!document.querySelector('nav li.has-sub.open')) backdrop.classList.remove('show');
-        }
-      });
-    });
-
-    // Click/tap fuori: chiudi tutto (mobile e desktop)
-    function closeAll(){
-      document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
-      document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
-      document.querySelectorAll('.flyout-toggle').forEach(b=>b.setAttribute('aria-expanded','false'));
-      backdrop.classList.remove('show');
-    }
-
-    backdrop.addEventListener('click', closeAll, {passive:true});
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
-
-    // Desktop: click fuori dal nav chiude
-    document.addEventListener('click', function(e){
-      if (!nav.contains(e.target)) closeAll();
-    });
-    // Mobile: tap fuori (touchstart per iOS/Safari)
-    document.addEventListener('touchstart', function(e){
-      if (!nav.contains(e.target) && !backdrop.contains(e.target)) closeAll();
-    }, {passive:true});
-  })();
-</script>

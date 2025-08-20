@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TopHeroes Guide - Classic Adventure</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header { background: #16171A; padding: 12px 20px; display: flex; flex-direction: column; align-items: center; }
+header h1 { margin: 0; color: #f5f5f7; font-size: 1.5rem; }
+header .tagline { margin-left: 12px; color: #888; font-size: 0.9rem; white-space: nowrap; }
+header .site-info { display: flex; flex-direction: column; align-items: center; }
+nav { width: 100%; margin-top: 10px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+nav ul li { position: relative; }
+nav ul li a { color: #d1d1d6; text-decoration: none; padding: 10px 8px; font-size: 0.85rem; transition: color 0.3s; }
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); padding: 10px 0; min-width: 200px; z-index: 1000; }
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a { display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap; }
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer { background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem; }
+
+header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; }
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a { color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em; padding: 12px 6px; border-bottom: 2px solid transparent; transition: color 0.3s, border-bottom-color 0.3s; }
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul { background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0; }
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ---- Page styles ---- */
+.page-title { font-size: 2rem; margin-bottom: 12px; color: #1e2541; }
+.lead { color: #4b5563; margin-bottom: 28px; }
+.content-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 24px; }
+.content-card h3 { margin-top: 0; margin-bottom: 10px; color: #1f2937; }
+.content-card p, .content-card li { color: #374151; }
+
+/* immagine grande responsive */
+.img-full {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin: 16px 0;
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script>
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+      const current = location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll('#navbar nav a').forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.style.color = '#fff';
+          a.style.borderBottomColor = '#29abe0';
+        }
+      });
+    })
+    .catch(err => console.error('Navbar load failed:', err));
+</script>
+
+<main>
+  <section id="classic">
+    <h2 class="page-title">Adventure Mode — Classic (Normal & Hard)</h2>
+    <p class="lead">Classic Adventure is the foundation of TopHeroes. It introduces key mechanics, grants your first heroes and gear, and sets the stage for all progression.</p>
+
+    <div class="content-card">
+      <p>The Classic Adventure map is where every player begins their journey in TopHeroes. This is your foundation — it introduces key mechanics, provides your first heroes, weapons, and gear, and allows you to gather resources needed for long-term progression.</p>
+      <p>In Classic mode, you'll fight your way through a series of zones. Each zone ends with a portal boss. Defeating that boss unlocks the next area. Occasionally, you'll also face <em>Adventure Bosses</em> that drop valuable chests when defeated, which can be opened using stamina.</p>
+      <p>While it's tempting to rush through, it's highly recommended to complete each zone 100%. Doing so will give you bonus rewards and ensure you don’t miss out on decorations or secret chests.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Hidden Decorations</h3>
+      <p>One unique element in Classic Mode is the presence of hidden decorations. These are often subtle objects in the environment that feel out of place. When your heroes walk near them, they'll begin chipping away like they do with rocks, but more slowly. Leave them to work, and after a short while, they’ll collect the decoration.</p>
+      <p>Collecting all decorations across the Classic map is a great way to get them easily for free.</p>
+      <img class="img-full" src="decomap.jpeg" alt="Classic map decorations" loading="lazy">
+    </div>
+
+    <div class="content-card">
+      <h3>Unlocking Hard Mode</h3>
+      <p>Once you've completed all zones of the Classic map in Normal mode, you'll unlock the Hard Mode version. This version features the same layout but with significantly stronger enemies and better loot.</p>
+      <p>In Hard Mode, boss fights become more strategic and challenging. However, they also start to drop legendary gear, making this the best place to start farming for high-end weapons early in the game. The drop rate might seem low, but consistent farming pays off.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Farming Bosses</h3>
+      <p>It’s a good habit to revisit and farm bosses you've already defeated. Boss chests contain gear, shards, and other useful resources. You can open up to 250 chests per day (2500 stamina limit), which is more than enough for daily farming without stress.</p>
+      <p>If you plan ahead and don’t let stamina overflow, you’ll always have a strong supply of materials coming from Classic.</p>
+      <p>Classic Mode may seem simple at first, but it's designed to teach you how to play efficiently and reward smart exploration. Use this time to build a solid hero lineup, experiment with gear, and prepare yourself for tougher challenges ahead.</p>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League': 'league-symbol.jpeg',
+    'Nature': 'nature-symbol.jpeg',
+    'Horde': 'horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

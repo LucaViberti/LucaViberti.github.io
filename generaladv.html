@@ -6,97 +6,121 @@
   <title>TopHeroes Guide - Adventure Overview</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
 
+  <!-- STILI SOLO PER IL CONTENUTO (no nav/footer) -->
   <style>
-    /* ====== STILI SOLO PER IL CONTENUTO ====== */
-    :root{ --panel:#fff; --border:#e6e8ee; --muted:#444; --bg:#f5f5f7; }
-    body { margin:0; padding:0; background:var(--bg); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.6; }
-
-    /* Contenuto pagina */
-    #adventure-page {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+    :root{
+      --panel:#fff;
+      --border:#e6e8ee;
+      --muted:#444;
+      --bg:#f5f5f7;
+      --shadow:0 8px 20px rgba(0,0,0,.06);
+      --radius:14px;
     }
-    #adventure-page section { margin-bottom: 40px; }
-    #adventure-page h2 { font-size: 1.6rem; margin-bottom: 12px; }
-    #adventure-page h3 { margin-top: 20px; font-size: 1.2rem; }
+    body{ margin:0; padding:0; background:var(--bg); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.6; }
+
+    /* ====== CONTENUTO ====== */
+    #adventure-page{
+      padding:40px 20px 48px;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    #adventure-page section{ margin-bottom:28px; }
+    #adventure-page h2{ font-size:1.6rem; margin:0 0 10px; }
+    #adventure-page h3{ font-size:1.15rem; margin:18px 0 10px; }
 
     /* Intro card */
-    #adventure-page .page-intro {
-      background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
+    #adventure-page .intro{
+      background:linear-gradient(180deg,#fff 0%,#f7f8fb 100%);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px 18px;
+      margin-bottom:18px;
+      color:var(--muted);
     }
 
-    /* Immagini responsive */
-    #adventure-page .img-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-    #adventure-page figure {
-      flex: 1 1 260px;
-      margin: 0;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    #adventure-page figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    #adventure-page figcaption {
-      font-size: .9rem;
-      color: #555;
-      padding: 8px 10px;
-      border-top: 1px solid var(--border);
-      background: #fff;
+    /* Blocchi testo */
+    #adventure-page .panel{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:16px;
     }
 
-    /* Box informativo */
-    #adventure-page .info-box {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      margin: 20px 0 0;
+    /* IMMAGINI */
+    /* Coppia affiancata (adventure1 + adventure2) */
+    #adventure-page .media-pair{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin:12px 0 4px;
+    }
+    /* Singole immagini grandi e centrate */
+    #adventure-page .media-single{
+      display:flex;
+      justify-content:center;
+      margin:12px 0;
+    }
+    /* Stile comune immagini */
+    #adventure-page img.media{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:520px;           /* evita immagini troppo alte */
+      object-fit:cover;
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    /* Limita larghezza per le singole */
+    #adventure-page .media-single img{
+      max-width:860px;
+    }
+    /* Responsive: sotto i 720px le due immagini vanno in colonna */
+    @media (max-width: 720px){
+      #adventure-page .media-pair{ grid-template-columns:1fr; }
+      #adventure-page img.media{ max-height:420px; }
+    }
+    @media (max-width: 420px){
+      #adventure-page img.media{ max-height:340px; }
+    }
+
+    /* Box consigli */
+    #adventure-page .tips{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV esterno (lascia com’è nel sito) -->
+  <!-- SOLO RICHIAMO NAV (nessun altro markup/stile del nav qui) -->
   <div id="navbar"></div>
   <script>
     fetch("nav.html")
       .then(res => res.text())
       .then(html => {
         document.getElementById("navbar").innerHTML = html;
+        // evidenzia link corrente (non tocca logiche del tuo nav)
         const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a => {
+        document.querySelectorAll('#navbar nav a[href]').forEach(a=>{
           const href = a.getAttribute('href')?.toLowerCase();
-          if (href === current) {
-            a.style.color = '#fff';
-            a.style.borderBottomColor = '#29abe0';
-          }
+          if(href === current){ a.style.color = '#fff'; a.style.borderBottomColor = '#29abe0'; }
         });
       })
       .catch(err => console.error('Navbar load failed:', err));
   </script>
 
-  <!-- ===== CONTENUTO ===== -->
+  <!-- ===== CONTENUTO PAGINA ===== -->
   <main id="adventure-page" aria-label="Adventure Overview">
-    <section class="page-intro">
+    <section class="intro">
       <h2>Adventure Mode - Overview</h2>
-      <p style="margin:0; color:var(--muted);">General Overview, Structure, Maps, Chest Icon and Progression Tips.</p>
+      <p style="margin:0">General Overview, Structure, Maps, Chest Icon and Progression Tips.</p>
     </section>
 
-    <section id="adventure-overview">
+    <section class="panel" id="overview-structure">
       <h3>General Overview</h3>
       <p>Adventure is the first and most crucial game mode in TopHeroes. It's the main source of initial resources, including heroes, weapons, and gear. Progressing through it is essential to starting your journey the right way.</p>
 
@@ -104,49 +128,47 @@
       <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, “Adventure Bosses” appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
       <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
 
-      <!-- Coppia immagini: adventure1.jpeg a sinistra, adventure2.jpeg a destra -->
-      <div class="img-row">
-        <figure>
-          <img src="adventure1.jpeg" alt="Adventure example 1" loading="lazy" />
-          <figcaption>Adventure — example 1</figcaption>
-        </figure>
-        <figure>
-          <img src="adventure2.jpeg" alt="Adventure example 2" loading="lazy" />
-          <figcaption>Adventure — example 2</figcaption>
-        </figure>
+      <!-- IMMAGINI: adventure1 + adventure2 affiancate -->
+      <div class="media-pair">
+        <img class="media" src="adventure1.jpeg" alt="Adventure view 1" loading="lazy">
+        <img class="media" src="adventure2.jpeg" alt="Adventure view 2" loading="lazy">
       </div>
+    </section>
 
+    <section class="panel" id="maps">
       <h3>Adventure Maps</h3>
       <p>Players who start at server launch will initially only have access to the “Classic” map in Normal mode. After completing it, the “Hard Mode” of the same map will unlock. Later, with Season 1, a new map and extended levels in Classic Hard will be added.</p>
       <p>Once you've cleared all available maps, it's a good time to use leftover stamina to farm previous bosses and complete 100% zones.</p>
+    </section>
 
+    <section class="panel" id="chest">
       <h3>Chest Icon (Bottom Left)</h3>
       <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without penalty. It stops accumulating after 6 hours if unclaimed — so check it periodically.</p>
 
-      <figure>
-        <img src="adventure3.jpeg" alt="Adventure chest icon" loading="lazy" />
-        <figcaption>Chest icon (bottom-left)</figcaption>
-      </figure>
+      <!-- IMMAGINE: adventure3 -->
+      <div class="media-single">
+        <img class="media" src="adventure3.jpeg" alt="Chest icon" loading="lazy">
+      </div>
 
       <p>As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
 
-      <figure>
-        <img src="adventure4.jpeg" alt="Adventure time-skip option" loading="lazy" />
-        <figcaption>Time-skip icon (2 hours for 20 stamina)</figcaption>
-      </figure>
-
-      <h3>Progression Tips</h3>
-      <div class="info-box">
-        <p>At the beginning, focus on pushing adventure until you get stuck.</p>
-        <p>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</p>
-        <p>The daily stamina limit for opening boss chests is 2500 — very high and rarely reached unless you're playing intensely.</p>
-        <p>As you progress, boss rewards improve significantly, especially in the Classic Hard Mode, where legendary weapons begin to drop.</p>
-        <p>Many of these weapons are purple tier; for how to use them effectively, refer to the “Gear” section under “Heroes”.</p>
+      <!-- IMMAGINE: adventure4 -->
+      <div class="media-single">
+        <img class="media" src="adventure4.jpeg" alt="Time-skip icon" loading="lazy">
       </div>
+    </section>
+
+    <section class="tips" id="tips">
+      <h3>Progression Tips</h3>
+      <p>At the beginning, focus on pushing adventure until you get stuck.</p>
+      <p>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</p>
+      <p>The daily stamina limit for opening boss chests is 2500 — very high and rarely reached unless you're playing intensely.</p>
+      <p>As you progress, boss rewards improve significantly, especially in the Classic Hard Mode, where legendary weapons begin to drop.</p>
+      <p>Many of these weapons are purple tier; for how to use them effectively, refer to the “Gear” section under “Heroes”.</p>
     </section>
   </main>
 
-  <!-- FOOTER esterno -->
+  <!-- SOLO RICHIAMO FOOTER -->
   <div id="footer"></div>
   <script>
     fetch("footer.html")
@@ -155,7 +177,7 @@
       .catch(err => console.error('Footer load failed:', err));
   </script>
 
-  <!-- Script icone (identico al tuo, non influisce sul nav) -->
+  <!-- Script icone tuoi (non tocca nav) -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const icons = { 'League': 'league-symbol.jpeg', 'Nature': 'nature-symbol.jpeg', 'Horde': 'horde-symbol.jpeg' };

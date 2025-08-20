@@ -48,7 +48,7 @@ footer {
   background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
 }
 
-/* Enhanced nav styling come da base migliorata */
+/* Enhanced nav styling */
 header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; }
 header .tagline { color: #b0b6c7; }
 nav ul { gap: 20px; }
@@ -71,36 +71,23 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 .content-card h3 { margin-top: 0; margin-bottom: 10px; color: #1f2937; }
 .content-card p, .content-card li { color: #374151; }
 
-/* Immagini piccole affiancate al testo su desktop, a colonna su mobile */
+/* Immagini molto piccole affiancate al testo */
 .img-block {
-  display: flex; align-items: flex-start; gap: 18px;
+  display: flex; align-items: flex-start; gap: 14px;
   margin-top: 12px; flex-wrap: wrap;
 }
 .img-block img {
-  max-width: 32%;
-  min-width: 160px;
+  max-width: 18%;   /* molto più piccole */
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid #e5e7eb;
 }
-.img-block .text { flex: 1 1 260px; min-width: 260px; }
-
-/* Coppia immagini piccole */
-.duo {
-  display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;
-}
-.duo img {
-  max-width: 32%;
-  min-width: 160px;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-}
+.img-block .text { flex: 1 1 300px; }
 
 /* Responsive */
 @media (max-width: 768px) {
   .img-block { flex-direction: column; }
-  .img-block img, .duo img { max-width: 100%; }
+  .img-block img { max-width: 100%; }
 }
   </style>
 </head>
@@ -130,10 +117,8 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
     <div class="content-card">
       <h3>Season 1 Mechanics</h3>
       <div class="img-block">
-        <div class="duo">
-          <img src="Spring.jpeg" alt="Spring of Nature building" loading="lazy">
-          <img src="adventure5.jpeg" alt="Season 1 adventure HUD with water percentage" loading="lazy">
-        </div>
+        <img src="Spring.jpeg" alt="Spring of Nature building" loading="lazy">
+        <img src="adventure5.jpeg" alt="Season 1 adventure HUD with water percentage" loading="lazy">
         <div class="text">
           <p>Progress in Season 1 depends not only on hero power but also on your water percentage, visible top left during the adventure. Only the water generated from the <strong>Spring of Nature</strong> building counts toward this.</p>
           <p>If your water percentage is equal to or greater than the requirement for that zone, you fight at full power. If it’s lower, you’ll suffer extreme debuffs — up to <strong>-100% HP and damage</strong>.</p>

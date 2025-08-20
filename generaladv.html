@@ -93,29 +93,47 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   color: #1f2937;
 }
 .content-card p, .content-card li { color: #374151; }
-.img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
+
+/* Immagini piccole affiancate al testo su desktop, a colonna su mobile */
+.img-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 12px;
+  flex-wrap: wrap;
 }
-.img-responsive {
-  width: 100%;
+.img-block img {
+  max-width: 32%;   /* immagini più piccole */
+  min-width: 160px;
   height: auto;
-  display: block;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
 }
-.img-stack {
-  display: grid;
+.img-block .text {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+/* Variante a due immagini piccole affiancate */
+.duo {
+  display: flex;
   gap: 14px;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
-.note {
-  font-size: 0.95rem;
-  color: #4b5563;
+.duo img {
+  max-width: 32%;
+  min-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
 }
-ul.tight { margin: 0 0 0 18px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-block { flex-direction: column; }
+  .img-block img, .duo img { max-width: 100%; }
+}
   </style>
 </head>
 <body>
@@ -148,13 +166,20 @@ ul.tight { margin: 0 0 0 18px; }
 
     <div class="content-card">
       <h3>Structure</h3>
-      <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, <em>Adventure Bosses</em> appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
-      <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
 
-      <!-- Side-by-side images (left/right) -->
-      <div class="img-grid" aria-label="Adventure screenshots">
-        <img class="img-responsive" src="adventure1.jpeg" alt="Adventure zone exploration screen" loading="lazy">
-        <img class="img-responsive" src="adventure2.jpeg" alt="Adventure boss portal screen" loading="lazy">
+      <div class="img-block">
+        <img src="adventure1.jpeg" alt="Adventure zone exploration screen" loading="lazy">
+        <div class="text">
+          <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, <em>Adventure Bosses</em> appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
+          <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="adventure2.jpeg" alt="Adventure boss portal screen" loading="lazy">
+        <div class="text">
+          <p>Bosses are often tied to portals; defeating them is key to unlocking new areas and chests. Use leftover stamina to replay bosses you can clear reliably.</p>
+        </div>
       </div>
     </div>
 
@@ -166,22 +191,25 @@ ul.tight { margin: 0 0 0 18px; }
 
     <div class="content-card">
       <h3>Chest Icon (Bottom Left)</h3>
-      <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without any penalty. It stops accumulating after 6 hours if unclaimed — so check it periodically.</p>
 
-      <div class="img-stack">
-        <img class="img-responsive" src="adventure3.jpeg" alt="Bottom-left passive chest indicator" loading="lazy">
+      <div class="img-block">
+        <img src="adventure3.jpeg" alt="Bottom-left passive chest indicator" loading="lazy">
+        <div class="text">
+          <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without any penalty. It stops accumulating after 6 hours if unclaimed — so check it periodically.</p>
+        </div>
       </div>
 
-      <p class="note">As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
-
-      <div class="img-stack">
-        <img class="img-responsive" src="adventure4.jpeg" alt="Clock icon offering two-hour rewards for stamina" loading="lazy">
+      <div class="img-block">
+        <img src="adventure4.jpeg" alt="Clock icon offering two-hour rewards for stamina" loading="lazy">
+        <div class="text">
+          <p>As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
+        </div>
       </div>
     </div>
 
     <div class="content-card">
       <h3>Progression Tips</h3>
-      <ul class="tight">
+      <ul>
         <li>At the beginning, focus on pushing adventure until you get stuck.</li>
         <li>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</li>
         <li>The daily stamina limit for opening boss chests is <strong>2500</strong> — very high and rarely reached unless you're playing intensely.</li>
@@ -189,6 +217,7 @@ ul.tight { margin: 0 0 0 18px; }
         <li>Many of these weapons are purple tier; for how to use them effectively, refer to the <strong>Gear</strong> section under <strong>Heroes</strong>.</li>
       </ul>
     </div>
+
   </section>
 </main>
 

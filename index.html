@@ -35,7 +35,7 @@
   </script>
 
   <style>
-    /* Base layout only (NO header/nav CSS here to avoid conflicts) */
+    /* Page layout only (NO nav CSS here to avoid conflicts) */
     :root{
       --bg:#f5f5f7; --ink:#141720; --muted:#666;
       --card:#ffffff; --bd:#e9e9ee; --shadow:0 4px 12px rgba(0,0,0,.06);
@@ -45,29 +45,29 @@
       font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.6; color:var(--ink); }
     main { max-width: 960px; margin: 0 auto; padding: 36px 20px; }
 
-    /* Welcome block (simple & clean) */
+    /* Welcome block (clean & short) */
     .welcome { background: var(--card); border:1px solid var(--bd); border-radius:12px; box-shadow:var(--shadow); padding:22px; }
-    .welcome h2 { margin:0 0 10px; font-size:1.35rem; }
-    .welcome p { margin:8px 0 0; color:var(--muted); }
+    .welcome h2 { margin:0 0 8px; font-size:1.3rem; }
+    .welcome p { margin:6px 0 0; color:var(--muted); }
 
     /* Quick links (minimal buttons) */
-    .quick { margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; }
+    .quick { margin-top:12px; display:flex; flex-wrap:wrap; gap:10px; }
     .quick a {
-      display:inline-block; padding:10px 14px; border-radius:10px;
+      display:inline-block; padding:9px 14px; border-radius:10px;
       background:#eef6ff; color:#0b5ed7; border:1px solid #d6e9ff;
       text-decoration:none; font-weight:600; font-size:.95rem;
       transition: transform .12s ease, box-shadow .12s ease;
     }
     .quick a:hover { transform: translateY(-1px); box-shadow:0 6px 14px rgba(0,0,0,.08); }
 
-    /* Secondary section (very short) */
-    .mini { margin-top:24px; background:var(--card); border:1px solid var(--bd); border-radius:12px; box-shadow:var(--shadow); padding:18px; }
-    .mini h3 { margin:0 0 8px; font-size:1.1rem; }
-    .mini ul { margin:8px 0 0 18px; }
-
-    /* tiny inline link style */
+    /* Tiny inline link style */
     a.inline { color:#0b5ed7; text-decoration:none; border-bottom:1px solid rgba(11,94,215,.25); }
     a.inline:hover { border-bottom-color:#0b5ed7; }
+
+    /* Secondary mini section */
+    .mini { margin-top:20px; background:var(--card); border:1px solid var(--bd); border-radius:12px; box-shadow:var(--shadow); padding:16px; }
+    .mini h3 { margin:0 0 6px; font-size:1.05rem; }
+    .mini ul { margin:6px 0 0 18px; }
   </style>
 </head>
 <body>
@@ -77,14 +77,24 @@
   <script>
     (function(){
       const mount = document.getElementById('navbar');
-      fetch('nav.html')
+      fetch('nav.html?v=5', { cache: 'no-store' })
         .then(r => r.text())
         .then(html => {
           mount.innerHTML = html;
-          // Highlight active
+
+          // Ensure dropdowns open on hover (fallback in case old CSS is cached)
+          const fix = document.createElement('style');
+          fix.textContent = `
+            nav .has-sub { position: relative; }
+            nav .dropdown { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); z-index: 1000; }
+            @media (hover:hover) { nav .has-sub:hover > .dropdown { display: block; } }
+          `;
+          document.head.appendChild(fix);
+
+          // Highlight active link
           const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
           mount.querySelectorAll('nav a[href]').forEach(a=>{
-            const href = a.getAttribute('href')?.toLowerCase();
+            const href = (a.getAttribute('href') || '').toLowerCase();
             if(href === current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
           });
         })
@@ -105,11 +115,11 @@
     </section>
 
     <section class="mini">
-      <h3>What you’ll find</h3>
+      <h3>Quick access</h3>
       <ul>
-        <li>Faction breakdowns: <a class="inline" href="league.html">League</a>, <a class="inline" href="nature.html">Nature</a>, <a class="inline" href="horde.html">Horde</a></li>
-        <li>Gear & <a class="inline" href="exclusive-gear.html">Exclusive Gear</a> essentials</li>
-        <li>Event routes: <a class="inline" href="guild-race.html">Guild Race</a>, <a class="inline" href="arms-race.html">Arms Race</a>, <a class="inline" href="kingdom.html">KvK</a>, <a class="inline" href="guildboss.html">Guild Boss</a></li>
+        <li>Factions: <a class="inline" href="league.html">League</a>, <a class="inline" href="nature.html">Nature</a>, <a class="inline" href="horde.html">Horde</a></li>
+        <li>Gear &amp; <a class="inline" href="exclusive-gear.html">Exclusive Gear</a></li>
+        <li>Events: <a class="inline" href="guild-race.html">Guild Race</a>, <a class="inline" href="arms-race.html">Arms Race</a>, <a class="inline" href="kingdom.html">KvK</a>, <a class="inline" href="guildboss.html">Guild Boss</a></li>
       </ul>
     </section>
   </main>
@@ -119,7 +129,7 @@
   <script>
     (function(){
       const mount = document.getElementById('footer');
-      fetch('footer.html')
+      fetch('footer.html', { cache: 'no-store' })
         .then(r => r.text())
         .then(html => { mount.innerHTML = html; })
         .catch(e => console.error('Footer load failed:', e));

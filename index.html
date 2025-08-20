@@ -9,7 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
 
   <!-- SEO basics -->
-  <meta name="description" content="TopHeroes Guide: practical guides for Heroes, Gear, Events (Guild Race, Arms Race, KvK), and SHOP tips for F2P and spenders. Clear, concise, and up to date." />
+  <meta name="description" content="TopHeroes Guide: clear, practical guides for Heroes, Gear, Events (Guild Race, Arms Race, KvK) and SHOP tips for F2P and spenders." />
   <meta name="keywords" content="TopHeroes guide, heroes, gear, exclusive gear, villagers, events, guild race, arms race, KvK, shop F2P, beginners guide, tips" />
   <meta name="robots" content="index, follow" />
 
@@ -35,44 +35,44 @@
   </script>
 
   <style>
-/* Base */
-:root{
-  --card-bg:#fff; --card-bd:#e9e9ee; --card-shadow:0 4px 12px rgba(0,0,0,.06);
-  --ink:#141720; --muted:#666; --accent:#29abe0; --bg:#f5f5f7;
-}
-html,body{margin:0;padding:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;line-height:1.6;color:var(--ink)}
-main{padding:40px 20px;max-width:1000px;margin:0 auto}
+    /* Base layout only (NO header/nav CSS here to avoid conflicts) */
+    :root{
+      --bg:#f5f5f7; --ink:#141720; --muted:#666;
+      --card:#ffffff; --bd:#e9e9ee; --shadow:0 4px 12px rgba(0,0,0,.06);
+      --accent:#29abe0;
+    }
+    html, body { margin:0; padding:0; background:var(--bg);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.6; color:var(--ink); }
+    main { max-width: 960px; margin: 0 auto; padding: 36px 20px; }
 
-/* Cards / sections */
-section{margin-bottom:32px;background:var(--card-bg);border:1px solid var(--card-bd);border-radius:12px;box-shadow:var(--card-shadow);padding:24px}
-h1,h2,h3{margin:0 0 12px}
-p{margin:8px 0 0}
-.muted{color:var(--muted)}
-.badge{display:inline-block;font-size:.75rem;padding:4px 8px;border-radius:999px;background:#eef6ff;color:#0b5ed7;border:1px solid #d6e9ff;margin-left:8px;vertical-align:middle}
+    /* Welcome block (simple & clean) */
+    .welcome { background: var(--card); border:1px solid var(--bd); border-radius:12px; box-shadow:var(--shadow); padding:22px; }
+    .welcome h2 { margin:0 0 10px; font-size:1.35rem; }
+    .welcome p { margin:8px 0 0; color:var(--muted); }
 
-/* Quick grid */
-.grid{display:grid;gap:16px}
-.three{grid-template-columns:1fr}
-@media(min-width:760px){.three{grid-template-columns:repeat(3,1fr)}}
-.card-link{display:block;text-decoration:none;color:inherit;border:1px solid var(--card-bd);border-radius:10px;background:var(--card-bg);padding:16px;box-shadow:var(--card-shadow);transition:transform .15s, box-shadow .15s, border-color .15s}
-.card-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08);border-color:#d6d6de}
-.card-link h3{margin:0 0 8px}
-.list{margin:8px 0 0 18px}
-.keywords{margin-top:8px;font-size:.9rem;color:#4a4a4a}
+    /* Quick links (minimal buttons) */
+    .quick { margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; }
+    .quick a {
+      display:inline-block; padding:10px 14px; border-radius:10px;
+      background:#eef6ff; color:#0b5ed7; border:1px solid #d6e9ff;
+      text-decoration:none; font-weight:600; font-size:.95rem;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .quick a:hover { transform: translateY(-1px); box-shadow:0 6px 14px rgba(0,0,0,.08); }
 
-/* Keep your enhanced nav look (coexists with nav.html styles) */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-  padding: 12px 20px;
-  display: flex; flex-direction: column; align-items: center;
-}
+    /* Secondary section (very short) */
+    .mini { margin-top:24px; background:var(--card); border:1px solid var(--bd); border-radius:12px; box-shadow:var(--shadow); padding:18px; }
+    .mini h3 { margin:0 0 8px; font-size:1.1rem; }
+    .mini ul { margin:8px 0 0 18px; }
+
+    /* tiny inline link style */
+    a.inline { color:#0b5ed7; text-decoration:none; border-bottom:1px solid rgba(11,94,215,.25); }
+    a.inline:hover { border-bottom-color:#0b5ed7; }
   </style>
 </head>
 <body>
 
-  <!-- Shared NAVBAR -->
+  <!-- NAVBAR (shared) -->
   <div id="navbar"></div>
   <script>
     (function(){
@@ -81,89 +81,50 @@ header {
         .then(r => r.text())
         .then(html => {
           mount.innerHTML = html;
+          // Highlight active
           const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
           mount.querySelectorAll('nav a[href]').forEach(a=>{
             const href = a.getAttribute('href')?.toLowerCase();
             if(href === current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
           });
-        });
+        })
+        .catch(e => console.error('Navbar load failed:', e));
     })();
   </script>
 
   <main>
-    <!-- Welcome / intro -->
-    <section>
-      <h2>Welcome to <strong>TopHeroes Guide</strong> <span class="badge">Clean • Practical • Updated</span></h2>
-      <p class="muted">Fast, organized guides to help you progress every day: <em>Heroes</em>, <em>Gear</em>, <em>Events</em> (Guild Race, Arms Race, KvK), <em>Villagers</em>, and <em>SHOP</em> for both F2P and spenders.</p>
-      <p>Here you’ll find actionable priorities, essential lists, and builds that actually work—no fluff, just what you need to advance efficiently.</p>
-      <p class="keywords"><strong>Keywords:</strong> TopHeroes guide, heroes builds, exclusive gear, guild race, arms race, kvk strategies, shop F2P, beginners tips.</p>
-    </section>
-
-    <!-- Three quick access cards -->
-    <section>
-      <div class="grid three">
-        <a class="card-link" href="heroes.html">
-          <h3>Heroes &amp; Factions</h3>
-          <p>Overview + <a class="inline" href="league.html">League</a>, <a class="inline" href="nature.html">Nature</a>, <a class="inline" href="horde.html">Horde</a>, <a class="inline" href="pets.html">Pets</a>, <a class="inline" href="gear.html">Gear</a> &amp; <a class="inline" href="exclusive-gear.html">Exclusive Gear</a>.</p>
-        </a>
-        <a class="card-link" href="events.html">
-          <h3>Events</h3>
-          <p>Quick routes to <a class="inline" href="guild-race.html">Guild Race</a>, <a class="inline" href="arms-race.html">Arms Race</a>, <a class="inline" href="kingdom.html">KvK</a>, <a class="inline" href="guildboss.html">Guild Boss</a>.</p>
-        </a>
-        <a class="card-link" href="beginners.html">
-          <h3>Beginners Guide</h3>
-          <p>Start right: buildings, villagers, research, hero priorities, and smart spending tips.</p>
-        </a>
+    <section class="welcome">
+      <h2>Welcome to <strong>TopHeroes Guide</strong></h2>
+      <p>Clear, practical guidance to progress faster: <em>Heroes</em>, <em>Gear</em>, <em>Events</em> (Guild Race, Arms Race, KvK), <em>Villagers</em>, and <em>SHOP</em> for both F2P and spenders.</p>
+      <div class="quick">
+        <a href="heroes.html">Explore Heroes</a>
+        <a href="events.html">Events</a>
+        <a href="shop.html">SHOP</a>
+        <a href="beginners.html">Beginners</a>
       </div>
     </section>
 
-    <!-- SHOP highlight -->
-    <section>
-      <h2>SHOP – F2P &amp; Spending</h2>
-      <p>Weekly/daily priorities and what to avoid. Focus on <strong>Legendary Promotion Stones</strong>, <strong>Soul Stones</strong>, <strong>Relic Scroll</strong>, <strong>Stamina</strong>, <strong>Pet Food</strong>, and <strong>speed‑ups</strong>. Strategies to maximize value during <em>Guild Race</em> and <em>Arms Race</em>.</p>
-      <p><a class="inline" href="shop.html">Open the full SHOP guide →</a></p>
-    </section>
-
-    <!-- How to use -->
-    <section>
-      <h2>How to use these guides</h2>
-      <ul class="list">
-        <li>Start with the <a class="inline" href="beginners.html">Beginners Guide</a> for a solid base.</li>
-        <li>Jump to <a class="inline" href="heroes.html">Heroes</a> for builds and synergies (League/Nature/Horde).</li>
-        <li>Optimize progress with <a class="inline" href="events.html">Events</a> and <a class="inline" href="shop.html">SHOP</a>.</li>
+    <section class="mini">
+      <h3>What you’ll find</h3>
+      <ul>
+        <li>Faction breakdowns: <a class="inline" href="league.html">League</a>, <a class="inline" href="nature.html">Nature</a>, <a class="inline" href="horde.html">Horde</a></li>
+        <li>Gear & <a class="inline" href="exclusive-gear.html">Exclusive Gear</a> essentials</li>
+        <li>Event routes: <a class="inline" href="guild-race.html">Guild Race</a>, <a class="inline" href="arms-race.html">Arms Race</a>, <a class="inline" href="kingdom.html">KvK</a>, <a class="inline" href="guildboss.html">Guild Boss</a></li>
       </ul>
-      <p class="muted">We iterate often—check the main sections regularly for updates.</p>
     </section>
   </main>
 
-  <!-- Shared FOOTER -->
+  <!-- FOOTER (shared) -->
   <div id="footer"></div>
   <script>
     (function(){
       const mount = document.getElementById('footer');
       fetch('footer.html')
         .then(r => r.text())
-        .then(html => { mount.innerHTML = html; });
+        .then(html => { mount.innerHTML = html; })
+        .catch(e => console.error('Footer load failed:', e));
     })();
   </script>
 
-  <script>
-  // Optional tiny enhancement: add tiny faction icons if the image files exist
-  document.addEventListener('DOMContentLoaded', function() {
-    const icons = { 'League': 'league-symbol.jpeg', 'Nature': 'nature-symbol.jpeg', 'Horde': 'horde-symbol.jpeg' };
-    function addIcon(el, word) {
-      const img = document.createElement('img');
-      img.src = icons[word];
-      img.alt = word + ' symbol';
-      img.style.height = '1em';
-      img.style.marginLeft = '0.3em';
-      el.appendChild(img);
-    }
-    document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-      const text = h.textContent.trim();
-      if (icons[text]) addIcon(h, text);
-    });
-  });
-  </script>
 </body>
 </html>

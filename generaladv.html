@@ -4,153 +4,179 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TopHeroes Guide - Adventure Overview</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+
   <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
+    /* ====== STILI SOLO PER IL CONTENUTO ====== */
+    :root{ --panel:#fff; --border:#e6e8ee; --muted:#444; --bg:#f5f5f7; }
+    body { margin:0; padding:0; background:var(--bg); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.6; }
 
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    /* Contenuto pagina */
+    #adventure-page {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    #adventure-page section { margin-bottom: 40px; }
+    #adventure-page h2 { font-size: 1.6rem; margin-bottom: 12px; }
+    #adventure-page h3 { margin-top: 20px; font-size: 1.2rem; }
 
-section {
-  margin-bottom: 40px;
-}
+    /* Intro card */
+    #adventure-page .page-intro {
+      background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
 
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
+    /* Immagini responsive */
+    #adventure-page .img-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+    #adventure-page figure {
+      flex: 1 1 260px;
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    #adventure-page figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    #adventure-page figcaption {
+      font-size: .9rem;
+      color: #555;
+      padding: 8px 10px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
 
-h3 {
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
-
-/* placeholder immagini */
-.img-placeholder {
-  background: #e9eef5;
-  border: 1px dashed #b5c0d0;
-  padding: 12px;
-  margin: 16px 0;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  color: #333;
-  text-align: center;
-}
-.img-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.img-row .img-placeholder {
-  flex: 1;
-}
-
-/* box informativo */
-.info-box {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 20px 0;
-}
+    /* Box informativo */
+    #adventure-page .info-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px 0 0;
+    }
   </style>
 </head>
 <body>
-<div id="navbar"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("navbar").innerHTML = html;
-      const current = location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll('#navbar nav a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.style.color = '#fff';
-          a.style.borderBottomColor = '#29abe0';
-        }
+
+  <!-- NAV esterno (lascia com’è nel sito) -->
+  <div id="navbar"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+        document.querySelectorAll('#navbar nav a').forEach(a => {
+          const href = a.getAttribute('href')?.toLowerCase();
+          if (href === current) {
+            a.style.color = '#fff';
+            a.style.borderBottomColor = '#29abe0';
+          }
+        });
+      })
+      .catch(err => console.error('Navbar load failed:', err));
+  </script>
+
+  <!-- ===== CONTENUTO ===== -->
+  <main id="adventure-page" aria-label="Adventure Overview">
+    <section class="page-intro">
+      <h2>Adventure Mode - Overview</h2>
+      <p style="margin:0; color:var(--muted);">General Overview, Structure, Maps, Chest Icon and Progression Tips.</p>
+    </section>
+
+    <section id="adventure-overview">
+      <h3>General Overview</h3>
+      <p>Adventure is the first and most crucial game mode in TopHeroes. It's the main source of initial resources, including heroes, weapons, and gear. Progressing through it is essential to starting your journey the right way.</p>
+
+      <h3>Structure</h3>
+      <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, “Adventure Bosses” appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
+      <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
+
+      <!-- Coppia immagini: adventure1.jpeg a sinistra, adventure2.jpeg a destra -->
+      <div class="img-row">
+        <figure>
+          <img src="adventure1.jpeg" alt="Adventure example 1" loading="lazy" />
+          <figcaption>Adventure — example 1</figcaption>
+        </figure>
+        <figure>
+          <img src="adventure2.jpeg" alt="Adventure example 2" loading="lazy" />
+          <figcaption>Adventure — example 2</figcaption>
+        </figure>
+      </div>
+
+      <h3>Adventure Maps</h3>
+      <p>Players who start at server launch will initially only have access to the “Classic” map in Normal mode. After completing it, the “Hard Mode” of the same map will unlock. Later, with Season 1, a new map and extended levels in Classic Hard will be added.</p>
+      <p>Once you've cleared all available maps, it's a good time to use leftover stamina to farm previous bosses and complete 100% zones.</p>
+
+      <h3>Chest Icon (Bottom Left)</h3>
+      <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without penalty. It stops accumulating after 6 hours if unclaimed — so check it periodically.</p>
+
+      <figure>
+        <img src="adventure3.jpeg" alt="Adventure chest icon" loading="lazy" />
+        <figcaption>Chest icon (bottom-left)</figcaption>
+      </figure>
+
+      <p>As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
+
+      <figure>
+        <img src="adventure4.jpeg" alt="Adventure time-skip option" loading="lazy" />
+        <figcaption>Time-skip icon (2 hours for 20 stamina)</figcaption>
+      </figure>
+
+      <h3>Progression Tips</h3>
+      <div class="info-box">
+        <p>At the beginning, focus on pushing adventure until you get stuck.</p>
+        <p>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</p>
+        <p>The daily stamina limit for opening boss chests is 2500 — very high and rarely reached unless you're playing intensely.</p>
+        <p>As you progress, boss rewards improve significantly, especially in the Classic Hard Mode, where legendary weapons begin to drop.</p>
+        <p>Many of these weapons are purple tier; for how to use them effectively, refer to the “Gear” section under “Heroes”.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER esterno -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Script icone (identico al tuo, non influisce sul nav) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const icons = { 'League': 'league-symbol.jpeg', 'Nature': 'nature-symbol.jpeg', 'Horde': 'horde-symbol.jpeg' };
+      function addIcon(el, word) {
+        const img = document.createElement('img');
+        img.src = icons[word];
+        img.alt = word + ' symbol';
+        img.loading = 'lazy';
+        img.style.height = '1em';
+        img.style.marginLeft = '0.3em';
+        el.appendChild(img);
+      }
+      document.querySelectorAll('a').forEach(function(a) {
+        const text = a.textContent.trim();
+        if (icons[text]) addIcon(a, text);
       });
-    })
-    .catch(err => console.error('Navbar load failed:', err));
-</script>
-
-<main>
-  <section id="adventure-overview">
-    <h2>Adventure Mode - Overview</h2>
-    <h3>General Overview</h3>
-    <p>Adventure is the first and most crucial game mode in TopHeroes. It's the main source of initial resources, including heroes, weapons, and gear. Progressing through it is essential to starting your journey the right way.</p>
-
-    <h3>Structure</h3>
-    <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, “Adventure Bosses” appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
-    <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
-
-    <div class="img-row">
-      <div class="img-placeholder">(Immagine a sinistra: adventure1.jpeg)</div>
-      <div class="img-placeholder">(A destra: adventure2.jpeg)</div>
-    </div>
-
-    <h3>Adventure Maps</h3>
-    <p>Players who start at server launch will initially only have access to the “Classic” map in Normal mode. After completing it, the “Hard Mode” of the same map will unlock. Later, with Season 1, a new map and extended levels in Classic Hard will be added.</p>
-    <p>Once you've cleared all available maps, it's a good time to use leftover stamina to farm previous bosses and complete 100% zones.</p>
-
-    <h3>Chest Icon (Bottom Left)</h3>
-    <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without penalty. It stops accumulating after 6 hours if unclaimed — so check it periodically.</p>
-    <div class="img-placeholder">(Immagine adventure3.jpeg)</div>
-
-    <p>As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
-    <div class="img-placeholder">(Immagine adventure4.jpeg)</div>
-
-    <h3>Progression Tips</h3>
-    <div class="info-box">
-      <p>At the beginning, focus on pushing adventure until you get stuck.</p>
-      <p>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</p>
-      <p>The daily stamina limit for opening boss chests is 2500 — very high and rarely reached unless you're playing intensely.</p>
-      <p>As you progress, boss rewards improve significantly, especially in the Classic Hard Mode, where legendary weapons begin to drop.</p>
-      <p>Many of these weapons are purple tier; for how to use them effectively, refer to the “Gear” section under “Heroes”.</p>
-    </div>
-  </section>
-</main>
-
-<div id="footer"></div>
-<script>
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => { document.getElementById("footer").innerHTML = html; });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const icons = {
-    'League': 'league-symbol.jpeg',
-    'Nature': 'nature-symbol.jpeg',
-    'Horde': 'horde-symbol.jpeg'
-  };
-  function addIcon(el, word) {
-    const img = document.createElement('img');
-    img.src = icons[word];
-    img.alt = word + ' symbol';
-    img.style.height = '1em';
-    img.style.marginLeft = '0.3em';
-    el.appendChild(img);
-  }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
-  });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
-  });
-});
-</script>
+      document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+        const text = h.textContent.trim();
+        if (icons[text]) addIcon(h, text);
+      });
+    });
+  </script>
 </body>
 </html>

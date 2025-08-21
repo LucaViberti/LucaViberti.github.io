@@ -9,9 +9,6 @@
   <meta name="description" content="TopHeroes Guide: concise guides for Heroes (League, Nature, Horde), Adventure modes (Classic, Season 1), Events, and beginner tips. Short, practical strategies to progress faster." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <!-- Google Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
-
   <style>
 /* Base */
 body{
@@ -20,7 +17,7 @@ body{
   background:#f5f5f7; line-height:1.6; color:#111;
 }
 
-/* Header/Nav - coerente con le altre pagine */
+/* Header/Nav */
 header{
   background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
   box-shadow: 0 2px 4px rgba(0,0,0,.4);
@@ -71,18 +68,25 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 }
 .mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
 .mini-card h3{margin:0 0 6px; font-size:1.05rem;}
-.mini-card h3 a{color:#0f172a; text-decoration:none; border-bottom:2px solid transparent;}
-.mini-card h3 a:hover{border-bottom-color:#29abe0;}
 .mini-card p{margin:0; color:#4b5563; font-size:.95rem;}
 .mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
 
-/* Ads block container */
-.home-ad{
-  margin:22px auto; display:block; text-align:center;
-  background:#fff; border:1px dashed #e5e7eb; border-radius:12px; padding:8px;
+/* Pulsanti per i link */
+.mini-card a{
+  display:inline-block;
+  margin-top:8px;
+  background:#29abe0;
+  color:#fff !important;
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:.85rem;
+  font-weight:500;
+  text-decoration:none;
+  transition:background .2s;
 }
+.mini-card a:hover{background:#2389b5;}
 
-/* Donation + footer coerenti */
+/* Donation + footer */
 .donation-section{
   text-align:center; margin-top:28px; padding:18px;
   background:#f7fafc; border:1px solid #e8eef5; border-radius:12px;
@@ -94,25 +98,7 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .donation-button:hover{background:#2389b5;}
 
 footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
-
-/* a11y helper */
-.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   </style>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"TopHeroes Guide",
-    "url":"/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -136,71 +122,42 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
     <!-- HERO INTRO -->
     <section class="hero" aria-label="Welcome">
       <h1 itemprop="headline">TopHeroes Guide</h1>
-      <p>Short, practical guides to progress faster in <strong>TopHeroes</strong>: faction <a href="heroes.html">Heroes</a> (League, Nature, Horde), <a href="generaladv.html">Adventure</a> modes, <a href="events.html">Events</a>, and <a href="beginners.html">beginner tips</a>.</p>
+      <p>Short, practical guides to progress faster in <strong>TopHeroes</strong>: faction Heroes, Adventure modes, Events, and beginner tips.</p>
       <p>Everything is organized in quick cards and checklists to help you decide who to build, what to upgrade, and how to plan resources.</p>
     </section>
-
-    <!-- ADS (above the fold-ish) -->
-    <div class="home-ad" aria-label="Advertisement">
-      <!-- HomeResponsiveTop -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-7174478441144796"
-           data-ad-slot="home-top-1"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    </div>
 
     <!-- QUICK SECTIONS -->
     <h2 class="section-head">Explore the guides</h2>
     <div class="quick-sections" aria-label="Main sections">
-      <!-- Heroes -->
       <article class="mini-card">
-        <h3><a href="heroes.html">Heroes</a></h3>
-        <p>Faction overview and core builds: who to invest in and when to swap. Includes links to <a href="league.html">League</a>, <a href="nature.html">Nature</a>, and <a href="horde.html">Horde</a>.</p>
-        <div class="meta">Legendary & Mythic recommendations</div>
+        <h3>Heroes</h3>
+        <p>Faction overview and core builds: League, Nature, Horde.</p>
+        <a href="heroes.html">Go to Heroes</a>
       </article>
 
-      <!-- Adventure -->
       <article class="mini-card">
-        <h3><a href="generaladv.html">Adventure</a></h3>
-        <p>How Adventure works, map basics, and rewards. Deep dives for <a href="classicadv.html">Classic</a> and <a href="seasononeadv.html">Season&nbsp;1</a>.</p>
-        <div class="meta">Progression & chest routing</div>
+        <h3>Adventure</h3>
+        <p>How Adventure works, map basics, and rewards.</p>
+        <a href="generaladv.html">Go to Adventure</a>
       </article>
 
-      <!-- Events -->
       <article class="mini-card">
-        <h3><a href="events.html">Events</a></h3>
-        <p>Quick strategies for Guild Race, Arms Race, KvK, and Guild Boss to maximize score with fewer resources.</p>
-        <div class="meta">Weekly/seasonal tips</div>
+        <h3>Events</h3>
+        <p>Quick strategies for Guild Race, Arms Race, KvK, and Guild Boss.</p>
+        <a href="events.html">Go to Events</a>
       </article>
 
-      <!-- Beginners -->
       <article class="mini-card">
-        <h3><a href="beginners.html">Beginners Guide</a></h3>
-        <p>Early priorities, resource management, and starter teams to clear early chapters smoothly.</p>
-        <div class="meta">Start strong in a few hours</div>
+        <h3>Beginners Guide</h3>
+        <p>Early priorities, starter teams, and resource management.</p>
+        <a href="beginners.html">Go to Beginners</a>
       </article>
 
-      <!-- Tips -->
       <article class="mini-card">
-        <h3><a href="tips.html">Tips & More</a></h3>
-        <p>Small optimizations, QoL tricks, and common pitfalls to avoid while climbing.</p>
-        <div class="meta">Short, actionable notes</div>
+        <h3>Tips & More</h3>
+        <p>Small optimizations and QoL tricks for daily play.</p>
+        <a href="tips.html">Go to Tips</a>
       </article>
-    </div>
-
-    <!-- ADS (second placement) -->
-    <div class="home-ad" aria-label="Advertisement">
-      <!-- HomeResponsiveBottom -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-7174478441144796"
-           data-ad-slot="home-btm-1"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
 
     <!-- Footer import -->
@@ -214,19 +171,16 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       .catch(err => console.error('Footer load failed:', err));
   </script>
 
-  <!-- Icon injection (coerente con le altre pagine) -->
+  <!-- Icon injection -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const icons = {'League':'league-symbol.jpeg','Nature':'nature-symbol.jpeg','Horde':'horde-symbol.jpeg'};
       function addIcon(el, word){
-        const img = document.createElement('img');
-        img.src = icons[word]; img.alt = word + ' symbol'; img.loading = 'lazy';
+        const img=document.createElement('img');
+        img.src=icons[word]; img.alt=word+' symbol'; img.loading='lazy';
         img.style.height='1em'; img.style.marginLeft='0.3em';
         el.appendChild(img);
       }
-      document.querySelectorAll('a').forEach(a=>{
-        const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);
-      });
       document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
         const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
       });

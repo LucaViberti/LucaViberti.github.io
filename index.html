@@ -65,16 +65,17 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .mini-card{
   background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
   transition: box-shadow .15s ease, transform .15s ease;
+  display:flex; flex-direction:column; /* allineamento verticale */
 }
 .mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
 .mini-card h3{margin:0 0 6px; font-size:1.05rem;}
-.mini-card p{margin:0; color:#4b5563; font-size:.95rem;}
+.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;} /* occupa lo spazio */
 .mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
 
-/* Pulsanti per i link */
+/* Pulsanti */
 .mini-card a{
-  display:inline-block;
-  margin-top:8px;
+  margin-top:12px;
+  align-self:flex-start; /* resta a sinistra ma in basso */
   background:#29abe0;
   color:#fff !important;
   padding:6px 12px;

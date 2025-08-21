@@ -4,226 +4,233 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO essenziali (senza immagini/social) -->
-  <title>TopHeroes Guide – Home</title>
-  <meta name="description" content="Welcome to TopHeroes Guide. This website is created to help you with some basic stuff in the game." />
+  <!-- SEO -->
+  <title>TopHeroes Guide – Strategies, Heroes, Adventure & Events</title>
+  <meta name="description" content="TopHeroes Guide: concise guides for Heroes (League, Nature, Horde), Adventure modes (Classic, Season 1), Events, and beginner tips. Short, practical strategies to progress faster." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
+  <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
 
   <style>
 /* Base */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-  color: #111;
+body{
+  margin:0; padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:#f5f5f7; line-height:1.6; color:#111;
 }
 
-/* Header/Nav: lasciati come nel tuo file */
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-nav { width: 100%; margin-top: 10px; }
-nav ul {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
-}
-nav ul li { position: relative; }
-nav ul li a {
-  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
-  font-size: 0.85rem; transition: color 0.3s;
-}
-nav ul li a:hover { color: #FFFFFF; }
-nav ul li ul {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  padding: 10px 0; min-width: 200px; z-index: 1000;
-}
-nav ul li:hover ul { display: block; }
-nav ul li ul li { margin: 0; }
-nav ul li ul li a {
-  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
-}
-nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
-
-/* Enhanced navigation styling dal tuo file */
-header {
+/* Header/Nav - coerente con le altre pagine */
+header{
   background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
   border-bottom: 1px solid #2b2f3a;
+  padding:12px 20px; display:flex; flex-direction:column; align-items:center;
 }
-header .tagline { color: #b0b6c7; }
-nav ul { gap: 20px; }
-nav ul li a {
-  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
-  padding: 12px 6px; border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
+header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+header .site-info{display:flex; flex-direction:column; align-items:center;}
+nav{width:100%; margin-top:10px;}
+nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+nav ul li{position:relative;}
+nav ul li a{
+  color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+  padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+  font-size:.85rem;
 }
-nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
-nav ul li ul {
-  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
+nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+nav ul li ul{
+  display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
 }
-nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
-nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d; color:#fff;}
 
-/* Main contenuto asciutto */
-main {
-  padding: 32px 20px 48px;
-  max-width: 900px;
-  margin: 0 auto;
-}
+main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 
-/* Hero minimale, senza immagini */
-.hero {
-  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
-  border: 1px solid #ececf0;
-  border-radius: 16px;
-  padding: 28px 22px;
+/* Hero intro */
+.hero{
+  background: linear-gradient(180deg,#ffffff 0%,#f7f8fb 100%);
+  border:1px solid #ececf0; border-radius:16px; padding:28px 22px; margin-bottom:20px;
 }
-.hero h1 {
-  margin: 0 0 8px;
-  font-size: clamp(1.4rem, 3.2vw, 2rem);
-  letter-spacing: -0.015em;
+.hero h1{
+  margin:0 0 10px; font-size:clamp(1.5rem,3.2vw,2.1rem); letter-spacing:-0.015em;
 }
-.hero p {
-  margin: 0;
-  color: #444;
-  font-size: 1rem;
-}
+.hero p{margin:0; color:#444;}
+.hero p + p{margin-top:8px}
 
-/* Sezione donazioni (leggera) */
-.donation-section {
-  text-align: center;
-  margin-top: 28px;
-  padding: 18px;
-  background: #f7fafc;
-  border: 1px solid #e8eef5;
-  border-radius: 12px;
+/* Quick sections (mini-cards) */
+.section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
+.quick-sections{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;
 }
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
+.mini-card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
+  transition: box-shadow .15s ease, transform .15s ease;
 }
-.donation-button:hover { background: #2389b5; }
+.mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
+.mini-card h3{margin:0 0 6px; font-size:1.05rem;}
+.mini-card h3 a{color:#0f172a; text-decoration:none; border-bottom:2px solid transparent;}
+.mini-card h3 a:hover{border-bottom-color:#29abe0;}
+.mini-card p{margin:0; color:#4b5563; font-size:.95rem;}
+.mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
 
-/* Footer (lasciato invariato nel markup) */
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
+/* Ads block container */
+.home-ad{
+  margin:22px auto; display:block; text-align:center;
+  background:#fff; border:1px dashed #e5e7eb; border-radius:12px; padding:8px;
 }
 
-/* A11y helper */
-.sr-only {
-  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+/* Donation + footer coerenti */
+.donation-section{
+  text-align:center; margin-top:28px; padding:18px;
+  background:#f7fafc; border:1px solid #e8eef5; border-radius:12px;
 }
+.donation-button{
+  display:inline-block; background:#29abe0; color:#fff; padding:10px 18px;
+  border-radius:30px; text-decoration:none; font-weight:600; transition:background .2s;
+}
+.donation-button:hover{background:#2389b5;}
+
+footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
+
+/* a11y helper */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   </style>
 
-  <!-- JSON-LD minimale (WebSite) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"TopHeroes Guide",
-    "url":"/"
+    "url":"/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 </head>
 <body>
 
-  <!-- NAVBAR (immutato) -->
+  <!-- NAVBAR -->
   <div id="navbar"></div>
   <script>
     fetch("nav.html")
       .then(res => res.text())
       .then(html => {
         document.getElementById("navbar").innerHTML = html;
-        const current = location.pathname.split("/").pop() || "index.html";
-        document.querySelectorAll('#navbar nav a').forEach(a => {
-          if (a.getAttribute('href') === current) {
-            a.style.color = '#fff';
-            a.style.borderBottomColor = '#29abe0';
-          }
+        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+        document.querySelectorAll('#navbar nav a').forEach(a=>{
+          const href=(a.getAttribute('href')||'').toLowerCase();
+          if(href === current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
         });
       })
       .catch(err => console.error('Navbar load failed:', err));
   </script>
 
-  <!-- CONTENUTO MINIMALE E PULITO -->
-  <main>
+  <main itemscope itemtype="https://schema.org/Article">
+    <!-- HERO INTRO -->
     <section class="hero" aria-label="Welcome">
-      <h1>TopHeroes Guide</h1>
-      <p>This website is created to help you with some basic stuff in the game.</p>
+      <h1 itemprop="headline">TopHeroes Guide</h1>
+      <p>Short, practical guides to progress faster in <strong>TopHeroes</strong>: faction <a href="heroes.html">Heroes</a> (League, Nature, Horde), <a href="generaladv.html">Adventure</a> modes, <a href="events.html">Events</a>, and <a href="beginners.html">beginner tips</a>.</p>
+      <p>Everything is organized in quick cards and checklists to help you decide who to build, what to upgrade, and how to plan resources.</p>
     </section>
 
-   <div id="footer"></div>
-<script>
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    })
-    .catch(err => console.error('Footer load failed:', err));
-</script>
+    <!-- ADS (above the fold-ish) -->
+    <div class="home-ad" aria-label="Advertisement">
+      <!-- HomeResponsiveTop -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7174478441144796"
+           data-ad-slot="home-top-1"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
 
-  <!-- Script icone (lasciato, non intrusivo) -->
+    <!-- QUICK SECTIONS -->
+    <h2 class="section-head">Explore the guides</h2>
+    <div class="quick-sections" aria-label="Main sections">
+      <!-- Heroes -->
+      <article class="mini-card">
+        <h3><a href="heroes.html">Heroes</a></h3>
+        <p>Faction overview and core builds: who to invest in and when to swap. Includes links to <a href="league.html">League</a>, <a href="nature.html">Nature</a>, and <a href="horde.html">Horde</a>.</p>
+        <div class="meta">Legendary & Mythic recommendations</div>
+      </article>
+
+      <!-- Adventure -->
+      <article class="mini-card">
+        <h3><a href="generaladv.html">Adventure</a></h3>
+        <p>How Adventure works, map basics, and rewards. Deep dives for <a href="classicadv.html">Classic</a> and <a href="seasononeadv.html">Season&nbsp;1</a>.</p>
+        <div class="meta">Progression & chest routing</div>
+      </article>
+
+      <!-- Events -->
+      <article class="mini-card">
+        <h3><a href="events.html">Events</a></h3>
+        <p>Quick strategies for Guild Race, Arms Race, KvK, and Guild Boss to maximize score with fewer resources.</p>
+        <div class="meta">Weekly/seasonal tips</div>
+      </article>
+
+      <!-- Beginners -->
+      <article class="mini-card">
+        <h3><a href="beginners.html">Beginners Guide</a></h3>
+        <p>Early priorities, resource management, and starter teams to clear early chapters smoothly.</p>
+        <div class="meta">Start strong in a few hours</div>
+      </article>
+
+      <!-- Tips -->
+      <article class="mini-card">
+        <h3><a href="tips.html">Tips & More</a></h3>
+        <p>Small optimizations, QoL tricks, and common pitfalls to avoid while climbing.</p>
+        <div class="meta">Short, actionable notes</div>
+      </article>
+    </div>
+
+    <!-- ADS (second placement) -->
+    <div class="home-ad" aria-label="Advertisement">
+      <!-- HomeResponsiveBottom -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7174478441144796"
+           data-ad-slot="home-btm-1"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+    <!-- Footer import -->
+    <div id="footer"></div>
+  </main>
+
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const icons = {
-      'League': 'league-symbol.jpeg',
-      'Nature': 'nature-symbol.jpeg',
-      'Horde': 'horde-symbol.jpeg'
-    };
-    function addIcon(el, word) {
-      const img = document.createElement('img');
-      img.src = icons[word];
-      img.alt = word + ' symbol';
-      img.loading = 'lazy';
-      img.style.height = '1em';
-      img.style.marginLeft = '0.3em';
-      el.appendChild(img);
-    }
-    document.querySelectorAll('a').forEach(function(a) {
-      const text = a.textContent.trim();
-      if (icons[text]) addIcon(a, text);
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Icon injection (coerente con le altre pagine) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const icons = {'League':'league-symbol.jpeg','Nature':'nature-symbol.jpeg','Horde':'horde-symbol.jpeg'};
+      function addIcon(el, word){
+        const img = document.createElement('img');
+        img.src = icons[word]; img.alt = word + ' symbol'; img.loading = 'lazy';
+        img.style.height='1em'; img.style.marginLeft='0.3em';
+        el.appendChild(img);
+      }
+      document.querySelectorAll('a').forEach(a=>{
+        const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);
+      });
+      document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
+        const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
+      });
     });
-    document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-      const text = h.textContent.trim();
-      if (icons[text]) addIcon(h, text);
-    });
-  });
   </script>
 </body>
 </html>

@@ -65,17 +65,17 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .mini-card{
   background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
   transition: box-shadow .15s ease, transform .15s ease;
-  display:flex; flex-direction:column; /* allineamento verticale */
+  display:flex; flex-direction:column;
 }
 .mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
 .mini-card h3{margin:0 0 6px; font-size:1.05rem;}
-.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;} /* occupa lo spazio */
+.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;}
 .mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
 
 /* Pulsanti */
 .mini-card a{
   margin-top:12px;
-  align-self:flex-start; /* resta a sinistra ma in basso */
+  align-self:flex-start;
   background:#29abe0;
   color:#fff !important;
   padding:6px 12px;
@@ -87,7 +87,7 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 }
 .mini-card a:hover{background:#2389b5;}
 
-/* Contact card (nuovo) */
+/* Contact card */
 .contact-card{
   background:#fff; border:1px solid #e8eef5; border-radius:12px; padding:22px; margin-top:26px;
 }
@@ -186,35 +186,33 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       </article>
     </div>
 
-    <!-- CONTACT FORM (Formspree) -->
+    <!-- CONTACT FORM (Formspree, submit classico) -->
     <section class="contact-card" aria-label="Contact us">
       <h2>Contact us</h2>
       <p>Questions, suggestions, or feedback? Drop us a note and we’ll reply by email.</p>
 
-      <form id="th-contact" class="th-contact"
+      <form class="th-contact"
             action="https://formspree.io/f/mrbazyyz"
-            method="POST" autocomplete="on" novalidate>
-
+            method="POST" autocomplete="on">
         <!-- Email -->
         <label>
           Your email
-          <input type="email" name="email" required placeholder="you@example.com" inputmode="email" aria-describedby="email-help">
+          <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
         </label>
 
         <!-- Message -->
         <label>
           Message
-          <textarea name="message" required rows="6" placeholder="Write your message..." aria-describedby="msg-help"></textarea>
+          <textarea name="message" required rows="6" placeholder="Write your message..."></textarea>
         </label>
 
         <!-- Honeypot anti‑spam invisibile -->
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
                style="position:absolute;left:-10000px;opacity:0">
 
-        <!-- Oggetto email (opzionale) -->
+        <!-- Oggetto email + redirect dopo invio -->
         <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
-        <!-- Redirect di ringraziamento (se vuoi) -->
-        <!-- <input type="hidden" name="_next" value="https://www.guidetopheroes.com/thanks.html"> -->
+        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/thanks.html">
 
         <!-- Privacy (obbligatoria) -->
         <div class="th-privacy">
@@ -227,7 +225,6 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
 
         <div class="th-actions">
           <button type="submit" class="th-btn">Send</button>
-          <p id="th-status" class="th-hint" role="status" aria-live="polite"></p>
         </div>
       </form>
     </section>
@@ -256,48 +253,6 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
         const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
       });
-    });
-  </script>
-
-  <!-- Formspree: invio con fetch + messaggi utente -->
-  <script>
-    const form = document.getElementById('th-contact');
-    const statusEl = document.getElementById('th-status');
-
-    form?.addEventListener('submit', async (e) => {
-      // obbliga spunta privacy
-      if (!document.getElementById('consent').checked) {
-        e.preventDefault();
-        statusEl.className = 'th-hint th-error';
-        statusEl.textContent = 'Please accept the privacy policy to proceed.';
-        return;
-      }
-
-      // invio AJAX per non cambiare pagina
-      e.preventDefault();
-      statusEl.className = 'th-hint';
-      statusEl.textContent = 'Sending…';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-        if (res.ok) {
-          statusEl.className = 'th-hint th-ok';
-          statusEl.textContent = 'Message sent! We’ll get back to you by email.';
-          form.reset();
-        } else {
-          const data = await res.json().catch(()=>({}));
-          const msg = data?.errors ? data.errors.map(e=>e.message).join(', ') : 'Error sending message.';
-          throw new Error(msg);
-        }
-      } catch (err) {
-        statusEl.className = 'th-hint th-error';
-        statusEl.textContent = err.message || 'Error sending message. Please try again.';
-        console.error(err);
-      }
     });
   </script>
 </body>

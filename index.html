@@ -98,10 +98,12 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
   width:100%; padding:.9rem; border:1px solid #dfe3ea; border-radius:10px; font:inherit; background:#fff;
 }
 .th-contact textarea{resize:vertical; min-height:120px}
-.th-privacy{
-  display:flex; gap:.6rem; align-items:flex-start; font-size:.9rem; color:#4b5563; margin-top:6px;
-}
-.th-privacy input{margin-top:.25rem}
+
+/* FIX privacy layout */
+.th-contact input[type="checkbox"]{ width:auto; }
+.th-privacy label{ flex:1; display:block; }
+.th-privacy{ display:flex; gap:.6rem; align-items:flex-start; font-size:.9rem; color:#4b5563; margin-top:6px; }
+
 .th-actions{margin-top:12px; display:flex; gap:10px; align-items:center;}
 .th-btn{
   display:inline-block; background:#29abe0; color:#fff; padding:10px 16px; border:0; border-radius:10px;
@@ -186,7 +188,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       </article>
     </div>
 
-    <!-- CONTACT FORM (Formspree, submit classico) -->
+    <!-- CONTACT FORM -->
     <section class="contact-card" aria-label="Contact us">
       <h2>Contact us</h2>
       <p>Questions, suggestions, or feedback? Drop us a note and we’ll reply by email.</p>
@@ -194,27 +196,22 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       <form class="th-contact"
             action="https://formspree.io/f/mrbazyyz"
             method="POST" autocomplete="on">
-        <!-- Email -->
         <label>
           Your email
           <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
         </label>
 
-        <!-- Message -->
         <label>
           Message
           <textarea name="message" required rows="6" placeholder="Write your message..."></textarea>
         </label>
 
-        <!-- Honeypot anti‑spam invisibile -->
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
                style="position:absolute;left:-10000px;opacity:0">
 
-        <!-- Oggetto email + redirect dopo invio -->
         <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
         <input type="hidden" name="_next" value="https://www.guidetopheroes.com/thanks.html">
 
-        <!-- Privacy (obbligatoria) -->
         <div class="th-privacy">
           <input type="checkbox" id="consent" required>
           <label for="consent">

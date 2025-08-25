@@ -8,9 +8,10 @@
   <meta name="robots" content="index, follow" />
 
   <style>
-    /* ---- PRIVACY PAGE SCOPED STYLES (no conflict) ---- */
+    /* ---- PRIVACY PAGE SCOPED STYLES (no conflict with global nav/footer) ---- */
     .pp { --bg:#f5f5f7; --text:#111; --muted:#4b5563; --brand:#29abe0; --card:#fff; --border:#e5e7eb; --head:#1e2541; }
-    .pp { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.65; }
+    body.pp { margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif; line-height:1.65; }
     .pp main { max-width:1000px; margin:0 auto; padding:28px 18px 56px; }
     .pp h1,.pp h2,.pp h3 { color:var(--head); letter-spacing:-.01em; }
     .pp h1 { font-size:clamp(1.6rem,2.8vw,2.1rem); margin:0 0 12px; }
@@ -31,10 +32,24 @@
 </head>
 <body class="pp">
 
-  <!-- NAVBAR (rimane quello del sito, non toccato) -->
+  <!-- NAVBAR standard -->
   <div id="navbar"></div>
   <script>
-    fetch("nav.html").then(r=>r.text()).then(h=>{ document.getElementById("navbar").innerHTML=h; }).catch(()=>{});
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        // evidenzia link attivo (robusto, case-insensitive)
+        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+        document.querySelectorAll('#navbar nav a').forEach(a => {
+          const href = (a.getAttribute('href') || '').toLowerCase();
+          if (href === current) {
+            a.style.color = '#fff';
+            a.style.borderBottomColor = '#29abe0';
+          }
+        });
+      })
+      .catch(err => console.error('Navbar load failed:', err));
   </script>
 
   <main>
@@ -170,10 +185,34 @@
     <p class="meta">This page aims to meet common expectations for ad networks (including Google AdSense) regarding transparency on cookies, data use, and user choices.</p>
   </main>
 
-  <!-- FOOTER (caricato come nel resto del sito) -->
+  <!-- FOOTER standard -->
   <div id="footer"></div>
   <script>
-    fetch("footer.html").then(r=>r.text()).then(h=>{ document.getElementById("footer").innerHTML=h; }).catch(()=>{});
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Icon injection (coerente col sito) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const icons = {'League':'league-symbol.jpeg','Nature':'nature-symbol.jpeg','Horde':'horde-symbol.jpeg'};
+      function addIcon(el, word){
+        const img=document.createElement('img');
+        img.src=icons[word];
+        img.alt=word+' symbol';
+        img.loading='lazy';
+        img.style.height='1em';
+        img.style.marginLeft='0.3em';
+        el.appendChild(img);
+      }
+      // applichiamo solo su heading/link interni della pagina (non toccare il nav esterno)
+      document.querySelectorAll('main h1, main h2, main h3, main a').forEach(node=>{
+        const t=node.textContent.trim();
+        if(icons[t]) addIcon(node, t);
+      });
+    });
   </script>
 </body>
 </html>

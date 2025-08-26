@@ -224,7 +224,7 @@ nav ul li ul li a:hover {
 .th-tablecard { background:#fff; border:1px solid #e6e8ef; border-radius:10px; box-shadow: 0 1px 2px rgba(0,0,0,.03); margin:12px 0; overflow:hidden; }
 .th-tablehead { display:flex; align-items:center; gap:8px; padding:10px 12px; background:#f7f8fb; border-bottom:1px solid #eceff6; }
 .th-tablehead strong { font-size:0.95rem; color:#27314a; }
-.th-collapse { border:none; background:none; font-size:1rem; cursor:pointer; line-height:1; transform: translateY(-1px); }
+.th-collapse { border:1px solid #cbd5e1; background:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; line-height:28px; font-weight:700; text-align:center; }
 .th-tablebody[hidden] { display:none; }
 
 /* Scroll area and sticky header/col */
@@ -232,15 +232,15 @@ nav ul li ul li a:hover {
 .th-table { border-collapse: separate; border-spacing: 0; width: max-content; min-width:100%; font-size: 14px; }
 .th-table th, .th-table td { border:1px solid #e5e7eb; padding:6px 8px; background:#fff; min-width: 110px; vertical-align: middle; white-space: normal; word-break: break-word; }
 
-/* Sticky first row and first column */
-.th-table .th-top { position: sticky; top: 0; z-index: 3; background: #f2f5fb !important; }
+/* Force sticky on thead first row and first column cells */
+.th-table thead th, .th-table .th-top { position: sticky; top: 0; z-index: 3; background: #f2f5fb !important; }
 .th-table .th-left { position: sticky; left: 0; z-index: 2; background: #f7f9ff !important; }
 .th-table .th-corner { z-index: 4; background:#eaf2fb !important; }
 
-/* Slight zebra for readability (only body rows) */
+/* Zebra (only body rows) */
 .th-table tbody tr:nth-child(odd) td { background:#fcfdff; }
 
-/* Ensure sticky cells sit above content */
+/* Scrollbar */
 .th-scroll::-webkit-scrollbar { height:10px; width:10px; }
 .th-scroll::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:6px; }
 </style>
@@ -267,9 +267,7 @@ nav ul li ul li a:hover {
   <main id="top">
     <h1 style="display:none">TopHeroes â Utility Tables</h1>
     <div class="thpage">
-      
-<p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
-
+      <p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
       <nav class="th-index" aria-label="Page index"><ul><li><a href="#castle">Castle</a></li><li><a href="#hero">Hero</a></li><li><a href="#gear">Gear</a></li><li><a href="#lordgear">Lord Gear</a></li><li><a href="#troopskin">Troop Skin</a></li><li><a href="#relic">Relic</a></li><li><a href="#rune">Rune</a></li><li><a href="#pet">Pet</a></li><li><a href="#villager">Villager</a></li><li><a href="#vip">VIP</a></li></ul></nav>
       
 <section id="castle" class="th-section">
@@ -285,7 +283,7 @@ nav ul li ul li a:hover {
   <div class="th-subtables">
     <div id="wrap-castle-base"   class="th-wrap th-visible" data-role="castle-base"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-base-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-base-body" title="Expand/Collapse">+</button>
     <strong>Castle</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-base-body" hidden>
@@ -323,7 +321,7 @@ nav ul li ul li a:hover {
 </div></div>
     <div id="wrap-castle-108"    class="th-wrap th-visible" data-role="castle-108"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-108-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-108-body" title="Expand/Collapse">+</button>
     <strong>Castle 108+</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-108-body" hidden>
@@ -356,7 +354,7 @@ nav ul li ul li a:hover {
 </div></div>
     <div id="wrap-castle-1107"   class="th-wrap"            data-role="castle-1107"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-1107-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-1107-body" title="Expand/Collapse">+</button>
     <strong>Castle 1-107</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-1107-body" hidden>
@@ -389,7 +387,7 @@ nav ul li ul li a:hover {
 </div></div>
     <div id="wrap-castle-older"  class="th-wrap"            data-role="castle-older"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-older-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-older-body" title="Expand/Collapse">+</button>
     <strong>Castle older</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-older-body" hidden>
@@ -429,6 +427,7 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="hero" class="th-section">
   <h2>Hero</h2>
   <div class="th-tabs" role="tablist">
@@ -437,7 +436,7 @@ nav ul li ul li a:hover {
   <div class="th-subtables">
     <div id="wrap-tbl-hero-leg" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-leg-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-leg-body" title="Expand/Collapse">+</button>
     <strong>Leg Hero</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-leg-body" hidden>
@@ -472,7 +471,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-hero-myth" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-myth-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-myth-body" title="Expand/Collapse">+</button>
     <strong>Mythic Hero</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-myth-body" hidden>
@@ -507,7 +506,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-hero-awaken" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-awaken-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-awaken-body" title="Expand/Collapse">+</button>
     <strong>Awaken</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-awaken-body" hidden>
@@ -544,7 +543,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-hero-level" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-level-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-level-body" title="Expand/Collapse">+</button>
     <strong>Hero level</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-level-body" hidden>
@@ -563,7 +562,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-hero-books" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-books-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-books-body" title="Expand/Collapse">+</button>
     <strong>Books</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-books-body" hidden>
@@ -598,6 +597,7 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="gear" class="th-section">
   <h2>Gear</h2>
   <div class="th-tabs" role="tablist">
@@ -606,7 +606,7 @@ nav ul li ul li a:hover {
   <div class="th-subtables">
     <div id="wrap-tbl-gear-level" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-level-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-level-body" title="Expand/Collapse">+</button>
     <strong>Gear</strong>
   </div>
   <div class="th-tablebody" id="tbl-gear-level-body" hidden>
@@ -664,7 +664,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-gear-stars" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-stars-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-stars-body" title="Expand/Collapse">+</button>
     <strong>Gear Stars</strong>
   </div>
   <div class="th-tablebody" id="tbl-gear-stars-body" hidden>
@@ -707,7 +707,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-gear-excl" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-excl-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-excl-body" title="Expand/Collapse">+</button>
     <strong>Exclusive</strong>
   </div>
   <div class="th-tablebody" id="tbl-gear-excl-body" hidden>
@@ -747,11 +747,12 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="lordgear" class="th-section">
   <h2>Lord Gear</h2>
   <div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-lord-gear-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-lord-gear-body" title="Expand/Collapse">+</button>
     <strong>Lord Gear</strong>
   </div>
   <div class="th-tablebody" id="tbl-lord-gear-body" hidden>
@@ -832,6 +833,7 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="troopskin" class="th-section">
   <h2>Troop Skin</h2>
   <div class="th-tabs" role="tablist">
@@ -840,7 +842,7 @@ nav ul li ul li a:hover {
   <div class="th-subtables">
     <div id="wrap-tbl-skin-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-rare-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare skin</strong>
   </div>
   <div class="th-tablebody" id="tbl-skin-rare-body" hidden>
@@ -1023,7 +1025,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-skin-epic" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-epic-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-epic-body" title="Expand/Collapse">+</button>
     <strong>Epic skin</strong>
   </div>
   <div class="th-tablebody" id="tbl-skin-epic-body" hidden>
@@ -1206,7 +1208,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-skin-legend" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-legend-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-legend-body" title="Expand/Collapse">+</button>
     <strong>Legend skin</strong>
   </div>
   <div class="th-tablebody" id="tbl-skin-legend-body" hidden>
@@ -1392,6 +1394,7 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="relic" class="th-section">
   <h2>Relic</h2>
   <div class="th-tabs" role="tablist">
@@ -1400,7 +1403,7 @@ nav ul li ul li a:hover {
   <div class="th-subtables">
     <div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-rare-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare relic</strong>
   </div>
   <div class="th-tablebody" id="tbl-relic-rare-body" hidden>
@@ -1429,7 +1432,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-relic-epic" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-epic-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-epic-body" title="Expand/Collapse">+</button>
     <strong>Epic relic</strong>
   </div>
   <div class="th-tablebody" id="tbl-relic-epic-body" hidden>
@@ -1458,7 +1461,7 @@ nav ul li ul li a:hover {
   </div>
 </div></div><div id="wrap-tbl-relic-legend" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-legend-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-legend-body" title="Expand/Collapse">+</button>
     <strong>Leg relic</strong>
   </div>
   <div class="th-tablebody" id="tbl-relic-legend-body" hidden>
@@ -1490,11 +1493,12 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="rune" class="th-section">
   <h2>Rune</h2>
   <div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-rune-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-rune-body" title="Expand/Collapse">+</button>
     <strong>Rune</strong>
   </div>
   <div class="th-tablebody" id="tbl-rune-body" hidden>
@@ -1524,11 +1528,12 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="pet" class="th-section">
   <h2>Pet</h2>
   <div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-pet-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-pet-body" title="Expand/Collapse">+</button>
     <strong>Pet</strong>
   </div>
   <div class="th-tablebody" id="tbl-pet-body" hidden>
@@ -1551,11 +1556,12 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="villager" class="th-section">
   <h2>Villager</h2>
   <div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Expand/Collapse">+</button>
     <strong>Villager</strong>
   </div>
   <div class="th-tablebody" id="tbl-villager-body" hidden>
@@ -1646,11 +1652,12 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
+      
 <section id="vip" class="th-section">
   <h2>VIP</h2>
   <div class="th-tablecard">
   <div class="th-tablehead">
-    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-vip-body" title="Expand/Collapse">â¸</button>
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-vip-body" title="Expand/Collapse">+</button>
     <strong>VIP</strong>
   </div>
   <div class="th-tablebody" id="tbl-vip-body" hidden>
@@ -1699,32 +1706,26 @@ nav ul li ul li a:hover {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Collapse controls: default closed for all tables except the first tablecard inside each .th-section
+  // Collapse controls: default closed except first table in each section
   document.querySelectorAll('.th-section').forEach(function(section){
     const cards = section.querySelectorAll('.th-tablecard');
     cards.forEach(function(card, idx){
       const btn = card.querySelector('.th-collapse');
       const body = card.querySelector('.th-tablebody');
-      const open = idx === 0; // first table open
-      if (open) {
-        body.hidden = false;
-        btn.textContent = 'â¾';
-        btn.setAttribute('aria-expanded','true');
-      } else {
-        body.hidden = true;
-        btn.textContent = 'â¸';
-        btn.setAttribute('aria-expanded','false');
-      }
+      const open = idx === 0;
+      body.hidden = !open ? true : false;
+      btn.textContent = open ? 'â' : '+'; // ASCII-friendly
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.addEventListener('click', function(){
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         body.hidden = expanded;
         btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        btn.textContent = expanded ? 'â¸' : 'â¾';
+        btn.textContent = expanded ? '+' : 'â';
       });
     });
   });
 
-  // Generic tabs: show body matching data-target
+  // Tabs
   document.querySelectorAll('.th-tabs').forEach(function(tabs){
     const section = tabs.closest('.th-section');
     const buttons = tabs.querySelectorAll('.th-tab');
@@ -1732,19 +1733,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function show(id) {
       wraps.forEach(function(w){ w.classList.toggle('th-visible', w.id === ('wrap-' + id)); });
       buttons.forEach(function(b){ b.classList.toggle('th-active', b.getAttribute('data-target') === id); });
-      // Reset collapse inside the newly visible wrap: open only its first table
+      // Reset collapse in visible wrap
       wraps.forEach(function(w){
-        if (w.classList.contains('th-visible')) {
-          const cards = w.querySelectorAll('.th-tablecard');
-          cards.forEach(function(card, idx){
-            const btn = card.querySelector('.th-collapse');
-            const body = card.querySelector('.th-tablebody');
+        const visible = w.classList.contains('th-visible');
+        const cards = w.querySelectorAll('.th-tablecard');
+        cards.forEach(function(card, idx){
+          const btn = card.querySelector('.th-collapse');
+          const body = card.querySelector('.th-tablebody');
+          if (visible) {
             const open = idx === 0;
             body.hidden = !open;
-            btn.textContent = open ? 'â¾' : 'â¸';
+            btn.textContent = open ? 'â' : '+';
             btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          });
-        }
+          } else {
+            body.hidden = true;
+            if (btn){ btn.textContent = '+'; btn.setAttribute('aria-expanded','false'); }
+          }
+        });
       });
     }
     buttons.forEach(function(btn){
@@ -1752,7 +1757,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Castle special switcher
+  // Castle switcher
   (function(){
     const select = document.getElementById('castle-switch');
     const base = document.getElementById('wrap-castle-base');
@@ -1760,7 +1765,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const w1107= document.getElementById('wrap-castle-1107');
     const wold = document.getElementById('wrap-castle-older');
     function setState(val){
-      // hide all
       [base, w108, w1107, wold].forEach(el => el.classList.remove('th-visible'));
       if (val === '108') {
         base.classList.add('th-visible');
@@ -1768,19 +1772,18 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (val === '1107') {
         base.classList.add('th-visible');
         w1107.classList.add('th-visible');
-      } else if (val === 'older') {
+      } else {
         wold.classList.add('th-visible');
       }
-      // Within visible wraps, set only the first table open
       [base, w108, w1107, wold].forEach(function(wrap){
         if (!wrap.classList.contains('th-visible')) return;
         const cards = wrap.querySelectorAll('.th-tablecard');
         cards.forEach(function(card, idx){
           const btn = card.querySelector('.th-collapse');
           const body = card.querySelector('.th-tablebody');
-          const open = idx === 0; // first visible's first table open
+          const open = idx === 0;
           body.hidden = !open;
-          btn.textContent = open ? 'â¾' : 'â¸';
+          btn.textContent = open ? 'â' : '+';
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
       });

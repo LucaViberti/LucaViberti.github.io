@@ -200,7 +200,7 @@ nav ul li ul li a:hover {
 .th-index ul { display:flex; flex-wrap:wrap; gap:8px 16px; list-style:none; padding:0; margin: 12px 0 24px; }
 .th-index a { text-decoration:none; color:#1e5da8; font-weight:600; }
 .th-section { margin: 36px 0; }
-.th-toplink a { color:#1e5da8; text-decoration:none; }
+.th-toplink a { color:#1e5da8; }
 
 .th-switcher{display:flex;align-items:center;gap:10px;margin:10px 0 16px}
 .th-tabs{display:flex;gap:8px;margin:10px 0 16px;flex-wrap:wrap}
@@ -218,12 +218,10 @@ nav ul li ul li a:hover {
 .th-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;font-size:14px}
 .th-table th,.th-table td{border:1px solid #e5e7eb;padding:6px 8px;background:#fff;min-width:110px;vertical-align:middle;white-space:normal;word-break:break-word}
 
-/* Sticky row/col; no forced background so inline cell bg shows */
-.th-table thead tr:first-child th,.th-table .th-top{position:sticky;top:0;z-index:7;}
-.th-table .th-left{position:sticky;left:0;z-index:6;}
-.th-table .th-corner{z-index:8;}
+.th-table thead tr:first-child th,.th-table .th-top{position:sticky;top:0;z-index:7;background:#f2f5fb!important}
+.th-table .th-left{position:sticky;left:0;z-index:6;background:#f7f9ff!important}
+.th-table .th-corner{z-index:8;background:#eaf2fb!important}
 
-/* Subtle zebra for readability (won't override inline bg) */
 .th-table tbody tr:nth-child(odd) td{background:#fcfdff}
 </style>
 
@@ -249,7 +247,7 @@ nav ul li ul li a:hover {
   <main id="top">
     <h1 style="display:none">TopHeroes â Utility Tables</h1>
     <div class="thpage">
-      <p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
+      <p class="th-intro">This page compiles a large set of utility tables for TopHeroes. It's designed to improve planning, resource management, and quick look-ups while playing.</p>
       <nav class="th-index" aria-label="Page index"><ul><li><a href="#castle">Castle</a></li><li><a href="#hero">Hero</a></li><li><a href="#gear">Gear</a></li><li><a href="#lordgear">Lord Gear</a></li><li><a href="#troopskin">Troop Skin</a></li><li><a href="#relic">Relic</a></li><li><a href="#rune">Rune</a></li><li><a href="#pet">Pet</a></li><li><a href="#villager">Villager</a></li><li><a href="#vip">VIP</a></li></ul></nav>
       
 <section id="castle" class="th-section">
@@ -719,10 +717,7 @@ nav ul li ul li a:hover {
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
-      
-<section id="lordgear" class="th-section">
-  <h2>Lord Gear</h2>
-  <div class="th-tablecard">
+      <section id="lordgear" class="th-section"><h2>Lord Gear</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-lord-gear-body" title="Expand/Collapse">+</button>
     <strong>Lord Gear</strong>
@@ -801,14 +796,8 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="troopskin" class="th-section">
-  <h2>Troop Skin</h2>
-  <div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-skin-rare">Rare Troop Skin</button><button class="th-tab" data-target="tbl-skin-epic">Epic Troop Skin</button><button class="th-tab" data-target="tbl-skin-legend">Legendary Troop Skin</button></div><div class="th-subtables"><div id="wrap-tbl-skin-rare" class="th-wrap th-visible"><div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="troopskin" class="th-section"><h2>Troop Skin</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-skin-rare">Rare Troop Skin</button><button class="th-tab" data-target="tbl-skin-epic">Epic Troop Skin</button><button class="th-tab" data-target="tbl-skin-legend">Legendary Troop Skin</button></div><div class="th-subtables"><div id="wrap-tbl-skin-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare skin</strong>
@@ -1357,14 +1346,8 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div></div></div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="relic" class="th-section">
-  <h2>Relic</h2>
-  <div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-relic-rare">Rare Relic</button><button class="th-tab" data-target="tbl-relic-epic">Epic Relic</button><button class="th-tab" data-target="tbl-relic-legend">Legendary Relic</button></div><div class="th-subtables"><div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
+</div></div></div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="relic" class="th-section"><h2>Relic</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-relic-rare">Rare Relic</button><button class="th-tab" data-target="tbl-relic-epic">Epic Relic</button><button class="th-tab" data-target="tbl-relic-legend">Legendary Relic</button></div><div class="th-subtables"><div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare relic</strong>
@@ -1451,14 +1434,8 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div></div></div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="rune" class="th-section">
-  <h2>Rune</h2>
-  <div class="th-tablecard">
+</div></div></div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="rune" class="th-section"><h2>Rune</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-rune-body" title="Expand/Collapse">+</button>
     <strong>Rune</strong>
@@ -1486,14 +1463,8 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="pet" class="th-section">
-  <h2>Pet</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="pet" class="th-section"><h2>Pet</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-pet-body" title="Expand/Collapse">+</button>
     <strong>Pet</strong>
@@ -1514,17 +1485,11 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="villager" class="th-section">
-  <h2>Villager</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="villager" class="th-section"><h2>Villager</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Expand/Collapse">+</button>
-    <strong>Villager </strong>
+    <strong>Villager</strong>
   </div>
   <div class="th-tablebody" id="tbl-villager-body" hidden>
     <div class="th-scroll">
@@ -1610,14 +1575,8 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="vip" class="th-section">
-  <h2>VIP</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="vip" class="th-section"><h2>VIP</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-vip-body" title="Expand/Collapse">+</button>
     <strong>VIP</strong>
@@ -1652,10 +1611,7 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
     </div>
   </main>
 

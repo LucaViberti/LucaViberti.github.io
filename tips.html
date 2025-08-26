@@ -224,7 +224,8 @@ nav ul li ul li a:hover {
 .th-tablecard { background:#fff; border:1px solid #e6e8ef; border-radius:10px; box-shadow: 0 1px 2px rgba(0,0,0,.03); margin:12px 0; overflow:hidden; }
 .th-tablehead { display:flex; align-items:center; gap:8px; padding:10px 12px; background:#f7f8fb; border-bottom:1px solid #eceff6; }
 .th-tablehead strong { font-size:0.95rem; color:#27314a; }
-.th-collapse { border:1px solid #cbd5e1; background:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; line-height:28px; font-weight:700; text-align:center; }
+/* Use ASCII icons to avoid font issues */
+.th-collapse { border:1px solid #cbd5e1; background:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; line-height:28px; font-weight:700; text-align:center; font-family:inherit; }
 .th-tablebody[hidden] { display:none; }
 
 /* Scroll area and sticky header/col */
@@ -232,10 +233,10 @@ nav ul li ul li a:hover {
 .th-table { border-collapse: separate; border-spacing: 0; width: max-content; min-width:100%; font-size: 14px; }
 .th-table th, .th-table td { border:1px solid #e5e7eb; padding:6px 8px; background:#fff; min-width: 110px; vertical-align: middle; white-space: normal; word-break: break-word; }
 
-/* Force sticky on thead first row and first column cells */
-.th-table thead th, .th-table .th-top { position: sticky; top: 0; z-index: 3; background: #f2f5fb !important; }
-.th-table .th-left { position: sticky; left: 0; z-index: 2; background: #f7f9ff !important; }
-.th-table .th-corner { z-index: 4; background:#eaf2fb !important; }
+/* Sticky only first row and first column */
+.th-table thead tr:first-child th, .th-table .th-top { position: sticky; top: 0; z-index: 7; background: #f2f5fb !important; }
+.th-table .th-left { position: sticky; left: 0; z-index: 6; background: #f7f9ff !important; }
+.th-table .th-corner { z-index: 8; background:#eaf2fb !important; }
 
 /* Zebra (only body rows) */
 .th-table tbody tr:nth-child(odd) td { background:#fcfdff; }
@@ -267,7 +268,9 @@ nav ul li ul li a:hover {
   <main id="top">
     <h1 style="display:none">TopHeroes â Utility Tables</h1>
     <div class="thpage">
-      <p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
+      
+<p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
+
       <nav class="th-index" aria-label="Page index"><ul><li><a href="#castle">Castle</a></li><li><a href="#hero">Hero</a></li><li><a href="#gear">Gear</a></li><li><a href="#lordgear">Lord Gear</a></li><li><a href="#troopskin">Troop Skin</a></li><li><a href="#relic">Relic</a></li><li><a href="#rune">Rune</a></li><li><a href="#pet">Pet</a></li><li><a href="#villager">Villager</a></li><li><a href="#vip">VIP</a></li></ul></nav>
       
 <section id="castle" class="th-section">
@@ -1562,7 +1565,7 @@ nav ul li ul li a:hover {
   <div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Expand/Collapse">+</button>
-    <strong>Villager</strong>
+    <strong>Villager </strong>
   </div>
   <div class="th-tablebody" id="tbl-villager-body" hidden>
     <div class="th-scroll">
@@ -1706,7 +1709,7 @@ nav ul li ul li a:hover {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Collapse controls: default closed except first table in each section
+  // Collapse: default closed except first table in each section
   document.querySelectorAll('.th-section').forEach(function(section){
     const cards = section.querySelectorAll('.th-tablecard');
     cards.forEach(function(card, idx){
@@ -1714,13 +1717,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const body = card.querySelector('.th-tablebody');
       const open = idx === 0;
       body.hidden = !open ? true : false;
-      btn.textContent = open ? 'â' : '+'; // ASCII-friendly
+      btn.textContent = open ? '-' : '+'; // ASCII only
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.addEventListener('click', function(){
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         body.hidden = expanded;
         btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        btn.textContent = expanded ? '+' : 'â';
+        btn.textContent = expanded ? '+' : '-';
       });
     });
   });
@@ -1733,7 +1736,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function show(id) {
       wraps.forEach(function(w){ w.classList.toggle('th-visible', w.id === ('wrap-' + id)); });
       buttons.forEach(function(b){ b.classList.toggle('th-active', b.getAttribute('data-target') === id); });
-      // Reset collapse in visible wrap
       wraps.forEach(function(w){
         const visible = w.classList.contains('th-visible');
         const cards = w.querySelectorAll('.th-tablecard');
@@ -1743,7 +1745,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (visible) {
             const open = idx === 0;
             body.hidden = !open;
-            btn.textContent = open ? 'â' : '+';
+            btn.textContent = open ? '-' : '+';
             btn.setAttribute('aria-expanded', open ? 'true' : 'false');
           } else {
             body.hidden = true;
@@ -1783,7 +1785,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const body = card.querySelector('.th-tablebody');
           const open = idx === 0;
           body.hidden = !open;
-          btn.textContent = open ? 'â' : '+';
+          btn.textContent = open ? '-' : '+';
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
       });

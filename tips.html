@@ -196,54 +196,33 @@ nav ul li ul li a:hover {
 </style>
   
 <style>
-/* ---------- Scoped to .thpage to avoid conflicts ---------- */
 .thpage { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
-
 .th-index ul { display:flex; flex-wrap:wrap; gap:8px 16px; list-style:none; padding:0; margin: 12px 0 24px; }
 .th-index a { text-decoration:none; color:#1e5da8; font-weight:600; }
-.th-index a:hover { text-decoration:underline; }
-
 .th-section { margin: 36px 0; }
-.th-section h2 { margin: 0 0 12px; color:#1e2541; }
+.th-toplink a { color:#1e5da8; }
 
-.th-toplink { margin: 10px 0 0; }
-.th-toplink a { color:#1e5da8; text-decoration:none; }
-.th-toplink a:hover { text-decoration:underline; }
+.th-switcher{display:flex;align-items:center;gap:10px;margin:10px 0 16px}
+.th-tabs{display:flex;gap:8px;margin:10px 0 16px;flex-wrap:wrap}
+.th-tab{padding:8px 12px;border:1px solid #ccd2df;border-radius:8px;background:#f9fafb;cursor:pointer;font-weight:600}
+.th-tab.th-active{background:#e8f3fb;border-color:#29abe0}
+.th-subtables .th-wrap{display:none}.th-subtables .th-wrap.th-visible{display:block}
 
-/* Switchers / Tabs */
-.th-switcher { display:flex; align-items:center; gap:10px; margin: 10px 0 16px; }
-.th-switcher select { padding:6px 10px; border-radius:6px; border:1px solid #d0d6e0; background:#fff; }
-.th-tabs { display:flex; gap:8px; margin:10px 0 16px; flex-wrap:wrap; }
-.th-tab { padding:8px 12px; border:1px solid #ccd2df; border-radius:8px; background:#f9fafb; cursor:pointer; font-weight:600; }
-.th-tab.th-active { background:#e8f3fb; border-color:#29abe0; }
+.th-tablecard{background:#fff;border:1px solid #e6e8ef;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,.03);margin:12px 0;overflow:hidden}
+.th-tablehead{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#f7f8fb;border-bottom:1px solid #eceff6}
+.th-tablehead strong{font-size:.95rem;color:#27314a}
+.th-collapse{border:1px solid #cbd5e1;background:#fff;width:28px;height:28px;border-radius:6px;cursor:pointer;line-height:28px;font-weight:700;text-align:center;font-family:inherit}
+.th-tablebody[hidden]{display:none}
 
-.th-subtables .th-wrap { display:none; }
-.th-subtables .th-wrap.th-visible { display:block; }
+.th-scroll{max-height:70vh;overflow:auto;position:relative}
+.th-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;font-size:14px}
+.th-table th,.th-table td{border:1px solid #e5e7eb;padding:6px 8px;background:#fff;min-width:110px;vertical-align:middle;white-space:normal;word-break:break-word}
 
-/* Table card with collapse */
-.th-tablecard { background:#fff; border:1px solid #e6e8ef; border-radius:10px; box-shadow: 0 1px 2px rgba(0,0,0,.03); margin:12px 0; overflow:hidden; }
-.th-tablehead { display:flex; align-items:center; gap:8px; padding:10px 12px; background:#f7f8fb; border-bottom:1px solid #eceff6; }
-.th-tablehead strong { font-size:0.95rem; color:#27314a; }
-/* Use ASCII icons to avoid font issues */
-.th-collapse { border:1px solid #cbd5e1; background:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; line-height:28px; font-weight:700; text-align:center; font-family:inherit; }
-.th-tablebody[hidden] { display:none; }
+.th-table thead tr:first-child th,.th-table .th-top{position:sticky;top:0;z-index:7;background:#f2f5fb!important}
+.th-table .th-left{position:sticky;left:0;z-index:6;background:#f7f9ff!important}
+.th-table .th-corner{z-index:8;background:#eaf2fb!important}
 
-/* Scroll area and sticky header/col */
-.th-scroll { max-height:70vh; overflow:auto; position:relative; }
-.th-table { border-collapse: separate; border-spacing: 0; width: max-content; min-width:100%; font-size: 14px; }
-.th-table th, .th-table td { border:1px solid #e5e7eb; padding:6px 8px; background:#fff; min-width: 110px; vertical-align: middle; white-space: normal; word-break: break-word; }
-
-/* Sticky only first row and first column */
-.th-table thead tr:first-child th, .th-table .th-top { position: sticky; top: 0; z-index: 7; background: #f2f5fb !important; }
-.th-table .th-left { position: sticky; left: 0; z-index: 6; background: #f7f9ff !important; }
-.th-table .th-corner { z-index: 8; background:#eaf2fb !important; }
-
-/* Zebra (only body rows) */
-.th-table tbody tr:nth-child(odd) td { background:#fcfdff; }
-
-/* Scrollbar */
-.th-scroll::-webkit-scrollbar { height:10px; width:10px; }
-.th-scroll::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:6px; }
+.th-table tbody tr:nth-child(odd) td{background:#fcfdff}
 </style>
 
 </head>
@@ -268,9 +247,7 @@ nav ul li ul li a:hover {
   <main id="top">
     <h1 style="display:none">TopHeroes â Utility Tables</h1>
     <div class="thpage">
-      
-<p class="th-intro">This page compiles a large set of utility tables for TopHeroes. Itâs designed to improve planning, resource management, and quick look-ups while playing.</p>
-
+      <p class="th-intro">This page compiles a large set of utility tables for TopHeroes. It's designed to improve planning, resource management, and quick look-ups while playing.</p>
       <nav class="th-index" aria-label="Page index"><ul><li><a href="#castle">Castle</a></li><li><a href="#hero">Hero</a></li><li><a href="#gear">Gear</a></li><li><a href="#lordgear">Lord Gear</a></li><li><a href="#troopskin">Troop Skin</a></li><li><a href="#relic">Relic</a></li><li><a href="#rune">Rune</a></li><li><a href="#pet">Pet</a></li><li><a href="#villager">Villager</a></li><li><a href="#vip">VIP</a></li></ul></nav>
       
 <section id="castle" class="th-section">
@@ -284,19 +261,19 @@ nav ul li ul li a:hover {
     </select>
   </div>
   <div class="th-subtables">
-    <div id="wrap-castle-base"   class="th-wrap th-visible" data-role="castle-base"><div class="th-tablecard">
+    <div id="wrap-castle-base" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-base-body" title="Expand/Collapse">+</button>
     <strong>Castle</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-base-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-castle-base" role="table">
+      <table class="th-table" id="tbl-castle-base">
         <thead>
-<tr><th colspan="4" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Castle</th></tr>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Castle</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</th></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 21</th><td style="text-align:center;vertical-align:bottom">2.04 m</td><td style="text-align:center;vertical-align:bottom"></td><td style="vertical-align:bottom">Research Cottage, Hospital </td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 22</th><td style="text-align:center;vertical-align:bottom">2.30 m</td><td style="text-align:center;vertical-align:bottom"></td><td style="vertical-align:bottom">Guild , Training Ground </td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 23</th><td style="text-align:center;vertical-align:bottom">2.68 m</td><td style="text-align:center;vertical-align:bottom"></td><td style="vertical-align:bottom">Research Cottage, Hospital </td></tr>
@@ -322,19 +299,19 @@ nav ul li ul li a:hover {
     </div>
   </div>
 </div></div>
-    <div id="wrap-castle-108"    class="th-wrap th-visible" data-role="castle-108"><div class="th-tablecard">
+    <div id="wrap-castle-108" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-108-body" title="Expand/Collapse">+</button>
     <strong>Castle 108+</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-108-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-castle-108" role="table">
+      <table class="th-table" id="tbl-castle-108">
         <thead>
-<tr><th colspan="5" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Castle (Server 108+)</th></tr>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Castle (Server 108+)</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Dragon Essence</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Dragon Essence</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</th></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 41</th><td style="text-align:center;vertical-align:bottom">126</td><td style="text-align:center;vertical-align:bottom">17.1 m</td><td style="text-align:center;vertical-align:bottom">99.7 m</td><td style="vertical-align:bottom">Lv.40 Research Cottage, Hospital </td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 42</th><td style="text-align:center;vertical-align:bottom">126</td><td style="text-align:center;vertical-align:bottom">17.1 m</td><td style="text-align:center;vertical-align:bottom">99.7 m</td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 43</th><td style="text-align:center;vertical-align:bottom">126</td><td style="text-align:center;vertical-align:bottom">17.1 m</td><td style="text-align:center;vertical-align:bottom">99.7 m</td><td style="vertical-align:bottom"></td></tr>
@@ -355,19 +332,19 @@ nav ul li ul li a:hover {
     </div>
   </div>
 </div></div>
-    <div id="wrap-castle-1107"   class="th-wrap"            data-role="castle-1107"><div class="th-tablecard">
+    <div id="wrap-castle-1107" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-1107-body" title="Expand/Collapse">+</button>
     <strong>Castle 1-107</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-1107-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-castle-1107" role="table">
+      <table class="th-table" id="tbl-castle-1107">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Castle (Server 1-107)</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Castle (Server 1-107)</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Dragon Essence</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Dragon Essence</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</th></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 41</th><td style="text-align:center;vertical-align:bottom">132</td><td style="text-align:center;vertical-align:bottom">Lv.40 Research Cottage, Hospital</td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 42</th><td style="text-align:center;vertical-align:bottom">132</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 43</th><td style="text-align:center;vertical-align:bottom">132</td><td style="text-align:center;vertical-align:bottom"></td></tr>
@@ -388,19 +365,19 @@ nav ul li ul li a:hover {
     </div>
   </div>
 </div></div>
-    <div id="wrap-castle-older"  class="th-wrap"            data-role="castle-older"><div class="th-tablecard">
+    <div id="wrap-castle-older" class="th-wrap"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-older-body" title="Expand/Collapse">+</button>
     <strong>Castle older</strong>
   </div>
   <div class="th-tablebody" id="tbl-castle-older-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-castle-older" role="table">
+      <table class="th-table" id="tbl-castle-older">
         <thead>
-<tr><th colspan="4" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Castle (Older Server)</th></tr>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Castle (Older Server)</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Stone and Timber</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Buildings</th></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 21</th><td style="vertical-align:bottom">2.30 m</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom">Research Cottage, Hospital</td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 22</th><td style="vertical-align:bottom">2.30 m</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom">Guild, Training Ground </td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level 23</th><td style="vertical-align:bottom">2.68 m</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom">Research Cottage, Watchtower</td></tr>
@@ -433,38 +410,34 @@ nav ul li ul li a:hover {
       
 <section id="hero" class="th-section">
   <h2>Hero</h2>
-  <div class="th-tabs" role="tablist">
-    <button class="th-tab th-active" data-target="tbl-hero-leg">Legendary Hero</button><button class="th-tab" data-target="tbl-hero-myth">Mythic Hero</button><button class="th-tab" data-target="tbl-hero-awaken">Awakening Process</button><button class="th-tab" data-target="tbl-hero-level">Hero Level</button><button class="th-tab" data-target="tbl-hero-books">Skill Books</button>
-  </div>
-  <div class="th-subtables">
-    <div id="wrap-tbl-hero-leg" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-hero-leg">Legendary Hero</button><button class="th-tab" data-target="tbl-hero-myth">Mythic Hero</button><button class="th-tab" data-target="tbl-hero-awaken">Awakening Process</button><button class="th-tab" data-target="tbl-hero-level">Hero Level</button><button class="th-tab" data-target="tbl-hero-books">Skill Books</button></div><div class="th-subtables"><div id="wrap-tbl-hero-leg" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-leg-body" title="Expand/Collapse">+</button>
     <strong>Leg Hero</strong>
   </div>
   <div class="th-tablebody" id="tbl-hero-leg-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-hero-leg" role="table">
+      <table class="th-table" id="tbl-hero-leg">
         <thead>
-<tr><th colspan="5" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Legendary Heroes</th></tr>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Legendary Heroes</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Shards/upgrade</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Total shards </td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">6</td><td style="text-align:center;vertical-align:bottom">30</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Shards/upgrade</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Total shards </th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">6</td><td style="text-align:center;vertical-align:bottom">30</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Total</th><td style="vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">500</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom"></th><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom"></th><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
@@ -479,27 +452,27 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-hero-myth-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-hero-myth" role="table">
+      <table class="th-table" id="tbl-hero-myth">
         <thead>
-<tr><th colspan="5" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Mythic Heroes</th></tr>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Mythic Heroes</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Shards/upgrade</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Total shards </td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">12</td><td style="text-align:center;vertical-align:bottom">60</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">â</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââ</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââ</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">ââââ</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">âââââ</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Shards/upgrade</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Total shards </th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">12</td><td style="text-align:center;vertical-align:bottom">60</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">160</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Total</th><td style="vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">1000</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom"></th><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;vertical-align:bottom"></th><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
@@ -514,12 +487,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-hero-awaken-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-hero-awaken" role="table">
+      <table class="th-table" id="tbl-hero-awaken">
         <thead>
-<tr><th colspan="4" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Legendary Awakening</th></tr>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Legendary Awakening</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Tier</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Level</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Shards</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Soul Stones</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Tier</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Shards</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Soul Stones</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">0</th><td style="text-align:center;vertical-align:bottom">0</td><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">1</td></tr>
 <tr><th rowspan="6" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">1</th><td style="text-align:center;vertical-align:bottom">0</td><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom"></td></tr>
@@ -551,12 +524,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-hero-level-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-hero-level" role="table">
+      <table class="th-table" id="tbl-hero-level">
         <thead>
-<tr><th colspan="49" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Hero Level</th></tr>
+<tr><th colspan="49" class="th-left" style="text-align:center;vertical-align:center">Hero Level</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">3</td><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">6</td><td style="text-align:center;vertical-align:bottom">7</td><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">9</td><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">11</td><td style="text-align:center;vertical-align:bottom">12</td><td style="text-align:center;vertical-align:bottom">13</td><td style="text-align:center;vertical-align:bottom">14</td><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">17</td><td style="text-align:center;vertical-align:bottom">18</td><td style="text-align:center;vertical-align:bottom">19</td><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">21</td><td style="text-align:center;vertical-align:bottom">22</td><td style="text-align:center;vertical-align:bottom">23</td><td style="text-align:center;vertical-align:bottom">24</td><td style="text-align:center;vertical-align:bottom">25</td><td style="text-align:center;vertical-align:bottom">26</td><td style="text-align:center;vertical-align:bottom">27</td><td style="text-align:center;vertical-align:bottom">28</td><td style="text-align:center;vertical-align:bottom">29</td><td style="text-align:center;vertical-align:bottom">30</td><td style="text-align:center;vertical-align:bottom">31</td><td style="text-align:center;vertical-align:bottom">32</td><td style="text-align:center;vertical-align:bottom">33</td><td style="text-align:center;vertical-align:bottom">34</td><td style="text-align:center;vertical-align:bottom">35</td><td style="text-align:center;vertical-align:bottom">36</td><td style="text-align:center;vertical-align:bottom">37</td><td style="text-align:center;vertical-align:bottom">38</td><td style="text-align:center;vertical-align:bottom">39</td><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">B1</td><td style="text-align:center;vertical-align:bottom">B2 </td><td style="text-align:center;vertical-align:bottom">B3</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Castle</th><th class="th-top" style="text-align:center;vertical-align:bottom">1</th><th class="th-top" style="text-align:center;vertical-align:bottom">2</th><th class="th-top" style="text-align:center;vertical-align:bottom">3</th><th class="th-top" style="text-align:center;vertical-align:bottom">4</th><th class="th-top" style="text-align:center;vertical-align:bottom">5</th><th class="th-top" style="text-align:center;vertical-align:bottom">6</th><th class="th-top" style="text-align:center;vertical-align:bottom">7</th><th class="th-top" style="text-align:center;vertical-align:bottom">8</th><th class="th-top" style="text-align:center;vertical-align:bottom">9</th><th class="th-top" style="text-align:center;vertical-align:bottom">10</th><th class="th-top" style="text-align:center;vertical-align:bottom">11</th><th class="th-top" style="text-align:center;vertical-align:bottom">12</th><th class="th-top" style="text-align:center;vertical-align:bottom">13</th><th class="th-top" style="text-align:center;vertical-align:bottom">14</th><th class="th-top" style="text-align:center;vertical-align:bottom">15</th><th class="th-top" style="text-align:center;vertical-align:bottom">16</th><th class="th-top" style="text-align:center;vertical-align:bottom">17</th><th class="th-top" style="text-align:center;vertical-align:bottom">18</th><th class="th-top" style="text-align:center;vertical-align:bottom">19</th><th class="th-top" style="text-align:center;vertical-align:bottom">20</th><th class="th-top" style="text-align:center;vertical-align:bottom">21</th><th class="th-top" style="text-align:center;vertical-align:bottom">22</th><th class="th-top" style="text-align:center;vertical-align:bottom">23</th><th class="th-top" style="text-align:center;vertical-align:bottom">24</th><th class="th-top" style="text-align:center;vertical-align:bottom">25</th><th class="th-top" style="text-align:center;vertical-align:bottom">26</th><th class="th-top" style="text-align:center;vertical-align:bottom">27</th><th class="th-top" style="text-align:center;vertical-align:bottom">28</th><th class="th-top" style="text-align:center;vertical-align:bottom">29</th><th class="th-top" style="text-align:center;vertical-align:bottom">30</th><th class="th-top" style="text-align:center;vertical-align:bottom">31</th><th class="th-top" style="text-align:center;vertical-align:bottom">32</th><th class="th-top" style="text-align:center;vertical-align:bottom">33</th><th class="th-top" style="text-align:center;vertical-align:bottom">34</th><th class="th-top" style="text-align:center;vertical-align:bottom">35</th><th class="th-top" style="text-align:center;vertical-align:bottom">36</th><th class="th-top" style="text-align:center;vertical-align:bottom">37</th><th class="th-top" style="text-align:center;vertical-align:bottom">38</th><th class="th-top" style="text-align:center;vertical-align:bottom">39</th><th class="th-top" style="text-align:center;vertical-align:bottom">40</th><th class="th-top" style="text-align:center;vertical-align:bottom">B1</th><th class="th-top" style="text-align:center;vertical-align:bottom">B2 </th><th class="th-top" style="text-align:center;vertical-align:bottom">B3</th><th class="th-top" style="text-align:center;vertical-align:bottom"></th><th class="th-top" style="text-align:center;vertical-align:bottom"></th><th class="th-top" style="text-align:center;vertical-align:bottom"></th><th class="th-top" style="text-align:center;vertical-align:bottom"></th><th class="th-top" style="text-align:center;vertical-align:bottom"></th></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Hero Lv. </th><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">25</td><td style="text-align:center;vertical-align:bottom">30</td><td style="text-align:center;vertical-align:bottom">35</td><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">45</td><td style="text-align:center;vertical-align:bottom">50</td><td style="text-align:center;vertical-align:bottom">55</td><td style="text-align:center;vertical-align:bottom">60</td><td style="text-align:center;vertical-align:bottom">65</td><td style="text-align:center;vertical-align:bottom">70</td><td style="text-align:center;vertical-align:bottom">75</td><td style="text-align:center;vertical-align:bottom">80</td><td style="text-align:center;vertical-align:bottom">90</td><td style="text-align:center;vertical-align:bottom">95</td><td style="text-align:center;vertical-align:bottom">100</td><td style="text-align:center;vertical-align:bottom">105</td><td style="text-align:center;vertical-align:bottom">110</td><td style="text-align:center;vertical-align:bottom">115</td><td style="text-align:center;vertical-align:bottom">120</td><td style="text-align:center;vertical-align:bottom">125</td><td style="text-align:center;vertical-align:bottom">130</td><td style="text-align:center;vertical-align:bottom">135</td><td style="text-align:center;vertical-align:bottom">140</td><td style="text-align:center;vertical-align:bottom">145</td><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">155</td><td style="text-align:center;vertical-align:bottom">160</td><td style="text-align:center;vertical-align:bottom">170</td><td style="text-align:center;vertical-align:bottom">175</td><td style="text-align:center;vertical-align:bottom">180</td><td style="text-align:center;vertical-align:bottom">185</td><td style="text-align:center;vertical-align:bottom">190</td><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">200</td><td style="text-align:center;vertical-align:bottom">205</td><td style="text-align:center;vertical-align:bottom">210</td><td style="text-align:center;vertical-align:bottom">215</td><td style="text-align:center;vertical-align:bottom">220</td><td style="text-align:center;vertical-align:bottom">235</td><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">243</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Meat</th><td style="text-align:center;vertical-align:bottom">515</td><td style="text-align:center;vertical-align:bottom">370</td><td style="text-align:center;vertical-align:bottom">460</td><td style="text-align:center;vertical-align:bottom">590</td><td style="text-align:center;vertical-align:bottom">860</td><td style="text-align:center;vertical-align:bottom">1350</td><td style="text-align:center;vertical-align:bottom">2200</td><td style="text-align:center;vertical-align:bottom">3500</td><td style="text-align:center;vertical-align:bottom">6300</td><td style="text-align:center;vertical-align:bottom">11000</td><td style="text-align:center;vertical-align:bottom">16000</td><td style="text-align:center;vertical-align:bottom">22000</td><td style="text-align:center;vertical-align:bottom">29500</td><td style="text-align:center;vertical-align:bottom">37000</td><td style="text-align:center;vertical-align:bottom">100100</td><td style="text-align:center;vertical-align:bottom">65000</td><td style="text-align:center;vertical-align:bottom">75000</td><td style="text-align:center;vertical-align:bottom">86000</td><td style="text-align:center;vertical-align:bottom">98500</td><td style="text-align:center;vertical-align:bottom">111600</td><td style="text-align:center;vertical-align:bottom">126500</td><td style="text-align:center;vertical-align:bottom">141500</td><td style="text-align:center;vertical-align:bottom">161000</td><td style="text-align:center;vertical-align:bottom">210000</td><td style="text-align:center;vertical-align:bottom">293000</td><td style="text-align:center;vertical-align:bottom">331000</td><td style="text-align:center;vertical-align:bottom">515000</td><td style="text-align:center;vertical-align:bottom">682000</td><td style="text-align:center;vertical-align:bottom">834000</td><td style="text-align:center;vertical-align:bottom">2256000</td><td style="text-align:center;vertical-align:bottom">1540000</td><td style="text-align:center;vertical-align:bottom">1910000</td><td style="text-align:center;vertical-align:bottom">2350000</td><td style="text-align:center;vertical-align:bottom">2850000</td><td style="text-align:center;vertical-align:bottom">3360000</td><td style="text-align:center;vertical-align:bottom">3900000</td><td style="text-align:center;vertical-align:bottom">4560000</td><td style="text-align:center;vertical-align:bottom">5110000</td><td style="text-align:center;vertical-align:bottom">5690000</td><td style="text-align:center;vertical-align:bottom">6300000</td><td style="text-align:center;vertical-align:bottom">22700000</td><td style="text-align:center;vertical-align:bottom">8800000</td><td style="text-align:center;vertical-align:bottom">5600000</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
         </tbody>
@@ -570,12 +543,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-hero-books-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-hero-books" role="table">
+      <table class="th-table" id="tbl-hero-books">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Skill Books</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Skill Books</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Skill Level</th><td style="font-weight:bold;vertical-align:bottom">Books/skill</td><td style="font-weight:bold;vertical-align:bottom">Books/hero</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;vertical-align:bottom">Skill Level</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Books/skill</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Books/hero</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2 </th><td style="text-align:center;vertical-align:bottom">100</td><td style="text-align:center;vertical-align:bottom">500</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="text-align:center;vertical-align:bottom">200</td><td style="text-align:center;vertical-align:bottom">1000</td></tr>
@@ -595,31 +568,26 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div></div>
-  </div>
+</div></div></div>
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
       
 <section id="gear" class="th-section">
   <h2>Gear</h2>
-  <div class="th-tabs" role="tablist">
-    <button class="th-tab th-active" data-target="tbl-gear-level">Gear Level</button><button class="th-tab" data-target="tbl-gear-stars">Gear Stars</button><button class="th-tab" data-target="tbl-gear-excl">Exclusive Gear</button>
-  </div>
-  <div class="th-subtables">
-    <div id="wrap-tbl-gear-level" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-gear-level">Gear Level</button><button class="th-tab" data-target="tbl-gear-stars">Gear Stars</button><button class="th-tab" data-target="tbl-gear-excl">Exclusive Gear</button></div><div class="th-subtables"><div id="wrap-tbl-gear-level" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-level-body" title="Expand/Collapse">+</button>
     <strong>Gear</strong>
   </div>
   <div class="th-tablebody" id="tbl-gear-level-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-gear-level" role="table">
+      <table class="th-table" id="tbl-gear-level">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Gear Level</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Gear Level</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Enhance Rune</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Enhance Rune</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">7200</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2</th><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">7200</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">7200</td></tr>
@@ -672,33 +640,33 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-gear-stars-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-gear-stars" role="table">
+      <table class="th-table" id="tbl-gear-stars">
         <thead>
-<tr><th colspan="5" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Gear Stars</th></tr>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Gear Stars</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Gold ingot</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Enhance Rune</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Promotion Stone</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">â</th><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Star</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Gold ingot</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Enhance Rune</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Ruby</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Promotion Stone</th></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">&#9733;</th><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom">5 Legendary</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">ââ</th><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">195</td><td style="text-align:center;vertical-align:bottom">16250</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom">10 Legendary</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">âââ</th><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">240</td><td style="text-align:center;vertical-align:bottom">20000</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom">15 Legendary</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">ââââ</th><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">285</td><td style="text-align:center;vertical-align:bottom">23500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom">20 Legendary</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">âââââ</th><td style="text-align:center;vertical-align:bottom">330</td><td style="text-align:center;vertical-align:bottom">27500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center">&#9733;&#9733;&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:bottom">330</td><td style="text-align:center;vertical-align:bottom">27500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">330</td><td style="text-align:center;vertical-align:bottom">27500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">330</td><td style="text-align:center;vertical-align:bottom">27500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><td style="text-align:center;vertical-align:bottom">330</td><td style="text-align:center;vertical-align:bottom">27500</td><td style="text-align:center;vertical-align:bottom">Info coming soon</td><td style="text-align:center;vertical-align:bottom"></td></tr>
@@ -715,12 +683,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-gear-excl-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-gear-excl" role="table">
+      <table class="th-table" id="tbl-gear-excl">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Exclusive Gear</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Exclusive Gear</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Gear</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Total till this level</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Gear</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Total till this level</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">5</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2</th><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
@@ -745,85 +713,81 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div></div>
-  </div>
+</div></div></div>
   <p class="th-toplink"><a href="#top">Back to top</a></p>
 </section>
 
-      
-<section id="lordgear" class="th-section">
-  <h2>Lord Gear</h2>
-  <div class="th-tablecard">
+      <section id="lordgear" class="th-section"><h2>Lord Gear</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-lord-gear-body" title="Expand/Collapse">+</button>
     <strong>Lord Gear</strong>
   </div>
   <div class="th-tablebody" id="tbl-lord-gear-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-lord-gear" role="table">
+      <table class="th-table" id="tbl-lord-gear">
         <thead>
-<tr><th colspan="4" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Lord Gear</th></tr>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Lord Gear</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:center">Star level</th><td style="font-weight:bold;vertical-align:bottom">Refined metal </td><td style="font-weight:bold;vertical-align:bottom">Magic Thread </td><td style="font-weight:bold;vertical-align:bottom">Orichalcum</td></tr>
-<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Common               â</th><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;vertical-align:center">Star level</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Refined metal </th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Magic Thread </th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Orichalcum</th></tr>
+<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Common               &#9733;</th><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:bottom">3800</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">-</td></tr>
-<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Rare                      â</th><td style="text-align:center;vertical-align:center">6400</td><td style="text-align:center;vertical-align:center">60</td><td style="text-align:center;vertical-align:center">-</td></tr>
+<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Rare                      &#9733;</th><td style="text-align:center;vertical-align:center">6400</td><td style="text-align:center;vertical-align:center">60</td><td style="text-align:center;vertical-align:center">-</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">6400</td><td style="font-weight:bold;text-align:center;vertical-align:center">60</td><td style="font-weight:bold;text-align:center;vertical-align:center">-</td></tr>
-<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">â â</th><td style="text-align:center;vertical-align:center">1300</td><td style="text-align:center;vertical-align:center">5</td><td style="text-align:center;vertical-align:center">10</td></tr>
+<tr><th rowspan="2" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733; &#9733;</th><td style="text-align:center;vertical-align:center">1300</td><td style="text-align:center;vertical-align:center">5</td><td style="text-align:center;vertical-align:center">10</td></tr>
 <tr><td style="text-align:center;vertical-align:center">1500</td><td style="text-align:center;vertical-align:center">5</td><td style="text-align:center;vertical-align:center">10</td></tr>
-<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">10</td></tr>
+<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">10</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">1500</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">10</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">1800</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
-<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Epic                        â</th><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
+<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">Epic                        &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">1300</td><td style="font-weight:bold;text-align:center;vertical-align:center">5</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">â â</th><td style="font-weight:bold;text-align:center;vertical-align:center">2500</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">2500</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">2500</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">2500</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">3500</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
-<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:center">3500</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
+<tr><th rowspan="3" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">3500</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">3500</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">12</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">3300</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T1                          â</th><td style="font-weight:bold;text-align:center;vertical-align:center">3900</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T1                          &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">3900</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">3900</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">4400</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">4400</td><td style="font-weight:bold;text-align:center;vertical-align:center">30</td><td style="font-weight:bold;text-align:center;vertical-align:center">15</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">ââ</th><td style="text-align:center;vertical-align:center">4900</td><td style="text-align:center;vertical-align:center">35</td><td style="text-align:center;vertical-align:center">15</td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;</th><td style="text-align:center;vertical-align:center">4900</td><td style="text-align:center;vertical-align:center">35</td><td style="text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="text-align:center;vertical-align:center">4900</td><td style="text-align:center;vertical-align:center">35</td><td style="text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="text-align:center;vertical-align:center">4900</td><td style="text-align:center;vertical-align:center">35</td><td style="text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="text-align:center;vertical-align:center">4900</td><td style="text-align:center;vertical-align:center">35</td><td style="text-align:center;vertical-align:center">15</td></tr>
 <tr><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">âââ</th><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;&#9733;</th><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="text-align:center;vertical-align:center">5400</td><td style="text-align:center;vertical-align:center">45</td><td style="text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T2                          â</th><td style="text-align:center;vertical-align:center">7300</td><td style="text-align:center;vertical-align:center">75</td><td style="text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T2                          &#9733;</th><td style="text-align:center;vertical-align:center">7300</td><td style="text-align:center;vertical-align:center">75</td><td style="text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7300</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7300</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7300</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">ââ</th><td style="font-weight:bold;text-align:center;vertical-align:center">7800</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="5" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">7800</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7800</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7800</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">7800</td><td style="font-weight:bold;text-align:center;vertical-align:center">75</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">8100</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">âââ</th><td style="font-weight:bold;text-align:center;vertical-align:center">8100</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">8100</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">8100</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">8100</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">8500</td><td style="font-weight:bold;text-align:center;vertical-align:center">85</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T3                          â</th><td style="font-weight:bold;text-align:center;vertical-align:center">9000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T3                          &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">9000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">9000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">9000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">9500</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">ââ</th><td style="font-weight:bold;text-align:center;vertical-align:center">9500</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">9500</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">9500</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">9500</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">âââ</th><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">&#9733;&#9733;&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">95</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">10000</td><td style="font-weight:bold;text-align:center;vertical-align:center">90</td><td style="font-weight:bold;text-align:center;vertical-align:center">20</td></tr>
-<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T4                          â</th><td style="font-weight:bold;text-align:center;vertical-align:center">13000</td><td style="font-weight:bold;text-align:center;vertical-align:center">130</td><td style="font-weight:bold;text-align:center;vertical-align:center">22</td></tr>
+<tr><th rowspan="4" class="th-left" style="font-weight:bold;text-align:center;vertical-align:center;white-space:normal">T4                          &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:center">13000</td><td style="font-weight:bold;text-align:center;vertical-align:center">130</td><td style="font-weight:bold;text-align:center;vertical-align:center">22</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">13000</td><td style="font-weight:bold;text-align:center;vertical-align:center">130</td><td style="font-weight:bold;text-align:center;vertical-align:center">22</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">13000</td><td style="font-weight:bold;text-align:center;vertical-align:center">130</td><td style="font-weight:bold;text-align:center;vertical-align:center">22</td></tr>
 <tr><td style="font-weight:bold;text-align:center;vertical-align:center">13000</td><td style="font-weight:bold;text-align:center;vertical-align:center">130</td><td style="font-weight:bold;text-align:center;vertical-align:center">22</td></tr>
@@ -832,30 +796,20 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="troopskin" class="th-section">
-  <h2>Troop Skin</h2>
-  <div class="th-tabs" role="tablist">
-    <button class="th-tab th-active" data-target="tbl-skin-rare">Rare Troop Skin</button><button class="th-tab" data-target="tbl-skin-epic">Epic Troop Skin</button><button class="th-tab" data-target="tbl-skin-legend">Legendary Troop Skin</button>
-  </div>
-  <div class="th-subtables">
-    <div id="wrap-tbl-skin-rare" class="th-wrap th-visible"><div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="troopskin" class="th-section"><h2>Troop Skin</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-skin-rare">Rare Troop Skin</button><button class="th-tab" data-target="tbl-skin-epic">Epic Troop Skin</button><button class="th-tab" data-target="tbl-skin-legend">Legendary Troop Skin</button></div><div class="th-subtables"><div id="wrap-tbl-skin-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-skin-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare skin</strong>
   </div>
   <div class="th-tablebody" id="tbl-skin-rare-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-skin-rare" role="table">
+      <table class="th-table" id="tbl-skin-rare">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Rare Troop Skin</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Rare Troop Skin</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level</th><td style="font-weight:bold;vertical-align:bottom">Step</td><td style="font-weight:bold;vertical-align:bottom">Medals</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Step</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Medals</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">0</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">400</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">575</td></tr>
@@ -1033,12 +987,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-skin-epic-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-skin-epic" role="table">
+      <table class="th-table" id="tbl-skin-epic">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Epic Troop Skin</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Epic Troop Skin</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level</th><td style="font-weight:bold;vertical-align:bottom">Step</td><td style="font-weight:bold;vertical-align:bottom">Medals</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Step</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Medals</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">0</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">800</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1150</td></tr>
@@ -1216,12 +1170,12 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-skin-legend-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-skin-legend" role="table">
+      <table class="th-table" id="tbl-skin-legend">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Legendary Troop Skin</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Legendary Troop Skin</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;vertical-align:bottom">Level</th><td style="font-weight:bold;vertical-align:bottom">Step</td><td style="font-weight:bold;vertical-align:bottom">Medals</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Step</th><th class="th-top" style="font-weight:bold;vertical-align:bottom">Medals</th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 1</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">0</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 2</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1600</td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">Lv. 3</th><td style="vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">2300</td></tr>
@@ -1392,43 +1346,32 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div></div>
-  </div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="relic" class="th-section">
-  <h2>Relic</h2>
-  <div class="th-tabs" role="tablist">
-    <button class="th-tab th-active" data-target="tbl-relic-rare">Rare Relic</button><button class="th-tab" data-target="tbl-relic-epic">Epic Relic</button><button class="th-tab" data-target="tbl-relic-legend">Legendary Relic</button>
-  </div>
-  <div class="th-subtables">
-    <div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
+</div></div></div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="relic" class="th-section"><h2>Relic</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-relic-rare">Rare Relic</button><button class="th-tab" data-target="tbl-relic-epic">Epic Relic</button><button class="th-tab" data-target="tbl-relic-legend">Legendary Relic</button></div><div class="th-subtables"><div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-rare-body" title="Expand/Collapse">+</button>
     <strong>Rare relic</strong>
   </div>
   <div class="th-tablebody" id="tbl-relic-rare-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-relic-rare" role="table">
+      <table class="th-table" id="tbl-relic-rare">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Rare Relic</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Rare Relic</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Star Level</th><td style="text-align:center;vertical-align:bottom">Shard for single up</td><td style="text-align:center;vertical-align:bottom">Shards Full Star</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">500</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">160</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">800</td></tr>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Star Level</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shard for single up</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shards Full Star</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">500</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">160</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">800</td></tr>
         </tbody>
       </table>
     </div>
@@ -1440,24 +1383,24 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-relic-epic-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-relic-epic" role="table">
+      <table class="th-table" id="tbl-relic-epic">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Epic Relic</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Epic Relic</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Star Level</th><td style="text-align:center;vertical-align:bottom">Shard for single up</td><td style="text-align:center;vertical-align:bottom">Shards Full Star</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">30</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">150</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Star Level</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shard for single up</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shards Full Star</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">30</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">150</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
         </tbody>
       </table>
     </div>
@@ -1469,49 +1412,42 @@ nav ul li ul li a:hover {
   </div>
   <div class="th-tablebody" id="tbl-relic-legend-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-relic-legend" role="table">
+      <table class="th-table" id="tbl-relic-legend">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Legendary Relic</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Legendary Relic</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Star Level</th><td style="text-align:center;vertical-align:bottom">Shard for single up</td><td style="text-align:center;vertical-align:bottom">Shards Full Star</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â â â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">â â</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Star Level</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shard for single up</th><th class="th-top" style="text-align:center;vertical-align:bottom">Shards Full Star</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733; &#9733; &#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733; &#9733;</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-</div></div>
-  </div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="rune" class="th-section">
-  <h2>Rune</h2>
-  <div class="th-tablecard">
+</div></div></div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="rune" class="th-section"><h2>Rune</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-rune-body" title="Expand/Collapse">+</button>
     <strong>Rune</strong>
   </div>
   <div class="th-tablebody" id="tbl-rune-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-rune" role="table">
+      <table class="th-table" id="tbl-rune">
         <thead>
-<tr><th colspan="25" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Rune</th></tr>
+<tr><th colspan="25" class="th-left" style="text-align:center;vertical-align:center">Rune</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="text-align:center;vertical-align:bottom"></th><td colspan="2" style="font-weight:bold;text-align:center;vertical-align:bottom">Hero HP Rune</td><td colspan="2" style="font-weight:bold;text-align:center;vertical-align:bottom">Hero Attack Rune</td><td colspan="3" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldier HP Rune</td><td colspan="3" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldier Attack Rune</td><td colspan="2" style="font-weight:bold;text-align:center;vertical-align:bottom">Relic Mastery Rune</td><td colspan="3" style="font-weight:bold;text-align:center;vertical-align:bottom">Queue Attack Rune</td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td><td style="font-weight:bold;vertical-align:bottom"></td></tr>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom"></th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Hero HP Rune</th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Hero Attack Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldier HP Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldier Attack Rune</th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Relic Mastery Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Queue Attack Rune</th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th><th class="th-top" style="font-weight:bold;vertical-align:bottom"></th></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">LVL</th><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Hero HP</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Hero HP</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Hero Attack</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Hero Attack</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Soldier HP</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">March Size</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">HP of All Soldiers</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Soldier Attack</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">March Size</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Attack of All Soldiers</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Relic HP</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Relic HP</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Defense</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">Defense Break</td><td style="font-weight:bold;text-align:center;vertical-align:bottom;white-space:normal">March Size</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">1</th><td style="text-align:center;vertical-align:bottom">650</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">850</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">600</td><td style="text-align:center;vertical-align:bottom">769</td><td style="text-align:center;vertical-align:bottom">-</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="text-align:center;vertical-align:bottom">2</th><td style="text-align:center;vertical-align:bottom">975</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">24</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">3</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">3</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">1275</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">1200</td><td style="text-align:center;vertical-align:bottom">1538</td><td style="text-align:center;vertical-align:bottom">-</td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td><td style="vertical-align:bottom"></td></tr>
@@ -1527,54 +1463,42 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="pet" class="th-section">
-  <h2>Pet</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="pet" class="th-section"><h2>Pet</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-pet-body" title="Expand/Collapse">+</button>
     <strong>Pet</strong>
   </div>
   <div class="th-tablebody" id="tbl-pet-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-pet" role="table">
+      <table class="th-table" id="tbl-pet">
         <thead>
-<tr><th colspan="102" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Pet</th></tr>
+<tr><th colspan="102" class="th-left" style="text-align:center;vertical-align:center">Pet</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">1</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">3</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">5</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">6</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">7</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">9</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">11</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">13</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">14</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">15</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">17</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">18</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">19</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">21</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">22</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">23</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">24</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">25</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">26</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">27</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">28</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">29</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">30</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">31</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">32</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">33</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">34</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">35</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">36</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">37</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">38</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">39</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">41</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">42</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">43</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">44</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">45</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">46</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">47</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">48</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">49</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">50</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">51</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">52</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">53</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">54</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">55</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">56</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">57</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">58</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">59</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">61</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">62</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">63</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">64</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">65</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">66</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">67</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">68</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">69</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">70</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">71</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">72</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">73</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">74</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">75</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">76</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">77</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">78</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">79</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">81</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">82</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">83</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">84</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">85</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">86</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">87</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">88</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">89</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">90</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">-</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">91</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">92</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">93</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">94</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">95</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">96</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">97</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">98</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">99</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">1</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">2</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">3</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">4</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">5</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">6</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">7</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">8</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">9</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">10</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">11</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">12</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">13</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">14</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">15</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">16</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">17</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">18</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">19</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">20</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">21</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">22</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">23</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">24</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">25</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">26</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">27</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">28</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">29</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">30</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">31</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">32</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">33</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">34</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">35</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">36</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">37</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">38</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">39</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">40</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">41</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">42</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">43</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">44</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">45</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">46</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">47</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">48</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">49</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">50</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">51</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">52</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">53</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">54</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">55</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">56</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">57</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">58</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">59</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">60</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">61</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">62</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">63</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">64</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">65</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">66</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">67</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">68</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">69</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">70</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">71</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">72</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">73</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">74</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">75</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">76</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">77</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">78</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">79</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">80</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">81</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">82</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">83</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">84</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">85</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">86</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">87</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">88</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">89</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">90</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">-</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">91</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">92</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">93</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">94</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">95</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">96</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">97</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">98</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">99</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">100</th></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Pet Food</th><td style="text-align:center;vertical-align:bottom">0</td><td style="text-align:center;vertical-align:bottom">100</td><td style="text-align:center;vertical-align:bottom">150</td><td style="text-align:center;vertical-align:bottom">200</td><td style="text-align:center;vertical-align:bottom">250</td><td style="text-align:center;vertical-align:bottom">300</td><td style="text-align:center;vertical-align:bottom">400</td><td style="text-align:center;vertical-align:bottom">500</td><td style="text-align:center;vertical-align:bottom">600</td><td style="text-align:center;vertical-align:bottom">700</td><td style="text-align:center;vertical-align:bottom">800</td><td style="text-align:center;vertical-align:bottom">900</td><td style="text-align:center;vertical-align:bottom">1000</td><td style="text-align:center;vertical-align:bottom">1100</td><td style="text-align:center;vertical-align:bottom">1200</td><td style="text-align:center;vertical-align:bottom">1300</td><td style="text-align:center;vertical-align:bottom">1400</td><td style="text-align:center;vertical-align:bottom">1500</td><td style="text-align:center;vertical-align:bottom">1600</td><td style="text-align:center;vertical-align:bottom">1700</td><td style="text-align:center;vertical-align:bottom">1800</td><td style="text-align:center;vertical-align:bottom">1900</td><td style="text-align:center;vertical-align:bottom">2000</td><td style="text-align:center;vertical-align:bottom">2100</td><td style="text-align:center;vertical-align:bottom">2200</td><td style="text-align:center;vertical-align:bottom">2300</td><td style="text-align:center;vertical-align:bottom">2400</td><td style="text-align:center;vertical-align:bottom">2500</td><td style="text-align:center;vertical-align:bottom">2600</td><td style="text-align:center;vertical-align:bottom">2750</td><td style="text-align:center;vertical-align:bottom">2900</td><td style="text-align:center;vertical-align:bottom">3050</td><td style="text-align:center;vertical-align:bottom">3200</td><td style="text-align:center;vertical-align:bottom">3350</td><td style="text-align:center;vertical-align:bottom">3500</td><td style="text-align:center;vertical-align:bottom">3650</td><td style="text-align:center;vertical-align:bottom">3800</td><td style="text-align:center;vertical-align:bottom">3950</td><td style="text-align:center;vertical-align:bottom">4100</td><td style="text-align:center;vertical-align:bottom">4300</td><td style="text-align:center;vertical-align:bottom">4500</td><td style="text-align:center;vertical-align:bottom">4700</td><td style="text-align:center;vertical-align:bottom">4900</td><td style="text-align:center;vertical-align:bottom">5100</td><td style="text-align:center;vertical-align:bottom">5300</td><td style="text-align:center;vertical-align:bottom">5500</td><td style="text-align:center;vertical-align:bottom">5700</td><td style="text-align:center;vertical-align:bottom">5900</td><td style="text-align:center;vertical-align:bottom">6100</td><td style="text-align:center;vertical-align:bottom">6350</td><td style="text-align:center;vertical-align:bottom">6600</td><td style="text-align:center;vertical-align:bottom">6850</td><td style="text-align:center;vertical-align:bottom">7100</td><td style="text-align:center;vertical-align:bottom">7350</td><td style="text-align:center;vertical-align:bottom">7600</td><td style="text-align:center;vertical-align:bottom">7850</td><td style="text-align:center;vertical-align:bottom">8100</td><td style="text-align:center;vertical-align:bottom">8350</td><td style="text-align:center;vertical-align:bottom">8600</td><td style="text-align:center;vertical-align:bottom">8850</td><td style="text-align:center;vertical-align:bottom">9100</td><td style="text-align:center;vertical-align:bottom">9350</td><td style="text-align:center;vertical-align:bottom">9600</td><td style="text-align:center;vertical-align:bottom">9850</td><td style="text-align:center;vertical-align:bottom">10100</td><td style="text-align:center;vertical-align:bottom">10350</td><td style="text-align:center;vertical-align:bottom">10600</td><td style="text-align:center;vertical-align:bottom">10850</td><td style="text-align:center;vertical-align:bottom">11100</td><td style="text-align:center;vertical-align:bottom">11350</td><td style="text-align:center;vertical-align:bottom">11600</td><td style="text-align:center;vertical-align:bottom">11900</td><td style="text-align:center;vertical-align:bottom">12200</td><td style="text-align:center;vertical-align:bottom">12500</td><td style="text-align:center;vertical-align:bottom">12800</td><td style="text-align:center;vertical-align:bottom">13100</td><td style="text-align:center;vertical-align:bottom">13400</td><td style="text-align:center;vertical-align:bottom">13700</td><td style="text-align:center;vertical-align:bottom">14000</td><td style="text-align:center;vertical-align:bottom">14300</td><td style="text-align:center;vertical-align:bottom">14600</td><td style="text-align:center;vertical-align:bottom">14900</td><td style="text-align:center;vertical-align:bottom">15250</td><td style="text-align:center;vertical-align:bottom">15600</td><td style="text-align:center;vertical-align:bottom">15950</td><td style="text-align:center;vertical-align:bottom">16300</td><td style="text-align:center;vertical-align:bottom">16700</td><td style="text-align:center;vertical-align:bottom">17100</td><td style="text-align:center;vertical-align:bottom">17500</td><td style="text-align:center;vertical-align:bottom">17900</td><td style="text-align:center;vertical-align:bottom">0</td><td style="text-align:center;vertical-align:bottom">5900</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Promotion</th><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">â</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">ââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">âââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">ââââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">âââââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Epic</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">â</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">ââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">âââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">ââââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">âââââ</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Legendary</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Mythic</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Promotion</th><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Epic</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">&#9733;&#9733;&#9733;&#9733;&#9733;</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Legendary</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">Mythic</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Pet needed</th><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1 same</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">3 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1 same</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">3 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1 same + 5 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1 same + 5 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">2 same + 5 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">2 same + 10 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">3 same + 10 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">3 same + 15 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">4 same + 15 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">5 same + 15 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">3 same + 10 rare</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Pet essence</th><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom">1000</td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td><td style="text-align:center;vertical-align:bottom"></td></tr>
         </tbody>
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="villager" class="th-section">
-  <h2>Villager</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="villager" class="th-section"><h2>Villager</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Expand/Collapse">+</button>
-    <strong>Villager </strong>
+    <strong>Villager</strong>
   </div>
   <div class="th-tablebody" id="tbl-villager-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-villager" role="table">
+      <table class="th-table" id="tbl-villager">
         <thead>
-<tr><th colspan="7" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">Villagers</th></tr>
+<tr><th colspan="7" class="th-left" style="text-align:center;vertical-align:center">Villagers</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Building</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">Attribute</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 1</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 3</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 5</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Building</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Attribute</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 1</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 2</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 3</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 4</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv. 5</th></tr>
 <tr><th rowspan="5" class="th-left" style="text-align:center;vertical-align:center;white-space:normal">Castle</th><td style="text-align:center;vertical-align:center">Building HP</td><td style="text-align:center;vertical-align:center">9600</td><td style="text-align:center;vertical-align:center">12000</td><td style="text-align:center;vertical-align:center">15000</td><td style="text-align:center;vertical-align:center"></td><td style="text-align:center;vertical-align:center"></td></tr>
 <tr><td style="text-align:center;vertical-align:center">Free Construction Time (sec)</td><td style="text-align:center;vertical-align:center">40</td><td style="text-align:center;vertical-align:center">60</td><td style="text-align:center;vertical-align:center">100</td><td style="text-align:center;vertical-align:center">160</td><td style="text-align:center;vertical-align:center"></td></tr>
 <tr><td style="text-align:center;vertical-align:center">Construction Speed</td><td style="text-align:center;vertical-align:center">0.01</td><td style="text-align:center;vertical-align:center"></td><td style="text-align:center;vertical-align:center"></td><td style="text-align:center;vertical-align:center"></td><td style="text-align:center;vertical-align:center"></td></tr>
@@ -1651,26 +1575,20 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
-      
-<section id="vip" class="th-section">
-  <h2>VIP</h2>
-  <div class="th-tablecard">
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
+      <section id="vip" class="th-section"><h2>VIP</h2><div class="th-tablecard">
   <div class="th-tablehead">
     <button class="th-collapse" aria-expanded="false" aria-controls="tbl-vip-body" title="Expand/Collapse">+</button>
     <strong>VIP</strong>
   </div>
   <div class="th-tablebody" id="tbl-vip-body" hidden>
     <div class="th-scroll">
-      <table class="th-table" id="tbl-vip" role="table">
+      <table class="th-table" id="tbl-vip">
         <thead>
-<tr><th colspan="3" class="th-top th-left th-corner" style="text-align:center;vertical-align:center">VIP</th></tr>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">VIP</th></tr>
         </thead>
         <tbody>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">$ Estimated </td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Points</td></tr>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">$ Estimated </th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Points</th></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 1</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">6</td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 2</th><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 3</th><td style="text-align:center;vertical-align:bottom">17</td><td style="text-align:center;vertical-align:bottom">100</td></tr>
@@ -1693,10 +1611,7 @@ nav ul li ul li a:hover {
       </table>
     </div>
   </div>
-</div>
-  <p class="th-toplink"><a href="#top">Back to top</a></p>
-</section>
-
+</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
     </div>
   </main>
 
@@ -1709,89 +1624,54 @@ nav ul li ul li a:hover {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Collapse: default closed except first table in each section
+  // Collapse buttons
   document.querySelectorAll('.th-section').forEach(function(section){
-    const cards = section.querySelectorAll('.th-tablecard');
-    cards.forEach(function(card, idx){
-      const btn = card.querySelector('.th-collapse');
-      const body = card.querySelector('.th-tablebody');
-      const open = idx === 0;
-      body.hidden = !open ? true : false;
-      btn.textContent = open ? '-' : '+'; // ASCII only
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.addEventListener('click', function(){
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        body.hidden = expanded;
-        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        btn.textContent = expanded ? '+' : '-';
-      });
+    section.querySelectorAll('.th-tablecard').forEach(function(card,idx){
+      const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+      const open=idx===0; body.hidden=!open?true:false; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded', open?'true':'false');
+      btn.addEventListener('click',function(){ const exp=btn.getAttribute('aria-expanded')==='true'; body.hidden=exp; btn.setAttribute('aria-expanded',exp?'false':'true'); btn.textContent=exp?'+':'-'; });
     });
   });
 
   // Tabs
   document.querySelectorAll('.th-tabs').forEach(function(tabs){
-    const section = tabs.closest('.th-section');
-    const buttons = tabs.querySelectorAll('.th-tab');
-    const wraps = section.querySelectorAll('.th-subtables .th-wrap');
-    function show(id) {
-      wraps.forEach(function(w){ w.classList.toggle('th-visible', w.id === ('wrap-' + id)); });
-      buttons.forEach(function(b){ b.classList.toggle('th-active', b.getAttribute('data-target') === id); });
+    const section=tabs.closest('.th-section');
+    const btns=tabs.querySelectorAll('.th-tab');
+    const wraps=section.querySelectorAll('.th-subtables .th-wrap');
+    function show(id){
+      wraps.forEach(w=>w.classList.toggle('th-visible', w.id===('wrap-'+id)));
+      btns.forEach(b=>b.classList.toggle('th-active', b.getAttribute('data-target')===id));
       wraps.forEach(function(w){
-        const visible = w.classList.contains('th-visible');
-        const cards = w.querySelectorAll('.th-tablecard');
-        cards.forEach(function(card, idx){
-          const btn = card.querySelector('.th-collapse');
-          const body = card.querySelector('.th-tablebody');
-          if (visible) {
-            const open = idx === 0;
-            body.hidden = !open;
-            btn.textContent = open ? '-' : '+';
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          } else {
-            body.hidden = true;
-            if (btn){ btn.textContent = '+'; btn.setAttribute('aria-expanded','false'); }
-          }
+        const visible=w.classList.contains('th-visible');
+        const cards=w.querySelectorAll('.th-tablecard');
+        cards.forEach(function(card,idx){
+          const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+          if(visible){ const open=idx===0; body.hidden=!open; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded',open?'true':'false'); }
+          else { body.hidden=true; btn.textContent='+'; btn.setAttribute('aria-expanded','false'); }
         });
       });
     }
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){ show(btn.getAttribute('data-target')); });
-    });
+    btns.forEach(btn=>btn.addEventListener('click',()=>show(btn.getAttribute('data-target'))));
   });
 
   // Castle switcher
   (function(){
-    const select = document.getElementById('castle-switch');
-    const base = document.getElementById('wrap-castle-base');
-    const w108 = document.getElementById('wrap-castle-108');
-    const w1107= document.getElementById('wrap-castle-1107');
-    const wold = document.getElementById('wrap-castle-older');
-    function setState(val){
-      [base, w108, w1107, wold].forEach(el => el.classList.remove('th-visible'));
-      if (val === '108') {
-        base.classList.add('th-visible');
-        w108.classList.add('th-visible');
-      } else if (val === '1107') {
-        base.classList.add('th-visible');
-        w1107.classList.add('th-visible');
-      } else {
-        wold.classList.add('th-visible');
-      }
-      [base, w108, w1107, wold].forEach(function(wrap){
-        if (!wrap.classList.contains('th-visible')) return;
-        const cards = wrap.querySelectorAll('.th-tablecard');
-        cards.forEach(function(card, idx){
-          const btn = card.querySelector('.th-collapse');
-          const body = card.querySelector('.th-tablebody');
-          const open = idx === 0;
-          body.hidden = !open;
-          btn.textContent = open ? '-' : '+';
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const sel=document.getElementById('castle-switch');
+    const base=document.getElementById('wrap-castle-base'), w108=document.getElementById('wrap-castle-108'), w1107=document.getElementById('wrap-castle-1107'), wold=document.getElementById('wrap-castle-older');
+    function setState(v){
+      [base,w108,w1107,wold].forEach(el=>el.classList.remove('th-visible'));
+      if(v==='108'){ base.classList.add('th-visible'); w108.classList.add('th-visible'); }
+      else if(v==='1107'){ base.classList.add('th-visible'); w1107.classList.add('th-visible'); }
+      else { wold.classList.add('th-visible'); }
+      [base,w108,w1107,wold].forEach(function(wrap){
+        if(!wrap.classList.contains('th-visible')) return;
+        wrap.querySelectorAll('.th-tablecard').forEach(function(card,idx){
+          const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+          const open=idx===0; body.hidden=!open; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded',open?'true':'false');
         });
       });
     }
-    setState(select.value);
-    select.addEventListener('change', function(){ setState(this.value); });
+    setState(sel.value); sel.addEventListener('change', function(){ setState(this.value); });
   })();
 });
 </script>

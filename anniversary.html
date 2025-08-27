@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TopHeroes - Anniversary Celebration</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f5f7;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      border-bottom: 1px solid #2b2f3a;
+      padding: 12px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #f5f5f7;
+      font-size: 1.5rem;
+    }
+    header .tagline {
+      color: #b0b6c7;
+      margin-left: 12px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    section h2 {
+      color: #1e2541;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #29abe0;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .letter-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .letter-images img {
+      max-width: 100%;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        const current = location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('#navbar nav a').forEach(a => {
+          if (a.getAttribute('href') === current) {
+            a.style.color = '#fff';
+            a.style.borderBottomColor = '#29abe0';
+          }
+        });
+      })
+      .catch(err => console.error('Navbar load failed:', err));
+  </script>
+
+  <main>
+    <section>
+      <h2>Anniversary Realm</h2>
+      <p>Details coming soon.</p>
+    </section>
+
+    <section>
+      <h2>Toyland Store</h2>
+      <p>Details coming soon.</p>
+    </section>
+
+    <section>
+      <h2>Fun Gift Machine</h2>
+      <p>Details coming soon.</p>
+    </section>
+
+    <section>
+      <h2>Adventure Letters</h2>
+      <p>
+        Every day during the Anniversary Celebration, players can discover <strong>3 hidden letters</strong> while playing Adventure stages. These letters contribute to completing the word <strong>"TopHeroes"</strong>. Once the full word is completed, you'll receive special rewards!
+      </p>
+      <p>
+        Below you’ll find updated images with the exact locations of the letters. Check back daily as new ones are discovered!
+      </p>
+      <div class="letter-images">
+        <img src="anniversary1.jpeg" alt="Letter map 1">
+        <img src="anniversary2.jpeg" alt="Letter map 2">
+        <img src="anniversary3.jpeg" alt="Letter map 3">
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; });
+  </script>
+</body>
+</html>

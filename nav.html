@@ -32,7 +32,7 @@
         <ul class="dropdown">
           <li><a href="building.html">Overview</a></li>
           <li><a href="villagers.html">Villagers</a></li>
-          <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
+          <li><a href="lord-gear.html">Lord Gear &amp; Relics</a></li>
         </ul>
       </li>
 
@@ -61,10 +61,32 @@
 
       <li><a href="beginners.html">Beginners Guide</a></li>
       <li><a href="shop.html">SHOP</a></li>
-      <li><a href="tips.html">Tips & More</a></li>
+      <li><a href="tips.html">Tips &amp; More</a></li>
       <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Support Us</a></li>
-      <li><a href="privacy.html">Policy&Privacy</a></li>
+      <li><a href="privacy.html">Policy&amp;Privacy</a></li>
     </ul>
+
+    <!-- === Language Switcher (Google Translate redirect) === -->
+    <div class="lang-switcher" aria-label="Language selector">
+      <label for="gt-lang" class="visually-hidden">Translate</label>
+      <select id="gt-lang" title="Translate this page">
+        <option value="" selected>🌐 Translate</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="pl">Polski</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="ja">日本語</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="uk">Українська</option>
+        <option value="tl">Filipino</option>
+        <option value="sv">Svenska</option>
+        <option value="ar">العربية</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
+    <!-- === /Language Switcher === -->
   </nav>
 </header>
 
@@ -132,6 +154,58 @@
   /* FIX: garantisce click sicuri */
   nav { position: relative; z-index: 10; }
   nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  /* === Language switcher styles === */
+  .visually-hidden{
+    position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden;
+  }
+  nav .lang-switcher{
+    position:absolute; right:12px; bottom:10px; z-index: 1100;
+    display:flex; align-items:center; gap:8px;
+    /* micro-ombra per staccarlo dal menu */
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,.25));
+  }
+  nav .lang-switcher select{
+    appearance:none; -webkit-appearance:none; -moz-appearance:none;
+    padding:10px 40px 10px 12px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.22);
+    background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+    color:#eef2ff; font-size:14px; line-height:1; letter-spacing:.02em;
+    backdrop-filter: blur(8px);
+    cursor:pointer; outline:none;
+    transition: transform .12s ease, box-shadow .2s ease, border-color .2s ease;
+    /* caret */
+    background-image:
+      linear-gradient(transparent,transparent),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="white"><path d="M5.5 7.5l4.5 5 4.5-5"/></svg>');
+    background-repeat:no-repeat;
+    background-position:right 12px center;
+  }
+  nav .lang-switcher select:hover{
+    border-color:#29abe0;
+    box-shadow: 0 0 0 3px rgba(41,171,224,.15);
+  }
+  nav .lang-switcher select:active{ transform: scale(.98); }
+
+  /* variante chiara */
+  @media (prefers-color-scheme: light){
+    nav .lang-switcher select{
+      border-color: rgba(0,0,0,.15);
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.85));
+      color:#0f172a;
+      background-image:
+        linear-gradient(transparent,transparent),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="black"><path d="M5.5 7.5l4.5 5 4.5-5"/></svg>');
+    }
+  }
+
+  /* Mobile: evita sovrapposizioni col menu */
+  @media (max-width: 768px){
+    nav{ padding-bottom:64px; }
+    nav .lang-switcher{ right:10px; bottom:10px; }
+    nav .lang-switcher select{ font-size:13px; padding:9px 36px 9px 10px; border-radius:10px; }
+  }
 </style>
 
 <script>
@@ -203,6 +277,32 @@
         document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
         document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
       }
+    });
+  })();
+
+  // === Google Translate redirect (gratis, senza API) ===
+  (function(){
+    const sel = document.getElementById('gt-lang');
+    if(!sel) return;
+
+    // Pre-seleziona lingua se siamo su translate.google.com e c'è "tl"
+    try{
+      const params = new URLSearchParams(window.location.search);
+      const tl = params.get('tl');
+      if (tl) {
+        // gestisce zh-CN ecc.
+        [...sel.options].forEach(o=>{
+          if (o.value.toLowerCase() === tl.toLowerCase()) o.selected = true;
+        });
+      }
+    }catch(e){}
+
+    sel.addEventListener('change', function(){
+      const lang = this.value;
+      if(!lang) return;
+      const url = encodeURIComponent(window.location.href);
+      const target = `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${url}`;
+      window.location.href = target;
     });
   })();
 </script>

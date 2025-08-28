@@ -3,255 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TopHeroes Guide - Building</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
-     crossorigin="anonymous"></script>
+  <title>TopHeroes Guide - Buildings</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
   <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
+/* --- Base --- */
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+/* Enhanced nav styling */
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-nav {
-  width: 100%;
-  margin-top: 10px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: #d1d1d6;
-  text-decoration: none;
-  padding: 10px 8px;
-  font-size: 0.85rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #FFFFFF;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1f1f21;
-  border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  margin: 0;
-}
-
-nav ul li ul li a {
-  display: block;
-  padding: 8px 20px;
-  color: #d1d1d6;
-  white-space: nowrap;
-}
-
-nav ul li ul li a:hover {
-  background: #2c2c2e;
-  color: #FFFFFF;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-.donation-section {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: #f5f5f7;
-  border-top: 1px solid #e5e5e5;
-}
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.donation-button:hover {
-  background: #2389b5;
-}
-
-
-/* Enhanced navigation styling */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-
-header .tagline {
-  color: #b0b6c7;
-}
-
-nav ul {
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #ccd0dd;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 12px 6px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-  border-bottom-color: #29abe0;
-}
-
-nav ul li ul {
-  background: #1c2133;
-  border: 1px solid #2b2f3a;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-nav ul li ul li a {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-nav ul li ul li a:hover {
-  background: #25314d;
-  color: #ffffff;
-}
-
-</style>
+/* --- Page styles --- */
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+  </style>
 </head>
 <body>
 <div id="navbar"></div>
 <script>
   fetch("nav.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("navbar").innerHTML = html;
-      const current = location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll('#navbar nav a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.style.color = '#fff';
-          a.style.borderBottomColor = '#29abe0';
-        }
+    .then(res=>res.text())
+    .then(html=>{
+      document.getElementById("navbar").innerHTML=html;
+      const current=location.pathname.split("/").pop()||"index.html";
+      document.querySelectorAll('#navbar nav a').forEach(a=>{
+        if(a.getAttribute('href')===current){a.style.color='#fff';a.style.borderBottomColor='#29abe0';}
       });
     })
-    .catch(err => console.error('Navbar load failed:', err));
+    .catch(err=>console.error('Navbar load failed:',err));
 </script>
-  <main>
-    <section id="building">
-      <h2>Building</h2>
-      <p>This page is almost ready to be released, it will be available tomorrow. stay ready!</p>
-    </section>
-  
-   <div id="footer"></div>
+
+<main>
+  <section id="buildings">
+    <h2 class="page-title">Buildings</h2>
+    <p class="lead">Not every building needs to stay at the same level. Here’s how to prioritise upgrades in TopHeroes.</p>
+
+    <div class="card">
+      <h3>Building Queues</h3>
+      <p>As a free-to-play player, you can unlock a second queue for 2 days by spending 500 diamonds. This can be extended by starting a long upgrade just before it expires. If you spend money, you can have up to 4 building queues — the first is cheap, later ones cost more. We recommend at least 3 queues if you want faster progress.</p>
+    </div>
+
+    <div class="card">
+      <h3>Castle</h3>
+      <p>The most important building. Upgrade it as fast as possible to at least level 25, ideally 30. Each level increases hero cap by +5 (levels 15 and 30 give +10). Heroes also gain a small ATK/HP buff per castle level. Castle upgrades require Training Ground, Guild, Research Cottage, and Hospital upgrades. Keep these at castle level to avoid delays. See the Tips page for full requirements.</p>
+    </div>
+
+    <div class="card">
+      <h3>Barracks</h3>
+      <p>Every 5 levels, Barracks unlock stronger soldiers with more ATK, HP, Morale, Load, and Power. Training speed and capacity also increase. This makes a huge difference for your army.</p>
+    </div>
+
+    <div class="card">
+      <h3>Statues</h3>
+      <p>Faction statues give Hero ATK, HP, and march size. Keep your main faction’s statue equal to castle level. Other statues can be saved for Arms Race/KvK events to score points.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tavern</h3>
+      <p>Grants percentage buffs to Hero ATK, HP, and DEF. Keep it close to your castle level for maximum impact.</p>
+    </div>
+
+    <div class="card">
+      <h3>Blacksmith</h3>
+      <p>Provides Gear ATK and HP buffs, and reduces forge time. Higher levels boost gear effectiveness (Lv 20–30 Legendary). <em>Reminder:</em> this buff counts only once per hero, not per piece.</p>
+    </div>
+
+    <div class="card">
+      <h3>Rally Hall</h3>
+      <p>Improves rallies: HP, damage, damage reduction, and rally size. Save some upgrades for Arms Race/KvK to gain many points.</p>
+    </div>
+
+    <div class="card">
+      <h3>Troop Skin Center</h3>
+      <p>Lets you upgrade troop skins. Increases training cap and speed. A strong building to prioritise. Also valuable to save for Arms Race/KvK points.</p>
+    </div>
+
+    <div class="card">
+      <h3>Lord’s Hall</h3>
+      <p>Upgrade as much as possible. Traits on the right side require Glory Medals — sometimes better to unlock traits instead of pushing the level.</p>
+    </div>
+
+    <div class="card">
+      <h3>Relic Hall</h3>
+      <p>Best upgraded during Guild Race when the Magic Stone task appears. Golden tasks give higher points — an easy way to maximise Guild Race scores.</p>
+    </div>
+
+    <div class="card">
+      <h3>Watchtower</h3>
+      <p>Good to save for Arms Race/KvK upgrades, but level it moderately before. Higher levels give more scout speed, scout queues, and allow you to extinguish guild mates’ fires.</p>
+    </div>
+
+    <div class="card">
+      <h3>Warehouse</h3>
+      <p>Also best saved for Arms Race/KvK upgrades. Resource storage is less critical since resources in your bag can’t be plundered.</p>
+    </div>
+
+    <div class="card">
+      <h3>Pet Paradise</h3>
+      <p>Unlocks in Season 1. Upgrade quickly to Lv 30 (better Lv 35) to maximise rewards in events. Higher levels grant more egg hunt attempts and purchases. Lv 35 unlocks Lv 2 hunts with better eggs, but tougher mobs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Mines</h3>
+      <p>Essential for resources. They don’t give many event points, but always keep them leveled over time — you’ll need their output for upgrades and heroes.</p>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
 <script>
   fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    })
-    .catch(err => console.error('Footer load failed:', err));
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const icons = {
-    'League': 'league-symbol.jpeg',
-    'Nature': 'nature-symbol.jpeg',
-    'Horde': 'horde-symbol.jpeg'
-  };
-  function addIcon(el, word) {
-    const img = document.createElement('img');
-    img.src = icons[word];
-    img.alt = word + ' symbol';
-    img.style.height = '1em';
-    img.style.marginLeft = '0.3em';
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'league-symbol.jpeg','Nature':'nature-symbol.jpeg','Horde':'horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
-  });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
-  });
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
 });
 </script>
 </body>

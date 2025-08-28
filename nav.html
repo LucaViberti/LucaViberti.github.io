@@ -36,7 +36,6 @@
           <li><a href="league.html">League</a></li>
           <li><a href="nature.html">Nature</a></li>
           <li><a href="horde.html">Horde</a></li>
-          <!-- Gear con mini flyout affianco -->
           <li class="has-flyout">
             <a href="gear.html">Gear</a>
             <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
@@ -70,17 +69,6 @@
         </ul>
       </li>
 
-      <!-- EVENTS 
-      <li class="has-sub">
-        <a href="events.html">Events</a>
-        <ul class="dropdown">
-          <li><a href="guild-race.html">Guild Race</a></li>
-          <li><a href="arms-race.html">Arms Race</a></li>
-          <li><a href="kingdom.html">KvK</a></li>
-          <li><a href="guildboss.html">Guild Boss</a></li>
-        </ul> -->
-      </li>
-
       <li><a href="beginners.html">Beginners Guide</a></li>
       <li><a href="shop.html">SHOP</a></li>
       <li><a href="tips.html">Tips &amp; More</a></li>
@@ -91,11 +79,15 @@
 </header>
 
 <style>
-  /* dimensione link coerente */
-  nav ul li a { font-size: 0.85rem; }
-  nav ul li ul li a { font-size: 0.85rem; }
+  nav{ position: relative; z-index: 10; padding-top:64px; } /* spazio per selettore */
+  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+  nav ul li{position:relative}
+  nav ul li a{
+    color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
+    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
+  }
+  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
 
-  /* Titolo */
   .site-title{
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight:700;
@@ -106,209 +98,103 @@
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
-  /* Dropdown base */
-  nav{ position: relative; z-index: 10; /* per ancorare il selettore */ }
-  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
-  nav ul li{position:relative}
-  nav ul li a{
-    color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
-    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
-  }
-  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
-
-  /* dropdown principale */
+  /* dropdown */
   nav ul li .dropdown{
     display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
     background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
   }
-  @media (hover:hover){
-    nav ul li.has-sub:hover > .dropdown{display:block}
-  }
+  @media (hover:hover){ nav ul li.has-sub:hover > .dropdown{display:block} }
   nav ul li.has-sub.open > .dropdown{display:block}
-
-  nav ul li .dropdown li a{
-    display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
-  }
+  nav ul li .dropdown li a{display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap}
   nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
 
-  /* Gear con flyout */
+  /* Gear flyout */
   .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
   .has-flyout > a{flex:1;padding:8px 8px}
   .flyout-toggle{
     background:#25314d;border:1px solid #2b2f3a;border-radius:6px;padding:6px 8px;
-    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1
+    color:#d1d1d6;cursor:pointer;font-size:.8rem;
   }
   .flyout-toggle:hover{background:#2d3a5a;color:#fff}
-  .flyout{
-    display:none;position:absolute;
-    top:0; left:100%; margin-left:8px;
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px; padding:8px 0; z-index:1001
-  }
+  .flyout{display:none;position:absolute;top:0;left:100%;margin-left:8px;background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px;padding:8px 0}
   .has-flyout.open > .flyout{display:block}
-  @media (max-width: 640px){
-    .flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; display:none;}
+  @media (max-width:640px){
+    .flyout{position:static;margin:6px 0 0 0;display:none;}
     .has-flyout.open > .flyout{display:block}
     .has-flyout{flex-wrap:wrap}
-    .flyout-toggle{padding:6px 10px}
   }
 
-  /* FIX: garantisce click sicuri sulle voci */
-  nav ul li .dropdown li a { position: relative; z-index: 2; }
-
-  /* === Language switcher styles (TOP-RIGHT) === */
-  .visually-hidden{
-    position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden;
-  }
+  /* language switcher */
+  .visually-hidden{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
   nav .lang-switcher{
-    position:absolute; top:8px; right:12px; z-index: 9999;
-    display:flex; align-items:center; gap:8px;
-    pointer-events:auto;
+    position:absolute; top:12px; right:12px; z-index:9999;
     filter: drop-shadow(0 2px 8px rgba(0,0,0,.25));
   }
   nav .lang-switcher select{
     appearance:none; -webkit-appearance:none; -moz-appearance:none;
-    padding:10px 40px 10px 12px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.22);
-    background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
-    color:#eef2ff; font-size:14px; line-height:1; letter-spacing:.02em;
-    backdrop-filter: blur(8px);
-    cursor:pointer; outline:none;
-    transition: transform .12s ease, box-shadow .2s ease, border-color .2s ease;
+    padding:9px 36px 9px 12px; border-radius:10px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);
+    color:#fff;font-size:14px;cursor:pointer;
     background-image:
       linear-gradient(transparent,transparent),
       url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="white"><path d="M5.5 7.5l4.5 5 4.5-5"/></svg>');
-    background-repeat:no-repeat;
-    background-position:right 12px center;
+    background-repeat:no-repeat;background-position:right 10px center;
   }
-  nav .lang-switcher select:hover{
-    border-color:#29abe0;
-    box-shadow: 0 0 0 3px rgba(41,171,224,.15);
-  }
-  nav .lang-switcher select:active{ transform: scale(.98); }
-
-  /* Spazio per il selettore: evita sovrapposizioni */
-  nav{ padding-top: 56px; }
-
-  /* variante chiara */
-  @media (prefers-color-scheme: light){
-    nav .lang-switcher select{
-      border-color: rgba(0,0,0,.15);
-      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.85));
-      color:#0f172a;
-      background-image:
-        linear-gradient(transparent,transparent),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="black"><path d="M5.5 7.5l4.5 5 4.5-5"/></svg>');
-    }
-  }
-
-  /* Mobile: più compatto e con spazio extra in alto */
-  @media (max-width: 768px){
-    nav{ padding-top: 64px; }
-    nav .lang-switcher{ top:10px; right:10px; }
-    nav .lang-switcher select{ font-size:13px; padding:9px 36px 9px 10px; border-radius:10px; }
+  nav .lang-switcher select:hover{border-color:#29abe0;}
+  @media (max-width:768px){
+    nav{padding-top:72px;}
+    nav .lang-switcher{top:10px;right:10px;}
+    nav .lang-switcher select{font-size:13px;padding:8px 32px 8px 10px;}
   }
 </style>
 
 <script>
-  // Evidenzia la pagina attiva
+  // evidenzia pagina attiva
   (function(){
     const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
     document.querySelectorAll('nav a[href]').forEach(a=>{
-      const href = a.getAttribute('href')?.toLowerCase();
-      if(href === current){
-        a.style.color = '#fff';
-        a.style.borderBottomColor = '#29abe0';
+      if(a.getAttribute('href')?.toLowerCase() === current){
+        a.style.color = '#fff';a.style.borderBottomColor = '#29abe0';
       }
     });
   })();
 
-  // Apertura/chiusura dropdown (mobile) + 2° tap = naviga
+  // dropdown e flyout
   (function(){
     const isTouch = window.matchMedia('(hover: none)').matches;
-
     document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
       link.addEventListener('click', function(e){
         const li = this.parentElement;
-        if (!isTouch) return; // desktop normale
-
-        if (!li.classList.contains('open')) {
-          e.preventDefault();
-          li.classList.add('open');
-          document.querySelectorAll('nav li.has-sub').forEach(other=>{
-            if(other !== li) other.classList.remove('open');
-          });
-          return;
-        }
-        // se già aperto, lascia navigare
+        if (!isTouch) return;
+        if (!li.classList.contains('open')){ e.preventDefault();li.classList.add('open'); }
       });
     });
-
-    // voci interne navigano sempre
-    document.querySelectorAll('nav li .dropdown a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.stopPropagation();
-      });
-    });
-
-    // Gear flyout
     document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
       btn.addEventListener('click', function(e){
-        e.stopPropagation();
-        const li = this.closest('.has-flyout');
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        li.classList.toggle('open', !expanded);
+        e.stopPropagation();const li=this.closest('.has-flyout');
+        const expanded=this.getAttribute('aria-expanded')==='true';
+        this.setAttribute('aria-expanded',!expanded);li.classList.toggle('open',!expanded);
       });
     });
-
-    // Chiudi fuori
-    document.addEventListener('click', function(e){
-      const nav = document.querySelector('nav');
-      if(!nav.contains(e.target)){
+    document.addEventListener('click', e=>{
+      if(!document.querySelector('nav').contains(e.target)){
         document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
-        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
-        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
-      }
-    });
-
-    // Chiudi con Esc
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){
-        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
-        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
         document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
       }
     });
   })();
 
-  // === Google Translate redirect (gratis, senza API) ===
+  // === Google Translate redirect (sl=en forzato) ===
   (function(){
-    const sel = document.getElementById('gt-lang');
-    if(!sel) return;
-
-    // Se siamo già su translate.google.com, pre-seleziona tl
-    try{
-      const params = new URLSearchParams(window.location.search);
-      const tl = params.get('tl');
-      if (tl) {
-        [...sel.options].forEach(o=>{
-          if (o.value.toLowerCase() === tl.toLowerCase()) o.selected = true;
-        });
-      }
-    }catch(e){}
-
+    const sel=document.getElementById('gt-lang'); if(!sel) return;
     function go(lang){
       if(!lang) return;
-      // URL della pagina senza hash (Google Translate ignora gli anchor)
-      const page = location.origin ? (location.origin + location.pathname + location.search) : location.href;
-      const target = `https://translate.google.com/translate?hl=${encodeURIComponent(lang)}&sl=auto&tl=${encodeURIComponent(lang)}&u=${encodeURIComponent(page)}`;
-      // Naviga in modo affidabile
-      window.location.assign(target);
+      const page=location.origin+location.pathname+location.search;
+      const t='https://translate.google.com/translate?hl='+encodeURIComponent(lang)+'&sl=en&tl='+encodeURIComponent(lang)+'&u='+encodeURIComponent(page);
+      window.location.href=t;
     }
-
-    sel.addEventListener('change', function(){ go(this.value); });
-    // Fallback per alcuni browser mobile
-    sel.addEventListener('input', function(){ go(this.value); });
+    sel.addEventListener('change',()=>go(sel.value));
+    sel.addEventListener('input', ()=>go(sel.value));
   })();
 </script>

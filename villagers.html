@@ -21,14 +21,16 @@ nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translat
 nav ul li:hover ul{display:block;}
 nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
 nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
 main{padding:40px 20px;max-width:1000px;margin:0 auto;}
 section{margin-bottom:40px;}
 footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
 /* Enhanced nav styling */
-header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header{background:linear-gradient(180deg,#1e2541 0%, #141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
 header .tagline{color:#b0b6c7;}
 nav ul{gap:20px;}
-nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s, border-bottom-color .3s;color:#ccd0dd;}
 nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
 nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
 nav ul li ul li a{font-size:.85rem;}
@@ -40,12 +42,19 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
 .card h3{margin:0 0 6px;font-size:1.15rem;color:#1f2937;}
 
+/* Preface with exact image placement */
 .preface{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
-.preface img{max-width:12%;min-width:80px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin-right:10px;vertical-align:middle;}
-.preface .inline-img{display:inline-block;vertical-align:middle;}
+/* first two images: particularly small */
+.img-inline-left{float:left;max-width:9%;min-width:70px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 12px 8px 0;}
+.img-inline-right{float:right;max-width:9%;min-width:70px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 0 8px 12px;}
+.clearfix::after{content:"";display:block;clear:both;}
 
+/* Section image (Mines) */
+.section-img-right{float:right;max-width:14%;min-width:100px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 0 8px 12px;}
+
+/* Mobile adjustments */
 @media (max-width:768px){
-  .preface img{max-width:30%;}
+  .img-inline-left,.img-inline-right,.section-img-right{float:none;display:block;max-width:60%;min-width:0;margin:10px auto;}
 }
   </style>
 </head>
@@ -68,73 +77,81 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
   <section id="villagers">
     <h2 class="page-title">Villagers</h2>
 
-    <div class="preface">
-      <span class="inline-img"><img src="villager1.png" alt="Villager 1"></span>
-      <span class="inline-img"><img src="villager2.png" alt="Villager 2"></span>
-      <p>You can add up to 4 villagers to most buildings to give extra buffs. Some buffs are not really worth it, while others make a huge difference. Sometimes villagers have 2 buffs for the same building — you’ll see it with a rainbow edge. If they have at least one buff you need, use them.</p>
-      <p>You can level villagers’ skills by consuming others with the same skill. You’ll lose the consumed villagers permanently, but the chosen villager’s skill increases. Always try to collect all 4 villagers for a building before sacrificing any for leveling. If you see an arrow, you have enough villagers to use as material.</p>
-      <p>To see all villagers and buffs, visit our <a href="tips.html">Tips & More</a> page.</p>
-      <div><img src="villager3.png" alt="Villager 3"></div>
+    <!-- Preface with images exactly as in the doc: first two inline near the first two paragraphs -->
+    <div class="preface clearfix">
+      <p class="clearfix">
+        <img src="villager1.png" alt="Villager 1" class="img-inline-left">
+        You can add up to four villagers to most buildings to provide extra buffs. Some buffs aren’t really worth it, while others make a huge difference. Sometimes villagers have two buffs for the same building — you can recognise this by the rainbow edge. If they have at least one buff you need, use them.
+      </p>
+
+      <p class="clearfix">
+        <img src="villager2.png" alt="Villager 2" class="img-inline-right">
+        You can level villagers’ skills by consuming other villagers with the same skill as material. You’ll lose those villagers permanently, but the chosen villager’s skill increases. Try to collect all four villagers needed for a building before you use any for leveling. If you see an arrow, you have enough villagers to use as material.
+      </p>
+
+      <p>To see all villagers and buffs, visit our <a href="tips.html">tips &amp; more</a> page.</p>
     </div>
 
-    <div class="card">
+    <!-- From here, the chapters (cards) -->
+    <div class="card clearfix">
       <h3>Mines</h3>
-      <p>Mines villagers are arguably the best in the game if you use yield increase villagers. They can boost your mine output 2–3x. <strong>ONLY put yield increase villagers in your mines.</strong> If you don’t have them yet, use storage-time villagers until you do.</p>
+      <img src="villager3.png" alt="Villager 3" class="section-img-right">
+      <p>Mines villagers are among the best in the game if you use yield-increase villagers. They can boost your mine output two to three times. <strong>ONLY put yield-increase villagers in your mines.</strong> If you don’t have them yet, use storage-time villagers until you do.</p>
     </div>
 
     <div class="card">
       <h3>Blacksmith / Research Cottage / Barracks / Troop Skin Center</h3>
-      <p>Focus only on percentage speed increase. All other villagers are not worth using in these buildings.</p>
+      <p>Focus only on <strong>percentage speed increase</strong>. All other villagers are not worth using in these buildings.</p>
     </div>
 
     <div class="card">
       <h3>Hospital</h3>
-      <p>Healing speed increase sounds strong early, but with Season 1 you’ll face more wounded soldiers. If you plan to save soldiers for Arms Race or KvK, hospital capacity villagers are also valuable. We recommend using a mix of both from Season 1 onwards.</p>
+      <p>Healing speed is strong early, but with Season 1 you’ll see many more wounded soldiers. If you plan to save soldiers for Arms Race or KvK, <strong>hospital capacity</strong> villagers are also valuable. From Season 1 onwards, we recommend a <strong>mix of both</strong>.</p>
     </div>
 
     <div class="card">
       <h3>Training Ground</h3>
-      <p>The percentage increase in training capacity is much better, especially at high Training Ground levels.</p>
+      <p><strong>Training capacity %</strong> is much better, especially at high Training Ground levels.</p>
     </div>
 
     <div class="card">
       <h3>Tavern</h3>
-      <p>Use villagers that increase the chance of gaining an additional villager per day. The free hero reduction buff is weak — the time saved is negligible.</p>
+      <p>Use villagers that <strong>increase the chance of gaining an additional villager per day</strong>. The free hero time reduction buff is weak — the time saved is negligible.</p>
     </div>
 
     <div class="card">
       <h3>Watchtower</h3>
-      <p>PvP marching speed bonus is the best option here. It’s not game-changing, but it can make a small difference in world map fights.</p>
+      <p><strong>PvP marching speed</strong> is the best option here. It’s not game-changing, but it can make a small difference in world map fights.</p>
     </div>
 
     <div class="card">
       <h3>Hero Statue</h3>
-      <p>Hero Statue buffs are weak. If needed, use HP villagers if you lack sustain, or ATK villagers if you need more damage. Early game: flat ATK/HP is better; later: percentage buffs scale better.</p>
+      <p>Hero Statue buffs are weak. If needed, use <strong>HP</strong> villagers if you lack sustain, or <strong>ATK</strong> villagers if you need more damage. Early game: flat ATK/HP is better; later: percentage buffs scale better.</p>
     </div>
 
     <div class="card">
       <h3>Medal Hall</h3>
-      <p>These buffs are better than Hero Statue. As with Hero Statue, you can mix ATK and HP increases, or focus on one depending on your needs.</p>
+      <p>These buffs are stronger than Hero Statue. As with Hero Statue, you can mix <strong>ATK</strong> and <strong>HP</strong> increases, or focus on one depending on your needs.</p>
     </div>
 
     <div class="card">
       <h3>Queue</h3>
-      <p>All buffs are useful except march size increase. We recommend prioritising damage increase and damage reduction villagers.</p>
+      <p>All buffs are useful except <strong>march size increase</strong>. Prioritise <strong>damage increase</strong> and <strong>damage reduction</strong> villagers.</p>
     </div>
 
     <div class="card">
       <h3>Statue</h3>
-      <p>Statue villagers aren’t great. Prefer Hero HP and ATK increase. March size increase villagers are usable too, but not optimal.</p>
+      <p>Statue villagers aren’t great. Prefer <strong>Hero HP</strong> and <strong>ATK</strong> increase. March size villagers are usable, just not optimal.</p>
     </div>
 
     <div class="card">
       <h3>Guild</h3>
-      <p>Focus on Help Accept Count villagers. They increase the number of helps you can receive, which reduces both building and research times significantly.</p>
+      <p>Focus on <strong>Help Accept Count</strong> villagers. Increasing the number of helps you can receive reduces both building and research times significantly.</p>
     </div>
 
     <div class="card">
       <h3>Castle</h3>
-      <p>The best buffs are percentage yield boost and construction speed increase. Other buffs are not particularly useful.</p>
+      <p>The best buffs are <strong>percentage yield boost</strong> and <strong>construction speed increase</strong>. Other buffs are not particularly useful.</p>
     </div>
 
   </section>
@@ -152,11 +169,20 @@ document.addEventListener('DOMContentLoaded',function(){
   const icons={'League':'league-symbol.jpeg','Nature':'nature-symbol.jpeg','Horde':'horde-symbol.jpeg'};
   function addIcon(el,word){
     const img=document.createElement('img');
-    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    img.src=icons[word];
+    img.alt=word+' symbol';
+    img.style.height='1em';
+    img.style.marginLeft='0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+  document.querySelectorAll('a').forEach(a=>{
+    const t=a.textContent.trim();
+    if(icons[t]) addIcon(a,t);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
+    const t=h.textContent.trim();
+    if(icons[t]) addIcon(h,t);
+  });
 });
 </script>
 </body>

@@ -3,257 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TopHeroes Guide - Beginners Guide</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
-     crossorigin="anonymous"></script>
+  <title>TopHeroes Guide - Beginner Guide</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
   <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
+/* Base */
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+/* Enhanced nav styling */
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-nav {
-  width: 100%;
-  margin-top: 10px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: #d1d1d6;
-  text-decoration: none;
-  padding: 10px 8px;
-  font-size: 0.85rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #FFFFFF;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1f1f21;
-  border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  margin: 0;
-}
-
-nav ul li ul li a {
-  display: block;
-  padding: 8px 20px;
-  color: #d1d1d6;
-  white-space: nowrap;
-}
-
-nav ul li ul li a:hover {
-  background: #2c2c2e;
-  color: #FFFFFF;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-.donation-section {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: #f5f5f7;
-  border-top: 1px solid #e5e5e5;
-}
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.donation-button:hover {
-  background: #2389b5;
-}
-
-
-/* Enhanced navigation styling */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-
-header .tagline {
-  color: #b0b6c7;
-}
-
-nav ul {
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #ccd0dd;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 12px 6px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-  border-bottom-color: #29abe0;
-}
-
-nav ul li ul {
-  background: #1c2133;
-  border: 1px solid #2b2f3a;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-nav ul li ul li a {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-nav ul li ul li a:hover {
-  background: #25314d;
-  color: #ffffff;
-}
-
-</style>
+/* Page styles */
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 10px;font-size:1.2rem;color:#1f2937;}
+.card ul{margin:8px 0 0 20px;}
+  </style>
 </head>
 <body>
 <div id="navbar"></div>
 <script>
   fetch("nav.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("navbar").innerHTML = html;
-      const current = location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll('#navbar nav a').forEach(a => {
-        if (a.getAttribute('href') === current) {
-          a.style.color = '#fff';
-          a.style.borderBottomColor = '#29abe0';
-        }
+    .then(res=>res.text())
+    .then(html=>{
+      document.getElementById("navbar").innerHTML=html;
+      const current=location.pathname.split("/").pop()||"index.html";
+      document.querySelectorAll('#navbar nav a').forEach(a=>{
+        if(a.getAttribute('href')===current){a.style.color='#fff';a.style.borderBottomColor='#29abe0';}
       });
     })
-    .catch(err => console.error('Navbar load failed:', err));
-</script>
-  <main>
-    <section id="beginners">
-      <h2>Beginners Guide</h2>
-      <p>This page is almost ready to be released, it will be available during this week. stay ready!</p>
-      <p>At the moment you can see what you need from adventure and reserch, Check it<p>
-    </section>
-  
-    <div id="footer"></div>
-<script>
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    })
-    .catch(err => console.error('Footer load failed:', err));
+    .catch(err=>console.error('Navbar load failed:',err));
 </script>
 
+<main>
+  <section id="beginner">
+    <h2 class="page-title">Beginner Guide</h2>
+    <p class="lead">If you’ve just started TopHeroes, this guide will take you step by step from zero. Read carefully and follow these tips to avoid common mistakes and grow your account fast.</p>
+
+    <div class="card">
+      <h3>1) First Things First: Login to the Official Website</h3>
+      <p><strong>Login immediately</strong> with your game account on the official TopHeroes website.</p>
+      <ul>
+        <li>Redeem <strong>gift codes</strong> for free rewards.</li>
+        <li>Purchase <strong>Gold Bricks</strong> with a +5% bonus compared to in-app purchases.</li>
+        <li>Buy the <strong>Monthly Pass</strong> (only via Gold Bricks).</li>
+      </ul>
+      <p>Logging in also gives you access to promotions and bonuses not available in-game. For details, visit our <a href="shop.html">Shop & Codes</a> page.</p>
+    </div>
+
+    <div class="card">
+      <h3>2) Don’t Waste Resources</h3>
+      <p><strong>Diamonds:</strong> Don’t spend them on speed-ups early. They are rare and should be saved. How you spend them later depends on your playstyle (free-to-play or spender).</p>
+      <p><strong>Meat (Hero XP):</strong> Don’t waste it on <strong>blue (rar)</strong> heroes. They are temporary. Use caution with <strong>epic</strong> heroes too. Focus on <strong>legendary</strong> and eventually <strong>mythic (red)</strong> heroes. More details in <a href="heroes.html">Heroes</a>.</p>
+    </div>
+
+    <div class="card">
+      <h3>3) Choose Your Main Faction Early</h3>
+      <p>Picking a <strong>main faction</strong> early prevents wasted resources and unlocks lineup buffs later.</p>
+      <ul>
+        <li><strong>League</strong> → Secret Keeper (great early), Pyromancer (useful for months).</li>
+        <li><strong>Nature</strong> → Treeguard (early unlock but will be replaced, don’t overinvest).</li>
+        <li><strong>Horde</strong> → Shaman (powerful and stays relevant long-term).</li>
+      </ul>
+      <p>Understand roles: Tank / Mage / Healer / Support. Positioning and synergy matter. More details in the <a href="heroes.html">Heroes</a> page.</p>
+    </div>
+
+    <div class="card">
+      <h3>4) Join a Guild</h3>
+      <p>Guilds are the true growth engine. Always aim for a <strong>top 3–10 guild</strong>.</p>
+      <p>Where to find them:</p>
+      <ul>
+        <li><strong>Guild ranking list</strong></li>
+        <li><strong>World chat</strong> (look for recruitment messages)</li>
+      </ul>
+      <p>Benefits: faster helps, daily rallies, and unique rewards. For details see <a href="buildings.html">Buildings</a> → Guild.</p>
+    </div>
+
+    <div class="card">
+      <h3>5) Castle & Core Buildings</h3>
+      <p>The <strong>Castle</strong> is the heart of your progress. To upgrade it, you must level:</p>
+      <ul>
+        <li>Research Cottage</li>
+        <li>Hospital</li>
+        <li>Guild</li>
+        <li>Training Ground</li>
+      </ul>
+      <p>A sensible early milestone: <strong>Castle level 25</strong>. More details in <a href="buildings.html">Buildings</a>.</p>
+    </div>
+
+    <div class="card">
+      <h3>6) Barracks & Soldiers</h3>
+      <p>There are three Barracks (League, Order, Nature). Every 5 levels, soldiers upgrade, improving ATK, HP, and power — but only for heroes of that faction using those soldiers.</p>
+      <p><strong>Influence:</strong> Soldiers contribute heavily to Influence. For the <a href="events.html">Top Lord event</a>, assign soldiers even to idle heroes to maximise Influence.</p>
+    </div>
+
+    <div class="card">
+      <h3>7) Rotating Events (Calendar & Bell Tower)</h3>
+      <p>Events like World Boss and Dark Challenge rotate daily. Always check the <strong><a href="events.html">Calendar</a></strong> to plan.</p>
+      <ul>
+        <li>Via <a href="events.html">Events → Calendar</a></li>
+        <li>From your Village, click the <strong>Bell Tower</strong> (shortcut to Calendar)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>8) Always-Available Content</h3>
+      <ul>
+        <li><strong>Legend Stash</strong>: 3 free daily attacks, no stamina cost. Excellent rewards.</li>
+        <li><strong>Bounty Hall</strong>: Keep it empty to refresh high-level missions.</li>
+        <li><strong>Tavern (Tower Token)</strong>: Use tokens regularly.</li>
+        <li><strong>Expedition</strong>: Push as far as possible, retry later if blocked.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>9) Carriage & Plunder</h3>
+      <p>Each day: 4 Carriage runs + 4 Plunder attacks.</p>
+      <ul>
+        <li>Losing an attack does not consume the attempt.</li>
+        <li>After 5 refreshes → Carriage becomes <strong>Legendary</strong> (5% chance <strong>Mythic</strong>).</li>
+        <li><strong>Mythic Carriage</strong> stays Mythic after refresh.</li>
+        <li>Carriage can be attacked 2 times (3 if Mythic).</li>
+        <li>Always target <strong>universal shards</strong>.</li>
+      </ul>
+      <p>Mythic Carriages can be shared, with stronger defenses. Many servers follow the rule of not attacking completed Mythic Carriages. For deeper strategies, see <a href="carriage.html">Carriage</a>.</p>
+    </div>
+
+    <div class="card">
+      <h3>10) Research</h3>
+      <p>At the start, only one branch is available — complete it fully. Later, use our <a href="research.html">Research</a> page to plan long-term across multiple branches.</p>
+    </div>
+
+    <div class="card">
+      <h3>11) Smart Spending</h3>
+      <p>The game is fully playable free-to-play, but some purchases help:</p>
+      <ul>
+        <li><strong>Extra building queue</strong> → top priority.</li>
+        <li><strong>Adventure Begin pack</strong> → strong early boost.</li>
+        <li><strong>Monthly Pass</strong> → always buy via <a href="shop.html">Gold Bricks</a> on the website (+5%).</li>
+        <li><strong>Remove ads (€1)</strong> → saves time, improves QoL.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>12) Practical Tips</h3>
+      <ul>
+        <li><strong>Stamina</strong>: Never let it cap; regeneration stops when full.</li>
+        <li><strong>Milestones</strong>: Claim free diamonds (avatar → Milestones).</li>
+        <li><strong>Consistency</strong>: Daily short sessions are more effective than long occasional play.</li>
+      </ul>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const icons = {
-    'League': 'league-symbol.jpeg',
-    'Nature': 'nature-symbol.jpeg',
-    'Horde': 'horde-symbol.jpeg'
-  };
-  function addIcon(el, word) {
-    const img = document.createElement('img');
-    img.src = icons[word];
-    img.alt = word + ' symbol';
-    img.style.height = '1em';
-    img.style.marginLeft = '0.3em';
-    el.appendChild(img);
-  }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
-  });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
-  });
-});
+  fetch("footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>
 </body>
 </html>

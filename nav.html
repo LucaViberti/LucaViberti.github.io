@@ -1,91 +1,238 @@
-<!-- ===== Donation section (robusta) ===== -->
-<div class="donation-section" id="donate">
-  <p>If you'd like to support our guides, consider leaving a small tip!</p>
-
-  <div class="donation-buttons">
-    <!-- Ko-fi -->
-    <a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer" class="donation-button">
-      Support us on Ko-fi
-    </a>
-
-    <!-- Stripe Buy Button -->
-    <div class="stripe-wrap">
-      <stripe-buy-button
-        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-      </stripe-buy-button>
-
-      <!-- Fallback visibile se Stripe non parte -->
-      <a id="stripe-fallback" class="donation-button ghost" href="#" style="display:none;">
-        Donate with Stripe (fallback)
-      </a>
-      <div id="stripe-help" class="donate-help" style="display:none;">
-        The Stripe button didn’t load. Try disabling content blockers and reload.
-      </div>
-    </div>
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes Guide</h1>
   </div>
-</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
 
-<footer style="padding: 20px; text-align:center; background:#f0f0f0;">
-  <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
-</footer>
+      <!-- HEROES -->
+      <li class="has-sub">
+        <a href="heroes.html">Heroes</a>
+        <ul class="dropdown">
+          <li><a href="heroes.html">Overview</a></li>
+          <li><a href="league.html">League</a></li>
+          <li><a href="nature.html">Nature</a></li>
+          <li><a href="horde.html">Horde</a></li>
+          <!-- Gear con mini flyout affianco -->
+          <li class="has-flyout">
+            <a href="gear.html">Gear</a>
+            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
+            </ul>
+          </li>
+          <li><a href="pets.html">Pets</a></li>
+        </ul>
+      </li>
 
-<!-- Stripe script: UNA sola volta per pagina/sito -->
-<script async data-cfasync="false" src="https://js.stripe.com/v3/buy-button.js"></script>
+      <!-- BUILDING -->
+      <li class="has-sub">
+        <a href="building.html">Building</a>
+        <ul class="dropdown">
+          <li><a href="building.html">Overview</a></li>
+          <li><a href="villagers.html">Villagers</a></li>
+          <li><a href="lord-gear.html">Lord Gear & Relics</a></li>
+        </ul>
+      </li>
 
-<!-- Diagnostica: mostra il fallback se lo script non inizializza il web component -->
-<script>
-(function(){
-  function checkStripeReady() {
-    var el = document.querySelector('stripe-buy-button');
-    if (!el) return; // non presente in questa pagina
+      <li><a href="research.html">Research</a></li>
 
-    // Se dopo 2200ms non è stato "upgradato", mostriamo fallback
-    setTimeout(function(){
-      var upgraded = !!(el.shadowRoot || el.querySelector('iframe') || window.StripeBuyButton);
-      if (!upgraded) {
-        var fb = document.getElementById('stripe-fallback');
-        var help = document.getElementById('stripe-help');
-        if (fb) fb.style.display = 'inline-block';
-        if (help) help.style.display = 'block';
-        // Se hai un Payment Link dedicato, mettilo qui per aprirlo direttamente:
-        // fb.href = 'https://buy.stripe.com/XXXXXXX';  // <-- se me lo dai, lo inserisco io
-        fb.addEventListener('click', function(e){ e.preventDefault(); alert('Stripe is blocked or didn’t load on this device.'); });
-      }
-    }, 2200);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', checkStripeReady);
-  } else {
-    checkStripeReady();
-  }
-})();
-</script>
+      <!-- ADVENTURE -->
+      <li class="has-sub">
+        <a href="generaladv.html">Adventure</a>
+        <ul class="dropdown">
+          <li><a href="generaladv.html">Overview</a></li>
+          <li><a href="classicadv.html">Classic</a></li>
+          <li><a href="seasononeadv.html">Season 1</a></li>
+        </ul>
+      </li>
+
+      <!-- EVENTS 
+      <li class="has-sub">
+        <a href="events.html">Events</a>
+        <ul class="dropdown">
+          <li><a href="guild-race.html">Guild Race</a></li>
+          <li><a href="arms-race.html">Arms Race</a></li>
+          <li><a href="kingdom.html">KvK</a></li>
+          <li><a href="guildboss.html">Guild Boss</a></li>
+        </ul> -->
+      </li>
+
+      <li><a href="beginners.html">Beginners Guide</a></li>
+      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="tips.html">Tips & More</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="#donate">Support Us</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="#donate" data-donate>Donate with Stripe</a></li>
+        </ul>
+      </li>
+
+      <li><a href="privacy.html">Policy&Privacy</a></li>
+    </ul>
+  </nav>
+</header>
 
 <style>
-  .donation-section {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background: #f5f5f7;
-    border-top: 1px solid #e5e5e5;
-  }
-  .donation-section p { margin-bottom: 18px; font-size: 1rem; color: #333; }
-  .donation-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .donation-button {
-    display: inline-block; background: #29abe0; color: #fff;
-    padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 700;
-    transition: background .3s;
-  }
-  .donation-button:hover { background: #2389b5; }
-  .donation-button.ghost { background: transparent; color: #29abe0; border: 2px solid #29abe0; }
-  .donate-help { margin-top: 8px; font-size: .9rem; color: #666; }
+  /* dimensione link coerente */
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
 
-  /* Forza il web component ad avere spazio e ad essere visibile */
-  stripe-buy-button {
-    display: inline-block !important;
-    min-width: 200px;
-    min-height: 44px; /* evita che “sparisca” se non inizializzato subito */
-    vertical-align: middle;
+  /* Titolo */
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;margin:0;padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
+
+  /* Dropdown base */
+  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+  nav ul li{position:relative}
+  nav ul li a{
+    color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
+    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
+  }
+  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
+
+  /* dropdown principale */
+  nav ul li .dropdown{
+    display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
+  }
+  @media (hover:hover){
+    nav ul li.has-sub:hover > .dropdown{display:block}
+  }
+  nav ul li.has-sub.open > .dropdown{display:block}
+
+  nav ul li .dropdown li a{
+    display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
+  }
+  nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
+
+  /* Gear con flyout */
+  .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
+  .has-flyout > a{flex:1;padding:8px 8px}
+  .flyout-toggle{
+    background:#25314d;border:1px solid #2b2f3a;border-radius:6px;padding:6px 8px;
+    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1
+  }
+  .flyout-toggle:hover{background:#2d3a5a;color:#fff}
+  .flyout{
+    display:none;position:absolute;
+    top:0; left:100%; margin-left:8px;
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px; padding:8px 0; z-index:1001
+  }
+  .has-flyout.open > .flyout{display:block}
+  @media (max-width: 640px){
+    .flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; display:none;}
+    .has-flyout.open > .flyout{display:block}
+    .has-flyout{flex-wrap:wrap}
+    .flyout-toggle{padding:6px 10px}
+  }
+
+  /* FIX: garantisce click sicuri */
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
 </style>
+
+<script>
+  // Evidenzia la pagina attiva
+  (function(){
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    document.querySelectorAll('nav a[href]').forEach(a=>{
+      const href = a.getAttribute('href')?.toLowerCase();
+      if(href === current){
+        a.style.color = '#fff';
+        a.style.borderBottomColor = '#29abe0';
+      }
+    });
+  })();
+
+  // Apertura/chiusura dropdown (mobile) + 2° tap = naviga
+  (function(){
+    const isTouch = window.matchMedia('(hover: none)').matches;
+
+    document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const li = this.parentElement;
+        if (!isTouch) return; // desktop normale
+
+        if (!li.classList.contains('open')) {
+          e.preventDefault();
+          li.classList.add('open');
+          document.querySelectorAll('nav li.has-sub').forEach(other=>{
+            if(other !== li) other.classList.remove('open');
+          });
+          return;
+        }
+        // se già aperto, lascia navigare
+      });
+    });
+
+    // voci interne navigano sempre
+    document.querySelectorAll('nav li .dropdown a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.stopPropagation();
+      });
+    });
+
+    // Gear flyout
+    document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        const li = this.closest('.has-flyout');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        li.classList.toggle('open', !expanded);
+      });
+    });
+
+    // Chiudi fuori
+    document.addEventListener('click', function(e){
+      const nav = document.querySelector('nav');
+      if(!nav.contains(e.target)){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+
+    // Chiudi con Esc
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+  })();
+
+  // Smooth scroll verso #donate (se presente). Nessun fallback a pagine inesistenti.
+  (function(){
+    function wireDonateLinks() {
+      var donateTarget = document.querySelector('#donate');
+      document.querySelectorAll('a[data-donate], a[href="#donate"], button[data-donate]').forEach(function(el){
+        if (donateTarget) {
+          el.addEventListener('click', function(e){
+            e.preventDefault();
+            donateTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelectorAll('nav li.has-sub').forEach(function(li){ li.classList.remove('open'); });
+          });
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', wireDonateLinks);
+    } else {
+      wireDonateLinks();
+    }
+  })();
+</script>

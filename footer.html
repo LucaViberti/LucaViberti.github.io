@@ -8,22 +8,10 @@
       Support us on Ko-fi
     </a>
 
-    <!-- Stripe Buy Button (embed) -->
-    <div class="stripe-wrap">
-      <stripe-buy-button
-        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-      </stripe-buy-button>
-
-      <!-- Fallback Stripe Payment Link (sempre funzionante) -->
-      <a id="stripe-fallback" class="donation-button ghost" href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener" style="display:none">
-        Donate with Stripe
-      </a>
-
-      <div id="stripe-help" class="donate-help" style="display:none">
-        The embedded Stripe button didn’t load. Using a direct Stripe link instead.
-      </div>
-    </div>
+    <!-- Stripe Payment Link (diretto, sempre funzionante) -->
+    <a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer" class="donation-button ghost">
+      Donate with Stripe
+    </a>
   </div>
 </div>
 
@@ -31,64 +19,42 @@
   <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
 </footer>
 
-<!-- Stripe script: UNA sola volta per pagina -->
-<script async data-cfasync="false" src="https://js.stripe.com/v3/buy-button.js"></script>
-
-<!-- Diagnostica + fallback automatico -->
-<script>
-(function(){
-  function enableFallback() {
-    var link = document.getElementById('stripe-fallback');
-    var help = document.getElementById('stripe-help');
-    if (link) link.style.display = 'inline-block';
-    if (help) help.style.display = 'block';
-  }
-
-  function checkStripeReady(){
-    var el = document.querySelector('stripe-buy-button');
-    if (!el) return; // non presente
-
-    // dopo ~2s controlliamo se il componente è stato "upgradato"
-    setTimeout(function(){
-      var upgraded = !!(el.shadowRoot || el.querySelector('iframe') || window.StripeBuyButton);
-      if (!upgraded) {
-        enableFallback();
-      }
-    }, 2000);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', checkStripeReady);
-  } else {
-    checkStripeReady();
-  }
-})();
-</script>
-
 <style>
   .donation-section {
-    text-align: center; margin-top: 40px; padding: 20px;
-    background: #f5f5f7; border-top: 1px solid #e5e5e5;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #f5f5f7;
+    border-top: 1px solid #e5e5e5;
   }
-  .donation-section p { margin-bottom: 18px; font-size: 1rem; color: #333; }
+  .donation-section p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #333;
+  }
   .donation-buttons {
-    display:flex; justify-content:center; gap:16px;
-    flex-wrap:wrap; align-items:center;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .donation-button {
-    display:inline-block; background:#29abe0; color:#fff;
-    padding:12px 24px; border-radius:30px;
-    text-decoration:none; font-weight:700;
-    transition:background .3s;
+    display: inline-block;
+    background: #29abe0;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
   }
-  .donation-button:hover { background:#2389b5; }
+  .donation-button:hover {
+    background: #2389b5;
+  }
   .donation-button.ghost {
-    background:transparent; color:#29abe0;
-    border:2px solid #29abe0;
-  }
-  .donate-help { margin-top:8px; font-size:.9rem; color:#666; }
-  stripe-buy-button {
-    display:inline-block; min-width:200px; min-height:44px;
-    vertical-align:middle;
+    background: transparent;
+    color: #29abe0;
+    border: 2px solid #29abe0;
   }
 </style>

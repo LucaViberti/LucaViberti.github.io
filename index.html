@@ -126,6 +126,14 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .donation-button:hover{background:#2389b5;}
 
 footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
+
+/* Stripe block */
+.stripe-donation{
+  text-align:center;
+  padding:16px;
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+}
   </style>
 </head>
 <body>
@@ -145,6 +153,15 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       })
       .catch(err => console.error('Navbar load failed:', err));
   </script>
+
+  <!-- STRIPE DONATION BUTTON -->
+  <section class="stripe-donation" aria-label="Support the project">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+    </stripe-buy-button>
+  </section>
 
   <!-- ANNIVERSARY PROMO -->
   <section style="background:#fffbe8; border-bottom:1px solid #f6d776; text-align:center; padding:18px 12px;">
@@ -183,7 +200,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       <article class="mini-card">
         <h3>Events</h3>
         <p>Quick strategies for Guild Race, Arms Race, KvK, and Guild Boss. Soon available</p>
-       <!-- <a href="events.html">Go to Events</a> -->
+        <!-- <a href="events.html">Go to Events</a> -->
       </article>
 
       <article class="mini-card">
@@ -195,7 +212,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       <article class="mini-card">
         <h3>Tips & More</h3>
         <p>Small optimizations, tricks for daily play and <u>tables for planning</u></p>
-         <a href="tips.html">Go to Tips</a> 
+        <a href="tips.html">Go to Tips</a>
       </article>
     </div>
 

@@ -7,6 +7,10 @@
   <meta name="description" content="Beginner Guide for Top Heroes: first steps, village & buildings, guilds, resources, tavern & shards, factions, spending tips, events, research, villagers, carriage & plunder, stamina, world map, and more." />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
+
+  <!-- Stripe Buy Button (one-time include) -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
   <style>
 /* ====== Base styles (from your template) ====== */
 body {
@@ -216,6 +220,20 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
 /* Back-to-top helper */
 .th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
+
+/* ====== Donation blocks (Stripe) ====== */
+.donation-block{
+  border:1px solid #e8eef5; background:#f9fbff;
+  padding:22px 16px; margin:24px 0; border-radius:12px;
+  text-align:center; box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+.donation-block p{ margin:0 0 10px; color:#334155; font-size:1rem; }
+.donation-card{
+  background:#ffffff; border:1px solid #e5e7eb; border-radius:12px;
+  padding:16px; margin:22px 0; text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+.donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
   </style>
 </head>
 <body>
@@ -238,6 +256,9 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
 <main class="th-beginner">
   <header class="site-info" aria-hidden="true" style="display:none"></header>
+
+  <!-- Back-to-top anchor -->
+  <div id="top" aria-hidden="true"></div>
 
   <h1 class="page-title">Beginner Guide</h1>
   <p class="lead small">Start here: core rules, best early priorities, smart spending, and how to progress fast without wasting resources.</p>
@@ -337,6 +358,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- Donation block between sections -->
+      <section class="donation-block" aria-label="Support the project">
+        <p>If these tips help you, please consider supporting our project with a donation. It keeps the guides free and updated.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </section>
+
       <!-- 7. Spending Real Money -->
       <section id="spending" class="section-card">
         <div class="kicker">Section 7</div>
@@ -411,6 +441,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <p><strong>Plundering</strong>: you can attack <strong>4 Carriages daily</strong>. Choose targets with the best rewards (usually Universal Legendary Shards). Failed attacks don’t consume attempts. Carriages can be attacked twice (<em>three times if Mythic</em>). Check <em>Details</em> before plundering to see if a Carriage is full; if server rules prohibit attacking full Mythics, don’t attack.</p>
         <a class="toplink" href="#top">↑ Back to top</a>
       </section>
+
+      <!-- Compact donation card later in the page -->
+      <div class="donation-card" aria-label="Support the project">
+        <p>Finding this section useful? Help us keep improving these guides with a donation.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </div>
 
       <!-- 13. Guild Traits -->
       <section id="traits" class="section-card">

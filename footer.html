@@ -1,4 +1,4 @@
-<!-- ===== Donation section ===== -->
+<!-- ===== Donation section (robusta) ===== -->
 <div class="donation-section" id="donate">
   <p>If you'd like to support our guides, consider leaving a small tip!</p>
 
@@ -9,10 +9,20 @@
     </a>
 
     <!-- Stripe Buy Button -->
-    <stripe-buy-button
-      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-    </stripe-buy-button>
+    <div class="stripe-wrap">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+      </stripe-buy-button>
+
+      <!-- Fallback visibile se Stripe non parte -->
+      <a id="stripe-fallback" class="donation-button ghost" href="#" style="display:none;">
+        Donate with Stripe (fallback)
+      </a>
+      <div id="stripe-help" class="donate-help" style="display:none;">
+        The Stripe button didn’t load. Try disabling content blockers and reload.
+      </div>
+    </div>
   </div>
 </div>
 
@@ -20,8 +30,37 @@
   <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
 </footer>
 
-<!-- Stripe script: DEVE esserci una sola volta per pagina, preferibilmente prima di </body> -->
+<!-- Stripe script: UNA sola volta per pagina/sito -->
 <script async data-cfasync="false" src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<!-- Diagnostica: mostra il fallback se lo script non inizializza il web component -->
+<script>
+(function(){
+  function checkStripeReady() {
+    var el = document.querySelector('stripe-buy-button');
+    if (!el) return; // non presente in questa pagina
+
+    // Se dopo 2200ms non è stato "upgradato", mostriamo fallback
+    setTimeout(function(){
+      var upgraded = !!(el.shadowRoot || el.querySelector('iframe') || window.StripeBuyButton);
+      if (!upgraded) {
+        var fb = document.getElementById('stripe-fallback');
+        var help = document.getElementById('stripe-help');
+        if (fb) fb.style.display = 'inline-block';
+        if (help) help.style.display = 'block';
+        // Se hai un Payment Link dedicato, mettilo qui per aprirlo direttamente:
+        // fb.href = 'https://buy.stripe.com/XXXXXXX';  // <-- se me lo dai, lo inserisco io
+        fb.addEventListener('click', function(e){ e.preventDefault(); alert('Stripe is blocked or didn’t load on this device.'); });
+      }
+    }, 2200);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkStripeReady);
+  } else {
+    checkStripeReady();
+  }
+})();
+</script>
 
 <style>
   .donation-section {
@@ -31,32 +70,22 @@
     background: #f5f5f7;
     border-top: 1px solid #e5e5e5;
   }
-  .donation-section p {
-    margin-bottom: 18px;
-    font-size: 1rem;
-    color: #333;
-  }
-  .donation-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  .donation-section p { margin-bottom: 18px; font-size: 1rem; color: #333; }
+  .donation-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; }
   .donation-button {
-    display: inline-block;
-    background: #29abe0;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
+    display: inline-block; background: #29abe0; color: #fff;
+    padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 700;
+    transition: background .3s;
   }
-  .donation-button:hover {
-    background: #2389b5;
-  }
+  .donation-button:hover { background: #2389b5; }
+  .donation-button.ghost { background: transparent; color: #29abe0; border: 2px solid #29abe0; }
+  .donate-help { margin-top: 8px; font-size: .9rem; color: #666; }
+
+  /* Forza il web component ad avere spazio e ad essere visibile */
   stripe-buy-button {
-    min-width: 180px;
+    display: inline-block !important;
+    min-width: 200px;
+    min-height: 44px; /* evita che “sparisca” se non inizializzato subito */
+    vertical-align: middle;
   }
 </style>

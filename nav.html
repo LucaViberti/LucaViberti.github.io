@@ -62,7 +62,16 @@
       <li><a href="beginners.html">Beginners Guide</a></li>
       <li><a href="shop.html">SHOP</a></li>
       <li><a href="tips.html">Tips & More</a></li>
-      <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Support Us</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="/support.html">Support Us</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="/support.html#donate" data-donate>Donate with Stripe</a></li>
+        </ul>
+      </li>
+
       <li><a href="privacy.html">Policy&Privacy</a></li>
     </ul>
   </nav>
@@ -164,7 +173,7 @@
           });
           return;
         }
-        // se già aperto, lascia navigare (Adventure -> generaladv.html)
+        // se già aperto, lascia navigare
       });
     });
 
@@ -204,5 +213,35 @@
         document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
       }
     });
+  })();
+
+  // Gestione link [data-donate]: scrolla al footer se presente, altrimenti fallback
+  (function(){
+    function wireDonateLinks() {
+      var donateTarget = document.querySelector('#donate');
+      document.querySelectorAll('a[data-donate], button[data-donate]').forEach(function(el){
+        if (donateTarget) {
+          el.setAttribute('href', '#donate');
+          el.addEventListener('click', function(e){
+            if (el.tagName.toLowerCase() === 'a') e.preventDefault();
+            donateTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelectorAll('nav li.has-sub').forEach(function(li){ li.classList.remove('open'); });
+          });
+        } else {
+          if (el.tagName.toLowerCase() === 'a') {
+            el.setAttribute('href', '/support.html#donate');
+          } else {
+            el.addEventListener('click', function(){
+              location.href = '/support.html#donate';
+            });
+          }
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', wireDonateLinks);
+    } else {
+      wireDonateLinks();
+    }
   })();
 </script>

@@ -1,15 +1,27 @@
-<div class="donation-section">
+<div class="donation-section" id="donate">
   <p>If you'd like to support our guides, consider leaving a small tip!</p>
-  <a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer" class="donation-button">
-    Support us on Ko‑fi
-  </a>
+  
+  <div class="donation-buttons">
+    <!-- Ko-fi -->
+    <a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer" class="donation-button">
+      Support us on Ko-fi
+    </a>
+
+    <!-- Stripe Buy Button -->
+    <stripe-buy-button
+      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+    </stripe-buy-button>
+  </div>
 </div>
 
 <footer style="padding: 20px; text-align:center; background:#f0f0f0;">
   <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
 </footer>
 
-<!-- Footer-specific styles to guarantee consistent look on every page -->
+<!-- Stripe script (caricalo UNA sola volta per sito) -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
 <style>
   .donation-section {
     text-align: center;
@@ -17,6 +29,17 @@
     padding: 20px;
     background: #f5f5f7;
     border-top: 1px solid #e5e5e5;
+  }
+  .donation-section p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #333;
+  }
+  .donation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .donation-button {
     display: inline-block;
@@ -30,5 +53,8 @@
   }
   .donation-button:hover {
     background: #2389b5;
+  }
+  stripe-buy-button {
+    min-width: 180px;
   }
 </style>

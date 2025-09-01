@@ -1,17 +1,28 @@
+<!-- ===== Donation area (footer) ===== -->
 <div class="donation-section" id="donate">
   <p>If you'd like to support our guides, consider leaving a small tip!</p>
-  
+
   <div class="donation-buttons">
-    <!-- Ko-fi -->
+    <!-- Ko-fi (alternativa) -->
     <a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer" class="donation-button">
       Support us on Ko-fi
     </a>
 
     <!-- Stripe Buy Button -->
-    <stripe-buy-button
-      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-    </stripe-buy-button>
+    <div class="stripe-wrap">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+      </stripe-buy-button>
+      <noscript>
+        <div class="donate-fallback">
+          JavaScript is disabled. Please enable it to donate with Stripe.
+        </div>
+      </noscript>
+      <div class="donate-fallback hidden" id="stripe-fallback-msg">
+        Having trouble loading the Stripe button? Check content blockers or CSP settings.
+      </div>
+    </div>
   </div>
 </div>
 
@@ -19,8 +30,38 @@
   <small>&copy; 2025 TopHeroes Project. All rights reserved.</small>
 </footer>
 
-<!-- Stripe script (caricalo UNA sola volta per sito) -->
+<!-- Load Stripe buy button ONCE per page (preferibilmente prima di </body>) -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<!-- Helper: mostra un fallback se il web component non viene registrato -->
+<script>
+(function(){
+  function showStripeFallbackIfNeeded(){
+    // Se dopo un attimo il custom element non è stato "upgradato", probabilmente lo script è bloccato.
+    var el = document.querySelector('stripe-buy-button');
+    if(!el) return;
+    var hasShadow = el.shadowRoot || el.querySelector('iframe'); // qualche browser espone shadowRoot, altri iniettano iframe
+    if(!hasShadow){
+      // Attendi un po' per dare tempo allo script async
+      setTimeout(function(){
+        var el2 = document.querySelector('stripe-buy-button');
+        var upgraded = el2 && (el2.shadowRoot || el2.querySelector('iframe'));
+        if(!upgraded){
+          var fb = document.getElementById('stripe-fallback-msg');
+          if(fb){ fb.classList.remove('hidden'); }
+          // Tip per dev: controlla la console per errori CSP o blocchi
+          // e verifica che https://js.stripe.com/v3/buy-button.js non sia bloccato da AdBlock/Content Blocker.
+        }
+      }, 2000);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showStripeFallbackIfNeeded);
+  } else {
+    showStripeFallbackIfNeeded();
+  }
+})();
+</script>
 
 <style>
   .donation-section {
@@ -36,25 +77,15 @@
     color: #333;
   }
   .donation-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
   }
   .donation-button {
-    display: inline-block;
-    background: #29abe0;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-block; background: #29abe0; color: #fff;
+    padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold;
     transition: background 0.3s;
   }
-  .donation-button:hover {
-    background: #2389b5;
-  }
-  stripe-buy-button {
-    min-width: 180px;
-  }
+  .donation-button:hover { background: #2389b5; }
+  stripe-buy-button { min-width: 180px; }
+  .donate-fallback { margin-top: 8px; font-size: .9rem; color: #666; }
+  .hidden { display: none; }
 </style>

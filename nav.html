@@ -65,10 +65,10 @@
 
       <!-- SUPPORT US -->
       <li class="has-sub">
-        <a href="/support.html">Support Us</a>
+        <a href="#donate">Support Us</a>
         <ul class="dropdown">
           <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
-          <li><a href="/support.html#donate" data-donate>Donate with Stripe</a></li>
+          <li><a href="#donate" data-donate>Donate with Stripe</a></li>
         </ul>
       </li>
 
@@ -215,26 +215,17 @@
     });
   })();
 
-  // Gestione link [data-donate]: scrolla al footer se presente, altrimenti fallback
+  // Smooth scroll verso #donate (se presente). Nessun fallback a pagine inesistenti.
   (function(){
     function wireDonateLinks() {
       var donateTarget = document.querySelector('#donate');
-      document.querySelectorAll('a[data-donate], button[data-donate]').forEach(function(el){
+      document.querySelectorAll('a[data-donate], a[href="#donate"], button[data-donate]').forEach(function(el){
         if (donateTarget) {
-          el.setAttribute('href', '#donate');
           el.addEventListener('click', function(e){
-            if (el.tagName.toLowerCase() === 'a') e.preventDefault();
+            e.preventDefault();
             donateTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
             document.querySelectorAll('nav li.has-sub').forEach(function(li){ li.classList.remove('open'); });
           });
-        } else {
-          if (el.tagName.toLowerCase() === 'a') {
-            el.setAttribute('href', '/support.html#donate');
-          } else {
-            el.addEventListener('click', function(){
-              location.href = '/support.html#donate';
-            });
-          }
         }
       });
     }

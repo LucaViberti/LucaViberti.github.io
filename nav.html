@@ -65,10 +65,10 @@
 
       <!-- SUPPORT US -->
       <li class="has-sub">
-        <a href="#donate">Support Us</a>
+        <a href="#">Support Us</a>
         <ul class="dropdown">
           <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
-          <li><a href="#donate" data-donate>Donate with Stripe</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a></li>
         </ul>
       </li>
 
@@ -173,7 +173,6 @@
           });
           return;
         }
-        // se già aperto, lascia navigare
       });
     });
 
@@ -213,26 +212,5 @@
         document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
       }
     });
-  })();
-
-  // Smooth scroll verso #donate (se presente). Nessun fallback a pagine inesistenti.
-  (function(){
-    function wireDonateLinks() {
-      var donateTarget = document.querySelector('#donate');
-      document.querySelectorAll('a[data-donate], a[href="#donate"], button[data-donate]').forEach(function(el){
-        if (donateTarget) {
-          el.addEventListener('click', function(e){
-            e.preventDefault();
-            donateTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            document.querySelectorAll('nav li.has-sub').forEach(function(li){ li.classList.remove('open'); });
-          });
-        }
-      });
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', wireDonateLinks);
-    } else {
-      wireDonateLinks();
-    }
   })();
 </script>

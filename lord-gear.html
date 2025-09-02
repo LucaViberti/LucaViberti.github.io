@@ -3,167 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lords Gear</title>
-  <meta name="description" content="Lords gear availability, rows by faction, upgrade materials, set-level bonuses, and practical tips to plan efficient upgrades." />
-
+  <title>TopHeroes Guide - Lords Gear</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
   <style>
-    /* ===== CONTENT-ONLY styles: NON toccano nav/footer ===== */
-    :root{
-      --bg:#f5f5f7; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
-      --text:#101319; --muted:#6b7280; --ink2:#374151;
-    }
-    html{scroll-behavior:smooth}
-    body{margin:0; background:var(--bg); color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; line-height:1.65;}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
 
-    /* Contenitore principale */
-    main.content{max-width:1100px; margin:0 auto; padding:40px 20px 56px;}
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    /* Header pagina */
-    .page-header{
-      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
-      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
-      box-shadow:0 2px 6px rgba(0,0,0,.03);
-    }
-    .page-header h1{margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head); letter-spacing:-.015em; font-weight:700;}
-    .page-header .lead{margin:0; color:var(--ink2);}
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
 
-    /* Card sezioni */
-    .card{
-      background:var(--card); border:1px solid var(--border); border-radius:14px;
-      padding:22px 24px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
-    }
-    .card h2{font-size:1.35rem; margin:0 0 8px; color:var(--head); letter-spacing:-.01em;}
-    .card h3{font-size:1.1rem; margin:14px 0 6px; color:#1f2937;}
-    .muted{color:var(--muted); font-size:.95rem;}
-    .content ul{margin:10px 0 0 22px;}
+header .tagline {
+  margin-left: 12px;
+  color: #b0b6c7;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 
-    /* Immagini */
-    .content figure{margin:14px 0;}
-    .content figure img{display:block; border-radius:8px; border:1px solid #edf0f5;}
-    .img-small{width:220px; height:auto;}  /* prima immagine */
-    .img-icon{width:90px; height:auto;}    /* icon 5x rispetto ai 18px originali */
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
 
-    /* contenitori nav/footer caricati esternamente */
-    #navbar,#footer{margin:0;}
-  </style>
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+</style>
 </head>
 <body>
+<div id="navbar"></div>
+<script>
+  fetch("nav.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+      const current = location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll('#navbar nav a').forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.style.color = '#fff';
+          a.style.borderBottomColor = '#29abe0';
+        }
+      });
+    })
+    .catch(err => console.error('Navbar load failed:', err));
+</script>
 
-  <!-- NAVBAR (richiamo standard) -->
-  <div id="navbar"></div>
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a=>{
-          const href=(a.getAttribute('href')||'').toLowerCase();
-          if(href===current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
-        });
-      })
-      .catch(console.error);
-  </script>
+<main>
+  <section id="lords-gear">
+    <h2>Lords Gear</h2>
+    <p>With Castle lv 24, the Lords gear will be available. Lords gear can give you a huge buff. You can get a bit of an advantage if you don’t just upgrade it randomly. More about that you can read a bit below.</p>
 
-  <!-- ===== CONTENUTO ===== -->
-  <main class="content" itemscope itemtype="https://schema.org/Article">
-    <section class="page-header">
-      <h1 class="page-title" itemprop="headline">Lords Gear</h1>
-      <p class="lead">Overview, materials, farming tips, and how to upgrade efficiently.</p>
-    </section>
+    <p>In the first raw, you have Nature gear Lord, in the second raw, you have League, and in the last row, you have Hordes Lord gear.</p>
 
-    <section class="card">
-      <h2>Availability and General Idea</h2>
-      <p>
-        With <strong>Castle level 24</strong>, Lords gear becomes available. Lords gear can provide a <strong>huge buff</strong>.
-        You can gain an advantage if you don’t upgrade it randomly; a bit of planning goes a long way.
-      </p>
-    </section>
+    <h3>Upgrade Materials</h3>
+    <p>To upgrade your Lords gear, you need <strong>Refined metal</strong>, <strong>Magic tread</strong>, and after Rare 2, you need <strong>Orichalcum</strong> as well. Much later on when you get your Lords gear to Mythic, you need <strong>Dragon Blood</strong> as well.</p>
 
-    <section class="card">
-      <h2>Rows and Factions</h2>
-      <p>
-        Gear is displayed in rows by faction:
-      </p>
-      <ul>
-        <li><strong>First row</strong>: Nature Lords gear</li>
-        <li><strong>Second row</strong>: League Lords gear</li>
-        <li><strong>Third row</strong>: Horde Lords gear</li>
-      </ul>
-    </section>
+    <ul>
+      <li><strong>Refined Metal:</strong> Farm it from special bosses (e.g. tree boss) instead of the pig boss on certain days. Costs will increase a lot later, so farm as much as possible.</li>
+      <li><strong>Magic Tread:</strong> Found all around the game, especially from invasion rewards. Also available in shops and events.</li>
+      <li><strong>Orichalcum:</strong> Harder to obtain, mainly from events and shops.</li>
+      <li><strong>Dragon Blood:</strong> Rarest material, available only in big events like anniversary shops. Needed much later.</li>
+    </ul>
 
-    <section class="card">
-      <h2>Upgrade Materials</h2>
-      <p>
-        To upgrade your Lords gear you will need different materials as you progress through rarities.
-      </p>
-      <h3>Refined Metal</h3>
-      <p>
-        Required from the start. On some special days, instead of the usual pig boss, special bosses (e.g., the
-        tree boss) appear; <strong>each boss drops materials</strong>. When these bosses are available, it’s an excellent time
-        to farm Refined Metal. Early on it looks like you have too much, but costs ramp up later and you will need
-        <strong>thousands</strong>, so use those days to stock up.
-      </p>
-      <h3>Magic Thread</h3>
-      <p>
-        Obtainable throughout the game from multiple sources. You can get plenty from Invasion; aim for higher points
-        to receive more threads. It also appears in some stores and events.
-      </p>
-      <h3>Orichalcum</h3>
-      <p>
-        Needed after <strong>Rare 2</strong>. It’s harder to get than the two materials above; primarily from events and some shops.
-      </p>
-      <h3>Dragon Blood</h3>
-      <p>
-        Required much later (when upgrading to <strong>Mythic</strong>). It’s the hardest to obtain: typically purchasable only
-        during big events (e.g., anniversary shops). You won’t need it for a long while, so don’t worry about it early.
-      </p>
-    </section>
+    <h3>Boosts</h3>
+    <p>You get boosts when you have 3 and 6 Lord gear at the same level. These boosts are much stronger than the usual Lord gear upgrade and count for all your heroes and not only one faction.</p>
 
-    <section class="card">
-      <h2>Set-Level Bonuses (3 &amp; 6 pieces)</h2>
-      <p>
-        You gain <strong>powerful boosts</strong> when you have <strong>3</strong> and <strong>6</strong> Lords gear pieces at the same upgrade level.
-        These boosts are much stronger than a single piece upgrade and they <strong>apply to all heroes</strong> (not just one faction).
-      </p>
-      <p>
-        Because of that, it’s more effective to keep your Lords gear at <strong>similar levels</strong> rather than pushing a single piece too far.
-        Recommended approach: keep all six pieces roughly aligned, or at least <strong>3 pieces at the same level</strong> and the other 3
-        just one level below.
-      </p>
-      <p class="muted">
-        Reminder: when you reach a new set bonus tier, you also gain a large <strong>Influence</strong> spike. During guild races with a
-        Lords gear task, you can often finish the task with a single upgrade if that upgrade triggers a new set bonus tier.
-      </p>
-    </section>
+    <p>It’s more effective if all your Lords gear is near the same level. So we would recommend keeping all gear Lord at the same level or at least 3 at the same level and 3 one level under.</p>
 
-    <section class="card">
-      <h2>Practical Tips</h2>
-      <ul>
-        <li>Don’t upgrade randomly. Plan your pieces so you hit the 3-piece and 6-piece breakpoints together.</li>
-        <li>Farm special bosses on the designated days to stock up on Refined Metal.</li>
-        <li>Push Invasion points to earn more Magic Thread; keep an eye on events and shops for Orichalcum.</li>
-        <li>Dragon Blood is endgame—take note of big events where it appears, but you won’t need it soon.</li>
-      </ul>
-    </section>
+    <p><em>Reminder:</em> You get a huge influence upgrade when you reach a new boost level. For guild races, when you have the Lords gear task, you can complete it with only 1 upgrade this way.</p>
+  </section>
+</main>
 
-    <!-- Immagini (senza didascalie) -->
-    <figure>
-      <img src="lord1.png" alt="Lords gear overview" class="img-small" />
-    </figure>
-    <figure>
-      <img src="lord2.png" alt="Lords gear icon" class="img-icon" />
-    </figure>
-  </main>
-
-  <!-- FOOTER (richiamo standard) -->
-  <div id="footer"></div>
-  <script>
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(html => { document.getElementById("footer").innerHTML = html; })
-      .catch(console.error);
-  </script>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
 </body>
 </html>

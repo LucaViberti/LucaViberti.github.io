@@ -1,0 +1,4 @@
+url: https://guidetopheroes.com
+baseurl: ""          # (vuoto se usi dominio custom)
+plugins:
+  - jekyll-sitemap

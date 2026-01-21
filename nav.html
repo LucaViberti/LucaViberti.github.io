@@ -120,21 +120,32 @@
   nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
 
   /* Gear con flyout */
-  .has-flyout{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 8px}
+  .has-flyout{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 10px}
   .has-flyout > a{flex:1;padding:8px 8px}
   .flyout-toggle{
-    background:#25314d;border:1px solid #2b2f3a;border-radius:6px;padding:6px 8px;
-    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1
+    background:linear-gradient(180deg,#2b3654 0%,#232c47 100%);
+    border:1px solid #2b2f3a;border-radius:8px;padding:6px 10px;
+    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1;transition:background .2s,color .2s,transform .2s;
   }
-  .flyout-toggle:hover{background:#2d3a5a;color:#fff}
+  .flyout-toggle:hover{background:#2f3a5c;color:#fff;transform:translateY(-1px)}
   .flyout{
     display:none;position:absolute;
-    top:0; left:100%; margin-left:8px;
-    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;min-width:180px; padding:8px 0; z-index:1001
+    top:50%; left:100%; transform:translateY(-50%);
+    margin-left:12px;
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;min-width:190px; padding:10px 0; z-index:1001;
+    box-shadow:0 12px 28px rgba(0,0,0,.35);
+  }
+  .flyout::before{
+    content:"";position:absolute;left:-6px;top:50%;transform:translateY(-50%) rotate(45deg);
+    width:12px;height:12px;background:#1c2133;border-left:1px solid #2b2f3a;border-bottom:1px solid #2b2f3a;
+  }
+  @media (hover:hover){
+    .has-flyout:hover > .flyout{display:block}
   }
   .has-flyout.open > .flyout{display:block}
   @media (max-width: 640px){
-    .flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; display:none;}
+    .flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; transform:none; display:none; box-shadow:none;}
+    .flyout::before{display:none}
     .has-flyout.open > .flyout{display:block}
     .has-flyout{flex-wrap:wrap}
     .flyout-toggle{padding:6px 10px}

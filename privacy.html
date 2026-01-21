@@ -6,6 +6,8 @@
   <title>Privacy Policy – TopHeroes Guide</title>
   <meta name="description" content="Privacy Policy for TopHeroes Guide: what data we collect, how we use it, cookies, advertising (Google AdSense), data retention, and your rights." />
   <meta name="robots" content="index, follow" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
 
   <style>
     /* --- Scoped only to this page via .pp --- */
@@ -59,22 +61,7 @@
 
   <!-- NAVBAR (same include) -->
   <div id="navbar"></div>
-  <script>
-    fetch("nav.html")
-      .then(r => r.text())
-      .then(h => {
-        document.getElementById("navbar").innerHTML = h;
-        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          if (href === current) {
-            a.style.color = '#fff';
-            a.style.borderBottomColor = '#29abe0';
-          }
-        });
-      })
-      .catch(console.error);
-  </script>
+  <script src="nav-loader.js" defer></script>
 
   <main>
     <header class="lede">

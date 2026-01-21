@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guild Race</title>
   <meta name="description" content="Guild Race guide: how it works, recommended and avoided tasks, rewards, Season 1 research boosts, and honour shop priorities." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
 
   <style>
     /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
@@ -19,6 +21,16 @@
       line-height:1.65;
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
+    header{
+      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      border-bottom:1px solid #2b2f3a;
+      padding:12px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header .site-info{display:flex;flex-direction:column;align-items:center;}
 
     /* Contenitore della pagina */
     main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
@@ -81,19 +93,7 @@
 
   <!-- NAVBAR standard -->
   <div id="navbar"></div>
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a=>{
-          const href=(a.getAttribute('href')||'').toLowerCase();
-          if(href===current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
-        });
-      })
-      .catch(console.error);
-  </script>
+  <script src="nav-loader.js" defer></script>
 
   <!-- ===== CONTENUTO ===== -->
   <main class="content" itemscope itemtype="https://schema.org/Article">

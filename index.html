@@ -142,19 +142,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
 
   <!-- NAVBAR -->
   <div id="navbar"></div>
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a=>{
-          const href=(a.getAttribute('href')||'').toLowerCase();
-          if(href === current){ a.style.color='#fff'; a.style.borderBottomColor='#29abe0'; }
-        });
-      })
-      .catch(err => console.error('Navbar load failed:', err));
-  </script>
+  <script src="nav-loader.js" defer></script>
 
   <!-- STRIPE DONATION BUTTON -->
   <section class="stripe-donation" aria-label="Support the project">

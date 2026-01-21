@@ -61,22 +61,7 @@
 
   <!-- NAVBAR (same include) -->
   <div id="navbar"></div>
-  <script>
-    fetch("nav.html")
-      .then(r => r.text())
-      .then(h => {
-        document.getElementById("navbar").innerHTML = h;
-        const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-        document.querySelectorAll('#navbar nav a').forEach(a => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          if (href === current) {
-            a.style.color = '#fff';
-            a.style.borderBottomColor = '#29abe0';
-          }
-        });
-      })
-      .catch(console.error);
-  </script>
+  <script src="nav-loader.js" defer></script>
 
   <main>
     <header class="lede">

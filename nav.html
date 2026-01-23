@@ -1,6 +1,10 @@
 <header>
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
+    <div class="lang-switcher" aria-label="Language selector">
+      <span class="lang-label">Language:</span>
+      <div id="google_translate_element"></div>
+    </div>
   </div>
   <nav>
     <ul>
@@ -94,6 +98,28 @@
     text-align:center;margin:0;padding:8px 0;
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
+  .lang-switcher{
+    margin-top:6px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#b0b6c7;
+    font-size:.8rem;
+  }
+  .lang-label{letter-spacing:.04em;text-transform:uppercase;font-weight:600;}
+  #google_translate_element select{
+    background:#1c2133;
+    color:#ccd0dd;
+    border:1px solid #2b2f3a;
+    border-radius:8px;
+    padding:6px 8px;
+    font-size:.8rem;
+  }
+  #google_translate_element .goog-te-gadget{
+    color:#b0b6c7;
+    font-size:.8rem;
+  }
+  #google_translate_element .goog-te-gadget span{display:none;}
 
   /* Dropdown base */
   nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}

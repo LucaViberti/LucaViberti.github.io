@@ -60,6 +60,24 @@
     });
   }
 
+  function loadTranslateWidget() {
+    if (window.__googleTranslateLoaded) return;
+    window.__googleTranslateLoaded = true;
+
+    window.googleTranslateElementInit = function () {
+      if (!document.getElementById('google_translate_element')) return;
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+      );
+    };
+
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
@@ -70,6 +88,7 @@
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
         initNavInteractions(navContainer);
+        loadTranslateWidget();
       })
       .catch((err) => console.error('Navbar load failed:', err));
   });

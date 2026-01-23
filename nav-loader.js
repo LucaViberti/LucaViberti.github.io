@@ -77,6 +77,12 @@
     const showFallback = (message) => {
       const status = document.querySelector('.lang-status');
       if (status) status.textContent = message;
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = 'Unavailable';
       const fallback = document.querySelector('.lang-fallback');
       if (fallback) {
         fallback.style.display = 'inline';
@@ -98,6 +104,7 @@
         showFallback('Translate (blocked)');
       }
     }, 3000);
+    document.head.appendChild(script);
   }
 
   document.addEventListener('DOMContentLoaded', () => {

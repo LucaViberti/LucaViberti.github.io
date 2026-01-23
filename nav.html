@@ -1,6 +1,7 @@
 <header>
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
+   
   </div>
   <nav>
     <ul>
@@ -64,9 +65,8 @@
       <li><a href="shop.html">SHOP</a></li>
       <li><a href="tips.html">Cost Tables</a></li>
       <li><a href="quick-tips.html">Quick Tips</a></li>
-
       <li><a href="privacy.html">Policy&Privacy</a></li>
-
+ </ul>
       <!-- SUPPORT US -->
       <li class="has-sub">
         <a href="#">Support Us</a>
@@ -75,7 +75,11 @@
           <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a></li>
         </ul>
       </li>
-    </ul>
+   </ul> 
+<li><a href="privacy.html">Policy&Privacy</a></li>
+ </ul>
+      
+   
   </nav>
 </header>
 
@@ -94,6 +98,37 @@
     text-align:center;margin:0;padding:8px 0;
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
+  .lang-switcher{
+    margin-top:6px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#b0b6c7;
+    font-size:.8rem;
+  }
+  .lang-label{letter-spacing:.04em;text-transform:uppercase;font-weight:600;}
+  #google_translate_element select{
+    background:#1c2133;
+    color:#ccd0dd;
+    border:1px solid #2b2f3a;
+    border-radius:8px;
+    padding:6px 8px;
+    font-size:.8rem;
+  }
+  #google_translate_element .goog-te-gadget{
+    color:#b0b6c7;
+    font-size:.8rem;
+  }
+  #google_translate_element .goog-te-gadget span{display:none;}
+  .lang-fallback{
+    display:none;
+    color:#7dd3fc;
+    font-size:.8rem;
+    text-decoration:none;
+  }
+  .lang-fallback:hover{text-decoration:underline;}
+  .lang-status{font-size:.75rem;opacity:.75;}
+
   /* Dropdown base */
   nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
   nav ul li{position:relative}

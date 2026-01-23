@@ -60,6 +60,53 @@
     });
   }
 
+  function loadTranslateWidget() {
+    if (window.__googleTranslateLoaded) return;
+    window.__googleTranslateLoaded = true;
+
+    window.googleTranslateElementInit = function () {
+      if (!document.getElementById('google_translate_element')) return;
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+      );
+      const status = document.querySelector('.lang-status');
+      if (status) status.style.display = 'none';
+    };
+
+    const showFallback = (message) => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = message;
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = 'Unavailable';
+      const fallback = document.querySelector('.lang-fallback');
+      if (fallback) {
+        fallback.style.display = 'inline';
+        fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      showFallback('Unavailable');
+    };
+    document.head.appendChild(script);
+
+    window.setTimeout(() => {
+      const hasWidget = document.querySelector('#google_translate_element select');
+      if (!hasWidget) {
+        showFallback('Translate (blocked)');
+      }
+    }, 3000);
+    document.head.appendChild(script);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
@@ -70,6 +117,7 @@
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
         initNavInteractions(navContainer);
+        loadTranslateWidget();
       })
       .catch((err) => console.error('Navbar load failed:', err));
   });

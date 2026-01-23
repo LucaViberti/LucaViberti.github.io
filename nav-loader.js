@@ -70,11 +70,22 @@
         { pageLanguage: 'en', autoDisplay: false },
         'google_translate_element'
       );
+      const status = document.querySelector('.lang-status');
+      if (status) status.style.display = 'none';
     };
 
     const script = document.createElement('script');
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     script.async = true;
+    script.onerror = () => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = 'Unavailable';
+      const fallback = document.querySelector('.lang-fallback');
+      if (fallback) {
+        fallback.style.display = 'inline';
+        fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
+      }
+    };
     document.head.appendChild(script);
   }
 

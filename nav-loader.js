@@ -74,6 +74,9 @@
       if (status) status.style.display = 'none';
     };
 
+    const showFallback = (message) => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = message;
     const script = document.createElement('script');
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     script.async = true;
@@ -86,6 +89,21 @@
         fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
       }
     };
+
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      showFallback('Unavailable');
+    };
+    document.head.appendChild(script);
+
+    window.setTimeout(() => {
+      const hasWidget = document.querySelector('#google_translate_element select');
+      if (!hasWidget) {
+        showFallback('Translate (blocked)');
+      }
+    }, 3000);
     document.head.appendChild(script);
   }
 

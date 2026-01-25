@@ -1,9 +1,33 @@
 (function () {
+  const NAV_FILE = '/nav.html'; // <-- fondamentale: assoluto, non relativo
+
+  function normalizePath(pathname) {
+    // /foo/ -> /foo/index.html
+    if (!pathname) return 'index.html';
+    if (pathname.endsWith('/')) return (pathname + 'index.html').toLowerCase();
+    return pathname.toLowerCase();
+  }
+
   function highlightCurrent(navRoot) {
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const currentPath = normalizePath(location.pathname);
+
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href === current) {
+      const rawHref = (a.getAttribute('href') || '').trim();
+      if (!rawHref) return;
+
+      // ignora hash / mailto / tel / link esterni
+      if (rawHref.startsWith('#')) return;
+      if (/^(mailto:|tel:|javascript:)/i.test(rawHref)) return;
+
+      let linkPath = '';
+      try {
+        const u = new URL(rawHref, location.origin); // risolve anche href relativi
+        linkPath = normalizePath(u.pathname);
+      } catch {
+        return;
+      }
+
+      if (linkPath === currentPath) {
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
@@ -13,27 +37,29 @@
   function initNavInteractions(navRoot) {
     const isTouch = window.matchMedia('(hover: none)').matches;
 
+    // Dropdown touch: primo tap apre, secondo segue il link
     navRoot.querySelectorAll('nav li.has-sub > a').forEach((link) => {
       link.addEventListener('click', function (e) {
-        const li = this.parentElement;
         if (!isTouch) return;
 
+        const li = this.parentElement;
         if (!li.classList.contains('open')) {
           e.preventDefault();
           li.classList.add('open');
-          navRoot.querySelectorAll('nav li.has-sub').forEach((other) => {
+
+          navRoot.querySelectorAll('nav li.has-sub.open').forEach((other) => {
             if (other !== li) other.classList.remove('open');
           });
         }
       });
     });
 
+    // Evita che click dentro dropdown chiuda tutto
     navRoot.querySelectorAll('nav li .dropdown a').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
+      a.addEventListener('click', (e) => e.stopPropagation());
     });
 
+    // Flyout Gear
     navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -44,79 +70,45 @@
       });
     });
 
+    // Chiudi cliccando fuori
     document.addEventListener('click', (e) => {
       const nav = navRoot.querySelector('nav');
       if (!nav || nav.contains(e.target)) return;
-      navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-      navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+
+      navRoot.querySelectorAll('nav li.has-sub.open').forEach((li) => li.classList.remove('open'));
+      navRoot.querySelectorAll('.has-flyout.open').forEach((li) => li.classList.remove('open'));
+      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) =>
+        btn.setAttribute('aria-expanded', 'false')
+      );
     });
 
+    // ESC chiude
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
-      navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-      navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+
+      navRoot.querySelectorAll('nav li.has-sub.open').forEach((li) => li.classList.remove('open'));
+      navRoot.querySelectorAll('.has-flyout.open').forEach((li) => li.classList.remove('open'));
+      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) =>
+        btn.setAttribute('aria-expanded', 'false')
+      );
     });
   }
 
-  function loadTranslateWidget() {
-    if (window.__googleTranslateLoaded) return;
-    window.__googleTranslateLoaded = true;
-
-    // callback invoked by Google Translate script when it loads
-    window.googleTranslateElementInit = function () {
-      if (!document.getElementById('google_translate_element')) return;
-      new window.google.translate.TranslateElement(
-        { pageLanguage: 'en', autoDisplay: false },
-        'google_translate_element'
-      );
-      const status = document.querySelector('.lang-status');
-      if (status) status.style.display = 'none';
-    };
-
-    // helper to show fallback message and enable manual translate link
-    const showFallback = (message) => {
-      const status = document.querySelector('.lang-status');
-      if (status) status.textContent = message;
-      const fallback = document.querySelector('.lang-fallback');
-      if (fallback) {
-        fallback.style.display = 'inline';
-        // set fallback link to Google Translate for current page
-        fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
-      }
-    };
-
-    // create the Google Translate script
-    //const script = document.createElement('script');
-    //script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-//    script.async = true;
-    //script.onerror = () => {
-      //showFallback('Unavailable');
-    //};
-    //document.head.appendChild(script);
-
-    //// fallback if widget fails to appear after a timeout
-    //window.setTimeout(() => {
-      //const hasWidget = document.querySelector('#google_translate_element select');
-      //if (!hasWidget) {
-        //showFallback('Translate (blocked)');
-      ////}
-    //}, 3000);
-  }
-//
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    fetch('nav.html')
-      .then((res) => res.text())
-      .then((html) => {
-        navContainer.innerHTML = html;
-        highlightCurrent(navContainer);
-        initNavInteractions(navContainer);
-        //loadTranslateWidget();
-      })
-      .catch((err) => console.error('Navbar load failed:', err));
+    try {
+      const res = await fetch(NAV_FILE, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${NAV_FILE}`);
+
+      const html = await res.text();
+      navContainer.innerHTML = html;
+
+      highlightCurrent(navContainer);
+      initNavInteractions(navContainer);
+    } catch (err) {
+      console.error('Navbar load failed:', err);
+    }
   });
 })();

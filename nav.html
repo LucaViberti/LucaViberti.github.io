@@ -2,34 +2,50 @@
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
   </div>
-  <nav>
-    <ul>
+
+  <nav class="main-nav" aria-label="Primary">
+    <ul class="menu-root">
       <li><a href="index.html">Home</a></li>
 
       <!-- HEROES -->
       <li class="has-sub">
-        <a href="heroes.html">Heroes</a>
-        <ul class="dropdown">
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-heroes">
+          Heroes
+        </button>
+        <ul id="menu-heroes" class="dropdown" role="menu">
           <li><a href="heroes.html">Overview</a></li>
           <li><a href="league.html">League</a></li>
           <li><a href="nature.html">Nature</a></li>
           <li><a href="horde.html">Horde</a></li>
+
           <!-- Gear with flyout -->
           <li class="has-flyout">
-            <a href="gear.html">Gear</a>
-            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
-            <ul id="gear-flyout" class="flyout">
+            <div class="flyout-row">
+              <a href="gear.html">Gear</a>
+              <button
+                class="flyout-toggle"
+                type="button"
+                aria-label="More for Gear"
+                aria-expanded="false"
+                aria-controls="gear-flyout"
+              >▾</button>
+            </div>
+
+            <ul id="gear-flyout" class="flyout" role="menu">
               <li><a href="exclusive-gear.html">Exclusive Gear</a></li>
             </ul>
           </li>
+
           <li><a href="pets.html">Pets</a></li>
         </ul>
       </li>
 
       <!-- BUILDING -->
       <li class="has-sub">
-        <a href="building.html">Building</a>
-        <ul class="dropdown">
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-building">
+          Building
+        </button>
+        <ul id="menu-building" class="dropdown" role="menu">
           <li><a href="building.html">Overview</a></li>
           <li><a href="villagers.html">Villagers</a></li>
           <li><a href="lord-gear.html">Lord Gear</a></li>
@@ -41,8 +57,10 @@
 
       <!-- ADVENTURE -->
       <li class="has-sub">
-        <a href="generaladv.html">Adventure</a>
-        <ul class="dropdown">
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-adventure">
+          Adventure
+        </button>
+        <ul id="menu-adventure" class="dropdown" role="menu">
           <li><a href="generaladv.html">Overview</a></li>
           <li><a href="classicadv.html">Classic</a></li>
           <li><a href="seasononeadv.html">Season 1</a></li>
@@ -51,8 +69,11 @@
 
       <!-- EVENTS -->
       <li class="has-sub">
-        <a href="events.html">Events</a>
-        <ul class="dropdown">
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-events">
+          Events
+        </button>
+        <ul id="menu-events" class="dropdown" role="menu">
+          <li><a href="events.html">Events</a></li>
           <li><a href="guild-race.html">Guild Race</a></li>
           <li><a href="arms-race.html">Arms Race</a></li>
           <li><a href="kingdom.html">KvK</a></li>
@@ -61,13 +82,17 @@
       </li>
 
       <li><a href="beginners.html">Beginners Guide</a></li>
-      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="shop.html">Shop</a></li>
       <li><a href="tips.html">Cost Tables</a></li>
       <li><a href="quick-tips.html">Quick Tips</a></li>
-      <li><a href="privacy.html">Policy&Privacy</a></li>
+      <li><a href="privacy.html">Policy &amp; Privacy</a></li>
+
+      <!-- SUPPORT -->
       <li class="has-sub">
-        <a href="#">Support Us</a>
-        <ul class="dropdown">
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-support">
+          Support Us
+        </button>
+        <ul id="menu-support" class="dropdown" role="menu">
           <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
           <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a></li>
         </ul>
@@ -78,107 +103,190 @@
 
 <style>
 /* dimensione link coerente */
-nav ul li a { font-size: 0.85rem; }
-nav ul li ul li a { font-size: 0.85rem; }
+.main-nav a { font-size: 0.85rem; }
+.dropdown a { font-size: 0.85rem; }
 
 /* Titolo */
 .site-title{
-font-size: clamp(1.8rem, 4vw, 2.5rem);
-font-weight:700;
-background: linear-gradient(90deg,#29abe0,#7dd3fc);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-align:center;margin:0;padding:8px 0;
-text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight:700;
+  background: linear-gradient(90deg,#29abe0,#7dd3fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-align:center;margin:0;padding:8px 0;
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
-.lang-switcher{
-margin-top:6px;
-display:flex;
-align-items:center;
-gap:8px;
-color:#b0b6c7;
-font-size:.8rem;
+
+/* Root menu */
+.main-nav{ position:relative; z-index:100; }
+.menu-root{
+  list-style:none;margin:0;padding:0;
+  display:flex;justify-content:center;flex-wrap:wrap;gap:20px
 }
-.lang-label{letter-spacing:.04em;text-transform:uppercase;font-weight:600;}
-#google_translate_element select{
-background:#1c2133;
-color:#ccd0dd;
-border:1px solid #2b2f3a;
-border-radius:8px;
-padding:6px 8px;
-font-size:.8rem;
+.menu-root > li{ position:relative; }
+
+/* Links + buttons root */
+.main-nav a,
+.sub-toggle{
+  color:#ccd0dd;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:500;
+  letter-spacing:.05em;
+  padding:12px 6px;
+  border:0;
+  background:transparent;
+  border-bottom:2px solid transparent;
+  cursor:pointer;
+  transition:color .3s,border-bottom-color .3s;
 }
-#google_translate_element .goog-te-gadget{
-color:#b0b6c7;
-font-size:.8rem;
+.main-nav a:hover,
+.sub-toggle:hover{
+  color:#fff;
+  border-bottom-color:#29abe0;
 }
-#google_translate_element .goog-te-gadget span{display:none;}
-.lang-fallback{
-display:none;
-color:#7dd3fc;
-font-size:.8rem;
-text-decoration:none;
-}
-.lang-fallback:hover{text-decoration:underline;}
-.lang-status{font-size:.75rem;opacity:.75;}
 
 /* Dropdown base */
-nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
-nav ul li{position:relative}
-nav ul li a{
-color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
-padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
-}
-nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
-
-/* dropdown principale */
-nav ul li .dropdown{
-display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
-background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
+.dropdown{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  background:#1c2133;
+  border:1px solid #2b2f3a;
+  border-radius:6px;
+  padding:10px 0;
+  min-width:220px;
+  z-index:1000;
 }
 @media (hover:hover){
-nav ul li.has-sub:hover > .dropdown{display:block}
+  .has-sub:hover > .dropdown{ display:block; }
 }
-nav ul li.has-sub.open > .dropdown{display:block}
+.has-sub.open > .dropdown{ display:block; }
 
-nav ul li .dropdown li a{
-display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
+.dropdown li{ position:relative; }
+.dropdown a{
+  display:block;
+  padding:8px 16px;
+  color:#d1d1d6;
+  white-space:nowrap;
+  border-bottom:0;
+  text-transform:none;
+  letter-spacing:0;
 }
-nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
+.dropdown a:hover{ background:#25314d; color:#fff; }
 
-/* Gear con flyout */
-.has-flyout{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 10px}
-.has-flyout > a{flex:1;padding:8px 8px}
+/* Flyout (Gear) */
+.has-flyout{ position:relative; }
+.flyout-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:0 10px;
+}
+.flyout-row > a{ flex:1; padding:8px 8px; }
+
 .flyout-toggle{
-background:linear-gradient(180deg,#2b3654 0%,#232c47 100%);
-border:1px solid #2b2f3a;border-radius:8px;padding:6px 10px;
-color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1;transition:background .2s,color .2s,transform .2s;
+  background:linear-gradient(180deg,#2b3654 0%,#232c47 100%);
+  border:1px solid #2b2f3a;
+  border-radius:8px;
+  padding:6px 10px;
+  color:#d1d1d6;
+  cursor:pointer;
+  font-size:.8rem;
+  line-height:1;
+  transition:background .2s,color .2s,transform .2s;
 }
-.flyout-toggle:hover{background:#2f3a5c;color:#fff;transform:translateY(-1px)}
+.flyout-toggle:hover{ background:#2f3a5c; color:#fff; transform:translateY(-1px); }
+
 .flyout{
-display:none;position:absolute;
-top:50%; left:100%; transform:translateY(-50%);
-margin-left:12px;
-background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;min-width:190px; padding:10px 0; z-index:1001;
-box-shadow:0 12px 28px rgba(0,0,0,.35);
+  display:none;
+  position:absolute;
+  top:50%;
+  left:100%;
+  transform:translateY(-50%);
+  margin-left:12px;
+  background:#1c2133;
+  border:1px solid #2b2f3a;
+  border-radius:10px;
+  min-width:190px;
+  padding:10px 0;
+  z-index:1001;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
 }
 .flyout::before{
-content:"";position:absolute;left:-6px;top:50%;transform:translateY(-50%) rotate(45deg);
-width:12px;height:12px;background:#1c2133;border-left:1px solid #2b2f3a;border-bottom:1px solid #2b2f3a;
+  content:"";
+  position:absolute;
+  left:-6px;
+  top:50%;
+  transform:translateY(-50%) rotate(45deg);
+  width:12px;height:12px;
+  background:#1c2133;
+  border-left:1px solid #2b2f3a;
+  border-bottom:1px solid #2b2f3a;
 }
 @media (hover:hover){
-.has-flyout:hover > .flyout{display:block}
+  .has-flyout:hover > .flyout{ display:block; }
 }
-.has-flyout.open > .flyout{display:block}
-@media (max-width: 640px){
-.flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; transform:none; display:none; box-shadow:none;}
-.flyout::before{display:none}
-.has-flyout.open > .flyout{display:block}
-.has-flyout{flex-wrap:wrap}
-.flyout-toggle{padding:6px 10px}
-}
+.has-flyout.open > .flyout{ display:block; }
 
-/* FIX: garantisce click sicuri */
-nav { position: relative; z-index: 10; }
-nav ul li .dropdown li a { position: relative; z-index: 2; }
+@media (max-width: 640px){
+  .dropdown{ position:static; transform:none; left:auto; min-width:unset; width:100%; }
+  .flyout{ position:static; transform:none; left:auto; top:auto; margin:6px 0 0 0; box-shadow:none; }
+  .flyout::before{ display:none; }
+}
 </style>
+
+<script>
+(() => {
+  const nav = document.querySelector('.main-nav');
+  if (!nav) return;
+
+  const closeAll = () => {
+    nav.querySelectorAll('.has-sub.open, .has-flyout.open').forEach(li => li.classList.remove('open'));
+    nav.querySelectorAll('.sub-toggle[aria-expanded="true"], .flyout-toggle[aria-expanded="true"]').forEach(btn => btn.setAttribute('aria-expanded','false'));
+  };
+
+  nav.addEventListener('click', (e) => {
+    const subBtn = e.target.closest('.sub-toggle');
+    const flyBtn = e.target.closest('.flyout-toggle');
+
+    // Toggle dropdown
+    if (subBtn) {
+      const li = subBtn.closest('.has-sub');
+      const isOpen = li.classList.contains('open');
+      // chiude gli altri menu allo stesso livello
+      nav.querySelectorAll('.has-sub.open').forEach(x => { if (x !== li) x.classList.remove('open'); });
+      nav.querySelectorAll('.sub-toggle').forEach(x => { if (x !== subBtn) x.setAttribute('aria-expanded','false'); });
+
+      li.classList.toggle('open', !isOpen);
+      subBtn.setAttribute('aria-expanded', String(!isOpen));
+      e.preventDefault();
+      return;
+    }
+
+    // Toggle flyout
+    if (flyBtn) {
+      const li = flyBtn.closest('.has-flyout');
+      const isOpen = li.classList.contains('open');
+      li.classList.toggle('open', !isOpen);
+      flyBtn.setAttribute('aria-expanded', String(!isOpen));
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+  });
+
+  // Click fuori: chiudi tutto
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) closeAll();
+  });
+
+  // ESC: chiudi tutto
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
+  });
+})();
+</script>

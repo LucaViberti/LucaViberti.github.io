@@ -64,6 +64,7 @@
     if (window.__googleTranslateLoaded) return;
     window.__googleTranslateLoaded = true;
 
+    // callback invoked by Google Translate script when it loads
     window.googleTranslateElementInit = function () {
       if (!document.getElementById('google_translate_element')) return;
       new window.google.translate.TranslateElement(
@@ -74,39 +75,36 @@
       if (status) status.style.display = 'none';
     };
 
+    // helper to show fallback message and enable manual translate link
     const showFallback = (message) => {
       const status = document.querySelector('.lang-status');
       if (status) status.textContent = message;
-    const script = document.createElement('script');
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.async = true;
-    script.onerror = () => {
-      const status = document.querySelector('.lang-status');
-      if (status) status.textContent = 'Unavailable';
       const fallback = document.querySelector('.lang-fallback');
       if (fallback) {
         fallback.style.display = 'inline';
+        // set fallback link to Google Translate for current page
         fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
       }
     };
 
+    // create the Google Translate script
     //const script = document.createElement('script');
     //script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    //script.async = true;
+//    script.async = true;
     //script.onerror = () => {
       //showFallback('Unavailable');
     //};
     //document.head.appendChild(script);
 
+    //// fallback if widget fails to appear after a timeout
     //window.setTimeout(() => {
       //const hasWidget = document.querySelector('#google_translate_element select');
       //if (!hasWidget) {
         //showFallback('Translate (blocked)');
-      //}
+      ////}
     //}, 3000);
-    ////document.head.appendChild(script);
   }
-
+//
   document.addEventListener('DOMContentLoaded', () => {
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
@@ -117,9 +115,8 @@
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
         initNavInteractions(navContainer);
-
+        //loadTranslateWidget();
       })
       .catch((err) => console.error('Navbar load failed:', err));
   });
 })();
-  

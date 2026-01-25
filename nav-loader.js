@@ -90,21 +90,21 @@
       }
     };
 
-    const script = document.createElement('script');
-    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    script.async = true;
-    script.onerror = () => {
-      showFallback('Unavailable');
-    };
-    document.head.appendChild(script);
+    //const script = document.createElement('script');
+    //script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    //script.async = true;
+    //script.onerror = () => {
+      //showFallback('Unavailable');
+    //};
+    //document.head.appendChild(script);
 
-    window.setTimeout(() => {
-      const hasWidget = document.querySelector('#google_translate_element select');
-      if (!hasWidget) {
-        showFallback('Translate (blocked)');
-      }
-    }, 3000);
-    document.head.appendChild(script);
+    //window.setTimeout(() => {
+      //const hasWidget = document.querySelector('#google_translate_element select');
+      //if (!hasWidget) {
+        //showFallback('Translate (blocked)');
+      //}
+    //}, 3000);
+    ////document.head.appendChild(script);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -117,7 +117,7 @@
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
         initNavInteractions(navContainer);
-        loadTranslateWidget();
+       l
       })
       .catch((err) => console.error('Navbar load failed:', err));
   });

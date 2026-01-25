@@ -117,8 +117,9 @@
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
         initNavInteractions(navContainer);
-       l
+
       })
       .catch((err) => console.error('Navbar load failed:', err));
   });
 })();
+  

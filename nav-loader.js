@@ -1,114 +1,124 @@
 (function () {
-  const NAV_FILE = '/nav.html'; // <-- fondamentale: assoluto, non relativo
+function highlightCurrent(navRoot) {
+const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+navRoot.querySelectorAll('nav a[href]').forEach((a) => {
+const href = (a.getAttribute('href') || '').toLowerCase();
+if (href === current) {
+a.style.color = '#fff';
+a.style.borderBottomColor = '#29abe0';
+}
+});
+}
 
-  function normalizePath(pathname) {
-    // /foo/ -> /foo/index.html
-    if (!pathname) return 'index.html';
-    if (pathname.endsWith('/')) return (pathname + 'index.html').toLowerCase();
-    return pathname.toLowerCase();
-  }
+function initNavInteractions(navRoot) {
+const isTouch = window.matchMedia('(hover: none)').matches;
 
-  function highlightCurrent(navRoot) {
-    const currentPath = normalizePath(location.pathname);
+navRoot.querySelectorAll('nav li.has-sub > a').forEach((link) => {
+link.addEventListener('click', function (e) {
+const li = this.parentElement;
+if (!isTouch) return;
 
-    navRoot.querySelectorAll('nav a[href]').forEach((a) => {
-      const rawHref = (a.getAttribute('href') || '').trim();
-      if (!rawHref) return;
+if (!li.classList.contains('open')) {
+e.preventDefault();
+li.classList.add('open');
+navRoot.querySelectorAll('nav li.has-sub').forEach((other) => {
+if (other !== li) other.classList.remove('open');
+});
+}
+});
+});
 
-      // ignora hash / mailto / tel / link esterni
-      if (rawHref.startsWith('#')) return;
-      if (/^(mailto:|tel:|javascript:)/i.test(rawHref)) return;
+navRoot.querySelectorAll('nav li .dropdown a').forEach((a) => {
+a.addEventListener('click', (e) => {
+e.stopPropagation();
+});
+});
 
-      let linkPath = '';
-      try {
-        const u = new URL(rawHref, location.origin); // risolve anche href relativi
-        linkPath = normalizePath(u.pathname);
-      } catch {
-        return;
-      }
+navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => {
+btn.addEventListener('click', function (e) {
+e.stopPropagation();
+const li = this.closest('.has-flyout');
+const expanded = this.getAttribute('aria-expanded') === 'true';
+this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+li.classList.toggle('open', !expanded);
+});
+});
 
-      if (linkPath === currentPath) {
-        a.style.color = '#fff';
-        a.style.borderBottomColor = '#29abe0';
-      }
-    });
-  }
+document.addEventListener('click', (e) => {
+const nav = navRoot.querySelector('nav');
+if (!nav || nav.contains(e.target)) return;
+navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
+navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
+navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+});
 
-  function initNavInteractions(navRoot) {
-    const isTouch = window.matchMedia('(hover: none)').matches;
+document.addEventListener('keydown', (e) => {
+if (e.key !== 'Escape') return;
+navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
+navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
+navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+});
+}
 
-    // Dropdown touch: primo tap apre, secondo segue il link
-    navRoot.querySelectorAll('nav li.has-sub > a').forEach((link) => {
-      link.addEventListener('click', function (e) {
-        if (!isTouch) return;
+  function loadTranslateWidget() {
+    if (window.__googleTranslateLoaded) return;
+    window.__googleTranslateLoaded = true;
 
-        const li = this.parentElement;
-        if (!li.classList.contains('open')) {
-          e.preventDefault();
-          li.classList.add('open');
-
-          navRoot.querySelectorAll('nav li.has-sub.open').forEach((other) => {
-            if (other !== li) other.classList.remove('open');
-          });
-        }
-      });
-    });
-
-    // Evita che click dentro dropdown chiuda tutto
-    navRoot.querySelectorAll('nav li .dropdown a').forEach((a) => {
-      a.addEventListener('click', (e) => e.stopPropagation());
-    });
-
-    // Flyout Gear
-    navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => {
-      btn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const li = this.closest('.has-flyout');
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        li.classList.toggle('open', !expanded);
-      });
-    });
-
-    // Chiudi cliccando fuori
-    document.addEventListener('click', (e) => {
-      const nav = navRoot.querySelector('nav');
-      if (!nav || nav.contains(e.target)) return;
-
-      navRoot.querySelectorAll('nav li.has-sub.open').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout.open').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) =>
-        btn.setAttribute('aria-expanded', 'false')
+    window.googleTranslateElementInit = function () {
+      if (!document.getElementById('google_translate_element')) return;
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
       );
-    });
+      const status = document.querySelector('.lang-status');
+      if (status) status.style.display = 'none';
+    };
 
-    // ESC chiude
-    document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Escape') return;
+    const showFallback = (message) => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = message;
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      const status = document.querySelector('.lang-status');
+      if (status) status.textContent = 'Unavailable';
+      const fallback = document.querySelector('.lang-fallback');
+      if (fallback) {
+        fallback.style.display = 'inline';
+        fallback.href = `https://translate.google.com/translate?hl=en&sl=en&tl=it&u=${encodeURIComponent(location.href)}`;
+      }
+    };
 
-      navRoot.querySelectorAll('nav li.has-sub.open').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout.open').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) =>
-        btn.setAttribute('aria-expanded', 'false')
-      );
-    });
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    script.onerror = () => {
+      showFallback('Unavailable');
+    };
+    document.head.appendChild(script);
+
+    window.setTimeout(() => {
+      const hasWidget = document.querySelector('#google_translate_element select');
+      if (!hasWidget) {
+        showFallback('Translate (blocked)');
+      }
+    }, 3000);
+    document.head.appendChild(script);
   }
 
-  document.addEventListener('DOMContentLoaded', async () => {
-    const navContainer = document.getElementById('navbar');
-    if (!navContainer) return;
+document.addEventListener('DOMContentLoaded', () => {
+const navContainer = document.getElementById('navbar');
+if (!navContainer) return;
 
-    try {
-      const res = await fetch(NAV_FILE, { cache: 'no-cache' });
-      if (!res.ok) throw new Error(`HTTP ${res.status} for ${NAV_FILE}`);
-
-      const html = await res.text();
-      navContainer.innerHTML = html;
-
-      highlightCurrent(navContainer);
-      initNavInteractions(navContainer);
-    } catch (err) {
-      console.error('Navbar load failed:', err);
-    }
-  });
+fetch('nav.html')
+.then((res) => res.text())
+.then((html) => {
+navContainer.innerHTML = html;
+highlightCurrent(navContainer);
+initNavInteractions(navContainer);
+        loadTranslateWidget();
+})
+.catch((err) => console.error('Navbar load failed:', err));
+});
 })();

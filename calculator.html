@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcolatore punti Rush Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p.description {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .row label {
+      width: 150px;
+    }
+    .row input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    .row span.points {
+      min-width: 100px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .formula {
+      color: #888;
+      font-size: 0.9em;
+      margin-left: 5px;
+    }
+    #total {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calcolatore punti Rush Events</h1>
+  <p class="description">Inserisci le quantità per ciascun elemento per calcolare i punti totali.</p>
+  <div class="row">
+    <label for="books">Libri:</label>
+    <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="booksPoints">0</span>
+    <span class="formula">punti (x&nbsp;/&nbsp;10)</span>
+  </div>
+  <div class="row">
+    <label for="essence">Essenza&nbsp;pet:</label>
+    <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="essencePoints">0</span>
+    <span class="formula">punti (y&nbsp;&times;&nbsp;15)</span>
+  </div>
+  <div class="row">
+    <label for="food">Cibo&nbsp;pet:</label>
+    <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="foodPoints">0</span>
+    <span class="formula">punti (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+  </div>
+  <div class="row">
+    <label for="uncommon">Pet&nbsp;non&nbsp;comune:</label>
+    <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="uncommonPoints">0</span>
+    <span class="formula">punti (q&nbsp;&times;&nbsp;150)</span>
+  </div>
+  <div class="row">
+    <label for="rare">Pet&nbsp;raro:</label>
+    <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="rarePoints">0</span>
+    <span class="formula">punti (r&nbsp;&times;&nbsp;900)</span>
+  </div>
+  <div id="total">Totale: 0 punti</div>
+
+  <script>
+    // Funzione per aggiornare i punti ogni volta che un campo cambia valore
+    function updatePoints() {
+      // Leggi i valori degli input, convertendo eventuali stringhe vuote in 0
+      const x = parseFloat(document.getElementById('books').value) || 0;
+      const y = parseFloat(document.getElementById('essence').value) || 0;
+      const z = parseFloat(document.getElementById('food').value) || 0;
+      const q = parseFloat(document.getElementById('uncommon').value) || 0;
+      const r = parseFloat(document.getElementById('rare').value) || 0;
+
+      // Calcola i punteggi individuali secondo le formule fornite
+      const bookPoints = x / 10;
+      const essencePoints = y * 15;
+      const foodPoints = (z * 3) / 10;
+      const uncommonPoints = q * 150;
+      const rarePoints = r * 900;
+
+      // Aggiorna le colonne dei punti per ciascun elemento, con un decimale
+      document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
+      document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
+      document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
+      document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
+      document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
+
+      // Calcola il totale sommando tutti i punteggi
+      const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
+      // Aggiorna l'etichetta del totale
+      document.getElementById('total').textContent = 'Totale: ' + total.toFixed(1) + ' punti';
+    }
+
+    // Inizializza i valori al caricamento della pagina
+    updatePoints();
+  </script>
+</body>
+</html>

@@ -64,7 +64,7 @@
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    fetch('nav.html')
+    fetch('/html/nav.html')
       .then((res) => res.text())
       .then((html) => {
         navContainer.innerHTML = html;

@@ -46,7 +46,7 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 </head>
 <body>
 <div id="navbar"></div>
-<script src="nav-loader.js" defer></script>
+<script src="/nav-loader.js" defer></script>
 
 <main>
   <section id="lords-gear">
@@ -84,7 +84,7 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
 <div id="footer"></div>
 <script>
-  fetch("footer.html")
+  fetch("/html/footer.html")
     .then(res=>res.text())
     .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>

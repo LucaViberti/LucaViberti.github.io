@@ -228,7 +228,7 @@ nav ul li ul li a:hover {
 </head>
 <body>
 <div id="navbar"></div>
-<script src="nav-loader.js" defer></script>
+<script src="/nav-loader.js" defer></script>
 
   <main id="top">
     <h1 style="display:none">TopHeroes - Cost Tables</h1>
@@ -1603,7 +1603,7 @@ nav ul li ul li a:hover {
 
 <div id="footer"></div>
 <script>
-  fetch("footer.html")
+  fetch("/html/footer.html")
     .then(res => res.text())
     .then(html => { document.getElementById("footer").innerHTML = html; });
 </script>

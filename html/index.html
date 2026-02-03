@@ -142,7 +142,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
 
   <!-- NAVBAR -->
   <div id="navbar"></div>
-  <script src="nav-loader.js" defer></script>
+  <script src="/nav-loader.js" defer></script>
 
   <!-- STRIPE DONATION BUTTON -->
   <section class="stripe-donation" aria-label="Support the project">
@@ -245,7 +245,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   </main>
 
   <script>
-    fetch("footer.html")
+    fetch("/html/footer.html")
       .then(res => res.text())
       .then(html => { document.getElementById("footer").innerHTML = html; })
       .catch(err => console.error('Footer load failed:', err));

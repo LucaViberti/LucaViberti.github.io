@@ -143,7 +143,7 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
 <div id="footer"></div>
 <script>
-  fetch("footer.html")
+  fetch("/html/footer.html")
     .then(res=>res.text())
     .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>

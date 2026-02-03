@@ -93,7 +93,7 @@
 
   <!-- NAVBAR standard -->
   <div id="navbar"></div>
-  <script src="nav-loader.js" defer></script>
+  <script src="/nav-loader.js" defer></script>
 
   <!-- ===== CONTENUTO ===== -->
   <main class="content" itemscope itemtype="https://schema.org/Article">
@@ -227,7 +227,7 @@ As soon as possible, you should try to get these two research upgrades. </p>
   <!-- FOOTER (richiamo standard) -->
   <div id="footer"></div>
   <script>
-    fetch("footer.html")
+    fetch("/html/footer.html")
       .then(res => res.text())
       .then(html => { document.getElementById("footer").innerHTML = html; })
       .catch(console.error);

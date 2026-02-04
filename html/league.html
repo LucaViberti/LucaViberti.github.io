@@ -48,6 +48,16 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 .hero ul{margin:8px 0 0 18px;}
 .hero li{margin:2px 0;}
 
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
 @media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
   </style>
 </head>
@@ -59,6 +69,63 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
   <section id="league-heroes">
     <h2 class="page-title">League — Legendary & Mythic Heroes</h2>
     <p class="lead">Curated picks for League heroes: roles, core skills, and when to include or replace them.</p>
+
+    <div class="card">
+      <h3>Best lineups — League</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Main</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/adjudicator.jpeg" alt="Adjudicator">
+              <img src="/images/rose.jpeg" alt="Rose Princess">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/sage.jpeg" alt="Artificier">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Bard">
+              <img src="/images/nun.jpeg" alt="Nun">
+            </div>
+          </div>
+          <p class="lineup-note">Note: in the current meta, even though Bishop is a Mythic hero, he is not part of the main lineup.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Against bosses (damage focus)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/bishop.jpeg" alt="Bishop">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/sage.jpeg" alt="Artificier">
+              <img src="/images/pyromancer.jpeg" alt="Pyromancer">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Bard">
+              <img src="/images/astrologer.jpeg" alt="Astrologer">
+            </div>
+          </div>
+          <p class="lineup-note">Note: if the boss deals heavy damage and your troops are dying, swap Astrologer with Adjudicator and move him to the front row.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Pyromancer -->
     <div class="card">

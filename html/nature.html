@@ -48,6 +48,16 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 .hero ul{margin:8px 0 0 18px;}
 .hero li{margin:2px 0;}
 
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
 @media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
   </style>
 </head>
@@ -59,6 +69,63 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
   <section id="nature-heroes">
     <h2 class="page-title">Nature — Legendary & Mythic Heroes</h2>
     <p class="lead">Overview of the main Nature heroes, their skills, and when to use or replace them.</p>
+
+    <div class="card">
+      <h3>Best lineups — Nature</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Main</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Monk">
+              <img src="/images/sage.jpeg" alt="Altar Marshal">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Pixie">
+              <img src="/images/watcher.jpeg" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/forest.jpeg" alt="Forest Maiden">
+              <img src="/images/tidecaller.jpeg" alt="Tidecaller">
+            </div>
+          </div>
+          <p class="lineup-note">Note: if Petalis is not available in your server yet, replace her with Windwalker.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Damage focus (best with Nature)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Monk">
+              <img src="/images/sage.jpeg" alt="Altar Marshal">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Pixie">
+              <img src="/images/watcher.jpeg" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/windwalker.jpeg" alt="Windwalker">
+              <img src="/images/tidecaller.jpeg" alt="Tidecaller">
+            </div>
+          </div>
+          <p class="lineup-note">Note: it will not deal insane damage, but if you need to run Nature, this is the best option you have.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Treeguard -->
     <div class="card">

@@ -197,76 +197,85 @@ nav ul li ul li a:hover {
 
 
 .pets-shell {
-  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 55%, #eef2ff 100%);
   border: 1px solid #d9deee;
-  border-radius: 16px;
-  box-shadow: 0 8px 28px rgba(23, 38, 77, 0.08);
-  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(23, 38, 77, 0.1);
+  padding: 34px;
 }
 
 .pets-shell h2 {
   margin: 0 0 18px;
-  font-size: 2rem;
+  font-size: 2.15rem;
   color: #1c2742;
+  letter-spacing: 0.01em;
 }
 
 .pets-shell h3 {
-  margin: 28px 0 10px;
-  font-size: 1.95rem;
+  margin: 30px 0 12px;
+  font-size: 1.75rem;
   line-height: 1.2;
-  color: #1c2742;
+  color: #1e2e54;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dfe4f4;
 }
 
 .pets-shell p,
 .pets-shell li {
-  font-size: 1.02rem;
+  font-size: 1.06rem;
   color: #1f2a44;
 }
 
+.pets-shell p {
+  margin: 10px 0 12px;
+}
+
 .pets-shell ul {
-  margin: 8px 0 10px 22px;
+  margin: 8px 0 12px 24px;
   padding: 0;
 }
 
 .pets-shell li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .pets-inline-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
   align-items: flex-start;
-  margin: 10px 0 4px;
+  margin: 12px 0 8px;
 }
 
 .pet-inline {
-  margin: 4px 10px 8px 0;
+  margin: 6px 12px 10px 0;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d7dff2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(18, 37, 78, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(18, 37, 78, 0.18);
 }
 
 .pet-inline img {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid #dfe4f2;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .pet-inline.small img {
-  width: 72px;
-  height: 72px;
-}
-
-.pet-inline span {
-  margin-top: 5px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #4d5676;
-  letter-spacing: 0.02em;
+  width: 96px;
+  height: 96px;
 }
 
 .inline-link {
@@ -295,10 +304,10 @@ nav ul li ul li a:hover {
         <p>Pets can be divided into two main categories: faction-specific pets and all-hero pets.</p>
         <ul>
           <li><strong>Faction-specific pets</strong>: Provide stronger stat boosts to heroes belonging to a specific faction (League, Horde, Nature, etc.).
-            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9"><span>9</span></span>
+            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9"></span>
           </li>
           <li><strong>All-hero pets</strong>: Provide general bonuses that apply to all heroes, regardless of faction.
-            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8"><span>8</span></span>
+            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8"></span>
           </li>
         </ul>
 
@@ -307,13 +316,13 @@ nav ul li ul li a:hover {
         <p>Early-game faction-focused pets are:</p>
         <ul>
           <li><strong>League</strong>: Eggy</li>
-          <li><strong>Horde</strong>: Owly (used due to its Horde-specific skill, despite being an all-hero pet)</li>
+          <li><strong>Horde</strong>: Howli (used due to its Horde-specific skill, despite being an all-hero pet)</li>
           <li><strong>Nature</strong>: Cactini</li>
         </ul>
-        <p>Owly is not a true Horde-only stat pet. Its base bonuses apply to all heroes, but it possesses a faction-specific skill that activates when a sufficient number of Horde heroes are present in the line-up. This mechanic exists for all pets once they reach Legendary rarity.</p>
+        <p>Howli is not a true Horde-only stat pet. Its base bonuses apply to all heroes, but it possesses a faction-specific skill that activates when a sufficient number of Horde heroes are present in the line-up. This mechanic exists for all pets once they reach Legendary rarity.</p>
         <div class="pets-inline-row" aria-label="Pet references 4 and 3">
-          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="Pet 4"><span>4</span></span>
-          <span class="pet-inline"><img src="/images/pet3.png" alt="Pet 3"><span>3</span></span>
+          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="Pet 4"></span>
+          <span class="pet-inline"><img src="/images/pet3.png" alt="Pet 3"></span>
         </div>
 
         <h3>Deployed and Non-Deployed Pets</h3>
@@ -323,10 +332,10 @@ nav ul li ul li a:hover {
         <p>At the beginning, pets are available in two rarities:</p>
         <ul>
           <li><strong>Uncommon (Green)</strong>: Can safely be released to obtain Pet Food.
-            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="Pet 7"><span>7</span></span>
+            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="Pet 7"></span>
           </li>
           <li><strong>Rare (Blue)</strong>: Must be kept, as they are essential for promotions.
-            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="Pet 6"><span>6</span></span>
+            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="Pet 6"></span>
           </li>
         </ul>
 
@@ -334,10 +343,10 @@ nav ul li ul li a:hover {
         <p>There are two main ways to increase a pet’s power: Level Up and Promote.</p>
         <ul>
           <li><strong>Level Up</strong>: Uses Pet Food. Once the pet reaches Legendary rarity, Pet Essence is also required.
-            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="Pet 1"><span>1</span></span>
+            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="Pet 1"></span>
           </li>
           <li><strong>Promote</strong>: Increases rarity and star level. Requires duplicate pets, not Pet Food.
-            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="Pet 2"><span>2</span></span>
+            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="Pet 2"></span>
           </li>
         </ul>
         <p>These two systems are interdependent. Level caps require promotions to progress further, and promotions require minimum pet levels to unlock.</p>
@@ -352,7 +361,7 @@ nav ul li ul li a:hover {
           <li>Use all other copies exclusively as promotion material.</li>
         </ul>
         <div class="pets-inline-row" aria-label="Pet reference 10">
-          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="Pet 10"><span>10</span></span>
+          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="Pet 10"></span>
         </div>
 
         <h3>Pets for Secondary Queues</h3>
@@ -360,8 +369,8 @@ nav ul li ul li a:hover {
 
         <h3>Advanced Pets</h3>
         <p>Later in the game, true faction-specific pets become available. For Horde players, Flickerkit is unlocked and provides direct Horde-specific stat boosts.</p>
-        <p>Players with sufficient resources may consider switching from Owly to Flickerkit as their primary Horde pet.</p>
-        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="Pet 5"><span>5</span></span>
+        <p>Players with sufficient resources may consider switching from Howli to Flickerkit as their primary Horde pet.</p>
+        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="Pet 5"></span>
 
         <h3>How to Obtain Pets</h3>
         <p>Pets are obtained through daily Bounty quests. Defeating mobs grants eggs, which can be hatched inside the Pet Paradise building.</p>

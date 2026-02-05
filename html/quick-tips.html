@@ -21,7 +21,7 @@ nav ul li:hover ul{display:block;}
 nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;font-size:.85rem;}
 nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
-main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+main{padding:40px 20px;max-width:1080px;margin:0 auto;}
 section{margin-bottom:28px;}
 footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
 
@@ -36,9 +36,21 @@ footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8
 .faq-content{display:none;padding:0 18px 18px;background:#fbfcff;border-top:1px solid #e4e9f7;}
 .faq-item.open .faq-content{display:block;}
 .faq-item.open .faq-icon{transform:rotate(45deg);}
-.faq-text{margin:14px 0 14px;color:#27324d;font-size:1.02rem;}
-.faq-image-slot{width:min(100%,360px);height:220px;border:2px dashed #b8c6e8;border-radius:14px;background:linear-gradient(135deg,#eef3ff,#f9fbff);display:flex;align-items:center;justify-content:center;color:#4f6290;font-weight:600;}
+
+.faq-body-row{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-top:14px;}
+.faq-body-text{flex:1 1 430px;min-width:260px;}
+.faq-text{margin:0;color:#27324d;font-size:1.02rem;}
+.faq-body-media{flex:0 0 320px;max-width:100%;}
+
+.faq-image-slot{width:100%;height:220px;border:0;border-radius:12px;background:#eef3ff;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.faq-image-slot img{width:100%;height:100%;object-fit:contain;display:block;border:0;}
+.faq-image-placeholder{color:#4f6290;font-weight:600;padding:12px;text-align:center;}
+
 .faq-note{margin-top:18px;font-size:.92rem;color:#5b6788;background:#eef3ff;border:1px solid #d7e1fb;border-radius:10px;padding:10px 12px;}
+
+@media (max-width: 900px){
+  .faq-body-media{flex:1 1 100%;}
+}
   </style>
 </head>
 <body>
@@ -59,18 +71,22 @@ footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-content">
-          <p class="faq-text">
-          If you are a low spender, a good deal is buying the 0,99$ castle skin pack every day. <br>
-          The goal is save as many tickets as possible spending as less as possible in order to buy castle skins. <br>
-          Best buy is the Cloud castle skin because it gives +10lv Hero. <br>
-          In geneal the shop is very good so if you alredy have the cloud castle you can buy others castle skins<br>
-          or even other items like queue skins or rare pet chests that are usually great deals.<br>
-          </p>
-          <div class="faq-image-slot">
-  <img src="/images/castlevoucher.jpeg" alt="Test image"
-       style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
-</div>
-
+          <div class="faq-body-row">
+            <div class="faq-body-text">
+              <p class="faq-text">
+              If you are a low spender, a good deal is buying the 0,99$ castle skin pack every day. <br>
+              The goal is save as many tickets as possible spending as less as possible in order to buy castle skins. <br>
+              Best buy is the Cloud castle skin because it gives +10lv Hero. <br>
+              In geneal the shop is very good so if you alredy have the cloud castle you can buy others castle skins<br>
+              or even other items like queue skins or rare pet chests that are usually great deals.<br>
+              </p>
+            </div>
+            <div class="faq-body-media">
+              <div class="faq-image-slot">
+                <img src="/images/castlevoucher.jpeg" alt="Castle voucher image">
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -80,8 +96,16 @@ footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-content">
-          <p class="faq-text">second test.</p>
-          <div class="faq-image-slot">Spazio immagine (media)</div>
+          <div class="faq-body-row">
+            <div class="faq-body-text">
+              <p class="faq-text">second test.</p>
+            </div>
+            <div class="faq-body-media">
+              <div class="faq-image-slot">
+                <div class="faq-image-placeholder">Spazio immagine (media)</div>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -105,3 +129,4 @@ footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8
   </script>
 </body>
 </html>
+

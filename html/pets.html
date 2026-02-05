@@ -194,6 +194,101 @@ nav ul li ul li a:hover {
   color: #ffffff;
 }
 
+
+
+.pets-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 55%, #eef2ff 100%);
+  border: 1px solid #d9deee;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(23, 38, 77, 0.1);
+  padding: 34px;
+}
+
+.pets-shell h2 {
+  margin: 0 0 18px;
+  font-size: 2.15rem;
+  color: #1c2742;
+  letter-spacing: 0.01em;
+}
+
+.pets-shell h3 {
+  margin: 30px 0 12px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #1e2e54;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dfe4f4;
+}
+
+.pets-shell p,
+.pets-shell li {
+  font-size: 1.06rem;
+  color: #1f2a44;
+}
+
+.pets-shell p {
+  margin: 10px 0 12px;
+}
+
+.pets-shell ul {
+  margin: 8px 0 12px 24px;
+  padding: 0;
+}
+
+.pets-shell li {
+  margin-bottom: 10px;
+}
+
+.pets-inline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 12px 0 8px;
+}
+
+.pet-inline {
+  margin: 6px 12px 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d7dff2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(18, 37, 78, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(18, 37, 78, 0.18);
+}
+
+.pet-inline img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dfe4f2;
+}
+
+.pet-inline.small img {
+  width: 96px;
+  height: 96px;
+}
+
+.inline-link {
+  color: #1f65d6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+
 </style>
 </head>
 <body>
@@ -201,8 +296,94 @@ nav ul li ul li a:hover {
 <script src="/nav-loader.js" defer></script>
   <main>
     <section id="pets">
-      <h2>Pets</h2>
-      <p>This page is almost ready to be released, it will be available during this week. stay ready!</p>
+      <div class="pets-shell">
+        <h2>Pets</h2>
+        <p>Pets are a core progression system and are absolutely essential to strengthen your hero line-ups. They provide permanent stat boosts and additional faction-based bonuses that directly impact your overall power.</p>
+
+        <h3>Pet Categories</h3>
+        <p>Pets can be divided into two main categories: faction-specific pets and all-hero pets.</p>
+        <ul>
+          <li><strong>Faction-specific pets</strong>: Provide stronger stat boosts to heroes belonging to a specific faction (League, Horde, Nature, etc.).
+            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9"></span>
+          </li>
+          <li><strong>All-hero pets</strong>: Provide general bonuses that apply to all heroes, regardless of faction.
+            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8"></span>
+          </li>
+        </ul>
+
+        <h3>Choosing Pets Based on Your Main Faction</h3>
+        <p>Before investing resources into pets, it is crucial to identify your main faction. Your primary pets should always align with this faction to maximize efficiency and power.</p>
+        <p>Early-game faction-focused pets are:</p>
+        <ul>
+          <li><strong>League</strong>: Eggy</li>
+          <li><strong>Horde</strong>: Howli (used due to its Horde-specific skill, despite being an all-hero pet)</li>
+          <li><strong>Nature</strong>: Cactini</li>
+        </ul>
+        <p>Howli is not a true Horde-only stat pet. Its base bonuses apply to all heroes, but it possesses a faction-specific skill that activates when a sufficient number of Horde heroes are present in the line-up. This mechanic exists for all pets once they reach Legendary rarity.</p>
+        <div class="pets-inline-row" aria-label="Pet references 4 and 3">
+          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="Pet 4"></span>
+          <span class="pet-inline"><img src="/images/pet3.png" alt="Pet 3"></span>
+        </div>
+
+        <h3>Deployed and Non-Deployed Pets</h3>
+        <p>Pets assigned to a line-up actively provide their bonuses. However, even pets that are not deployed still contribute passive buffs. This makes upgrading multiple pets important, not just the ones actively used in your main queue.</p>
+
+        <h3>Pet Rarity</h3>
+        <p>At the beginning, pets are available in two rarities:</p>
+        <ul>
+          <li><strong>Uncommon (Green)</strong>: Can safely be released to obtain Pet Food.
+            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="Pet 7"></span>
+          </li>
+          <li><strong>Rare (Blue)</strong>: Must be kept, as they are essential for promotions.
+            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="Pet 6"></span>
+          </li>
+        </ul>
+
+        <h3>Leveling Up vs Promotion</h3>
+        <p>There are two main ways to increase a pet’s power: Level Up and Promote.</p>
+        <ul>
+          <li><strong>Level Up</strong>: Uses Pet Food. Once the pet reaches Legendary rarity, Pet Essence is also required.
+            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="Pet 1"></span>
+          </li>
+          <li><strong>Promote</strong>: Increases rarity and star level. Requires duplicate pets, not Pet Food.
+            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="Pet 2"></span>
+          </li>
+        </ul>
+        <p>These two systems are interdependent. Level caps require promotions to progress further, and promotions require minimum pet levels to unlock.</p>
+        <p>For detailed cost tables covering every Level Up and Promote requirement, add a link here to the <a class="inline-link" href="/html/tips.html">Cost Tables</a> page on the website.</p>
+
+        <h3>Handling Duplicate Pets</h3>
+        <p>Only the highest-level copy of each pet provides bonuses. Multiple copies of the same pet do not stack their buffs.</p>
+        <p>For this reason, you should:</p>
+        <ul>
+          <li>Keep and upgrade only one copy of each pet.</li>
+          <li>Lock that pet to prevent accidental release.</li>
+          <li>Use all other copies exclusively as promotion material.</li>
+        </ul>
+        <div class="pets-inline-row" aria-label="Pet reference 10">
+          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="Pet 10"></span>
+        </div>
+
+        <h3>Pets for Secondary Queues</h3>
+        <p>When assigning pets to secondary queues, the main faction should still remain the priority. Instead of investing in multiple faction-specific pets, it is often smarter to use all-hero pets that have faction-specific skills matching the secondary queue.</p>
+
+        <h3>Advanced Pets</h3>
+        <p>Later in the game, true faction-specific pets become available. For Horde players, Flickerkit is unlocked and provides direct Horde-specific stat boosts.</p>
+        <p>Players with sufficient resources may consider switching from Howli to Flickerkit as their primary Horde pet.</p>
+        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="Pet 5"></span>
+
+        <h3>How to Obtain Pets</h3>
+        <p>Pets are obtained through daily Bounty quests. Defeating mobs grants eggs, which can be hatched inside the Pet Paradise building.</p>
+        <ul>
+          <li>Eggs can be green or blue.</li>
+          <li>Both egg types can produce Uncommon or Rare pets, with different probabilities.</li>
+        </ul>
+        <p>It is strongly recommended to spend diamonds daily to unlock additional Bounty mobs, as this significantly increases egg acquisition and long-term progression.</p>
+        <p>For a full explanation on how to optimize egg hatching and Pet Paradise usage, add a link here to the <a class="inline-link" href="/html/building.html">Building</a> section covering <strong>Pet Paradise</strong>.</p>
+
+        <h3>Final Recommendations</h3>
+        <p>Always focus your resources on pets that support your main faction. Faction-specific pets provide the highest value, while all-hero pets remain useful as secondary and passive boosters.</p>
+      </div>
     </section>
   
     <div id="footer"></div>

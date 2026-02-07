@@ -1,71 +1,9 @@
 (function () {
-  function isItalianPath(pathname) {
-    return pathname === '/it' || pathname.startsWith('/it/');
-  }
-
-  function normalizePath(pathname) {
-    if (!pathname || pathname === '/') return '/index.html';
-    if (pathname === '/it') return '/it/index.html';
-    return pathname;
-  }
-
-  function buildLanguageSelector() {
-    const pathname = normalizePath(location.pathname);
-    const isIt = isItalianPath(pathname);
-    const basePath = isIt ? pathname.replace(/^\/it/, '') || '/index.html' : pathname;
-    const query = location.search || '';
-    const hash = location.hash || '';
-
-    const links = {
-      en: `${basePath}${query}${hash}`,
-      it: `/it${basePath}${query}${hash}`,
-    };
-
-    const wrap = document.createElement('div');
-    wrap.className = 'language-switcher-wrap';
-    wrap.innerHTML = `
-      <div class="language-switcher" aria-label="Language selector">
-        <button class="language-switcher__btn" type="button" aria-expanded="false">${isIt ? 'Lingua' : 'Language'} ▾</button>
-        <ul class="language-switcher__menu" hidden>
-          <li><a href="${links.en}">English</a></li>
-          <li><a href="${links.it}">Italiano</a></li>
-        </ul>
-      </div>
-    `;
-
-    const style = document.createElement('style');
-    style.textContent = `
-      .language-switcher-wrap{max-width:1000px;margin:12px auto 0;padding:0 20px;display:flex;justify-content:flex-end}
-      .language-switcher{position:relative;z-index:20}
-      .language-switcher__btn{background:#1e2541;color:#fff;border:1px solid #2b2f3a;padding:8px 12px;border-radius:8px;cursor:pointer;font:inherit}
-      .language-switcher__menu{position:absolute;top:calc(100% + 6px);right:0;background:#1c2133;border:1px solid #2b2f3a;border-radius:8px;list-style:none;margin:0;padding:6px 0;min-width:130px}
-      .language-switcher__menu a{display:block;padding:8px 12px;color:#d1d1d6;text-decoration:none}
-      .language-switcher__menu a:hover{background:#25314d;color:#fff}
-    `;
-    document.head.appendChild(style);
-
-    const btn = wrap.querySelector('.language-switcher__btn');
-    const menu = wrap.querySelector('.language-switcher__menu');
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      menu.hidden = isOpen;
-    });
-    document.addEventListener('click', (e) => {
-      if (wrap.contains(e.target)) return;
-      btn.setAttribute('aria-expanded', 'false');
-      menu.hidden = true;
-    });
-
-    return wrap;
-  }
-
   function highlightCurrent(navRoot) {
-    const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {
       const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href.endsWith('/' + current) || href === current) {
+      if (href === current) {
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
@@ -126,11 +64,7 @@
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    const selector = buildLanguageSelector();
-    navContainer.insertAdjacentElement('afterend', selector);
-
-    const navPath = isItalianPath(location.pathname) ? '/it/html/nav.html' : '/html/nav.html';
-    fetch(navPath)
+    fetch('/html/nav.html')
       .then((res) => res.text())
       .then((html) => {
         navContainer.innerHTML = html;

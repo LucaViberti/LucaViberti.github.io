@@ -1,12 +1,62 @@
 (function () {
+  function normalizePath(pathname = location.pathname) {
+    let normalized = pathname || '/index.html';
+
+    if (normalized === '/' || normalized === '') return '/index.html';
+    if (normalized === '/it' || normalized === '/it/') return '/it/index.html';
+
+    return normalized.replace(/\/+$/, '');
+  }
+
+  function getLanguageFromPath(pathname = location.pathname) {
+    const normalized = normalizePath(pathname);
+    return normalized === '/it/index.html' || normalized.startsWith('/it/') ? 'it' : 'en';
+  }
+
+  function getEquivalentPath(targetLanguage, pathname = location.pathname) {
+    const normalized = normalizePath(pathname);
+    const isItalianPath = normalized === '/it/index.html' || normalized.startsWith('/it/');
+
+    if (targetLanguage === 'it') {
+      if (isItalianPath) return normalized;
+      return normalized === '/index.html' ? '/it/index.html' : `/it${normalized}`;
+    }
+
+    if (targetLanguage === 'en') {
+      if (!isItalianPath) return normalized;
+      return normalized === '/it/index.html' ? '/index.html' : normalized.replace(/^\/it/, '');
+    }
+
+    return normalized;
+  }
+
   function highlightCurrent(navRoot) {
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const currentPath = normalizePath();
+
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href === current) {
+      const rawHref = a.getAttribute('href') || '';
+      if (!rawHref.startsWith('/')) return;
+
+      const hrefPath = normalizePath(rawHref);
+      if (hrefPath === currentPath) {
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
+    });
+  }
+
+  function initLanguageSelector(navRoot) {
+    const selector = navRoot.querySelector('[data-language-selector]');
+    if (!selector) return;
+
+    selector.value = getLanguageFromPath();
+    selector.addEventListener('change', (event) => {
+      const targetLanguage = event.target.value;
+      const currentPath = normalizePath();
+      const destination = getEquivalentPath(targetLanguage, currentPath);
+
+      if (destination === currentPath) return;
+      location.assign(`${destination}${location.search}${location.hash}`);
     });
   }
 
@@ -64,11 +114,15 @@
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    fetch('/html/nav.html')
+    const language = getLanguageFromPath();
+    const navUrl = language === 'it' ? '/it/html/nav.html' : '/html/nav.html';
+
+    fetch(navUrl)
       .then((res) => res.text())
       .then((html) => {
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
+        initLanguageSelector(navContainer);
         initNavInteractions(navContainer);
       })
       .catch((err) => console.error('Navbar load failed:', err));

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes Guide - Exclusive Gear</title>
+  <title>TopHeroes Guide - Adventure</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
   <style>
@@ -206,14 +206,14 @@ nav ul li ul li a:hover {
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
   <main>
-    <section id="exclusive-gear">
-      <h2>Exclusive Gear</h2>
-      <p>This page is almost ready to be released, it will be available in the next hours. Stay ready!</p>
+    <section id="adventure">
+      <h2>Adventure</h2>
+      <p>Content coming soon.</p>
     </section>
   
-   <div id="footer"></div>
+    <div id="footer"></div>
 <script>
-  fetch("/html/footer.html")
+  fetch("footer.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("footer").innerHTML = html;
@@ -224,9 +224,9 @@ nav ul li ul li a:hover {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    'League': 'league-symbol.jpeg',
+    'Nature': 'nature-symbol.jpeg',
+    'Horde': 'horde-symbol.jpeg'
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
@@ -246,5 +246,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+  <div id="google_translate_element" style="display:none"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'it',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    (function forceItalianTranslation(){
+      var cookieDomain = location.hostname;
+      document.cookie = 'googtrans=/en/it;path=/';
+      document.cookie = 'googtrans=/en/it;path=/;domain=' + cookieDomain;
+      localStorage.setItem('googtrans','/en/it');
+    })();
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

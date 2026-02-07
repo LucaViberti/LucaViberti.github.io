@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - Nature Heroes</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
+
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="nature-heroes">
+    <h2 class="page-title">Nature — Legendary & Mythic Heroes</h2>
+    <p class="lead">Overview of the main Nature heroes, their skills, and when to use or replace them.</p>
+
+    <div class="card">
+      <h3>Best lineups — Nature</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Main</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Monk">
+              <img src="/images/altarmarshal.png" alt="Altar Marshal">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Pixie">
+              <img src="/images/petalis.png" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/forest.jpeg" alt="Forest Maiden">
+              <img src="/images/tidecaller.jpeg" alt="Tidecaller">
+            </div>
+          </div>
+          <p class="lineup-note">Note: if Petalis is not available in your server yet, replace her with Windwalker.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Damage focus (best with Nature)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Monk">
+              <img src="/images/altarmarshal.png" alt="Altar Marshal">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Pixie">
+              <img src="/images/petalis.png" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/windwalker.jpeg" alt="Windwalker">
+              <img src="/images/tidecaller.jpeg" alt="Tidecaller">
+            </div>
+          </div>
+          <p class="lineup-note">Note: it will not deal insane damage, but if you need to run Nature, this is the best option you have.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Treeguard -->
+    <div class="card">
+      <h3>Treeguard</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/treeguard.jpeg" alt="Treeguard">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Growth</em>: Increases max HP, reduces damage taken, and heals self.</li>
+            <li><em>Timber Shell</em>: Increases damage reduction and max HP, and heals.</li>
+            <li><em>Vine</em>: While Growth is active, attacks deal extra damage and poison.</li>
+            <li><em>Titanwood Assault</em>: Summons thorns that deal damage and heal.</li>
+            <li><em>Vitality Surge</em>: Increases damage and heals.</li>
+          </ul>
+          <p>Solid starting tank with some self-healing. Replace him later with <strong>Monk</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Druid -->
+    <div class="card">
+      <h3>Druid</h3>
+      <div class="role">Healer</div>
+      <div class="hero">
+        <img src="/images/druid.jpeg" alt="Druid">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Nature’s Blessing</em>: Heals one ally.</li>
+            <li><em>Healing Rain</em>: Heals multiple allies.</li>
+            <li><em>Force of Nature</em>: Grants a shield that absorbs damage.</li>
+            <li><em>Nature’s Call</em>: Summons 2 Treemen.</li>
+            <li><em>Natural Affinity</em>: Boosts Treemen HP.</li>
+          </ul>
+          <p>The starter healer who summons Treemen. Replace with <strong>Tidecaller</strong> or at least <strong>Ne Zha</strong> later on.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Windwalker -->
+    <div class="card">
+      <h3>Windwalker</h3>
+      <div class="role">Damage Dealer</div>
+      <div class="hero">
+        <img src="/images/windwalker.jpeg" alt="Windwalker">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Swift Arrow</em>: Boosts attack speed and normal attack damage, reloads after a number of shots.</li>
+            <li><em>Windwalker’s Blade</em>: Attacks nearest enemy and blocks incoming damage briefly.</li>
+            <li><em>Favorable Wind</em>: Normal attacks may not consume Swift Arrow charges.</li>
+            <li><em>Powerful Ricochet</em>: Deals damage and stuns a target.</li>
+            <li><em>Preparation</em>: Increases Swift Arrow reload speed.</li>
+          </ul>
+          <p>Your first Nature damage dealer. Replace with <strong>Ne Zha</strong> later.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forest Maiden -->
+    <div class="card">
+      <h3>Forest Maiden</h3>
+      <div class="role">Support</div>
+      <div class="hero">
+        <img src="/images/forest.jpeg" alt="Forest Maiden">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Baa-Baa Charge</em>: Summons sheep that deal damage and stun enemies.</li>
+            <li><em>Sheepherd</em>: Summons a lamb.</li>
+            <li><em>Song of Life</em>: When units die or are sacrificed, all heroes recover some HP.</li>
+            <li><em>Shepherd’s Bell</em>: Grants damage reduction to nearby allies.</li>
+            <li><em>Revenge</em>: Each time a unit dies or is sacrificed, all heroes gain permanent damage increase.</li>
+          </ul>
+          <p>A strong support hero that summons units and offers healing. Good even in late game.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pixie -->
+    <div class="card">
+      <h3>Pixie</h3>
+      <div class="role">Damage Dealer</div>
+      <div class="hero">
+        <img src="/images/pixie.jpeg" alt="Pixie">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Root Absorption</em>: Summons roots that deal damage and steal attack.</li>
+            <li><em>Sunflower Core</em>: Summons a core that damages and stuns enemies.</li>
+            <li><em>Nature’s Harmony</em>: Gains damage reduction for each living Nature hero.</li>
+            <li><em>Bewildering Powder</em>: Reduces enemy hit rate and deals damage.</li>
+            <li><em>Forest Ally</em>: Each dead/sacrificed unit reduces Sunflower Core cooldown.</li>
+          </ul>
+          <p>Excellent early damage dealer and remains strong until Mythic heroes. Viable even for end game.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sage -->
+    <div class="card">
+      <h3>Sage</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/sage.jpeg" alt="Sage">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Harmonic Balance</em>: Gains partial damage immunity and heals when attacked.</li>
+            <li><em>Transformation</em>: Transforms into a bear, gaining HP, HP drain, and damage.</li>
+            <li><em>Power of the Wild</em>: Gains a shield after Transformation that absorbs damage.</li>
+            <li><em>Serene State</em>: Deals damage, slows attack speed, and removes one buff.</li>
+            <li><em>Robust Skin</em>: If Sage dies in bear form, reverts with some HP.</li>
+          </ul>
+          <p>The second Nature tank you’ll get. Keep him in your lineup until late game.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watcher -->
+    <div class="card">
+      <h3>Watcher</h3>
+      <div class="role">Damage Dealer</div>
+      <div class="hero">
+        <img src="/images/watcher.jpeg" alt="Watcher">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Plant Purge</em>: Creates a whirlwind that damages, poisons, and slows enemies.</li>
+            <li><em>Wilt</em>: Deals damage and poisons.</li>
+            <li><em>Slowdown</em>: Normal attacks reduce enemy attack speed.</li>
+            <li><em>Crow Attack</em>: Gains counterattack, dealing damage and healing when hit.</li>
+            <li><em>Wheatfield Watcher</em>: Increases damage of Nature heroes.</li>
+          </ul>
+          <p>A weak option overall — not recommended to invest much in. Cannot be awakened and has no exclusive gear.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monk -->
+    <div class="card">
+      <h3>Monk</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/monk.jpeg" alt="Monk">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Mountain Strike</em>: Deals damage, increases max HP, and grants damage immunity.</li>
+            <li><em>Ultimate Zen Power</em>: Grants dodge, damage reduction, and counterattacks when hit.</li>
+            <li><em>Thundering Kick</em>: Adds a chance to follow up Mountain Strike with a stun.</li>
+            <li><em>Fiery Breath</em>: Deals damage and grants control immunity.</li>
+            <li><em>Merciful Victor</em>: Gains a shield when units die or are sacrificed.</li>
+            <li><em>Guardian Messenger</em>: Increases soldier HP per 1000 deployed.</li>
+          </ul>
+          <p>Your first Mythic Nature hero. A strong tank who deals damage as well. Replace <strong>Treeguard</strong> with him.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tidecaller -->
+    <div class="card">
+      <h3>Tidecaller</h3>
+      <div class="role">Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/tidecaller.jpeg" alt="Tidecaller">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Hydro Hammer</em>: Deals damage, stuns, and summons a guardian water elemental.</li>
+            <li><em>Ascend</em>: Deals damage, knocks enemies up, and summons Water Lord.</li>
+            <li><em>Surge</em>: Normal attacks heal all allies.</li>
+            <li><em>Purification Lance</em>: Deals damage and summons a ranged elemental.</li>
+            <li><em>Evolve</em>: Normal attacks can hit an additional target.</li>
+            <li><em>War Messenger</em>: Increases soldier attack per 1000 deployed.</li>
+          </ul>
+          <p>The best Nature hero, and arguably the strongest hero in the game. A must-have for any Nature team.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

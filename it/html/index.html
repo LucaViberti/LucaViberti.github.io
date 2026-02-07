@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
+  <!-- SEO -->
+  <title>TopHeroes Guide – Strategies, Heroes, Adventure & Events</title>
+  <meta name="description" content="TopHeroes Guide: concise guides for Heroes (League, Nature, Horde), Adventure modes (Classic, Season 1), Events, and beginner tips. Short, practical strategies to progress faster." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <style>
+/* Base */
+body{
+  margin:0; padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:#f5f5f7; line-height:1.6; color:#111;
+}
+
+/* Header/Nav */
+header{
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+}
+header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+header .site-info{display:flex; flex-direction:column; align-items:center;}
+nav{width:100%; margin-top:10px;}
+nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+nav ul li{position:relative;}
+nav ul li a{
+  color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+  padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+  font-size:.85rem;
+}
+nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+nav ul li ul{
+  display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
+main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
+
+/* Hero intro */
+.hero{
+  background: linear-gradient(180deg,#ffffff 0%,#f7f8fb 100%);
+  border:1px solid #ececf0; border-radius:16px; padding:28px 22px; margin-bottom:20px;
+}
+.hero h1{
+  margin:0 0 10px; font-size:clamp(1.5rem,3.2vw,2.1rem); letter-spacing:-0.015em;
+}
+.hero p{margin:0; color:#444;}
+.hero p + p{margin-top:8px}
+
+/* Quick sections (mini-cards) */
+.section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
+.quick-sections{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;
+}
+.mini-card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
+  transition: box-shadow .15s ease, transform .15s ease;
+  display:flex; flex-direction:column;
+}
+.mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
+.mini-card h3{margin:0 0 6px; font-size:1.05rem;}
+.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;}
+.mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
+
+/* Pulsanti */
+.mini-card a{
+  margin-top:12px;
+  align-self:flex-start;
+  background:#29abe0;
+  color:#fff !important;
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:.85rem;
+  font-weight:500;
+  text-decoration:none;
+  transition:background .2s;
+}
+.mini-card a:hover{background:#2389b5;}
+
+/* Contact card */
+.contact-card{
+  background:#fff; border:1px solid #e8eef5; border-radius:12px; padding:22px; margin-top:26px;
+}
+.contact-card h2{margin:0 0 6px; font-size:1.25rem; color:#1e2541;}
+.contact-card p{margin:0 0 12px; color:#4b5563;}
+.th-contact label{display:block; margin:0 0 12px;}
+.th-contact input,.th-contact textarea{
+  width:100%; padding:.9rem; border:1px solid #dfe3ea; border-radius:10px; font:inherit; background:#fff;
+}
+.th-contact textarea{resize:vertical; min-height:120px}
+
+/* FIX privacy layout */
+.th-contact input[type="checkbox"]{ width:auto; }
+.th-privacy label{ flex:1; display:block; }
+.th-privacy{ display:flex; gap:.6rem; align-items:flex-start; font-size:.9rem; color:#4b5563; margin-top:6px; }
+
+.th-actions{margin-top:12px; display:flex; gap:10px; align-items:center;}
+.th-btn{
+  display:inline-block; background:#29abe0; color:#fff; padding:10px 16px; border:0; border-radius:10px;
+  font-weight:600; cursor:pointer; transition:background .2s;
+}
+.th-btn:hover{background:#2389b5;}
+.th-hint{opacity:.75; font-size:.9rem; margin:0}
+.th-error{color:#b91c1c}
+.th-ok{color:#166534}
+
+/* Donation + footer */
+.donation-section{
+  text-align:center; margin-top:28px; padding:18px;
+  background:#f7fafc; border:1px solid #e8eef5; border-radius:12px;
+}
+.donation-button{
+  display:inline-block; background:#29abe0; color:#fff; padding:10px 18px;
+  border-radius:30px; text-decoration:none; font-weight:600; transition:background .2s;
+}
+.donation-button:hover{background:#2389b5;}
+
+footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
+
+/* Stripe block */
+.stripe-donation{
+  text-align:center;
+  padding:16px;
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <!-- STRIPE DONATION BUTTON -->
+  <section class="stripe-donation" aria-label="Support the project">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+    </stripe-buy-button>
+  </section>
+
+
+  <main itemscope itemtype="https://schema.org/Article">
+    <!-- HERO INTRO -->
+    <section class="hero" aria-label="Welcome">
+      <h1 itemprop="headline">TopHeroes Guide</h1>
+      <p>Short, practical guides to progress faster in <strong>TopHeroes</strong>: faction Heroes, Adventure modes, Events, and beginner tips.</p>
+      <p>Everything is organized in quick cards and checklists to help you decide who to build, what to upgrade, and how to plan resources.</p>
+    </section>
+
+    <!-- QUICK SECTIONS -->
+    <h2 class="section-head">Explore the guides</h2>
+    <div class="quick-sections" aria-label="Main sections">
+      <article class="mini-card">
+        <h3>Heroes</h3>
+        <p>Faction overview and core builds: League, Nature, Horde.</p>
+        <a href="heroes.html">Go to Heroes</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>Adventure</h3>
+        <p>How Adventure works, map basics, and rewards.</p>
+        <a href="generaladv.html">Go to Adventure</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>Events</h3>
+        <p>Quick strategies for Guild Race, Arms Race, KvK, and Guild Boss. Soon available</p>
+        <!-- <a href="events.html">Go to Events</a> -->
+      </article>
+
+      <article class="mini-card">
+        <h3>Beginners Guide</h3>
+        <p>Early priorities, starter teams, and resource management.</p>
+         <a href="beginners.html">Go to Beginners</a> 
+      </article>
+
+      <article class="mini-card">
+        <h3>Cost Tables</h3>
+        <p>Resource and upgrade cost tables to help plan your progress.</p>
+        <a href="tips.html">Go to Cost Tables</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>Quick Tips</h3>
+        <p>Fast, practical tips to improve your daily routine and event prep.</p>
+        <a href="quick-tips.html">Go to Quick Tips</a>
+      </article>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <section class="contact-card" aria-label="Contact us">
+      <h2>Contact us</h2>
+      <p>Questions, suggestions, or feedback? Drop us a note and we’ll reply by email.</p>
+
+      <form class="th-contact"
+            action="https://formspree.io/f/mrbazyyz"
+            method="POST" autocomplete="on">
+        <label>
+          Your email
+          <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" required rows="6" placeholder="Write your message..."></textarea>
+        </label>
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-10000px;opacity:0">
+
+        <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
+        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/thanks.html">
+
+        <div class="th-privacy">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">
+            I agree to the processing of my data (email and message) for the sole purpose of receiving a reply.
+            Read our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <div class="th-actions">
+          <button type="submit" class="th-btn">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer import -->
+    <div id="footer"></div>
+  </main>
+
+  <script>
+    fetch("/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Icon injection -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const icons = {'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+      function addIcon(el, word){
+        const img=document.createElement('img');
+        img.src=icons[word]; img.alt=word+' symbol'; img.loading='lazy';
+        img.style.height='1em'; img.style.marginLeft='0.3em';
+        el.appendChild(img);
+      }
+      document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
+        const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
+      });
+    });
+  </script>
+</body>
+</html>

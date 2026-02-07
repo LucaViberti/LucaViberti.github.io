@@ -1,0 +1,229 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes Guide</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/it/index.html">Home</a></li>
+
+      <!-- HEROES -->
+      <li class="has-sub">
+        <a href="/it/html/heroes.html">Eroi</a>
+        <ul class="dropdown">
+          <li><a href="/it/html/heroes.html">Overview</a></li>
+          <li><a href="/it/html/league.html">League</a></li>
+          <li><a href="/it/html/nature.html">Nature</a></li>
+          <li><a href="/it/html/horde.html">Horde</a></li>
+          <!-- Gear con mini flyout affianco -->
+          <li class="has-flyout">
+            <a href="/it/html/gear.html">Gear</a>
+            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/it/html/exclusive-gear.html">Equipaggiamento Esclusivo</a></li>
+            </ul>
+          </li>
+          <li><a href="/it/html/pets.html">Pets</a></li>
+        </ul>
+      </li>
+
+      <!-- BUILDING -->
+      <li class="has-sub">
+        <a href="/it/html/building.html">Building</a>
+        <ul class="dropdown">
+          <li><a href="/it/html/building.html">Overview</a></li>
+          <li><a href="/it/html/villagers.html">Villagers</a></li>
+          <li><a href="/it/html/lord-gear.html">Equipaggiamento Lord</a></li>
+          <li><a href="/it/html/relic.html">Relics Hall</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/it/html/research.html">Research</a></li>
+
+      <!-- ADVENTURE -->
+      <li class="has-sub">
+        <a href="/it/html/generaladv.html">Avventura</a>
+        <ul class="dropdown">
+          <li><a href="/it/html/generaladv.html">Overview</a></li>
+          <li><a href="/it/html/classicadv.html">Classic</a></li>
+          <li><a href="/it/html/seasononeadv.html">Season 1</a></li>
+        </ul>
+      </li>
+
+      <!-- EVENTS  -->
+      <li class="has-sub">
+        <a href="/it/html/events.html">Eventi</a>
+        <ul class="dropdown">
+          <li><a href="/it/html/guild-race.html">Corsa di Gilda</a></li>
+          <li><a href="/it/html/arms-race.html">Corsa agli Armamenti</a></li>
+          <li><a href="/it/html/kingdom.html">KvK</a></li>
+          <li><a href="/it/html/guildboss.html">Boss di Gilda</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/it/html/beginners.html">Guida Principianti</a></li>
+      <li><a href="/it/html/shop.html">SHOP</a></li>
+      <li><a href="/it/html/tips.html">Cost Tables</a></li>
+      <li><a href="/it/html/quick-tips.html">Consigli Rapidi</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="#">Support Us</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Dona con Stripe</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/it/html/privacy.html">Policy e Privacy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  /* dimensione link coerente */
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  /* Titolo */
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;margin:0;padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Dropdown base */
+  nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+  nav ul li{position:relative}
+  nav ul li a{
+    color:#ccd0dd;text-decoration:none;text-transform:uppercase;font-weight:500;letter-spacing:.05em;
+    padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s
+  }
+  nav ul li a:hover{color:#fff;border-bottom-color:#29abe0}
+
+  /* dropdown principale */
+  nav ul li .dropdown{
+    display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:220px;z-index:1000
+  }
+  @media (hover:hover){
+    nav ul li.has-sub:hover > .dropdown{display:block}
+  }
+  nav ul li.has-sub.open > .dropdown{display:block}
+
+  nav ul li .dropdown li a{
+    display:block;padding:8px 16px;color:#d1d1d6;white-space:nowrap;border-bottom:0;text-transform:none;letter-spacing:0
+  }
+  nav ul li .dropdown li a:hover{background:#25314d;color:#fff}
+
+  /* Gear con flyout */
+  .has-flyout{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 10px}
+  .has-flyout > a{flex:1;padding:8px 8px}
+  .flyout-toggle{
+    background:linear-gradient(180deg,#2b3654 0%,#232c47 100%);
+    border:1px solid #2b2f3a;border-radius:8px;padding:6px 10px;
+    color:#d1d1d6;cursor:pointer;font-size:.8rem;line-height:1;transition:background .2s,color .2s,transform .2s;
+  }
+  .flyout-toggle:hover{background:#2f3a5c;color:#fff;transform:translateY(-1px)}
+  .flyout{
+    display:none;position:absolute;
+    top:50%; left:100%; transform:translateY(-50%);
+    margin-left:12px;
+    background:#1c2133;border:1px solid #2b2f3a;border-radius:10px;min-width:190px; padding:10px 0; z-index:1001;
+    box-shadow:0 12px 28px rgba(0,0,0,.35);
+  }
+  .flyout::before{
+    content:"";position:absolute;left:-6px;top:50%;transform:translateY(-50%) rotate(45deg);
+    width:12px;height:12px;background:#1c2133;border-left:1px solid #2b2f3a;border-bottom:1px solid #2b2f3a;
+  }
+  @media (hover:hover){
+    .has-flyout:hover > .flyout{display:block}
+  }
+  .has-flyout.open > .flyout{display:block}
+  @media (max-width: 640px){
+    .flyout{position:static; margin:6px 0 0 0; left:auto; top:auto; transform:none; display:none; box-shadow:none;}
+    .flyout::before{display:none}
+    .has-flyout.open > .flyout{display:block}
+    .has-flyout{flex-wrap:wrap}
+    .flyout-toggle{padding:6px 10px}
+  }
+
+  /* FIX: garantisce click sicuri */
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+</style>
+
+<script>
+  // Evidenzia la pagina attiva
+  (function(){
+    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    document.querySelectorAll('nav a[href]').forEach(a=>{
+      const href = a.getAttribute('href')?.toLowerCase();
+      if(href === current){
+        a.style.color = '#fff';
+        a.style.borderBottomColor = '#29abe0';
+      }
+    });
+  })();
+
+  // Apertura/chiusura dropdown (mobile) + 2° tap = naviga
+  (function(){
+    const isTouch = window.matchMedia('(hover: none)').matches;
+
+    document.querySelectorAll('nav li.has-sub > a').forEach(link=>{
+      link.addEventListener('click', function(e){
+        const li = this.parentElement;
+        if (!isTouch) return; // desktop normale
+
+        if (!li.classList.contains('open')) {
+          e.preventDefault();
+          li.classList.add('open');
+          document.querySelectorAll('nav li.has-sub').forEach(other=>{
+            if(other !== li) other.classList.remove('open');
+          });
+          return;
+        }
+      });
+    });
+
+    // voci interne navigano sempre
+    document.querySelectorAll('nav li .dropdown a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.stopPropagation();
+      });
+    });
+
+    // Gear flyout
+    document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        const li = this.closest('.has-flyout');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        li.classList.toggle('open', !expanded);
+      });
+    });
+
+    // Chiudi fuori
+    document.addEventListener('click', function(e){
+      const nav = document.querySelector('nav');
+      if(!nav.contains(e.target)){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+
+    // Chiudi con Esc
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        document.querySelectorAll('nav li.has-sub').forEach(li=>li.classList.remove('open'));
+        document.querySelectorAll('.has-flyout .flyout-toggle').forEach(btn=>btn.setAttribute('aria-expanded','false'));
+        document.querySelectorAll('.has-flyout').forEach(li=>li.classList.remove('open'));
+      }
+    });
+  })();
+</script>

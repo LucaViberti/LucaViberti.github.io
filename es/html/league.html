@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - League Heroes</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
+
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="league-heroes">
+    <h2 class="page-title">League — Legendary & Mythic Heroes</h2>
+    <p class="lead">Curated picks for League heroes: roles, core skills, and when to include or replace them.</p>
+
+    <div class="card">
+      <h3>Best lineups — League</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Main</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/adjudicator.jpeg" alt="Adjudicator">
+              <img src="/images/rose.jpeg" alt="Rose Princess">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/artificier.png" alt="Artificier">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Bard">
+              <img src="/images/nun.jpeg" alt="Nun">
+            </div>
+          </div>
+          <p class="lineup-note">Note: in the current meta, even though Bishop is a Mythic hero, he is not part of the main lineup.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Against bosses (damage focus)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Front</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/bishop.jpeg" alt="Bishop">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Middle</div>
+            <div class="lineup-heroes">
+              <img src="/images/artificier.png" alt="Artificier">
+              <img src="/images/pyromancer.jpeg" alt="Pyromancer">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Back</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Bard">
+              <img src="/images/astrologer.jpeg" alt="Astrologer">
+            </div>
+          </div>
+          <p class="lineup-note">Note: if the boss deals heavy damage and your troops are dying, swap Astrologer with Adjudicator and move him to the front row.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pyromancer -->
+    <div class="card">
+      <h3>Pyromancer</h3>
+      <div class="role">Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/pyromancer.jpeg" alt="Pyromancer">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Detonate</em>: Deals damage and applies burn.</li>
+            <li><em>Meteor Blaze</em>: Area damage.</li>
+            <li><em>Ember</em>: When HP is low, gains an attack boost.</li>
+            <li><em>Flame Shield</em>: Grants a shield and damages nearby enemies.</li>
+            <li><em>Elemental Mastery</em>: Increases skill damage.</li>
+          </ul>
+          <p>Your strongest early-game League DPS. Keep her in your League lineup; still usable later on.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secret Guardian -->
+    <div class="card">
+      <h3>Secret Keeper</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/secret.jpeg" alt="Secret Guardian">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Arcane Shield</em>: Increases damage reduction and removes debuffs.</li>
+            <li><em>Forbidden Realm</em>: Silences enemies and deals damage.</li>
+            <li><em>Arcane Link</em>: Increases HP.</li>
+            <li><em>Spell Reflection</em>: Deals damage and becomes immune to damage briefly.</li>
+            <li><em>Arcane Guardian</em>: Grants a shield that absorbs damage.</li>
+          </ul>
+          <p>First Legendary League tank. Good early; later, replace with <strong>Rose Princess</strong> if you already run <strong>Adjudicator</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Astrologer -->
+    <div class="card">
+      <h3>Astrologer</h3>
+      <div class="role">Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/astrologer.jpeg" alt="Astrologer">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Ray Beam</em>: Damage with increased crit rate.</li>
+            <li><em>Solar Beam</em>: Multiple hits.</li>
+            <li><em>Foresight</em>: Increases crit rate.</li>
+            <li><em>Arc Light</em>: Damage that can further increase damage dealt.</li>
+            <li><em>Insights</em>: Increases crit damage.</li>
+          </ul>
+          <p>Great early single-target DPS (Guild/World Boss). Later, prefer <strong>Paragon</strong> and <strong>Bishop</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hostess -->
+    <div class="card">
+      <h3>Hostess</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/hostess.jpeg" alt="Hostess">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Evasive Technique</em>: Enters counter state; gains damage reduction, deals damage, and restores HP.</li>
+            <li><em>100T Hammer!</em>: Damage and stun.</li>
+            <li><em>Agile Footwork</em>: Periodically dodges one instance of damage.</li>
+            <li><em>Drunken Brawl</em>: Damage reduction, healing, damage, and stun.</li>
+            <li><em>Inn Keeper</em>: Increases team ATK/HP even when not deployed.</li>
+          </ul>
+          <p>Decent early tank with utility. Replace once you get <strong>Adjudicator</strong> or <strong>Rose Princess</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bard -->
+    <div class="card">
+      <h3>Bard</h3>
+      <div class="role">Support </div>
+      <div class="hero">
+        <img src="/images/bard.jpeg" alt="Bard">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Cheer</em>: Increases movement and attack speed; may deal damage.</li>
+            <li><em>Resonant Chord</em>: Deals damage and stuns.</li>
+            <li><em>Endgame Serenade</em>: After Resonant Chord, reduces allies’ skill cooldowns.</li>
+            <li><em>Grace</em>: Increases crit rate; may deal damage.</li>
+            <li><em>Fight Song</em>: Increases crit rate for League heroes.</li>
+          </ul>
+          <p>Good support: speed, crit, and cooldown reduction. Can fit even into end‑game teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nun -->
+    <div class="card">
+      <h3>Nun</h3>
+      <div class="role">Healer </div>
+      <div class="hero">
+        <img src="/images/nun.jpeg" alt="Nun">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Therapy</em>: Heals an ally and increases healing received.</li>
+            <li><em>Radiant Song</em>: Increases allies’ max HP and final damage reduction for a time.</li>
+            <li><em>Holy Grace</em>: Grants self damage reduction.</li>
+            <li><em>Prayer of Healing</em>: Heals all allies.</li>
+            <li><em>Sacred Union</em>: Increases max HP of League heroes.</li>
+          </ul>
+          <p>Your main healer from early to late game. Keep her in your League lineup.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adjudicator -->
+    <div class="card">
+      <h3>Adjudicator</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/adjudicator.jpeg" alt="Adjudicator">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Guardian Discipline</em>: Damage, stun, damage reduction, and control immunity for a time.</li>
+            <li><em>Shield of Faith</em>: Summons a massive shield; on expiry, deals damage.</li>
+            <li><em>Indomitable</em>: Grants damage reduction to all allies.</li>
+            <li><em>Judgment</em>: Damage, stun, and self‑healing.</li>
+            <li><em>Eternal</em>: Near-death invincibility; HP cannot drop below 1 during the effect.</li>
+          </ul>
+          <p>One of the best tanks in the game. Scales very well with stars. Staple of end‑game League teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paragon -->
+    <div class="card">
+      <h3>Paragon</h3>
+      <div class="role">Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/paragon.jpeg" alt="Paragon">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Commanding Call</em>: Deals damage; grants allies a shield.</li>
+            <li><em>Celestial Blade</em>: Control immunity, damage, applies burn stacks; gains damage reduction.</li>
+            <li><em>Final Verdict</em>: Increased damage against enemies above 70% HP.</li>
+            <li><em>Moral Fury</em>: Raises allies’ attack and deals damage.</li>
+            <li><em>Ultimate Execution</em>: Extends attack range and adds an extra target; boosts normal attack damage.</li>
+            <li><em>Conqueror</em>: Each Legendary+ League hero boosts castle attack; with 6 League heroes, gains skill crit rate.</li>
+          </ul>
+          <p>Usually your primary League DPS. Replace <strong>Astrologer</strong> with her once acquired.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rose Princess -->
+    <div class="card">
+      <h3>Rose Princess</h3>
+      <div class="role">Tank / Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/rose.jpeg" alt="Rose Princess">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Be Brave</em>: Gains stacks of Courage (damage reduction). Taking damage converts a stack to Resentment.</li>
+            <li><em>Bloom</em>: Consumes Resentment stacks to deal damage and apply Heal Ban.</li>
+            <li><em>Thorns</em>: Deals damage; extra damage per Resentment stack.</li>
+            <li><em>Weapon Up!</em>: Damage reduction scales with her ATK.</li>
+            <li><em>Roses</em>: Gains Courage and HP when enemies die.</li>
+            <li><em>Guardian Messenger</em>: Increases soldiers’ HP per 1000 deployed.</li>
+          </ul>
+          <p>Starts modest but becomes a top League hero with stars — a tank that also hits very hard.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bishop -->
+    <div class="card">
+      <h3>Bishop</h3>
+      <div class="role">Damage Dealer </div>
+      <div class="hero">
+        <img src="/images/bishop.jpeg" alt="Bishop">
+        <div class="txt">
+          <strong>Skills</strong>
+          <ul>
+            <li><em>Fair Strike</em>: Extra effective versus summoned units.</li>
+            <li><em>Divine Descent</em>: Damage; increases ATK and damage reduction; normal attacks become AoE for a time.</li>
+            <li><em>Solar Shield</em>: Increases crit and crit resistance.</li>
+            <li><em>Confession</em>: Deals damage and applies Weaken (reduces amplified skill damage), strong vs summons.</li>
+            <li><em>Sacred Burst</em>: Triggers AoE damage when enemies die.</li>
+            <li><em>War Messenger</em>: Increases soldiers’ attack per 1000 deployed.</li>
+          </ul>
+          <p>High DPS slightly below <strong>Paragon</strong> on average, but still end‑game worthy — include alongside Paragon where possible.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

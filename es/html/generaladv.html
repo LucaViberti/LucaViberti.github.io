@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - Research</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+/* Header & Nav (lasciati come da base) */
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 { margin: 0; color: #f5f5f7; font-size: 1.5rem; }
+header .tagline { margin-left: 12px; color: #888; font-size: 0.9rem; white-space: nowrap; }
+header .site-info { display: flex; flex-direction: column; align-items: center; }
+nav { width: 100%; margin-top: 10px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+nav ul li { position: relative; }
+nav ul li a { color: #d1d1d6; text-decoration: none; padding: 10px 8px; font-size: 0.85rem; transition: color 0.3s; }
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a { display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap; }
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer {
+  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
+}
+.donation-section {
+  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; font-weight: bold; transition: background 0.3s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Enhanced navigation styling (come in base migliorata) */
+header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; }
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent; transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul { background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0; }
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ------- Page-specific styles (solo contenuto) ------- */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #1e2541;
+}
+.lead {
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+.content-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  margin-bottom: 24px;
+}
+.content-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+.content-card p, .content-card li { color: #374151; }
+
+/* Immagini piccole affiancate al testo su desktop, a colonna su mobile */
+.img-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.img-block img {
+  max-width: 32%;   /* immagini più piccole */
+  min-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.img-block .text {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+/* Variante a due immagini piccole affiancate */
+.duo {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.duo img {
+  max-width: 32%;
+  min-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-block { flex-direction: column; }
+  .img-block img, .duo img { max-width: 100%; }
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="research">
+    <h2 class="page-title">Adventure Mode — Overview</h2>
+    <p class="lead">Adventure is the core PvE mode in TopHeroes. It fuels your early progress with heroes, weapons, and gear, and sets up your entire run.</p>
+
+    <div class="content-card">
+      <h3>General Overview</h3>
+      <p>Adventure is the first and most crucial game mode in TopHeroes. It's the main source of initial resources, including heroes, weapons, and gear. Progressing through it is essential to starting your journey the right way.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Structure</h3>
+
+      <div class="img-block">
+        <img src="/images/adventure1.jpeg" alt="Adventure zone exploration screen" loading="lazy">
+        <div class="text">
+          <p>The adventure is divided into different zones. To unlock the next zone, players must defeat a portal boss. Occasionally, <em>Adventure Bosses</em> appear and, once defeated, they drop a chest. Opening these chests costs 10 stamina and gives valuable rewards like gear, shards, tavern tokens, diamonds, and more.</p>
+          <p>Each zone can be completed 100% by finding all hidden paths, secret chests, and helping soldiers. Completing a zone fully grants additional bonuses. This is highly recommended before moving to the next area.</p>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/adventure2.jpeg" alt="Adventure boss portal screen" loading="lazy">
+        <div class="text">
+          <p>Bosses are often tied to portals; defeating them is key to unlocking new areas and chests. Use leftover stamina to replay bosses you can clear reliably.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h3>Adventure Maps</h3>
+      <p>Players who start at server launch will initially only have access to the <strong>Classic</strong> map in Normal mode. After completing it, the <strong>Hard Mode</strong> of the same map will unlock. Later, with Season 1, a new map and extended levels in Classic Hard will be added.</p>
+      <p>Once you've cleared all available maps, it's a good time to use leftover stamina to farm previous bosses and complete 100% zones.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Chest Icon (Bottom Left)</h3>
+
+      <div class="img-block">
+        <img src="/images/adventure3.jpeg" alt="Bottom-left passive chest indicator" loading="lazy">
+        <div class="text">
+          <p>There’s a chest icon in the bottom left that fills passively over time, even when you’re not actively playing. You can claim it anytime without any penalty. It stops accumulating after 8 hours if unclaimed — so check it periodically.</p>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/adventure4.jpeg" alt="Clock icon offering two-hour rewards for stamina" loading="lazy">
+        <div class="text">
+          <p>As you progress in adventure, this chest levels up and gives slightly better rewards. There’s also a clock icon that offers you the rewards of 2 hours in exchange for 20 stamina. This is not worth it — save your stamina for better things.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h3>Progression Tips</h3>
+      <ul>
+        <li>At the beginning, focus on pushing adventure until you get stuck.</li>
+        <li>Farming bosses repeatedly is a good strategy to maximise rewards and collect gear and shards.</li>
+        <li>The daily stamina limit for opening boss chests is <strong>2500</strong> — very high and rarely reached unless you're playing intensely.</li>
+        <li>As you progress, boss rewards improve significantly, especially in the Classic Hard Mode, where legendary weapons begin to drop.</li>
+        <li>Many of these weapons are purple tier; for how to use them effectively, refer to the <strong>Gear</strong> section under <strong>Heroes</strong>.</li>
+      </ul>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - Pets</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #d1d1d6;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f21;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #2c2c2e;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.donation-button:hover {
+  background: #2389b5;
+}
+
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+
+header .tagline {
+  color: #b0b6c7;
+}
+
+nav ul {
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+nav ul li ul li a {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+
+
+.pets-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 55%, #eef2ff 100%);
+  border: 1px solid #d9deee;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(23, 38, 77, 0.1);
+  padding: 34px;
+}
+
+.pets-shell h2 {
+  margin: 0 0 18px;
+  font-size: 2.15rem;
+  color: #1c2742;
+  letter-spacing: 0.01em;
+}
+
+.pets-shell h3 {
+  margin: 30px 0 12px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #1e2e54;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dfe4f4;
+}
+
+.pets-shell p,
+.pets-shell li {
+  font-size: 1.06rem;
+  color: #1f2a44;
+}
+
+.pets-shell p {
+  margin: 10px 0 12px;
+}
+
+.pets-shell ul {
+  margin: 8px 0 12px 24px;
+  padding: 0;
+}
+
+.pets-shell li {
+  margin-bottom: 10px;
+}
+
+.pets-inline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 12px 0 8px;
+}
+
+.pet-inline {
+  margin: 6px 12px 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d7dff2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(18, 37, 78, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(18, 37, 78, 0.18);
+}
+
+.pet-inline img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dfe4f2;
+}
+
+.pet-inline.small img {
+  width: 96px;
+  height: 96px;
+}
+
+.inline-link {
+  color: #1f65d6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+
+</style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+  <main>
+    <section id="pets">
+      <div class="pets-shell">
+        <h2>Pets</h2>
+        <p>Pets are a core progression system and are absolutely essential to strengthen your hero line-ups. They provide permanent stat boosts and additional faction-based bonuses that directly impact your overall power.</p>
+
+        <h3>Pet Categories</h3>
+        <p>Pets can be divided into two main categories: faction-specific pets and all-hero pets.</p>
+        <ul>
+          <li><strong>Faction-specific pets</strong>: Provide stronger stat boosts to heroes belonging to a specific faction (League, Horde, Nature).
+            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9"></span>
+          </li>
+          <li><strong>All-hero pets</strong>: Provide general bonuses that apply to all heroes, regardless of faction.
+            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8"></span>
+          </li>
+        </ul>
+
+        <h3>Choosing Pets Based on Your Main Faction</h3>
+        <p>Before investing resources into pets, it is crucial to identify your main faction. Your primary pets should always align with this faction to maximize efficiency and power.</p>
+        <p>Early-game faction-focused pets are:</p>
+        <ul>
+          <li><strong>League</strong>: Eggy</li>
+          <li><strong>Horde</strong>: Howli (used due to its Horde-specific skill, despite being an all-hero pet)</li>
+          <li><strong>Nature</strong>: Cactini</li>
+        </ul>
+        <p>Howli is not a true Horde-only stat pet. Its base bonuses apply to all heroes, but it possesses a faction-specific skill that activates when a sufficient number of Horde heroes are present in the line-up. This mechanic exists for all pets once they reach Legendary rarity.</p>
+        <div class="pets-inline-row" aria-label="Pet references 4 and 3">
+          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="Pet 4"></span>
+          <span class="pet-inline"><img src="/images/pet3.png" alt="Pet 3"></span>
+        </div>
+
+        <h3>Deployed and Non-Deployed Pets</h3>
+        <p>Pets assigned to a line-up actively provide their bonuses. However, even pets that are not deployed still contribute passive buffs. This makes upgrading multiple pets important, not just the ones actively used in your main queue.</p>
+
+        <h3>Pet Rarity</h3>
+        <p>At the beginning, pets are available in two rarities:</p>
+        <ul>
+          <li><strong>Uncommon (Green)</strong>: Can safely be released to obtain Pet Food.
+            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="Pet 7"></span>
+          </li>
+          <li><strong>Rare (Blue)</strong>: Must be kept, as they are essential for promotions.
+            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="Pet 6"></span>
+          </li>
+        </ul>
+
+        <h3>Leveling Up vs Promotion</h3>
+        <p>There are two main ways to increase a pet’s power: Level Up and Promote.</p>
+        <ul>
+          <li><strong>Level Up</strong>: Uses Pet Food. Once the pet reaches Legendary rarity, Pet Essence is also required.
+            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="Pet 1"></span>
+          </li>
+          <li><strong>Promote</strong>: Increases rarity and star level. Requires duplicate pets, not Pet Food.
+            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="Pet 2"></span>
+          </li>
+        </ul>
+        <p>These two systems are interdependent. Level caps require promotions to progress further, and promotions require minimum pet levels to unlock.</p>
+        <p>For detailed cost tables covering every Level Up and Promote requirement, check here <a class="inline-link" href="/html/tips.html">Cost Tables</a> page on the website.</p>
+
+        <h3>Handling Duplicate Pets</h3>
+        <p>Only the highest-level copy of each pet provides bonuses. Multiple copies of the same pet do not stack their buffs.</p>
+        <p>For this reason, you should:</p>
+        <ul>
+          <li>Keep and upgrade only one copy of each pet.</li>
+          <li>Lock that pet to prevent accidental release.</li>
+          <li>Use all other copies exclusively as promotion material.</li>
+        </ul>
+        <div class="pets-inline-row" aria-label="Pet reference 10">
+          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="Pet 10"></span>
+        </div>
+
+        <h3>Pets for Secondary Queues</h3>
+        <p>When assigning pets to secondary queues, the main faction should still remain the priority. Instead of investing in multiple faction-specific pets, it is often smarter to use all-hero pets that have faction-specific skills matching the secondary queue.</p>
+
+        <h3>Advanced Pets</h3>
+        <p>Later in the game, true faction-specific pets become available. For Horde players, Flickerkit is unlocked and provides direct Horde-specific stat boosts.</p>
+        <p>Players with sufficient resources may consider switching from Howli to Flickerkit as their primary Horde pet.</p>
+        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="Pet 5"></span>
+
+        <h3>How to Obtain Pets</h3>
+        <p>Pets are obtained through daily Bounty quests. Defeating mobs grants eggs, which can be hatched inside the Pet Paradise building.</p>
+        <ul>
+          <li>Eggs can be green or blue.</li>
+          <li>Both egg types can produce Uncommon or Rare pets, with different probabilities.</li>
+        </ul>
+        <p>It is strongly recommended to spend diamonds daily to unlock additional Bounty mobs, as this significantly increases egg acquisition and long-term progression.</p>
+        <p>For a full explanation on how to optimize egg hatching and Pet Paradise usage, check here the <a class="inline-link" href="/html/building.html">Building</a> section covering <strong>Pet Paradise</strong>.</p>
+
+        <h3>Final Recommendations</h3>
+        <p>Always focus your resources on pets that support your main faction. Faction-specific pets provide the highest value, while all-hero pets remain useful as secondary and passive boosters.</p>
+      </div>
+    </section>
+  
+    <div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

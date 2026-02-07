@@ -1598,25 +1598,6 @@ nav ul li ul li a:hover {
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 15</th><td style="text-align:center;vertical-align:bottom">33.5k</td><td style="text-align:center;vertical-align:bottom">200000</td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 16</th><td style="text-align:center;vertical-align:bottom">50k</td><td style="text-align:center;vertical-align:bottom">300000</td></tr>
 <tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 17</th><td style="text-align:center;vertical-align:bottom">100k</td><td style="text-align:center;vertical-align:bottom">600000</td></tr>
-<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 18</th><td style="text-align:center;vertical-align:bottom">166K</td><td style="text-align:center;vertical-align:bottom">1000000</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div><p class="th-toplink"><a href="#top">Back to top</a></p></section>
-    </div>
-  </main>
-
-<div id="footer"></div>
-<script>
-  fetch("/html/footer.html")
-    .then(res => res.text())
-    .then(html => { document.getElementById("footer").innerHTML = html; });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Collapse buttons
   document.querySelectorAll('.th-section').forEach(function(section){
     section.querySelectorAll('.th-tablecard').forEach(function(card,idx){
       const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');

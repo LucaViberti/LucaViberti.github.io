@@ -272,24 +272,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-  <div id="google_translate_element" style="display:none"></div>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'it',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-    (function forceItalianTranslation(){
-      var cookieDomain = location.hostname;
-      document.cookie = 'googtrans=/en/it;path=/';
-      document.cookie = 'googtrans=/en/it;path=/;domain=' + cookieDomain;
-      localStorage.setItem('googtrans','/en/it');
-    })();
-  </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>

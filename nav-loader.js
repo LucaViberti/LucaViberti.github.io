@@ -1,12 +1,53 @@
 (function () {
+  function getLanguageFromPath(pathname = location.pathname) {
+    return pathname.startsWith('/it/') ? 'it' : 'en';
+  }
+
+  function normalizePath(pathname = location.pathname) {
+    let normalized = pathname || '/index.html';
+    if (normalized === '/') normalized = '/index.html';
+    return normalized.replace(/\/+$/, '');
+  }
+
+  function getEquivalentPath(targetLanguage, pathname = location.pathname) {
+    const normalized = normalizePath(pathname);
+    const isItalianPath = normalized.startsWith('/it/');
+
+    if (targetLanguage === 'it') {
+      return isItalianPath ? normalized : `/it${normalized}`;
+    }
+
+    if (targetLanguage === 'en') {
+      return isItalianPath ? normalized.replace(/^\/it/, '') : normalized;
+    }
+
+    return normalized;
+  }
+
   function highlightCurrent(navRoot) {
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const currentPath = normalizePath();
+
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href === current) {
+      const rawHref = a.getAttribute('href') || '';
+      if (!rawHref.startsWith('/')) return;
+
+      const hrefPath = normalizePath(rawHref);
+      if (hrefPath === currentPath) {
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
+    });
+  }
+
+  function initLanguageSelector(navRoot) {
+    const selector = navRoot.querySelector('[data-language-selector]');
+    if (!selector) return;
+
+    selector.value = getLanguageFromPath();
+    selector.addEventListener('change', (event) => {
+      const targetLanguage = event.target.value;
+      const destination = getEquivalentPath(targetLanguage);
+      location.assign(destination);
     });
   }
 
@@ -64,11 +105,15 @@
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    fetch('/html/nav.html')
+    const language = getLanguageFromPath();
+    const navUrl = language === 'it' ? '/it/html/nav.html' : '/html/nav.html';
+
+    fetch(navUrl)
       .then((res) => res.text())
       .then((html) => {
         navContainer.innerHTML = html;
         highlightCurrent(navContainer);
+        initLanguageSelector(navContainer);
         initNavInteractions(navContainer);
       })
       .catch((err) => console.error('Navbar load failed:', err));

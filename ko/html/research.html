@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 연구 트리</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+
+.img-block{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-top:10px;}
+.img-block img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.img-block .txt{flex:1 1 300px;min-width:260px;}
+
+@media (max-width:768px){.img-block{flex-direction:column}.img-block img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="research-system">
+    <h2 class="page-title">연구</h2>
+    <p class="lead">연구는 TopHeroes의 핵심 기능입니다. 전투, 경제, 성장 전반을 강화하며, 우선순위와 타이밍 관리가 장기 효율의 핵심입니다.</p>
+
+    <div class="card">
+      <h3>소개</h3>
+      <p>연구를 진행하면 전투 스탯, 자원 생산, 군대 전력 등 영구적인 개선이 해금됩니다. 전반적인 성장과 경쟁 이벤트에서 필수적인 시스템입니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>연구 오두막</h3>
+      <p>처음부터 이용 가능하며, 연구 오두막을 업그레이드하면 더 많은 연구 섹션이 해금됩니다. 완료한 연구마다 전투력이 증가해 특정 이벤트 순위에도 도움이 됩니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>가속과 길드 도움</h3>
+      <p>가속을 쓰기 전에는 항상 길드 도움을 기다리세요. 총 시간이 더 크게 줄어듭니다. 연구 가속은 특정 이벤트 날에 모아 사용해 점수를 극대화하세요.</p>
+    </div>
+
+    <div class="card">
+      <h3>연구 큐</h3>
+      <p>기본으로 큐는 1개뿐입니다. 약 $10에 두 번째 큐를 해금하면 동시에 두 개의 연구를 진행할 수 있습니다. 무과금 플레이어는 1개로 제한됩니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>전투 전문</h3>
+      <p>가장 먼저 열리는 가지입니다. 공격, 방어, 일반 스탯 등 혼합 버프를 제공합니다. 완료가 빠르므로 즉시 100% 마치는 것을 권장합니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>연구 테마</h3>
+      <p>전투 전문 이후 세 가지 전문화 가지가 해금됩니다:</p>
+      <ul>
+        <li><strong>경제</strong>: 자원 생산.</li>
+        <li><strong>성장</strong>: 시간 기반 활동 전반의 가속.</li>
+        <li><strong>대열 강화</strong>: 영웅 편성 강화.</li>
+      </ul>
+      <div class="img-block">
+        <img src="/images/economy.jpeg" alt="Economy research branch">
+        <div class="txt"><p>이 연구들은 전체 전투력을 높이며, 전투력 증가에 따라 점수가 오르는 연구일 이벤트에서 특히 가치가 높습니다.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>고급 섹션</h3>
+      <p>후반에 해금되며, Arm Race Commendation, Arm Race Prep, Soldier, Hero 가지가 포함됩니다. 일부는 큰 전투력 상승을 제공해 연구일에 좋고, 다른 일부는 점수가 적어 일반 날에 진행하기 좋습니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>Arm Race Commendation</h3>
+      <div class="img-block">
+        <img src="/images/doublerewards.jpeg" alt="Double rewards upgrade">
+        <div class="txt"><p>Guild Arm Race에서 추가 보상을 제공하며, 상자 2배도 포함됩니다. 이벤트 보상을 위해 초반에 우선순위를 높게 두세요.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Arm Race Prep</h3>
+      <div class="img-block">
+        <img src="/images/soldier.jpeg" alt="Soldier upgrade research">
+        <div class="txt"><p>유용한 스탯과 병사에게 <strong>+1 레벨 버프</strong>를 주는 핵심 업그레이드 3개가 포함되어 있습니다. 반드시 확보해야 하는 마일스톤입니다.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>병사 섹션</h3>
+      <p>여기 있는 모든 연구는 유용하며 전투력 상승 폭이 큽니다. 시간이 오래 걸리지만 자원 소모가 적어 연구일 몰아하기에 적합합니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>시즌 1: 전문가 섹션</h3>
+      <p>시즌 1과 함께 해금됩니다. Guild Arm Race, KvK, Four Nations League에 강력한 보너스를 제공합니다. 이곳의 이벤트 보상 업그레이드를 모두 확보할 때까지 다른 가지는 잠시 멈추는 것이 좋습니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>프리미엄 & 마스터 섹션</h3>
+      <p>시즌 1 후반에 프리미엄이 해금됩니다(성 40 + 오두막 40 + 병사 100%). 여기에는 Glory of League, Honor of Horde, Vitality of Nature가 포함됩니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>영구 특권 부스트</h3>
+      <div class="img-block">
+        <img src="/images/privilege.jpeg" alt="Permanent Privilege pack">
+        <div class="txt">
+          <p>과금하는 플레이어라면 강력히 추천되는 유료 옵션입니다. 제공 내용:</p>
+          <ul>
+            <li>초급 및 고급 섹션 연구 속도 50% 증가</li>
+            <li>자동 연구(연구 완료 시 자동으로 다음 연구 시작)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>마무리 팁</h3>
+      <ul>
+        <li>병사 +1 버프를 우선 확보하세요.</li>
+        <li>가속을 쓰기 전에 항상 길드 도움을 받으세요.</li>
+        <li>전투력 상승이 큰 연구는 연구일에 모아 하세요.</li>
+        <li>관련 이벤트가 아닐 때는 경제 계열을 서두르지 마세요.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

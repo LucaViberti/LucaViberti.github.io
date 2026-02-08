@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 영웅</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+/* Header/Nav (immutati rispetto al tuo file) */
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav { width: 100%; margin-top: 10px; }
+nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+}
+nav ul li { position: relative; }
+nav ul li a {
+  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
+  font-size: 0.85rem; transition: color 0.3s;
+}
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a {
+  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
+}
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+/* Enhanced navigation styling (come nel tuo file) */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul {
+  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
+}
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ---------- CONTENT REFRESH (solo main) ---------- */
+main {
+  padding: 40px 20px 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* intestazione pagina */
+.page-header {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+  border: 1px solid #e6e8ee;
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+}
+.page-header h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  letter-spacing: -0.015em;
+}
+.page-header .lead {
+  margin: 0;
+  color: #444;
+}
+
+/* griglia fazioni */
+.faction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.faction-card {
+  background: #ffffff;
+  border: 1px solid #ececf0;
+  border-radius: 14px;
+  padding: 16px;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.faction-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.06); transform: translateY(-2px); }
+.faction-card h3 { margin: 4px 0 8px; }
+
+/* pannelli informativi */
+.panel {
+  background: #ffffff;
+  border: 1px solid #ececf0;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 18px;
+}
+.panel ul {
+  margin: 8px 0 0 18px;
+}
+.panel ul.two-cols {
+  columns: 2;
+  column-gap: 24px;
+}
+@media (max-width: 640px) {
+  .panel ul.two-cols { columns: 1; }
+}
+
+/* sezione pulsante donazioni (coerente col resto) */
+.donation-section {
+  text-align: center;
+  margin-top: 28px;
+  padding: 18px;
+  background: #f7fafc;
+  border: 1px solid #e8eef5;
+  border-radius: 12px;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Footer (stile base come nel tuo) */
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+  <!-- ===== MAIN: solo formattazione, testi invariati ===== -->
+  <main id="main-content" itemscope itemtype="https://schema.org/Article">
+    
+    <section id="heroes" class="page-header">
+      <h1 itemprop="headline">영웅</h1>
+      <p class="lead">게임에는 세 가지 팩션이 있습니다: 연맹, 자연 및 호드.</p>
+    </section>
+
+    <section class="panel">
+      <p>어느 시점에서 당신은 어떤 팩션을 구성할 것인지 선택해야 합니다.</p>
+
+      <div class="faction-grid">
+        <article class="faction-card" aria-labelledby="league-title">
+          <h3 id="league-title">연맹</h3>
+          <p>게임 시작이 정말 강하고 시작 연맹 영웅을 위해 많은 조각을 얻습니다. 연맹으로 게임 전체를 경쟁할 수 있습니다. 게임 종료 호드 영웅에 약하지만 자연에 잘 작동합니다.</p>
+        </article>
+
+        <article class="faction-card" aria-labelledby="nature-title">
+          <h3 id="nature-title">자연</h3>
+          <p>시작 시 그들은 강하지만 연맹만큼은 아닙니다. 중간 게임에 연맹과 호드에 대해 투쟁합니다. 게임 종료에는 자연이 정말 강합니다. 연맹에 대해 투쟁하지만 게임 종료 호드에 대해 강합니다.</p>
+        </article>
+
+        <article class="faction-card" aria-labelledby="horde-title">
+          <h3 id="horde-title">호드</h3>
+          <p>이 팩션은 시작에 구성하기 가장 어렵습니다. 첫 번째 신화 영웅 (스톰 메이든)을 얻을 때까지 호드와 투쟁할 것입니다. 게임 종료에는 아마도 가장 강한 팩션입니다. 자연에 대해 투쟁하지만 게임 종료에 연맹에 대해 정말 강합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="traits-title">
+      <h3 id="traits-title">서사 영웅 특성</h3>
+      <p>또한 당신이 업그레이드해야 할 일부 비전설적/신화적 영웅이 있습니다. 모든 서사 영웅 (보라색)은 특성을 가지고 있으며, 여기서 일부 좋은 버프를 얻습니다. 12 별 (2 개의 은별)에 도달한 후 특성을 얻을 수 있습니다.</p>
+      <p>세 번째 특성까지 최대화할 수 있습니다. 최대 특성 레벨은 30입니다.</p>
+      <ul class="two-cols">
+        <li>패처 연구 속도</li>
+        <li>기사 병사 훈련 속도</li>
+        <li>레인저 루비 채집 속도</li>
+        <li>사제 치유 속도</li>
+        <li>댄서 치유 속도</li>
+        <li>장관 치유 속도</li>
+        <li>아웃로우 목재 채집 속도</li>
+        <li>로그 돌 채집 속도</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="shards-title">
+      <h3 id="shards-title">조각 및 승격</h3>
+      <p>보편적인 전설 조각을 저장하고 신화 영웅에만 사용해야 합니다. 당신은 술집에서 전설 영웅의 조각을 얻을 수 있기 때문입니다.</p>
+      <p>12 별을 친 후 거의 모든 전설 영웅을 신화 영웅으로 승격할 수 있습니다. 프로세스에서 그들은 훨씬 강해지고, 기술이 나아지고, 새로운 기술도 추가합니다. 당신은 총 9 개의 홍보 돌이 필요합니다. 홍보는 계층이라는 4 개의 섹션으로 나뉩니다. 모든 층에서 그들은 더 큰 버프를 얻습니다.</p>
+    </section>
+
+    
+    <div id="footer"></div> 
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    })
+    .catch(err => console.error('Footer load failed:', err));
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    '연맹':'/images/league-symbol.jpeg',
+    '자연':'/images/nature-symbol.jpeg',
+    '호드':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

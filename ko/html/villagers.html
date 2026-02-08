@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 마을 주민 및 재능 홀</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+  <style>
+/* Base */
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+/* Enhanced nav styling */
+header{background:linear-gradient(180deg,#1e2541 0%, #141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s, border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+/* Page styles */
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;font-size:1.15rem;color:#1f2937;}
+
+/* Preface with exact image placement */
+.preface{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+/* first two images: particularly small */
+.img-inline-left{float:left;max-width:9%;min-width:70px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 12px 8px 0;}
+.img-inline-right{float:right;max-width:9%;min-width:70px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 0 8px 12px;}
+.clearfix::after{content:"";display:block;clear:both;}
+
+/* Section image (Mines) */
+.section-img-right{float:right;max-width:14%;min-width:100px;height:auto;border-radius:6px;border:1px solid #e5e7eb;margin:2px 0 8px 12px;}
+
+/* Mobile adjustments */
+@media (max-width:768px){
+  .img-inline-left,.img-inline-right,.section-img-right{float:none;display:block;max-width:60%;min-width:0;margin:10px auto;}
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="villagers">
+    <h2 class="page-title">주민</h2>
+
+    <!-- Preface with images exactly as in the doc: first two inline near the first two paragraphs -->
+    <div class="preface clearfix">
+      <p class="clearfix">
+        <img src="/images/villager1.png" alt="주민 1" class="img-inline-left">
+        대부분의 건물에 최대 4명의 주민을 배치해 추가 버프를 받을 수 있습니다. 어떤 버프는 큰 의미가 없지만, 어떤 버프는 체감이 큽니다. 주민이 같은 건물에 대한 두 개의 버프를 갖고 있다면 무지개 테두리로 구분됩니다. 필요한 버프가 하나라도 있으면 사용하세요.
+      </p>
+
+      <p class="clearfix">
+        <img src="/images/villager2.png" alt="주민 2" class="img-inline-right">
+        같은 스킬을 가진 다른 주민을 재료로 소모하면 주민의 스킬 레벨을 올릴 수 있습니다. 재료로 사용한 주민은 영구적으로 사라지지만 선택한 주민의 스킬이 상승합니다. 레벨업에 쓰기 전에, 먼저 해당 건물에 필요한 주민 4명을 모두 모으는 것을 권장합니다. 화살표가 보이면 재료로 사용할 주민이 충분하다는 뜻입니다.
+      </p>
+
+      <p>모든 주민과 버프를 확인하려면 <a href="tips.html">팁 &amp; 더보기</a> 페이지를 방문하세요.</p>
+    </div>
+
+    <!-- From here, the chapters (cards) -->
+    <div class="card clearfix">
+      <h3>광산</h3>
+      <img src="/images/villager3.png" alt="주민 3" class="section-img-right">
+      <p>광산 주민은 수확량 증가 주민을 배치하면 게임 내 최상급 효율을 보여줍니다. 광산 생산량이 2~3배까지 늘어날 수 있습니다. <strong>광산에는 반드시 수확량 증가 주민만 배치하세요.</strong> 아직 없다면, 그때까지는 저장 시간 증가 주민을 사용하세요.</p>
+    </div>
+
+    <div class="card">
+      <h3>대장간 / 연구소 / 병영 / 부대 스킨 센터</h3>
+      <p>여기서는 <strong>퍼센트 속도 증가</strong>만 집중하세요. 그 외 주민은 사용할 가치가 낮습니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>병원</h3>
+      <p>치유 속도는 초반에 강력하지만, 시즌 1부터 부상 병사가 훨씬 많아집니다. 군비 경쟁이나 KvK를 위해 병사를 저장하려면 <strong>병원 수용량</strong> 주민도 매우 중요합니다. 시즌 1 이후에는 <strong>두 종류를 섞어</strong> 사용하는 것을 추천합니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>훈련장</h3>
+      <p><strong>훈련 수용량 %</strong>가 훨씬 좋습니다. 특히 훈련장 레벨이 높을수록 효과가 큽니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>주점</h3>
+      <p><strong>하루에 주민 1명 추가 방문 확률 증가</strong> 주민을 사용하세요. 무료 영웅 시간 감소 버프는 효과가 약하고 체감이 거의 없습니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>감시탑</h3>
+      <p>여기서는 <strong>PvP 행군 속도</strong>가 최선입니다. 게임을 바꿀 정도는 아니지만, 월드맵 전투에서 작은 차이를 만들어 줍니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>영웅 석상</h3>
+      <p>영웅 석상 버프는 약한 편입니다. 필요하다면 생존이 부족할 때는 <strong>HP</strong> 주민, 피해가 부족할 때는 <strong>공격</strong> 주민을 사용하세요. 초반에는 고정 ATK/HP가 더 좋고, 후반에는 퍼센트 버프가 더 잘 스케일됩니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>메달 홀</h3>
+      <p>메달 홀 버프는 영웅 석상보다 강합니다. 영웅 석상과 동일하게 <strong>ATK</strong>와 <strong>HP</strong>를 섞어도 되고, 필요에 따라 한 쪽에 집중해도 됩니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>부대</h3>
+      <p><strong>행군 규모 증가</strong>를 제외하면 모든 버프가 유용합니다. <strong>피해 증가</strong>와 <strong>피해 감소</strong> 주민을 우선하세요.</p>
+    </div>
+
+    <div class="card">
+      <h3>석상</h3>
+      <p>석상 주민은 효율이 좋지 않습니다. <strong>영웅 HP</strong>와 <strong>ATK</strong> 증가를 우선하세요. 행군 규모 주민도 쓸 수는 있지만 최적은 아닙니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>길드</h3>
+      <p><strong>지원 횟수 증가</strong> 주민에 집중하세요. 받을 수 있는 지원 횟수가 늘면 건설과 연구 시간이 크게 줄어듭니다.</p>
+    </div>
+
+    <div class="card">
+      <h3>성</h3>
+      <p>최고의 버프는 <strong>수확량 퍼센트 증가</strong>와 <strong>건설 속도 증가</strong>입니다. 그 외 버프는 효율이 낮습니다.</p>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word];
+    img.alt=word+' symbol';
+    img.style.height='1em';
+    img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{
+    const t=a.textContent.trim();
+    if(icons[t]) addIcon(a,t);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
+    const t=h.textContent.trim();
+    if(icons[t]) addIcon(h,t);
+  });
+});
+</script>
+</body>
+</html>

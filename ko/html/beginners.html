@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 초보자 가이드</title>
+  <meta name="description" content="Top Heroes 초보자 가이드: 첫 번째 단계, 마을 및 건물, 길드, 자원, 술집 및 조각, 진영, 지출 팁, 이벤트, 연구, 주민, 마차 및 약탈, 스태미나, 월드 맵 등." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <!-- Stripe Buy Button (one-time include) -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <style>
+/* ====== Base styles (from your template) ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav { width: 100%; margin-top: 10px; }
+nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+}
+nav ul li { position: relative; }
+nav ul li a {
+  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
+  font-size: 0.85rem; transition: color 0.3s;
+}
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); background: #1f1f21;
+  border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a {
+  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
+}
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer {
+  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; font-weight: bold; transition: background 0.3s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul {
+  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
+}
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ====== Page-specific helpers ====== */
+.page-title { margin-top: 0; font-size: 2rem; }
+.toc {
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 28px;
+}
+.toc h3 { margin: 0 0 12px; font-size: 1.1rem; }
+.toc ol { margin: 0; padding-left: 18px; }
+.small { font-size: 0.95rem; color: #4b5563; }
+
+.note {
+  background: #fff8e1; border: 1px solid #ffe08a; border-radius: 8px; padding: 12px 14px; margin: 16px 0;
+}
+
+/* =========================
+   NEW: Main restyle (scoped)
+   ========================= */
+.th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
+.th-beginner * { box-sizing: border-box; }
+.th-beginner { color: var(--ink); }
+.th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
+
+/* Grid: sticky TOC on desktop */
+.th-beginner .layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1024px){
+  .th-beginner .layout {
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+  }
+  .th-beginner .toc {
+    position: sticky; top: 20px;
+    margin: 0; /* moved into grid, no extra gap */
+  }
+  
+}
+
+/* Cards for sections */
+.th-beginner .section-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.th-beginner .section-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.th-beginner h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--head);
+}
+.th-beginner h3 {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  color: var(--head);
+}
+
+/* Nice bullets and spacing */
+.th-beginner p { margin: 10px 0 12px; }
+.th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
+.th-beginner li { padding-left: 4px; margin: 6px 0; }
+.th-beginner li::marker { color: var(--brand); }
+
+/* Links */
+.th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
+.th-beginner a:hover { border-bottom-style: solid; }
+
+/* TOC polish */
+.th-beginner .toc { border-color: var(--border); }
+.th-beginner .toc h3 { color: var(--head); font-weight: 600; }
+.th-beginner .toc a { display: inline-block; padding: 2px 0; }
+
+/* Anchor-friendly offset for in-page headings */
+.th-beginner section { scroll-margin-top: 90px; }
+
+/* Emphasis blocks already present as .note – just refine */
+.th-beginner .note {
+  background: linear-gradient(0deg,#fffdf5,#fffdf5);
+  border-color: #ffe08a;
+  font-size: .95rem;
+}
+
+/* Optional table styles (future-proof if you add tables) */
+.th-beginner .table-wrap { overflow-x: auto; }
+.th-beginner table {
+  width: 100%; border-collapse: collapse; border: 1px solid var(--border);
+  background: #fff; border-radius: 10px; overflow: hidden;
+}
+.th-beginner thead th {
+  position: sticky; top: 0; background: #f8fafc; text-align: left;
+  padding: 10px; font-weight: 600; border-bottom: 1px solid var(--border);
+}
+.th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
+.th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
+
+/* Subtle separators between cards on mobile */
+@media (max-width: 1023px){
+  .th-beginner .section-card + .section-card { margin-top: 8px; }
+}
+
+/* Small tag for section numbers (purely decorative) */
+.th-beginner .kicker {
+  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
+  padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+}
+
+/* Back-to-top helper */
+.th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
+
+/* ====== Donation blocks (Stripe) ====== */
+.donation-block{
+  border:1px solid #e8eef5; background:#f9fbff;
+  padding:22px 16px; margin:24px 0; border-radius:12px;
+  text-align:center; box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+.donation-block p{ margin:0 0 10px; color:#334155; font-size:1rem; }
+.donation-card{
+  background:#ffffff; border:1px solid #e5e7eb; border-radius:12px;
+  padding:16px; margin:22px 0; text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+.donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main class="th-beginner">
+  <header class="site-info" aria-hidden="true" style="display:none"></header>
+
+  <!-- Back-to-top anchor -->
+  <div id="top" aria-hidden="true"></div>
+
+  <h1 class="page-title">초보자 가이드</h1>
+  <p class="lead small">여기서 시작하세요: 기본 규칙, 초기 우선순위, 스마트 지출, 자원 낭비 없이 빠르게 진행하는 방법.</p>
+
+  <div class="layout">
+    <!-- Sticky TOC on desktop -->
+    <nav class="toc" aria-label="On this page">
+      <h3>목차</h3>
+      <ol>
+        <li><a href="#intro">소개 및 첫 번째 단계</a></li>
+        <li><a href="#village">마을 및 건물</a></li>
+        <li><a href="#guild">길드 가입</a></li>
+        <li><a href="#farming">자원 채취</a></li>
+        <li><a href="#tavern">술집 및 영웅 조각</a></li>
+        <li><a href="#factions">영웅 및 진영</a></li>
+        <li><a href="#spending">실제 돈 사용</a></li>
+        <li><a href="#events">이벤트</a></li>
+        <li><a href="#research">연구</a></li>
+        <li><a href="#social">사회 및 월드 채팅</a></li>
+        <li><a href="#villagers">주민</a></li>
+        <li><a href="#carriage">마차 및 약탈</a></li>
+        <li><a href="#traits">길드 특성</a></li>
+        <li><a href="#stamina">스태미나</a></li>
+        <li><a href="#worldmap">월드 맵 – 적, 자원, 연합 공격</a></li>
+        <li><a href="#conclusion">일반적인 결론</a></li>
+      </ol>
+    </nav>
+
+    <!-- Right column: content cards -->
+    <div class="content">
+      <!-- 1. Introduction -->
+      <section id="intro" class="section-card">
+        <div class="kicker">섹션 1</div>
+        <h2>1. 소개 및 첫 번째 단계</h2>
+        <p><em>Top Heroes</em>를 다운로드하고 게임을 시작하면 가장 먼저 보게 되는 것은 <strong>모험</strong>입니다. 초기에는 경로가 가이드되고 필수적입니다. 가장 중요한 것은 나중에 중요할 자원을 낭비하지 않는 것입니다. 다음 규칙을 기억하세요:</p>
+        <ul>
+          <li><strong>레어 영웅(파란색 배경)에 고기를 낭비하지 마세요</strong>. 그들은 강화할 가치가 없으며 나중에 절대 사용되지 않습니다.</li>
+          <li><strong>초기에 다이아몬드를 사용하지 마세요</strong>. 대기 시간이 짧고 다이아몬드는 너무 귀합니다.</li>
+        </ul>
+        <p>모험의 흐름을 따르고, 진행하며, 영웅이나 불필요한 초고속화에 자원을 낭비하지 마세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 2. Village and Buildings -->
+      <section id="village" class="section-card">
+        <div class="kicker">섹션 2</div>
+        <h2>2. 마을 및 건물</h2>
+        <p>모험에서 어느 정도 시간이 지나면 <strong>마을</strong>에 도달하게 됩니다. 건설하고 강화할 여러 건물을 보게 됩니다. 처음에는 강화가 필수이지만, 곧 우선순위를 자유롭게 선택할 수 있습니다. 첫 번째 목표는 <strong>성</strong>을 빠르게 레벨업하는 것이어야 하며, 이상적으로는 <strong>레벨 20–25</strong>까지입니다. 이것은 필수 건물을 잠금 해제하고 더 높은 영웅 및 병사 레벨을 허용합니다.</p>
+        <p>성과 함께 <strong>연구 오두막</strong>, <strong>병원</strong>, <strong>길드</strong>, <strong>훈련장</strong>(성 강화 요구사항)에 집중하세요. <strong>병영</strong>을 잊지 마세요: 5레벨마다 병사가 한 레벨 얻습니다—이것은 당신의 대기열을 크게 부스트합니다.</p>
+        <p>더 많은 정보는 <a href="building.html">건물</a> 페이지를 참조하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 3. Joining a Guild -->
+      <section id="guild" class="section-card">
+        <div class="kicker">섹션 3</div>
+        <h2>3. 길드 가입</h2>
+        <p>성 레벨 7부터 <strong>길드</strong>에 가입할 수 있습니다. 이것은 매우 중요합니다. <strong>상위 3개</strong> 길드에 가입하는 것을 목표로 하세요. 불가능하면 최소한 상위 10개입니다. 강한 길드는 활발하고, 활발한 플레이어를 모집하며, 비활발한 사람들을 제거합니다. 걱정하지 마세요—모든 사람이 약 같은 시간에 시작했으므로 빠르게 따라잡을 수 있습니다.</p>
+
+        <h3 id="guild-help">3.1 도움 및 초고속화</h3>
+        <p><strong>길드 도움</strong>은 큰 장점입니다. 건설이나 연구를 시작할 때마다 <em>도움</em>을 누르세요: 길드 동료들이 당신을 위해 타이머를 줄일 수 있습니다. 초고속화를 사용하기 전에 항상 도움을 요청하고 기다리세요. 초고속화(건설, 연구, 범용 등)는 사용하기 좋지만, <strong>초고속화를 위해 다이아몬드를 사용해서는 안 됩니다</strong>. 모든 가능한 도움을 받은 후에 초고속화를 현명하게 사용하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 4. Farming Resources -->
+      <section id="farming" class="section-card">
+        <div class="kicker">섹션 4</div>
+        <h2>4. 자원 채취</h2>
+        <p>주요 자원은 <strong>목재</strong>, <strong>돌</strong>, <strong>루비</strong>입니다. 거의 모든 것에 필요합니다. 최고의 초기 방법은 모험에서 진행하는 것입니다. 막히면 당신의 라인업을 개선하고 다시 시도하세요.</p>
+        <p>길드 활동도 필수적입니다:</p>
+        <ul>
+          <li><strong>길드 비밀 시험</strong>: 자원을 제공하는 미니 레벨. 집단적으로 완료하면 추가 보상을 받습니다.</li>
+          <li><strong>길드 탐험</strong>: 하루에 한 번 시도 가능. <em>축복</em> 버튼으로 버프를 받고 <strong>100 길드 포인트</strong>를 얻습니다. 길드 상점에서 길드 포인트를 소비하세요.</li>
+        </ul>
+        <p>다른 출처로는 <strong>탐험</strong>, <strong>현상금 홀</strong>(8시간마다 미션), <strong>스테이지</strong>(시간이 지남에 따라 잠금 해제)가 있습니다.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 5. Tavern and Hero Shards -->
+      <section id="tavern" class="section-card">
+        <div class="kicker">섹션 5</div>
+        <h2>5. 술집 및 영웅 조각</h2>
+        <p><strong>술집 토큰</strong>으로 술집에서 <strong>영웅 조각</strong>을 얻을 수 있습니다. 초기 게임: 자유롭게 사용하세요. 영웅들은 별이 강화될 때 큰 폭으로 개선됩니다. <strong>전설적인 범용 영웅 조각을 낭비하지 마세요</strong>—나중을 위해 저장하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 6. Heroes and Factions -->
+      <section id="factions" class="section-card">
+        <div class="kicker">섹션 6</div>
+        <h2>6. 영웅 및 진영</h2>
+        <p>영웅은 세 가지 진영에 속합니다: <strong>연맹</strong>, <strong>호드</strong>, <strong>자연</strong>. 자세한 내용은 <a href="heroes.html">영웅</a> 페이지를 참조하세요. <strong>한 개의 주요 대기열</strong>에 집중하고 단일 진영의 영웅들로 구성하세요. 이것은 진영 버프를 부여하고 시즌 1에서 더욱 중요해집니다. 모든 대기열을 균형 잡으려고 하지 마세요—하나를 매우 강하게 만드세요.</p>
+        <ul>
+          <li><strong>연맹</strong>: 초기에는 가장 쉽게 구축할 수 있지만 중기–장기적으로 비용이 많이 들 수 있으며, 특히 무과금 플레이어에게 그렇습니다.</li>
+          <li><strong>호드</strong>: 스마트한 플레이가 필요합니다; 처음에는 강하지 않지만 장기적으로는 매우 강하며, 일반적으로 연맹보다 비용이 적습니다.</li>
+          <li><strong>자연</strong>: 초기에는 가장 어렵게 구축할 수 있습니다. 초기 자연 영웅들은 약하고 종종 대체됩니다; 훨씬 나중에만 강합니다.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- Donation block between sections -->
+      <section class="donation-block" aria-label="Support the project">
+        <p>이 팁들이 도움이 되었다면 당신의 프로젝트를 지원하기 위해 기부를 고려해주세요. 가이드를 무료로 유지하고 업데이트합니다.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </section>
+
+      <!-- 7. Spending Real Money -->
+      <section id="spending" class="section-card">
+        <div class="kicker">섹션 7</div>
+        <h2>7. 실제 돈 사용</h2>
+        <p><em>Top Heroes</em>는 무과금으로 플레이하거나 적게 지출하거나 많이 지출할 수 있습니다. 예산이 어떻게 되든 항상 공식 <em>Top Heroes</em> 웹사이트에서 <strong>금 블록</strong>을 구매하세요. 게임 내 구매는 더 적은 이점을 줍니다. 사이트에서 항상 <strong>+5% 금 블록</strong>과 마일스톤 보상을 받습니다. 그 다음 게임 내에서 금 블록을 사용하세요.</p>
+
+        <h3 id="best-purchases">7.1 최고의 구매</h3>
+        <ul>
+          <li><strong>월간 패스</strong>: 추가 대기열(특권 대기열), 자동 사냥, 광고 보상 2배, 일일 선물. 가장 비용 효율적입니다. 사이트에서 금 블록을 구매하면 첫 번째 마일스톤으로 <strong>30% 할인</strong>을 받습니다.</li>
+          <li><strong>광고 제거 (2$)</strong>: 영구적입니다. 일일 광고 보상을 즉시 청구할 수 있습니다. 훌륭한 장기 가치입니다.</li>
+          <li><strong>건설 대기열</strong>: 기본값 1; 최대 3개 이상 (2$, 10$, 20$). 영구적이며 매우 유용합니다.</li>
+          <li><strong>연구 대기열</strong>: 기본값 1, 최대 2개. 두 번째 대기열을 10$로 잠금 해제하세요. 영구적입니다.</li>
+          <li><strong>모험 시작 (최고 가격)</strong>: 몇 일에 걸쳐 훌륭한 보상이 포함된 저렴한 제한 팩 (3개 버전).</li>
+          <li><strong>팩</strong>: 일일 영웅 조각 팩 ~5$; 큰 지출자들에게만 유용합니다.</li>
+          <li><strong>스킨</strong>: 매우 강력합니다(전역 버프). 전설적 30$, 신화 100$. 큰 지출자들은 우선순위를 정해야 합니다.</li>
+          <li><strong>휠 및 주사위 이벤트</strong>: 매주 번갈아 나타납니다. 신화 영웅이 포함될 때까지 티켓을 저장하세요.</li>
+          <li><strong>모험 배틀 패스</strong>: 선택사항 (15$, 20$, 또는 둘 다 30$). 강한 부스트이지만 필수는 아닙니다.</li>
+          <li><strong>펀드</strong> (건설, 모험, 전력, 성장): 좋은 중간 지출자 가치입니다.</li>
+          <li><strong>일일 특별</strong>: 영웅 조각을 선택하세요; <strong>별 보석</strong>(극도로 귀합니다)을 줍니다. 나중에 신화 영웅도 여기에 나타납니다.</li>
+          <li><strong>일일/주간 팩</strong>: 소액 지출자들에게는 낮은 가치; 중간/큰 지출자들이 고려할 수 있습니다.</li>
+          <li><strong>다이아몬드 상점</strong>: 절대 구매하지 마세요(팩과 같은 가격이지만 추가 보상 없음).</li>
+          <li><strong>VIP 포인트</strong>: 모든 구매로 얻습니다; 혜택을 잠금 해제하지만 VIP 레벨만을 위해 구매하지 마세요. 일일 �ests도 5 VIP 포인트를 줍니다.</li>
+        </ul>
+        <p>지출할 새로운 팩과 이벤트가 계속 있을 것이지만, 위의 기본사항들은 초보자들에게 가장 중요합니다.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 8. Events -->
+      <section id="events" class="section-card">
+        <div class="kicker">섹션 8</div>
+        <h2>8. 이벤트</h2>
+        <p><em>Top Heroes</em>는 정기적인 이벤트와 일회성 이벤트를 가지고 있습니다. 초기에는 가장 중요한 것은 <strong>최고 군주</strong> 이벤트입니다. 단순히 플레이하고 당신의 <strong>영향력</strong>을 높임으로써 <strong>그리폰 성</strong> 스킨을 포함한 훌륭한 보상을 잠금 해제합니다. 성 스킨은 드물며, 특히 무과금 플레이어에게는 그렇습니다.</p>
+        <p>사용되지 않는 영웅에게 유휴 병사를 배치하고 <strong>병영</strong>을 강화하여 병사 레벨을 증가시켜 영향력을 부스트하세요. <strong>창고</strong>, <strong>술집</strong>, <strong>감시탑</strong>과 같은 다른 건물들도 빠른 영향력 부스트를 제공할 수 있습니다.</p>
+        <ul>
+          <li><strong>월드 보스</strong>: 매일, 5번 공격하세요. 스태미나 비용 없음, 손실 없음. 고정 보상과 약간의 순위 보상을 제공합니다—그냥 5번 때리세요.</li>
+          <li><strong>폐허 사냥</strong>: 월드 맵의 일일 상자 미션. 매일 모두 하세요. 초반에 다이아몬드를 사용하여 새로고침하지 마세요. 길드 동료들을 돕습니다(자주색과 금색 우선). 당신은 다른 사람의 폐허 사냥을 약탈할 수 있습니다—<strong>전설적인(금색) 레벨 4</strong> 상자를 우선하세요.</li>
+          <li><strong>초보자 전용 이벤트</strong>: <em>초보자 목표</em>, <em>7일</em>, <em>전력 급증</em>. 처음 며칠에만 사용 가능합니다—시간 내에 완료하세요.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 9. Research -->
+      <section id="research" class="section-card">
+        <div class="kicker">섹션 9</div>
+        <h2>9. 연구</h2>
+        <p>연구는 <strong>연구 오두막</strong>에서 수행됩니다. 초기에는 <strong>전투 전문성</strong>에만 집중하세요. 완전히 완료하여 다른 모든 연구 트리를 잠금 해제하세요. 자세한 내용은 <a href="research.html">연구</a> 페이지를 확인하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 10. Social -->
+      <section id="social" class="section-card">
+        <div class="kicker">섹션 10</div>
+        <h2>10. 사회 및 월드 채팅</h2>
+        <p>성 레벨 7에서 <strong>월드 채팅</strong>이 잠금 해제됩니다. 초반에는 시끄럽지만 며칠 안에 관리자들이 정리할 것입니다. 좋은 커뮤니케이션 채널이 됩니다. <strong>초대 코드</strong>는 약간의 보상(일부 조각, 장비, 다이아몬드)을 주지만 게임을 바꾸지는 않습니다. 친구들을 초대할 수 있다면 사용하세요; 그렇지 않으면 무시하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 11. Villagers -->
+      <section id="villagers" class="section-card">
+        <div class="kicker">섹션 11</div>
+        <h2>11. 주민</h2>
+        <p>매일, <strong>주민</strong>은 당신의 마을에 저장될 수 있습니다(모험에도 나타날 수 있음). 첫 번째 일일 퀘스트를 완료하면 주민을 즉시 소환할 수 있는 티켓을 얻습니다. 저장되면 <strong>재능 홀</strong>에서 주민을 배치하여 건물을 부스트하세요. 초기에는 <em>빠른 파견</em>이 좋습니다; 나중에는 더 나은 보너스를 위해 배치를 최적화하세요. <a href="villagers.html">주민</a> 페이지를 참조하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 12. Carriage & Plunder -->
+      <section id="carriage" class="section-card">
+        <div class="kicker">섹션 12</div>
+        <h2>12. 마차 및 약탈</h2>
+        <p><strong>4개의 마차를 매일 파견</strong>할 수 있습니다. 희귀도: 일반, 언커먼, 레어, 전설, 신화. 항상 무료 새로고침을 사용하여 좋은 보상을 찾으세요, 이상적으로 <strong>영웅 조각</strong>입니다. 5번의 새로고침 후 <strong>전설</strong>이 보장되며, 성 레벨 15부터 <strong>5% 확률</strong>로 <strong>신화</strong>가 보장됩니다. 신화 및 전설 마차는 절대 희귀도가 떨어지지 않습니다. 조각을 최대화하려고 노력하세요, 특히 <strong>범용 전설 조각</strong>.</p>
+        <p><strong>신화 마차</strong>는 공유될 수 있습니다. 공유된 마차는 모든 사람에게 전체 보상을 주고 추가 보호를 제공합니다. 일부 서버는 전체 신화 마차(5/5명)를 공격하지 않는 규칙을 채택합니다. 당신의 서버에 없다면 제안하세요—이것은 최고 보상에 대한 안전을 보장합니다.</p>
+        <p><strong>약탈</strong>: 당신은 <strong>매일 4개의 마차를 공격</strong>할 수 있습니다. 최고의 보상이 있는 목표를 선택하세요(보통 범용 전설 조각). 실패한 공격은 시도를 사용하지 않습니다. 마차는 두 번 공격될 수 있습니다(<em>신화는 세 번</em>). 약탈하기 전에 <em>세부 정보</em>를 확인하여 마차가 가득 찼는지 확인하세요; 서버 규칙이 전체 신화 공격을 금지한다면 공격하지 마세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- Compact donation card later in the page -->
+      <div class="donation-card" aria-label="Support the project">
+        <p>이 섹션이 유용하다고 생각하신가요? 이 가이드들을 계속 개선할 수 있도록 기부로 도와주세요.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </div>
+
+      <!-- 13. Guild Traits -->
+      <section id="traits" class="section-card">
+        <div class="kicker">섹션 13</div>
+        <h2>13. 길드 특성</h2>
+        <p><strong>길드</strong> 건물의 <strong>특성</strong> 아래에서 회원들은 버프를 잠금 해제하기 위해 기부할 수 있습니다. <strong>기부는 30분마다 재생되며</strong>, 최대 <strong>20개까지 저장</strong>됩니다. 절대 20에서 캡하지 마세요, 그렇지 않으면 재생이 멈춥니다. 각 10개의 다이아몬드로 기부할 수 있지만 초기에는 가치가 없습니다. 모든 기부는 <strong>길드 포인트</strong>를 주기도 하며, 이는 길드 상점에서 사용 가능합니다. 최적의 지출을 위해 <a href="shop.html">상점</a> 페이지를 참조하세요.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 14. Stamina -->
+      <section id="stamina" class="section-card">
+        <div class="kicker">섹션 14</div>
+        <h2>14. 스태미나</h2>
+        <p><strong>스태미나</strong>는 월드 맵의 공격에 필요하며 시간이 지남에 따라 재생됩니다. 하루 두 번 <strong>80 스태미나</strong>를 청구할 수 있습니다(최소 4시간 차이). <strong>월간 특권</strong>은 매일 50 스태미나, 또는 보너스 포함하여 100을 제공합니다. <strong>25개 및 50개 스태미나 스택</strong>이 있으며 초기에 자유롭게 사용할 수 있습니다. <strong>150 스태미나를 5$에 사용하는 것을 피하세요</strong>—낮은 가치입니다.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 15. World Map -->
+      <section id="worldmap" class="section-card">
+        <div class="kicker">섹션 15</div>
+        <h2>15. 월드 맵 – 적, 자원, 연합 공격</h2>
+        <p>월드 맵의 돋보기를 클릭하여 세 가지 섹션을 찾으세요:</p>
+        <ul>
+          <li><strong>적</strong>: 가드들(목재, 돌, 루비)과 싸우면 레벨 30까지 자원을 얻습니다. 초기에 유용합니다. 또한 항상 <strong>전설 숨김처소</strong>를 하루 3번 공격하여 무료 보상을 받으세요.</li>
+          <li><strong>자원</strong>: 첫 정복은 고정 보상을 줍니다. 병력을 남기면 <strong>수집</strong>이 됩니다. 가능하면 <strong>루비를 수집</strong>하세요(특히 밤새). 목재와 돌은 덜 귀합니다.</li>
+          <li><strong>연합 공격</strong>: 길드 동료들과 보스들과 싸우세요. 스태미나를 사용하고 보상을 받는 좋은 방법입니다. 연합 공격에 참여하는 것은 무료이고 처음 <strong>50개를 매일</strong> 보상을 받습니다—최대한 많이 참여하세요.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- 16. Conclusion -->
+      <section id="conclusion" class="section-card">
+        <div class="kicker">섹션 16</div>
+        <h2>16. 일반적인 결론</h2>
+        <p><em>Top Heroes</em>는 신중한 계획과 자원 저축을 보상합니다. 아주 초반에는 대부분의 항목을 자유롭게 소비할 수 있습니다(<strong>다이아몬드</strong>와 <strong>전설적인 범용 조각</strong> 제외). 나중에 게임이 바뀝니다: 당신은 <em>길드 레이스</em> 또는 <em>무장 길드 레이스</em>와 같은 이벤트 중에 최대 포인트를 얻기 위해 자원을 전략적으로 소비할 것입니다. 이 사고방식—올바른 시간에만 저축하고 소비하는 것—은 장기적인 성공의 핵심입니다.</p>
+        <a class="toplink" href="#top">↑ 맨 위로</a>
+      </section>
+
+      <!-- Optional donation block (kept from base; show/hide as you prefer)
+      <div class="donation-section section-card">
+        <p>이 가이드가 도움이 되었다면 사이트 성장을 계속할 수 있도록 작은 기부를 고려하세요.</p>
+        <a class="donation-button" href="donate.html">기부</a>
+      </div>
+      -->
+    </div>
+  </div>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+/* Icons script from your base (adds small faction icons next to matching words) */
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    '연맹':'/images/league-symbol.jpeg',
+    '자연':'/images/nature-symbol.jpeg',
+    '호드':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' 기호';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

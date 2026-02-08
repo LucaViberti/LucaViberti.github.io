@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 호드 영웅</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
+
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="horde-heroes">
+    <h2 class="page-title">호드 — 전설 영웅</h2>
+    <p class="lead">호드 팩션 가이드: 전사, 주문술사, 추천 구성 및 핵심 경험담.</p>
+
+    <div class="card">
+      <h3>최고의 구성 — 호드</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>메인</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">전방</div>
+            <div class="lineup-heroes">
+              <img src="/images/desert-prince.jpeg" alt="Desert Prince">
+              <img src="/images/swordmaster.jpeg" alt="Swordmaster">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">중앙</div>
+            <div class="lineup-heroes">
+              <img src="/images/storm-maiden.jpeg" alt="Storm Maiden">
+              <img src="/images/warlock.jpeg" alt="Warlock">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">후방</div>
+            <div class="lineup-heroes">
+              <img src="/images/shaman.jpeg" alt="Shaman">
+              <img src="/images/witch.jpeg" alt="Witch">
+            </div>
+          </div>
+          <div class="lineup-note"><strong>팁:</strong> Desert Prince 전설은 호드의 최고 영웅이고 Storm Maiden 신화는 게임 체인저입니다.</div>
+        </div>
+
+        <div class="lineup-card">
+          <h3>초기 게임</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">전방</div>
+            <div class="lineup-heroes">
+              <img src="/images/swordmaster.jpeg" alt="Swordmaster">
+              <img src="/images/barbarian.jpeg" alt="Barbarian">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">중앙</div>
+            <div class="lineup-heroes">
+              <img src="/images/wilderness-hunter.jpeg" alt="Wilderness Hunter">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">후방</div>
+            <div class="lineup-heroes">
+              <img src="/images/shaman.jpeg" alt="Shaman">
+              <img src="/images/soulmancer.jpeg" alt="Soulmancer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shaman -->
+    <div class="card">
+      <h3>샤먼</h3>
+      <div class="role">힐러 (스타터)</div>
+      <div class="hero">
+        <img src="/images/shaman.jpeg" alt="Shaman">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>주술 치유</em>: 팀 치유.</li>
+            <li><em>신령의 축복</em>: 팀 보호, 피해 감소.</li>
+            <li><em>음령 분산</em>: 부정적인 효과 제거.</li>
+            <li><em>정령 동료</em>: 행동 불가 저항.</li>
+            <li><em>자연의 품</em>: 전투 중 재생.</li>
+          </ul>
+          <p>호드의 완벽한 스타터 힐러입니다. 초반 생존을 담당하며 나중에도 사용됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swordmaster -->
+    <div class="card">
+      <h3>검술 대사</h3>
+      <div class="role">탱크</div>
+      <div class="hero">
+        <img src="/images/swordmaster.jpeg" alt="Swordmaster">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>검술 마스터</em>: 회피력 증가, 반격.</li>
+            <li><em>연쇄 베기</em>: 여러 대상 공격.</li>
+            <li><em>전사의 기지</em>: 방어력 증가.</li>
+            <li><em>검의 춤</em>: 동작 속도 증가.</li>
+            <li><em>강철 의지</em>: 상태 이상 저항.</li>
+          </ul>
+          <p>호드의 튼튼한 탱크이며 높은 데미지도 입힙니다. 초반부터 후반까지 신뢰할 수 있는 전선 보유자입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desert Prince (best legend) -->
+    <div class="card">
+      <h3>사막 왕자</h3>
+      <div class="role">탱크/DPS (최고)</div>
+      <div class="hero">
+        <img src="/images/desert-prince.jpeg" alt="Desert Prince">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>모래 폭풍</em>: 범위 피해, 대상 약화.</li>
+            <li><em>사막의 통치</em>: 팀 공격력 증가.</li>
+            <li><em>모래 갑옷</em>: 피해 감소, 반사.</li>
+            <li><em>신기루</em>: 자신 방어 증가, 회피.</li>
+            <li><em>사막의 왕</em>: 모든 통계 증가.</li>
+          </ul>
+          <p><strong>호드의 최고 전설 영웅입니다.</strong> 탱크 역할을 하면서 무시무시한 데미지를 입히며 팀을 강화합니다. 우선순위 업그레이드.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Storm Maiden (mythic, game changer) -->
+    <div class="card">
+      <h3>폭풍 소녀</h3>
+      <div class="role">DPS (신화 - 게임 체인저)</div>
+      <div class="hero">
+        <img src="/images/storm-maiden.jpeg" alt="Storm Maiden">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>번개 타격</em>: 높은 고정 피해.</li>
+            <li><em>폭풍</em>: 범위 연쇄 피해.</li>
+            <li><em>전기 방패</em>: 반사 데미지.</li>
+            <li><em>번개 속도</em>: 공격 속도 대폭 증가.</li>
+            <li><em>폭풍의 군주</em>: 모든 피해 증가.</li>
+          </ul>
+          <p><strong>신화 호드 영웅으로서 게임 체인저입니다.</strong> 무릿무시한 데미지와 속도로 게임을 지배합니다. 신화로 도달하면 절대적인 DPS가 됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Witch (best healer) -->
+    <div class="card">
+      <h3>마녀</h3>
+      <div class="role">힐러/서포트 (최고의 힐러)</div>
+      <div class="hero">
+        <img src="/images/witch.jpeg" alt="Witch">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>회복 물약</em>: 모든 팀 치유.</li>
+            <li><em>마법 보호</em>: 시드 강화.</li>
+            <li><em>약초 학</em>: 치유력 증가.</li>
+            <li><em>주술 도움</em>: 팀 부정 효과 제거.</li>
+            <li><em>마녀의 축복</em>: 모든 팀 생명력 재생.</li>
+          </ul>
+          <p><strong>호드의 최고 힐러입니다.</strong> 강력한 치유와 생존 제공 능력으로 팀을 살린다. 나중 게임에서 필수 선택.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barbarian -->
+    <div class="card">
+      <h3>야만인</h3>
+      <div class="role">탱크</div>
+      <div class="hero">
+        <img src="/images/barbarian.jpeg" alt="Barbarian">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>광폭화</em>: 체력이 낮을 때 공격력 증가.</li>
+            <li><em>도끼 돌진</em>: 전방 범위 공격.</li>
+            <li><em>가죽 방어</em>: 방어력 증가.</li>
+            <li><em>분노 유발</em>: 피해를 흡수합니다.</li>
+            <li><em>야만의 힘</em>: 모든 데미지 증가.</li>
+          </ul>
+          <p>호드의 강력한 탱크 선택지입니다. 높은 통계와 생존력으로 초반 보호합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warlock -->
+    <div class="card">
+      <h3>마술사</h3>
+      <div class="role">서포트/DPS</div>
+      <div class="hero">
+        <img src="/images/warlock.jpeg" alt="Warlock">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>암흑 저주</em>: 적 능력력 약화.</li>
+            <li><em>영혼 추출</em>: 에너지 흡수.</li>
+            <li><em>섀도우 보호</em>: 팀 피해 감소.</li>
+            <li><em>어둠의 은혜</em>: 팀 방어력 증가.</li>
+            <li><em>마법 증폭</em>: 능력 피해 증가.</li>
+          </ul>
+          <p>호드의 다재다능한 서포터입니다. 상황에 따라 적을 약화시키거나 팀을 강화합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wilderness Hunter -->
+    <div class="card">
+      <h3>광야 사냥꾼</h3>
+      <div class="role">DPS</div>
+      <div class="hero">
+        <img src="/images/wilderness-hunter.jpeg" alt="Wilderness Hunter">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>정조준 사격</em>: 높은 고정 피해.</li>
+            <li><em>화살비</em>: 범위 공격.</li>
+            <li><em>추적 기술</em>: 정확도 증가.</li>
+            <li><em>역경 극복</em>: 낮은 체력 시 회피 증가.</li>
+            <li><em>사냥의 기술</em>: 모든 통계 증가.</li>
+          </ul>
+          <p>호드의 신뢰할 수 있는 DPS입니다. 지속 피해와 정확도로 적을 제압합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soulmancer -->
+    <div class="card">
+      <h3>영혼 술사</h3>
+      <div class="role">서포트</div>
+      <div class="hero">
+        <img src="/images/soulmancer.jpeg" alt="Soulmancer">
+        <div class="txt">
+          <strong>능력</strong>
+          <ul>
+            <li><em>영혼 소환</em>: 팀을 돕는 영혼 생성.</li>
+            <li><em>신령 보호</em>: 팀 방어 증가.</li>
+            <li><em>영혼 연결</em>: 팀 피해 감소.</li>
+            <li><em>신령 투시</em>: 정확도 증가.</li>
+            <li><em>영혼의 합</em>: 모든 팀 통계 증가.</li>
+          </ul>
+          <p>호드의 신비로운 서포터입니다. 팀을 강화하고 적을 방해합니다.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

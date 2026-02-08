@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 애완동물</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #d1d1d6;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f21;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #2c2c2e;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+
+header .tagline {
+  color: #b0b6c7;
+}
+
+nav ul {
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+nav ul li ul li a {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+.pets-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 55%, #eef2ff 100%);
+  border: 1px solid #d9deee;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(23, 38, 77, 0.1);
+  padding: 34px;
+}
+
+.pets-shell h2 {
+  margin: 0 0 18px;
+  font-size: 2.15rem;
+  color: #1c2742;
+  letter-spacing: 0.01em;
+}
+
+.pets-shell h3 {
+  margin: 30px 0 12px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #1e2e54;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dfe4f4;
+}
+
+.pets-shell p,
+.pets-shell li {
+  font-size: 1.06rem;
+  color: #1f2a44;
+}
+
+.pets-shell p {
+  margin: 10px 0 12px;
+}
+
+.pets-shell ul {
+  margin: 8px 0 12px 24px;
+  padding: 0;
+}
+
+.pets-shell li {
+  margin-bottom: 10px;
+}
+
+.pets-inline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 12px 0 8px;
+}
+
+.pet-inline {
+  margin: 6px 12px 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d7dff2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(18, 37, 78, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(18, 37, 78, 0.18);
+}
+
+.pet-inline img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dfe4f2;
+}
+
+.pet-inline.small img {
+  width: 96px;
+  height: 96px;
+}
+
+.inline-link {
+  color: #1f65d6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+  <main>
+    <section id="pets">
+      <div class="pets-shell">
+        <h2>애완동물</h2>
+        <p>애완동물은 핵심 진행 시스템이며 영웅 라인업을 강화하기 위해 절대적으로 필수적입니다. 영웅 라인업을 영구적으로 강화하고 당신의 전체 힘에 직접 영향을 미치는 추가 진영별 보너스를 제공합니다.</p>
+
+        <h3>애완동물 범주</h3>
+        <p>애완동물은 두 가지 주요 범주로 나눌 수 있습니다: 진영별 애완동물과 전체 영웅 애완동물.</p>
+        <ul>
+          <li><strong>진영별 애완동물</strong>: 특정 진영에 속하는 영웅에게 더 강력한 스탯 부스트를 제공합니다 (리그, 호드, 자연).
+            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="애완동물 9"></span>
+          </li>
+          <li><strong>전체 영웅 애완동물</strong>: 진영과 관계없이 모든 영웅에게 적용되는 일반 보너스를 제공합니다.
+            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="애완동물 8"></span>
+          </li>
+        </ul>
+
+        <h3>주요 진영에 따른 애완동물 선택</h3>
+        <p>애완동물에 자원을 투자하기 전에 당신의 주요 진영을 파악하는 것이 매우 중요합니다. 당신의 주요 애완동물은 항상 이 진영과 일치하여 효율성과 힘을 극대화해야 합니다.</p>
+        <p>초반 진영별 애완동물들은:</p>
+        <ul>
+          <li><strong>리그</strong>: 에기</li>
+          <li><strong>호드</strong>: 하울리 (호드별 스킬 때문에 사용, 전체 영웅 애완동물이지만)</li>
+          <li><strong>자연</strong>: 카크티니</li>
+        </ul>
+        <p>하울리는 진정한 호드 전용 스탯 애완동물이 아닙니다. 기본 보너스는 모든 영웅에게 적용되지만 라인업에 충분한 수의 호드 영웅이 있을 때 활성화되는 진영별 스킬을 가지고 있습니다. 이 메커니즘은 애완동물이 전설급 희귀도에 도달하면 모든 애완동물에 대해 존재합니다.</p>
+        <div class="pets-inline-row" aria-label="애완동물 참조 4 및 3">
+          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="애완동물 4"></span>
+          <span class="pet-inline"><img src="/images/pet3.png" alt="애완동물 3"></span>
+        </div>
+
+        <h3>배치된 애완동물과 미배치 애완동물</h3>
+        <p>라인업에 할당된 애완동물은 적극적으로 보너스를 제공합니다. 하지만 배치되지 않은 애완동물도 여전히 수동 버프를 제공합니다. 이는 메인 대기열에 사용되는 것뿐만 아니라 여러 애완동물을 강화하는 것이 중요하다는 것을 의미합니다.</p>
+
+        <h3>애완동물 희귀도</h3>
+        <p>처음에는 애완동물이 두 가지 희귀도로 제공됩니다:</p>
+        <ul>
+          <li><strong>흔함 (초록색)</strong>: 애완동물 먹이를 얻기 위해 안전하게 방출할 수 있습니다.
+            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="애완동물 7"></span>
+          </li>
+          <li><strong>신귀 (파란색)</strong>: 승격에 필수적이므로 보관해야 합니다.
+            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="애완동물 6"></span>
+          </li>
+        </ul>
+
+        <h3>레벨 올리기 vs 승격</h3>
+        <p>애완동물의 힘을 높이는 두 가지 주요 방법이 있습니다: 레벨 올리기 및 승격.</p>
+        <ul>
+          <li><strong>레벨 올리기</strong>: 애완동물 먹이를 사용합니다. 애완동물이 전설급 희귀도에 도달하면 애완동물 에센스도 필요합니다.
+            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="애완동물 1"></span>
+          </li>
+          <li><strong>승격</strong>: 희귀도 및 별 레벨을 증가시킵니다. 애완동물 먹이가 아닌 중복 애완동물이 필요합니다.
+            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="애완동물 2"></span>
+          </li>
+        </ul>
+        <p>이 두 시스템은 상호 관련이 있습니다. 레벨 캡은 한 단계 더 진행하기 위해 승격이 필요하며, 승격은 해금하기 위해 최소 애완동물 레벨이 필요합니다.</p>
+        <p>모든 레벨 올리기 및 승격 요구사항을 다루는 자세한 비용 테이블은 여기를 확인하세요 <a class="inline-link" href="/ko/html/tips.html">비용 테이블</a> 웹사이트의 페이지에서.</p>
+
+        <h3>중복 애완동물 처리</h3>
+        <p>각 애완동물의 가장 높은 레벨 사본만 보너스를 제공합니다. 동일한 애완동물의 여러 사본은 버프가 누적되지 않습니다.</p>
+        <p>이러한 이유로 다음을 해야 합니다:</p>
+        <ul>
+          <li>각 애완동물의 한 개 사본만 유지 및 강화하세요.</li>
+          <li>실수로 방출되지 않도록 그 애완동물을 잠그세요.</li>
+          <li>다른 모든 사본은 승격 재료로만 사용하세요.</li>
+        </ul>
+        <div class="pets-inline-row" aria-label="애완동물 참조 10">
+          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="애완동물 10"></span>
+        </div>
+
+        <h3>보조 대기열 애완동물</h3>
+        <p>보조 대기열에 애완동물을 할당할 때 주요 진영이 여전히 우선순위 되어야 합니다. 여러 진영별 애완동물에 투자하는 대신 보조 대기열과 일치하는 진영별 스킬이 있는 전체 영웅 애완동물을 사용하는 것이 더 똑똑할 수 있습니다.</p>
+
+        <h3>고급 애완동물</h3>
+        <p>게임 후반부에는 진정한 진영별 애완동물이 사용 가능해집니다. 호드 플레이어의 경우 플리커킷이 해금되며 직접 호드별 스탯 부스트를 제공합니다.</p>
+        <p>충분한 자원이 있는 플레이어는 주요 호드 애완동물로 하울리에서 플리커킷으로 전환하는 것을 고려할 수 있습니다.</p>
+        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="애완동물 5"></span>
+
+        <h3>애완동물 얻는 방법</h3>
+        <p>애완동물은 일일 현상금 퀘스트를 통해 얻어집니다. 몬스터를 물리치면 알을 떨어뜨리며, 애완동물 낙원 건물 내에서 부화시킬 수 있습니다.</p>
+        <ul>
+          <li>알은 초록색 또는 파란색일 수 있습니다.</li>
+          <li>두 알 유형 모두 흔함 또는 신귀 애완동물을 생성할 수 있으며 확률이 다릅니다.</li>
+        </ul>
+        <p>이는 알 획득을 크게 증가시키고 장기 진행을 돕기 때문에 매일 다이아몬드를 소비하여 추가 현상금 몬스터를 해금하는 것이 강력히 권장됩니다.</p>
+        <p>알 부화 및 애완동물 낙원 사용을 최적화하는 방법에 대한 전체 설명은 여기를 확인하세요 <a class="inline-link" href="/ko/html/building.html">건물</a> 섹션 <strong>애완동물 낙원</strong> 포함.</p>
+
+        <h3>최종 권장사항</h3>
+        <p>항상 주요 진영을 지원하는 애완동물에 자원을 집중하세요. 진영별 애완동물은 가장 높은 가치를 제공하며 전체 영웅 애완동물은 보조 및 수동 부스터로 유용하게 남습니다.</p>
+      </div>
+    </section>
+  
+    <div id="footer"></div>
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

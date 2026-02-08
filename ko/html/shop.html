@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - 상점</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #b0b6c7;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e9e9ee;
+}
+
+section h2, section h3 {
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #0b5ed7;
+  border: 1px solid #d6e9ff;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+ul.keylist {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.note {
+  background: #f6f9ff;
+  border-left: 4px solid #29abe0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 760px) {
+  .grid.two {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+.decor-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  border: 1px solid #e5e5ea;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.donation-button:hover {
+  background: #2389b5;
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+
+  <section id="shop">
+    <h2>상점 가이드 <span class="badge">주간 & 일일 갱신</span></h2>
+    <p>이 페이지는 모든 게임 내 상점에서 무엇을 사야 하는지(무엇을 건너뛰어야 하는지)를 설명하며, <strong>F2P</strong>, <strong>소/중과금</strong>, <strong>고과금</strong>을 위한 빠른 우선순위를 제공합니다.</p>
+  </section>
+
+  <section id="gems">
+    <h3>보석 &amp; 다이아</h3>
+    <p><em>첫 부분은 주간, 두 번째 부분은 일일로 갱신됩니다.</em></p>
+    <ul class="keylist">
+      <li><strong>스타 젬:</strong> 주로 일일 특가 팩에서 얻으며, <em>군비 경쟁</em> 같은 이벤트에서도 소량 획득합니다.</li>
+    </ul>
+    <div class="note">
+      <p><strong>프로필별 우선순위</strong></p>
+      <ul>
+        <li><strong>F2P:</strong> 스타 포인트를 모아 <em>전설 승급석</em>을 구매하세요.</li>
+        <li><strong>소/중과금:</strong> 주 공격 부대용 <em>소울</em>도 구매할 수 있습니다.</li>
+        <li><strong>고과금:</strong> 매번 <em>전설 승급석</em>을 전부 구매한 뒤, 가능한 한 많은 <em>소울 스톤</em>을 구매하세요.</li>
+      </ul>
+      <p>일일 항목은 고과금에게는 좋지만, F2P에게는 효율이 낮습니다. 주간 갱신에 집중하세요.</p>
+    </div>
+  </section>
+
+  <section id="vip">
+    <h3>VIP 상점</h3>
+    <p><em>주간 갱신. VIP 10에서 완전 해금.</em></p>
+    <ul class="keylist">
+      <li><strong>매주 구매:</strong> 유물 두루마리 • 펫 먹이 • 범용 가속 • 스태미나.</li>
+    </ul>
+    <p class="note">그 외 아이템은 비싸므로, 다이아가 충분하거나 특정 아이템이 꼭 필요할 때만 구매하세요.</p>
+  </section>
+
+  <section id="daily">
+    <h3>일일 상점</h3>
+    <p><em>일일 갱신. VIP 10에서 완전 해금.</em></p>
+    <ul class="keylist">
+      <li><strong>우선 구매:</strong> 프리미엄 마차 교환권 • 조각 • 토큰 • 펫 먹이 • 스태미나.</li>
+      <li><strong>선택:</strong> 고기 및 장비 강화 룬 (VIP가 높고 다이아가 많을 때).</li>
+    </ul>
+    <p class="note">나머지 항목은 가격이 높으니, 사치성 구매로 취급하세요.</p>
+  </section>
+
+  <section id="points">
+    <h3>포인트 상점</h3>
+
+    <div class="grid two">
+      <div>
+        <h4>장식</h4>
+        <p><em>주간 갱신.</em> 이 상점은 <strong>매일</strong> 열어 무료 장식 토큰 8개를 받으세요.</p>
+        <ul class="keylist">
+          <li>토큰을 <strong>500</strong>까지 모은 뒤, 할인된 <strong>전설</strong> 장식을 구매하세요.</li>
+          <li>장식 한 개로 게임이 크게 바뀌진 않습니다. 주 공격 부대에 유용한 옵션이 나올 때까지 기다리세요.</li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <img src="/images/DecoStore.jpg" alt="Decor Store example" class="decor-img">
+          <figcaption style="font-size:.85rem;color:#666;margin-top:6px;">예시: 장식 상점 (데스크톱 및 모바일 대응)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h4 id="arena">아레나</h4>
+    <p><em>주간 갱신.</em></p>
+    <ul class="keylist">
+      <li><strong>필수 구매:</strong> 다이아 • 첫 모집 토큰.</li>
+      <li><strong>매우 좋음:</strong> 장식 선택 상자.</li>
+      <li><strong>추천:</strong> 영웅 스킨 (아레나 포인트 약 12,000 필요).</li>
+      <li><strong>또 가치 있음:</strong> 고급 이전.</li>
+    </ul>
+    <p class="note">그 외 아이템은 비싸니, 도전 토큰이 많고 명확한 필요가 있을 때만 구매하세요.</p>
+
+    <h4 id="medal">메달</h4>
+    <p><em>주간(첫 부분) + 일일(두 번째 부분).</em></p>
+    <ul class="keylist">
+      <li><strong>첫 부분:</strong> 아직 없다면 각 타입의 병사 스킨을 1개씩만 구매하세요. 이후에는 에픽을 무료로 받거나 전설은 과금으로 얻기 때문에, 메달은 아껴두는 것이 좋습니다.</li>
+      <li><strong>두 번째 부분:</strong> <strong>매일</strong> 모든 가속을 구매하고, 자원은 비상시에 대비해 남겨두세요(일일 사용에는 가격이 비쌉니다).</li>
+    </ul>
+  </section>
+
+  <section id="combat-valor">
+    <h3>전투 용맹</h3>
+    <p><em>주간 갱신. 토큰은 고대 전장 및 5v5에서 획득합니다.</em></p>
+    <p class="note"><strong>목표:</strong> 이 토큰은 거의 전적으로 <em>전설 승급석</em>에 사용하세요. 다른 아이템에 분산 투자하지 마세요.</p>
+  </section>
+
+  <section id="guild-store">
+    <h3>길드 상점</h3>
+    <h4 id="guild-points">길드 포인트</h4>
+    <p><em>일일(첫 부분) + 주간(두 번째 부분).</em></p>
+    <p>활동량이 충분하면 대부분을 구매할 수 있으니 전부 사세요. 활동량이 적다면 우선순위는 다음과 같습니다:</p>
+    <ul class="keylist">
+      <li><strong>우선:</strong> 금고 열쇠.</li>
+      <li><strong>그 다음 일일:</strong> 정제 금속 • 마법석 • 펫 먹이.</li>
+    </ul>
+    <p class="note">며칠만 지나면 포인트 수급이 늘어나며 나머지도 구매할 수 있습니다.</p>
+
+    <h4 id="guild-honor">길드 명예</h4>
+    <p><em>주간 갱신. 길드 레이스에서 획득.</em></p>
+    <ul class="keylist">
+      <li><strong>최우선:</strong> 소울 스톤 (진영이 주간 순환: League → Horde → Nature → 반복; 시즌 1 시작 즈음 등장).</li>
+      <li>범용 전용 장비 조각 (시즌 1 시작 후 몇 주 뒤).</li>
+      <li>범용 전설 부대 스킨 (약 25k 포인트).</li>
+    </ul>
+    <p class="note"><strong>집중:</strong> 길드 레이스에서 가능한 많은 점수를 획득한 뒤, 필요한 소울 스톤을 위해 저장하세요.</p>
+    <p style="font-size:.9rem;color:#666;"><em>알림:</em> 범용 전설 부대 스킨만으로는 특정 전설 부대 스킨을 해금할 수 없습니다.</p>
+  </section>
+
+  <section id="trade-store">
+    <h3>교환 상점</h3>
+    <h4 id="hero">영웅</h4>
+    <p><em>주간 갱신.</em> 영웅이 최대 별에 도달하면 교환할 수 있습니다. 파란 영웅은 모두 교환하세요. 석상 사용 가치는 낮으며, 보라 영웅을 모두 최대치로 만든 뒤에나 의미가 있습니다. 보라 영웅은 필요에 따라 교환하거나 특성/석상을 위해 보관하세요.</p>
+
+    <h4 id="relics">유물</h4>
+    <p><em>주간 갱신.</em> 유물이 최대 별에 도달하면 안전하게 교환할 수 있습니다. 조각은 필요에 맞게 사용하고, 유물 팁을 참고해 투자 방향을 결정하세요.</p>
+
+    <h4 id="resources">자원</h4>
+    <p><em>일일(첫 부분) + 주간(두 번째 부분).</em></p>
+    <ul class="keylist">
+      <li>게임 내내 <strong>고기</strong>가 부족합니다. <strong>목재</strong>와 <strong>석재</strong>를 고기로 교환하세요.</li>
+      <li>주간 교환은 길드 특성에 따라 달라집니다.</li>
+      <li>거래 가치를 확인하세요. 마지막 줄 아이템은 종종 비쌉니다.</li>
+    </ul>
+    <p class="note">이 상점은 자원 소비로 계산되어 <em>길드 레이스</em> 등 이벤트에 매우 유용합니다. 거래 타이밍을 맞추세요.</p>
+  </section>
+
+  <section id="season-store">
+    <h3>시즌 상점</h3>
+    <p>현재는 <strong>포인트를 전부 저장</strong>하는 것이 최선입니다. 최적 경로가 확정되면 업데이트하겠습니다.</p>
+  </section>
+
+  <div id="footer"></div>
+<script>
+  fetch("/ko/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes 가이드 - 길드 레이스</title>
+  <meta name="description" content="길드 레이스 가이드: 진행 방식, 권장 및 비추천 과제, 보상, 시즌 1 연구 강화, 명예 상점 우선순위." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <style>
+    /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
+      --text:#0f1220; --muted:#667085; --ink2:#374151; --accent:#29abe0;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    header{
+      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      border-bottom:1px solid #2b2f3a;
+      padding:12px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header .site-info{display:flex;flex-direction:column;align-items:center;}
+
+    main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
+    @media (min-width: 768px){ main.content{padding:48px 24px 72px;} }
+
+    .page-header{
+      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
+      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
+      box-shadow:0 2px 6px rgba(0,0,0,.03);
+    }
+    .page-header h1{
+      margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head);
+      letter-spacing:-.015em; font-weight:800;
+    }
+    .page-header .lead{margin:0; color:var(--ink2); font-size:1rem}
+
+    .toc{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:16px 18px; margin:18px 0 22px; box-shadow:0 4px 12px rgba(16,19,25,.04);
+    }
+    .toc h3{margin:0 0 8px; font-size:1.05rem; color:var(--head); letter-spacing:.01em}
+    .toc ol{margin:0; padding-left:18px}
+    .toc a{color:var(--ink2); text-decoration:none}
+    .toc a:hover{color:#0b7cab; text-decoration:underline}
+
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:22px 22px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
+    }
+    .card h2{font-size:1.35rem; margin:0 0 10px; color:var(--head); letter-spacing:-.01em}
+    .card h3{font-size:1.08rem; margin:14px 0 6px; color:#1f2937;}
+    .muted{color:var(--muted); font-size:.96rem;}
+    .content p{margin:0 0 12px}
+    .content ul{margin:10px 0 0 22px}
+    .content li{margin:4px 0}
+
+    figure{margin:14px 0; display:flex; flex-direction:column; align-items:center}
+    figure img{
+      display:block; border-radius:10px; border:1px solid #edf0f5;
+      width:100%; max-width:720px; height:auto; box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
+
+    :target > h2{position:relative}
+    :target > h2::after{
+      content:""; position:absolute; left:0; bottom:-8px; width:72px; height:2px; background:var(--accent);
+      border-radius:2px;
+    }
+
+    #navbar,#footer{margin:0;}
+  </style>
+</head>
+<body>
+
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <main class="content" itemscope itemtype="https://schema.org/Article">
+    <section class="page-header">
+      <h1 itemprop="headline">길드 레이스</h1>
+      <p class="lead">진행 방식, 우선할(또는 피할) 과제, 보상 주기, 시즌 1 연구 강화, 명예 상점 우선순위를 정리했습니다.</p>
+    </section>
+
+    <nav class="toc" aria-label="On this page">
+      <h3>목차</h3>
+      <ol>
+        <li><a href="#overview">개요</a></li>
+        <li><a href="#recommended">사용해야 할 과제</a></li>
+        <li><a href="#early-exclusive">초반 중반 이후에 열리는 전용 과제</a></li>
+        <li><a href="#save-for-others">군비 경쟁 / 왕국 vs 왕국에 아껴둘 것</a></li>
+        <li><a href="#avoid">절대 사용하지 말아야 할 과제</a></li>
+        <li><a href="#rewards">보상</a></li>
+        <li><a href="#season1">시즌 1 연구</a></li>
+        <li><a href="#honour-shop">명예 상점</a></li>
+      </ol>
+    </nav>
+
+    <section class="card" id="overview">
+      <h2>개요</h2>
+      <p>길드 레이스는 게임의 핵심 이벤트 중 하나입니다. 가능한 한 많은 명예 포인트를 얻는 것이 목표입니다. 명예 상점은 게임 내에서도 최고의 상점 중 하나입니다. 
+과제를 완료하면 포인트를 얻습니다. 시작 시 과제 티켓 9장을 무료로 받고, 매일 15장을 추가로 구매할 수 있습니다. 최소한 매일 처음 5장은 꼭 구매하는 것을 추천합니다(300 다이아로 매우 저렴). 이후 10장은 장당 300 다이아입니다. 골드 과제를 충분히 보유하고 있을 때는 이 10장도 구매해 완료하는 것이 좋습니다. 명예 상점이 매우 좋기 때문에 추가 구매는 가치가 큽니다. 길드원들에게도, 과제를 빠르게 끝낼 계획이 있을 때만 받도록 안내하는 것을 추천합니다. 예를 들어 누군가가 병사 과제를 몇 시간 동안 막아두면 길드 전체 진행이 느려집니다.  
+전용 과제 슬롯은 2개이며, 10분마다 하나를 무료로 새로고침할 수 있습니다. 원하면 100 다이아로 대기 없이 새로고침할 수 있지만, 비용 대비 효율이 낮아 추천하지 않습니다. 그 다이아로 과제 티켓을 더 사는 것이 낫습니다. 대부분의 전용 과제는 완료에 필요한 자원이 더 적습니다. 예를 들어 전용 병사 과제는 400명 훈련이면 완료되지만, 길드 과제는 500명이 필요합니다. 과제를 미리 준비해두는 것도 가능합니다. 예를 들어 나중에 특정 과제가 필요하다면 무료 새로고침으로 뽑아 보관해두고, 다른 전용 과제 슬롯은 계속 새로고침하면서 원하는 과제를 찾을 수 있습니다. 리셋 후 전용 과제가 갱신됩니다. 리셋 이후에 쓰고 싶은 과제를 유지하려면, 리셋 전에 그 과제를 수락해두면 리셋 후에도 유지됩니다. 과제를 포기해도 전용 과제 목록에는 남아 있습니다. 이 방법으로 다음 날 사용할 과제를 미리 준비할 수 있습니다. 
+원하는 과제가 나오려면 운도 필요합니다. 그래서 전용 과제만 사용하는 것은 좋지 않습니다. 가능한 한 많은 골드 과제를 완료할 수 있도록 자신에게 맞는 최적 경로를 찾아야 합니다. 약간의 과금을 할 의향이 있다면 과제 선택 티켓을 구매하세요. 길드 레이스가 훨씬 쉬워집니다. 이 티켓을 사용하면 3번째 전용 과제 슬롯이 생기고, 필요한 과제를 직접 뽑을 수 있습니다. 주의: 과제 선택 티켓은 반드시 골드 과제에만 사용하세요. 
+모든 과제가 길드 레이스에 적합한 것은 아닙니다. 블루 과제를 완료하는 데 과제 티켓을 쓰지 마세요. 블루보다 3배 포인트를 주는 퍼플 과제는 어렵지 않게 완료할 수 있습니다. 최선은 골드 과제만 사용하는 것입니다. 골드 과제가 가장 많은 포인트를 줍니다.</p>
+
+      <figure>
+        <img src="/images/guildrace1.png" alt="Guild Race overview example" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="card" id="recommended">
+      <h2>길드 레이스에서 사용해야 할 과제</h2>
+      <ul>
+        <li>병사 훈련 과제(골드 과제만 사용. 가장 쉬운 과제 중 하나로, 매일 최소 2개는 완료 가능)</li>
+        <li>건설 과제(골드 과제만 사용. 건물 보상을 미리 수령하지 말고 과제를 기다리세요. 전용 골드 과제가 나올 때까지 버티기 좋은 과제입니다)</li>
+        <li>연구 과제(초중반에는 필요한 연구 부스트가 1~2개 연구로는 충족되지 않아 다소 어렵습니다. 이후 연구가 며칠씩 걸릴 때는 한 번의 연구로도 과제 조건을 채울 만큼 영향력이 쌓입니다. 연구가 끝났는데 과제가 없으면 연구 시간을 날릴 수 있으니 반드시 미리 준비하세요)</li>
+        <li>다이아 소모 과제(전용 과제로만, 가능하면 골드 과제로 사용. 매주 다이아를 쓰고 싶은 항목이 충분히 있습니다. 이 과제가 뜰 때까지 기다렸다가, 먼저 매일 구매할 항목을 사고 나서 주간 상점에서 필요한 것을 구매해 마무리하세요)</li>
+        <li>패키지에서 다이아 구매(게임에 실제 돈을 쓰는 경우 이 과제를 기다리세요. 다른 골드/퍼플 과제보다 더 많은 포인트를 주는 유일한 과제입니다. 전용 과제에서만 나옵니다. 구매 전에 과제를 완료할 수 있는지 확인하세요. 1,600 다이아 미만이면 퍼플 과제를 쓰는 편이 낫습니다)</li>
+        <li>집결 시작 및 보스 처치(퍼플 과제 전용. 과제 티켓이 너무 많고 일부 과제를 소진하고 싶을 때 사용하기 쉬운 과제)</li>
+        <li>월드맵 몬스터 처치(퍼플 과제 전용. 자원을 쓰지 않고 완료할 수 있는 가장 쉬운 과제. 집결에 참여하면 추가 자원 없이 완료 가능합니다. 위 과제와 마찬가지로 골드 과제를 못 끝내고 남은 과제가 있을 때 사용)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace2.png" alt="Recommended tasks example" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="card" id="early-exclusive">
+      <h2>초반 중반 이후에 열리는 전용 과제</h2>
+      <p>초반이 조금 지나면 전용 과제로만 등장하는 과제를 추가로 받게 됩니다. 이 과제들은 일반 골드 과제보다 약간 더 많은 포인트를 줍니다.</p>
+      <ul>
+        <li>전설 유물 파편 소모(3~4일차에 등장. 골드 과제만 사용. 전설 유물 파편을 모아두었다가 길드 레이스에서 이 과제가 뜰 때만 사용)</li>
+        <li>마법석 소모(3~4일차 전용 과제. 골드 과제만 사용. 마법석을 모아두었다가 과제가 뜨면 사용. 무역 상점 - 자원에서 마법석을 비전 결정으로 교환해도 완료됩니다. 비전 결정은 항상 부족하므로, 무역 상점을 활용하면 주간에 최소 3개 과제를 완료할 수 있습니다)</li>
+        <li>메달 사용(5~7일차 전용 과제. 골드 과제만 사용. 메달을 모아두었다가 길드 레이스 과제와 함께 사용. 예외는 메달 상점으로, 길드 레이스가 없는 주에는 속도업을 위해 메달을 사용해도 됩니다)</li>
+        <li>군주의 장비 전투력 증가(5~7일차 전용 과제. 골드 과제만 사용. 군주 장비 업그레이드를 과제에 맞춰 진행하세요. 다른 날에는 업그레이드하지 않는 것이 좋습니다. 
+팁: 군주 장비를 동일 레벨 3개 또는 6개로 맞추면 보너스가 생깁니다. 이 보너스 전투력 상승만으로도 과제 하나를 완료할 수 있습니다. 이 점을 활용해 장비 한 부위를 업그레이드하여 보너스를 발동시키면 과제를 바로 완료할 수 있습니다)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace3.png" alt="Early game exclusive tasks example" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="card" id="save-for-others">
+      <h2>완료할 수는 있지만 군비 경쟁과 왕국 vs 왕국에 아껴두는 것을 추천하는 과제</h2>
+      <ul>
+        <li>연구 또는 건설 가속 사용(완료에 필요한 가속이 너무 많습니다. 이 과제 대신 쉬운 퍼플 과제를 쓰는 편이 낫습니다)</li>
+        <li>전설 파편 소모(영웅을 ASAP로 강화하고 싶다면 사용할 수 있지만, 전설 파편은 군비 경쟁이나 왕국 vs 왕국에 남겨두는 것이 더 좋습니다)</li>
+      </ul>
+    </section>
+
+    <section class="card" id="avoid">
+      <h2>절대 사용하지 말아야 할 과제</h2>
+      <ul>
+        <li>선술집에서 영웅 모집(퍼플 과제만 존재하며, 이 과제를 추천하지 않습니다. 월드맵 몬스터 처치로 동일한 명예 포인트를 받을 수 있습니다. 선술집 티켓은 군비 경쟁과 왕국 vs 왕국을 위해 아껴두세요)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace4.png" alt="Task to avoid example" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="card" id="rewards">
+      <h2>보상</h2>
+      <p>주간 개인 및 길드 명예 포인트에 따른 보상도 있습니다. 길드 레이스마다 최소 7,000 명예 포인트를 얻어 최대 보상을 받는 것을 목표로 하세요(시즌 1 연구 이전에는 최대 보상 상한이 6,000포인트). 조금만 시간을 투자해도 10,000포인트 이상은 쉽게 달성할 수 있습니다. 앞서 말했듯, 가능한 한 많은 명예 포인트를 모으면 명예 상점에서 더 많은 아이템을 구매할 수 있습니다. 매일 처음 5장의 과제 티켓을 구매하면 이번 주에 완료할 수 있는 과제가 총 44개가 됩니다.</p>
+
+      <figure>
+        <img src="/images/guildrace5.png" alt="Rewards example" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="card" id="season1">
+      <h2>시즌 1에서 세계수의 그림자 연구 구역에 길드 레이스용 강력한 업그레이드 2개가 추가됩니다</h2>
+      <p>첫 번째는 개인 명예 포인트 6,500 및 7,000 달성 보상, 그리고 길드 명예 포인트 65,000 및 70,000 달성 보상입니다. 
+두 번째 연구는 연구 트리의 좀 더 아래에 있으며, 과제를 완료할 때 얻는 명예 포인트가 증가합니다.
+가능한 빨리 이 두 가지 연구 업그레이드를 진행하는 것을 추천합니다.</p>
+    </section>
+
+    <section class="card" id="honour-shop">
+      <h2>명예 상점에서 구매할 수 있는 것</h2>
+      <p>게임이 조금 진행된 이후에 추가되는 중요한 구매 항목은 다음과 같습니다:</p>
+      <ul>
+        <li>소울 스톤 / 6,000 명예 포인트(플레이 중인 주 진영의 소울스톤을 항상 구매. 무과금 유저에게는 영웅 소울스톤의 주요 공급원)</li>
+        <li>범용 부대 스킨 / 전설 12,000 명예 포인트 / 영웅 1,200 명예 포인트</li>
+        <li>전설 범용 영웅 파편 / 개당 300</li>
+        <li>범용 전용 장비 파편 / 개당 400</li>
+        <li>전설 범용 유물 파편 / 개당 800</li>
+        <li>드래곤 정수 / 개당 120(후반에는 드래곤 정수가 많이 필요하므로 좋은 수급처)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace6.png" alt="Honour shop example" loading="lazy" />
+      </figure>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("/ko/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(console.error);
+  </script>
+</body>
+</html>

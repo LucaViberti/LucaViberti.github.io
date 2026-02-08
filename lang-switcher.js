@@ -2,12 +2,14 @@
 const LangSwitcher = {
   STORAGE_KEY: 'topheroes-lang',
   DEFAULT_LANG: 'en',
-  LANGS: ['en', 'de'],
+  LANGS: ['en', 'de', 'ko'],
   
   // Rileva la lingua corrente dal path
   getCurrentLang: function() {
     const path = window.location.pathname;
-    return path.startsWith('/de/') ? 'de' : 'en';
+    if (path.startsWith('/de/')) return 'de';
+    if (path.startsWith('/ko/')) return 'ko';
+    return 'en';
   },
   
   // Salva la lingua preferita
@@ -29,18 +31,29 @@ const LangSwitcher = {
     
     if (currentLang === targetLang) return currentPath;
     
+    // Primo, rimuovi i prefissi di lingua dal path
+    let basePath = currentPath;
+    if (basePath.startsWith('/de/')) {
+      basePath = basePath.slice(3);
+    } else if (basePath.startsWith('/ko/')) {
+      basePath = basePath.slice(3);
+    }
+    
+    // Aggiungi il prefisso della lingua target
     if (targetLang === 'de') {
-      // en → de
-      if (currentPath === '/' || currentPath === '/index.html') {
+      if (basePath === '' || basePath === '/index.html') {
         return '/de/index.html';
       }
-      return '/de' + currentPath;
-    } else {
-      // de → en
-      if (currentPath === '/de/index.html') {
-        return '/index.html';
+      return '/de' + (basePath.startsWith('/') ? basePath : '/' + basePath);
+    } else if (targetLang === 'ko') {
+      if (basePath === '' || basePath === '/index.html') {
+        return '/ko/index.html';
       }
-      return currentPath.replace('/de/', '/');
+      return '/ko' + (basePath.startsWith('/') ? basePath : '/' + basePath);
+    } else {
+      // en - ritorna il basePath senza prefisso
+      if (basePath === '') return '/index.html';
+      return basePath.startsWith('/') ? basePath : '/' + basePath;
     }
   },
   
@@ -66,6 +79,10 @@ const LangSwitcher = {
         <a href="#" onclick="LangSwitcher.switchLanguage('de'); return false;" style="margin: 0 8px; text-decoration: none; ${currentLang === 'de' ? 'font-weight: bold; color: #0066cc;' : 'color: #666;'}">
           🇩🇪 Deutsch
         </a>
+        <span style="color: #ccc;">|</span>
+        <a href="#" onclick="LangSwitcher.switchLanguage('ko'); return false;" style="margin: 0 8px; text-decoration: none; ${currentLang === 'ko' ? 'font-weight: bold; color: #0066cc;' : 'color: #666;'}">
+          🇰🇷 한국어
+        </a>
       </div>
     `;
   },
@@ -75,6 +92,7 @@ const LangSwitcher = {
     const currentLang = this.getCurrentLang();
     const isEN = currentLang === 'en';
     const isDE = currentLang === 'de';
+    const isKO = currentLang === 'ko';
     
     return `
       <a href="#" onclick="LangSwitcher.switchLanguage('en'); return false;" class="lang-btn ${isEN ? 'active' : ''}">
@@ -84,6 +102,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('de'); return false;" class="lang-btn ${isDE ? 'active' : ''}">
         <span class="lang-flag">🇩🇪</span>
         <span>Deutsch</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('ko'); return false;" class="lang-btn ${isKO ? 'active' : ''}">
+        <span class="lang-flag">🇰🇷</span>
+        <span>한국어</span>
       </a>
     `;
   },
@@ -113,6 +135,7 @@ const LangSwitcher = {
     const currentLang = this.getCurrentLang();
     const isEN = currentLang === 'en';
     const isDE = currentLang === 'de';
+    const isKO = currentLang === 'ko';
     
     const container = document.createElement('div');
     container.id = 'lang-switcher-fixed';
@@ -193,6 +216,10 @@ const LangSwitcher = {
         <span class="lang-flag">🇩🇪</span>
         <span>DE</span>
       </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('ko'); return false;" class="lang-btn-fixed ${isKO ? 'active' : ''}">
+        <span class="lang-flag">🇰🇷</span>
+        <span>KO</span>
+      </a>
     `;
     
     document.body.appendChild(container);
@@ -202,7 +229,7 @@ const LangSwitcher = {
   autoRedirectIfNeeded: function() {
     const currentLang = this.getCurrentLang();
     const preferredLang = this.getPreferredLang();
-    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/de/index.html';
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/de/index.html' || window.location.pathname === '/ko/index.html';
     
     if (isHomepage && currentLang !== preferredLang) {
       const newPath = this.switchPath(preferredLang);

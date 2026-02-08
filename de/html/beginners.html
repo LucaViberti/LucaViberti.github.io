@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes Leitfaden - Anfänger-Leitfaden</title>
-  <meta name="description" content="Anfänger-Leitfaden für Top Heroes: erste Schritte, Dorf & Gebäude, Gilden, Ressourcen, Taverne & Scherben, Fraktionen, Ausgabentipps, Events, Forschung, Dorfbewohner, Kutsche & Plündern, Ausdauer, Weltkarte und mehr." />
+  <title>TopHelden Guide - Beginner Guide</title>
+  <meta name="description" content="Beginner Guide for Top Helden: first steps, village & buildings, guilds, resources, tavern & shards, factions, spending tips, events, research, villagers, carriage & plunder, stamina, world map, and more." />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
@@ -122,11 +122,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   background: #fff8e1; border: 1px solid #ffe08a; border-radius: 8px; padding: 12px 14px; margin: 16px 0;
 }
 
+/* =========================
+   NEW: Main restyle (scoped)
+   ========================= */
 .th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
 .th-beginner * { box-sizing: border-box; }
 .th-beginner { color: var(--ink); }
 .th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
 
+/* Grid: sticky TOC on desktop */
 .th-beginner .layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -139,10 +143,12 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   }
   .th-beginner .toc {
     position: sticky; top: 20px;
-    margin: 0;
+    margin: 0; /* moved into grid, no extra gap */
   }
+  
 }
 
+/* Cards for sections */
 .th-beginner .section-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -156,6 +162,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
+/* Headings */
 .th-beginner h2 {
   margin: 0 0 8px;
   font-size: 1.35rem;
@@ -168,26 +175,32 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   color: var(--head);
 }
 
+/* Nice bullets and spacing */
 .th-beginner p { margin: 10px 0 12px; }
 .th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
 .th-beginner li { padding-left: 4px; margin: 6px 0; }
 .th-beginner li::marker { color: var(--brand); }
 
+/* Links */
 .th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
 .th-beginner a:hover { border-bottom-style: solid; }
 
+/* TOC polish */
 .th-beginner .toc { border-color: var(--border); }
 .th-beginner .toc h3 { color: var(--head); font-weight: 600; }
 .th-beginner .toc a { display: inline-block; padding: 2px 0; }
 
+/* Anchor-friendly offset for in-page headings */
 .th-beginner section { scroll-margin-top: 90px; }
 
+/* Emphasis blocks already present as .note – just refine */
 .th-beginner .note {
   background: linear-gradient(0deg,#fffdf5,#fffdf5);
   border-color: #ffe08a;
   font-size: .95rem;
 }
 
+/* Optional table styles (future-proof if you add tables) */
 .th-beginner .table-wrap { overflow-x: auto; }
 .th-beginner table {
   width: 100%; border-collapse: collapse; border: 1px solid var(--border);
@@ -200,18 +213,22 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 .th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
 .th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
 
+/* Subtle separators between cards on mobile */
 @media (max-width: 1023px){
   .th-beginner .section-card + .section-card { margin-top: 8px; }
 }
 
+/* Small tag for section numbers (purely decorative) */
 .th-beginner .kicker {
   display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
   text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
   padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
 }
 
+/* Back-to-top helper */
 .th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
 
+/* ====== Donation blocks (Stripe) ====== */
 .donation-block{
   border:1px solid #e8eef5; background:#f9fbff;
   padding:22px 16px; margin:24px 0; border-radius:12px;
@@ -233,215 +250,243 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 <main class="th-beginner">
   <header class="site-info" aria-hidden="true" style="display:none"></header>
 
+  <!-- Back-to-top anchor -->
   <div id="top" aria-hidden="true"></div>
 
-  <h1 class="page-title">Anfänger-Leitfaden</h1>
-  <p class="lead small">Beginnen Sie hier: Kernregeln, beste frühe Prioritäten, intelligente Ausgaben und wie Sie schnell vorankommen, ohne Ressourcen zu verschwenden.</p>
+  <h1 class="page-title">Beginner Guide</h1>
+  <p class="lead small">Start here: core rules, best early priorities, smart spending, and how to progress fast without wasting resources.</p>
 
   <div class="layout">
-    <nav class="toc" aria-label="Auf dieser Seite">
-      <h3>Inhalt</h3>
+    <!-- Sticky TOC on desktop -->
+    <nav class="toc" aria-label="On this page">
+      <h3>Contents</h3>
       <ol>
-        <li><a href="#intro">Einführung und erste Schritte</a></li>
-        <li><a href="#village">Dorf und Gebäude</a></li>
-        <li><a href="#guild">Einer Gilde beitreten</a></li>
-        <li><a href="#farming">Ressourcen sammeln</a></li>
-        <li><a href="#tavern">Taverne und Heldenscherben</a></li>
-        <li><a href="#factions">Helden und Fraktionen</a></li>
-        <li><a href="#spending">Echtes Geld ausgeben</a></li>
+        <li><a href="#intro">Introduction and First Steps</a></li>
+        <li><a href="#village">Village and Gebäudes</a></li>
+        <li><a href="#guild">Joining a Guild</a></li>
+        <li><a href="#farming">Farming Resources</a></li>
+        <li><a href="#tavern">Tavern and Hero Shards</a></li>
+        <li><a href="#factions">Helden and Factions</a></li>
+        <li><a href="#spending">Spending Real Money</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#research">Forschung</a></li>
-        <li><a href="#social">Soziales und Weltchat</a></li>
+        <li><a href="#social">Social and World Chat</a></li>
         <li><a href="#villagers">Dorfbewohner</a></li>
-        <li><a href="#carriage">Kutsche und Plündern</a></li>
-        <li><a href="#traits">Gildenmerkmale</a></li>
-        <li><a href="#stamina">Ausdauer</a></li>
-        <li><a href="#worldmap">Weltkarte – Feinde, Ressourcen, Sammlung</a></li>
-        <li><a href="#conclusion">Allgemeines Fazit</a></li>
+        <li><a href="#carriage">Carriage and Plunder</a></li>
+        <li><a href="#traits">Guild Traits</a></li>
+        <li><a href="#stamina">Stamina</a></li>
+        <li><a href="#worldmap">World Map – Enemy, Resources, Rally</a></li>
+        <li><a href="#conclusion">General Conclusion</a></li>
       </ol>
     </nav>
 
+    <!-- Right column: content cards -->
     <div class="content">
+      <!-- 1. Introduction -->
       <section id="intro" class="section-card">
-        <div class="kicker">Abschnitt 1</div>
-        <h2>1. Einführung und erste Schritte</h2>
-        <p>Wenn Sie <em>Top Heroes</em> herunterladen und das Spiel starten, sehen Sie zuerst das <strong>Adventure</strong>. Am Anfang ist der Weg geführt und obligatorisch. Das Wichtigste ist, keine Ressourcen zu verschwenden, die später entscheidend sein werden. Beachten Sie diese Regeln:</p>
+        <div class="kicker">Section 1</div>
+        <h2>1. Introduction and First Steps</h2>
+        <p>When you download <em>Top Helden</em> and start the game, the first thing you’ll see is the <strong>Adventure</strong>. Early on, the path is guided and mandatory. The most important thing is to avoid wasting resources that will be crucial later. Keep these rules in mind:</p>
         <ul>
-          <li><strong>Verschwenden Sie kein Fleisch für Rare-Helden</strong> (blauer Hintergrund). Sie sind es nicht wert, aufgerüstet zu werden, und werden später nie verwendet.</li>
-          <li><strong>Geben Sie keine Diamanten aus</strong>, um Prozesse früh zu beschleunigen. Wartezeiten sind kurz und Diamanten sind zu wertvoll.</li>
+          <li><strong>Do not waste meat on Rare heroes</strong> (blue background). They are not worth upgrading and will never be used later.</li>
+          <li><strong>Do not spend diamonds</strong> to speed up processes early on. Waiting times are short and diamonds are too valuable.</li>
         </ul>
-        <p>Folgen Sie dem Fluss des Adventures, machen Sie Fortschritte und vermeiden Sie es, Ressourcen für Helden oder unnötige Beschleunigungen zu verschwenden.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <p>Follow the flow of the Adventure, make progress, and avoid wasting resources on heroes or unnecessary speedups.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 2. Village and Gebäudes -->
       <section id="village" class="section-card">
-        <div class="kicker">Abschnitt 2</div>
-        <h2>2. Dorf und Gebäude</h2>
-        <p>Nach einiger Zeit im Adventure erreichen Sie Ihr <strong>Dorf</strong>. Sie werden mehrere Gebäude sehen, die gebaut und aufgerüstet werden müssen. Anfangs sind Upgrades obligatorisch, aber bald haben Sie die Freiheit, Prioritäten zu wählen. Ihr Hauptziel muss es sein, die <strong>Burg</strong> schnell aufzuleveln, idealerweise auf Stufe <strong>20–25</strong>. Dies schaltet wesentliche Gebäude frei und ermöglicht höhere Helden- und Soldatenstufen.</p>
-        <p>Konzentrieren Sie sich neben der Burg auf <strong>Forschungshütte</strong>, <strong>Krankenhaus</strong>, <strong>Gilde</strong> und <strong>Trainingsplatz</strong> (Voraussetzungen für Burg-Upgrades). Vergessen Sie nicht die <strong>Kaserne</strong>: Alle 5 Stufen gewinnen Soldaten eine Stufe – das steigert Ihre Warteschlangen enorm.</p>
-        <p>Für weitere Details siehe die Seite <a href="building.html">Gebäude</a>.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 2</div>
+        <h2>2. Village and Gebäudes</h2>
+        <p>After some time in Adventure, you’ll reach your <strong>Village</strong>. You’ll see multiple buildings to construct and upgrade. Initially upgrades are mandatory, but soon you’ll have freedom to choose priorities. Your number one goal must be to level up the <strong>Castle</strong> quickly, ideally to level <strong>20–25</strong>. This unlocks essential buildings and allows higher hero and soldier levels.</p>
+        <p>Alongside the Castle, focus on <strong>Forschung Cottage</strong>, <strong>Hospital</strong>, <strong>Guild</strong>, and <strong>Training Ground</strong> (requirements for Castle upgrades). Don’t forget <strong>Barracks</strong>: every 5 levels, soldiers gain one level—this hugely boosts your queues.</p>
+        <p>For more details, see the <a href="building.html">Gebäudes</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 3. Joining a Guild -->
       <section id="guild" class="section-card">
-        <div class="kicker">Abschnitt 3</div>
-        <h2>3. Einer Gilde beitreten</h2>
-        <p>Ab Burgstufe 7 können Sie einer <strong>Gilde</strong> beitreten. Dies ist entscheidend. Versuchen Sie, einer <strong>Top-3-Gilde</strong> auf Ihrem Server beizutreten; wenn das nicht möglich ist, zumindest Top 10. Starke Gilden sind aktiv, rekrutieren aktive Spieler und entfernen inaktive. Keine Sorge – alle auf Ihrem Server haben ungefähr zur gleichen Zeit begonnen, sodass Sie schnell aufholen können.</p>
+        <div class="kicker">Section 3</div>
+        <h2>3. Joining a Guild</h2>
+        <p>From Castle level 7, you can join a <strong>Guild</strong>. This is crucial. Aim to join a <strong>top 3</strong> guild in your server; if that’s not possible, at least top 10. Strong guilds are active, recruit active players, and remove inactive ones. Don’t worry—everyone in your server started around the same time, so you can catch up quickly.</p>
 
-        <h3 id="guild-help">3.1 Hilfe und Beschleunigungen</h3>
-        <p><strong>Gildenhilfe</strong> ist ein großer Vorteil. Jedes Mal, wenn Sie einen Bau oder eine Forschung starten, drücken Sie <em>Hilfe</em>: Gildenmitglieder können den Timer für Sie reduzieren. Bitten Sie immer um Hilfe und warten Sie, bevor Sie Beschleunigungen verwenden. Beschleunigungen (Bau, Forschung, Universal usw.) können verwendet werden, aber <strong>Diamanten sollten nicht</strong> zum Beschleunigen verwendet werden. Verwenden Sie Beschleunigungen klug, nachdem Sie alle möglichen Hilfen erhalten haben.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <h3 id="guild-help">3.1 Help and Speedups</h3>
+        <p><strong>Guild Help</strong> is a major advantage. Every time you start a construction or research, press <em>Help</em>: guildmates can reduce the timer for you. Always request and wait for help before using speedups. Speedups (construction, research, universal, etc.) are fine to use, but <strong>diamonds should not be used</strong> for speeding up. Use speedups wisely, after receiving all possible helps.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 4. Farming Resources -->
       <section id="farming" class="section-card">
-        <div class="kicker">Abschnitt 4</div>
-        <h2>4. Ressourcen sammeln</h2>
-        <p>Die Hauptressourcen sind <strong>Holz</strong>, <strong>Stein</strong> und <strong>Rubin</strong>. Sie werden für fast alles benötigt. Die beste frühe Methode ist der Fortschritt im Adventure. Wenn Sie feststecken, verbessern Sie Ihre Aufstellung und versuchen Sie es erneut.</p>
-        <p>Gildenaktivitäten sind ebenfalls wichtig:</p>
+        <div class="kicker">Section 4</div>
+        <h2>4. Farming Resources</h2>
+        <p>Main resources are <strong>Timber</strong>, <strong>Stone</strong>, and <strong>Ruby</strong>. They’re needed for nearly everything. The best early method is progressing in Adventure. When stuck, improve your lineup and try again.</p>
+        <p>Guild activities are also essential:</p>
         <ul>
-          <li><strong>Gilden-Geheimprüfung</strong>: Mini-Level, die Ressourcen bereitstellen. Das kollektive Abschließen gibt zusätzliche Belohnungen.</li>
-          <li><strong>Gilden-Expedition</strong>: ein Versuch täglich. Verwenden Sie den <em>Segen</em>-Button für Buffs und <strong>100 Gildenpunkte</strong>. Geben Sie Gildenpunkte im Gilden-Store aus.</li>
+          <li><strong>Guild Secret Trial</strong>: mini-levels providing resources. Completing collectively gives extra rewards.</li>
+          <li><strong>Guild Expedition</strong>: one attempt daily. Use the <em>Blessing</em> button for buffs and <strong>100 Guild Points</strong>. Spend Guild Points in the Guild Store.</li>
         </ul>
-        <p>Weitere Quellen sind <strong>Expeditionen</strong>, die <strong>Kopfgeldhalle</strong> mit Missionen alle 8 Stunden und <strong>Stufen</strong>, die sich mit der Zeit freischalten.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <p>Other sources include <strong>Expeditions</strong>, the <strong>Bounty Hall</strong> with missions every 8 hours, and <strong>Stages</strong> that unlock over time.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 5. Tavern and Hero Shards -->
       <section id="tavern" class="section-card">
-        <div class="kicker">Abschnitt 5</div>
-        <h2>5. Taverne und Heldenscherben</h2>
-        <p><strong>Tavernen-Token</strong> ermöglichen es Ihnen, <strong>Heldenscherben</strong> in der Taverne zu erhalten. Frühes Spiel: Verwenden Sie sie frei. Helden verbessern sich erheblich, wenn ihre Sterne aufgerüstet werden. <strong>Verschwenden Sie früh keine legendären Universal-Heldenscherben</strong> – sparen Sie sie für später.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 5</div>
+        <h2>5. Tavern and Hero Shards</h2>
+        <p><strong>Tavern Tokens</strong> allow you to obtain <strong>Hero Shards</strong> in the Tavern. Early game: use them freely. Helden improve significantly when their stars are upgraded. <strong>Do not waste Legendary Universal Hero Shards</strong> early—save them for later.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 6. Helden and Factions -->
       <section id="factions" class="section-card">
-        <div class="kicker">Abschnitt 6</div>
-        <h2>6. Helden und Fraktionen</h2>
-        <p>Helden gehören zu drei Fraktionen: <strong>Liga</strong>, <strong>Horde</strong> und <strong>Natur</strong>. Siehe die Seite <a href="heroes.html">Helden</a> für Details. Konzentrieren Sie sich auf <strong>eine Hauptwarteschlange</strong> mit Helden aus einer einzigen Fraktion. Dies gewährt Fraktionsbuffs und wird mit Season 1 noch wichtiger. Versuchen Sie nicht, alle Ihre Warteschlangen auszugleichen – machen Sie eine sehr stark.</p>
+        <div class="kicker">Section 6</div>
+        <h2>6. Helden and Factions</h2>
+        <p>Helden belong to three factions: <strong>Liga</strong>, <strong>Horde</strong>, and <strong>Natur</strong>. See the <a href="heroes.html">Helden</a> page for details. Focus on <strong>one main queue</strong> with heroes from a single faction. This grants faction buffs and becomes even more critical with Season 1. Don’t try to balance all your queues—make one very strong.</p>
         <ul>
-          <li><strong>Liga</strong>: Am einfachsten früh aufzubauen, aber kann mittel- bis langfristig kostspielig sein, besonders für F2P.</li>
-          <li><strong>Horde</strong>: Erfordert kluges Spielen; nicht sofort stark, aber sehr stark auf lange Sicht, normalerweise weniger kostspielig als Liga.</li>
-          <li><strong>Natur</strong>: Am schwersten früh aufzubauen. Frühe Natur-Helden sind schwach und werden oft ersetzt; stark erst viel später.</li>
+          <li><strong>Liga</strong>: easiest to build early, but can be costly mid–long term, especially F2P.</li>
+          <li><strong>Horde</strong>: requires smart play; not strong immediately but very strong long term, usually less costly than Liga.</li>
+          <li><strong>Natur</strong>: hardest to build early. Early Natur heroes are weak and often replaced; strong only much later.</li>
         </ul>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
-      <section class="donation-block" aria-label="Unterstützen Sie das Projekt">
-        <p>Wenn Ihnen diese Tipps helfen, unterstützen Sie bitte unser Projekt mit einer Spende. Es hält die Leitfäden kostenlos und aktuell.</p>
+      <!-- Donation block between sections -->
+      <section class="donation-block" aria-label="Support the project">
+        <p>If these tips help you, please consider supporting our project with a donation. It keeps the guides free and updated.</p>
         <stripe-buy-button
           buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
           publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
         </stripe-buy-button>
       </section>
 
+      <!-- 7. Spending Real Money -->
       <section id="spending" class="section-card">
-        <div class="kicker">Abschnitt 7</div>
-        <h2>7. Echtes Geld ausgeben</h2>
-        <p><em>Top Heroes</em> kann kostenlos gespielt werden, mit wenig oder viel Ausgaben. Unabhängig vom Budget sollten Sie immer <strong>Goldblöcke</strong> von der offiziellen <em>Top Heroes</em>-Website kaufen. Der Kauf im Spiel bietet weniger Vorteile. Von der Website erhalten Sie immer <strong>+5% Goldblöcke</strong> und Meilenstein-Belohnungen. Geben Sie dann Goldblöcke im Spiel aus.</p>
+        <div class="kicker">Section 7</div>
+        <h2>7. Spending Real Money</h2>
+        <p><em>Top Helden</em> can be played free-to-play, spending little, or a lot. Regardless of budget, always buy <strong>Gold Blocks</strong> from the official <em>Top Helden</em> website. Purchasing in-game gives fewer benefits. From the site you always get <strong>+5% Gold Blocks</strong> and milestone rewards. Then spend Gold Blocks in-game.</p>
 
-        <h3 id="best-purchases">7.1 Beste Käufe</h3>
+        <h3 id="best-purchases">7.1 Best Purchases</h3>
         <ul>
-          <li><strong>Monatspass</strong>: zusätzliche Warteschlange (Privileg-Warteschlange), Auto-Hunt, verdoppelte Werbebelohnungen, tägliche Geschenke. Am kosteneffektivsten. Der Kauf von Goldblöcken von der Website gibt auch einen <strong>30% Rabatt</strong> darauf als ersten Meilenstein.</li>
-          <li><strong>Werbung entfernen (2$)</strong>: dauerhaft. Ermöglicht es Ihnen, tägliche Werbebelohnungen sofort zu beanspruchen. Großer langfristiger Wert.</li>
-          <li><strong>Bau-Warteschlangen</strong>: Standard 1; bis zu 3 weitere (2$, 10$, 20$). Dauerhaft und sehr nützlich.</li>
-          <li><strong>Forschungs-Warteschlange</strong>: Standard 1, max 2. Zweite Warteschlange für 10$ freischalten. Dauerhaft.</li>
-          <li><strong>Adventure Begin (bester Preis)</strong>: günstige limitierte Pakete (3 Versionen) mit großartigen Belohnungen über ein paar Tage.</li>
-          <li><strong>Pakete</strong>: tägliche Heldenscherben-Pakete ~5$; nützlich nur für größere Ausgeber.</li>
-          <li><strong>Skins</strong>: sehr mächtig (globale Buffs). Legendär 30$, Mythisch 100$. Große Ausgeber sollten priorisieren.</li>
-          <li><strong>Rad- und Würfel-Events</strong>: wechseln sich wöchentlich ab. Sparen Sie Tickets, bis mythische Helden enthalten sind.</li>
-          <li><strong>Adventure Battle Pass</strong>: optional (15$, 20$ oder beide 30$). Starke Boosts, nicht essentiell.</li>
-          <li><strong>Fonds</strong> (Bau, Adventure, Power, Wachstum): guter Wert für mittlere Ausgeber.</li>
-          <li><strong>Täglich Speziell</strong>: Heldenscherben wählen; gibt <strong>Sternsteine</strong> (extrem wertvoll). Später erscheinen sogar mythische Helden hier.</li>
-          <li><strong>Tägliche/Wöchentliche Pakete</strong>: geringer Wert für kleine Ausgeber; mittlere/hohe Ausgeber können in Betracht ziehen.</li>
-          <li><strong>Diamanten-Store</strong>: nie kaufen (gleicher Preis wie Pakete, aber ohne Extrabelohnungen).</li>
-          <li><strong>VIP-Punkte</strong>: mit jedem Kauf erhalten; schalten Vergünstigungen frei, aber kaufen Sie nicht nur für VIP-Stufen. Tägliche Quests geben auch 5 VIP-Punkte.</li>
+          <li><strong>Monthly Pass</strong>: extra queue (Privilege Queue), Auto Hunt, doubled ad rewards, daily gifts. Most cost-effective. Buying Gold Blocks from the site also gives <strong>30% discount</strong> on it as first milestone.</li>
+          <li><strong>Remove Ads (2$)</strong>: permanent. Lets you claim daily ad rewards instantly. Great long-term value.</li>
+          <li><strong>Construction Queues</strong>: default 1; up to 3 more (2$, 10$, 20$). Permanent and very useful.</li>
+          <li><strong>Forschung Queue</strong>: default 1, max 2. Unlock second queue for 10$. Permanent.</li>
+          <li><strong>Adventure Begin (Best Price)</strong>: cheap limited packs (3 versions) with great rewards over a few days.</li>
+          <li><strong>Packs</strong>: daily hero shard packs ~5$; useful only for bigger spenders.</li>
+          <li><strong>Skins</strong>: very powerful (global buffs). Legendary 30$, Mythic 100$. High spenders should prioritize.</li>
+          <li><strong>Wheel and Dice events</strong>: alternate weekly. Save tickets until Mythic heroes are included.</li>
+          <li><strong>Adventure Battle Pass</strong>: optional (15$, 20$, or both 30$). Strong boosts, not essential.</li>
+          <li><strong>Funds</strong> (Construction, Adventure, Power, Growth): good mid-spender value.</li>
+          <li><strong>Daily Special</strong>: choose hero shards; gives <strong>Star Gems</strong> (extremely valuable). Later even Mythic heroes appear here.</li>
+          <li><strong>Daily/Weekly Packs</strong>: low value for small spenders; medium/high spenders can consider.</li>
+          <li><strong>Diamond Store</strong>: never buy (same price as packs but without extra rewards).</li>
+          <li><strong>VIP Points</strong>: gained with every purchase; unlock perks but don’t buy just for VIP levels. Daily quests also give 5 VIP Points.</li>
         </ul>
-        <p>Es wird ständig neue Pakete und Events zum Ausgeben geben, aber die obigen Grundlagen sind am wichtigsten für Anfänger.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <p>There will constantly be new packs and events to spend on, but the basics above are the most important for beginners.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 8. Events -->
       <section id="events" class="section-card">
-        <div class="kicker">Abschnitt 8</div>
+        <div class="kicker">Section 8</div>
         <h2>8. Events</h2>
-        <p><em>Top Heroes</em> hat Routine- und einmalige Events. Am Anfang ist das wichtigste Event <strong>Top Lord</strong>. Einfach durch Spielen und Erhöhen Ihres <strong>Einflusses</strong> schalten Sie großartige Belohnungen frei, einschließlich des <strong>Griffon Castle</strong>-Skins. Burg-Skins sind selten, besonders für F2P.</p>
-        <p>Steigern Sie Einfluss, indem Sie inaktive Soldaten unbenutzten Helden zuweisen und <strong>Kasernen</strong> aufrüsten, um Soldatenstufen zu erhöhen. Andere Gebäude wie <strong>Lagerhaus</strong>, <strong>Taverne</strong> und <strong>Wachturm</strong> können auch schnelle Einfluss-Boosts bieten.</p>
+        <p><em>Top Helden</em> has routine and one-time events. Early on, the most important is the <strong>Top Lord</strong> event. Simply by playing and raising your <strong>Influence</strong>, you unlock great rewards, including the <strong>Griffon Castle</strong> skin. Castle skins are rare, especially for F2P.</p>
+        <p>Boost Influence by assigning idle soldiers to unused heroes and upgrading <strong>Barracks</strong> to increase soldier levels. Other buildings like <strong>Warehouse</strong>, <strong>Tavern</strong>, and <strong>Watchtower</strong> can also provide quick Influence boosts.</p>
         <ul>
-          <li><strong>Weltboss</strong>: täglich, 5 Mal angreifen. Keine Ausdauerkosten, keine Verluste. Gibt feste Belohnungen plus kleine Ranking-Belohnungen – machen Sie einfach Ihre 5 Treffer.</li>
-          <li><strong>Ruinen-Jagd</strong>: tägliche Truhen-Missionen auf der Weltkarte. Machen Sie sie alle täglich. Geben Sie früh keine Diamanten für Aktualisierungen aus. Helfen Sie Gildenmitgliedern (priorisieren Sie lila und gold). Sie können Ruinen-Jagden anderer plündern – priorisieren Sie <strong>legendäre (gold) Stufe 4</strong> Truhen.</li>
-          <li><strong>Nur-Anfänger-Events</strong>: <em>Anfänger-Ziele</em>, <em>Sieben Tage</em>, <em>Power Rush</em>. Nur in den ersten Tagen verfügbar – schließen Sie sie rechtzeitig ab.</li>
+          <li><strong>World Boss</strong>: daily, attack 5 times. No stamina cost, no losses. Grants fixed rewards plus minor ranking rewards—just do your 5 hits.</li>
+          <li><strong>Ruin Hunt</strong>: daily chest missions on the World Map. Do them all daily. Don’t spend diamonds refreshing early. Help guildmates (prioritize purple and gold). You can plunder others’ Ruin Hunts—prioritize <strong>legendary (gold) level 4</strong> chests.</li>
+          <li><strong>Beginner-only events</strong>: <em>Beginner Goals</em>, <em>Seven Day</em>, <em>Power Rush</em>. Available only in the first days—complete them in time.</li>
         </ul>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 9. Forschung -->
       <section id="research" class="section-card">
-        <div class="kicker">Abschnitt 9</div>
+        <div class="kicker">Section 9</div>
         <h2>9. Forschung</h2>
-        <p>Forschung wird in der <strong>Forschungshütte</strong> durchgeführt. Konzentrieren Sie sich früh vollständig auf <strong>Kampfkompetenz</strong>. Schließen Sie sie vollständig ab, um alle anderen Forschungsbäume freizuschalten. Für Details siehe die Seite <a href="research.html">Forschung</a>.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <p>Forschung is done in the <strong>Forschung Cottage</strong>. Early on, focus entirely on <strong>Combat Expertise</strong>. Complete it fully to unlock all other research trees. For details, check the <a href="research.html">Forschung</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 10. Social -->
       <section id="social" class="section-card">
-        <div class="kicker">Abschnitt 10</div>
-        <h2>10. Soziales und Weltchat</h2>
-        <p>Ab Burgstufe 7 wird <strong>Weltchat</strong> freigeschaltet. Am Anfang ist er laut, aber innerhalb von Tagen werden Moderatoren ihn aufräumen. Er wird zu einem guten Kommunikationskanal. <strong>Einladungscodes</strong> geben kleine Belohnungen (einige Scherben, Ausrüstung, Diamanten), sind aber nicht spielverändernd. Verwenden Sie sie, wenn Sie Freunde zum Einladen haben; ansonsten ignorieren.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 10</div>
+        <h2>10. Social and World Chat</h2>
+        <p>At Castle level 7, <strong>World Chat</strong> unlocks. Early on it’s noisy, but within days moderators will clean it up. It becomes a good communication channel. <strong>Invitation codes</strong> give minor rewards (some shards, equipment, diamonds) but are not game-changing. Use them if you have friends to invite; otherwise ignore.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 11. Dorfbewohner -->
       <section id="villagers" class="section-card">
-        <div class="kicker">Abschnitt 11</div>
+        <div class="kicker">Section 11</div>
         <h2>11. Dorfbewohner</h2>
-        <p>Jeden Tag können <strong>Dorfbewohner</strong> in Ihrem Dorf gerettet werden (und können im Adventure erscheinen). Das Abschließen der ersten täglichen Quest gewährt ein Ticket, um sofort einen Dorfbewohner zu spawnen. Sobald gerettet, weisen Sie Dorfbewohner in der <strong>Talente-Halle</strong> zu, um Gebäude zu boosten. Am Anfang ist <em>Schnellversand</em> in Ordnung; später optimieren Sie Zuweisungen für bessere Boni. Siehe die Seite <a href="villagers.html">Dorfbewohner</a>.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <p>Every day, <strong>Dorfbewohner</strong> can be saved in your Village (and can appear in Adventure). Completing the first Daily Quest grants a ticket to spawn a Villager instantly. Once saved, assign Dorfbewohner in the <strong>Talent Hall</strong> to boost buildings. Early on, <em>Quick Dispatch</em> is fine; later, optimize assignments for better bonuses. See the <a href="villagers.html">Dorfbewohner</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 12. Carriage & Plunder -->
       <section id="carriage" class="section-card">
-        <div class="kicker">Abschnitt 12</div>
-        <h2>12. Kutsche und Plündern</h2>
-        <p>Sie können täglich <strong>4 Kutschen</strong> entsenden. Seltenheiten: Gewöhnlich, Ungewöhnlich, Selten, Legendär, Mythisch. Verwenden Sie immer die kostenlose Aktualisierung, um gute Belohnungen zu suchen, idealerweise <strong>Heldenscherben</strong>. Nach 5 Aktualisierungen ist Ihnen ein <strong>Legendärer</strong> garantiert, und ab Burgstufe 15 eine <strong>5% Chance</strong> für <strong>Mythisch</strong>. Mythische und legendäre Kutschen werden nie in der Seltenheit herabgestuft. Versuchen Sie, Scherben zu maximieren, besonders <strong>Universal-Legendäre Scherben</strong>.</p>
-        <p><strong>Mythische Kutschen</strong> können geteilt werden. Geteilte Kutschen geben jedem volle Belohnungen und bieten zusätzlichen Schutz. Einige Server übernehmen eine Regel, volle mythische Kutschen (5/5 Mitglieder) nicht anzugreifen. Wenn es nicht auf Ihrem Server ist, schlagen Sie es vor – das garantiert Sicherheit für Top-Belohnungen.</p>
-        <p><strong>Plündern</strong>: Sie können täglich <strong>4 Kutschen</strong> angreifen. Wählen Sie Ziele mit den besten Belohnungen (normalerweise Universal-Legendäre Scherben). Gescheiterte Angriffe verbrauchen keine Versuche. Kutschen können zweimal angegriffen werden (<em>dreimal wenn mythisch</em>). Überprüfen Sie <em>Details</em> vor dem Plündern, um zu sehen, ob eine Kutsche voll ist; wenn Serverregeln das Angreifen voller Mythischer verbieten, greifen Sie nicht an.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 12</div>
+        <h2>12. Carriage and Plunder</h2>
+        <p>You can dispatch <strong>4 Carriages daily</strong>. Rarities: Common, Uncommon, Rare, Legendary, Mythic. Always use the free refresh to seek good rewards, ideally <strong>Hero Shards</strong>. After 5 refreshes you are guaranteed a <strong>Legendary</strong>, and from Castle level 15 onwards, a <strong>5% chance</strong> for <strong>Mythic</strong>. Mythic and Legendary Carriages never downgrade rarity. Aim to maximize shards, especially <strong>Universal Legendary Shards</strong>.</p>
+        <p><strong>Mythic Carriages</strong> can be shared. Shared Carriages give full rewards to everyone and offer extra protection. Some servers adopt a rule not to attack full Mythic Carriages (5/5 members). If it’s not in your server, propose it—this guarantees safety for top rewards.</p>
+        <p><strong>Plundering</strong>: you can attack <strong>4 Carriages daily</strong>. Choose targets with the best rewards (usually Universal Legendary Shards). Failed attacks don’t consume attempts. Carriages can be attacked twice (<em>three times if Mythic</em>). Check <em>Details</em> before plundering to see if a Carriage is full; if server rules prohibit attacking full Mythics, don’t attack.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
-      <div class="donation-card" aria-label="Unterstützen Sie das Projekt">
-        <p>Finden Sie diesen Abschnitt nützlich? Helfen Sie uns, diese Leitfäden mit einer Spende zu verbessern.</p>
+      <!-- Compact donation card later in the page -->
+      <div class="donation-card" aria-label="Support the project">
+        <p>Finding this section useful? Help us keep improving these guides with a donation.</p>
         <stripe-buy-button
           buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
           publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
         </stripe-buy-button>
       </div>
 
+      <!-- 13. Guild Traits -->
       <section id="traits" class="section-card">
-        <div class="kicker">Abschnitt 13</div>
-        <h2>13. Gildenmerkmale</h2>
-        <p>Im <strong>Gilden</strong>-Gebäude unter <strong>Merkmale</strong> können Mitglieder spenden, um Buffs freizuschalten. <strong>Spenden regenerieren sich alle 30 Minuten</strong>, bis zu <strong>20 gespeichert</strong>. Lassen Sie es nie bei 20 kappen, sonst stoppt die Regeneration. Sie können mit jeweils 10 Diamanten spenden, aber das ist früh nicht lohnenswert. Jede Spende gibt auch <strong>Gildenpunkte</strong>, die im Gilden-Store verwendet werden können. Für optimale Ausgaben siehe die Seite <a href="shop.html">Store</a>.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 13</div>
+        <h2>13. Guild Traits</h2>
+        <p>In the <strong>Guild</strong> building under <strong>Traits</strong>, members can donate to unlock buffs. <strong>Donations regenerate every 30 minutes</strong>, up to <strong>20 stored</strong>. Never let it cap at 20, or regeneration stops. You can donate with 10 diamonds each, but this isn’t worth it early. Every donation also gives <strong>Guild Points</strong>, usable in the Guild Store. For optimal spending, see the <a href="shop.html">Store</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 14. Stamina -->
       <section id="stamina" class="section-card">
-        <div class="kicker">Abschnitt 14</div>
-        <h2>14. Ausdauer</h2>
-        <p><strong>Ausdauer</strong> wird für Angriffe auf der Weltkarte benötigt und regeneriert sich mit der Zeit. Zweimal täglich können Sie <strong>80 Ausdauer</strong> beanspruchen (mindestens 4 Stunden auseinander). <strong>Monatliches Privileg</strong> gewährt täglich 50 Ausdauer oder 100 mit Bonus. <strong>Stapel von 25 und 50</strong> Ausdauer existieren und können früh frei verwendet werden. Vermeiden Sie den Kauf von <strong>150 Ausdauer für 5$</strong> – schlechter Wert.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 14</div>
+        <h2>14. Stamina</h2>
+        <p><strong>Stamina</strong> is required for attacks on the World Map and regenerates over time. Two times daily you can claim <strong>80 stamina</strong> (at least 4 hours apart). <strong>Monthly Privilege</strong> grants 50 stamina daily, or 100 with bonus. <strong>Stacks of 25 and 50</strong> stamina exist and can be used freely early on. Avoid buying <strong>150 stamina for 5$</strong>—poor value.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 15. World Map -->
       <section id="worldmap" class="section-card">
-        <div class="kicker">Abschnitt 15</div>
-        <h2>15. Weltkarte – Feinde, Ressourcen, Sammlung</h2>
-        <p>Klicken Sie auf die Lupe auf der Weltkarte, um drei Abschnitte zu finden:</p>
+        <div class="kicker">Section 15</div>
+        <h2>15. World Map – Enemy, Resources, Rally</h2>
+        <p>Click the magnifying glass on the World Map to find three sections:</p>
         <ul>
-          <li><strong>Feind</strong>: Bekämpfen Sie Wachen (Holz, Stein, Rubin) bis Stufe 30 für Ressourcen. Früh nützlich. Greifen Sie auch immer <strong>Legend Stash</strong> 3 Mal täglich für kostenlose Belohnungen an.</li>
-          <li><strong>Ressourcen</strong>: Erste Eroberung gibt eine feste Belohnung. Das Zurücklassen von Truppen führt zu <strong>Sammeln</strong>. Sammeln Sie <strong>Rubin</strong>, wenn möglich (besonders über Nacht). Holz und Stein sind weniger wertvoll.</li>
-          <li><strong>Sammlung</strong>: Bekämpfen Sie Bosse mit Gildenmitgliedern. Großartige Möglichkeit, Ausdauer zu nutzen und Belohnungen zu erhalten. Die Teilnahme an Sammlungen ist kostenlos und die ersten <strong>50 täglich</strong> geben Belohnungen – nehmen Sie an so vielen wie möglich teil.</li>
+          <li><strong>Enemy</strong>: fight Guards (Timber, Stone, Ruby) up to lvl 30 for resources. Useful early. Also, always attack <strong>Legend Stash</strong> 3 times daily for free rewards.</li>
+          <li><strong>Resources</strong>: first conquest gives a fixed reward. Leaving troops results in <strong>Gathering</strong>. Gather <strong>Ruby</strong> when possible (especially overnight). Timber and Stone are less valuable.</li>
+          <li><strong>Rally</strong>: fight bosses with guildmates. Great way to use stamina and get rewards. Joining rallies is free and first <strong>50 daily</strong> give rewards—join as many as possible.</li>
         </ul>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
 
+      <!-- 16. Conclusion -->
       <section id="conclusion" class="section-card">
-        <div class="kicker">Abschnitt 16</div>
-        <h2>16. Allgemeines Fazit</h2>
-        <p><em>Top Heroes</em> belohnt sorgfältige Planung und das Sparen von Ressourcen. Ganz am Anfang können Sie die meisten Gegenstände frei ausgeben (außer <strong>Diamanten</strong> und <strong>legendäre Universal-Scherben</strong>). Später verlagert sich das Spiel: Sie werden Ressourcen strategisch während Events wie <em>Gildenrennen</em> oder <em>Rüstungs-Gildenrennen</em> ausgeben, um maximale Punkte zu erhalten. Diese Denkweise – Sparen und nur zur richtigen Zeit ausgeben – ist der Schlüssel zum langfristigen Erfolg.</p>
-        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+        <div class="kicker">Section 16</div>
+        <h2>16. General Conclusion</h2>
+        <p><em>Top Helden</em> rewards careful planning and saving resources. In the very beginning you can spend most items freely (except <strong>diamonds</strong> and <strong>Legendary Universal Shards</strong>). Later, the game shifts: you’ll spend resources strategically during events like <em>Gildenrennen</em> or <em>Arms Gildenrennen</em> to gain maximum points. This mindset—saving and spending only at the right times—is key to long-term success.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
       </section>
+
+      <!-- Optional donation block (kept from base; show/hide as you prefer)
+      <div class="donation-section section-card">
+        <p>If this guide helped you, consider a small donation to keep the site growing.</p>
+        <a class="donation-button" href="donate.html">Donate</a>
+      </div>
+      -->
     </div>
   </div>
 </main>
@@ -454,10 +499,11 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 </script>
 
 <script>
+/* Icons script from your base (adds small faction icons next to matching words) */
 document.addEventListener('DOMContentLoaded', function() {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
+    'Liga':'/images/league-symbol.jpeg',
+    'Natur':'/images/nature-symbol.jpeg',
     'Horde':'/images/horde-symbol.jpeg'
   };
   function addIcon(el, word) {

@@ -64,7 +64,11 @@
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    fetch('/html/nav.html')
+    // Detect language from path
+    const isGerman = window.location.pathname.startsWith('/de/');
+    const navPath = isGerman ? '/de/html/nav.html' : '/html/nav.html';
+
+    fetch(navPath)
       .then((res) => res.text())
       .then((html) => {
         navContainer.innerHTML = html;

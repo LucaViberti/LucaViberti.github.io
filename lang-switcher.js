@@ -51,7 +51,7 @@ const LangSwitcher = {
     window.location.href = newPath;
   },
   
-  // Crea il markup del language selector
+  // Crea il markup del language selector (vecchio stile per footer)
   createSelector: function() {
     const currentLang = this.getCurrentLang();
     return `
@@ -70,11 +70,37 @@ const LangSwitcher = {
     `;
   },
   
-  // Inizializza il selector in un elemento
+  // Crea il nuovo selettore moderno per l'header
+  createHeaderSelector: function() {
+    const currentLang = this.getCurrentLang();
+    const isEN = currentLang === 'en';
+    const isDE = currentLang === 'de';
+    
+    return `
+      <a href="#" onclick="LangSwitcher.switchLanguage('en'); return false;" class="lang-btn ${isEN ? 'active' : ''}">
+        <span class="lang-flag">🇬🇧</span>
+        <span>English</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('de'); return false;" class="lang-btn ${isDE ? 'active' : ''}">
+        <span class="lang-flag">🇩🇪</span>
+        <span>Deutsch</span>
+      </a>
+    `;
+  },
+  
+  // Inizializza il selector in un elemento (vecchio stile)
   init: function(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
       element.innerHTML += this.createSelector();
+    }
+  },
+  
+  // Inizializza il nuovo selector nell'header
+  initHeaderSelector: function(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.innerHTML = this.createHeaderSelector();
     }
   },
   

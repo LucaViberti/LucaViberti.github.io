@@ -1,6 +1,8 @@
 <header>
   <div class="site-info">
     <h1 class="site-title">TopHeroes Guide</h1>
+    <!-- Language Selector in Header -->
+    <div id="header-lang-selector" class="header-lang-selector"></div>
   </div>
   <nav>
     <ul>
@@ -95,6 +97,65 @@
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
+  /* Language Selector in Header - Modern Style */
+  .header-lang-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: rgba(41, 171, 224, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+
+  .header-lang-selector .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid transparent;
+    color: #b0b6c7;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .header-lang-selector .lang-btn:hover {
+    background: rgba(41, 171, 224, 0.15);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .header-lang-selector .lang-btn.active {
+    background: linear-gradient(135deg, #29abe0, #7dd3fc);
+    border-color: #29abe0;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(41, 171, 224, 0.3);
+  }
+
+  .header-lang-selector .lang-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 640px) {
+    .header-lang-selector {
+      padding: 6px 12px;
+      gap: 6px;
+    }
+    .header-lang-selector .lang-btn {
+      padding: 5px 10px;
+      font-size: 0.85rem;
+    }
+  }
+
   /* Dropdown base */
   nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
   nav ul li{position:relative}
@@ -156,7 +217,13 @@
   nav ul li .dropdown li a { position: relative; z-index: 2; }
 </style>
 
+<script src="/lang-switcher.js"></script>
 <script>
+  // Initialize language selector in header
+  if (typeof LangSwitcher !== 'undefined') {
+    LangSwitcher.initHeaderSelector('header-lang-selector');
+  }
+
   // Evidenzia la pagina attiva
   (function(){
     const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Natur Helden</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
+
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="nature-heroes">
+    <h2 class="page-title">Natur — Legendäre & Mystische Helden</h2>
+    <p class="lead">Übersicht über die wichtigsten Natur-Helden, ihre Fähigkeiten und wann man sie einsetzen oder ersetzen sollte.</p>
+
+    <div class="card">
+      <h3>Beste Aufstellungen — Natur</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Hauptaufstellung</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Mönch">
+              <img src="/images/altarmarshal.png" alt="Altarmarschall">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Elfe">
+              <img src="/images/petalis.png" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/forest.jpeg" alt="Waldmaid">
+              <img src="/images/tidecaller.jpeg" alt="Gezeitenrufer">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Wenn Petalis auf deinem Server noch nicht verfügbar ist, ersetze sie durch Windläufer.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Schadenfokus (am besten mit Natur)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/monk.jpeg" alt="Mönch">
+              <img src="/images/altarmarshal.png" alt="Altarmarschall">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/pixie.jpeg" alt="Elfe">
+              <img src="/images/petalis.png" alt="Petalis">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/windwalker.jpeg" alt="Windläufer">
+              <img src="/images/tidecaller.jpeg" alt="Gezeitenrufer">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Es wird keinen wahnsinnigen Schaden verursachen, aber wenn du Natur spielen musst, ist dies die beste Option.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Treeguard -->
+    <div class="card">
+      <h3>Baumwächter</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/treeguard.jpeg" alt="Baumwächter">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Wachstum</em>: Erhöht maximale LP, reduziert erlittenen Schaden und heilt sich selbst.</li>
+            <li><em>Holzpanzer</em>: Erhöht Schadensreduzierung und maximale LP und heilt.</li>
+            <li><em>Ranke</em>: Während Wachstum aktiv ist, verursachen Angriffe zusätzlichen Schaden und vergiften.</li>
+            <li><em>Titanholz-Angriff</em>: Beschwört Dornen, die Schaden verursachen und heilen.</li>
+            <li><em>Vitalitätsschub</em>: Erhöht Schaden und heilt.</li>
+          </ul>
+          <p>Solider Anfangstank mit etwas Selbstheilung. Ersetze ihn später durch <strong>Mönch</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Druid -->
+    <div class="card">
+      <h3>Druide</h3>
+      <div class="role">Heiler</div>
+      <div class="hero">
+        <img src="/images/druid.jpeg" alt="Druide">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Segen der Natur</em>: Heilt einen Verbündeten.</li>
+            <li><em>Heilender Regen</em>: Heilt mehrere Verbündete.</li>
+            <li><em>Kraft der Natur</em>: Gewährt einen Schild, der Schaden absorbiert.</li>
+            <li><em>Ruf der Natur</em>: Beschwört 2 Baummenschen.</li>
+            <li><em>Natürliche Affinität</em>: Erhöht die LP der Baummenschen.</li>
+          </ul>
+          <p>Der Anfangsheiler, der Baummenschen beschwört. Später durch <strong>Gezeitenrufer</strong> oder zumindest <strong>Ne Zha</strong> ersetzen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Windwalker -->
+    <div class="card">
+      <h3>Windläufer</h3>
+      <div class="role">Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/windwalker.jpeg" alt="Windläufer">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Schneller Pfeil</em>: Erhöht Angriffsgeschwindigkeit und normalen Angriffsschaden, lädt nach einer Anzahl von Schüssen nach.</li>
+            <li><em>Windläufers Klinge</em>: Greift nächsten Feind an und blockiert kurzzeitig eingehenden Schaden.</li>
+            <li><em>Günstiger Wind</em>: Normale Angriffe verbrauchen möglicherweise keine Schneller-Pfeil-Ladungen.</li>
+            <li><em>Mächtiger Abpraller</em>: Verursacht Schaden und betäubt ein Ziel.</li>
+            <li><em>Vorbereitung</em>: Erhöht die Nachladegeschwindigkeit des Schnellen Pfeils.</li>
+          </ul>
+          <p>Dein erster Natur-Schadensverteiler. Später durch <strong>Ne Zha</strong> ersetzen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forest Maiden -->
+    <div class="card">
+      <h3>Waldmaid</h3>
+      <div class="role">Unterstützung</div>
+      <div class="hero">
+        <img src="/images/forest.jpeg" alt="Waldmaid">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Baa-Baa-Angriff</em>: Beschwört Schafe, die Schaden verursachen und Feinde betäuben.</li>
+            <li><em>Schafhirtin</em>: Beschwört ein Lamm.</li>
+            <li><em>Lied des Lebens</em>: Wenn Einheiten sterben oder geopfert werden, erholen alle Helden etwas LP.</li>
+            <li><em>Hirtenglocke</em>: Gewährt nahegelegenen Verbündeten Schadensreduzierung.</li>
+            <li><em>Rache</em>: Jedes Mal, wenn eine Einheit stirbt oder geopfert wird, erhalten alle Helden permanente Schadenserhöhung.</li>
+          </ul>
+          <p>Ein starker Unterstützungsheld, der Einheiten beschwört und Heilung bietet. Gut sogar im späten Spiel.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pixie -->
+    <div class="card">
+      <h3>Elfe</h3>
+      <div class="role">Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/pixie.jpeg" alt="Elfe">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Wurzel-Absorption</em>: Beschwört Wurzeln, die Schaden verursachen und Angriff stehlen.</li>
+            <li><em>Sonnenblumenkern</em>: Beschwört einen Kern, der Feinde schädigt und betäubt.</li>
+            <li><em>Harmonie der Natur</em>: Erhält Schadensreduzierung für jeden lebenden Natur-Helden.</li>
+            <li><em>Verblüffender Staub</em>: Reduziert die Trefferrate des Feindes und verursacht Schaden.</li>
+            <li><em>Waldverbündeter</em>: Jede tote/geopferte Einheit reduziert die Abklingzeit des Sonnenblumenkerns.</li>
+          </ul>
+          <p>Ausgezeichneter früher Schadensverteiler und bleibt stark bis zu mystischen Helden. Sogar für Endgame geeignet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sage -->
+    <div class="card">
+      <h3>Weiser</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/sage.jpeg" alt="Weiser">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Harmonisches Gleichgewicht</em>: Erhält teilweise Schadensimmunität und heilt, wenn angegriffen.</li>
+            <li><em>Verwandlung</em>: Verwandelt sich in einen Bären, erhält LP, LP-Raub und Schaden.</li>
+            <li><em>Kraft der Wildnis</em>: Erhält nach der Verwandlung einen Schild, der Schaden absorbiert.</li>
+            <li><em>Gelassener Zustand</em>: Verursacht Schaden, verlangsamt Angriffsgeschwindigkeit und entfernt einen Buff.</li>
+            <li><em>Robuste Haut</em>: Wenn der Weise in Bärenform stirbt, kehrt er mit etwas LP zurück.</li>
+          </ul>
+          <p>Der zweite Natur-Tank, den du bekommst. Behalte ihn in deiner Aufstellung bis zum späten Spiel.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watcher -->
+    <div class="card">
+      <h3>Wächter</h3>
+      <div class="role">Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/watcher.jpeg" alt="Wächter">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Pflanzenreinigung</em>: Erzeugt einen Wirbelwind, der Feinde schädigt, vergiftet und verlangsamt.</li>
+            <li><em>Welken</em>: Verursacht Schaden und vergiftet.</li>
+            <li><em>Verlangsamung</em>: Normale Angriffe reduzieren die Angriffsgeschwindigkeit des Feindes.</li>
+            <li><em>Krähenangriff</em>: Erhält Konterangriff, verursacht Schaden und heilt, wenn getroffen.</li>
+            <li><em>Weizenfeld-Wächter</em>: Erhöht den Schaden von Natur-Helden.</li>
+          </ul>
+          <p>Insgesamt eine schwache Option — nicht empfohlen, viel zu investieren. Kann nicht erweckt werden und hat keine exklusive Ausrüstung.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monk -->
+    <div class="card">
+      <h3>Mönch</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/monk.jpeg" alt="Mönch">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Bergschlag</em>: Verursacht Schaden, erhöht maximale LP und gewährt Schadensimmunität.</li>
+            <li><em>Ultimative Zen-Kraft</em>: Gewährt Ausweichen, Schadensreduzierung und kontert, wenn getroffen.</li>
+            <li><em>Donnernder Tritt</em>: Fügt eine Chance hinzu, Bergschlag mit einer Betäubung zu folgen.</li>
+            <li><em>Feuriger Atem</em>: Verursacht Schaden und gewährt Kontrollimmunität.</li>
+            <li><em>Barmherziger Sieger</em>: Erhält einen Schild, wenn Einheiten sterben oder geopfert werden.</li>
+            <li><em>Wächter-Bote</em>: Erhöht die LP der Soldaten pro 1000 eingesetzten.</li>
+          </ul>
+          <p>Dein erster mystischer Natur-Held. Ein starker Tank, der auch Schaden verursacht. Ersetze <strong>Baumwächter</strong> durch ihn.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tidecaller -->
+    <div class="card">
+      <h3>Gezeitenrufer</h3>
+      <div class="role">Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/tidecaller.jpeg" alt="Gezeitenrufer">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Hydro-Hammer</em>: Verursacht Schaden, betäubt und beschwört einen Wächter-Wasserelementar.</li>
+            <li><em>Aufsteigen</em>: Verursacht Schaden, wirft Feinde in die Luft und beschwört den Wasserlord.</li>
+            <li><em>Woge</em>: Normale Angriffe heilen alle Verbündeten.</li>
+            <li><em>Reinigungslanze</em>: Verursacht Schaden und beschwört einen Fernkampf-Elementar.</li>
+            <li><em>Entwickeln</em>: Normale Angriffe können ein zusätzliches Ziel treffen.</li>
+            <li><em>Kriegsbote</em>: Erhöht den Angriff der Soldaten pro 1000 eingesetzten.</li>
+          </ul>
+          <p>Der beste Natur-Held und wohl der stärkste Held im Spiel. Ein Muss für jedes Natur-Team.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

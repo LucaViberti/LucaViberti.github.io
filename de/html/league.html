@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Liga Helden</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
+
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
+
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
+
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="league-heroes">
+    <h2 class="page-title">Liga — Legendäre & Mystische Helden</h2>
+    <p class="lead">Ausgewählte Liga-Helden: Rollen, Kernfähigkeiten und wann man sie einsetzen oder ersetzen sollte.</p>
+
+    <div class="card">
+      <h3>Beste Aufstellungen — Liga</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Hauptaufstellung</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/adjudicator.jpeg" alt="Richter">
+              <img src="/images/rose.jpeg" alt="Rosenprinzessin">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/artificier.png" alt="Kunstschmied">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Barde">
+              <img src="/images/nun.jpeg" alt="Nonne">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Im aktuellen Meta ist der Bischof, obwohl er ein mystischer Held ist, nicht Teil der Hauptaufstellung.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Gegen Bosse (Schadenfokus)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/paragon.jpeg" alt="Paragon">
+              <img src="/images/bishop.jpeg" alt="Bischof">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/artificier.png" alt="Kunstschmied">
+              <img src="/images/pyromancer.jpeg" alt="Pyromant">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/bard.jpeg" alt="Barde">
+              <img src="/images/astrologer.jpeg" alt="Astrologe">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Wenn der Boss schweren Schaden verursacht und deine Truppen sterben, tausche den Astrologen gegen den Richter und stelle ihn in die vordere Reihe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pyromancer -->
+    <div class="card">
+      <h3>Pyromant</h3>
+      <div class="role">Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/pyromancer.jpeg" alt="Pyromant">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Detonieren</em>: Verursacht Schaden und fügt Brennen hinzu.</li>
+            <li><em>Meteor-Flamme</em>: Flächenschaden.</li>
+            <li><em>Glut</em>: Wenn die LP niedrig sind, erhält einen Angriffsbonus.</li>
+            <li><em>Flammenschild</em>: Gewährt einen Schild und schadet nahegelegenen Feinden.</li>
+            <li><em>Elementare Meisterschaft</em>: Erhöht den Fähigkeitsschaden.</li>
+          </ul>
+          <p>Dein stärkster Liga-DPS im frühen Spiel. Behalte sie in deiner Liga-Aufstellung; später immer noch nutzbar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secret Keeper -->
+    <div class="card">
+      <h3>Geheimniswahrer</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/secret.jpeg" alt="Geheimniswahrer">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Arkaner Schild</em>: Erhöht die Schadensreduzierung und entfernt Schwächungen.</li>
+            <li><em>Verbotenes Reich</em>: Bringt Feinde zum Schweigen und verursacht Schaden.</li>
+            <li><em>Arkane Verbindung</em>: Erhöht die LP.</li>
+            <li><em>Zauberreflexion</em>: Verursacht Schaden und wird kurzzeitig immun gegen Schaden.</li>
+            <li><em>Arkaner Wächter</em>: Gewährt einen Schild, der Schaden absorbiert.</li>
+          </ul>
+          <p>Erster legendärer Liga-Tank. Gut am Anfang; später durch <strong>Rosenprinzessin</strong> ersetzen, wenn du bereits <strong>Richter</strong> hast.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Astrologer -->
+    <div class="card">
+      <h3>Astrologe</h3>
+      <div class="role">Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/astrologer.jpeg" alt="Astrologe">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Strahlstrahl</em>: Schaden mit erhöhter kritischer Trefferrate.</li>
+            <li><em>Sonnenstrahl</em>: Mehrere Treffer.</li>
+            <li><em>Vorahnung</em>: Erhöht die kritische Trefferrate.</li>
+            <li><em>Bogenlicht</em>: Schaden, der weiter erhöhten Schaden verursachen kann.</li>
+            <li><em>Einsichten</em>: Erhöht den kritischen Schaden.</li>
+          </ul>
+          <p>Großartiger früher Einzelziel-DPS (Gilden-/Weltboss). Später bevorzuge <strong>Paragon</strong> und <strong>Bischof</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hostess -->
+    <div class="card">
+      <h3>Wirtin</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/hostess.jpeg" alt="Wirtin">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Ausweichtechnik</em>: Tritt in Konter-Zustand ein; erhält Schadensreduzierung, verursacht Schaden und stellt LP wieder her.</li>
+            <li><em>100T Hammer!</em>: Schaden und Betäubung.</li>
+            <li><em>Flinke Beinarbeit</em>: Weicht periodisch einer Schadensinstanz aus.</li>
+            <li><em>Betrunkenes Handgemenge</em>: Schadensreduzierung, Heilung, Schaden und Betäubung.</li>
+            <li><em>Gastwirtin</em>: Erhöht ATK/LP des Teams, auch wenn nicht eingesetzt.</li>
+          </ul>
+          <p>Anständiger früher Tank mit Nutzen. Ersetze, sobald du <strong>Richter</strong> oder <strong>Rosenprinzessin</strong> hast.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bard -->
+    <div class="card">
+      <h3>Barde</h3>
+      <div class="role">Unterstützung </div>
+      <div class="hero">
+        <img src="/images/bard.jpeg" alt="Barde">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Anfeuern</em>: Erhöht Bewegungs- und Angriffsgeschwindigkeit; kann Schaden verursachen.</li>
+            <li><em>Resonanter Akkord</em>: Verursacht Schaden und betäubt.</li>
+            <li><em>Endspiel-Serenade</em>: Nach Resonantem Akkord reduziert die Abklingzeiten der Fähigkeiten der Verbündeten.</li>
+            <li><em>Anmut</em>: Erhöht die kritische Trefferrate; kann Schaden verursachen.</li>
+            <li><em>Kampflied</em>: Erhöht die kritische Trefferrate für Liga-Helden.</li>
+          </ul>
+          <p>Gute Unterstützung: Geschwindigkeit, kritische Treffer und Abklingzeitreduzierung. Passt sogar in Endgame-Teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nun -->
+    <div class="card">
+      <h3>Nonne</h3>
+      <div class="role">Heiler </div>
+      <div class="hero">
+        <img src="/images/nun.jpeg" alt="Nonne">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Therapie</em>: Heilt einen Verbündeten und erhöht die erhaltene Heilung.</li>
+            <li><em>Strahlenlied</em>: Erhöht die maximalen LP der Verbündeten und die endgültige Schadensreduzierung für eine Zeit.</li>
+            <li><em>Heilige Gnade</em>: Gewährt Schadensreduzierung für sich selbst.</li>
+            <li><em>Heilungsgebet</em>: Heilt alle Verbündeten.</li>
+            <li><em>Heilige Vereinigung</em>: Erhöht die maximalen LP von Liga-Helden.</li>
+          </ul>
+          <p>Dein Hauptheiler vom frühen bis zum späten Spiel. Behalte sie in deiner Liga-Aufstellung.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adjudicator -->
+    <div class="card">
+      <h3>Richter</h3>
+      <div class="role">Tank </div>
+      <div class="hero">
+        <img src="/images/adjudicator.jpeg" alt="Richter">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Wächter-Disziplin</em>: Schaden, Betäubung, Schadensreduzierung und Kontrollimmunität für eine Zeit.</li>
+            <li><em>Glaubensschild</em>: Beschwört einen massiven Schild; beim Ablaufen verursacht Schaden.</li>
+            <li><em>Unbezwingbar</em>: Gewährt allen Verbündeten Schadensreduzierung.</li>
+            <li><em>Urteil</em>: Schaden, Betäubung und Selbstheilung.</li>
+            <li><em>Ewig</em>: Unverwundbarkeit nahe dem Tod; LP können während des Effekts nicht unter 1 fallen.</li>
+          </ul>
+          <p>Einer der besten Tanks im Spiel. Skaliert sehr gut mit Sternen. Grundpfeiler von Endgame-Liga-Teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paragon -->
+    <div class="card">
+      <h3>Paragon</h3>
+      <div class="role">Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/paragon.jpeg" alt="Paragon">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Kommandierender Ruf</em>: Verursacht Schaden; gewährt Verbündeten einen Schild.</li>
+            <li><em>Himmlische Klinge</em>: Kontrollimmunität, Schaden, fügt Brennen-Stapel hinzu; erhält Schadensreduzierung.</li>
+            <li><em>Endgültiges Urteil</em>: Erhöhter Schaden gegen Feinde über 70% LP.</li>
+            <li><em>Moralische Wut</em>: Erhöht den Angriff der Verbündeten und verursacht Schaden.</li>
+            <li><em>Ultimative Hinrichtung</em>: Erweitert die Angriffsreichweite und fügt ein zusätzliches Ziel hinzu; erhöht den normalen Angriffsschaden.</li>
+            <li><em>Eroberer</em>: Jeder legendäre+ Liga-Held erhöht den Burg-Angriff; mit 6 Liga-Helden erhält kritische Fähigkeitsrate.</li>
+          </ul>
+          <p>Normalerweise dein primärer Liga-DPS. Ersetze <strong>Astrologe</strong> durch sie, sobald du sie erworben hast.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rose Princess -->
+    <div class="card">
+      <h3>Rosenprinzessin</h3>
+      <div class="role">Tank / Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/rose.jpeg" alt="Rosenprinzessin">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Sei mutig</em>: Erhält Mut-Stapel (Schadensreduzierung). Das Erleiden von Schaden wandelt einen Stapel in Groll um.</li>
+            <li><em>Blühen</em>: Verbraucht Groll-Stapel, um Schaden zu verursachen und Heilungsverbot anzuwenden.</li>
+            <li><em>Dornen</em>: Verursacht Schaden; zusätzlicher Schaden pro Groll-Stapel.</li>
+            <li><em>Waffe hoch!</em>: Schadensreduzierung skaliert mit ihrem ATK.</li>
+            <li><em>Rosen</em>: Erhält Mut und LP, wenn Feinde sterben.</li>
+            <li><em>Wächter-Bote</em>: Erhöht die LP der Soldaten pro 1000 eingesetzten.</li>
+          </ul>
+          <p>Beginnt bescheiden, wird aber mit Sternen zu einem Top-Liga-Helden — ein Tank, der auch sehr hart zuschlägt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bishop -->
+    <div class="card">
+      <h3>Bischof</h3>
+      <div class="role">Schadensverteiler </div>
+      <div class="hero">
+        <img src="/images/bishop.jpeg" alt="Bischof">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Fairer Schlag</em>: Extra effektiv gegen beschwörte Einheiten.</li>
+            <li><em>Göttliche Herabkunft</em>: Schaden; erhöht ATK und Schadensreduzierung; normale Angriffe werden für eine Zeit zu Flächenangriffen.</li>
+            <li><em>Sonnenschild</em>: Erhöht kritische Treffer und kritische Widerstandsfähigkeit.</li>
+            <li><em>Beichte</em>: Verursacht Schaden und wendet Schwäche an (reduziert verstärkten Fähigkeitsschaden), stark gegen Beschwörungen.</li>
+            <li><em>Heilige Explosion</em>: Löst Flächenschaden aus, wenn Feinde sterben.</li>
+            <li><em>Kriegsbote</em>: Erhöht den Angriff der Soldaten pro 1000 eingesetzten.</li>
+          </ul>
+          <p>Hoher DPS leicht unter <strong>Paragon</strong> im Durchschnitt, aber immer noch Endgame-würdig — wenn möglich zusammen mit Paragon einsetzen.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

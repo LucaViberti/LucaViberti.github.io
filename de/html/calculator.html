@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
+  <meta charset="UTF-8">
+  <title>Rush Events Punkte-Rechner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p.description {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .row label {
+      width: 150px;
+    }
+    .row input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    .row span.points {
+      min-width: 100px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .formula {
+      color: #888;
+      font-size: 0.9em;
+      margin-left: 5px;
+    }
+    #total {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rush Events Punkte-Rechner</h1>
+  <p class="description">Gib die Mengen für jeden Gegenstand ein, um die Gesamtpunkte zu berechnen.</p>
+  <div class="row">
+    <label for="books">Bücher:</label>
+    <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="booksPoints">0</span>
+    <span class="formula">Punkte (x&nbsp;/&nbsp;10)</span>
+  </div>
+  <div class="row">
+    <label for="essence">Haustier-Essenz:</label>
+    <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="essencePoints">0</span>
+    <span class="formula">Punkte (y&nbsp;&times;&nbsp;15)</span>
+  </div>
+  <div class="row">
+    <label for="food">Haustierfutter:</label>
+    <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="foodPoints">0</span>
+    <span class="formula">Punkte (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+  </div>
+  <div class="row">
+    <label for="uncommon">Ungewöhnliches&nbsp;Haustier:</label>
+    <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="uncommonPoints">0</span>
+    <span class="formula">Punkte (q&nbsp;&times;&nbsp;150)</span>
+  </div>
+  <div class="row">
+    <label for="rare">Seltenes&nbsp;Haustier:</label>
+    <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+    <span class="points" id="rarePoints">0</span>
+    <span class="formula">Punkte (r&nbsp;&times;&nbsp;900)</span>
+  </div>
+  <div id="total">Gesamt: 0 Punkte</div>
+
+  <script>
+    function updatePoints() {
+      const x = parseFloat(document.getElementById('books').value) || 0;
+      const y = parseFloat(document.getElementById('essence').value) || 0;
+      const z = parseFloat(document.getElementById('food').value) || 0;
+      const q = parseFloat(document.getElementById('uncommon').value) || 0;
+      const r = parseFloat(document.getElementById('rare').value) || 0;
+
+      const bookPoints = x / 10;
+      const essencePoints = y * 15;
+      const foodPoints = (z * 3) / 10;
+      const uncommonPoints = q * 150;
+      const rarePoints = r * 900;
+
+      document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
+      document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
+      document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
+      document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
+      document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
+
+      const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
+      document.getElementById('total').textContent = 'Gesamt: ' + total.toFixed(1) + ' Punkte';
+    }
+
+    updatePoints();
+  </script>
+</body>
+</html>

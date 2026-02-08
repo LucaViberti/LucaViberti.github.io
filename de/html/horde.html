@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Horde Legendäre Helden</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin:0; padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:#f5f5f7; line-height:1.6;
+}
+
+header { background:#16171A; padding:12px 20px; display:flex; flex-direction:column; align-items:center; }
+header h1 { margin:0; color:#f5f5f7; font-size:1.5rem; }
+header .tagline { margin-left:12px; color:#888; font-size:.9rem; white-space:nowrap; }
+header .site-info { display:flex; flex-direction:column; align-items:center; }
+
+nav { width:100%; margin-top:10px; }
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+nav ul li { position:relative; }
+nav ul li a { color:#d1d1d6; text-decoration:none; padding:10px 8px; font-size:.85rem; transition:color .3s; }
+nav ul li a:hover { color:#fff; }
+nav ul li ul { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); background:#1f1f21; border-radius:6px; box-shadow:0 8px 16px rgba(0,0,0,.3); padding:10px 0; min-width:200px; z-index:1000; }
+nav ul li:hover ul { display:block; }
+nav ul li ul li a { display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; }
+nav ul li ul li a:hover { background:#2c2c2e; color:#fff; }
+
+main { padding:40px 20px; max-width:1000px; margin:0 auto; }
+section { margin-bottom:40px; }
+footer { background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem; }
+
+header { background:linear-gradient(180deg,#1e2541 0%,#141720 100%); box-shadow:0 2px 4px rgba(0,0,0,.4); border-bottom:1px solid #2b2f3a; }
+header .tagline { color:#b0b6c7; }
+nav ul { gap:20px; }
+nav ul li a { text-transform:uppercase; font-weight:500; letter-spacing:.05em; padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s, border-bottom-color .3s; color:#ccd0dd; }
+nav ul li a:hover { color:#fff; border-bottom-color:#29abe0; }
+nav ul li ul { background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; }
+nav ul li ul li a { font-size:.85rem; }
+nav ul li ul li a:hover { background:#25314d; color:#fff; }
+
+.page-title { font-size:2rem; margin-bottom:12px; color:#1e2541; }
+.lead { color:#4b5563; margin-bottom:28px; }
+
+.card {
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.04); margin-bottom:22px;
+}
+.card h3 { margin:0 0 6px; color:#1f2937; font-size:1.15rem; }
+.role { font-size:.9rem; color:#6b7280; margin-bottom:8px; }
+
+.hero { display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; }
+.hero img {
+  max-width:14%; min-width:110px;
+  height:auto; border-radius:6px; border:1px solid #e5e7eb;
+}
+.hero .txt { flex:1 1 300px; min-width:260px; }
+.hero ul { margin:8px 0 0 18px; }
+.hero li { margin:2px 0; }
+
+.lineup-wrapper { display:grid; gap:18px; }
+.lineup-card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px 18px; box-shadow:0 2px 8px rgba(0,0,0,.03); }
+.lineup-card h3 { margin:0 0 12px; font-size:1.05rem; color:#1f2937; text-transform:uppercase; letter-spacing:.08em; }
+.lineup-row { display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px dashed #e5e7eb; }
+.lineup-row:last-of-type { border-bottom:none; }
+.lineup-label { font-size:.85rem; font-weight:600; color:#6b7280; width:70px; text-transform:uppercase; letter-spacing:.08em; }
+.lineup-heroes { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.lineup-heroes img { width:54px; height:54px; object-fit:cover; border-radius:8px; border:1px solid #e5e7eb; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,.06); }
+.lineup-note { margin:12px 0 0; font-size:.9rem; color:#4b5563; }
+
+@media (max-width:768px) {
+  .hero { flex-direction:column; }
+  .hero img { max-width:100%; }
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="horde-legendary">
+    <h2 class="page-title">Horde — Legendäre Helden</h2>
+    <p class="lead">Übersicht über die wichtigsten legendären Horde-Helden — ihre Rolle, Fähigkeiten und Empfehlungen.</p>
+
+    <div class="card">
+      <h3>Beste Aufstellungen — Horde</h3>
+      <div class="lineup-wrapper">
+        <div class="lineup-card">
+          <h3>Hauptaufstellung</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/desert.jpeg" alt="Wüstenprinz">
+              <img src="/images/wanderer.png" alt="Wanderer">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/beastmaster.png" alt="Bestienmeister">
+              <img src="/images/storm.jpeg" alt="Sturm-Maid">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/warlock.jpeg" alt="Hexenmeister">
+              <img src="/images/witch.jpeg" alt="Hexe">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Behalte den Wanderer in der vorderen Reihe, um von seiner Fähigkeit zu profitieren.</p>
+        </div>
+
+        <div class="lineup-card">
+          <h3>Schadenfokus (am besten vs Bosse)</h3>
+          <div class="lineup-row">
+            <div class="lineup-label">Vorne</div>
+            <div class="lineup-heroes">
+              <img src="/images/desert.jpeg" alt="Wüstenprinz">
+              <img src="/images/wanderer.png" alt="Wanderer">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Mitte</div>
+            <div class="lineup-heroes">
+              <img src="/images/storm.jpeg" alt="Sturm-Maid">
+              <img src="/images/wilderness.jpeg" alt="Wildnis-Jägerin">
+            </div>
+          </div>
+          <div class="lineup-row">
+            <div class="lineup-label">Hinten</div>
+            <div class="lineup-heroes">
+              <img src="/images/warlock.jpeg" alt="Hexenmeister">
+              <img src="/images/witch.jpeg" alt="Hexe">
+            </div>
+          </div>
+          <p class="lineup-note">Hinweis: Von der normalen Aufstellung einfach Bestienmeister mit Wildnis-Jägerin tauschen. Dies ist die beste Aufstellung für Schadensverursachung.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shaman -->
+    <div class="card">
+      <h3>Schamanin</h3>
+      <div class="role">Heiler</div>
+      <div class="hero">
+        <img src="/images/shaman.jpeg" alt="Schamanin">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Heilende Brise</em>: Heilt Verbündete mit den niedrigsten LP.</li>
+            <li><em>Ahnenseele</em>: Besitzt den Verbündeten mit den niedrigsten LP und verhindert den Tod für kurze Zeit.</li>
+            <li><em>Regensegen</em>: Erhöht die Heilwirkung aller Verbündeten.</li>
+            <li><em>Wiederherstellungstotem</em>: Beschwört ein Heiltotem, das LP wiederherstellt.</li>
+            <li><em>Wolfsseele</em>: Beschwört 2 Wölfe.</li>
+          </ul>
+          <p>Die erste Horde-Heilerin, die du erhältst. Großartig am Anfang, aber später durch <strong>Hexe</strong> ersetzen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swordmaster -->
+    <div class="card">
+      <h3>Schwertmeister</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/swordmaster.jpeg" alt="Schwertmeister">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Wirbelwind</em>: Greift umgebende Feinde an.</li>
+            <li><em>Klingensturm</em>: Dreht sich und verursacht Schaden.</li>
+            <li><em>Kampfwille</em>: Verhindert einmalig den Tod, indem bei 1 LP für kurze Zeit verbleibt.</li>
+            <li><em>Verrückter Schnitt</em>: Verursacht Schaden und erhält Schadensreduzierung.</li>
+            <li><em>Unterdrückung</em>: Erhöht Schaden basierend auf fehlenden LP.</li>
+          </ul>
+          <p>Ein Tank, der auch etwas Schaden verursacht. Ersetze ihn so schnell wie möglich durch <strong>Wüstenprinz</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barbarian -->
+    <div class="card">
+      <h3>Barbar</h3>
+      <div class="role">Tank</div>
+      <div class="hero">
+        <img src="/images/barbarian.jpeg" alt="Barbar">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Befestigte Verteidigung</em>: Gewährt einen Schild, der Schaden absorbiert.</li>
+            <li><em>Verhöhnung</em>: Zwingt Feinde, diesen Helden anzugreifen.</li>
+            <li><em>Unstillbarer Hunger</em>: Erhöht LP und Angriff.</li>
+            <li><em>Wilder Schlag</em>: Verursacht Schaden und betäubt Feinde.</li>
+            <li><em>Auge der Einsicht</em>: Reduziert erlittenen Fähigkeitsschaden.</li>
+            <li><em>Horde-Verteidiger</em>: Erhöht die Schadensreduzierung für alle Horde-Helden in der Warteschlange.</li>
+          </ul>
+          <p>Ein solider früher Tank. Später durch <strong>Wüstenprinz</strong> oder <strong>Bestienmeister</strong> ersetzen. Immer noch nützlich im späten Spiel, besonders gegen Natur-Teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warlock -->
+    <div class="card">
+      <h3>Hexenmeister</h3>
+      <div class="role">Unterstützung / Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/warlock.jpeg" alt="Hexenmeister">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Geflüsterte Schatten</em>: Verursacht Schaden und heilt Verbündete.</li>
+            <li><em>Blutrausch</em>: Gewährt LP-Raub und erhöht die Angriffsgeschwindigkeit der Verbündeten.</li>
+            <li><em>Schattenritus</em>: Erhöht die LP aller Horde-Helden.</li>
+            <li><em>Schwächung</em>: Reduziert Fähigkeitsschaden und Schadensreduzierung der Feinde.</li>
+            <li><em>Bösartige Leidenschaft</em>: Erhöht den Schaden alliierter Horde-Helden.</li>
+          </ul>
+          <p>Ein starker Unterstützungsheld. Bietet Buffs und Debuffs, sehr wertvoll auch im Endgame-PvE.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wilderness -->
+    <div class="card">
+      <h3>Wildnis-Jägerin</h3>
+      <div class="role">Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/wilderness.jpeg" alt="Wildnis-Jägerin">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Widerhaken</em>: Erhöht normale Angriffe und fügt Blutung hinzu.</li>
+            <li><em>Tödliches Gebet</em>: Verursacht Schaden, stößt Feinde zurück und erhöht Angriff.</li>
+            <li><em>Jägerin</em>: Erhöht Angriff.</li>
+            <li><em>Impulsinstinkt</em>: Erhöht Angriffsgeschwindigkeit.</li>
+            <li><em>Tradition</em>: Erhöht den Schaden der Horde-Helden in der Warteschlange.</li>
+          </ul>
+          <p>Die erste Horde-Schadensverteilerin. Ersetze sie so schnell wie möglich durch <strong>Wu Kong</strong> oder <strong>Wüsten-Maid</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soulmancer -->
+    <div class="card">
+      <h3>Seelenbeschwörer</h3>
+      <div class="role">Unterstützung</div>
+      <div class="hero">
+        <img src="/images/soulmancer.jpeg" alt="Seelenbeschwörer">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Seelenverbindung</em>: Teilt Schaden mit einem Verbündeten und wird gegen einen Teil davon immun.</li>
+            <li><em>Seelenrückruf</em>: Bei bevorstehenden Tod verursacht Schaden und kann eine Weile nicht sterben, dann vergeht.</li>
+            <li><em>Seelenstärkung</em>: Erhöht die LP von Horde-Helden in der Warteschlange.</li>
+            <li><em>Seelengefrieren</em>: Verursacht Schaden und kann das Ziel einfrieren.</li>
+            <li><em>Schmerzdiffusion</em>: Löst Seelengefrieren sofort aus, wenn LP unter einen Schwellenwert fallen.</li>
+          </ul>
+          <p>Ein Unterstützungsheld, der gut mit Sternen skaliert. Verlängert die Überlebensfähigkeit des Teams, weithin im späten Spiel verwendet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desert Prince -->
+    <div class="card">
+      <h3>Wüstenprinz</h3>
+      <div class="role">Tank / Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/desert.jpeg" alt="Wüstenprinz">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Königliche Rüstung</em>: Gewährt einen Schild, der Schaden absorbiert.</li>
+            <li><em>Segen des Sandes</em>: Erhält zusätzliche LP und verursacht wahren Schaden basierend auf maximalen LP.</li>
+            <li><em>Königliche Schatzkammer</em>: Erhöht Fähigkeitsschaden der Verbündeten, wenn Königliche Rüstung aktiviert ist.</li>
+            <li><em>Sengender Krummsäbel</em>: Verursacht wahren Schaden.</li>
+            <li><em>Auge der Einsicht</em>: Reduziert erlittenen Fähigkeitsschaden.</li>
+            <li><em>Enthusiast</em>: Jeder legendäre+ Horde-Held in der Warteschlange erhöht das Todes-/Verwundetenverhältnis des Feindes.</li>
+          </ul>
+          <p>Einer der besten Helden im Spiel. Ein Tank, der auch exzellenten Schaden verursacht — ein <strong>Muss</strong> für jede Horde-Aufstellung. Ersetze <strong>Schwertmeister</strong> (oder <strong>Barbar</strong>, wenn sie ähnliche Sterne haben), sobald du ihn hast.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Storm Maiden -->
+    <div class="card">
+      <h3>Sturm-Maid</h3>
+      <div class="role">Schadensverteiler</div>
+      <div class="hero">
+        <img src="/images/storm.jpeg" alt="Sturm-Maid">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Wirbelwind-Federn</em>: Verursacht Schaden, erhöht später auch Geschwindigkeit.</li>
+            <li><em>Blitzsturm</em>: Verursacht Schaden und wirft Feinde in die Luft.</li>
+            <li><em>Wind der Freiheit</em>: Gewährt allen Helden in der Warteschlange Ausweichen.</li>
+            <li><em>Tornado</em>: Kanalisiert einen Wirbelwind, der Projektile blockiert, dann Schaden verursacht.</li>
+            <li><em>Windfeld</em>: Jeder Tornado-Einsatz erhöht den Team-Angriff.</li>
+            <li><em>Kriegsbote</em>: Erhöht den Angriff der Soldaten für jeweils 1000 eingesetzte Soldaten.</li>
+          </ul>
+          <p>Die erste mystische Heldin, die du erhältst. Ein Top-Schadensverteiler, der deinem Team ermöglicht, mit anderen Fraktionen zu konkurrieren. Ersetze sofort eine Unterstützung oder schwächeren DD durch sie.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Witch -->
+    <div class="card">
+      <h3>Hexe</h3>
+      <div class="role">Heiler / Unterstützung</div>
+      <div class="hero">
+        <img src="/images/witch.jpeg" alt="Hexe">
+        <div class="txt">
+          <strong>Fähigkeiten</strong>
+          <ul>
+            <li><em>Dunkle Heilung</em>: Heilt Verbündete.</li>
+            <li><em>Schreckensgolem</em>: Beschwört einen Golem, der Feinde verängstigt und etwas Schaden verursacht.</li>
+            <li><em>Fluchfeuer</em>: Nach Dunkler Heilung gewährt Schadensreduzierung und Heilung an zufällige Verbündete.</li>
+            <li><em>Dunkler Magie-Schub</em>: Erhöht den Angriff der Verbündeten und gewährt eine temporäre Betäubungsbarriere.</li>
+            <li><em>Wächter-Bote</em>: Erhöht die LP der Soldaten pro 1000 eingesetzten.</li>
+          </ul>
+          <p>Eine mächtige Heilerin mit Unterstützungs-Nutzen. Ersetze <strong>Schamanin</strong> durch sie, sobald du sie hast.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res=>res.text())
+    .then(html=>{document.getElementById("footer").innerHTML=html;});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+  function addIcon(el,word){
+    const img=document.createElement('img');
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
+});
+</script>
+</body>
+</html>

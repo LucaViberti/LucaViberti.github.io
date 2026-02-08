@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Forschung</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+/* Header & Nav (lasciati come da base) */
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 { margin: 0; color: #f5f5f7; font-size: 1.5rem; }
+header .tagline { margin-left: 12px; color: #888; font-size: 0.9rem; white-space: nowrap; }
+header .site-info { display: flex; flex-direction: column; align-items: center; }
+nav { width: 100%; margin-top: 10px; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+nav ul li { position: relative; }
+nav ul li a { color: #d1d1d6; text-decoration: none; padding: 10px 8px; font-size: 0.85rem; transition: color 0.3s; }
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a { display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap; }
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer {
+  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
+}
+.donation-section {
+  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; font-weight: bold; transition: background 0.3s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Enhanced navigation styling (come in base migliorata) */
+header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; }
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent; transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul { background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0; }
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ------- Page-specific styles (solo contenuto) ------- */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #1e2541;
+}
+.lead {
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+.content-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  margin-bottom: 24px;
+}
+.content-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+.content-card p, .content-card li { color: #374151; }
+
+/* Immagini piccole affiancate al testo su desktop, a colonna su mobile */
+.img-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.img-block img {
+  max-width: 32%;   /* immagini più piccole */
+  min-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.img-block .text {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+/* Variante a due immagini piccole affiancate */
+.duo {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.duo img {
+  max-width: 32%;
+  min-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-block { flex-direction: column; }
+  .img-block img, .duo img { max-width: 100%; }
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+  <section id="research">
+    <h2 class="page-title">Adventure-Modus — Übersicht</h2>
+    <p class="lead">Adventure ist der Kern-PvE-Modus in TopHeroes. Er treibt deinen frühen Fortschritt mit Helden, Waffen und Ausrüstung voran und legt die Grundlage für deinen gesamten Spielverlauf.</p>
+
+    <div class="content-card">
+      <h3>Allgemeine Übersicht</h3>
+      <p>Adventure ist der erste und wichtigste Spielmodus in TopHeroes. Er ist die Hauptquelle für anfängliche Ressourcen, einschließlich Helden, Waffen und Ausrüstung. Durch ihn voranzukommen ist entscheidend, um deine Reise richtig zu beginnen.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Struktur</h3>
+
+      <div class="img-block">
+        <img src="/images/adventure1.jpeg" alt="Adventure-Zonen-Erkundungsbildschirm" loading="lazy">
+        <div class="text">
+          <p>Das Adventure ist in verschiedene Zonen unterteilt. Um die nächste Zone freizuschalten, müssen Spieler einen Portal-Boss besiegen. Gelegentlich erscheinen <em>Adventure-Bosse</em> und lassen nach ihrer Niederlage eine Truhe fallen. Das Öffnen dieser Truhen kostet 10 Ausdauer und gibt wertvolle Belohnungen wie Ausrüstung, Splitter, Tavernen-Token, Diamanten und mehr.</p>
+          <p>Jede Zone kann zu 100% abgeschlossen werden, indem alle versteckten Pfade, geheimen Truhen gefunden und Soldaten geholfen wird. Das vollständige Abschließen einer Zone gewährt zusätzliche Boni. Dies wird dringend empfohlen, bevor man zum nächsten Gebiet übergeht.</p>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/adventure2.jpeg" alt="Adventure-Boss-Portal-Bildschirm" loading="lazy">
+        <div class="text">
+          <p>Bosse sind oft an Portale gebunden; sie zu besiegen ist der Schlüssel zum Freischalten neuer Gebiete und Truhen. Nutze überschüssige Ausdauer, um Bosse zu wiederholen, die du zuverlässig besiegen kannst.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h3>Adventure-Karten</h3>
+      <p>Spieler, die beim Server-Start beginnen, haben zunächst nur Zugriff auf die <strong>Classic</strong>-Karte im Normalmodus. Nach deren Abschluss wird der <strong>Schwere Modus</strong> derselben Karte freigeschaltet. Später, mit Saison 1, werden eine neue Karte und erweiterte Level im Classic Hard hinzugefügt.</p>
+      <p>Sobald du alle verfügbaren Karten abgeschlossen hast, ist es eine gute Zeit, überschüssige Ausdauer zu nutzen, um frühere Bosse zu farmen und Zonen zu 100% abzuschließen.</p>
+    </div>
+
+    <div class="content-card">
+      <h3>Truhen-Symbol (Unten Links)</h3>
+
+      <div class="img-block">
+        <img src="/images/adventure3.jpeg" alt="Passive Truhenanzeige unten links" loading="lazy">
+        <div class="text">
+          <p>Es gibt ein Truhen-Symbol unten links, das sich passiv im Laufe der Zeit füllt, auch wenn du nicht aktiv spielst. Du kannst es jederzeit ohne Strafe abholen. Es hört nach 8 Stunden auf sich anzusammeln, wenn es nicht abgeholt wird — überprüfe es also regelmäßig.</p>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/adventure4.jpeg" alt="Uhren-Symbol bietet Zweistundenbelohnungen für Ausdauer" loading="lazy">
+        <div class="text">
+          <p>Während du im Adventure vorankommst, steigt diese Truhe auf und gibt etwas bessere Belohnungen. Es gibt auch ein Uhren-Symbol, das dir die Belohnungen von 2 Stunden im Austausch für 20 Ausdauer anbietet. Das ist es nicht wert — spare deine Ausdauer für bessere Dinge.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h3>Fortschrittstipps</h3>
+      <ul>
+        <li>Am Anfang konzentriere dich darauf, das Adventure voranzutreiben, bis du stecken bleibst.</li>
+        <li>Bosse wiederholt zu farmen ist eine gute Strategie, um Belohnungen zu maximieren und Ausrüstung und Splitter zu sammeln.</li>
+        <li>Das tägliche Ausdauer-Limit für das Öffnen von Boss-Truhen beträgt <strong>2500</strong> — sehr hoch und selten erreicht, es sei denn, du spielst intensiv.</li>
+        <li>Während du vorankommst, verbessern sich die Boss-Belohnungen erheblich, besonders im Classic Hard Mode, wo legendäre Waffen zu fallen beginnen.</li>
+        <li>Viele dieser Waffen sind lila Stufe; wie man sie effektiv nutzt, siehe den Abschnitt <strong>Ausrüstung</strong> unter <strong>Helden</strong>.</li>
+      </ul>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

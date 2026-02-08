@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Relikte</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #d1d1d6;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f21;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #2c2c2e;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.donation-button:hover {
+  background: #2389b5;
+}
+
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+
+header .tagline {
+  color: #b0b6c7;
+}
+
+nav ul {
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+nav ul li ul li a {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+</style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+  <main>
+    <section id="research">
+      <h2>Relikte</h2>
+      <p>Inhalt folgt in Kürze.</p>
+    </section>
+  
+   <div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

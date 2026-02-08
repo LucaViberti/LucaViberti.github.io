@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopHeroes Leitfaden - Kostentabellen</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font: 14px Arial, sans-serif; background: #f5f5f5; line-height: 1.4; }
+    main { max-width: 1200px; margin: 0 auto; padding: 20px; background: white; }
+    .th-section { margin: 40px 0; }
+    .th-section h2 { font-size: 24px; margin-bottom: 15px; color: #333; }
+    .th-tabs { display: flex; gap: 5px; margin-bottom: 15px; flex-wrap: wrap; }
+    .th-tab { padding: 8px 12px; border: 1px solid #ddd; background: #f9f9f9; cursor: pointer; border-radius: 4px 4px 0 0; }
+    .th-tab.th-active { background: white; border-bottom-color: white; }
+    .th-subtables .th-wrap { display: none; }
+    .th-subtables .th-wrap.th-visible { display: block; }
+    .th-tablecard { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 4px; overflow: hidden; }
+    .th-tablehead { background: #f0f0f0; padding: 10px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #ddd; }
+    .th-collapse { background: none; border: none; cursor: pointer; font-size: 16px; font-weight: bold; width: 24px; text-align: center; }
+    .th-tablebody { padding: 0; }
+    .th-tablebody[hidden] { display: none; }
+    .th-scroll { overflow-x: auto; }
+    .th-table { width: 100%; border-collapse: collapse; }
+    .th-table th, .th-table td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+    .th-table th { background: #e8e8e8; font-weight: bold; }
+    .th-table tr:nth-child(even) { background: #fafafa; }
+    .th-top { position: sticky; top: 0; z-index: 7; background: #e8e8e8; }
+    .th-left { position: sticky; left: 0; z-index: 6; background: #e8e8e8; }
+    .th-corner { position: sticky; top: 0; left: 0; z-index: 8; background: #e8e8e8; }
+    .th-toplink { text-align: center; margin-top: 15px; }
+    .th-toplink a { color: #0066cc; text-decoration: none; }
+    .th-toplink a:hover { text-decoration: underline; }
+    select { padding: 8px; margin-bottom: 15px; }
+    #wrap-castle-108, #wrap-castle-1107, #wrap-castle-older { display: none; }
+    #wrap-castle-108.th-visible, #wrap-castle-1107.th-visible, #wrap-castle-older.th-visible { display: block; }
+    #wrap-castle-base.th-visible { display: block; }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="top"></div>
+    <h1>TopHeroes Leitfaden - Kostentabellen</h1>
+    <p>Diese Seite stellt eine große Sammlung von Nutzen-Tabellen zusammen.</p>
+    
+    <nav>
+      <p><strong>Schnelle Navigation:</strong>
+      <a href="#castle">Burg</a> | 
+      <a href="#hero">Held</a> | 
+      <a href="#gear">Ausrüstung</a> | 
+      <a href="#lordgear">Lord-Ausrüstung</a> | 
+      <a href="#troopskin">Truppen-Skin</a> | 
+      <a href="#relic">Relikte</a> | 
+      <a href="#rune">Runen</a> | 
+      <a href="#pet">Haustier</a> | 
+      <a href="#villager">Dorfbewohner</a> | 
+      <a href="#vip">VIP</a></p>
+    </nav>
+
+    <section id="castle" class="th-section"><h2>Burg</h2><div><label>Server-Auswahl: <select id="castle-switch"><option value="108">Neuer Server 108+</option><option value="1107">Server 1-107</option><option value="older">Älterer Server</option></select></label></div><div class="th-subtables"><div id="wrap-castle-base" class="th-wrap th-visible"><div id="wrap-castle-base-base" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-base-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Basis-Burg</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-castle-base-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-castle-base">
+        <thead>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Basis-Burg Stufe 21-40</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Stein und Holz</th><th class="th-top" style="text-align:center;vertical-align:bottom">Rubin</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gebäude</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">21</th><td style="text-align:center;vertical-align:bottom">2040000</td><td style="text-align:center;vertical-align:bottom">1332000</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">22</th><td style="text-align:center;vertical-align:bottom">2250000</td><td style="text-align:center;vertical-align:bottom">1470000</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">23</th><td style="text-align:center;vertical-align:bottom">2475000</td><td style="text-align:center;vertical-align:bottom">1620000</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">24</th><td style="text-align:center;vertical-align:bottom">2722500</td><td style="text-align:center;vertical-align:bottom">1782000</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">25</th><td style="text-align:center;vertical-align:bottom">2994000</td><td style="text-align:center;vertical-align:bottom">1959000</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">26</th><td style="text-align:center;vertical-align:bottom">3293400</td><td style="text-align:center;vertical-align:bottom">2154900</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">27</th><td style="text-align:center;vertical-align:bottom">3622740</td><td style="text-align:center;vertical-align:bottom">2370390</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">28</th><td style="text-align:center;vertical-align:bottom">3985014</td><td style="text-align:center;vertical-align:bottom">2607429</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">29</th><td style="text-align:center;vertical-align:bottom">4383515</td><td style="text-align:center;vertical-align:bottom">2868172</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">30</th><td style="text-align:center;vertical-align:bottom">4821867</td><td style="text-align:center;vertical-align:bottom">3154989</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">31</th><td style="text-align:center;vertical-align:bottom">5304054</td><td style="text-align:center;vertical-align:bottom">3470488</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">32</th><td style="text-align:center;vertical-align:bottom">5834459</td><td style="text-align:center;vertical-align:bottom">3817537</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">33</th><td style="text-align:center;vertical-align:bottom">6417905</td><td style="text-align:center;vertical-align:bottom">4199290</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">34</th><td style="text-align:center;vertical-align:bottom">7059696</td><td style="text-align:center;vertical-align:bottom">4619219</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">35</th><td style="text-align:center;vertical-align:bottom">7765665</td><td style="text-align:center;vertical-align:bottom">5081141</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">36</th><td style="text-align:center;vertical-align:bottom">8542232</td><td style="text-align:center;vertical-align:bottom">5589255</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">37</th><td style="text-align:center;vertical-align:bottom">9396455</td><td style="text-align:center;vertical-align:bottom">6148180</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">38</th><td style="text-align:center;vertical-align:bottom">10336101</td><td style="text-align:center;vertical-align:bottom">6762998</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">39</th><td style="text-align:center;vertical-align:bottom">11369711</td><td style="text-align:center;vertical-align:bottom">7439297</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">40</th><td style="text-align:center;vertical-align:bottom">12506682</td><td style="text-align:center;vertical-align:bottom">8184227</td><td style="text-align:center;vertical-align:bottom">Verschiedene</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">147.0M</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">54.1M</td><td style="font-weight:bold;text-align:center;vertical-align:bottom"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><div id="wrap-castle-108" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-108-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Burg 108+ (Stufe 41-55)</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-castle-108-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-castle-108">
+        <thead>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Burg-Stufen 41-55 (Neuer Server 108+)</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Drachen-Essenz</th><th class="th-top" style="text-align:center;vertical-align:bottom">Rubin</th><th class="th-top" style="text-align:center;vertical-align:bottom">Stein und Holz</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gebäude</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">41</th><td style="text-align:center;vertical-align:bottom">126</td><td style="text-align:center;vertical-align:bottom">verschiedene</td><td style="text-align:center;vertical-align:bottom">verschieden</td><td style="text-align:center;vertical-align:bottom">verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">42-55</th><td style="text-align:center;vertical-align:bottom">132-238</td><td style="text-align:center;vertical-align:bottom">verschiedene</td><td style="text-align:center;vertical-align:bottom">verschieden</td><td style="text-align:center;vertical-align:bottom">verschiedene</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-castle-1107" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-1107-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Burg 1-107 (Stufe 41-55)</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-castle-1107-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-castle-1107">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Burg-Stufen 41-55 (Server 1-107)</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Drachen-Essenz</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gebäude</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">41</th><td style="text-align:center;vertical-align:bottom">132</td><td style="text-align:center;vertical-align:bottom">verschiedene</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">42-55</th><td style="text-align:center;vertical-align:bottom">132-238</td><td style="text-align:center;vertical-align:bottom">verschiedene</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-castle-older" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-castle-older-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Älterer Server (Stufe 21-40)</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-castle-older-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-castle-older">
+        <thead>
+<tr><th colspan="8" class="th-left" style="text-align:center;vertical-align:center">Älterer Server - Burg Stufe 21-40</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Forschungshütte</th><th class="th-top" style="text-align:center;vertical-align:bottom">Krankenhaus</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gilde</th><th class="th-top" style="text-align:center;vertical-align:bottom">Trainingsplatz</th><th class="th-top" style="text-align:center;vertical-align:bottom">Wachtturm</th><th class="th-top" style="text-align:center;vertical-align:bottom">Lagerhaus</th><th class="th-top" style="text-align:center;vertical-align:bottom">Liga-Statue</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">21-40</th><td style="text-align:center;vertical-align:bottom">Verschiedene Anforderungen</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="hero" class="th-section"><h2>Held</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-hero-leg">Legendärer Held</button><button class="th-tab" data-target="tbl-hero-myth">Mystischer Held</button><button class="th-tab" data-target="tbl-hero-aw">Erweckungsprozess</button><button class="th-tab" data-target="tbl-hero-lv">Helden-Stufe</button><button class="th-tab" data-target="tbl-hero-books">Fertigkeitsbücher</button></div><div class="th-subtables"><div id="wrap-tbl-hero-leg" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-leg-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Legendärer Held</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-hero-leg-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-hero-leg">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Legendärer Held</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Upgrade</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gesamtscherben pro Stern</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">6</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">8</td><td style="text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">16</td><td style="text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">500</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-hero-myth" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-myth-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Mystischer Held</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-hero-myth-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-hero-myth">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Mystischer Held (doppelte Kosten)</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Upgrade</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gesamtscherben pro Stern</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">50</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">50</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">60</td><td style="text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">80</td><td style="text-align:center;vertical-align:bottom">400</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★</th><td style="text-align:center;vertical-align:bottom">80</td><td style="text-align:center;vertical-align:bottom">400</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">160</td><td style="text-align:center;vertical-align:bottom">800</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">80</td><td style="text-align:center;vertical-align:bottom">400</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">160</td><td style="text-align:center;vertical-align:bottom">800</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★★★</th><td style="text-align:center;vertical-align:bottom">160</td><td style="text-align:center;vertical-align:bottom">800</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">1000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-hero-aw" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-aw-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Erweckungsprozess</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-hero-aw-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-hero-aw">
+        <thead>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Erweckungsprozess</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Tier/Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Level</th><th class="th-top" style="text-align:center;vertical-align:bottom">Seelensteine</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gesamt-Scherben</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Tier 0</th><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">1</td><td style="text-align:center;vertical-align:bottom">5</td></tr>
+<tr><th rowspan="6" class="th-left" style="text-align:center;vertical-align:center">Tier 1</th><td style="text-align:center;vertical-align:bottom">5</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">5</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">10</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">10</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">10</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">10</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
+<tr><th rowspan="6" class="th-left" style="text-align:center;vertical-align:center">Tier 2</th><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">15</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">15</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">2</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th rowspan="6" class="th-left" style="text-align:center;vertical-align:center">Tier 3</th><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">20</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">20</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">30</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">30</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">30</td><td style="text-align:center;vertical-align:bottom">-</td><td style="text-align:center;vertical-align:bottom">30</td></tr>
+<tr><td style="text-align:center;vertical-align:bottom">40</td><td style="text-align:center;vertical-align:bottom">4</td><td style="text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom"></td><td style="font-weight:bold;text-align:center;vertical-align:bottom">9 Steine</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">345</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-hero-lv" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-lv-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Helden-Stufe</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-hero-lv-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-hero-lv">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Held-Stufe zu Burg-Zuordnung (Fleisch-Kosten)</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Burg-Stufe 1-40</th><th class="th-top" style="text-align:center;vertical-align:bottom">Helden-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Fleisch-Kosten</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Stufe 1-40 + Brillanz 1-3</th><td style="text-align:center;vertical-align:bottom">15-243</td><td style="text-align:center;vertical-align:bottom">515-22.7M</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-hero-books" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-hero-books-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Fertigkeitsbücher</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-hero-books-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-hero-books">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Fertigkeitsbücher-Kosten</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Bücher pro Fertigkeit</th><th class="th-top" style="text-align:center;vertical-align:bottom">Bücher pro Held</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1</th><td style="text-align:center;vertical-align:bottom">100</td><td style="text-align:center;vertical-align:bottom">500</td></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">2-15</th><td style="text-align:center;vertical-align:bottom">100-4700</td><td style="text-align:center;vertical-align:bottom">500-23500</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="gear" class="th-section"><h2>Ausrüstung</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-gear-lv">Ausrüstungs-Stufe</button><button class="th-tab" data-target="tbl-gear-star">Ausrüstungs-Sterne</button><button class="th-tab" data-target="tbl-gear-ex">Exklusive Ausrüstung</button></div><div class="th-subtables"><div id="wrap-tbl-gear-lv" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-lv-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Ausrüstungs-Stufe</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-gear-lv-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-gear-lv">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Ausrüstungs-Stufe 1-40</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Verbesserungs-Rune</th><th class="th-top" style="text-align:center;vertical-align:bottom">Rubin</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1-40</th><td style="text-align:center;vertical-align:bottom">1500-8250</td><td style="text-align:center;vertical-align:bottom">7200-39600</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">195k</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">396k</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-gear-star" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-star-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Ausrüstungs-Sterne</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-gear-star-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-gear-star">
+        <thead>
+<tr><th colspan="5" class="th-left" style="text-align:center;vertical-align:center">Ausrüstungs-Sterne ★1-5</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern</th><th class="th-top" style="text-align:center;vertical-align:bottom">Goldbarren</th><th class="th-top" style="text-align:center;vertical-align:bottom">Verbesserungs-Rune</th><th class="th-top" style="text-align:center;vertical-align:bottom">Rubin</th><th class="th-top" style="text-align:center;vertical-align:bottom">Beförderungssteine</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">★1-5</th><td style="text-align:center;vertical-align:bottom">150-330</td><td style="text-align:center;vertical-align:bottom">12500-27500</td><td style="text-align:center;vertical-align:bottom">Informationen folgen</td><td style="text-align:center;vertical-align:bottom">5-20 + 10 Mystisch</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">GESAMT</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">6000</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">498750</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">Informationen folgen</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">50 Legendär + 10 Mythisch</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-gear-ex" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-gear-ex-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Exklusive Ausrüstung</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-gear-ex-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-gear-ex">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Exklusive Ausrüstung</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Ausrüstung</th><th class="th-top" style="text-align:center;vertical-align:bottom">Gesamtscherben bis zu dieser Stufe</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1-20</th><td style="text-align:center;vertical-align:bottom">progressiv</td><td style="text-align:center;vertical-align:bottom">5-1185</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="lordgear" class="th-section"><h2>Lord-Ausrüstung</h2><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-lordgear-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Lord-Ausrüstung</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-lordgear-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-lordgear">
+        <thead>
+<tr><th colspan="4" class="th-left" style="text-align:center;vertical-align:center">Lord-Ausrüstung Upgrade-Materialien</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Verfeinertes Metall</th><th class="th-top" style="text-align:center;vertical-align:bottom">Magischer Faden</th><th class="th-top" style="text-align:center;vertical-align:bottom">Orichalcum / Drachenblut</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Gewöhnlich★-Selten★</th><td style="text-align:center;vertical-align:bottom">1500-52000</td><td style="text-align:center;vertical-align:bottom">20-560</td><td style="text-align:center;vertical-align:bottom">0 bis 85 + 10 Drachenblut (Mythisch)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="troopskin" class="th-section"><h2>Truppen-Skin</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-troopskin-rare">Seltener Truppen-Skin</button><button class="th-tab" data-target="tbl-troopskin-epic">Epischer Truppen-Skin</button><button class="th-tab" data-target="tbl-troopskin-legend">Legendärer Truppen-Skin</button></div><div class="th-subtables"><div id="wrap-tbl-troopskin-rare" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-troopskin-rare-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Seltener Truppen-Skin</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-troopskin-rare-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-troopskin-rare">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Seltener Truppen-Skin Stufe 1-45</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe/Schritt</th><th class="th-top" style="text-align:center;vertical-align:bottom">Medaillen</th><th class="th-top" style="text-align:center;vertical-align:bottom">Meilenstein-Belohnung</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1-45 progressiv</th><td style="text-align:center;vertical-align:bottom">400-25000</td><td style="text-align:center;vertical-align:bottom">Lv 10/20/30/40/45: universelle Scherben</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-troopskin-epic" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-troopskin-epic-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Epischer Truppen-Skin</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-troopskin-epic-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-troopskin-epic">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Epischer Truppen-Skin Stufe 1-45</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe/Schritt</th><th class="th-top" style="text-align:center;vertical-align:bottom">Medaillen</th><th class="th-top" style="text-align:center;vertical-align:bottom">Meilenstein-Belohnung</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1-45 progressiv</th><td style="text-align:center;vertical-align:bottom">800-51000</td><td style="text-align:center;vertical-align:bottom">Lv 10/20/30/40/45: universelle Scherben (doppelt)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-troopskin-legend" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-troopskin-legend-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Legendärer Truppen-Skin</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-troopskin-legend-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-troopskin-legend">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Legendärer Truppen-Skin Stufe 1-45</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe/Schritt</th><th class="th-top" style="text-align:center;vertical-align:bottom">Medaillen</th><th class="th-top" style="text-align:center;vertical-align:bottom">Meilenstein-Belohnung</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">1-45 progressiv</th><td style="text-align:center;vertical-align:bottom">1600-76000</td><td style="text-align:center;vertical-align:bottom">Lv 10/20/30/40/45: universelle Scherben (4x)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="relic" class="th-section"><h2>Relikte</h2><div class="th-tabs" role="tablist"><button class="th-tab th-active" data-target="tbl-relic-rare">Seltenes Relikt</button><button class="th-tab" data-target="tbl-relic-epic">Episches Relikt</button><button class="th-tab" data-target="tbl-relic-legend">Legendäres Relikt</button></div><div class="th-subtables"><div id="wrap-tbl-relic-rare" class="th-wrap th-visible"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-rare-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Seltenes Relikt</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-relic-rare-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-relic-rare">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Seltenes Relikt</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Upgrade</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Stern</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">500</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">160</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">800</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-relic-epic" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-epic-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Episches Relikt</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-relic-epic-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-relic-epic">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Episches Relikt</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Upgrade</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Stern</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">30</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">150</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">200</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">300</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div><div id="wrap-tbl-relic-legend" class="th-wrap"><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-relic-legend-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Legendäres Relikt</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-relic-legend-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-relic-legend">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">Legendäres Relikt</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stern-Stufe</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Upgrade</th><th class="th-top" style="text-align:center;vertical-align:bottom">Scherben pro Stern</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">2</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">10</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">4</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">8</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">40</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">12</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">60</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★ ★ ★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">16</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">80</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">★ ★</th><td style="font-weight:bold;text-align:center;vertical-align:bottom">20</td><td style="font-weight:bold;text-align:center;vertical-align:bottom">100</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></div></div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="rune" class="th-section"><h2>Runen</h2><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-rune-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Runen</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-rune-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-rune">
+        <thead>
+<tr><th colspan="15" class="th-left" style="text-align:center;vertical-align:center">Runen-Übersicht</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="text-align:center;vertical-align:bottom">Stufe</th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Helden-HP-Rune</th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Helden-Angriffs-Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldaten-HP-Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Soldaten-Angriffs-Rune</th><th colspan="2" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Relikt-Rune</th><th colspan="3" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Warteschlangen-Angriffs-Rune</th></tr>
+<tr><th class="th-left" style="text-align:center;vertical-align:bottom">Stufen 1-9</th><td style="text-align:center;vertical-align:bottom">650-312K</td><td style="text-align:center;vertical-align:bottom">0-0.25</td><td style="text-align:center;vertical-align:bottom">16-7681</td><td style="text-align:center;vertical-align:bottom">0-0.25</td><td style="text-align:center;vertical-align:bottom">2-45</td><td style="text-align:center;vertical-align:bottom">0-60</td><td style="text-align:center;vertical-align:bottom">0-0.1</td><td style="text-align:center;vertical-align:bottom">2-18</td><td style="text-align:center;vertical-align:bottom">0-60</td><td style="text-align:center;vertical-align:bottom">0-0.1</td><td style="text-align:center;vertical-align:bottom">850-46880</td><td style="text-align:center;vertical-align:bottom">0-0.1</td><td style="text-align:center;vertical-align:bottom">600-5400</td><td style="text-align:center;vertical-align:bottom">769-8461</td><td style="text-align:center;vertical-align:bottom">0-180</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="pet" class="th-section"><h2>Haustier</h2><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-pet-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Haustier</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-pet-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-pet">
+        <thead>
+<tr><th colspan="102" class="th-left" style="text-align:center;vertical-align:center">Haustier-Stufen 1-100</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Level</th><th colspan="100" class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Haustier-Futter pro Stufe und Beförderungsmeilensteine</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Haustier-Futter</th><td style="text-align:center;vertical-align:bottom">0-17900</td><td style="vertical-align:bottom">Meilensteine bei den angegebenen Stufen</td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Beförderung</th><td style="text-align:center;vertical-align:bottom">Selten Lv 10 | Episch Lv 20 | Legendär Lv 30-50 | Mythisch Lv 60-90</td><td></td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Haustiere nötig</th><td style="text-align:center;vertical-align:bottom">1 gleich bis 5 gleich + 15 selten (progressiv)</td><td></td></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">Haustier-Essence</th><td style="text-align:center;vertical-align:bottom">1000 bei Stufe 91</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="villager" class="th-section"><h2>Dorfbewohner</h2><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-villager-body" title="Erweitern/Reduzieren">+</button>
+    <strong>Dorfbewohner</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-villager-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-villager">
+        <thead>
+<tr><th colspan="6" class="th-left" style="text-align:center;vertical-align:center">Dorfbewohner Gebäude-Boni</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Gebäude</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Attribute</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv 1</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv 2</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv 3</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Lv 4-5</th></tr>
+<tr><th rowspan="5" class="th-left" style="text-align:center;vertical-align:center">Burg</th><td style="text-align:center;vertical-align:center">Gebäude-HP</td><td style="text-align:center;vertical-align:center">9600-15000</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Kostenlose Bauzeit</td><td style="text-align:center;vertical-align:center">40-160 Sekunden</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Ressourcen-Ertrag</td><td style="text-align:center;vertical-align:center">0.01-0.02</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Tägliche Plünder-Grenze</td><td style="text-align:center;vertical-align:center">40k-100k</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Reduzierte Bauzeit</td><td style="text-align:center;vertical-align:center">0.001-0.002</td><td></td><td></td><td></td></tr>
+<tr><th rowspan="2" class="th-left" style="text-align:center;vertical-align:center">Forschungshütte</th><td style="text-align:center;vertical-align:center">Kostenlose Tech-Beschleunigung</td><td style="text-align:center;vertical-align:center">40-160 Sekunden</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Tech-Forschungsrate</td><td style="text-align:center;vertical-align:center">0.006-0.02</td><td></td><td></td><td></td></tr>
+<tr><th rowspan="3" class="th-left" style="text-align:center;vertical-align:center">Gilde</th><td style="text-align:center;vertical-align:center">Angriff-Bonus (Hilfe)</td><td style="text-align:center;vertical-align:center">0.003-0.01</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">HP-Bonus (Hilfe)</td><td style="text-align:center;vertical-align:center">0.003-0.01</td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:center;vertical-align:center">Hilfe akzeptiert</td><td style="text-align:center;vertical-align:center">1-2</td><td></td><td></td><td></td></tr>
+<tr><th colspan="6" class="th-left" style="text-align:center;vertical-align:center">... Weitere Gebäude mit progressiven Boni (Liga-Kaserne, Horde-Kaserne, Natur-Kaserne, Liga-Statue, Horde-Statue, Natur-Statue, Abenteuer-Warteschlange, Krankenhaus, Truppen-Skin-Zentrum, Medaillen-Halle, Held-Statue, Trainingsplatz, Wachtturm, Taverne, Magischer Steinbruch, Medaillen-Denkmal, Haustier-Futterfabrik, Verbesserungs-Rune-Mine, Kloster, Roherz-Mine, Bauernhof, Steinbruch, Rubin-Mine, Sägewerk, Lagerhaus, Schmiedekunst) ...</th></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+    <section id="vip" class="th-section"><h2>VIP</h2><div class="th-tablecard">
+  <div class="th-tablehead">
+    <button class="th-collapse" aria-expanded="false" aria-controls="tbl-vip-body" title="Erweitern/Reduzieren">+</button>
+    <strong>VIP</strong>
+  </div>
+  <div class="th-tablebody" id="tbl-vip-body" hidden>
+    <div class="th-scroll">
+      <table class="th-table" id="tbl-vip">
+        <thead>
+<tr><th colspan="3" class="th-left" style="text-align:center;vertical-align:center">VIP-Level</th></tr>
+        </thead>
+        <tbody>
+<tr><th class="th-top th-left th-corner" style="font-weight:bold;text-align:center;vertical-align:bottom">Stufe</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Geschätzter Preis</th><th class="th-top" style="font-weight:bold;text-align:center;vertical-align:bottom">Punkte</th></tr>
+<tr><th class="th-left" style="font-weight:bold;text-align:center;vertical-align:bottom">VIP 1-18</th><td style="text-align:center;vertical-align:bottom">1-166k</td><td style="text-align:center;vertical-align:bottom">6-1000000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><p class="th-toplink"><a href="#top">Zurück nach oben</a></p></section>
+
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("/de/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Collapse buttons
+    document.querySelectorAll('.th-section').forEach(function(section){
+      section.querySelectorAll('.th-tablecard').forEach(function(card,idx){
+        const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+        const open=idx===0; body.hidden=!open?true:false; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded', open?'true':'false');
+        btn.addEventListener('click',function(){ const exp=btn.getAttribute('aria-expanded')==='true'; body.hidden=exp; btn.setAttribute('aria-expanded',exp?'false':'true'); btn.textContent=exp?'+':'-'; });
+      });
+    });
+
+    // Tabs
+    document.querySelectorAll('.th-tabs').forEach(function(tabs){
+      const section=tabs.closest('.th-section');
+      const btns=tabs.querySelectorAll('.th-tab');
+      const wraps=section.querySelectorAll('.th-subtables .th-wrap');
+      function show(id){
+        wraps.forEach(w=>w.classList.toggle('th-visible', w.id===('wrap-'+id)));
+        btns.forEach(b=>b.classList.toggle('th-active', b.getAttribute('data-target')===id));
+        wraps.forEach(function(w){
+          const visible=w.classList.contains('th-visible');
+          const cards=w.querySelectorAll('.th-tablecard');
+          cards.forEach(function(card,idx){
+            const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+            if(visible){ const open=idx===0; body.hidden=!open; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded',open?'true':'false'); }
+            else { body.hidden=true; btn.textContent='+'; btn.setAttribute('aria-expanded','false'); }
+          });
+        });
+      }
+      btns.forEach(btn=>btn.addEventListener('click',()=>show(btn.getAttribute('data-target'))));
+    });
+
+    // Castle switcher
+    (function(){
+      const sel=document.getElementById('castle-switch');
+      const base=document.getElementById('wrap-castle-base'), w108=document.getElementById('wrap-castle-108'), w1107=document.getElementById('wrap-castle-1107'), wold=document.getElementById('wrap-castle-older');
+      function setState(v){
+        [base,w108,w1107,wold].forEach(el=>el.classList.remove('th-visible'));
+        if(v==='108'){ base.classList.add('th-visible'); w108.classList.add('th-visible'); }
+        else if(v==='1107'){ base.classList.add('th-visible'); w1107.classList.add('th-visible'); }
+        else { wold.classList.add('th-visible'); }
+        [base,w108,w1107,wold].forEach(function(wrap){
+          if(!wrap.classList.contains('th-visible')) return;
+          wrap.querySelectorAll('.th-tablecard').forEach(function(card,idx){
+            const btn=card.querySelector('.th-collapse'), body=card.querySelector('.th-tablebody');
+            const open=idx===0; body.hidden=!open; btn.textContent=open?'-':'+'; btn.setAttribute('aria-expanded',open?'true':'false');
+          });
+        });
+      }
+      setState(sel.value); sel.addEventListener('change', function(){ setState(this.value); });
+    })();
+  });
+  </script>
+
+</body>
+</html>

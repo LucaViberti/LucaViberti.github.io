@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Leitfaden - Anfänger-Leitfaden</title>
+  <meta name="description" content="Anfänger-Leitfaden für Top Heroes: erste Schritte, Dorf & Gebäude, Gilden, Ressourcen, Taverne & Scherben, Fraktionen, Ausgabentipps, Events, Forschung, Dorfbewohner, Kutsche & Plündern, Ausdauer, Weltkarte und mehr." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <!-- Stripe Buy Button (one-time include) -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <style>
+/* ====== Base styles (from your template) ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav { width: 100%; margin-top: 10px; }
+nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+}
+nav ul li { position: relative; }
+nav ul li a {
+  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
+  font-size: 0.85rem; transition: color 0.3s;
+}
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); background: #1f1f21;
+  border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a {
+  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
+}
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer {
+  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; font-weight: bold; transition: background 0.3s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul {
+  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
+}
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ====== Page-specific helpers ====== */
+.page-title { margin-top: 0; font-size: 2rem; }
+.toc {
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 28px;
+}
+.toc h3 { margin: 0 0 12px; font-size: 1.1rem; }
+.toc ol { margin: 0; padding-left: 18px; }
+.small { font-size: 0.95rem; color: #4b5563; }
+
+.note {
+  background: #fff8e1; border: 1px solid #ffe08a; border-radius: 8px; padding: 12px 14px; margin: 16px 0;
+}
+
+.th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
+.th-beginner * { box-sizing: border-box; }
+.th-beginner { color: var(--ink); }
+.th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
+
+.th-beginner .layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1024px){
+  .th-beginner .layout {
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+  }
+  .th-beginner .toc {
+    position: sticky; top: 20px;
+    margin: 0;
+  }
+}
+
+.th-beginner .section-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.th-beginner .section-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.th-beginner h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--head);
+}
+.th-beginner h3 {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  color: var(--head);
+}
+
+.th-beginner p { margin: 10px 0 12px; }
+.th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
+.th-beginner li { padding-left: 4px; margin: 6px 0; }
+.th-beginner li::marker { color: var(--brand); }
+
+.th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
+.th-beginner a:hover { border-bottom-style: solid; }
+
+.th-beginner .toc { border-color: var(--border); }
+.th-beginner .toc h3 { color: var(--head); font-weight: 600; }
+.th-beginner .toc a { display: inline-block; padding: 2px 0; }
+
+.th-beginner section { scroll-margin-top: 90px; }
+
+.th-beginner .note {
+  background: linear-gradient(0deg,#fffdf5,#fffdf5);
+  border-color: #ffe08a;
+  font-size: .95rem;
+}
+
+.th-beginner .table-wrap { overflow-x: auto; }
+.th-beginner table {
+  width: 100%; border-collapse: collapse; border: 1px solid var(--border);
+  background: #fff; border-radius: 10px; overflow: hidden;
+}
+.th-beginner thead th {
+  position: sticky; top: 0; background: #f8fafc; text-align: left;
+  padding: 10px; font-weight: 600; border-bottom: 1px solid var(--border);
+}
+.th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
+.th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
+
+@media (max-width: 1023px){
+  .th-beginner .section-card + .section-card { margin-top: 8px; }
+}
+
+.th-beginner .kicker {
+  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
+  padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+}
+
+.th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
+
+.donation-block{
+  border:1px solid #e8eef5; background:#f9fbff;
+  padding:22px 16px; margin:24px 0; border-radius:12px;
+  text-align:center; box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+.donation-block p{ margin:0 0 10px; color:#334155; font-size:1rem; }
+.donation-card{
+  background:#ffffff; border:1px solid #e5e7eb; border-radius:12px;
+  padding:16px; margin:22px 0; text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+.donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main class="th-beginner">
+  <header class="site-info" aria-hidden="true" style="display:none"></header>
+
+  <div id="top" aria-hidden="true"></div>
+
+  <h1 class="page-title">Anfänger-Leitfaden</h1>
+  <p class="lead small">Beginnen Sie hier: Kernregeln, beste frühe Prioritäten, intelligente Ausgaben und wie Sie schnell vorankommen, ohne Ressourcen zu verschwenden.</p>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Auf dieser Seite">
+      <h3>Inhalt</h3>
+      <ol>
+        <li><a href="#intro">Einführung und erste Schritte</a></li>
+        <li><a href="#village">Dorf und Gebäude</a></li>
+        <li><a href="#guild">Einer Gilde beitreten</a></li>
+        <li><a href="#farming">Ressourcen sammeln</a></li>
+        <li><a href="#tavern">Taverne und Heldenscherben</a></li>
+        <li><a href="#factions">Helden und Fraktionen</a></li>
+        <li><a href="#spending">Echtes Geld ausgeben</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#research">Forschung</a></li>
+        <li><a href="#social">Soziales und Weltchat</a></li>
+        <li><a href="#villagers">Dorfbewohner</a></li>
+        <li><a href="#carriage">Kutsche und Plündern</a></li>
+        <li><a href="#traits">Gildenmerkmale</a></li>
+        <li><a href="#stamina">Ausdauer</a></li>
+        <li><a href="#worldmap">Weltkarte – Feinde, Ressourcen, Sammlung</a></li>
+        <li><a href="#conclusion">Allgemeines Fazit</a></li>
+      </ol>
+    </nav>
+
+    <div class="content">
+      <section id="intro" class="section-card">
+        <div class="kicker">Abschnitt 1</div>
+        <h2>1. Einführung und erste Schritte</h2>
+        <p>Wenn Sie <em>Top Heroes</em> herunterladen und das Spiel starten, sehen Sie zuerst das <strong>Adventure</strong>. Am Anfang ist der Weg geführt und obligatorisch. Das Wichtigste ist, keine Ressourcen zu verschwenden, die später entscheidend sein werden. Beachten Sie diese Regeln:</p>
+        <ul>
+          <li><strong>Verschwenden Sie kein Fleisch für Rare-Helden</strong> (blauer Hintergrund). Sie sind es nicht wert, aufgerüstet zu werden, und werden später nie verwendet.</li>
+          <li><strong>Geben Sie keine Diamanten aus</strong>, um Prozesse früh zu beschleunigen. Wartezeiten sind kurz und Diamanten sind zu wertvoll.</li>
+        </ul>
+        <p>Folgen Sie dem Fluss des Adventures, machen Sie Fortschritte und vermeiden Sie es, Ressourcen für Helden oder unnötige Beschleunigungen zu verschwenden.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="village" class="section-card">
+        <div class="kicker">Abschnitt 2</div>
+        <h2>2. Dorf und Gebäude</h2>
+        <p>Nach einiger Zeit im Adventure erreichen Sie Ihr <strong>Dorf</strong>. Sie werden mehrere Gebäude sehen, die gebaut und aufgerüstet werden müssen. Anfangs sind Upgrades obligatorisch, aber bald haben Sie die Freiheit, Prioritäten zu wählen. Ihr Hauptziel muss es sein, die <strong>Burg</strong> schnell aufzuleveln, idealerweise auf Stufe <strong>20–25</strong>. Dies schaltet wesentliche Gebäude frei und ermöglicht höhere Helden- und Soldatenstufen.</p>
+        <p>Konzentrieren Sie sich neben der Burg auf <strong>Forschungshütte</strong>, <strong>Krankenhaus</strong>, <strong>Gilde</strong> und <strong>Trainingsplatz</strong> (Voraussetzungen für Burg-Upgrades). Vergessen Sie nicht die <strong>Kaserne</strong>: Alle 5 Stufen gewinnen Soldaten eine Stufe – das steigert Ihre Warteschlangen enorm.</p>
+        <p>Für weitere Details siehe die Seite <a href="building.html">Gebäude</a>.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="guild" class="section-card">
+        <div class="kicker">Abschnitt 3</div>
+        <h2>3. Einer Gilde beitreten</h2>
+        <p>Ab Burgstufe 7 können Sie einer <strong>Gilde</strong> beitreten. Dies ist entscheidend. Versuchen Sie, einer <strong>Top-3-Gilde</strong> auf Ihrem Server beizutreten; wenn das nicht möglich ist, zumindest Top 10. Starke Gilden sind aktiv, rekrutieren aktive Spieler und entfernen inaktive. Keine Sorge – alle auf Ihrem Server haben ungefähr zur gleichen Zeit begonnen, sodass Sie schnell aufholen können.</p>
+
+        <h3 id="guild-help">3.1 Hilfe und Beschleunigungen</h3>
+        <p><strong>Gildenhilfe</strong> ist ein großer Vorteil. Jedes Mal, wenn Sie einen Bau oder eine Forschung starten, drücken Sie <em>Hilfe</em>: Gildenmitglieder können den Timer für Sie reduzieren. Bitten Sie immer um Hilfe und warten Sie, bevor Sie Beschleunigungen verwenden. Beschleunigungen (Bau, Forschung, Universal usw.) können verwendet werden, aber <strong>Diamanten sollten nicht</strong> zum Beschleunigen verwendet werden. Verwenden Sie Beschleunigungen klug, nachdem Sie alle möglichen Hilfen erhalten haben.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="farming" class="section-card">
+        <div class="kicker">Abschnitt 4</div>
+        <h2>4. Ressourcen sammeln</h2>
+        <p>Die Hauptressourcen sind <strong>Holz</strong>, <strong>Stein</strong> und <strong>Rubin</strong>. Sie werden für fast alles benötigt. Die beste frühe Methode ist der Fortschritt im Adventure. Wenn Sie feststecken, verbessern Sie Ihre Aufstellung und versuchen Sie es erneut.</p>
+        <p>Gildenaktivitäten sind ebenfalls wichtig:</p>
+        <ul>
+          <li><strong>Gilden-Geheimprüfung</strong>: Mini-Level, die Ressourcen bereitstellen. Das kollektive Abschließen gibt zusätzliche Belohnungen.</li>
+          <li><strong>Gilden-Expedition</strong>: ein Versuch täglich. Verwenden Sie den <em>Segen</em>-Button für Buffs und <strong>100 Gildenpunkte</strong>. Geben Sie Gildenpunkte im Gilden-Store aus.</li>
+        </ul>
+        <p>Weitere Quellen sind <strong>Expeditionen</strong>, die <strong>Kopfgeldhalle</strong> mit Missionen alle 8 Stunden und <strong>Stufen</strong>, die sich mit der Zeit freischalten.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="tavern" class="section-card">
+        <div class="kicker">Abschnitt 5</div>
+        <h2>5. Taverne und Heldenscherben</h2>
+        <p><strong>Tavernen-Token</strong> ermöglichen es Ihnen, <strong>Heldenscherben</strong> in der Taverne zu erhalten. Frühes Spiel: Verwenden Sie sie frei. Helden verbessern sich erheblich, wenn ihre Sterne aufgerüstet werden. <strong>Verschwenden Sie früh keine legendären Universal-Heldenscherben</strong> – sparen Sie sie für später.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="factions" class="section-card">
+        <div class="kicker">Abschnitt 6</div>
+        <h2>6. Helden und Fraktionen</h2>
+        <p>Helden gehören zu drei Fraktionen: <strong>Liga</strong>, <strong>Horde</strong> und <strong>Natur</strong>. Siehe die Seite <a href="heroes.html">Helden</a> für Details. Konzentrieren Sie sich auf <strong>eine Hauptwarteschlange</strong> mit Helden aus einer einzigen Fraktion. Dies gewährt Fraktionsbuffs und wird mit Season 1 noch wichtiger. Versuchen Sie nicht, alle Ihre Warteschlangen auszugleichen – machen Sie eine sehr stark.</p>
+        <ul>
+          <li><strong>Liga</strong>: Am einfachsten früh aufzubauen, aber kann mittel- bis langfristig kostspielig sein, besonders für F2P.</li>
+          <li><strong>Horde</strong>: Erfordert kluges Spielen; nicht sofort stark, aber sehr stark auf lange Sicht, normalerweise weniger kostspielig als Liga.</li>
+          <li><strong>Natur</strong>: Am schwersten früh aufzubauen. Frühe Natur-Helden sind schwach und werden oft ersetzt; stark erst viel später.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section class="donation-block" aria-label="Unterstützen Sie das Projekt">
+        <p>Wenn Ihnen diese Tipps helfen, unterstützen Sie bitte unser Projekt mit einer Spende. Es hält die Leitfäden kostenlos und aktuell.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </section>
+
+      <section id="spending" class="section-card">
+        <div class="kicker">Abschnitt 7</div>
+        <h2>7. Echtes Geld ausgeben</h2>
+        <p><em>Top Heroes</em> kann kostenlos gespielt werden, mit wenig oder viel Ausgaben. Unabhängig vom Budget sollten Sie immer <strong>Goldblöcke</strong> von der offiziellen <em>Top Heroes</em>-Website kaufen. Der Kauf im Spiel bietet weniger Vorteile. Von der Website erhalten Sie immer <strong>+5% Goldblöcke</strong> und Meilenstein-Belohnungen. Geben Sie dann Goldblöcke im Spiel aus.</p>
+
+        <h3 id="best-purchases">7.1 Beste Käufe</h3>
+        <ul>
+          <li><strong>Monatspass</strong>: zusätzliche Warteschlange (Privileg-Warteschlange), Auto-Hunt, verdoppelte Werbebelohnungen, tägliche Geschenke. Am kosteneffektivsten. Der Kauf von Goldblöcken von der Website gibt auch einen <strong>30% Rabatt</strong> darauf als ersten Meilenstein.</li>
+          <li><strong>Werbung entfernen (2$)</strong>: dauerhaft. Ermöglicht es Ihnen, tägliche Werbebelohnungen sofort zu beanspruchen. Großer langfristiger Wert.</li>
+          <li><strong>Bau-Warteschlangen</strong>: Standard 1; bis zu 3 weitere (2$, 10$, 20$). Dauerhaft und sehr nützlich.</li>
+          <li><strong>Forschungs-Warteschlange</strong>: Standard 1, max 2. Zweite Warteschlange für 10$ freischalten. Dauerhaft.</li>
+          <li><strong>Adventure Begin (bester Preis)</strong>: günstige limitierte Pakete (3 Versionen) mit großartigen Belohnungen über ein paar Tage.</li>
+          <li><strong>Pakete</strong>: tägliche Heldenscherben-Pakete ~5$; nützlich nur für größere Ausgeber.</li>
+          <li><strong>Skins</strong>: sehr mächtig (globale Buffs). Legendär 30$, Mythisch 100$. Große Ausgeber sollten priorisieren.</li>
+          <li><strong>Rad- und Würfel-Events</strong>: wechseln sich wöchentlich ab. Sparen Sie Tickets, bis mythische Helden enthalten sind.</li>
+          <li><strong>Adventure Battle Pass</strong>: optional (15$, 20$ oder beide 30$). Starke Boosts, nicht essentiell.</li>
+          <li><strong>Fonds</strong> (Bau, Adventure, Power, Wachstum): guter Wert für mittlere Ausgeber.</li>
+          <li><strong>Täglich Speziell</strong>: Heldenscherben wählen; gibt <strong>Sternsteine</strong> (extrem wertvoll). Später erscheinen sogar mythische Helden hier.</li>
+          <li><strong>Tägliche/Wöchentliche Pakete</strong>: geringer Wert für kleine Ausgeber; mittlere/hohe Ausgeber können in Betracht ziehen.</li>
+          <li><strong>Diamanten-Store</strong>: nie kaufen (gleicher Preis wie Pakete, aber ohne Extrabelohnungen).</li>
+          <li><strong>VIP-Punkte</strong>: mit jedem Kauf erhalten; schalten Vergünstigungen frei, aber kaufen Sie nicht nur für VIP-Stufen. Tägliche Quests geben auch 5 VIP-Punkte.</li>
+        </ul>
+        <p>Es wird ständig neue Pakete und Events zum Ausgeben geben, aber die obigen Grundlagen sind am wichtigsten für Anfänger.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="events" class="section-card">
+        <div class="kicker">Abschnitt 8</div>
+        <h2>8. Events</h2>
+        <p><em>Top Heroes</em> hat Routine- und einmalige Events. Am Anfang ist das wichtigste Event <strong>Top Lord</strong>. Einfach durch Spielen und Erhöhen Ihres <strong>Einflusses</strong> schalten Sie großartige Belohnungen frei, einschließlich des <strong>Griffon Castle</strong>-Skins. Burg-Skins sind selten, besonders für F2P.</p>
+        <p>Steigern Sie Einfluss, indem Sie inaktive Soldaten unbenutzten Helden zuweisen und <strong>Kasernen</strong> aufrüsten, um Soldatenstufen zu erhöhen. Andere Gebäude wie <strong>Lagerhaus</strong>, <strong>Taverne</strong> und <strong>Wachturm</strong> können auch schnelle Einfluss-Boosts bieten.</p>
+        <ul>
+          <li><strong>Weltboss</strong>: täglich, 5 Mal angreifen. Keine Ausdauerkosten, keine Verluste. Gibt feste Belohnungen plus kleine Ranking-Belohnungen – machen Sie einfach Ihre 5 Treffer.</li>
+          <li><strong>Ruinen-Jagd</strong>: tägliche Truhen-Missionen auf der Weltkarte. Machen Sie sie alle täglich. Geben Sie früh keine Diamanten für Aktualisierungen aus. Helfen Sie Gildenmitgliedern (priorisieren Sie lila und gold). Sie können Ruinen-Jagden anderer plündern – priorisieren Sie <strong>legendäre (gold) Stufe 4</strong> Truhen.</li>
+          <li><strong>Nur-Anfänger-Events</strong>: <em>Anfänger-Ziele</em>, <em>Sieben Tage</em>, <em>Power Rush</em>. Nur in den ersten Tagen verfügbar – schließen Sie sie rechtzeitig ab.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="research" class="section-card">
+        <div class="kicker">Abschnitt 9</div>
+        <h2>9. Forschung</h2>
+        <p>Forschung wird in der <strong>Forschungshütte</strong> durchgeführt. Konzentrieren Sie sich früh vollständig auf <strong>Kampfkompetenz</strong>. Schließen Sie sie vollständig ab, um alle anderen Forschungsbäume freizuschalten. Für Details siehe die Seite <a href="research.html">Forschung</a>.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="social" class="section-card">
+        <div class="kicker">Abschnitt 10</div>
+        <h2>10. Soziales und Weltchat</h2>
+        <p>Ab Burgstufe 7 wird <strong>Weltchat</strong> freigeschaltet. Am Anfang ist er laut, aber innerhalb von Tagen werden Moderatoren ihn aufräumen. Er wird zu einem guten Kommunikationskanal. <strong>Einladungscodes</strong> geben kleine Belohnungen (einige Scherben, Ausrüstung, Diamanten), sind aber nicht spielverändernd. Verwenden Sie sie, wenn Sie Freunde zum Einladen haben; ansonsten ignorieren.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="villagers" class="section-card">
+        <div class="kicker">Abschnitt 11</div>
+        <h2>11. Dorfbewohner</h2>
+        <p>Jeden Tag können <strong>Dorfbewohner</strong> in Ihrem Dorf gerettet werden (und können im Adventure erscheinen). Das Abschließen der ersten täglichen Quest gewährt ein Ticket, um sofort einen Dorfbewohner zu spawnen. Sobald gerettet, weisen Sie Dorfbewohner in der <strong>Talente-Halle</strong> zu, um Gebäude zu boosten. Am Anfang ist <em>Schnellversand</em> in Ordnung; später optimieren Sie Zuweisungen für bessere Boni. Siehe die Seite <a href="villagers.html">Dorfbewohner</a>.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="carriage" class="section-card">
+        <div class="kicker">Abschnitt 12</div>
+        <h2>12. Kutsche und Plündern</h2>
+        <p>Sie können täglich <strong>4 Kutschen</strong> entsenden. Seltenheiten: Gewöhnlich, Ungewöhnlich, Selten, Legendär, Mythisch. Verwenden Sie immer die kostenlose Aktualisierung, um gute Belohnungen zu suchen, idealerweise <strong>Heldenscherben</strong>. Nach 5 Aktualisierungen ist Ihnen ein <strong>Legendärer</strong> garantiert, und ab Burgstufe 15 eine <strong>5% Chance</strong> für <strong>Mythisch</strong>. Mythische und legendäre Kutschen werden nie in der Seltenheit herabgestuft. Versuchen Sie, Scherben zu maximieren, besonders <strong>Universal-Legendäre Scherben</strong>.</p>
+        <p><strong>Mythische Kutschen</strong> können geteilt werden. Geteilte Kutschen geben jedem volle Belohnungen und bieten zusätzlichen Schutz. Einige Server übernehmen eine Regel, volle mythische Kutschen (5/5 Mitglieder) nicht anzugreifen. Wenn es nicht auf Ihrem Server ist, schlagen Sie es vor – das garantiert Sicherheit für Top-Belohnungen.</p>
+        <p><strong>Plündern</strong>: Sie können täglich <strong>4 Kutschen</strong> angreifen. Wählen Sie Ziele mit den besten Belohnungen (normalerweise Universal-Legendäre Scherben). Gescheiterte Angriffe verbrauchen keine Versuche. Kutschen können zweimal angegriffen werden (<em>dreimal wenn mythisch</em>). Überprüfen Sie <em>Details</em> vor dem Plündern, um zu sehen, ob eine Kutsche voll ist; wenn Serverregeln das Angreifen voller Mythischer verbieten, greifen Sie nicht an.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <div class="donation-card" aria-label="Unterstützen Sie das Projekt">
+        <p>Finden Sie diesen Abschnitt nützlich? Helfen Sie uns, diese Leitfäden mit einer Spende zu verbessern.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </div>
+
+      <section id="traits" class="section-card">
+        <div class="kicker">Abschnitt 13</div>
+        <h2>13. Gildenmerkmale</h2>
+        <p>Im <strong>Gilden</strong>-Gebäude unter <strong>Merkmale</strong> können Mitglieder spenden, um Buffs freizuschalten. <strong>Spenden regenerieren sich alle 30 Minuten</strong>, bis zu <strong>20 gespeichert</strong>. Lassen Sie es nie bei 20 kappen, sonst stoppt die Regeneration. Sie können mit jeweils 10 Diamanten spenden, aber das ist früh nicht lohnenswert. Jede Spende gibt auch <strong>Gildenpunkte</strong>, die im Gilden-Store verwendet werden können. Für optimale Ausgaben siehe die Seite <a href="shop.html">Store</a>.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="stamina" class="section-card">
+        <div class="kicker">Abschnitt 14</div>
+        <h2>14. Ausdauer</h2>
+        <p><strong>Ausdauer</strong> wird für Angriffe auf der Weltkarte benötigt und regeneriert sich mit der Zeit. Zweimal täglich können Sie <strong>80 Ausdauer</strong> beanspruchen (mindestens 4 Stunden auseinander). <strong>Monatliches Privileg</strong> gewährt täglich 50 Ausdauer oder 100 mit Bonus. <strong>Stapel von 25 und 50</strong> Ausdauer existieren und können früh frei verwendet werden. Vermeiden Sie den Kauf von <strong>150 Ausdauer für 5$</strong> – schlechter Wert.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="worldmap" class="section-card">
+        <div class="kicker">Abschnitt 15</div>
+        <h2>15. Weltkarte – Feinde, Ressourcen, Sammlung</h2>
+        <p>Klicken Sie auf die Lupe auf der Weltkarte, um drei Abschnitte zu finden:</p>
+        <ul>
+          <li><strong>Feind</strong>: Bekämpfen Sie Wachen (Holz, Stein, Rubin) bis Stufe 30 für Ressourcen. Früh nützlich. Greifen Sie auch immer <strong>Legend Stash</strong> 3 Mal täglich für kostenlose Belohnungen an.</li>
+          <li><strong>Ressourcen</strong>: Erste Eroberung gibt eine feste Belohnung. Das Zurücklassen von Truppen führt zu <strong>Sammeln</strong>. Sammeln Sie <strong>Rubin</strong>, wenn möglich (besonders über Nacht). Holz und Stein sind weniger wertvoll.</li>
+          <li><strong>Sammlung</strong>: Bekämpfen Sie Bosse mit Gildenmitgliedern. Großartige Möglichkeit, Ausdauer zu nutzen und Belohnungen zu erhalten. Die Teilnahme an Sammlungen ist kostenlos und die ersten <strong>50 täglich</strong> geben Belohnungen – nehmen Sie an so vielen wie möglich teil.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+
+      <section id="conclusion" class="section-card">
+        <div class="kicker">Abschnitt 16</div>
+        <h2>16. Allgemeines Fazit</h2>
+        <p><em>Top Heroes</em> belohnt sorgfältige Planung und das Sparen von Ressourcen. Ganz am Anfang können Sie die meisten Gegenstände frei ausgeben (außer <strong>Diamanten</strong> und <strong>legendäre Universal-Scherben</strong>). Später verlagert sich das Spiel: Sie werden Ressourcen strategisch während Events wie <em>Gildenrennen</em> oder <em>Rüstungs-Gildenrennen</em> ausgeben, um maximale Punkte zu erhalten. Diese Denkweise – Sparen und nur zur richtigen Zeit ausgeben – ist der Schlüssel zum langfristigen Erfolg.</p>
+        <a class="toplink" href="#top">↑ Zurück nach oben</a>
+      </section>
+    </div>
+  </div>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/de/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

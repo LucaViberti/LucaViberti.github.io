@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>Gilden-Rennen</title>
+  <meta name="description" content="Gilden-Rennen Leitfaden: wie es funktioniert, empfohlene und vermeidbare Aufgaben, Belohnungen, Season 1 Forschungs-Boosts und Ehrenladen-Prioritäten." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <style>
+    /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
+      --text:#0f1220; --muted:#667085; --ink2:#374151; --accent:#29abe0;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    header{
+      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      border-bottom:1px solid #2b2f3a;
+      padding:12px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header .site-info{display:flex;flex-direction:column;align-items:center;}
+
+    /* Contenitore della pagina */
+    main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
+    @media (min-width: 768px){ main.content{padding:48px 24px 72px;} }
+
+    /* Header pagina */
+    .page-header{
+      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
+      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
+      box-shadow:0 2px 6px rgba(0,0,0,.03);
+    }
+    .page-header h1{
+      margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head);
+      letter-spacing:-.015em; font-weight:800;
+    }
+    .page-header .lead{margin:0; color:var(--ink2); font-size:1rem}
+
+    /* TOC */
+    .toc{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:16px 18px; margin:18px 0 22px; box-shadow:0 4px 12px rgba(16,19,25,.04);
+    }
+    .toc h3{margin:0 0 8px; font-size:1.05rem; color:var(--head); letter-spacing:.01em}
+    .toc ol{margin:0; padding-left:18px}
+    .toc a{color:var(--ink2); text-decoration:none}
+    .toc a:hover{color:#0b7cab; text-decoration:underline}
+
+    /* Card sezioni */
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:22px 22px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
+    }
+    .card h2{font-size:1.35rem; margin:0 0 10px; color:var(--head); letter-spacing:-.01em}
+    .card h3{font-size:1.08rem; margin:14px 0 6px; color:#1f2937;}
+    .muted{color:var(--muted); font-size:.96rem;}
+    .content p{margin:0 0 12px}
+    .content ul{margin:10px 0 0 22px}
+    .content li{margin:4px 0}
+
+    /* Immagini: più piccole e coerenti */
+    figure{margin:14px 0; display:flex; flex-direction:column; align-items:center}
+    figure img{
+      display:block; border-radius:10px; border:1px solid #edf0f5;
+      width:100%; max-width:720px; height:auto; box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
+
+    /* Evidenzia l'ancora attiva (solo estetico) */
+    :target > h2{position:relative}
+    :target > h2::after{
+      content:""; position:absolute; left:0; bottom:-8px; width:72px; height:2px; background:var(--accent);
+      border-radius:2px;
+    }
+
+    /* contenitori nav/footer caricati esternamente */
+    #navbar,#footer{margin:0;}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR standard -->
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <!-- ===== CONTENUTO ===== -->
+  <main class="content" itemscope itemtype="https://schema.org/Article">
+    <section class="page-header">
+      <h1 itemprop="headline">Gilden-Rennen</h1>
+      <p class="lead">Wie es funktioniert, welche Aufgaben zu priorisieren (oder zu vermeiden) sind, Belohnungs-Kadenz, Season 1 Boosts und was im Ehrenladen zu kaufen ist.</p>
+    </section>
+
+    <!-- TOC per navigazione veloce -->
+    <nav class="toc" aria-label="Auf dieser Seite">
+      <h3>Inhalt</h3>
+      <ol>
+        <li><a href="#overview">Übersicht</a></li>
+        <li><a href="#recommended">Aufgaben, die du verwenden solltest</a></li>
+        <li><a href="#early-exclusive">Etwas später im Early-Game</a></li>
+        <li><a href="#save-for-others">Für Waffenwettlauf / KvK aufheben</a></li>
+        <li><a href="#avoid">Aufgaben, die du NIEMALS verwenden solltest</a></li>
+        <li><a href="#rewards">Belohnungen</a></li>
+        <li><a href="#season1">Season 1 Forschung</a></li>
+        <li><a href="#honour-shop">Ehrenladen</a></li>
+      </ol>
+    </nav>
+
+    <!-- Overview -->
+    <section class="card" id="overview">
+      <h2>Übersicht</h2>
+      <p>Das Gilden-Rennen ist eines der Haupt-Events im Spiel. Versuche, so viele Ehrenpunkte wie möglich zu bekommen. Der Ehrenladen ist einer der besten Läden im Spiel. 
+Du erhältst Punkte für das Abschließen von Aufgaben. Zu Beginn bekommst du 9 Aufgabentickets kostenlos und kannst jeden Tag 15 weitere kaufen. Wir empfehlen, mindestens die ersten 5 Aufgabentickets jeden Tag zu kaufen, weil sie wirklich günstig sind (300 Diamanten). Die folgenden 10 Aufgabentickets kosten jeweils 300 Dias. Du kannst diese Aufgabentickets ebenfalls kaufen, wenn du viele Aufgaben (am besten nur goldene) zum Abschließen hast. Es lohnt sich wirklich, mehr zu kaufen, weil der Ehrenladen großartig ist. Wir würden deiner Gilde empfehlen, den Leuten mitzuteilen, dass sie nur Aufgaben nehmen sollten, wenn sie planen, sie wirklich schnell abzuschließen. Wenn eine Person beispielsweise die Soldaten-Aufgabe stundenlang blockiert, verlangsamt sie die ganze Gilde.  
+Du hast 2 exklusive Aufgaben, die nur du verwenden kannst. Alle 10 Minuten kannst du eine der exklusiven Aufgaben kostenlos aktualisieren. Wenn du willst, kannst du 100 Diamanten verwenden, um sie ohne Wartezeit zu aktualisieren. Wir empfehlen das nicht, die Kosten und die Chance, die Aufgabe zu bekommen, die du brauchst, sind die Diamanten nicht wert. Besser kaufst du mehr Aufgabentickets. Die meisten exklusiven Aufgaben benötigen weniger Ressourcen zum Abschließen. Zum Beispiel benötigt die exklusive Soldaten-Aufgabe 400 trainierte Soldaten zum Abschließen. Die Gilden-Aufgabe benötigt 500 Soldaten zum Abschließen. Du kannst sogar Aufgaben vorbereiten. Wenn du beispielsweise später eine Aufgabe benötigst, kannst du sie von der kostenlosen Aktualisierung erhalten und sie behalten, bis du sie abschließen kannst, und du kannst immer noch die zweite exklusive Aufgabe aktualisieren, bis du die Aufgabe bekommst, die du brauchst. Nach einem Reset werden deine exklusiven Aufgaben aktualisiert. Du kannst immer noch eine Aufgabe vorbereiten, wenn du sie nach dem Reset verwenden möchtest. Akzeptiere die Aufgabe, die du über den Server-Reset behalten möchtest. Auf diese Weise bleibt diese Aufgabe auch nach dem Reset erhalten. Du kannst die Aufgabe abbrechen und sie wird immer noch in deiner exklusiven Aufgabe sein. Das ist eine großartige Möglichkeit, eine Aufgabe für den nächsten Tag vorzubereiten. 
+Meistens brauchst du Glück, um die Aufgabe zu bekommen, die du brauchst. Deshalb ist es nicht gut, wenn du nur die exklusiven Aufgaben verwendest. Du musst den bestmöglichen Weg für dich selbst finden, um so viele Gold-Aufgaben wie möglich abzuschließen. Wenn du bereit bist, ein bisschen Geld auszugeben, kannst du Aufgabenauswahl-Tickets kaufen. Dies wird das Gilden-Rennen für dich viel einfacher machen. Du bekommst einen 3. exklusiven Aufgabenplatz, wo du diese Tickets verwenden kannst, um die Aufgabe zu bekommen, die du brauchst. Erinnerung: Verwende die Aufgabenauswahl-Tickets NUR für goldene Aufgaben. 
+Nicht alle Aufgaben sind empfehlenswert, im Gilden-Rennen abzuschließen. Verwende deine Aufgaben nicht, um blaue Aufgaben abzuschließen. Du kannst problemlos lila Aufgaben abschließen, die 3x mehr Punkte als blaue Aufgaben geben. Am besten wäre es, nur Gold-Aufgaben zu verwenden. Sie geben die meisten Punkte.</p>
+
+      <figure>
+        <img src="/images/guildrace1.png" alt="Gilden-Rennen Übersichtsbeispiel" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- Recommended tasks -->
+    <section class="card" id="recommended">
+      <h2>Aufgaben, die du im Gilden-Rennen verwenden solltest</h2>
+      <ul>
+        <li>Soldaten-Trainingsaufgabe (NUR GOLDENE AUFGABE VERWENDEN. Eine der einfachsten abzuschließen. Du kannst jeden Tag mindestens 2 Aufgaben abschließen)</li>
+        <li>Gebäude-Aufgabe (NUR GOLDENE AUFGABE VERWENDEN. Sammle keine Gebäude und warte auf die Aufgabe. Dies ist eine großartige Aufgabe, bei der du auf die exklusive goldene Aufgabe warten kannst)</li>
+        <li>Forschungsaufgabe (Im frühen bis mittleren Spiel wird diese Aufgabe schwerer abzuschließen sein, weil du den Forschungs-Boost, den du brauchst, um die Aufgabe abzuschließen, nicht von 1 oder 2 Forschungen bekommst. Später, wenn du einige Tage brauchst, um Forschung abzuschließen, bekommst du genug Einfluss von einer Forschung, um die Aufgaben mit nur einer Forschung abzuschließen. Denk daran, diese Aufgabe immer im Voraus vorzubereiten, oder du verlierst viel Forschungszeit, wenn die Forschung fertig ist, aber du die Aufgabe dafür nicht hast)</li>
+        <li>Diamanten-Ausgabenaufgabe (NUR DIE EXKLUSIVE AUFGABE DAFÜR VERWENDEN UND WENN MÖGLICH DIE GOLDENE AUFGABE. Du wirst jede Woche viele Dinge haben, für die du deine Diamanten ausgeben möchtest. Warte auf diese Aufgabe und kaufe die Shop-Artikel, nachdem du die Aufgabe bekommen hast. Kaufe zuerst die täglichen Dinge, die du kaufen möchtest, und danach kannst du aus dem wöchentlichen Shop kaufen, um die Aufgabe abzuschließen.)</li>
+        <li>Diamanten aus Paketen kaufen (Wenn du echtes Geld im Spiel ausgibst, warte auf diese Aufgabe. Dies ist die einzige Aufgabe, die mehr Punkte im Vergleich zu anderen goldenen oder lila Aufgaben gibt. Du kannst diese Aufgabe nur in der exklusiven Aufgabe bekommen. Bevor du etwas kaufst, stelle sicher, dass du die Aufgaben abschließen kannst; wenn es weniger als 1,6k Diamanten sind, ist es besser, die lila Aufgabe zu verwenden, als sie zu verschwenden.)</li>
+        <li>Einen Angriff initiieren und Bosse töten (Nur lila Aufgabe. Einfache Aufgabe, die du nehmen kannst, wenn du zu viele Aufgabentickets hast und einige Aufgaben abschließen möchtest.)</li>
+        <li>Mobs auf der Weltkarte töten (Nur lila Aufgabe. Dies ist die einfachste Aufgabe und die einzige, die du abschließen kannst, ohne Ressourcen auszugeben. Du kannst diese Aufgabe abschließen, indem du Angriffen beitrittst. Auf diese Weise brauchst du nichts, um die Aufgabe abzuschließen. Wie die Aufgabe zuvor, verwende diese Aufgabe, wenn du Aufgaben übrig hast und keine goldenen Aufgaben abschließen kannst.)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace2.png" alt="Empfohlene Aufgaben Beispiel" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- Early game exclusive tasks -->
+    <section class="card" id="early-exclusive">
+      <h2>Etwas später im Early-Game</h2>
+      <p>Etwas später im Early-Game bekommst du diese Aufgabe ebenfalls, aber nur in den exklusiven Aufgaben. Diese Aufgaben geben ebenfalls etwas mehr Punkte als übliche goldene Aufgaben.</p>
+      <ul>
+        <li>Legendäre Relikt-Scherben verbrauchen (An Tag 3 und 4 kannst du diese Aufgabe bekommen. NUR DIE GOLDENE AUFGABE VERWENDEN. Spare Legendäre Relikt-Scherben und verwende sie nur im Gilden-Rennen, wenn du diese Aufgabe bekommst.)</li>
+        <li>Magische Steine verbrauchen (An Tag 3 und 4 in exklusiven Aufgaben. NUR GOLDENE AUFGABEN VERWENDEN. Spare die magischen Steine und verwende sie nur im Gilden-Rennen, wenn du die Aufgabe bekommst. Du kannst diese Aufgabe ebenfalls abschließen, indem du magische Steine gegen arkane Kristalle im Handelsladen – Ressourcen austauschst. Dir werden die ganze Zeit arkane Kristalle fehlen. Deshalb solltest du den Handelsladen verwenden und die magischen Steine dagegen austauschen. Und auf diese Weise kannst du mindestens drei Aufgaben wöchentlich abschließen.)</li>
+        <li>Medaillen verwenden (An Tag 5, 6 und 7 in exklusiven Aufgaben. NUR GOLDENE AUFGABEN VERWENDEN. Spare Medaillen und verwende sie nur im Gilden-Rennen in Kombination mit den Aufgaben. Die einzige Ausnahme ist der Medaillenladen. Du kannst hier die Medaillen in Wochen tauschen, in denen du kein Gilden-Rennen hast, gegen Beschleunigungen.)</li>
+        <li>Macht der Lord-Ausrüstung erhöhen (An Tag 5, 6 und 7 in exklusiven Aufgaben. NUR GOLDENE AUFGABEN VERWENDEN. Spare die Lord-Ausrüstungs-Upgrades für das Gilden-Rennen, wenn du die Aufgabe bekommst. Upgrade die Lord-Ausrüstung an anderen Tagen nicht. 
+Tipp von uns: Du bekommst einen Boost, wenn du 3 oder 6 Lord-Ausrüstungsteile auf dem gleichen Level hast. Du kannst dies zu deinem Vorteil nutzen, weil die Boost-Macht-Erhöhung allein eine Aufgabe abschließen kann. Auf diese Weise kannst du ein Stück deiner Lord-Ausrüstung upgraden, um den Boost zu aktivieren und die Aufgabe abzuschließen.)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace3.png" alt="Early-Game exklusive Aufgaben Beispiel" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- Tasks to save for other events -->
+    <section class="card" id="save-for-others">
+      <h2>Aufgaben, die du abschließen kannst, aber wir würden empfehlen, sie für Waffenwettlauf und Kingdom vs Kingdom aufzuheben</h2>
+      <ul>
+        <li>Forschungs- oder Bau-Beschleunigungen verwenden (Wir empfehlen nicht, diese Aufgabe zu verwenden. Du brauchst zu viele Beschleunigungen, um diese Aufgabe abzuschließen. Besser verwendest du einige einfache lila Aufgaben als diese Aufgabe zu verwenden)</li>
+        <li>Legendäre Scherben verbrauchen (Du kannst diese Aufgabe verwenden, wenn du einen Helden ASAP upgraden möchtest. Besser wäre es, die legendären Scherben zu sparen und sie im Waffenwettlauf oder Kingdom vs Kingdom zu verwenden)</li>
+      </ul>
+    </section>
+
+    <!-- Tasks to avoid -->
+    <section class="card" id="avoid">
+      <h2>Aufgabe, die du NIEMALS verwenden solltest</h2>
+      <ul>
+        <li>Held in der Taverne rekrutieren (nur lila Aufgabe verfügbar, deshalb empfehlen wir, diese Aufgabe nie zu verwenden. Du kannst Mobs töten und die gleiche Menge an Ehrenpunkten bekommen. Spare die Taverne-Tickets für Waffenwettlauf und Kingdom vs Kingdom)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace4.png" alt="Zu vermeidende Aufgabe Beispiel" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- Rewards -->
+    <section class="card" id="rewards">
+      <h2>Belohnungen</h2>
+      <p>Du bekommst ebenfalls einige Belohnungen für individuelle und Gilden-Ehrenpunkte, die in der Woche gemacht wurden. Du solltest versuchen, mindestens 7.000 Ehrenpunkte bei jedem Gilden-Rennen zu bekommen, damit du die maximalen möglichen Belohnungen bekommst (vor der Season 1 Forschung liegt die maximale Belohnungsgrenze bei 6.000 Punkten). Mit ein bisschen Zeitinvestition kannst du leicht über 10.000 Punkte kommen. Wie wir schon sagten, versuche so viele Ehrenpunkte wie möglich zu machen, damit du mehr Sachen im Ehrenladen kaufen kannst. Wenn du mindestens die ersten 5 Aufgabentickets jeden Tag kaufst, wirst du 44 Aufgaben haben, die du in dieser Woche abschließen kannst. </p>
+
+      <figure>
+        <img src="/images/guildrace5.png" alt="Belohnungen Beispiel" loading="lazy" />
+      </figure>
+    </section>
+
+    <!-- Season 1 research -->
+    <section class="card" id="season1">
+      <h2>Mit Season 1 bekommst du in der Schatten des Weltbaums-Forschungssektion zwei großartige Upgrades für das Gilden-Rennen.</h2>
+      <p>Das erste ist die zusätzliche Belohnung für das Erreichen von 6.500 und 7.000 Ehrenpunkten bei individuellen Ehrenpunkten und 65.000 und 70.000 Ehrenpunkten für die Gilde. 
+Die zweite Forschung ist etwas weiter unten im Forschungsbaum. Dies wird die Ehrenpunkte erhöhen, die du für jede Aufgabe bekommst, die du abschließt.
+So schnell wie möglich solltest du versuchen, diese beiden Forschungs-Upgrades zu bekommen. </p>
+    </section>
+
+    <!-- Honour shop -->
+    <section class="card" id="honour-shop">
+      <h2>Was du im Ehrenladen kaufen kannst</h2>
+      <p>Einige der wichtigen Dinge, die du im Ehrenladen kaufen kannst, werden etwas später im Spiel hinzugefügt:</p>
+      <ul>
+        <li>Seelensteine / 6.000 Ehrenpunkte (KAUFE IMMER den Seelenstein von deiner Hauptfraktion, die du spielst. Für F2P-Spieler ist das die Hauptquelle, aus der du die Seelensteine für deine Helden bekommst)</li>
+        <li>Universelle Truppen-Skin / Legendär 12.000 Ehrenpunkte / Episch 1.200 Ehrenpunkte</li>
+        <li>Legendäre Universelle Helden-Scherben / 300 jeweils</li>
+        <li>Universelle exklusive Ausrüstungs-Scherben / 400 jeweils</li>
+        <li>Legendäre Universelle Relikt-Scherben / 800 jeweils</li>
+        <li>Drachen-Essenz / 120 jeweils (im Endgame wirst du viel Drachen-Essenz brauchen. Deshalb ist es eine gute Quelle, um mehr davon zu bekommen)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace6.png" alt="Ehrenladen Beispiel" loading="lazy" />
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER (richiamo standard) -->
+  <div id="footer"></div>
+  <script>
+    fetch("/de/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(console.error);
+  </script>
+</body>
+</html>

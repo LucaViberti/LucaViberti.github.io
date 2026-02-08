@@ -1,4 +1,11 @@
 (function () {
+  // Carica e esegui lang-switcher.js immediatamente
+  if (!window.LangSwitcher) {
+    const script = document.createElement('script');
+    script.src = '/lang-switcher.js';
+    document.head.appendChild(script);
+  }
+
   function highlightCurrent(navRoot) {
     const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {

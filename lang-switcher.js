@@ -104,6 +104,100 @@ const LangSwitcher = {
     }
   },
   
+  // Crea un selettore fisso in alto alla pagina
+  createFixedSelector: function() {
+    // Rimuovi selettore esistente se presente
+    const existing = document.getElementById('lang-switcher-fixed');
+    if (existing) existing.remove();
+    
+    const currentLang = this.getCurrentLang();
+    const isEN = currentLang === 'en';
+    const isDE = currentLang === 'de';
+    
+    const container = document.createElement('div');
+    container.id = 'lang-switcher-fixed';
+    container.innerHTML = `
+      <style>
+        #lang-switcher-fixed {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          z-index: 9999;
+          display: flex;
+          gap: 8px;
+          background: rgba(30, 37, 65, 0.95);
+          backdrop-filter: blur(10px);
+          padding: 8px 12px;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(41, 171, 224, 0.3);
+        }
+        
+        #lang-switcher-fixed .lang-btn-fixed {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 12px;
+          border-radius: 8px;
+          background: transparent;
+          border: 2px solid transparent;
+          color: #b0b6c7;
+          font-size: 0.85rem;
+          font-weight: 500;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        #lang-switcher-fixed .lang-btn-fixed:hover {
+          background: rgba(41, 171, 224, 0.2);
+          color: #fff;
+          transform: scale(1.05);
+        }
+        
+        #lang-switcher-fixed .lang-btn-fixed.active {
+          background: linear-gradient(135deg, #29abe0, #7dd3fc);
+          border-color: #29abe0;
+          color: #fff;
+          font-weight: 600;
+          box-shadow: 0 2px 8px rgba(41, 171, 224, 0.4);
+        }
+        
+        #lang-switcher-fixed .lang-flag {
+          font-size: 1.1rem;
+          line-height: 1;
+        }
+        
+        @media (max-width: 640px) {
+          #lang-switcher-fixed {
+            top: 5px;
+            right: 5px;
+            padding: 6px 10px;
+            gap: 6px;
+          }
+          #lang-switcher-fixed .lang-btn-fixed {
+            padding: 5px 8px;
+            font-size: 0.8rem;
+          }
+          #lang-switcher-fixed .lang-btn-fixed span:not(.lang-flag) {
+            display: none;
+          }
+        }
+      </style>
+      <a href="#" onclick="LangSwitcher.switchLanguage('en'); return false;" class="lang-btn-fixed ${isEN ? 'active' : ''}">
+        <span class="lang-flag">🇬🇧</span>
+        <span>EN</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('de'); return false;" class="lang-btn-fixed ${isDE ? 'active' : ''}">
+        <span class="lang-flag">🇩🇪</span>
+        <span>DE</span>
+      </a>
+    `;
+    
+    document.body.appendChild(container);
+  },
+  
   // Redirect automatico se esiste una preferenza e siamo sulla homepage
   autoRedirectIfNeeded: function() {
     const currentLang = this.getCurrentLang();
@@ -117,12 +211,18 @@ const LangSwitcher = {
   }
 };
 
-// Esegui autoRedirect al caricamento se necessario
+// Inizializzazione automatica del selettore fisso quando la pagina si carica
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function() {
-    // Commenta se non vuoi redirect automatico
-    // LangSwitcher.autoRedirectIfNeeded();
+    LangSwitcher.createFixedSelector();
   });
 } else {
-  // LangSwitcher.autoRedirectIfNeeded();
+  LangSwitcher.createFixedSelector();
 }
+
+// Forza creazione dopo 100ms se non già presente (fallback)
+setTimeout(function() {
+  if (!document.getElementById('lang-switcher-fixed')) {
+    LangSwitcher.createFixedSelector();
+  }
+}, 100);

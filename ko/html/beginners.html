@@ -14,11 +14,11 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
-  <!-- Stripe Buy Button (one-time include) -->
+  <!-- Stripe 구매 버튼 (1회 포함) -->
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
   <style>
-/* ====== Base styles (from your template) ====== */
+/* ====== 기본 스타일 (템플릿에서 가져옴) ====== */
 body {
   margin: 0;
   padding: 0;
@@ -89,7 +89,7 @@ footer {
 }
 .donation-button:hover { background: #2389b5; }
 
-/* Enhanced navigation styling */
+/* 향상된 내비게이션 스타일 */
 header {
   background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -109,7 +109,7 @@ nav ul li ul {
 nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
 nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
-/* ====== Page-specific helpers ====== */
+/* ====== 페이지 전용 보조 스타일 ====== */
 .page-title { margin-top: 0; font-size: 2rem; }
 .toc {
   background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 28px;
@@ -123,14 +123,14 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 }
 
 /* =========================
-   NEW: Main restyle (scoped)
+   신규: 메인 리스타일(스코프 적용)
    ========================= */
 .th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
 .th-beginner * { box-sizing: border-box; }
 .th-beginner { color: var(--ink); }
 .th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
 
-/* Grid: sticky TOC on desktop */
+/* 그리드: 데스크톱에서 목차 고정 */
 .th-beginner .layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -143,12 +143,12 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   }
   .th-beginner .toc {
     position: sticky; top: 20px;
-    margin: 0; /* moved into grid, no extra gap */
+    margin: 0; /* 그리드로 이동, 추가 간격 제거 */
   }
   
 }
 
-/* Cards for sections */
+/* 섹션 카드 */
 .th-beginner .section-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -162,7 +162,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
-/* Headings */
+/* 헤딩 */
 .th-beginner h2 {
   margin: 0 0 8px;
   font-size: 1.35rem;
@@ -175,32 +175,32 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   color: var(--head);
 }
 
-/* Nice bullets and spacing */
+/* 불릿/간격 */
 .th-beginner p { margin: 10px 0 12px; }
 .th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
 .th-beginner li { padding-left: 4px; margin: 6px 0; }
 .th-beginner li::marker { color: var(--brand); }
 
-/* Links */
+/* 링크 */
 .th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
 .th-beginner a:hover { border-bottom-style: solid; }
 
-/* TOC polish */
+/* 목차 다듬기 */
 .th-beginner .toc { border-color: var(--border); }
 .th-beginner .toc h3 { color: var(--head); font-weight: 600; }
 .th-beginner .toc a { display: inline-block; padding: 2px 0; }
 
-/* Anchor-friendly offset for in-page headings */
+/* 페이지 내 앵커 오프셋 */
 .th-beginner section { scroll-margin-top: 90px; }
 
-/* Emphasis blocks already present as .note – just refine */
+/* 강조 박스(.note) 미세 조정 */
 .th-beginner .note {
   background: linear-gradient(0deg,#fffdf5,#fffdf5);
   border-color: #ffe08a;
   font-size: .95rem;
 }
 
-/* Optional table styles (future-proof if you add tables) */
+/* (향후 테이블 추가 대비) */
 .th-beginner .table-wrap { overflow-x: auto; }
 .th-beginner table {
   width: 100%; border-collapse: collapse; border: 1px solid var(--border);
@@ -213,22 +213,22 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 .th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
 .th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
 
-/* Subtle separators between cards on mobile */
+/* 모바일에서 카드 사이 구분 */
 @media (max-width: 1023px){
   .th-beginner .section-card + .section-card { margin-top: 8px; }
 }
 
-/* Small tag for section numbers (purely decorative) */
+/* 섹션 번호 태그(장식용) */
 .th-beginner .kicker {
   display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
   text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
   padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
 }
 
-/* Back-to-top helper */
+/* 맨 위로 링크 */
 .th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
 
-/* ====== Donation blocks (Stripe) ====== */
+/* ====== 기부 블록(Stripe) ====== */
 .donation-block{
   border:1px solid #e8eef5; background:#f9fbff;
   padding:22px 16px; margin:24px 0; border-radius:12px;
@@ -250,15 +250,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 <main class="th-beginner">
   <header class="site-info" aria-hidden="true" style="display:none"></header>
 
-  <!-- Back-to-top anchor -->
+  <!-- 맨 위로 앵커 -->
   <div id="top" aria-hidden="true"></div>
 
   <h1 class="page-title">초보자 가이드</h1>
   <p class="lead small">여기서 시작하세요: 기본 규칙, 초기 우선순위, 스마트 지출, 자원 낭비 없이 빠르게 진행하는 방법.</p>
 
   <div class="layout">
-    <!-- Sticky TOC on desktop -->
-    <nav class="toc" aria-label="On this page">
+    <!-- 데스크톱에서 고정되는 목차 -->
+    <nav class="toc" aria-label="이 페이지에서">
       <h3>목차</h3>
       <ol>
         <li><a href="#intro">소개 및 첫 번째 단계</a></li>
@@ -280,7 +280,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
       </ol>
     </nav>
 
-    <!-- Right column: content cards -->
+    <!-- 오른쪽 컬럼: 콘텐츠 카드 -->
     <div class="content">
       <!-- 1. Introduction -->
       <section id="intro" class="section-card">
@@ -351,9 +351,9 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <a class="toplink" href="#top">↑ 맨 위로</a>
       </section>
 
-      <!-- Donation block between sections -->
-      <section class="donation-block" aria-label="Support the project">
-        <p>이 팁들이 도움이 되었다면 당신의 프로젝트를 지원하기 위해 기부를 고려해주세요. 가이드를 무료로 유지하고 업데이트합니다.</p>
+      <!-- 섹션 사이 기부 블록 -->
+      <section class="donation-block" aria-label="프로젝트 지원">
+        <p>이 팁들이 도움이 되었다면, 가이드를 무료로 유지하고 업데이트할 수 있도록 기부를 고려해 주세요.</p>
         <stripe-buy-button
           buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
           publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
@@ -381,7 +381,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
           <li><strong>일일 특별</strong>: 영웅 조각을 선택하세요; <strong>별 보석</strong>(극도로 귀합니다)을 줍니다. 나중에 신화 영웅도 여기에 나타납니다.</li>
           <li><strong>일일/주간 팩</strong>: 소액 지출자들에게는 낮은 가치; 중간/큰 지출자들이 고려할 수 있습니다.</li>
           <li><strong>다이아몬드 상점</strong>: 절대 구매하지 마세요(팩과 같은 가격이지만 추가 보상 없음).</li>
-          <li><strong>VIP 포인트</strong>: 모든 구매로 얻습니다; 혜택을 잠금 해제하지만 VIP 레벨만을 위해 구매하지 마세요. 일일 �ests도 5 VIP 포인트를 줍니다.</li>
+          <li><strong>VIP 포인트</strong>: 모든 구매로 얻습니다; 혜택을 잠금 해제하지만 VIP 레벨만을 위해 구매하지 마세요. 일일 퀘스트도 5 VIP 포인트를 줍니다.</li>
         </ul>
         <p>지출할 새로운 팩과 이벤트가 계속 있을 것이지만, 위의 기본사항들은 초보자들에게 가장 중요합니다.</p>
         <a class="toplink" href="#top">↑ 맨 위로</a>
@@ -435,8 +435,8 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <a class="toplink" href="#top">↑ 맨 위로</a>
       </section>
 
-      <!-- Compact donation card later in the page -->
-      <div class="donation-card" aria-label="Support the project">
+      <!-- 페이지 후반의 간단 기부 카드 -->
+      <div class="donation-card" aria-label="프로젝트 지원">
         <p>이 섹션이 유용하다고 생각하신가요? 이 가이드들을 계속 개선할 수 있도록 기부로 도와주세요.</p>
         <stripe-buy-button
           buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
@@ -481,7 +481,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <a class="toplink" href="#top">↑ 맨 위로</a>
       </section>
 
-      <!-- Optional donation block (kept from base; show/hide as you prefer)
+      <!-- 선택 기부 블록 (기본에서 유지; 원하는 대로 표시/숨김)
       <div class="donation-section section-card">
         <p>이 가이드가 도움이 되었다면 사이트 성장을 계속할 수 있도록 작은 기부를 고려하세요.</p>
         <a class="donation-button" href="donate.html">기부</a>
@@ -499,7 +499,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 </script>
 
 <script>
-/* Icons script from your base (adds small faction icons next to matching words) */
+/* 기본 아이콘 스크립트(일치하는 단어 옆에 작은 진영 아이콘 추가) */
 document.addEventListener('DOMContentLoaded', function() {
   const icons = {
     '연맹':'/images/league-symbol.jpeg',

@@ -13,7 +13,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
   <style>
-/* Base */
+/* 기본 */
 body {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header/Nav (immutati rispetto al tuo file) */
+/* 헤더/내비게이션 (원본 파일과 동일하게 유지) */
 header {
   background: #16171A;
   padding: 12px 20px;
@@ -69,7 +69,7 @@ nav ul li ul li a {
 }
 nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
 
-/* Enhanced navigation styling (come nel tuo file) */
+/* 강화된 내비게이션 스타일 (원본 파일과 동일) */
 header {
   background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -89,14 +89,14 @@ nav ul li ul {
 nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
 nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
-/* ---------- CONTENT REFRESH (solo main) ---------- */
+/* ---------- 콘텐츠 리프레시 (메인만) ---------- */
 main {
   padding: 40px 20px 48px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* intestazione pagina */
+/* 페이지 헤더 */
 .page-header {
   background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
   border: 1px solid #e6e8ee;
@@ -114,7 +114,7 @@ main {
   color: #444;
 }
 
-/* griglia fazioni */
+/* 진영 그리드 */
 .faction-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -131,7 +131,7 @@ main {
 .faction-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.06); transform: translateY(-2px); }
 .faction-card h3 { margin: 4px 0 8px; }
 
-/* pannelli informativi */
+/* 정보 패널 */
 .panel {
   background: #ffffff;
   border: 1px solid #ececf0;
@@ -150,7 +150,7 @@ main {
   .panel ul.two-cols { columns: 1; }
 }
 
-/* sezione pulsante donazioni (coerente col resto) */
+/* 기부 버튼 섹션 (전체와 일관되게) */
 .donation-section {
   text-align: center;
   margin-top: 28px;
@@ -171,7 +171,7 @@ main {
 }
 .donation-button:hover { background: #2389b5; }
 
-/* Footer (stile base come nel tuo) */
+/* 푸터 (원본과 동일한 기본 스타일) */
 footer {
   background: #1f1f21;
   color: #888;
@@ -185,7 +185,7 @@ footer {
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
 
-  <!-- ===== MAIN: solo formattazione, testi invariati ===== -->
+  <!-- ===== MAIN: 형식만 변경, 텍스트는 그대로 유지 ===== -->
   <main id="main-content" itemscope itemtype="https://schema.org/Article">
     
     <section id="heroes" class="page-header">
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function addIcon(el, word) {
     const img = document.createElement('img');
     img.src = icons[word];
-    img.alt = word + ' symbol';
+    img.alt = word + ' 기호';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);

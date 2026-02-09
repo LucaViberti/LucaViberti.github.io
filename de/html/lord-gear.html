@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHelden Guide - Lord’s Ausrüstung</title>
+  <title>TopHelden Guide – Lord-Ausrüstung</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
   <style>
 /* Base */
@@ -56,33 +56,33 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
 <main>
   <section id="lords-gear">
-    <h2 class="page-title">Lord’s Ausrüstung</h2>
-    <p class="lead">With Castle level 24, Lord’s Ausrüstung becomes available. This system can provide huge buffs if managed carefully — don’t just upgrade randomly!</p>
+    <h2 class="page-title">Lord-Ausrüstung</h2>
+    <p class="lead">Ab Burg-Level 24 wird die Lord-Ausrüstung freigeschaltet. Dieses System kann dir enorme Buffs geben, wenn du es sauber managst. Also bitte nicht einfach wild upgraden.</p>
 
     <div class="card">
       <h3>Übersicht</h3>
-      <p>Lord’s Ausrüstung gives powerful stats to your account. In the first row, you have <strong>Natur Lord Ausrüstung</strong>; in the second row, <strong>Liga Lord Ausrüstung</strong>; and in the third row, <strong>Horde Lord Ausrüstung</strong>.</p>
+      <p>Die Lord-Ausrüstung gibt starke, accountweite Werte. In der ersten Reihe siehst du <strong>Natur-Lord-Ausrüstung</strong>, in der zweiten Reihe <strong>Liga-Lord-Ausrüstung</strong> und in der dritten Reihe <strong>Horde-Lord-Ausrüstung</strong>.</p>
     </div>
 
     <div class="card">
-      <h3>Upgrade Materials</h3>
+      <h3>Upgrade-Materialien</h3>
       <ul>
-        <li><strong>Refined Metal</strong>: farmed from daily bosses. Some special bosses (like the Tree Boss instead of the Pig Boss) drop extra — excellent moments to stockpile. Early on it feels abundant, but later you’ll need thousands, so always farm it when available.</li>
-        <li><strong>Magic Tread</strong>: obtained from many sources, especially Invasion events, but also some stores and events.</li>
-        <li><strong>Orichalcum</strong>: unlocked after Rare 2. Much harder to find; comes mostly from events and special shops.</li>
-        <li><strong>Dragon Blood</strong>: required only at Mythic level. Very rare, available in big events (like anniversary event shops). Don’t worry about it early — it’s a late-game resource.</li>
+        <li><strong>Refined Metal</strong>: farmbar über tägliche Bosse. Manche Spezialbosse (z.B. Tree Boss statt Pig Boss) droppen mehr, perfekte Zeit zum Horten. Am Anfang wirkt es „genug“, später brauchst du Tausende, also immer mitnehmen, wenn es geht.</li>
+        <li><strong>Magic Tread</strong>: kommt aus vielen Quellen, besonders aus Invasion-Events, aber auch aus einigen Shops und Events.</li>
+        <li><strong>Orichalcum</strong>: freigeschaltet nach Rare 2. Deutlich seltener, hauptsächlich aus Events und speziellen Shops.</li>
+        <li><strong>Dragon Blood</strong>: wird erst auf Mythic benötigt. Sehr selten, meist nur in großen Events (z.B. Anniversary-Event-Shops). Fürs Early-Game irrelevant, das ist Late-Game-Stoff.</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>Set Bonuses <img src="/images/lord2.png" alt="Set icons" class="small-icon"></h3>
-      <p>You get <strong>boosts</strong> when you have 3 and 6 Lord’s Ausrüstung pieces at the same level. These boosts are far stronger than normal upgrades and apply account-wide (not just to one faction). Because of this:</p>
+      <h3>Set-Boni <img src="/images/lord2.png" alt="Set-Icons" class="small-icon"></h3>
+      <p>Du bekommst starke <strong>Boosts</strong>, wenn du 3 bzw. 6 Teile der Lord-Ausrüstung auf dem gleichen Level hast. Diese Boosts sind viel stärker als normale Upgrades und gelten accountweit (nicht nur für eine Fraktion). Deshalb:</p>
       <ul>
-        <li>Keep all Lord’s Ausrüstung roughly at the same level.</li>
-        <li>Ideally have 3 pieces at one level and the other 3 one level below.</li>
+        <li>Halte alle Lord-Ausrüstungsteile ungefähr auf dem gleichen Level.</li>
+        <li>Optimal: 3 Teile auf einem Level und die anderen 3 ein Level darunter.</li>
       </ul>
-      <p><em>Reminder:</em> You get a huge Influence upgrade when you reach a new boost level. During Gildenrennens, if you have the Lord’s Ausrüstung task, you can often complete it with a single upgrade when you’re right at a boost threshold.</p>
-      <img src="/images/lord1.png" alt="Lord gear boost example" class="set-image">
+      <p><em>Hinweis:</em> Wenn du einen neuen Boost-Schwellenwert erreichst, gibt’s einen großen Influence-Sprung. Während des <strong>Gildenrennens</strong> kannst du mit dem Lord-Ausrüstungs-Task oft schon mit einem einzigen Upgrade den Task abschließen, wenn du genau an so einer Schwelle stehst.</p>
+      <img src="/images/lord1.png" alt="Beispiel für Lord-Ausrüstungs-Boost" class="set-image">
     </div>
 
   </section>
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded',function(){
   const icons={'Liga':'/images/league-symbol.jpeg','Natur':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
   function addIcon(el,word){
     const img=document.createElement('img');
-    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+    img.src=icons[word]; img.alt=word+' Symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
     el.appendChild(img);
   }
   document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});

@@ -112,14 +112,14 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    '리그':'/images/league-symbol.jpeg',
+    '자연':'/images/nature-symbol.jpeg',
+    '호드':'/images/horde-symbol.jpeg'
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
     img.src = icons[word];
-    img.alt = word + ' symbol';
+    img.alt = word + ' 기호';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);

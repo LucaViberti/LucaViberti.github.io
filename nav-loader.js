@@ -23,12 +23,14 @@
     const p = (window.location.pathname || '').toLowerCase();
     if (p.startsWith('/ko/')) return 'ko';
     if (p.startsWith('/de/')) return 'de';
+    if (p.startsWith('/vi/')) return 'vi';
     return 'en';
   }
 
   function getNavPath(lang) {
     if (lang === 'ko') return '/ko/html/nav.html';
     if (lang === 'de') return '/de/html/nav.html';
+    if (lang === 'vi') return '/vi/html/nav.html';
     return '/html/nav.html';
   }
 

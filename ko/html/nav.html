@@ -1,14 +1,13 @@
 <header>
   <div class="site-info">
     <h1 class="site-title">TopHeroes 가이드</h1>
-    <!-- Language Selector in Header -->
     <div id="header-lang-selector" class="header-lang-selector"></div>
   </div>
+
   <nav>
     <ul>
       <li><a href="/ko/index.html">홈</a></li>
 
-      <!-- HEROES -->
       <li class="has-sub">
         <a href="/ko/html/heroes.html">영웅</a>
         <ul class="dropdown">
@@ -16,7 +15,7 @@
           <li><a href="/ko/html/league.html">리그</a></li>
           <li><a href="/ko/html/nature.html">자연</a></li>
           <li><a href="/ko/html/horde.html">호드</a></li>
-          <!-- Gear con mini flyout affianco -->
+
           <li class="has-flyout">
             <a href="/ko/html/gear.html">장비</a>
             <button class="flyout-toggle" aria-label="장비 더보기" aria-expanded="false" aria-controls="gear-flyout">▾</button>
@@ -24,11 +23,11 @@
               <li><a href="/ko/html/exclusive-gear.html">전용 장비</a></li>
             </ul>
           </li>
+
           <li><a href="/ko/html/pets.html">펫</a></li>
         </ul>
       </li>
 
-      <!-- BUILDING -->
       <li class="has-sub">
         <a href="/ko/html/building.html">건설</a>
         <ul class="dropdown">
@@ -41,7 +40,6 @@
 
       <li><a href="/ko/html/research.html">연구</a></li>
 
-      <!-- ADVENTURE -->
       <li class="has-sub">
         <a href="/ko/html/generaladv.html">어드벤처</a>
         <ul class="dropdown">
@@ -51,7 +49,6 @@
         </ul>
       </li>
 
-      <!-- EVENTS  -->
       <li class="has-sub">
         <a href="/ko/html/events.html">이벤트</a>
         <ul class="dropdown">
@@ -67,7 +64,6 @@
       <li><a href="/ko/html/tips.html">비용 표</a></li>
       <li><a href="/ko/html/quick-tips.html">빠른 팁</a></li>
 
-      <!-- SUPPORT US -->
       <li class="has-sub">
         <a href="#">후원하기</a>
         <ul class="dropdown">
@@ -82,88 +78,66 @@
 </header>
 
 <style>
-  /* dimensione link coerente */
   nav ul li a { font-size: 0.85rem; }
   nav ul li ul li a { font-size: 0.85rem; }
 
-  /* Titolo */
   .site-title{
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight:700;
     background: linear-gradient(90deg,#29abe0,#7dd3fc);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    text-align:center;margin:0;padding:8px 0;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
     text-shadow:0 2px 4px rgba(0,0,0,0.3);
   }
 
-  /* Language Selector in Header - Modern Style */
   .header-lang-selector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 8px 16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+    padding:8px 16px;
     background: rgba(41, 171, 224, 0.1);
     border-radius: 12px;
     backdrop-filter: blur(10px);
   }
-
   .header-lang-selector .lang-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border-radius: 8px;
-    background: transparent;
-    border: 2px solid transparent;
-    color: #b0b6c7;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-decoration: none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 14px;
+    border-radius:8px;
+    background:transparent;
+    border:2px solid transparent;
+    color:#b0b6c7;
+    font-size:0.9rem;
+    font-weight:500;
+    text-decoration:none;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor:pointer;
   }
-
   .header-lang-selector .lang-btn:hover {
     background: rgba(41, 171, 224, 0.15);
-    color: #fff;
+    color:#fff;
     transform: translateY(-2px);
   }
-
   .header-lang-selector .lang-btn.active {
     background: linear-gradient(135deg, #29abe0, #7dd3fc);
-    border-color: #29abe0;
-    color: #fff;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(41, 171, 224, 0.3);
+    border-color:#29abe0;
+    color:#fff;
+    font-weight:600;
+    box-shadow:0 4px 12px rgba(41, 171, 224, 0.3);
   }
-
-  .header-lang-selector .lang-flag {
-    font-size: 1.2rem;
-    line-height: 1;
-  }
+  .header-lang-selector .lang-flag { font-size:1.2rem; line-height:1; }
 
   @media (max-width: 640px) {
-    .header-lang-selector {
-      padding: 6px 12px;
-      gap: 6px;
-    }
-    .header-lang-selector .lang-btn {
-      padding: 5px 10px;
-      font-size: 0.85rem;
-    }
+    .header-lang-selector { padding:6px 12px; gap:6px; }
+    .header-lang-selector .lang-btn { padding:5px 10px; font-size:0.85rem; }
   }
 
-  /* FIX: garantisce click sicuri */
   nav { position: relative; z-index: 10; }
   nav ul li .dropdown li a { position: relative; z-index: 2; }
 </style>
-
-<script src="/lang-switcher.js"></script>
-<script>
-  if (typeof LangSwitcher !== 'undefined') {
-    LangSwitcher.initHeaderSelector('header-lang-selector');
-  }
-</script>

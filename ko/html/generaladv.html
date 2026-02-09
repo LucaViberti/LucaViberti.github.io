@@ -21,7 +21,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header & Nav (lasciati come da base) */
+/* 헤더 및 내비게이션 (기본과 동일하게 유지) */
 header {
   background: #16171A;
   padding: 12px 20px;
@@ -62,7 +62,7 @@ footer {
 }
 .donation-button:hover { background: #2389b5; }
 
-/* Enhanced navigation styling (come in base migliorata) */
+/* 향상된 내비게이션 스타일 (개선된 기본과 동일) */
 header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; }
 header .tagline { color: #b0b6c7; }
 nav ul { gap: 20px; }
@@ -75,7 +75,7 @@ nav ul li ul { background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6p
 nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
 nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
-/* ------- Page-specific styles (solo contenuto) ------- */
+/* ------- 페이지 전용 스타일 (콘텐츠만) ------- */
 .page-title {
   font-size: 2rem;
   margin-bottom: 12px;
@@ -100,7 +100,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 }
 .content-card p, .content-card li { color: #374151; }
 
-/* Immagini piccole affiancate al testo su desktop, a colonna su mobile */
+/* 데스크톱에서는 텍스트 옆에 작은 이미지, 모바일에서는 세로 정렬 */
 .img-block {
   display: flex;
   align-items: flex-start;
@@ -120,7 +120,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   min-width: 260px;
 }
 
-/* Variante a due immagini piccole affiancate */
+/* 작은 이미지 2개를 나란히 배치하는 변형 */
 .duo {
   display: flex;
   gap: 14px;
@@ -135,7 +135,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   border: 1px solid #e5e7eb;
 }
 
-/* Responsive */
+/* 반응형 */
 @media (max-width: 768px) {
   .img-block { flex-direction: column; }
   .img-block img, .duo img { max-width: 100%; }
@@ -223,14 +223,14 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    '리그':'/images/league-symbol.jpeg',
+    '자연':'/images/nature-symbol.jpeg',
+    '호드':'/images/horde-symbol.jpeg'
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
     img.src = icons[word];
-    img.alt = word + ' symbol';
+    img.alt = word + ' 기호';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);

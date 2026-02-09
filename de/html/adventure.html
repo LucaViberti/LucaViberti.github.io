@@ -9,9 +9,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHelden Guide - Adventure</title>
+
+  <title>TopHelden Guide – Abenteuer</title>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
+
   <style>
 body {
   margin: 0;
@@ -22,11 +25,13 @@ body {
 }
 
 header {
-  background: #16171A;
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
   padding: 12px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
 }
 
 header h1 {
@@ -37,7 +42,7 @@ header h1 {
 
 header .tagline {
   margin-left: 12px;
-  color: #888;
+  color: #b0b6c7;
   font-size: 0.9rem;
   white-space: nowrap;
 }
@@ -68,15 +73,20 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #d1d1d6;
+  color: #ccd0dd;
   text-decoration: none;
-  padding: 10px 8px;
+  padding: 12px 6px;
   font-size: 0.85rem;
-  transition: color 0.3s;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
+  border-bottom-color: #29abe0;
 }
 
 nav ul li ul {
@@ -85,7 +95,8 @@ nav ul li ul {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #1f1f21;
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
   border-radius: 6px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 10px 0;
@@ -97,20 +108,17 @@ nav ul li:hover ul {
   display: block;
 }
 
-nav ul li ul li {
-  margin: 0;
-}
-
 nav ul li ul li a {
   display: block;
   padding: 8px 20px;
+  font-size: 0.85rem;
   color: #d1d1d6;
   white-space: nowrap;
 }
 
 nav ul li ul li a:hover {
-  background: #2c2c2e;
-  color: #FFFFFF;
+  background: #25314d;
+  color: #ffffff;
 }
 
 main {
@@ -138,6 +146,7 @@ footer {
   background: #f5f5f7;
   border-top: 1px solid #e5e5e5;
 }
+
 .donation-button {
   display: inline-block;
   background: #29abe0;
@@ -148,77 +157,32 @@ footer {
   font-weight: bold;
   transition: background 0.3s;
 }
+
 .donation-button:hover {
   background: #2389b5;
 }
-
-
-/* Enhanced navigation styling */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-
-header .tagline {
-  color: #b0b6c7;
-}
-
-nav ul {
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #ccd0dd;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 12px 6px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-  border-bottom-color: #29abe0;
-}
-
-nav ul li ul {
-  background: #1c2133;
-  border: 1px solid #2b2f3a;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-nav ul li ul li a {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-nav ul li ul li a:hover {
-  background: #25314d;
-  color: #ffffff;
-}
-
 </style>
 </head>
+
 <body>
 <div id="navbar"></div>
 <script src="nav-loader.js" defer></script>
-  <main>
-    <section id="adventure">
-      <h2>Abenteuer</h2>
-      <p>Inhalt folgt in Kürze.</p>
-    </section>
-  
-    <div id="footer"></div>
+
+<main>
+  <section id="adventure">
+    <h2>Abenteuer</h2>
+    <p>Inhalt folgt in Kürze.</p>
+  </section>
+</main>
+
+<div id="footer"></div>
 <script>
   fetch("footer.html")
     .then(res => res.text())
     .then(html => {
       document.getElementById("footer").innerHTML = html;
     })
-    .catch(err => console.error('Footer load failed:', err));
+    .catch(err => console.error('Footer konnte nicht geladen werden:', err));
 </script>
 
 <script>
@@ -228,18 +192,21 @@ document.addEventListener('DOMContentLoaded', function() {
     'Natur': 'nature-symbol.jpeg',
     'Horde': 'horde-symbol.jpeg'
   };
+
   function addIcon(el, word) {
     const img = document.createElement('img');
     img.src = icons[word];
-    img.alt = word + ' symbol';
+    img.alt = word + ' Symbol';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);
   }
+
   document.querySelectorAll('a').forEach(function(a) {
     const text = a.textContent.trim();
     if (icons[text]) addIcon(a, text);
   });
+
   document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
     const text = h.textContent.trim();
     if (icons[text]) addIcon(h, text);

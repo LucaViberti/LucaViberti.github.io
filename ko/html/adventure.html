@@ -208,7 +208,7 @@ nav ul li ul li a:hover {
   <main>
     <section id="adventure">
       <h2>모험</h2>
-      <p>콘텐츠가 곧 제공됩니다.</p>
+      <p>콘텐츠는 곧 제공될 예정입니다.</p>
     </section>
   
     <div id="footer"></div>
@@ -218,7 +218,7 @@ nav ul li ul li a:hover {
     .then(html => {
       document.getElementById("footer").innerHTML = html;
     })
-    .catch(err => console.error('Footer load failed:', err));
+    .catch(err => console.error('푸터 로드 실패:', err));
 </script>
 
 <script>
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function addIcon(el, word) {
     const img = document.createElement('img');
     img.src = icons[word];
-    img.alt = word + ' symbol';
+    img.alt = word + ' 심볼';
     img.style.height = '1em';
     img.style.marginLeft = '0.3em';
     el.appendChild(img);

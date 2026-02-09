@@ -1,16 +1,63 @@
 (function () {
-  // Carica e esegui lang-switcher.js immediatamente
-  if (!window.LangSwitcher) {
-    const script = document.createElement('script');
-    script.src = '/lang-switcher.js';
-    document.head.appendChild(script);
+  function ensureLangSwitcher() {
+    return new Promise((resolve) => {
+      if (window.LangSwitcher) return resolve(true);
+
+      // Evita doppio load
+      const existing = document.querySelector('script[src="/lang-switcher.js"]');
+      if (existing) {
+        existing.addEventListener('load', () => resolve(true));
+        existing.addEventListener('error', () => resolve(false));
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = '/lang-switcher.js';
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.head.appendChild(script);
+    });
+  }
+
+  function getLangFromPath() {
+    const p = (window.location.pathname || '').toLowerCase();
+    if (p.startsWith('/ko/')) return 'ko';
+    if (p.startsWith('/de/')) return 'de';
+    return 'en';
+  }
+
+  function getNavPath(lang) {
+    if (lang === 'ko') return '/ko/html/nav.html';
+    if (lang === 'de') return '/de/html/nav.html';
+    return '/html/nav.html';
+  }
+
+  function normalizePath(pathname) {
+    let p = (pathname || '').toLowerCase();
+
+    // se finisce con / -> index.html (opzionale, ma utile se hai root)
+    if (p.endsWith('/')) p += 'index.html';
+
+    return p;
   }
 
   function highlightCurrent(navRoot) {
-    const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    const currentPath = normalizePath(window.location.pathname);
+
     navRoot.querySelectorAll('nav a[href]').forEach((a) => {
-      const href = (a.getAttribute('href') || '').toLowerCase();
-      if (href === current) {
+      const raw = a.getAttribute('href') || '';
+      // ignora anchor e link esterni
+      if (!raw || raw.startsWith('#') || raw.startsWith('http')) return;
+
+      // risolve href relativo -> pathname assoluto
+      let linkPath;
+      try {
+        linkPath = normalizePath(new URL(raw, window.location.origin).pathname);
+      } catch {
+        return;
+      }
+
+      if (linkPath === currentPath) {
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
@@ -36,9 +83,7 @@
     });
 
     navRoot.querySelectorAll('nav li .dropdown a').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
+      a.addEventListener('click', (e) => e.stopPropagation());
     });
 
     navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => {
@@ -67,21 +112,28 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 
-    // Detect language from path
-    const isGerman = window.location.pathname.startsWith('/de/');
-    const navPath = isGerman ? '/de/html/nav.html' : '/html/nav.html';
+    const lang = getLangFromPath();
+    const navPath = getNavPath(lang);
 
-    fetch(navPath)
-      .then((res) => res.text())
-      .then((html) => {
-        navContainer.innerHTML = html;
-        highlightCurrent(navContainer);
-        initNavInteractions(navContainer);
-      })
-      .catch((err) => console.error('Navbar load failed:', err));
+    try {
+      const res = await fetch(navPath);
+      const html = await res.text();
+      navContainer.innerHTML = html;
+
+      highlightCurrent(navContainer);
+      initNavInteractions(navContainer);
+
+      // opzionale ma sensato: init del language selector appena il nav è montato
+      const ok = await ensureLangSwitcher();
+      if (ok && window.LangSwitcher?.initHeaderSelector) {
+        window.LangSwitcher.initHeaderSelector('header-lang-selector');
+      }
+    } catch (err) {
+      console.error('Navbar load failed:', err);
+    }
   });
 })();

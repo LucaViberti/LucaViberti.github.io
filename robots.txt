@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap locations
-Sitemap: https://guidetopheroes.com/sitemap-index.xml
+Sitemap: https://www.guidetopheroes.com/sitemap-index.xml
 
 # Block unnecessary admin paths if any
 Disallow: /.git/

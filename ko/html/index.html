@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -12,9 +11,10 @@
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
 
   <!-- SEO -->
-  <title>TopHeroes Guide – Chiến thuật, Tướng, Phiêu lưu & Sự kiện</title>
-  <meta name="description" content="TopHeroes Guide: hướng dẫn ngắn gọn về Tướng (League, Nature, Horde), chế độ Phiêu lưu (Classic, Season 1), Sự kiện và mẹo cho người mới. Chiến thuật thực tế, dễ áp dụng để tiến bộ nhanh hơn." />
+  <title>TopHeroes 가이드 – 전략, 영웅, 어드벤처 & 이벤트</title>
+  <meta name="description" content="TopHeroes 가이드: League, Nature, Horde 영웅 가이드, 어드벤처(클래식/시즌 1), 이벤트, 초보자 팁까지. 짧고 실전적인 전략으로 더 빠르게 성장하세요." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
@@ -81,7 +81,7 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;}
 .mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
 
-/* Pulsanti */
+/* Buttons */
 .mini-card a{
   margin-top:12px;
   align-self:flex-start;
@@ -119,9 +119,6 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
   font-weight:600; cursor:pointer; transition:background .2s;
 }
 .th-btn:hover{background:#2389b5;}
-.th-hint{opacity:.75; font-size:.9rem; margin:0}
-.th-error{color:#b91c1c}
-.th-ok{color:#166534}
 
 /* Donation + footer */
 .donation-section{
@@ -152,7 +149,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   <script src="/nav-loader.js" defer></script>
 
   <!-- STRIPE DONATION BUTTON -->
-  <section class="stripe-donation" aria-label="Hỗ trợ dự án">
+  <section class="stripe-donation" aria-label="프로젝트 후원">
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <stripe-buy-button
       buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
@@ -160,89 +157,88 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
     </stripe-buy-button>
   </section>
 
-
   <main itemscope itemtype="https://schema.org/Article">
     <!-- HERO INTRO -->
-    <section class="hero" aria-label="Chào mừng">
-      <h1 itemprop="headline">TopHeroes Guide</h1>
-      <p>Các hướng dẫn ngắn gọn, thực tế để tiến bộ nhanh hơn trong <strong>TopHeroes</strong>: Tướng theo phe, chế độ Phiêu lưu, Sự kiện và mẹo cho người mới.</p>
-      <p>Mọi thứ được sắp xếp theo thẻ nhanh và checklist để giúp bạn quyết định nên nâng ai, nâng gì và lên kế hoạch tài nguyên như thế nào.</p>
+    <section class="hero" aria-label="환영">
+      <h1 itemprop="headline">TopHeroes 가이드</h1>
+      <p><strong>TopHeroes</strong>에서 더 빠르게 성장하기 위한 짧고 실전적인 가이드: 진영별 영웅, 어드벤처, 이벤트, 초보자 팁.</p>
+      <p>핵심만 카드/체크리스트로 정리해서 "누굴 키울지, 뭘 업그레이드할지, 자원을 어떻게 계획할지" 빠르게 결정할 수 있게 해줍니다.</p>
     </section>
 
     <!-- QUICK SECTIONS -->
-    <h2 class="section-head">Khám phá hướng dẫn</h2>
-    <div class="quick-sections" aria-label="Các mục chính">
+    <h2 class="section-head">가이드 둘러보기</h2>
+    <div class="quick-sections" aria-label="메인 섹션">
       <article class="mini-card">
-        <h3>Tướng</h3>
-        <p>Tổng quan theo phe và build cốt lõi: League, Nature, Horde.</p>
-        <a href="/vi/html/heroes.html">Đi tới Tướng</a>
+        <h3>영웅 (Heroes)</h3>
+        <p>League, Nature, Horde 진영별 핵심 영웅과 빌드 정리.</p>
+        <a href="/ko/html/heroes.html">영웅 페이지</a>
       </article>
 
       <article class="mini-card">
-        <h3>Phiêu lưu</h3>
-        <p>Cách hoạt động của Phiêu lưu, kiến thức bản đồ cơ bản và phần thưởng.</p>
-        <a href="/vi/html/generaladv.html">Đi tới Phiêu lưu</a>
+        <h3>어드벤처 (Adventure)</h3>
+        <p>어드벤처 기본, 맵 진행, 보상 이해.</p>
+        <a href="/ko/html/generaladv.html">어드벤처 페이지</a>
       </article>
 
       <article class="mini-card">
-        <h3>Sự kiện</h3>
-        <p>Chiến thuật nhanh cho Guild Race, Arms Race, KvK và Guild Boss. Sắp ra mắt</p>
-        <!-- <a href="/vi/html/events.html">Go to Events</a> -->
+        <h3>이벤트 (Events)</h3>
+        <p>길드 레이스, Arms Race, KvK, 길드 보스 공략. (곧 추가)</p>
+        <!-- <a href="/ko/html/events.html">이벤트 페이지</a> -->
       </article>
 
       <article class="mini-card">
-        <h3>Hướng dẫn cho người mới</h3>
-        <p>Ưu tiên đầu game, đội hình khởi đầu và quản lý tài nguyên.</p>
-         <a href="/vi/html/beginners.html">Đi tới Người mới</a> 
+        <h3>초보자 가이드 (Beginners)</h3>
+        <p>초반 우선순위, 스타터 팀, 자원 관리.</p>
+        <a href="/ko/html/beginners.html">초보자 페이지</a>
       </article>
 
       <article class="mini-card">
-        <h3>Bảng chi phí</h3>
-        <p>Bảng chi phí tài nguyên và nâng cấp để giúp bạn lên kế hoạch tiến trình.</p>
-        <a href="/vi/html/tips.html">Đi tới Bảng chi phí</a>
+        <h3>비용 표 (Cost Tables)</h3>
+        <p>업그레이드/강화 비용을 표로 정리해서 계획하기 쉽게.</p>
+        <a href="/ko/html/tips.html">비용 표 보기</a>
       </article>
 
       <article class="mini-card">
-        <h3>Mẹo nhanh</h3>
-        <p>Mẹo nhanh, thực tế để tối ưu thói quen hằng ngày và chuẩn bị sự kiện.</p>
-        <a href="/vi/html/quick-tips.html">Đi tới Mẹo nhanh</a>
+        <h3>퀵 팁 (Quick Tips)</h3>
+        <p>일일 루틴과 이벤트 준비를 더 잘하는 빠른 팁 모음.</p>
+        <a href="/ko/html/quick-tips.html">퀵 팁 보기</a>
       </article>
     </div>
 
     <!-- CONTACT FORM -->
-    <section class="contact-card" aria-label="Liên hệ">
-      <h2>Liên hệ</h2>
-      <p>Có câu hỏi, gợi ý hoặc góp ý? Gửi tin nhắn cho chúng tôi và chúng tôi sẽ trả lời qua email.</p>
+    <section class="contact-card" aria-label="문의하기">
+      <h2>문의하기</h2>
+      <p>질문, 제안, 피드백이 있으면 메시지를 남겨주세요. 이메일로 답장드립니다.</p>
 
       <form class="th-contact"
             action="https://formspree.io/f/mrbazyyz"
             method="POST" autocomplete="on">
         <label>
-          Email của bạn
+          이메일
           <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
         </label>
 
         <label>
-          Tin nhắn
-          <textarea name="message" required rows="6" placeholder="Viết tin nhắn của bạn..."></textarea>
+          메시지
+          <textarea name="message" required rows="6" placeholder="메시지를 입력하세요..."></textarea>
         </label>
 
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
                style="position:absolute;left:-10000px;opacity:0">
 
-        <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
-        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/vi/html/thanks.html">
+        <input type="hidden" name="_subject" value="TopHeroes 가이드: 새 메시지">
+        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/ko/html/thanks.html">
 
         <div class="th-privacy">
           <input type="checkbox" id="consent" required>
           <label for="consent">
-            Tôi đồng ý cho xử lý dữ liệu của mình (email và nội dung tin nhắn) chỉ với mục đích nhận phản hồi.
-            Đọc <a href="/vi/html/privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a> của chúng tôi.
+            답변을 받기 위한 목적에 한해(이메일 및 메시지) 개인정보 처리에 동의합니다.
+            <a href="/ko/html/privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>을 읽었습니다.
           </label>
         </div>
 
         <div class="th-actions">
-          <button type="submit" class="th-btn">Gửi</button>
+          <button type="submit" class="th-btn">보내기</button>
         </div>
       </form>
     </section>
@@ -252,7 +248,12 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   </main>
 
   <script>
-    fetch("/vi/html/footer.html")
+    fetch("/ko/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
   <!-- Icon injection -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {

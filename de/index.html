@@ -254,12 +254,12 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       .catch(err => console.error("Footer konnte nicht geladen werden:", err));
   </script>
 
-  <!-- Icon injection (DE keys) -->
+  <!-- Icon injection -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const icons = {
-        "Liga": "/images/league-symbol.jpeg",
-        "Natur": "/images/nature-symbol.jpeg",
+        "League": "/images/league-symbol.jpeg",
+        "Nature": "/images/nature-symbol.jpeg",
         "Horde": "/images/horde-symbol.jpeg"
       };
 
@@ -272,11 +272,6 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
         img.style.marginLeft = "0.3em";
         el.appendChild(img);
       }
-
-      document.querySelectorAll("a").forEach(a => {
-        const t = a.textContent.trim();
-        if(icons[t]) addIcon(a, t);
-      });
 
       document.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach(h => {
         const t = h.textContent.trim();

@@ -24,6 +24,7 @@
     if (p.startsWith('/ko/')) return 'ko';
     if (p.startsWith('/de/')) return 'de';
     if (p.startsWith('/vi/')) return 'vi';
+    if (p.startsWith('/zh/')) return 'zh';
     return 'en';
   }
 
@@ -31,6 +32,7 @@
     if (lang === 'ko') return '/ko/html/nav.html';
     if (lang === 'de') return '/de/html/nav.html';
     if (lang === 'vi') return '/vi/html/nav.html';
+    if (lang === 'zh') return '/zh/html/nav.html';
     return '/html/nav.html';
   }
 

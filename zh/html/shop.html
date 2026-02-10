@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - Shop</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #b0b6c7;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e9e9ee;
+}
+
+section h2, section h3 {
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #0b5ed7;
+  border: 1px solid #d6e9ff;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+ul.keylist {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.note {
+  background: #f6f9ff;
+  border-left: 4px solid #29abe0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 760px) {
+  .grid.two {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+.decor-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  border: 1px solid #e5e5ea;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.donation-button:hover {
+  background: #2389b5;
+}
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main>
+
+  <section id="shop">
+    <h2>Shop Guide <span class="badge">Weekly & Daily Refresh</span></h2>
+    <p>This page explains what to buy (and what to skip) across all in‑game shops, with quick priorities for <strong>F2P</strong>, <strong>low/medium spenders</strong>, and <strong>high spenders</strong>.</p>
+  </section>
+
+  <section id="gems">
+    <h3>Gems &amp; Diamonds</h3>
+    <p><em>Refreshed weekly (first part) and daily (second part).</em></p>
+    <ul class="keylist">
+      <li><strong>Star Gems:</strong> Mainly from the daily special pack; a small amount from events like <em>Arms Race</em>.</li>
+    </ul>
+    <div class="note">
+      <p><strong>Priorities by profile</strong></p>
+      <ul>
+        <li><strong>F2P:</strong> Save star points to buy the <em>Legendary Promotion Stone</em>.</li>
+        <li><strong>Medium/Low spenders:</strong> You can also buy the <em>Soul</em> for your main queue.</li>
+        <li><strong>High spenders:</strong> Buy all <em>Legendary Promotion Stones</em> every time, then as many <em>Soul Stones</em> as possible.</li>
+      </ul>
+      <p>Daily items are great for whales, but for F2P they are mostly inefficient. Focus on the weekly refresh.</p>
+    </div>
+  </section>
+
+  <section id="vip">
+    <h3>VIP Store</h3>
+    <p><em>Refreshed weekly. Unlocks fully at VIP 10.</em></p>
+    <ul class="keylist">
+      <li><strong>Buy every week:</strong> Relic Scroll • Pet Food • Universal Speed‑ups • Stamina.</li>
+    </ul>
+    <p class="note">Other items here are expensive—buy only if you’re flush with diamonds or need something specific.</p>
+  </section>
+
+  <section id="daily">
+    <h3>Daily Store</h3>
+    <p><em>Refreshed daily. Unlocks fully at VIP 10.</em></p>
+    <ul class="keylist">
+      <li><strong>Buy first:</strong> Premium Carriage Voucher • Shard • Token • Pet Food • Stamina.</li>
+      <li><strong>Optional:</strong> Meat and Gear Enhance Rune (requires high VIP and many diamonds).</li>
+    </ul>
+    <p class="note">The remaining items are pricey—treat as luxury purchases.</p>
+  </section>
+
+  <section id="points">
+    <h3>Points Store</h3>
+
+    <div class="grid two">
+      <div>
+        <h4>Decor</h4>
+        <p><em>Refreshed weekly.</em> Open this store <strong>daily</strong> to claim 8 free decor tokens.</p>
+        <ul class="keylist">
+          <li>Save tokens until you reach <strong>500</strong> and buy a <strong>Legendary</strong> decoration at a discount.</li>
+          <li>One decoration won’t change your game alone—be patient and wait for something useful for your main queue.</li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <img src="/images/DecoStore.jpg" alt="Decor Store example" class="decor-img">
+          <figcaption style="font-size:.85rem;color:#666;margin-top:6px;">Example: Decor Store (desktop & mobile friendly)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h4 id="arena">Arena</h4>
+    <p><em>Refreshed weekly.</em></p>
+    <ul class="keylist">
+      <li><strong>Must‑buy:</strong> Diamonds • First Recruitment Token.</li>
+      <li><strong>Very good:</strong> Decoration Choice Chests.</li>
+      <li><strong>Recommended:</strong> Hero skins (cost ~12,000 Arena points each).</li>
+      <li><strong>Also valuable:</strong> Advanced Relocate.</li>
+    </ul>
+    <p class="note">Everything else is expensive—buy only if you have many Challenge Tokens and a clear need.</p>
+
+    <h4 id="medal">Medal</h4>
+    <p><em>Weekly (first part) + Daily (second part).</em></p>
+    <ul class="keylist">
+      <li><strong>First part:</strong> If you don’t have them, buy one Soldier Skin of each type (just once). You’ll later get Epic for free or Legendary with money—save medals too.</li>
+      <li><strong>Second part:</strong> <strong>Daily</strong> buy all speed‑ups; keep resources for emergencies (too expensive for daily use).</li>
+    </ul>
+  </section>
+
+  <section id="combat-valor">
+    <h3>Combat Valor</h3>
+    <p><em>Refreshed weekly. Tokens from Ancient Battlefield & 5v5.</em></p>
+    <p class="note"><strong>Target:</strong> Use these tokens almost exclusively for <em>Legendary Promotion Stone</em>. Don’t dilute on other items.</p>
+  </section>
+
+  <section id="guild-store">
+    <h3>Guild Store</h3>
+    <h4 id="guild-points">Guild Points</h4>
+    <p><em>Daily (first part) + Weekly (second part).</em></p>
+    <p>If you’re active you can often buy everything—do it. If you’re new or play less, prioritize:</p>
+    <ul class="keylist">
+      <li><strong>First:</strong> Vault Key.</li>
+      <li><strong>Then daily:</strong> Refined Metal • Magic Stone • Pet Food.</li>
+    </ul>
+    <p class="note">After a few days you’ll generate more points and can expand to the rest.</p>
+
+    <h4 id="guild-honor">Guild Honor</h4>
+    <p><em>Refreshed weekly. Earned from Guild Race.</em></p>
+    <ul class="keylist">
+      <li><strong>Best buys:</strong> Soul Stones (faction rotates weekly: League → Horde → Nature → repeat; appears around Season 1 start).</li>
+      <li>Universal Exclusive Gear Shards (a few weeks after Season 1 start).</li>
+      <li>Universal Legendary Troop Skin (~25k points).</li>
+    </ul>
+    <p class="note"><strong>Focus:</strong> Score as many points as possible in Guild Race, then save for the Soul Stones you need.</p>
+    <p style="font-size:.9rem;color:#666;"><em>Reminder:</em> You cannot unlock a Legendary troop skin with the universal Legendary troop skin.</p>
+  </section>
+
+  <section id="trade-store">
+    <h3>Trade Store</h3>
+    <h4 id="hero">Hero</h4>
+    <p><em>Refreshed weekly.</em> Once a hero reaches max stars you can trade them. Do this with all blue heroes; Statue use is low value until you’ve maxed the purple heroes as well. For purple heroes you can trade if needed, or keep for Traits/Statue.</p>
+
+    <h4 id="relics">Relics</h4>
+    <p><em>Refreshed weekly.</em> Once a relic reaches max stars you can trade it safely. Spend shards as needed—follow the Relics tips to decide where to invest.</p>
+
+    <h4 id="resources">Resources</h4>
+    <p><em>Daily (first part) + Weekly (second part).</em></p>
+    <ul class="keylist">
+      <li>You’ll lack <strong>Meat</strong> all game—trade <strong>Wood</strong> and <strong>Stone</strong> into Meat.</li>
+      <li>Weekly trades depend on guild traits.</li>
+      <li>Check the deal value—last row items are often overpriced.</li>
+    </ul>
+    <p class="note">This store counts as resources spent—very handy during <em>Guild Race</em> and similar events. Time your trades accordingly.</p>
+  </section>
+
+  <section id="season-store">
+    <h3>Season Store</h3>
+    <p>For now, the best choice is to <strong>save all points</strong>. We’ll update once optimal paths are confirmed.</p>
+  </section>
+
+  <div id="footer"></div>
+<script>
+  fetch("/zh/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

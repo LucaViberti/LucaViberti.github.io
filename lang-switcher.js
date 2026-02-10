@@ -2,7 +2,7 @@
 const LangSwitcher = {
   STORAGE_KEY: 'topheroes-lang',
   DEFAULT_LANG: 'en',
-  LANGS: ['en', 'de', 'ko', 'vi'],
+  LANGS: ['en', 'de', 'ko', 'vi', 'zh'],
   
   // Rileva la lingua corrente dal path
   getCurrentLang: function() {
@@ -10,6 +10,7 @@ const LangSwitcher = {
     if (path.startsWith('/de/')) return 'de';
     if (path.startsWith('/ko/')) return 'ko';
     if (path.startsWith('/vi/')) return 'vi';
+    if (path.startsWith('/zh/')) return 'zh';
     return 'en';
   },
   
@@ -40,6 +41,8 @@ const LangSwitcher = {
       basePath = basePath.slice(3);
     } else if (basePath.startsWith('/vi/')) {
       basePath = basePath.slice(3);
+    } else if (basePath.startsWith('/zh/')) {
+      basePath = basePath.slice(3);
     }
     
     // Aggiungi il prefisso della lingua target
@@ -58,6 +61,11 @@ const LangSwitcher = {
         return '/vi/index.html';
       }
       return '/vi' + (basePath.startsWith('/') ? basePath : '/' + basePath);
+    } else if (targetLang === 'zh') {
+      if (basePath === '' || basePath === '/index.html' || basePath === '/') {
+        return '/zh/index.html';
+      }
+      return '/zh' + (basePath.startsWith('/') ? basePath : '/' + basePath);
     } else {
       // en - ritorna il basePath senza prefisso
       if (basePath === '' || basePath === '/') return '/index.html';
@@ -79,6 +87,7 @@ const LangSwitcher = {
     const isDE = currentLang === 'de';
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
+    const isZH = currentLang === 'zh';
     
     return `
       <a href="#" onclick="LangSwitcher.switchLanguage('en'); return false;" class="lang-btn ${isEN ? 'active' : ''}">
@@ -96,6 +105,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('vi'); return false;" class="lang-btn ${isVI ? 'active' : ''}">
         <span class="lang-flag">🇻🇳</span>
         <span>Tiếng Việt</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn ${isZH ? 'active' : ''}">
+        <span class="lang-flag">🇨🇳</span>
+        <span>中文</span>
       </a>
     `;
   },
@@ -119,6 +132,7 @@ const LangSwitcher = {
     const isDE = currentLang === 'de';
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
+    const isZH = currentLang === 'zh';
     
     const container = document.createElement('div');
     container.id = 'lang-switcher-fixed';
@@ -206,6 +220,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('vi'); return false;" class="lang-btn-fixed ${isVI ? 'active' : ''}">
         <span class="lang-flag">🇻🇳</span>
         <span>VI</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn-fixed ${isZH ? 'active' : ''}">
+        <span class="lang-flag">🇨🇳</span>
+        <span>ZH</span>
       </a>
     `;
     

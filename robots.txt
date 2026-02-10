@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap locations
+Sitemap: https://lucaviberti.github.io/sitemap-index.xml
+
+# Block unnecessary admin paths if any
+Disallow: /.git/
+Disallow: /.vscode/

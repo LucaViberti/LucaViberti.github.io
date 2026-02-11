@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes - Spring of the Steed</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #f5f6fb;
+      --card: #ffffff;
+      --text: #232a3a;
+      --muted: #5f6a84;
+      --primary: #29abe0;
+      --primary-dark: #1f84ad;
+      --line: #dbe3f1;
+      --shadow: 0 10px 30px rgba(26, 38, 66, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f6f8ff 0%, #f4f6fb 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header/Nav */
+    header{
+      background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,.4);
+      border-bottom: 1px solid #2b2f3a;
+      padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+    }
+    header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+    header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+    header .site-info{display:flex; flex-direction:column; align-items:center;}
+    nav{width:100%; margin-top:10px;}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+    nav ul li{position:relative;}
+    nav ul li a{
+      color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+      padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+      font-size:.85rem;
+    }
+    nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+    nav ul li ul{
+      display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+    }
+    nav ul li:hover ul{display:block;}
+    nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+    nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 18px 64px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top right, rgba(41, 171, 224, 0.16), transparent 56%), var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      color: #1a243f;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      color: #1e2f57;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(41, 171, 224, 0.4);
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #24365f;
+      font-size: 1.08rem;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .image-wrap {
+      margin: 16px 0 8px;
+      text-align: center;
+    }
+
+    .image-wrap img {
+      width: min(100%, 420px);
+      border-radius: 14px;
+      border: 1px solid #cfdaee;
+      box-shadow: 0 8px 18px rgba(24, 42, 83, 0.12);
+      display: inline-block;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1b4761;
+      background: rgba(41, 171, 224, 0.15);
+      border: 1px solid rgba(41, 171, 224, 0.35);
+      padding: 5px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .section { padding: 20px; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <main>
+    <section class="hero">
+      <span class="pill">이벤트 가이드</span>
+      <h1>Spring of the Steed – 이벤트 가이드</h1>
+      <p class="subtitle">이벤트 구조, 핀볼 전략, 지출 우선순위 및 구매 계획에 대한 완전한 영어 기준 가이드입니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>이벤트 개요</h2>
+      <p>Spring of the Steed는 7일간 진행되는 한정 기간 이벤트입니다. 현재 게임에서 구매 가능한 보상 중 일부 최고 수준의 보상을 제공합니다. 이 이벤트는 Spring-time 코인과 Spring-time 바우처라는 두 가지 주요 재화를 중심으로 구성되어 있으며, 각각 전용 상점을 보유하고 있습니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>이벤트 구조</h2>
+      <p>이 이벤트는 여러 상호 연결된 활동으로 구성되어 있습니다. 핵심 게임플레이는 신년 핀볼, 꽃 선물, 그리고 두 이벤트 상점에서의 효율적인 재화 사용을 중심으로 진행됩니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>신년 핀볼 메커니즘</h2>
+      <p>신년 핀볼은 황금 사자 구슬을 사용합니다. 플레이어는 1회 발사 또는 10회 발사 중 선택할 수 있습니다. 1회 발사는 즉시 보상 새로고침이 이루어지며, 10회 발사는 새로고침 전에 10개의 구슬이 모두 현재 보상 배치에 고정됩니다. 최적의 전략은 보상이 좋지 않을 때는 단일 발사를 사용하고, Spring-time 코인이 풍부한 배치에서는 10회 발사를 사용하는 것입니다.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent.jpeg" alt="Spring event pinball rewards" loading="lazy" />
+      </div>
+
+      <h3>크림슨 드래곤 구슬</h3>
+      <p>크림슨 드래곤 구슬은 보상을 통해 획득할 수 있는 프리미엄 핀볼 구슬입니다. 황금 사자 구슬과 동일한 메커니즘을 따르지만, 더 우수한 보상에 접근할 수 있습니다. 동일한 발사 전략이 적용됩니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>꽃 선물 및 매력 포인트</h2>
+      <p>플레이어는 다른 플레이어에게 꽃을 수집하고 선물하여 매력 포인트를 획득할 수 있습니다. 이를 통해 Spring-time 럭키 백, 황금 사자 구슬, 랭킹 보상 등의 보상을 해금할 수 있습니다. 쌍으로 꽃 교환을 조율하면 쉽게 300개의 꽃을 달성하여 모든 매력 포인트 보상을 획득할 수 있습니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>플레이어 유형별 지출 전략</h2>
+      <p>플레이어는 초기에 자신의 지출 유형을 정의해야 합니다: 무과금, 소과금, 중과금, 고과금. 각 유형마다 최적의 구매 우선순위가 다릅니다.</p>
+
+      <h3>소과금 / 무과금 우선순위</h3>
+      <p>Springtime 코인 상점에서는 소과금 플레이어가 메가 딜 아이템, 특히 전설 승급석에 집중해야 합니다. Springtime 바우처 상점에서는 장식 획득이 주요 목표이며, 1200 바우처를 모아 완전한 장식 세트를 제공하는 사랑의 날 상자를 구매하는 것을 목표로 해야 합니다.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent5.png" alt="Low spender priorities" loading="lazy" />
+      </div>
+
+      <h3>중과금 우선순위</h3>
+      <p>클라우드 성은 영웅 레벨 상한 +10 보너스 덕분에 최우선 순위입니다.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent3.png" alt="Cloud Castle priority" loading="lazy" />
+      </div>
+      <p>리그 플레이어는 디바인 스티드 성도 고려할 수 있습니다.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent2.png" alt="Divine Steed Castle" loading="lazy" />
+      </div>
+      <p>판타지 성은 안정적인 차선 선택지입니다.</p>
+      <p>추가 우선순위로는 10개의 신화 승급석 또는 충분한 포인트가 남아 있다면 장식이 포함됩니다. 바우처 우선순위에는 모든 장식과 사랑의 날 상자 획득이 포함됩니다.</p>
+
+      <h3>고과금 우선순위</h3>
+      <p>고과금 플레이어는 먼저 중과금 우선순위를 따릅니다. 추가 필수 구매 항목으로는 성 이전 효과, 스킬 효과로 인해 중요한 대지의 비상 성 효과, 범용 신화 장식, 그리고 추가 신화 승급석이 포함됩니다.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent4.png" alt="High spender must-buy items" loading="lazy" />
+      </div>
+      <p>바우처 상점에서는 판타지 코티지, 황금 사자 구슬, 모든 장식, 범용 에픽 장식이 우선순위입니다.</p>
+    </section>
+
+    <section class="section">
+      <h2>현금 결제 구매</h2>
+      <p>중과금 및 고과금 플레이어는 Spring of the Steed 패스와 Spring-time 리워드 일일 팩을 모두 구매해야 합니다. 소과금 플레이어는 구슬 팩보다 패스를 우선시해야 합니다. 일일 $0.99 구슬 팩은 중과금 플레이어에게 최고의 가성비를 제공하며, 고과금 플레이어는 추가 확장이 가능합니다.</p>
+      <div class="split">
+        <div class="image-wrap">
+          <img src="/images/springevent6.jpeg" alt="Spring pass options" loading="lazy" />
+        </div>
+        <div class="image-wrap">
+          <img src="/images/springevent7.jpeg" alt="Daily spring-time rewards pack" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Spring-time 선물 마일스톤</h2>
+      <p>고과금 플레이어는 Springtime 선물 포인트 10,000점을 목표로 하여 성 방패 스킨 선택 상자를 해금해야 하며, 이는 유용한 성 설계도도 제공합니다.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch('/html/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+  </script>
+</body>
+</html>

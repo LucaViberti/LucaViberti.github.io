@@ -28,6 +28,162 @@
     return 'en';
   }
 
+  function stripLangPrefix(pathname) {
+    let p = pathname || '';
+    if (p.startsWith('/de/')) return p.slice(3);
+    if (p.startsWith('/ko/')) return p.slice(3);
+    if (p.startsWith('/vi/')) return p.slice(3);
+    if (p.startsWith('/zh/')) return p.slice(3);
+    return p;
+  }
+
+  function normalizeBasePath(pathname) {
+    let p = pathname || '';
+    if (!p.startsWith('/')) p = '/' + p;
+    if (p === '/' || p === '') return '/index.html';
+    if (p.endsWith('/')) return p + 'index.html';
+    return p;
+  }
+
+  function buildLangPath(lang, basePath) {
+    const normalized = normalizeBasePath(basePath);
+    if (lang === 'en') return normalized;
+    return '/' + lang + normalized;
+  }
+
+  function ensureMetaTag(selector, attrs) {
+    let tag = document.head.querySelector(selector);
+    if (!tag) {
+      tag = document.createElement('meta');
+      Object.keys(attrs).forEach((key) => tag.setAttribute(key, attrs[key]));
+      document.head.appendChild(tag);
+      return tag;
+    }
+    Object.keys(attrs).forEach((key) => tag.setAttribute(key, attrs[key]));
+    return tag;
+  }
+
+  function ensureLinkTag(selector, attrs) {
+    let tag = document.head.querySelector(selector);
+    if (!tag) {
+      tag = document.createElement('link');
+      Object.keys(attrs).forEach((key) => tag.setAttribute(key, attrs[key]));
+      document.head.appendChild(tag);
+      return tag;
+    }
+    Object.keys(attrs).forEach((key) => tag.setAttribute(key, attrs[key]));
+    return tag;
+  }
+
+  function ensureJsonLd(id, payload) {
+    const existing = document.getElementById(id);
+    if (existing) {
+      existing.textContent = JSON.stringify(payload);
+      return;
+    }
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = id;
+    script.textContent = JSON.stringify(payload);
+    document.head.appendChild(script);
+  }
+
+  function ensureSeoTags() {
+    const siteUrl = 'https://www.guidetopheroes.com';
+    const siteName = 'TopHeroes Guide';
+    const ogImagePath = '/images/og-image.svg';
+    const currentLang = getLangFromPath();
+    let currentPath = normalizeBasePath(stripLangPrefix(window.location.pathname || '/'));
+    if (currentPath === '/html/index.html') currentPath = '/index.html';
+    const canonicalPath = buildLangPath(currentLang, currentPath);
+    const canonicalUrl = siteUrl + canonicalPath;
+    const ogImageUrl = siteUrl + ogImagePath;
+
+    const descriptionTag = document.head.querySelector('meta[name="description"]');
+    const description = descriptionTag?.getAttribute('content') || (document.title + ' - ' + siteName + '.');
+    if (!descriptionTag) {
+      ensureMetaTag('meta[name="description"]', { name: 'description', content: description });
+    }
+
+    if (!document.head.querySelector('meta[name="robots"]')) {
+      ensureMetaTag('meta[name="robots"]', {
+        name: 'robots',
+        content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+      });
+    }
+
+    ensureLinkTag('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
+
+    const hreflangList = {
+      en: 'en',
+      de: 'de',
+      ko: 'ko',
+      vi: 'vi',
+      zh: 'zh'
+    };
+
+    Object.keys(hreflangList).forEach((lang) => {
+      const href = siteUrl + buildLangPath(lang, currentPath);
+      ensureLinkTag(`link[rel="alternate"][hreflang="${hreflangList[lang]}"]`, {
+        rel: 'alternate',
+        hreflang: hreflangList[lang],
+        href
+      });
+    });
+
+    ensureLinkTag('link[rel="alternate"][hreflang="x-default"]', {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: siteUrl + buildLangPath('en', currentPath)
+    });
+
+    ensureMetaTag('meta[property="og:title"]', { property: 'og:title', content: document.title });
+    ensureMetaTag('meta[property="og:description"]', { property: 'og:description', content: description });
+    ensureMetaTag('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+    ensureMetaTag('meta[property="og:type"]', { property: 'og:type', content: 'website' });
+    ensureMetaTag('meta[property="og:site_name"]', { property: 'og:site_name', content: siteName });
+    ensureMetaTag('meta[property="og:image"]', { property: 'og:image', content: ogImageUrl });
+    ensureMetaTag('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'TopHeroes Guide cover image' });
+
+    const localeMap = {
+      en: 'en_US',
+      de: 'de_DE',
+      ko: 'ko_KR',
+      vi: 'vi_VN',
+      zh: 'zh_CN'
+    };
+
+    ensureMetaTag('meta[property="og:locale"]', { property: 'og:locale', content: localeMap[currentLang] || 'en_US' });
+    Object.keys(localeMap).forEach((lang) => {
+      if (lang === currentLang) return;
+      ensureMetaTag(`meta[property="og:locale:alternate"][content="${localeMap[lang]}"]`, {
+        property: 'og:locale:alternate',
+        content: localeMap[lang]
+      });
+    });
+
+    ensureMetaTag('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
+    ensureMetaTag('meta[name="twitter:title"]', { name: 'twitter:title', content: document.title });
+    ensureMetaTag('meta[name="twitter:description"]', { name: 'twitter:description', content: description });
+    ensureMetaTag('meta[name="twitter:image"]', { name: 'twitter:image', content: ogImageUrl });
+
+    ensureJsonLd('seo-jsonld', {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': canonicalUrl + '#webpage',
+      name: document.title,
+      url: canonicalUrl,
+      inLanguage: currentLang,
+      description: description,
+      image: ogImageUrl,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl
+      }
+    });
+  }
+
   function getNavPath(lang) {
     if (lang === 'ko') return '/ko/html/nav.html';
     if (lang === 'de') return '/de/html/nav.html';
@@ -117,6 +273,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
+    ensureSeoTags();
+
     const navContainer = document.getElementById('navbar');
     if (!navContainer) return;
 

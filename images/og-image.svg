@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="TopHeroes Guide cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141720" />
+      <stop offset="100%" stop-color="#1e2541" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#29abe0" />
+      <stop offset="100%" stop-color="#7dd3fc" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="950" cy="-40" r="220" fill="#29abe0" opacity="0.18" />
+  <circle cx="1100" cy="260" r="180" fill="#7dd3fc" opacity="0.2" />
+  <circle cx="140" cy="560" r="220" fill="#29abe0" opacity="0.12" />
+
+  <rect x="90" y="120" width="1020" height="390" rx="36" fill="#0f1220" opacity="0.55" />
+
+  <text x="140" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="56" fill="#ffffff" font-weight="700">
+    TopHeroes Guide
+  </text>
+  <text x="140" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#cfd7f6">
+    Strategies, Heroes, Adventure, and Events
+  </text>
+  <rect x="140" y="360" width="360" height="6" rx="3" fill="url(#accent)" />
+
+  <text x="140" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#b7c3e0">
+    Clear guides. Faster progress.
+  </text>
+</svg>

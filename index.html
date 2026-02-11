@@ -65,6 +65,28 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .hero p{margin:0; color:#444;}
 .hero p + p{margin-top:8px}
 
+/* Event Banner */
+.event-banner{
+  background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
+  border:2px solid #e94560; border-radius:16px; padding:20px 24px; margin-bottom:24px;
+  box-shadow:0 8px 24px rgba(233,69,96,0.3);
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.event-banner h2{
+  margin:0 0 8px; font-size:1.5rem; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.event-banner p{
+  margin:0 0 14px; color:#fff; font-size:1rem;
+}
+.event-banner a{
+  background:#fff; color:#e94560; padding:10px 24px; border-radius:30px;
+  text-decoration:none; font-weight:700; transition:transform .2s, box-shadow .2s;
+  display:inline-block;
+}
+.event-banner a:hover{
+  transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.2);
+}
+
 /* Quick sections (mini-cards) */
 .section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
 .quick-sections{
@@ -167,6 +189,13 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       <p>Short, practical guides to progress faster in <strong>TopHeroes</strong>: faction Heroes, Adventure modes, Events, and beginner tips.</p>
       <p>Everything is organized in quick cards and checklists to help you decide who to build, what to upgrade, and how to plan resources.</p>
     </section>
+
+    <!-- EVENT BANNER -->
+    <div class="event-banner" aria-label="Limited Event">
+      <h2>🌸 Spring of the Steed – Limited Event!</h2>
+      <p>Complete guide for the Spring event: pinball strategy, spending priorities, and purchase planning.</p>
+      <a href="/html/spring.html">View Spring Event Guide →</a>
+    </div>
 
     <!-- QUICK SECTIONS -->
     <h2 class="section-head">Explore the guides</h2>

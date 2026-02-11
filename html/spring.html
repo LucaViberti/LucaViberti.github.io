@@ -34,6 +34,33 @@
       line-height: 1.7;
     }
 
+    /* Header/Nav */
+    header{
+      background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,.4);
+      border-bottom: 1px solid #2b2f3a;
+      padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+    }
+    header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+    header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+    header .site-info{display:flex; flex-direction:column; align-items:center;}
+    nav{width:100%; margin-top:10px;}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+    nav ul li{position:relative;}
+    nav ul li a{
+      color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+      padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+      font-size:.85rem;
+    }
+    nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+    nav ul li ul{
+      display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+    }
+    nav ul li:hover ul{display:block;}
+    nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+    nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
     main {
       max-width: 980px;
       margin: 0 auto;
@@ -93,7 +120,7 @@
     }
 
     .image-wrap img {
-      width: min(100%, 540px);
+      width: min(100%, 420px);
       border-radius: 14px;
       border: 1px solid #cfdaee;
       box-shadow: 0 8px 18px rgba(24, 42, 83, 0.12);

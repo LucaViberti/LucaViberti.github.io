@@ -98,6 +98,7 @@
     const canonicalPath = buildLangPath(currentLang, currentPath);
     const canonicalUrl = siteUrl + canonicalPath;
     const ogImageUrl = siteUrl + ogImagePath;
+    const homeUrl = siteUrl + buildLangPath(currentLang, '/index.html');
 
     const descriptionTag = document.head.querySelector('meta[name="description"]');
     const description = descriptionTag?.getAttribute('content') || (document.title + ' - ' + siteName + '.');
@@ -111,6 +112,61 @@
         content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
       });
     }
+    if (!document.head.querySelector('meta[name="googlebot"]')) {
+      ensureMetaTag('meta[name="googlebot"]', {
+        name: 'googlebot',
+        content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+      });
+    }
+
+    ensureMetaTag('meta[name="referrer"]', { name: 'referrer', content: 'strict-origin-when-cross-origin' });
+    ensureMetaTag('meta[name="theme-color"]', { name: 'theme-color', content: '#141720' });
+
+    ensureLinkTag('link[rel="preconnect"][href="https://pagead2.googlesyndication.com"]', {
+      rel: 'preconnect',
+      href: 'https://pagead2.googlesyndication.com'
+    });
+    ensureLinkTag('link[rel="preconnect"][href="https://www.googletagservices.com"]', {
+      rel: 'preconnect',
+      href: 'https://www.googletagservices.com'
+    });
+    ensureLinkTag('link[rel="preconnect"][href="https://googleads.g.doubleclick.net"]', {
+      rel: 'preconnect',
+      href: 'https://googleads.g.doubleclick.net'
+    });
+    ensureLinkTag('link[rel="preconnect"][href="https://tpc.googlesyndication.com"]', {
+      rel: 'preconnect',
+      href: 'https://tpc.googlesyndication.com'
+    });
+    ensureLinkTag('link[rel="preconnect"][href="https://js.stripe.com"]', {
+      rel: 'preconnect',
+      href: 'https://js.stripe.com'
+    });
+    ensureLinkTag('link[rel="dns-prefetch"][href="https://pagead2.googlesyndication.com"]', {
+      rel: 'dns-prefetch',
+      href: 'https://pagead2.googlesyndication.com'
+    });
+    ensureLinkTag('link[rel="dns-prefetch"][href="https://www.googletagservices.com"]', {
+      rel: 'dns-prefetch',
+      href: 'https://www.googletagservices.com'
+    });
+    ensureLinkTag('link[rel="dns-prefetch"][href="https://googleads.g.doubleclick.net"]', {
+      rel: 'dns-prefetch',
+      href: 'https://googleads.g.doubleclick.net'
+    });
+    ensureLinkTag('link[rel="dns-prefetch"][href="https://tpc.googlesyndication.com"]', {
+      rel: 'dns-prefetch',
+      href: 'https://tpc.googlesyndication.com'
+    });
+    ensureLinkTag('link[rel="dns-prefetch"][href="https://js.stripe.com"]', {
+      rel: 'dns-prefetch',
+      href: 'https://js.stripe.com'
+    });
+    ensureLinkTag('link[rel="preload"][as="image"][href="' + ogImageUrl + '"]', {
+      rel: 'preload',
+      as: 'image',
+      href: ogImageUrl
+    });
 
     ensureLinkTag('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
 
@@ -143,6 +199,7 @@
     ensureMetaTag('meta[property="og:type"]', { property: 'og:type', content: 'website' });
     ensureMetaTag('meta[property="og:site_name"]', { property: 'og:site_name', content: siteName });
     ensureMetaTag('meta[property="og:image"]', { property: 'og:image', content: ogImageUrl });
+    ensureMetaTag('meta[property="og:image:type"]', { property: 'og:image:type', content: 'image/svg+xml' });
     ensureMetaTag('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'TopHeroes Guide cover image' });
 
     const localeMap = {
@@ -166,6 +223,7 @@
     ensureMetaTag('meta[name="twitter:title"]', { name: 'twitter:title', content: document.title });
     ensureMetaTag('meta[name="twitter:description"]', { name: 'twitter:description', content: description });
     ensureMetaTag('meta[name="twitter:image"]', { name: 'twitter:image', content: ogImageUrl });
+    ensureMetaTag('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: 'TopHeroes Guide cover image' });
 
     ensureJsonLd('seo-jsonld', {
       '@context': 'https://schema.org',
@@ -181,6 +239,25 @@
         name: siteName,
         url: siteUrl
       }
+    });
+
+    ensureJsonLd('seo-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: homeUrl
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: document.title,
+          item: canonicalUrl
+        }
+      ]
     });
   }
 

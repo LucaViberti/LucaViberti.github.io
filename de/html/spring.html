@@ -1,1 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes - Frühling des Rosses</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #f5f6fb;
+      --card: #ffffff;
+      --text: #232a3a;
+      --muted: #5f6a84;
+      --primary: #29abe0;
+      --primary-dark: #1f84ad;
+      --line: #dbe3f1;
+      --shadow: 0 10px 30px rgba(26, 38, 66, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f6f8ff 0%, #f4f6fb 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header/Nav */
+    header{
+      background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,.4);
+      border-bottom: 1px solid #2b2f3a;
+      padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+    }
+    header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+    header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+    header .site-info{display:flex; flex-direction:column; align-items:center;}
+    nav{width:100%; margin-top:10px;}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+    nav ul li{position:relative;}
+    nav ul li a{
+      color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+      padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+      font-size:.85rem;
+    }
+    nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+    nav ul li ul{
+      display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+    }
+    nav ul li:hover ul{display:block;}
+    nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+    nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 18px 64px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top right, rgba(41, 171, 224, 0.16), transparent 56%), var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      color: #1a243f;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      color: #1e2f57;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(41, 171, 224, 0.4);
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #24365f;
+      font-size: 1.08rem;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .image-wrap {
+      margin: 16px 0 8px;
+      text-align: center;
+    }
+
+    .image-wrap img {
+      width: min(100%, 420px);
+      border-radius: 14px;
+      border: 1px solid #cfdaee;
+      box-shadow: 0 8px 18px rgba(24, 42, 83, 0.12);
+      display: inline-block;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1b4761;
+      background: rgba(41, 171, 224, 0.15);
+      border: 1px solid rgba(41, 171, 224, 0.35);
+      padding: 5px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .section { padding: 20px; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <main>
+    <section class="hero">
+      <span class="pill">Event-Leitfaden</span>
+      <h1>Frühling des Rosses – Event-Leitfaden</h1>
+      <p class="subtitle">Vollständige englische Referenz zur Event-Struktur, Pinball-Strategie, Ausgabenprioritäten und Kaufplanung.</p>
+    </section>
+
+    <section class="section">
+      <h2>Event-Übersicht</h2>
+      <p>Frühling des Rosses ist ein zeitlich begrenztes Event mit einer Dauer von 7 Tagen. Es bietet einige der derzeit besten kaufbaren Belohnungen im Spiel. Das Event dreht sich um zwei Hauptwährungen: Springtime-Münzen und Springtime-Gutscheine, jeweils mit einem eigenen Shop.</p>
+    </section>
+
+    <section class="section">
+      <h2>Event-Struktur</h2>
+      <p>Das Event besteht aus mehreren miteinander verbundenen Aktivitäten. Das Kern-Gameplay konzentriert sich auf das Neujahrs-Pinball, das Verschenken von Blumen und den effizienten Einsatz der Währungen in den beiden Event-Shops.</p>
+    </section>
+
+    <section class="section">
+      <h2>Neujahrs-Pinball-Mechaniken</h2>
+      <p>Das Neujahrs-Pinball verwendet Goldene-Löwen-Murmeln. Spieler können zwischen Einmal starten und Zehnmal starten wählen. Ein einzelner Start löst sofort eine Belohnungsaktualisierung aus, während zehn Starts alle zehn Murmeln auf dem aktuellen Belohnungslayout fixieren, bevor aktualisiert wird. Die optimale Strategie besteht darin, Einzelstarts bei schlechten Belohnungen zu nutzen und Zehnerstarts für Layouts mit vielen Springtime-Münzen aufzusparen.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent.jpeg" alt="Pinball-Belohnungen des Frühling-Events" loading="lazy" />
+      </div>
+
+      <h3>Karmesinrote Drachenmurmel</h3>
+      <p>Karmesinrote Drachenmurmeln sind Premium-Pinballmurmeln, die über Belohnungen erhältlich sind. Sie folgen denselben Mechaniken wie Goldene-Löwen-Murmeln, bieten jedoch Zugang zu besseren Belohnungen. Die gleiche Startstrategie gilt.</p>
+    </section>
+
+    <section class="section">
+      <h2>Blumenverschenken und Charme-Punkte</h2>
+      <p>Spieler können Blumen sammeln und an andere Spieler verschenken, um Charme-Punkte zu verdienen. Diese schalten Belohnungen wie Springtime-Glückssäcke, Goldene-Löwen-Murmeln und Ranglistenbelohnungen frei. Durch das koordinierte Tauschen von Blumen in Paaren können Spieler problemlos 300 Blumen erreichen und alle Charme-Punkte-Belohnungen abholen.</p>
+    </section>
+
+    <section class="section">
+      <h2>Ausgabenstrategie nach Spielertyp</h2>
+      <p>Spieler sollten ihre Ausgabenkategorie früh festlegen: Free-to-Play, Wenigzahler, Mittelzahler oder Vielzahler. Jede Kategorie hat unterschiedliche optimale Kaufprioritäten.</p>
+
+      <h3>Prioritäten für Wenigzahler / Free-to-Play</h3>
+      <p>Im Springtime-Münz-Shop sollten Wenigzahler sich auf Mega-Deal-Artikel konzentrieren, insbesondere auf Legendäre Beförderungssteine. Im Springtime-Gutschein-Shop ist das Hauptziel der Erwerb von Dekorationen, mit dem Ziel, 1200 Gutscheine zu sammeln, um die „Tag der Liebe“-Truhe für ein vollständiges Dekorationsset zu kaufen.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent5.png" alt="Prioritäten für Wenigzahler" loading="lazy" />
+      </div>
+
+      <h3>Prioritäten für Mittelzahler</h3>
+      <p>Die Wolkenburg hat höchste Priorität aufgrund ihres Helden-Level-Cap-+10-Bonus.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent3.png" alt="Priorität Wolkenburg" loading="lazy" />
+      </div>
+      <p>Ligaspieler können auch die Göttliches-Ross-Burg in Betracht ziehen.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent2.png" alt="Göttliches-Ross-Burg" loading="lazy" />
+      </div>
+      <p>Die Fantasieburg ist eine solide sekundäre Option.</p>
+      <p>Weitere Prioritäten sind 10 Mythische Beförderungssteine oder Dekorationen, falls genügend Punkte verbleiben. Zu den Gutschein-Prioritäten gehören alle Dekorationen und die „Tag der Liebe“-Truhe.</p>
+
+      <h3>Prioritäten für Vielzahler</h3>
+      <p>Vielzahler folgen zunächst den Prioritäten der Mittelzahler. Zusätzliche Pflichtkäufe sind der Burg-Verlagerungseffekt, der Erdflattern-Burg-Effekt aufgrund seines Fertigkeitseffekts, universelle mythische Dekorationen sowie zusätzliche mythische Beförderungssteine.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent4.png" alt="Pflichtkäufe für Vielzahler" loading="lazy" />
+      </div>
+      <p>Im Gutschein-Shop haben Fantasiehütte, Goldene-Löwen-Murmeln, alle Dekorationen und universelle epische Dekorationen Priorität.</p>
+    </section>
+
+    <section class="section">
+      <h2>Echte Geldkäufe</h2>
+      <p>Mittel- und Vielzahler sollten beide Frühling-des-Rosses-Pässe sowie das tägliche Springtime-Belohnungspaket kaufen. Wenigzahler sollten den Pass gegenüber Murmelpaketen priorisieren. Tägliche 0,99-$-Murmelpakete bieten das beste Preis-Leistungs-Verhältnis für Mittelzahler, während Vielzahler weiter skalieren können.</p>
+      <div class="split">
+        <div class="image-wrap">
+          <img src="/images/springevent6.jpeg" alt="Optionen für den Frühling-Pass" loading="lazy" />
+        </div>
+        <div class="image-wrap">
+          <img src="/images/springevent7.jpeg" alt="Tägliches Springtime-Belohnungspaket" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Springtime-Geschenk-Meilenstein</h2>
+      <p>Vielzahler sollten 10.000 Springtime-Geschenk-Punkte anstreben, um die Burgschild-Skin-Auswahltruhe freizuschalten, die zusätzlich wertvolle Burgbaupläne liefert.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch('/html/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+  </script>
+</body>
+</html>

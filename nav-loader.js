@@ -25,6 +25,7 @@
     if (p.startsWith('/de/')) return 'de';
     if (p.startsWith('/vi/')) return 'vi';
     if (p.startsWith('/zh/')) return 'zh';
+    if (p.startsWith('/ja/')) return 'ja';
     return 'en';
   }
 
@@ -34,6 +35,7 @@
     if (p.startsWith('/ko/')) return p.slice(3);
     if (p.startsWith('/vi/')) return p.slice(3);
     if (p.startsWith('/zh/')) return p.slice(3);
+    if (p.startsWith('/ja/')) return p.slice(3);
     return p;
   }
 
@@ -175,7 +177,8 @@
       de: 'de',
       ko: 'ko',
       vi: 'vi',
-      zh: 'zh'
+      zh: 'zh',
+      ja: 'ja'
     };
 
     Object.keys(hreflangList).forEach((lang) => {
@@ -207,7 +210,8 @@
       de: 'de_DE',
       ko: 'ko_KR',
       vi: 'vi_VN',
-      zh: 'zh_CN'
+      zh: 'zh_CN',
+      ja: 'ja_JP'
     };
 
     ensureMetaTag('meta[property="og:locale"]', { property: 'og:locale', content: localeMap[currentLang] || 'en_US' });
@@ -266,6 +270,7 @@
     if (lang === 'de') return '/de/html/nav.html';
     if (lang === 'vi') return '/vi/html/nav.html';
     if (lang === 'zh') return '/zh/html/nav.html';
+    if (lang === 'ja') return '/ja/html/nav.html';
     return '/html/nav.html';
   }
 

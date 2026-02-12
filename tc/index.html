@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
+  <!-- SEO -->
+  <title>TopHeroes 指南 – 策略、英雄、冒险和活动</title>
+  <meta name="description" content="TopHeroes 指南：关于英雄（联盟、自然、部落）、冒险模式（经典、第一季）、活动和新手提示的简洁指南。简短实用的策略，让你进步更快。" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <style>
+/* Base */
+body{
+  margin:0; padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:#f5f5f7; line-height:1.6; color:#111;
+}
+
+/* Header/Nav */
+header{
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+  border-bottom: 1px solid #2b2f3a;
+  padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+}
+header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+header .site-info{display:flex; flex-direction:column; align-items:center;}
+nav{width:100%; margin-top:10px;}
+nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+nav ul li{position:relative;}
+nav ul li a{
+  color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+  padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+  font-size:.85rem;
+}
+nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+nav ul li ul{
+  display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
+main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
+
+/* Hero intro */
+.hero{
+  background: linear-gradient(180deg,#ffffff 0%,#f7f8fb 100%);
+  border:1px solid #ececf0; border-radius:16px; padding:28px 22px; margin-bottom:20px;
+}
+.hero h1{
+  margin:0 0 10px; font-size:clamp(1.5rem,3.2vw,2.1rem); letter-spacing:-0.015em;
+}
+.hero p{margin:0; color:#444;}
+.hero p + p{margin-top:8px}
+
+/* Event Banner */
+.event-banner{
+  background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
+  border:2px solid #e94560; border-radius:16px; padding:20px 24px; margin-bottom:24px;
+  box-shadow:0 8px 24px rgba(233,69,96,0.3);
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.event-banner h2{
+  margin:0 0 8px; font-size:1.5rem; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.event-banner p{
+  margin:0 0 14px; color:#fff; font-size:1rem;
+}
+.event-banner a{
+  background:#fff; color:#e94560; padding:10px 24px; border-radius:30px;
+  text-decoration:none; font-weight:700; transition:transform .2s, box-shadow .2s;
+  display:inline-block;
+}
+.event-banner a:hover{
+  transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Quick sections (mini-cards) */
+.section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
+.quick-sections{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;
+}
+.mini-card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
+  transition: box-shadow .15s ease, transform .15s ease;
+  display:flex; flex-direction:column;
+}
+.mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
+.mini-card h3{margin:0 0 6px; font-size:1.05rem;}
+.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;}
+.mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
+
+/* Pulsanti */
+.mini-card a{
+  margin-top:12px;
+  align-self:flex-start;
+  background:#29abe0;
+  color:#fff !important;
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:.85rem;
+  font-weight:500;
+  text-decoration:none;
+  transition:background .2s;
+}
+.mini-card a:hover{background:#2389b5;}
+
+/* Contact card */
+.contact-card{
+  background:#fff; border:1px solid #e8eef5; border-radius:12px; padding:22px; margin-top:26px;
+}
+.contact-card h2{margin:0 0 6px; font-size:1.25rem; color:#1e2541;}
+.contact-card p{margin:0 0 12px; color:#4b5563;}
+.th-contact label{display:block; margin:0 0 12px;}
+.th-contact input,.th-contact textarea{
+  width:100%; padding:.9rem; border:1px solid #dfe3ea; border-radius:10px; font:inherit; background:#fff;
+}
+.th-contact textarea{resize:vertical; min-height:120px}
+
+/* FIX privacy layout */
+.th-contact input[type="checkbox"]{ width:auto; }
+.th-privacy label{ flex:1; display:block; }
+.th-privacy{ display:flex; gap:.6rem; align-items:flex-start; font-size:.9rem; color:#4b5563; margin-top:6px; }
+
+.th-actions{margin-top:12px; display:flex; gap:10px; align-items:center;}
+.th-btn{
+  display:inline-block; background:#29abe0; color:#fff; padding:10px 16px; border:0; border-radius:10px;
+  font-weight:600; cursor:pointer; transition:background .2s;
+}
+.th-btn:hover{background:#2389b5;}
+.th-hint{opacity:.75; font-size:.9rem; margin:0}
+.th-error{color:#b91c1c}
+.th-ok{color:#166534}
+
+/* Donation + footer */
+.donation-section{
+  text-align:center; margin-top:28px; padding:18px;
+  background:#f7fafc; border:1px solid #e8eef5; border-radius:12px;
+}
+.donation-button{
+  display:inline-block; background:#29abe0; color:#fff; padding:10px 18px;
+  border-radius:30px; text-decoration:none; font-weight:600; transition:background .2s;
+}
+.donation-button:hover{background:#2389b5;}
+
+footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
+
+/* Stripe block */
+.stripe-donation{
+  text-align:center;
+  padding:16px;
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+}
+  </style>
+  <link rel="canonical" href="https://www.guidetopheroes.com/zh/index.html" />
+  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/index.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/index.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/index.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/index.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/index.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/index.html" />
+  <meta property="og:title" content="TopHeroes 指南 – 策略、英雄、冒险和活动" />
+  <meta property="og:description" content="TopHeroes 指南：关于英雄（联盟、自然、部落）、冒险模式（经典、第一季）、活动和新手提示的简洁指南。简短实用的策略，让你进步更快。" />
+  <meta property="og:url" content="https://www.guidetopheroes.com/zh/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TopHeroes Guide" />
+  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes 指南 – 策略、英雄、冒险和活动" />
+  <meta name="twitter:description" content="TopHeroes 指南：关于英雄（联盟、自然、部落）、冒险模式（经典、第一季）、活动和新手提示的简洁指南。简短实用的策略，让你进步更快。" />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <script type="application/ld+json" id="seo-jsonld">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/index.html#webpage", "name": "TopHeroes 指南 – 策略、英雄、冒险和活动", "url": "https://www.guidetopheroes.com/zh/index.html", "inLanguage": "zh", "description": "TopHeroes 指南：关于英雄（联盟、自然、部落）、冒险模式（经典、第一季）、活动和新手提示的简洁指南。简短实用的策略，让你进步更快。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <!-- STRIPE DONATION BUTTON -->
+  <section class="stripe-donation" aria-label="Support the project">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+    </stripe-buy-button>
+  </section>
+
+
+  <main itemscope itemtype="https://schema.org/Article">
+    <!-- HERO INTRO -->
+    <section class="hero" aria-label="欢迎">
+      <h1 itemprop="headline">TopHeroes 指南</h1>
+      <p>在 <strong>TopHeroes</strong> 中快速进步的简短实用指南：阵营英雄、冒险模式、活动和新手提示。</p>
+      <p>一切都组织为快速卡片和清单，帮助你决定培养谁、升级什么以及如何规划资源。</p>
+    </section>
+
+    <!-- EVENT BANNER -->
+    <div class="event-banner" aria-label="限时活动">
+      <h2>🌸 駿馬之春 – 限時活動！</h2>
+      <p>春季活動完整指南：彈珠策略、消費優先級和購買規劃。</p>
+      <a href="/zh/html/spring.html">查看春季活動指南 →</a>
+    </div>
+
+    <!-- QUICK SECTIONS -->
+    <h2 class="section-head">探索指南</h2>
+    <div class="quick-sections" aria-label="主要部分">
+      <article class="mini-card">
+        <h3>英雄</h3>
+        <p>阵营概览和核心构建：联盟、自然、部落。</p>
+        <a href="/zh/html/heroes.html">查看英雄</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>冒险</h3>
+        <p>冒险如何运作、地图基础和奖励。</p>
+        <a href="/zh/html/generaladv.html">查看冒险</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>活动</h3>
+        <p>公会竞赛、军备竞赛、KvK 和公会 Boss 的快速策略。即将推出</p>
+        <!-- <a href="/zh/html/events.html">查看活动</a> -->
+      </article>
+
+      <article class="mini-card">
+        <h3>新手指南</h3>
+        <p>早期优先级、启动团队和资源管理。</p>
+         <a href="/zh/html/beginners.html">查看新手指南</a> 
+      </article>
+
+      <article class="mini-card">
+        <h3>成本表</h3>
+        <p>资源和升级成本表，帮助规划你的进度。</p>
+        <a href="/zh/html/tips.html">查看成本表</a>
+      </article>
+
+      <article class="mini-card">
+        <h3>快速提示</h3>
+        <p>快速实用的提示，改善你的日常例程和活动准备。</p>
+        <a href="/zh/html/quick-tips.html">查看快速提示</a>
+      </article>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <section class="contact-card" aria-label="联系我们">
+      <h2>联系我们</h2>
+      <p>有问题、建议或反馈？给我们留言，我们会通过电子邮件回复。</p>
+
+      <form class="th-contact"
+            action="https://formspree.io/f/mrbazyyz"
+            method="POST" autocomplete="on">
+        <label>
+          您的邮箱
+          <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
+        </label>
+
+        <label>
+          消息
+          <textarea name="message" required rows="6" placeholder="写下您的消息..."></textarea>
+        </label>
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-10000px;opacity:0">
+
+        <input type="hidden" name="_subject" value="TopHeroes 指南新消息">
+        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/zh/html/thanks.html">
+
+        <div class="th-privacy">
+          <input type="checkbox" id="consent" required>
+          <label for="consent">
+            我同意仅为接收回复的目的处理我的数据（电子邮件和消息）。
+            阅读我们的 <a href="/zh/html/privacy.html" target="_blank" rel="noopener">隐私政策</a>。
+          </label>
+        </div>
+
+        <div class="th-actions">
+          <button type="submit" class="th-btn">发送</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer import -->
+    <div id="footer"></div>
+  </main>
+
+  <script>
+    fetch("/zh/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Icon injection -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const icons = {'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+      function addIcon(el, word){
+        const img=document.createElement('img');
+        img.src=icons[word]; img.alt=word+' symbol'; img.loading='lazy';
+        img.style.height='1em'; img.style.marginLeft='0.3em';
+        el.appendChild(img);
+      }
+      document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
+        const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
+      });
+    });
+  </script>
+</body>
+</html>

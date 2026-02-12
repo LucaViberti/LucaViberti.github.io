@@ -1,0 +1,148 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes Guide</h1>
+    <div id="header-lang-selector" class="header-lang-selector"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/zh/index.html">主页</a></li>
+
+      <!-- HEROES -->
+      <li class="has-sub">
+        <a href="/zh/html/heroes.html">英雄</a>
+        <ul class="dropdown">
+          <li><a href="/zh/html/heroes.html">概览</a></li>
+          <li><a href="/zh/html/league.html">联盟</a></li>
+          <li><a href="/zh/html/nature.html">自然</a></li>
+          <li><a href="/zh/html/horde.html">部落</a></li>
+
+          <li class="has-flyout">
+            <a href="/zh/html/gear.html">装备</a>
+            <button class="flyout-toggle" aria-label="装备更多选项" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/zh/html/exclusive-gear.html">专属装备</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/zh/html/pets.html">宠物</a></li>
+        </ul>
+      </li>
+
+      <!-- BUILDING -->
+      <li class="has-sub">
+        <a href="/zh/html/building.html">建设</a>
+        <ul class="dropdown">
+          <li><a href="/zh/html/building.html">概览</a></li>
+          <li><a href="/zh/html/villagers.html">村民</a></li>
+          <li><a href="/zh/html/lord-gear.html">领主装备</a></li>
+          <li><a href="/zh/html/relic.html">圣物大厅</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/zh/html/research.html">研究</a></li>
+
+      <!-- ADVENTURE -->
+      <li class="has-sub">
+        <a href="/zh/html/generaladv.html">冒险</a>
+        <ul class="dropdown">
+          <li><a href="/zh/html/generaladv.html">概览</a></li>
+          <li><a href="/zh/html/classicadv.html">经典</a></li>
+          <li><a href="/zh/html/seasononeadv.html">第一季</a></li>
+        </ul>
+      </li>
+
+      <!-- EVENTS -->
+      <li class="has-sub">
+        <a href="/zh/html/events.html">活动</a>
+        <ul class="dropdown">
+          <li><a href="/zh/html/guild-race.html">公会竞赛</a></li>
+          <li><a href="/zh/html/arms-race.html">军备竞赛</a></li>
+          <li><a href="/zh/html/kingdom.html">王国对战</a></li>
+          <li><a href="/zh/html/guildboss.html">公会Boss</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/zh/html/beginners.html">新手指南</a></li>
+      <li><a href="/zh/html/shop.html">商店</a></li>
+      <li><a href="/zh/html/tips.html">成本表</a></li>
+      <li><a href="/zh/html/quick-tips.html">快速提示</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="#">支持我们</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">通过Stripe捐赠</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/zh/html/privacy.html">政策与隐私</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .header-lang-selector {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+    padding:8px 16px;
+    background: rgba(41, 171, 224, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+  .header-lang-selector .lang-btn {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 14px;
+    border-radius:8px;
+    background:transparent;
+    border:2px solid transparent;
+    color:#b0b6c7;
+    font-size:0.9rem;
+    font-weight:500;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    cursor:pointer;
+  }
+  .header-lang-selector .lang-btn:hover {
+    background: rgba(41, 171, 224, 0.15);
+    color:#fff;
+    transform: translateY(-2px);
+  }
+  .header-lang-selector .lang-btn.active {
+    background: linear-gradient(135deg, #29abe0, #7dd3fc);
+    border-color:#29abe0;
+    color:#fff;
+    font-weight:600;
+    box-shadow:0 4px 12px rgba(41, 171, 224, 0.3);
+  }
+  .header-lang-selector .lang-flag { font-size:1.2rem; line-height:1; }
+
+  @media (max-width: 640px) {
+    .header-lang-selector { padding:6px 12px; gap:6px; }
+    .header-lang-selector .lang-btn { padding:5px 10px; font-size:0.85rem; }
+  }
+
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+</style>

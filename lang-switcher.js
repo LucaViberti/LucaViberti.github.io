@@ -2,7 +2,7 @@
 const LangSwitcher = {
   STORAGE_KEY: 'topheroes-lang',
   DEFAULT_LANG: 'en',
-  LANGS: ['en', 'de', 'ko', 'vi', 'zh'],
+  LANGS: ['en', 'de', 'ko', 'vi', 'zh', 'ja'],
   
   // Rileva la lingua corrente dal path
   getCurrentLang: function() {
@@ -11,6 +11,7 @@ const LangSwitcher = {
     if (path.startsWith('/ko/')) return 'ko';
     if (path.startsWith('/vi/')) return 'vi';
     if (path.startsWith('/zh/')) return 'zh';
+    if (path.startsWith('/ja/')) return 'ja';
     return 'en';
   },
   
@@ -43,6 +44,8 @@ const LangSwitcher = {
       basePath = basePath.slice(3);
     } else if (basePath.startsWith('/zh/')) {
       basePath = basePath.slice(3);
+    } else if (basePath.startsWith('/ja/')) {
+      basePath = basePath.slice(3);
     }
     
     // Aggiungi il prefisso della lingua target
@@ -66,6 +69,11 @@ const LangSwitcher = {
         return '/zh/index.html';
       }
       return '/zh' + (basePath.startsWith('/') ? basePath : '/' + basePath);
+    } else if (targetLang === 'ja') {
+      if (basePath === '' || basePath === '/index.html' || basePath === '/') {
+        return '/ja/index.html';
+      }
+      return '/ja' + (basePath.startsWith('/') ? basePath : '/' + basePath);
     } else {
       // en - ritorna il basePath senza prefisso
       if (basePath === '' || basePath === '/') return '/index.html';
@@ -88,6 +96,7 @@ const LangSwitcher = {
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
     const isZH = currentLang === 'zh';
+    const isJA = currentLang === 'ja';
     
     return `
       <a href="#" onclick="LangSwitcher.switchLanguage('en'); return false;" class="lang-btn ${isEN ? 'active' : ''}">
@@ -109,6 +118,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn ${isZH ? 'active' : ''}">
         <span class="lang-flag">🇨🇳</span>
         <span>中文</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('ja'); return false;" class="lang-btn ${isJA ? 'active' : ''}">
+        <span class="lang-flag">🇯🇵</span>
+        <span>日本語</span>
       </a>
     `;
   },
@@ -133,6 +146,7 @@ const LangSwitcher = {
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
     const isZH = currentLang === 'zh';
+    const isJA = currentLang === 'ja';
     
     const container = document.createElement('div');
     container.id = 'lang-switcher-fixed';
@@ -144,10 +158,12 @@ const LangSwitcher = {
           right: 10px;
           z-index: 9999;
           display: flex;
-          gap: 8px;
+          flex-wrap: wrap;
+          gap: 5px;
+          max-width: 380px;
           background: rgba(30, 37, 65, 0.95);
           backdrop-filter: blur(10px);
-          padding: 8px 12px;
+          padding: 6px 8px;
           border-radius: 12px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
           border: 1px solid rgba(41, 171, 224, 0.3);
@@ -156,13 +172,13 @@ const LangSwitcher = {
         #lang-switcher-fixed .lang-btn-fixed {
           display: inline-flex;
           align-items: center;
-          gap: 6px;
-          padding: 6px 12px;
+          gap: 4px;
+          padding: 5px 9px;
           border-radius: 8px;
           background: transparent;
           border: 2px solid transparent;
           color: #b0b6c7;
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           font-weight: 500;
           text-decoration: none;
           cursor: pointer;
@@ -185,7 +201,7 @@ const LangSwitcher = {
         }
         
         #lang-switcher-fixed .lang-flag {
-          font-size: 1.1rem;
+          font-size: 1rem;
           line-height: 1;
         }
         
@@ -193,15 +209,20 @@ const LangSwitcher = {
           #lang-switcher-fixed {
             top: 5px;
             right: 5px;
-            padding: 6px 10px;
-            gap: 6px;
+            padding: 5px 7px;
+            gap: 4px;
+            max-width: 280px;
           }
           #lang-switcher-fixed .lang-btn-fixed {
-            padding: 5px 8px;
-            font-size: 0.8rem;
+            padding: 4px 7px;
+            font-size: 0.75rem;
+            gap: 3px;
           }
           #lang-switcher-fixed .lang-btn-fixed span:not(.lang-flag) {
             display: none;
+          }
+          #lang-switcher-fixed .lang-flag {
+            font-size: 0.95rem;
           }
         }
       </style>
@@ -224,6 +245,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn-fixed ${isZH ? 'active' : ''}">
         <span class="lang-flag">🇨🇳</span>
         <span>ZH</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('ja'); return false;" class="lang-btn-fixed ${isJA ? 'active' : ''}">
+        <span class="lang-flag">🇯🇵</span>
+        <span>JA</span>
       </a>
     `;
     

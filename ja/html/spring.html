@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes - Spring of the Steed</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #f5f6fb;
+      --card: #ffffff;
+      --text: #232a3a;
+      --muted: #5f6a84;
+      --primary: #29abe0;
+      --primary-dark: #1f84ad;
+      --line: #dbe3f1;
+      --shadow: 0 10px 30px rgba(26, 38, 66, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f6f8ff 0%, #f4f6fb 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Header/Nav */
+    header{
+      background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+      box-shadow: 0 2px 4px rgba(0,0,0,.4);
+      border-bottom: 1px solid #2b2f3a;
+      padding:12px 20px; display:flex; flex-direction:column; align-items:center;
+    }
+    header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
+    header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
+    header .site-info{display:flex; flex-direction:column; align-items:center;}
+    nav{width:100%; margin-top:10px;}
+    nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
+    nav ul li{position:relative;}
+    nav ul li a{
+      color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
+      padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
+      font-size:.85rem;
+    }
+    nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
+    nav ul li ul{
+      display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+      background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
+    }
+    nav ul li:hover ul{display:block;}
+    nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
+    nav ul li ul li a:hover{background:#25314d; color:#fff;}
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 18px 64px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at top right, rgba(41, 171, 224, 0.16), transparent 56%), var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      color: #1a243f;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      color: #1e2f57;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(41, 171, 224, 0.4);
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: #24365f;
+      font-size: 1.08rem;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .image-wrap {
+      margin: 16px 0 8px;
+      text-align: center;
+    }
+
+    .image-wrap img {
+      width: min(100%, 420px);
+      border-radius: 14px;
+      border: 1px solid #cfdaee;
+      box-shadow: 0 8px 18px rgba(24, 42, 83, 0.12);
+      display: inline-block;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1b4761;
+      background: rgba(41, 171, 224, 0.15);
+      border: 1px solid rgba(41, 171, 224, 0.35);
+      padding: 5px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .section { padding: 20px; }
+      main { padding-top: 24px; }
+    }
+  </style>
+  <meta name="description" content="TopHeroes - Spring of the Steed - TopHeroes Guide." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://www.guidetopheroes.com/html/spring.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/html/spring.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/spring.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/spring.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/spring.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/spring.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/spring.html" />
+  <meta property="og:title" content="TopHeroes - Spring of the Steed" />
+  <meta property="og:description" content="TopHeroes - Spring of the Steed - TopHeroes Guide." />
+  <meta property="og:url" content="https://www.guidetopheroes.com/html/spring.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TopHeroes Guide" />
+  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes - Spring of the Steed" />
+  <meta name="twitter:description" content="TopHeroes - Spring of the Steed - TopHeroes Guide." />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <script type="application/ld+json" id="seo-jsonld">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/spring.html#webpage", "name": "TopHeroes - Spring of the Steed", "url": "https://www.guidetopheroes.com/html/spring.html", "inLanguage": "en", "description": "TopHeroes - Spring of the Steed - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+  </script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <main>
+    <section class="hero">
+      <span class="pill">Event Guide</span>
+      <h1>Spring of the Steed – Event Guide</h1>
+      <p class="subtitle">Complete English reference for event structure, pinball strategy, spending priorities, and purchase planning.</p>
+    </section>
+
+    <section class="section">
+      <h2>Event Overview</h2>
+      <p>Spring of the Steed is a limited-time event lasting 7 days. It features some of the best purchasable rewards currently available in the game. The event revolves around two main currencies: Spring-time Coins and Spring-time Vouchers, each with its own dedicated shop.</p>
+    </section>
+
+    <section class="section">
+      <h2>Event Structure</h2>
+      <p>The event is composed of multiple interconnected activities. The core gameplay revolves around the New Year Pinball, flower gifting, and spending currencies efficiently across the two event shops.</p>
+    </section>
+
+    <section class="section">
+      <h2>New Year Pinball Mechanics</h2>
+      <p>The New Year Pinball uses Golden Lion Marbles. Players can choose between Launch One Time and Launch Ten Times. Launching once triggers an immediate reward refresh, while launching ten times locks all ten marbles onto the current reward layout before refreshing. The optimal strategy is to use single launches when rewards are poor and save ten launches for layouts rich in Spring-time Coins.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent.jpeg" alt="Spring event pinball rewards" loading="lazy" / decoding="async">
+      </div>
+
+      <h3>Crimson Dragon Marble</h3>
+      <p>Crimson Dragon Marbles are premium pinball marbles obtainable through rewards. They follow the same mechanics as Golden Lion Marbles but provide access to superior rewards. The same launch strategy applies.</p>
+    </section>
+
+    <section class="section">
+      <h2>Flower Gifting and Charm Points</h2>
+      <p>Players can collect and gift Flowers to other players, earning Charm Points. These unlock rewards such as Spring-time Lucky Bags, Golden Lion Marbles, and leaderboard rewards. Coordinating flower exchanges in pairs allows players to easily reach 300 flowers and claim all Charm Point rewards.</p>
+    </section>
+
+    <section class="section">
+      <h2>Spending Strategy by Player Type</h2>
+      <p>Players should define their spending category early: Free-to-Play, Low Spender, Mid Spender, or High Spender. Each category has different optimal purchasing priorities.</p>
+
+      <h3>Low Spender / Free-to-Play Priorities</h3>
+      <p>In the Springtime Coin Store, low spenders should focus on Mega Deal Items, especially Legendary Promotion Stones. In the Springtime Voucher Store, the primary goal is obtaining decorations, aiming for 1200 vouchers to purchase The Day of Love Chest for a full decoration set.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent5.png" alt="Low spender priorities" loading="lazy" / decoding="async">
+      </div>
+
+      <h3>Mid Spender Priorities</h3>
+      <p>The Cloud Castle is the top priority due to its Hero Level Cap +10 bonus.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent3.png" alt="Cloud Castle priority" loading="lazy" / decoding="async">
+      </div>
+      <p>League players may also consider Divine Steed Castle.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent2.png" alt="Divine Steed Castle" loading="lazy" / decoding="async">
+      </div>
+      <p>Fantasy Castle is a solid secondary option.</p>
+      <p>Additional priorities include 10 Mythic Promotion Stones or decorations if enough points remain. Voucher priorities include acquiring all decorations and The Day of Love Chest.</p>
+
+      <h3>High Spender Priorities</h3>
+      <p>High spenders follow mid spender priorities first. Additional must-buys include Castle Relocation Effect, Earth Fluttering Castle Effect due to his skill effect, Universal Mythic Decorations, and extra Mythic Promotion Stones.</p>
+      <div class="image-wrap">
+        <img src="/images/springevent4.png" alt="High spender must-buy items" loading="lazy" / decoding="async">
+      </div>
+      <p>In the Voucher Store, priorities are Fantasy Cottage, Golden Lion Marbles, all decorations, and Universal Epic Decorations.</p>
+    </section>
+
+    <section class="section">
+      <h2>Real Money Purchases</h2>
+      <p>Mid and High Spenders should purchase both Spring of the Steed Passes and the Spring-time Rewards daily pack. Low spenders should prioritize the pass over marble packs. Daily $0.99 marble packs offer the best value for mid spenders, while high spenders may scale further.</p>
+      <div class="split">
+        <div class="image-wrap">
+          <img src="/images/springevent6.jpeg" alt="Spring pass options" loading="lazy" / decoding="async">
+        </div>
+        <div class="image-wrap">
+          <img src="/images/springevent7.jpeg" alt="Daily spring-time rewards pack" loading="lazy" / decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Spring-time Gift Milestone</h2>
+      <p>High spenders should aim for 10,000 Springtime Gift points to unlock the Castle Shield Skin Choice Chest, which also provides valuable Castle Blueprints.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch('/html/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+  </script>
+</body>
+</html>

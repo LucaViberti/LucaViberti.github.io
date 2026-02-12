@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>TopHeroes Guide - Beginner Guide</title>
+  <meta name="description" content="TopHeroes beginner guide: first steps, village and buildings, guilds, resources, tavern and shards, factions, events, research, stamina, and world map." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <!-- Stripe Buy Button (one-time include) -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <style>
+/* ====== Base styles (from your template) ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f5f7;
+  line-height: 1.6;
+}
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav { width: 100%; margin-top: 10px; }
+nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+}
+nav ul li { position: relative; }
+nav ul li a {
+  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
+  font-size: 0.85rem; transition: color 0.3s;
+}
+nav ul li a:hover { color: #FFFFFF; }
+nav ul li ul {
+  display: none; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); background: #1f1f21;
+  border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 10px 0; min-width: 200px; z-index: 1000;
+}
+nav ul li:hover ul { display: block; }
+nav ul li ul li { margin: 0; }
+nav ul li ul li a {
+  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
+}
+nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
+
+main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+section { margin-bottom: 40px; }
+
+footer {
+  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; font-weight: bold; transition: background 0.3s;
+}
+.donation-button:hover { background: #2389b5; }
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+header .tagline { color: #b0b6c7; }
+nav ul { gap: 20px; }
+nav ul li a {
+  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
+  padding: 12px 6px; border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
+nav ul li ul {
+  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
+}
+nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
+nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
+
+/* ====== Page-specific helpers ====== */
+.page-title { margin-top: 0; font-size: 2rem; }
+.toc {
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 28px;
+}
+.toc h3 { margin: 0 0 12px; font-size: 1.1rem; }
+.toc ol { margin: 0; padding-left: 18px; }
+.small { font-size: 0.95rem; color: #4b5563; }
+
+.note {
+  background: #fff8e1; border: 1px solid #ffe08a; border-radius: 8px; padding: 12px 14px; margin: 16px 0;
+}
+
+/* =========================
+   NEW: Main restyle (scoped)
+   ========================= */
+.th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
+.th-beginner * { box-sizing: border-box; }
+.th-beginner { color: var(--ink); }
+.th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
+
+/* Grid: sticky TOC on desktop */
+.th-beginner .layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1024px){
+  .th-beginner .layout {
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+  }
+  .th-beginner .toc {
+    position: sticky; top: 20px;
+    margin: 0; /* moved into grid, no extra gap */
+  }
+  
+}
+
+/* Cards for sections */
+.th-beginner .section-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.th-beginner .section-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.th-beginner h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--head);
+}
+.th-beginner h3 {
+  margin-top: 14px;
+  font-size: 1.05rem;
+  color: var(--head);
+}
+
+/* Nice bullets and spacing */
+.th-beginner p { margin: 10px 0 12px; }
+.th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
+.th-beginner li { padding-left: 4px; margin: 6px 0; }
+.th-beginner li::marker { color: var(--brand); }
+
+/* Links */
+.th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
+.th-beginner a:hover { border-bottom-style: solid; }
+
+/* TOC polish */
+.th-beginner .toc { border-color: var(--border); }
+.th-beginner .toc h3 { color: var(--head); font-weight: 600; }
+.th-beginner .toc a { display: inline-block; padding: 2px 0; }
+
+/* Anchor-friendly offset for in-page headings */
+.th-beginner section { scroll-margin-top: 90px; }
+
+/* Emphasis blocks already present as .note – just refine */
+.th-beginner .note {
+  background: linear-gradient(0deg,#fffdf5,#fffdf5);
+  border-color: #ffe08a;
+  font-size: .95rem;
+}
+
+/* Optional table styles (future-proof if you add tables) */
+.th-beginner .table-wrap { overflow-x: auto; }
+.th-beginner table {
+  width: 100%; border-collapse: collapse; border: 1px solid var(--border);
+  background: #fff; border-radius: 10px; overflow: hidden;
+}
+.th-beginner thead th {
+  position: sticky; top: 0; background: #f8fafc; text-align: left;
+  padding: 10px; font-weight: 600; border-bottom: 1px solid var(--border);
+}
+.th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
+.th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
+
+/* Subtle separators between cards on mobile */
+@media (max-width: 1023px){
+  .th-beginner .section-card + .section-card { margin-top: 8px; }
+}
+
+/* Small tag for section numbers (purely decorative) */
+.th-beginner .kicker {
+  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
+  padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+}
+
+/* Back-to-top helper */
+.th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
+
+/* ====== Donation blocks (Stripe) ====== */
+.donation-block{
+  border:1px solid #e8eef5; background:#f9fbff;
+  padding:22px 16px; margin:24px 0; border-radius:12px;
+  text-align:center; box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+.donation-block p{ margin:0 0 10px; color:#334155; font-size:1rem; }
+.donation-card{
+  background:#ffffff; border:1px solid #e5e7eb; border-radius:12px;
+  padding:16px; margin:22px 0; text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+.donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
+  </style>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://www.guidetopheroes.com/html/beginners.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/html/beginners.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/beginners.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/beginners.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/beginners.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/beginners.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/beginners.html" />
+  <meta property="og:title" content="TopHeroes Guide - Beginner Guide" />
+  <meta property="og:description" content="TopHeroes beginner guide: first steps, village and buildings, guilds, resources, tavern and shards, factions, events, research, stamina, and world map." />
+  <meta property="og:url" content="https://www.guidetopheroes.com/html/beginners.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TopHeroes Guide" />
+  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes Guide - Beginner Guide" />
+  <meta name="twitter:description" content="TopHeroes beginner guide: first steps, village and buildings, guilds, resources, tavern and shards, factions, events, research, stamina, and world map." />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <script type="application/ld+json" id="seo-jsonld">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/beginners.html#webpage", "name": "TopHeroes Guide - Beginner Guide", "url": "https://www.guidetopheroes.com/html/beginners.html", "inLanguage": "en", "description": "TopHeroes beginner guide: first steps, village and buildings, guilds, resources, tavern and shards, factions, events, research, stamina, and world map.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+  </script>
+  <script type="application/ld+json" id="seo-breadcrumbs">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.guidetopheroes.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Beginner Guide", "item": "https://www.guidetopheroes.com/html/beginners.html"}]}
+  </script>
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+
+<main class="th-beginner">
+  <!-- Back-to-top anchor -->
+  <div id="top" aria-hidden="true"></div>
+
+  <h1 class="page-title">Beginner Guide</h1>
+  <p class="lead small">Start here: core rules, best early priorities, smart spending, and how to progress fast without wasting resources.</p>
+
+  <div class="layout">
+    <!-- Sticky TOC on desktop -->
+    <nav class="toc" aria-label="On this page">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#intro">Introduction and First Steps</a></li>
+        <li><a href="#village">Village and Buildings</a></li>
+        <li><a href="#guild">Joining a Guild</a></li>
+        <li><a href="#farming">Farming Resources</a></li>
+        <li><a href="#tavern">Tavern and Hero Shards</a></li>
+        <li><a href="#factions">Heroes and Factions</a></li>
+        <li><a href="#spending">Spending Real Money</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#social">Social and World Chat</a></li>
+        <li><a href="#villagers">Villagers</a></li>
+        <li><a href="#carriage">Carriage and Plunder</a></li>
+        <li><a href="#traits">Guild Traits</a></li>
+        <li><a href="#stamina">Stamina</a></li>
+        <li><a href="#worldmap">World Map – Enemy, Resources, Rally</a></li>
+        <li><a href="#conclusion">General Conclusion</a></li>
+      </ol>
+    </nav>
+
+    <!-- Right column: content cards -->
+    <div class="content">
+      <!-- 1. Introduction -->
+      <section id="intro" class="section-card">
+        <div class="kicker">Section 1</div>
+        <h2>1. Introduction and First Steps</h2>
+        <p>When you download <em>Top Heroes</em> and start the game, the first thing you’ll see is the <strong>Adventure</strong>. Early on, the path is guided and mandatory. The most important thing is to avoid wasting resources that will be crucial later. Keep these rules in mind:</p>
+        <ul>
+          <li><strong>Do not waste meat on Rare heroes</strong> (blue background). They are not worth upgrading and will never be used later.</li>
+          <li><strong>Do not spend diamonds</strong> to speed up processes early on. Waiting times are short and diamonds are too valuable.</li>
+        </ul>
+        <p>Follow the flow of the Adventure, make progress, and avoid wasting resources on heroes or unnecessary speedups.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 2. Village and Buildings -->
+      <section id="village" class="section-card">
+        <div class="kicker">Section 2</div>
+        <h2>2. Village and Buildings</h2>
+        <p>After some time in Adventure, you’ll reach your <strong>Village</strong>. You’ll see multiple buildings to construct and upgrade. Initially upgrades are mandatory, but soon you’ll have freedom to choose priorities. Your number one goal must be to level up the <strong>Castle</strong> quickly, ideally to level <strong>20–25</strong>. This unlocks essential buildings and allows higher hero and soldier levels.</p>
+        <p>Alongside the Castle, focus on <strong>Research Cottage</strong>, <strong>Hospital</strong>, <strong>Guild</strong>, and <strong>Training Ground</strong> (requirements for Castle upgrades). Don’t forget <strong>Barracks</strong>: every 5 levels, soldiers gain one level—this hugely boosts your queues.</p>
+        <p>For more details, see the <a href="building.html">Buildings</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 3. Joining a Guild -->
+      <section id="guild" class="section-card">
+        <div class="kicker">Section 3</div>
+        <h2>3. Joining a Guild</h2>
+        <p>From Castle level 7, you can join a <strong>Guild</strong>. This is crucial. Aim to join a <strong>top 3</strong> guild in your server; if that’s not possible, at least top 10. Strong guilds are active, recruit active players, and remove inactive ones. Don’t worry—everyone in your server started around the same time, so you can catch up quickly.</p>
+
+        <h3 id="guild-help">3.1 Help and Speedups</h3>
+        <p><strong>Guild Help</strong> is a major advantage. Every time you start a construction or research, press <em>Help</em>: guildmates can reduce the timer for you. Always request and wait for help before using speedups. Speedups (construction, research, universal, etc.) are fine to use, but <strong>diamonds should not be used</strong> for speeding up. Use speedups wisely, after receiving all possible helps.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 4. Farming Resources -->
+      <section id="farming" class="section-card">
+        <div class="kicker">Section 4</div>
+        <h2>4. Farming Resources</h2>
+        <p>Main resources are <strong>Timber</strong>, <strong>Stone</strong>, and <strong>Ruby</strong>. They’re needed for nearly everything. The best early method is progressing in Adventure. When stuck, improve your lineup and try again.</p>
+        <p>Guild activities are also essential:</p>
+        <ul>
+          <li><strong>Guild Secret Trial</strong>: mini-levels providing resources. Completing collectively gives extra rewards.</li>
+          <li><strong>Guild Expedition</strong>: one attempt daily. Use the <em>Blessing</em> button for buffs and <strong>100 Guild Points</strong>. Spend Guild Points in the Guild Store.</li>
+        </ul>
+        <p>Other sources include <strong>Expeditions</strong>, the <strong>Bounty Hall</strong> with missions every 8 hours, and <strong>Stages</strong> that unlock over time.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 5. Tavern and Hero Shards -->
+      <section id="tavern" class="section-card">
+        <div class="kicker">Section 5</div>
+        <h2>5. Tavern and Hero Shards</h2>
+        <p><strong>Tavern Tokens</strong> allow you to obtain <strong>Hero Shards</strong> in the Tavern. Early game: use them freely. Heroes improve significantly when their stars are upgraded. <strong>Do not waste Legendary Universal Hero Shards</strong> early—save them for later.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 6. Heroes and Factions -->
+      <section id="factions" class="section-card">
+        <div class="kicker">Section 6</div>
+        <h2>6. <a href="heroes.html">Heroes and Factions</a></h2>
+        <p>Heroes belong to three factions: <strong>League</strong>, <strong>Horde</strong>, and <strong>Nature</strong>. See the <a href="heroes.html">Heroes</a> page for details. Focus on <strong>one main queue</strong> with heroes from a single faction. This grants faction buffs and becomes even more critical with Season 1. Don’t try to balance all your queues—make one very strong.</p>
+        <ul>
+          <li><strong>League</strong>: easiest to build early, but can be costly mid–long term, especially F2P.</li>
+          <li><strong>Horde</strong>: requires smart play; not strong immediately but very strong long term, usually less costly than League.</li>
+          <li><strong>Nature</strong>: hardest to build early. Early Nature heroes are weak and often replaced; strong only much later.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- Donation block between sections -->
+      <section class="donation-block" aria-label="Support the project">
+        <p>If these tips help you, please consider supporting our project with a donation. It keeps the guides free and updated.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </section>
+
+      <!-- 7. Spending Real Money -->
+      <section id="spending" class="section-card">
+        <div class="kicker">Section 7</div>
+        <h2>7. Spending Real Money</h2>
+        <p><em>Top Heroes</em> can be played free-to-play, spending little, or a lot. Regardless of budget, always buy <strong>Gold Blocks</strong> from the official <em>Top Heroes</em> website. Purchasing in-game gives fewer benefits. From the site you always get <strong>+5% Gold Blocks</strong> and milestone rewards. Then spend Gold Blocks in-game.</p>
+
+        <h3 id="best-purchases">7.1 Best Purchases</h3>
+        <ul>
+          <li><strong>Monthly Pass</strong>: extra queue (Privilege Queue), Auto Hunt, doubled ad rewards, daily gifts. Most cost-effective. Buying Gold Blocks from the site also gives <strong>30% discount</strong> on it as first milestone.</li>
+          <li><strong>Remove Ads (2$)</strong>: permanent. Lets you claim daily ad rewards instantly. Great long-term value.</li>
+          <li><strong>Construction Queues</strong>: default 1; up to 3 more (2$, 10$, 20$). Permanent and very useful.</li>
+          <li><strong>Research Queue</strong>: default 1, max 2. Unlock second queue for 10$. Permanent.</li>
+          <li><strong>Adventure Begin (Best Price)</strong>: cheap limited packs (3 versions) with great rewards over a few days.</li>
+          <li><strong>Packs</strong>: daily hero shard packs ~5$; useful only for bigger spenders.</li>
+          <li><strong>Skins</strong>: very powerful (global buffs). Legendary 30$, Mythic 100$. High spenders should prioritize.</li>
+          <li><strong>Wheel and Dice events</strong>: alternate weekly. Save tickets until Mythic heroes are included.</li>
+          <li><strong>Adventure Battle Pass</strong>: optional (15$, 20$, or both 30$). Strong boosts, not essential.</li>
+          <li><strong>Funds</strong> (Construction, Adventure, Power, Growth): good mid-spender value.</li>
+          <li><strong>Daily Special</strong>: choose hero shards; gives <strong>Star Gems</strong> (extremely valuable). Later even Mythic heroes appear here.</li>
+          <li><strong>Daily/Weekly Packs</strong>: low value for small spenders; medium/high spenders can consider.</li>
+          <li><strong>Diamond Store</strong>: never buy (same price as packs but without extra rewards).</li>
+          <li><strong>VIP Points</strong>: gained with every purchase; unlock perks but don’t buy just for VIP levels. Daily quests also give 5 VIP Points.</li>
+        </ul>
+        <p>There will constantly be new packs and events to spend on, but the basics above are the most important for beginners.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 8. Events -->
+      <section id="events" class="section-card">
+        <div class="kicker">Section 8</div>
+        <h2>8. <a href="events.html">Events</a></h2>
+        <p><em>Top Heroes</em> has routine and one-time events. Early on, the most important is the <strong>Top Lord</strong> event. Simply by playing and raising your <strong>Influence</strong>, you unlock great rewards, including the <strong>Griffon Castle</strong> skin. Castle skins are rare, especially for F2P.</p>
+        <p>Boost Influence by assigning idle soldiers to unused heroes and upgrading <strong>Barracks</strong> to increase soldier levels. Other buildings like <strong>Warehouse</strong>, <strong>Tavern</strong>, and <strong>Watchtower</strong> can also provide quick Influence boosts.</p>
+        <ul>
+          <li><strong>World Boss</strong>: daily, attack 5 times. No stamina cost, no losses. Grants fixed rewards plus minor ranking rewards—just do your 5 hits.</li>
+          <li><strong>Ruin Hunt</strong>: daily chest missions on the World Map. Do them all daily. Don’t spend diamonds refreshing early. Help guildmates (prioritize purple and gold). You can plunder others’ Ruin Hunts—prioritize <strong>legendary (gold) level 4</strong> chests.</li>
+          <li><strong>Beginner-only events</strong>: <em>Beginner Goals</em>, <em>Seven Day</em>, <em>Power Rush</em>. Available only in the first days—complete them in time.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 9. Research -->
+      <section id="research" class="section-card">
+        <div class="kicker">Section 9</div>
+        <h2>9. Research</h2>
+        <p>Research is done in the <strong>Research Cottage</strong>. Early on, focus entirely on <strong>Combat Expertise</strong>. Complete it fully to unlock all other research trees. For details, check the <a href="research.html">Research</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 10. Social -->
+      <section id="social" class="section-card">
+        <div class="kicker">Section 10</div>
+        <h2>10. Social and World Chat</h2>
+        <p>At Castle level 7, <strong>World Chat</strong> unlocks. Early on it’s noisy, but within days moderators will clean it up. It becomes a good communication channel. <strong>Invitation codes</strong> give minor rewards (some shards, equipment, diamonds) but are not game-changing. Use them if you have friends to invite; otherwise ignore.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 11. Villagers -->
+      <section id="villagers" class="section-card">
+        <div class="kicker">Section 11</div>
+        <h2>11. Villagers</h2>
+        <p>Every day, <strong>Villagers</strong> can be saved in your Village (and can appear in Adventure). Completing the first Daily Quest grants a ticket to spawn a Villager instantly. Once saved, assign Villagers in the <strong>Talent Hall</strong> to boost buildings. Early on, <em>Quick Dispatch</em> is fine; later, optimize assignments for better bonuses. See the <a href="villagers.html">Villagers</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 12. Carriage & Plunder -->
+      <section id="carriage" class="section-card">
+        <div class="kicker">Section 12</div>
+        <h2>12. Carriage and Plunder</h2>
+        <p>You can dispatch <strong>4 Carriages daily</strong>. Rarities: Common, Uncommon, Rare, Legendary, Mythic. Always use the free refresh to seek good rewards, ideally <strong>Hero Shards</strong>. After 5 refreshes you are guaranteed a <strong>Legendary</strong>, and from Castle level 15 onwards, a <strong>5% chance</strong> for <strong>Mythic</strong>. Mythic and Legendary Carriages never downgrade rarity. Aim to maximize shards, especially <strong>Universal Legendary Shards</strong>.</p>
+        <p><strong>Mythic Carriages</strong> can be shared. Shared Carriages give full rewards to everyone and offer extra protection. Some servers adopt a rule not to attack full Mythic Carriages (5/5 members). If it’s not in your server, propose it—this guarantees safety for top rewards.</p>
+        <p><strong>Plundering</strong>: you can attack <strong>4 Carriages daily</strong>. Choose targets with the best rewards (usually Universal Legendary Shards). Failed attacks don’t consume attempts. Carriages can be attacked twice (<em>three times if Mythic</em>). Check <em>Details</em> before plundering to see if a Carriage is full; if server rules prohibit attacking full Mythics, don’t attack.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- Compact donation card later in the page -->
+      <div class="donation-card" aria-label="Support the project">
+        <p>Finding this section useful? Help us keep improving these guides with a donation.</p>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+        </stripe-buy-button>
+      </div>
+
+      <!-- 13. Guild Traits -->
+      <section id="traits" class="section-card">
+        <div class="kicker">Section 13</div>
+        <h2>13. Guild Traits</h2>
+        <p>In the <strong>Guild</strong> building under <strong>Traits</strong>, members can donate to unlock buffs. <strong>Donations regenerate every 30 minutes</strong>, up to <strong>20 stored</strong>. Never let it cap at 20, or regeneration stops. You can donate with 10 diamonds each, but this isn’t worth it early. Every donation also gives <strong>Guild Points</strong>, usable in the Guild Store. For optimal spending, see the <a href="shop.html">Store</a> page.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 14. Stamina -->
+      <section id="stamina" class="section-card">
+        <div class="kicker">Section 14</div>
+        <h2>14. Stamina</h2>
+        <p><strong>Stamina</strong> is required for attacks on the World Map and regenerates over time. Two times daily you can claim <strong>80 stamina</strong> (at least 4 hours apart). <strong>Monthly Privilege</strong> grants 50 stamina daily, or 100 with bonus. <strong>Stacks of 25 and 50</strong> stamina exist and can be used freely early on. Avoid buying <strong>150 stamina for 5$</strong>—poor value.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 15. World Map -->
+      <section id="worldmap" class="section-card">
+        <div class="kicker">Section 15</div>
+        <h2>15. World Map – Enemy, Resources, Rally</h2>
+        <p>Click the magnifying glass on the World Map to find three sections:</p>
+        <ul>
+          <li><strong>Enemy</strong>: fight Guards (Timber, Stone, Ruby) up to lvl 30 for resources. Useful early. Also, always attack <strong>Legend Stash</strong> 3 times daily for free rewards.</li>
+          <li><strong>Resources</strong>: first conquest gives a fixed reward. Leaving troops results in <strong>Gathering</strong>. Gather <strong>Ruby</strong> when possible (especially overnight). Timber and Stone are less valuable.</li>
+          <li><strong>Rally</strong>: fight bosses with guildmates. Great way to use stamina and get rewards. Joining rallies is free and first <strong>50 daily</strong> give rewards—join as many as possible.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- 16. Conclusion -->
+      <section id="conclusion" class="section-card">
+        <div class="kicker">Section 16</div>
+        <h2>16. General Conclusion</h2>
+        <p><em>Top Heroes</em> rewards careful planning and saving resources. In the very beginning you can spend most items freely (except <strong>diamonds</strong> and <strong>Legendary Universal Shards</strong>). Later, the game shifts: you’ll spend resources strategically during events like <em>Guild Race</em> or <em>Arms Guild Race</em> to gain maximum points. This mindset—saving and spending only at the right times—is key to long-term success.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+      </section>
+
+      <!-- Optional donation block (kept from base; show/hide as you prefer)
+      <div class="donation-section section-card">
+        <p>If this guide helped you, consider a small donation to keep the site growing.</p>
+        <a class="donation-button" href="donate.html">Donate</a>
+      </div>
+      -->
+    </div>
+  </div>
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; });
+</script>
+
+<script>
+/* Icons script from your base (adds small faction icons next to matching words) */
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
+</body>
+</html>

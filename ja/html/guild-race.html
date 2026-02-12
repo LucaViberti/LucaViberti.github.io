@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+  <title>Guild Race</title>
+  <meta name="description" content="Guild Race guide: how it works, recommended and avoided tasks, rewards, Season 1 research boosts, and honour shop priorities." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <style>
+    /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
+      --text:#0f1220; --muted:#667085; --ink2:#374151; --accent:#29abe0;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    header{
+      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      border-bottom:1px solid #2b2f3a;
+      padding:12px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header .site-info{display:flex;flex-direction:column;align-items:center;}
+
+    /* Contenitore della pagina */
+    main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
+    @media (min-width: 768px){ main.content{padding:48px 24px 72px;} }
+
+    /* Header pagina */
+    .page-header{
+      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
+      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
+      box-shadow:0 2px 6px rgba(0,0,0,.03);
+    }
+    .page-header h1{
+      margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head);
+      letter-spacing:-.015em; font-weight:800;
+    }
+    .page-header .lead{margin:0; color:var(--ink2); font-size:1rem}
+
+    /* TOC */
+    .toc{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:16px 18px; margin:18px 0 22px; box-shadow:0 4px 12px rgba(16,19,25,.04);
+    }
+    .toc h3{margin:0 0 8px; font-size:1.05rem; color:var(--head); letter-spacing:.01em}
+    .toc ol{margin:0; padding-left:18px}
+    .toc a{color:var(--ink2); text-decoration:none}
+    .toc a:hover{color:#0b7cab; text-decoration:underline}
+
+    /* Card sezioni */
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:22px 22px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
+    }
+    .card h2{font-size:1.35rem; margin:0 0 10px; color:var(--head); letter-spacing:-.01em}
+    .card h3{font-size:1.08rem; margin:14px 0 6px; color:#1f2937;}
+    .muted{color:var(--muted); font-size:.96rem;}
+    .content p{margin:0 0 12px}
+    .content ul{margin:10px 0 0 22px}
+    .content li{margin:4px 0}
+
+    /* Immagini: più piccole e coerenti */
+    figure{margin:14px 0; display:flex; flex-direction:column; align-items:center}
+    figure img{
+      display:block; border-radius:10px; border:1px solid #edf0f5;
+      width:100%; max-width:720px; height:auto; box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
+
+    /* Evidenzia l'ancora attiva (solo estetico) */
+    :target > h2{position:relative}
+    :target > h2::after{
+      content:""; position:absolute; left:0; bottom:-8px; width:72px; height:2px; background:var(--accent);
+      border-radius:2px;
+    }
+
+    /* contenitori nav/footer caricati esternamente */
+    #navbar,#footer{margin:0;}
+  </style>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://www.guidetopheroes.com/html/guild-race.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/html/guild-race.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/guild-race.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/guild-race.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/guild-race.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/guild-race.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/guild-race.html" />
+  <meta property="og:title" content="Guild Race" />
+  <meta property="og:description" content="Guild Race guide: how it works, recommended and avoided tasks, rewards, Season 1 research boosts, and honour shop priorities." />
+  <meta property="og:url" content="https://www.guidetopheroes.com/html/guild-race.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TopHeroes Guide" />
+  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guild Race" />
+  <meta name="twitter:description" content="Guild Race guide: how it works, recommended and avoided tasks, rewards, Season 1 research boosts, and honour shop priorities." />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <script type="application/ld+json" id="seo-jsonld">
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/guild-race.html#webpage", "name": "Guild Race", "url": "https://www.guidetopheroes.com/html/guild-race.html", "inLanguage": "en", "description": "Guild Race guide: how it works, recommended and avoided tasks, rewards, Season 1 research boosts, and honour shop priorities.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+  </script>
+  <script type="application/ld+json" id="seo-breadcrumbs">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.guidetopheroes.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "Guild Race", "item": "https://www.guidetopheroes.com/html/guild-race.html"}]}
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR standard -->
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
+
+  <!-- ===== CONTENUTO ===== -->
+  <main class="content" itemscope itemtype="https://schema.org/Article">
+    <section class="page-header">
+      <h1 itemprop="headline">Guild Race</h1>
+      <p class="lead">How it works, which tasks to prioritize (or avoid), rewards cadence, Season 1 boosts, and what to buy in the honour shop.</p>
+      <p class="muted">Related: <a href="guildboss.html">Guild Boss</a>, <a href="events.html">Events</a>, <a href="adventure.html">Adventure</a>.</p>
+    </section>
+
+    <!-- TOC per navigazione veloce -->
+    <nav class="toc" aria-label="On this page">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#recommended">Tasks you should use</a></li>
+        <li><a href="#early-exclusive">A bit later in the early game</a></li>
+        <li><a href="#save-for-others">Save for Arms Race / KvK</a></li>
+        <li><a href="#avoid">Tasks you should NEVER use</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#season1">Season 1 research</a></li>
+        <li><a href="#honour-shop">Honour shop</a></li>
+      </ol>
+    </nav>
+
+    <!-- Overview -->
+    <section class="card" id="overview">
+      <h2>Overview</h2>
+      <p>Guild race is one of the main events in the game. Try to get as many honour points as possible. The honour shop is one of the best shops in the game. 
+You get points for finishing tasks. At the start you get 9 task tickets for free and you can buy 15 more every day. We recommend you buy at least the first 5 task tickets every day because they are really cheap (300 diamonds). The following 10 task tickets cost each 300 dias. You can buy these task tickets as well when you have plenty of tasks (best only golden) to finish. It’s really worth buying more because the honour shop is great. We would recommend your guild to let people know they should only take tasks if they plan to finish them really fast. If one person is blocking, for example, the soldiers task for hours, he is slowing down the whole guild.  
+You have 2 exclusive tasks only you can use. Every 10 minutes you can refresh one of the exclusiv tasks for free. If you want, you can use 100 diamonds to refresh it without waiting for the cooldown. We don’t recommend doing that, the costs and chance to get the task you need are not worth the diamonds. Better you buy more task tickets. Most of the exclusiv tasks need less resources to finish. For example, the exclusiv soldiers task needs 400 soldiers trained to finish. The guild task needs 500 soldiers to finish. You can even prepare tasks. If you need, for example, a task later, you can get it from the free refresh and you can keep it till you can finish it and you can still refresh the second exclusiv task till you get the task you need. After a reset, your exclusiv tasks will be refreshed. You can still prepare a task if you want to use it after the reset. Accept the task you want to keep over the server reset. That way, this task will stay even after the reset. You can abandon the task and it will still be in your exclusiv task. That’s a great way to prepare a task for the next day. 
+Most of the time you need luck to get the task you need. That’s why it is not good if you only use the exclusive tasks. You have to find the best possible way for yourself to finish as many gold tasks as possible. If you’re willing to spend a bit of money, you can buy Task selection tickets. This will make the guild race much easier for yourself. You get a 3rd exclusive task spot where you can use these tickets to get the task you need. Reminder: Use the Task selection tickets ONLY on golden tasks. 
+Not all tasks are recommended to finish in the guild race. Don’t use your tasks to finish blue tasks. You can easily finish purple tasks that give 3x more points than blue tasks without problems. The best would be to only use gold tasks. They give the most points.</p>
+
+      <figure>
+        <img src="/images/guildrace1.png" alt="Guild Race overview example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+
+    <!-- Recommended tasks -->
+    <section class="card" id="recommended">
+      <h2>Tasks you should use in guild race</h2>
+      <ul>
+        <li>Soldiers training task (ONLY USE GOLD TASK. One of the easiest to finish. You can every day finish at least 2 tasks)</li>
+        <li>Building Task (ONLY USE GOLD TASK. Don’t collect buildings and wait for the task. This is a great task where you can wait for the exclusive golden task)</li>
+        <li>Research task (At the early - mid game this task will be harder to finish because the research boost you need to finish the task you can’t get from 1 or 2 researches. Later on when you need some days to finish research you will get enough influence from one research to finish the tasks with only one research. Keep in mind to always prepare this task in advance or you will lose plenty of research time if the research is done but you don’t have the task for it)</li>
+        <li>Diamond spending task (ONLY USE THE EXCLUSIVE TASK FOR IT AND IF POSSIBLE THE GOLDEN TASK. You will have every week plenty of things you want to spend your diamonds for. Wait for this task and buy the shop items after you get the task. First buy the daily thing you want to buy and after you did that you can buy from the weekly shop to finish the task. When you are spending.)</li>
+        <li>Buy Diamonds from packs ( if you’re spending real money in-game, wait for this task. This is the only task that gives more points compared to other golden or purple tasks. You can get this task only in the exclusive task. Before you buy something, be sure you can finish the tasks; if it’s less than 1,6k diamonds, it’s better to use the purple task than to waste it.)</li>
+        <li>Initiate a rally and kill bosses (Only purple task. Easy task you can take if you have too many task tickets and you want to finish some tasks.)</li>
+        <li>Kill mobs on world map (Only purple task. This is the easiest task and the only one you can finish without spending resources. You can finish this task by joining rallies. That way, you don’t need anything to finish the task. Like the task before, use this task if you have tasks left and can’t finish any golden tasks.)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace2.png" alt="Recommended tasks example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+
+    <!-- Early game exclusive tasks -->
+    <section class="card" id="early-exclusive">
+      <h2>A bit later in the early game</h2>
+      <p>A bit later in the early game, you will get this task as well but only in the exclusive tasks. These tasks give as well a bit more points than usual golden tasks.</p>
+      <ul>
+        <li>Consume Legendary Relic Shards ( On day 3 and 4, you can get this task. ONLY USE THE GOLDEN TASK. Save Legendary Relic Shards and use them only in guild race when you get this task.)</li>
+        <li>Consume Magic Stones ( On day 3 and 4 in exclusive tasks. ONLY USE GOLDEN TASKS. Save the magic stones and use them only in guild race when you get the task. You can finish this task as well by exchanging magic stones for arcane crystals in the Trade Store – Resources. You will lack arcane crystals all the time. That’s why you should use the trade store and exchange the magic stones for it. And that way, you can finish at least three tasks weekly.)</li>
+        <li>Use Medals ( On day 5, 6, and 7 in exclusive tasks. ONLY USE GOLDEN TASKS. Save Medals and use them only in guild race in combination with the tasks. The only exception is the medal shop. You can trade here the medals in weeks where you don’t have guild race for speed-ups.)</li>
+        <li>Increase Power of Lords gear (On day 5, 6 and 7 in exclusive tasks. ONLY USE GOLDEN TASKS. Save the lord gear upgrades for guild race when you get the task. Don’t upgrade the lord’s gear on other days. 
+Tip from us: You get a boost when you get 3 or 6 lord’s gear on the same level. You can use this to your advantage, because the boost power increase alone can finish one task. That way you can upgrade one piece of your lord’s gear to get the boost activated and finish the task.)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace3.png" alt="Early game exclusive tasks example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+
+    <!-- Tasks to save for other events -->
+    <section class="card" id="save-for-others">
+      <h2>Tasks you can finish but we would recommend to save it for arms race and kingdom vs kingdom</h2>
+      <ul>
+        <li>Use Research or Construction speed ups (We don’t recommend you to use this task. You need too many speed ups to finish this task. Better use some easy purple tasks than using this task)</li>
+        <li>Consume Legendary Shards ( You can use this task if you want to upgrade a hero ASAP. Better would be you save the legendary shards and use them in arms race or kingdom vs kingdom)</li>
+      </ul>
+    </section>
+
+    <!-- Tasks to avoid -->
+    <section class="card" id="avoid">
+      <h2>Task you should NEVER use</h2>
+      <ul>
+        <li>Recruit hero in the tavern (only purple task available that’s why we recommend to never use this task. You can kill mobs and get the same amount of honour points. Save the tavern tickets for arms race and kingdom vs kingdom)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace4.png" alt="Task to avoid example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+
+    <!-- Rewards -->
+    <section class="card" id="rewards">
+      <h2>Rewards</h2>
+      <p>You get as well some rewards for individual and guild honour points made in the week. You should try to get at least 7,000 honour points every guild race so you get the maximum rewards possible (before the season one research, maximum reward cap is at 6,000 points). With a bit of time investing you can easily get to over 10,000 points. Like we said before, try to make as many honour points as possible, that way you can buy more stuff in the honour shop. When you buy at least the first 5 task tickets every day you will have 44 tasks you can finish in this week. </p>
+
+      <figure>
+        <img src="/images/guildrace5.png" alt="Rewards example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+
+    <!-- Season 1 research -->
+    <section class="card" id="season1">
+      <h2>With Season 1 you get in the Shadow of the World Tree research section two great upgrades for guild race.</h2>
+      <p>First one is the extra reward for getting 6,500 and 7,000 honour points in individual honour points and 65,000 and 70,000 honour points for the guild. 
+The second research is a little further down the research tree. This will increase the honour points you get for every task you finish.
+As soon as possible, you should try to get these two research upgrades. </p>
+    </section>
+
+    <!-- Honour shop -->
+    <section class="card" id="honour-shop">
+      <h2>What you can buy in the honour shop</h2>
+      <p>Some of the important things to buy in the honour shop will be added a bit later in the game:</p>
+      <ul>
+        <li>Soul Stones / 6,000 honour points (BUY ALWAYS the soulstone from your main faction you’re playing. For F2P players, that’s the main source you will get the soulstones for your heroes)</li>
+        <li>Universal troop skin / Legendary 12,000 honour points / Epic 1,200 honour points</li>
+        <li>Legendary Universal Hero Shards / 300 each</li>
+        <li>Universal exclusive gear shards / 400 each</li>
+        <li>Legendary Universal Relic Shards / 800 each</li>
+        <li>Dragon Essence / 120 each (late game, you will need plenty of dragon essence. That’s why it’s a good source to get some more of it)</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace6.png" alt="Honour shop example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER (richiamo standard) -->
+  <div id="footer"></div>
+  <script>
+    fetch("/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(console.error);
+  </script>
+</body>
+</html>

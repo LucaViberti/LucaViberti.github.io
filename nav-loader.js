@@ -24,6 +24,7 @@
     if (p.startsWith('/ko/')) return 'ko';
     if (p.startsWith('/de/')) return 'de';
     if (p.startsWith('/vi/')) return 'vi';
+    if (p.startsWith('/tc/')) return 'tc';
     if (p.startsWith('/zh/')) return 'zh';
     if (p.startsWith('/ja/')) return 'ja';
     return 'en';
@@ -34,6 +35,7 @@
     if (p.startsWith('/de/')) return p.slice(3);
     if (p.startsWith('/ko/')) return p.slice(3);
     if (p.startsWith('/vi/')) return p.slice(3);
+    if (p.startsWith('/tc/')) return p.slice(3);
     if (p.startsWith('/zh/')) return p.slice(3);
     if (p.startsWith('/ja/')) return p.slice(3);
     return p;
@@ -269,6 +271,7 @@
     if (lang === 'ko') return '/ko/html/nav.html';
     if (lang === 'de') return '/de/html/nav.html';
     if (lang === 'vi') return '/vi/html/nav.html';
+    if (lang === 'tc') return '/tc/html/nav.html';
     if (lang === 'zh') return '/zh/html/nav.html';
     if (lang === 'ja') return '/ja/html/nav.html';
     return '/html/nav.html';

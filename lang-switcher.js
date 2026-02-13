@@ -268,6 +268,9 @@ const LangSwitcher = {
     const element = document.getElementById(elementId);
     if (!element) return;
 
+    if (element.dataset.langSelectorReady === 'true') return;
+    element.dataset.langSelectorReady = 'true';
+
     element.innerHTML = this.createHeaderSelector();
     const toggle = element.querySelector('.th-lang-toggle');
     const menu = element.querySelector('.th-lang-menu');
@@ -324,3 +327,27 @@ const LangSwitcher = {
 
 // Espone il selettore in modo affidabile per i loader esterni.
 window.LangSwitcher = LangSwitcher;
+
+// Auto-init when the header is injected after initial load.
+(function autoInitHeaderSelector() {
+  const targetId = 'header-lang-selector';
+  const tryInit = () => {
+    const el = document.getElementById(targetId);
+    if (!el || el.dataset.langSelectorReady === 'true') return false;
+    LangSwitcher.initHeaderSelector(targetId);
+    return true;
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      if (tryInit()) return;
+    });
+  } else {
+    tryInit();
+  }
+
+  const observer = new MutationObserver(() => {
+    if (tryInit()) observer.disconnect();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+})();

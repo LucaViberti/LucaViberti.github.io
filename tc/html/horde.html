@@ -9,80 +9,93 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes Guide - Horde Legendary Heroes</title>
+  <title>公會競賽</title>
+  <meta name="description" content="公會競賽指南：玩法機制、推薦與避免的任務、獎勵節奏、S1 研究加成，以及榮譽商店優先購買。" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
+
   <style>
-body {
-  margin:0; padding:0;
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  background:#f5f5f7; line-height:1.6;
-}
+    /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
+      --text:#0f1220; --muted:#667085; --ink2:#374151; --accent:#29abe0;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    header{
+      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
+      box-shadow:0 2px 4px rgba(0,0,0,.4);
+      border-bottom:1px solid #2b2f3a;
+      padding:12px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header .site-info{display:flex;flex-direction:column;align-items:center;}
 
-header { background:#16171A; padding:12px 20px; display:flex; flex-direction:column; align-items:center; }
-header h1 { margin:0; color:#f5f5f7; font-size:1.5rem; }
-header .tagline { margin-left:12px; color:#888; font-size:.9rem; white-space:nowrap; }
-header .site-info { display:flex; flex-direction:column; align-items:center; }
+    /* Contenitore della pagina */
+    main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
+    @media (min-width: 768px){ main.content{padding:48px 24px 72px;} }
 
-nav { width:100%; margin-top:10px; }
-nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-nav ul li { position:relative; }
-nav ul li a { color:#d1d1d6; text-decoration:none; padding:10px 8px; font-size:.85rem; transition:color .3s; }
-nav ul li a:hover { color:#fff; }
-nav ul li ul { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); background:#1f1f21; border-radius:6px; box-shadow:0 8px 16px rgba(0,0,0,.3); padding:10px 0; min-width:200px; z-index:1000; }
-nav ul li:hover ul { display:block; }
-nav ul li ul li a { display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; }
-nav ul li ul li a:hover { background:#2c2c2e; color:#fff; }
+    /* Header pagina */
+    .page-header{
+      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
+      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
+      box-shadow:0 2px 6px rgba(0,0,0,.03);
+    }
+    .page-header h1{
+      margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head);
+      letter-spacing:-.015em; font-weight:800;
+    }
+    .page-header .lead{margin:0; color:var(--ink2); font-size:1rem}
 
-main { padding:40px 20px; max-width:1000px; margin:0 auto; }
-section { margin-bottom:40px; }
-footer { background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem; }
+    /* TOC */
+    .toc{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:16px 18px; margin:18px 0 22px; box-shadow:0 4px 12px rgba(16,19,25,.04);
+    }
+    .toc h3{margin:0 0 8px; font-size:1.05rem; color:var(--head); letter-spacing:.01em}
+    .toc ol{margin:0; padding-left:18px}
+    .toc a{color:var(--ink2); text-decoration:none}
+    .toc a:hover{color:#0b7cab; text-decoration:underline}
 
-header { background:linear-gradient(180deg,#1e2541 0%,#141720 100%); box-shadow:0 2px 4px rgba(0,0,0,.4); border-bottom:1px solid #2b2f3a; }
-header .tagline { color:#b0b6c7; }
-nav ul { gap:20px; }
-nav ul li a { text-transform:uppercase; font-weight:500; letter-spacing:.05em; padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s, border-bottom-color .3s; color:#ccd0dd; }
-nav ul li a:hover { color:#fff; border-bottom-color:#29abe0; }
-nav ul li ul { background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; }
-nav ul li ul li a { font-size:.85rem; }
-nav ul li ul li a:hover { background:#25314d; color:#fff; }
+    /* Card sezioni */
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:22px 22px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
+    }
+    .card h2{font-size:1.35rem; margin:0 0 10px; color:var(--head); letter-spacing:-.01em}
+    .card h3{font-size:1.08rem; margin:14px 0 6px; color:#1f2937;}
+    .muted{color:var(--muted); font-size:.96rem;}
+    .content p{margin:0 0 12px}
+    .content ul{margin:10px 0 0 22px}
+    .content li{margin:4px 0}
 
-.page-title { font-size:2rem; margin-bottom:12px; color:#1e2541; }
-.lead { color:#4b5563; margin-bottom:28px; }
+    /* Immagini: più piccole e coerenti */
+    figure{margin:14px 0; display:flex; flex-direction:column; align-items:center}
+    figure img{
+      display:block; border-radius:10px; border:1px solid #edf0f5;
+      width:100%; max-width:720px; height:auto; box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
 
-.card {
-  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:20px;
-  box-shadow:0 4px 12px rgba(0,0,0,.04); margin-bottom:22px;
-}
-.card h3 { margin:0 0 6px; color:#1f2937; font-size:1.15rem; }
-.role { font-size:.9rem; color:#6b7280; margin-bottom:8px; }
+    /* Evidenzia l'ancora attiva (solo estetico) */
+    :target > h2{position:relative}
+    :target > h2::after{
+      content:""; position:absolute; left:0; bottom:-8px; width:72px; height:2px; background:var(--accent);
+      border-radius:2px;
+    }
 
-.hero { display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; }
-.hero img {
-  max-width:14%; min-width:110px;
-  height:auto; border-radius:6px; border:1px solid #e5e7eb;
-}
-.hero .txt { flex:1 1 300px; min-width:260px; }
-.hero ul { margin:8px 0 0 18px; }
-.hero li { margin:2px 0; }
-
-.lineup-wrapper { display:grid; gap:18px; }
-.lineup-card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px 18px; box-shadow:0 2px 8px rgba(0,0,0,.03); }
-.lineup-card h3 { margin:0 0 12px; font-size:1.05rem; color:#1f2937; text-transform:uppercase; letter-spacing:.08em; }
-.lineup-row { display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px dashed #e5e7eb; }
-.lineup-row:last-of-type { border-bottom:none; }
-.lineup-label { font-size:.85rem; font-weight:600; color:#6b7280; width:70px; text-transform:uppercase; letter-spacing:.08em; }
-.lineup-heroes { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.lineup-heroes img { width:54px; height:54px; object-fit:cover; border-radius:8px; border:1px solid #e5e7eb; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,.06); }
-.lineup-note { margin:12px 0 0; font-size:.9rem; color:#4b5563; }
-
-@media (max-width:768px) {
-  .hero { flex-direction:column; }
-  .hero img { max-width:100%; }
-}
+    /* contenitori nav/footer caricati esternamente */
+    #navbar,#footer{margin:0;}
   </style>
-  <meta name="description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<<<<<<< HEAD
   <link rel="canonical" href="https://www.guidetopheroes.com/tc/html/horde.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/horde.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/horde.html" />
@@ -93,6 +106,18 @@ nav ul li ul li a:hover { background:#25314d; color:#fff; }
   <meta property="og:title" content="TopHeroes Guide - Horde Legendary Heroes" />
   <meta property="og:description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
   <meta property="og:url" content="https://www.guidetopheroes.com/tc/html/horde.html" />
+=======
+  <link rel="canonical" href="https://www.guidetopheroes.com/zh/html/guild-race.html" />
+  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/guild-race.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/guild-race.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/guild-race.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/guild-race.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/guild-race.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/guild-race.html" />
+  <meta property="og:title" content="公會競賽" />
+  <meta property="og:description" content="公會競賽指南：玩法機制、推薦與避免的任務、獎勵節奏、S1 研究加成，以及榮譽商店優先購買。" />
+  <meta property="og:url" content="https://www.guidetopheroes.com/zh/html/guild-race.html" />
+>>>>>>> 83ee8a42a2128e4dcfc309aae883160bf5d72b30
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TopHeroes Guide" />
   <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
@@ -103,287 +128,175 @@ nav ul li ul li a:hover { background:#25314d; color:#fff; }
   <meta property="og:locale:alternate" content="ko_KR" />
   <meta property="og:locale:alternate" content="vi_VN" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes Guide - Horde Legendary Heroes" />
-  <meta name="twitter:description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
+  <meta name="twitter:title" content="公會競賽" />
+  <meta name="twitter:description" content="公會競賽指南：玩法機制、推薦與避免的任務、獎勵節奏、S1 研究加成，以及榮譽商店優先購買。" />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
   <script type="application/ld+json" id="seo-jsonld">
+<<<<<<< HEAD
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/tc/html/horde.html#webpage", "name": "TopHeroes Guide - Horde Legendary Heroes", "url": "https://www.guidetopheroes.com/tc/html/horde.html", "inLanguage": "zh", "description": "TopHeroes Horde heroes guide with lineups, roles, and picks.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
   <script type="application/ld+json" id="seo-breadcrumbs">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.guidetopheroes.com/tc/index.html"}, {"@type": "ListItem", "position": 2, "name": "Horde", "item": "https://www.guidetopheroes.com/tc/html/horde.html"}]}
+=======
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/guild-race.html#webpage", "name": "公會競賽", "url": "https://www.guidetopheroes.com/zh/html/guild-race.html", "inLanguage": "zh", "description": "公會競賽指南：玩法機制、推薦與避免的任務、獎勵節奏、S1 研究加成，以及榮譽商店優先購買。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+  </script>
+  <script type="application/ld+json" id="seo-breadcrumbs">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.guidetopheroes.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "公會競賽", "item": "https://www.guidetopheroes.com/zh/html/guild-race.html"}]}
+>>>>>>> 83ee8a42a2128e4dcfc309aae883160bf5d72b30
   </script>
 </head>
 <body>
-<div id="navbar"></div>
-<script src="/nav-loader.js" defer></script>
 
-<main>
-  <section id="horde-legendary">
-    <h2 class="page-title">Horde — Legendary Heroes</h2>
-    <p class="lead">Overview of the main Legendary Horde heroes — their role, skills, and recommendations.</p>
-    <p class="lead">Related: <a href="heroes.html">All heroes</a>, <a href="league.html">League</a>, <a href="nature.html">Nature</a>.</p>
+  <!-- NAVBAR standard -->
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
 
-    <div class="card">
-      <h3>Best lineups — Horde</h3>
-      <div class="lineup-wrapper">
-        <div class="lineup-card">
-          <h3>Main</h3>
-          <div class="lineup-row">
-            <div class="lineup-label">Front</div>
-            <div class="lineup-heroes">
-              <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
-              <img src="/images/wanderer.png" alt="Wanderer" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="lineup-row">
-            <div class="lineup-label">Middle</div>
-            <div class="lineup-heroes">
-              <img src="/images/beastmaster.png" alt="Beastmaster" loading="lazy" decoding="async">
-              <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="lineup-row">
-            <div class="lineup-label">Back</div>
-            <div class="lineup-heroes">
-              <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
-              <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <p class="lineup-note">Note: keep Wanderer in the front row to benefit from his skill.</p>
-        </div>
+  <!-- ===== CONTENUTO ===== -->
+  <main class="content" itemscope itemtype="https://schema.org/Article">
+    <section class="page-header">
+      <h1 itemprop="headline">公會競賽</h1>
+      <p class="lead">玩法機制、哪些任務該優先（或避免）、獎勵節奏、S1 加成，以及榮譽商店該買什麼。</p>
+      <p class="muted">相關：<a href="guildboss.html">公會首領</a>、<a href="events.html">活動</a>、<a href="adventure.html">冒險</a>。</p>
+    </section>
 
-        <div class="lineup-card">
-          <h3>Damage focus (best vs bosses)</h3>
-          <div class="lineup-row">
-            <div class="lineup-label">Front</div>
-            <div class="lineup-heroes">
-              <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
-              <img src="/images/wanderer.png" alt="Wanderer" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="lineup-row">
-            <div class="lineup-label">Middle</div>
-            <div class="lineup-heroes">
-              <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
-              <img src="/images/wilderness.jpeg" alt="Wilderness Hunter" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="lineup-row">
-            <div class="lineup-label">Back</div>
-            <div class="lineup-heroes">
-              <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
-              <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <p class="lineup-note">Note: from the normal lineup, just switch Beastmaster with Wilderness Hunter. This is the best lineup for dealing damage.</p>
-        </div>
-      </div>
-    </div>
+    <!-- TOC per navigazione veloce -->
+    <nav class="toc" aria-label="On this page">
+      <h3>目錄</h3>
+      <ol>
+        <li><a href="#overview">概覽</a></li>
+        <li><a href="#recommended">你應該使用的任務</a></li>
+        <li><a href="#early-exclusive">前期稍後會出現的內容</a></li>
+        <li><a href="#save-for-others">留給 Arms Race / KvK</a></li>
+        <li><a href="#avoid">你永遠不該做的任務</a></li>
+        <li><a href="#rewards">獎勵</a></li>
+        <li><a href="#season1">S1 研究</a></li>
+        <li><a href="#honour-shop">榮譽商店</a></li>
+      </ol>
+    </nav>
 
-    <!-- Shaman -->
-    <div class="card">
-      <h3>Shaman</h3>
-      <div class="role">Healer</div>
-      <div class="hero">
-        <img src="/images/shaman.jpeg" alt="Shaman" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Healing Breeze</em>: Heals allies with the lowest HP.</li>
-            <li><em>Ancestor’s Soul</em>: Possesses the ally with the lowest HP, preventing death for a short time.</li>
-            <li><em>Rain Blessing</em>: Increases the healing effect of all allies.</li>
-            <li><em>Restorative Totem</em>: Summons a healing totem that restores HP.</li>
-            <li><em>Wolf Soul</em>: Summons 2 wolves.</li>
-          </ul>
-          <p>The first Horde healer you obtain. Great at the start, but replace her with <strong>Witch</strong> later on.</p>
-        </div>
-      </div>
-    </div>
+    <!-- Overview -->
+    <section class="card" id="overview">
+      <h2>概覽</h2>
+      <p>公會競賽是遊戲中最重要的活動之一。盡量拿到越多榮譽點數越好。榮譽商店是遊戲裡最棒的商店之一。 
+你透過完成任務來獲得點數。開始時你會免費拿到 9 張任務券，每天還可以再買 15 張。我們建議你每天至少買前 5 張任務券，因為真的很便宜（300 鑽石）。接下來的 10 張任務券每張也都是 300 鑽。當你有很多任務（最好只做金色）能完成時，也可以把這些任務券買滿。很值得多買，因為榮譽商店真的很強。我們建議公會提醒大家：只在打算很快完成時才接任務。如果有人卡住了，例如把訓練士兵任務卡好幾個小時，會拖慢整個公會。  
+你有 2 個只有你能用的專屬任務欄位。每 10 分鐘可以免費刷新其中一個專屬任務。如果你想，也可以花 100 鑽石立刻刷新，不用等冷卻。我們不建議這麼做，花費和抽到你需要任務的機率都不值得。更好的方式是買更多任務券。大多數專屬任務需要的資源更少。例如，專屬訓練士兵任務只需要訓練 400 名士兵就能完成；公會任務則需要訓練 500 名士兵。你甚至可以預存任務。如果你之後需要某個任務，你可以用免費刷新刷到它，先留著等到能完成時再做，同時你還可以一直刷新第二個專屬任務，直到刷到你想要的任務。重置後，你的專屬任務會刷新。如果你想在重置後用，也可以提前準備任務。在伺服器重置前先接下你想保留的任務，這樣它在重置後仍會保留。你可以放棄任務，而它仍會留在你的專屬任務欄位。這是一個為隔天準備任務的好方法。 
+大多數時候你需要運氣才能刷到你想要的任務，所以只靠專屬任務並不好。你必須找到最適合自己的方式，盡可能完成最多的金色任務。如果你願意花一點真錢，可以購買任務指定券（Task selection tickets）。這會讓公會競賽對你輕鬆很多。你會多出第 3 個專屬任務欄位，可以用指定券直接拿到你需要的任務。提醒：任務指定券只用在金色任務上。 
+不是所有任務都適合在公會競賽完成。不要用任務去做藍色任務。你可以很輕鬆完成紫色任務，而紫色給的點數是藍色的 3 倍。最好的做法是只做金色任務，因為它給的點數最多。</p>
 
-    <!-- Swordmaster -->
-    <div class="card">
-      <h3>Swordmaster</h3>
-      <div class="role">Tank</div>
-      <div class="hero">
-        <img src="/images/swordmaster.jpeg" alt="Swordmaster" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Whirlwind</em>: Attacks surrounding enemies.</li>
-            <li><em>Blade Storm</em>: Spins and deals damage.</li>
-            <li><em>Battle Will</em>: Prevents death once by staying at 1 HP for a short time.</li>
-            <li><em>Crazy Cut</em>: Deals damage and gains damage reduction.</li>
-            <li><em>Suppression</em>: Increases damage based on missing HP.</li>
-          </ul>
-          <p>A tank that also deals some damage. Replace him with <strong>Desert Prince</strong> as soon as possible.</p>
-        </div>
-      </div>
-    </div>
+      <figure>
+        <img src="/images/guildrace1.png" alt="Guild Race overview example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
 
-    <!-- Barbarian -->
-    <div class="card">
-      <h3>Barbarian</h3>
-      <div class="role">Tank</div>
-      <div class="hero">
-        <img src="/images/barbarian.jpeg" alt="Barbarian" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Fortified Defense</em>: Grants a shield that absorbs damage.</li>
-            <li><em>Taunt</em>: Forces enemies to attack this hero.</li>
-            <li><em>Insatiable Hunger</em>: Increases HP and Attack.</li>
-            <li><em>Savage Strike</em>: Deals damage and stuns enemies.</li>
-            <li><em>Eye of Insight</em>: Reduces skill damage taken.</li>
-            <li><em>Horde Defender</em>: Increases damage reduction for all Horde heroes in the queue.</li>
-          </ul>
-          <p>A solid early tank. Replace him later with <strong>Desert Prince</strong> or <strong>Beastmaster</strong>. Still useful in late game, especially against Nature teams.</p>
-        </div>
-      </div>
-    </div>
+    <!-- Recommended tasks -->
+    <section class="card" id="recommended">
+      <h2>你應該在公會競賽使用的任務</h2>
+      <ul>
+        <li>訓練士兵任務（只做金色任務。最容易完成之一。每天至少能完成 2 個任務）</li>
+        <li>建築任務（只做金色任務。不要把建築收集起來等任務。這是一個很棒的任務，你可以用它等待刷到專屬金色任務）</li>
+        <li>研究任務（前中期這個任務會更難完成，因為你需要的研究加成通常不是做 1～2 個研究就能完成。後期當你做一次研究需要好幾天時，單次研究提供的影響力就足夠讓你只用一個研究完成任務。記得一定要提前準備這個任務，不然研究完成了但你沒有任務可交，你會浪費大量研究時間）</li>
+        <li>花鑽石任務（只用專屬任務，且盡量只做金色任務。每週你會有很多想花鑽石的地方。先等到這個任務再去買商店道具。先買你每天本來就要買的東西，之後再用每週商店補足花費來完成任務。當你在花鑽石時。）</li>
+        <li>從禮包購買鑽石（如果你會在遊戲內花真錢，請等這個任務。這是唯一一個相比其他金色或紫色任務給更多點數的任務。你只能在專屬任務中刷到。買之前先確認你能完成任務；如果少於 1,6k 鑽石，用紫色任務會比浪費它更好。）</li>
+        <li>發起集結並擊殺首領（只做紫色任務。當你任務券太多、想清掉一些任務時，這是很好完成的任務）</li>
+        <li>在世界地圖擊殺怪物（只做紫色任務。這是最簡單、也是唯一不需要花資源就能完成的任務。你可以透過加入集結來完成，這樣你不需要任何成本。和上一個一樣，當你還有任務但做不了金色任務時就用它。）</li>
+      </ul>
 
-    <!-- Warlock -->
-    <div class="card">
-      <h3>Warlock</h3>
-      <div class="role">Support / Damage Dealer</div>
-      <div class="hero">
-        <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Whispered Shadows</em>: Deals damage and heals allies.</li>
-            <li><em>Bloodlust</em>: Grants HP drain and boosts allies’ attack speed.</li>
-            <li><em>Shadow Rite</em>: Increases HP of all Horde heroes.</li>
-            <li><em>Debilitation</em>: Reduces enemies’ skill damage and damage reduction.</li>
-            <li><em>Malicious Passion</em>: Increases damage of allied Horde heroes.</li>
-          </ul>
-          <p>A strong support hero. Provides buffs and debuffs, very valuable in end game PvE as well.</p>
-        </div>
-      </div>
-    </div>
+      <figure>
+        <img src="/images/guildrace2.png" alt="Recommended tasks example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
 
-    <!-- Wilderness -->
-    <div class="card">
-      <h3>Wilderness</h3>
-      <div class="role">Damage Dealer</div>
-      <div class="hero">
-        <img src="/images/wilderness.jpeg" alt="Wilderness" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Barb</em>: Increases normal attacks and applies bleeding.</li>
-            <li><em>Fatal Prayer</em>: Deals damage, knocks back enemies, and increases attack.</li>
-            <li><em>Hunter</em>: Increases attack.</li>
-            <li><em>Impulse Instinct</em>: Increases attack speed.</li>
-            <li><em>Tradition</em>: Increases Horde heroes’ damage in the queue.</li>
-          </ul>
-          <p>The first Horde damage dealer. Replace her with <strong>Wu Kong</strong> or <strong>Desert Maiden</strong> as soon as possible.</p>
-        </div>
-      </div>
-    </div>
+    <!-- Early game exclusive tasks -->
+    <section class="card" id="early-exclusive">
+      <h2>前期稍後會出現的內容</h2>
+      <p>在前期稍後，你也會拿到這些任務，但只會出現在專屬任務中。這些任務同樣會比一般金色任務多給一些點數。</p>
+      <ul>
+        <li>消耗傳奇聖物碎片（第 3 天與第 4 天可刷到。只做金色任務。請把傳奇聖物碎片存起來，只在公會競賽刷到這個任務時再用。）</li>
+        <li>消耗魔法石（第 3 天與第 4 天的專屬任務中。只做金色任務。把魔法石存起來，只在拿到任務時用。你也可以在 Trade Store – Resources 用魔法石兌換祕法水晶來完成任務。你會一直缺祕法水晶，所以應該用交易商店把魔法石換成它。這樣你每週至少能完成三個任務。）</li>
+        <li>使用勳章（第 5、6、7 天在專屬任務中。只做金色任務。把勳章存著，只在公會競賽配合任務使用。唯一例外是勳章商店：在沒有公會競賽的週，你可以用勳章換加速道具。）</li>
+        <li>提升領主裝備戰力（第 5、6、7 天的專屬任務中。只做金色任務。把領主裝備升級留到拿到任務時再做，其他日子不要升級。 
+我們的小建議：當你有 3 件或 6 件領主裝備達到同一等級時，會獲得一次加成。你可以利用這點，因為光是加成帶來的戰力提升就可能直接完成一個任務。你可以先升級一件裝備觸發加成，藉此完成任務。）</li>
+      </ul>
 
-    <!-- Soulmancer -->
-    <div class="card">
-      <h3>Soulmancer</h3>
-      <div class="role">Support</div>
-      <div class="hero">
-        <img src="/images/soulmancer.jpeg" alt="Soulmancer" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Soul Link</em>: Shares damage with an ally and becomes immune to part of it.</li>
-            <li><em>Soul Recall</em>: Upon near-death, deals damage and cannot die for a while, then perishes.</li>
-            <li><em>Soul Empowerment</em>: Increases HP of Horde heroes in the queue.</li>
-            <li><em>Soul Freeze</em>: Deals damage and may freeze the target.</li>
-            <li><em>Pain Diffusion</em>: Triggers Soul Freeze immediately when HP falls below a threshold.</li>
-          </ul>
-          <p>A support hero that scales well with stars. Extends survivability of the team, widely used in late game.</p>
-        </div>
-      </div>
-    </div>
+      <figure>
+        <img src="/images/guildrace3.png" alt="Early game exclusive tasks example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
 
-    <!-- Desert Prince -->
-    <div class="card">
-      <h3>Desert Prince</h3>
-      <div class="role">Tank / Damage Dealer</div>
-      <div class="hero">
-        <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Royal Armor</em>: Grants a shield that absorbs damage.</li>
-            <li><em>Sand’s Blessing</em>: Gains extra HP and deals true damage based on max HP.</li>
-            <li><em>Royal Treasury</em>: Increases allies’ skill damage when Royal Armor is activated.</li>
-            <li><em>Scorching Scimitar</em>: Deals true damage.</li>
-            <li><em>Eye of Insight</em>: Reduces skill damage taken.</li>
-            <li><em>Enthusiast</em>: Each Legendary+ Horde hero in queue increases enemy death/wounded ratio.</li>
-          </ul>
-          <p>One of the best heroes in the game. A tank that also deals excellent damage — a <strong>must-have</strong> for every Horde lineup. Replace <strong>Swordmaster</strong> (or <strong>Barbarian</strong> if they’re at similar stars) as soon as you get him.</p>
-        </div>
-      </div>
-    </div>
+    <!-- Tasks to save for other events -->
+    <section class="card" id="save-for-others">
+      <h2>這些任務你可以做，但我們建議留給 Arms Race 和 Kingdom vs Kingdom</h2>
+      <ul>
+        <li>使用研究或建造加速（我們不建議你做這個任務。完成它需要太多加速。與其做它，不如做一些簡單的紫色任務）</li>
+        <li>消耗傳奇碎片（如果你想立刻升一個英雄，你可以做這個任務。更好的做法是把傳奇碎片存起來，用在 Arms Race 或 Kingdom vs Kingdom）</li>
+      </ul>
+    </section>
 
-    <!-- Storm Maiden -->
-    <div class="card">
-      <h3>Storm Maiden</h3>
-      <div class="role">Damage Dealer</div>
-      <div class="hero">
-        <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Whirlwind Feathers</em>: Deals damage, later increases speed as well.</li>
-            <li><em>Lightning Storm</em>: Deals damage and launches enemies into the air.</li>
-            <li><em>Wind of Freedom</em>: Grants dodge to all heroes in queue.</li>
-            <li><em>Tornado</em>: Channels a whirlwind that blocks projectiles, then deals damage.</li>
-            <li><em>Wind Field</em>: Each Tornado cast increases team attack.</li>
-            <li><em>War Messenger</em>: Increases soldier attack for every 1000 soldiers deployed.</li>
-          </ul>
-          <p>The first Mythic hero you obtain. A top damage dealer that allows your team to compete with other factions. Replace a support or weaker DD with her immediately.</p>
-        </div>
-      </div>
-    </div>
+    <!-- Tasks to avoid -->
+    <section class="card" id="avoid">
+      <h2>你永遠不該做的任務</h2>
+      <ul>
+        <li>在酒館招募英雄（只有紫色任務可用，所以我們建議永遠不要做。你打怪也能拿到同樣的榮譽點數。把酒館券留給 Arms Race 和 Kingdom vs Kingdom）</li>
+      </ul>
 
-    <!-- Witch -->
-    <div class="card">
-      <h3>Witch</h3>
-      <div class="role">Healer / Support</div>
-      <div class="hero">
-        <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>Skills</strong>
-          <ul>
-            <li><em>Dark Healing</em>: Heals allies.</li>
-            <li><em>Dread Golem</em>: Summons a golem that fears enemies and deals some damage.</li>
-            <li><em>Curse Fire</em>: After Dark Healing, grants damage reduction and healing to random allies.</li>
-            <li><em>Dark Magic Boost</em>: Boosts allies’ attack and grants a temporary stun barrier.</li>
-            <li><em>Guardian Messenger</em>: Increases soldiers’ HP per 1000 deployed.</li>
-          </ul>
-          <p>A powerful healer with support utility. Replace <strong>Shaman</strong> with her as soon as you get her.</p>
-        </div>
-      </div>
-    </div>
+      <figure>
+        <img src="/images/guildrace4.png" alt="Task to avoid example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
 
-  </section>
-</main>
+    <!-- Rewards -->
+    <section class="card" id="rewards">
+      <h2>獎勵</h2>
+      <p>你也會依照本週個人與公會累積的榮譽點數獲得一些獎勵。每次公會競賽你應該至少拿到 7,000 榮譽點數，這樣你就能拿到最高獎勵（在 S1 研究之前，最高獎勵上限是 6,000 點）。只要投入一點時間，你很容易就能超過 10,000 點。就像前面說的，盡可能拿到更多榮譽點數，這樣你就能在榮譽商店買更多東西。當你每天至少買前 5 張任務券時，一週你總共會有 44 個任務可以完成。</p>
 
+<<<<<<< HEAD
 <div id="footer"></div>
 <script>
   fetch("/tc/html/footer.html")
     .then(res=>res.text())
     .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>
+=======
+      <figure>
+        <img src="/images/guildrace5.png" alt="Rewards example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+>>>>>>> 83ee8a42a2128e4dcfc309aae883160bf5d72b30
 
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
-  function addIcon(el,word){
-    const img=document.createElement('img');
-    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
-    el.appendChild(img);
-  }
-  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
-});
-</script>
+    <!-- Season 1 research -->
+    <section class="card" id="season1">
+      <h2>Season 1 會在「世界之樹之影」研究分支中提供兩個很棒的公會競賽升級</h2>
+      <p>第一個是：個人榮譽點數達到 6,500 與 7,000，以及公會榮譽點數達到 65,000 與 70,000 時，會有額外獎勵。 
+第二個研究在研究樹更下方一些，會提升你完成每個任務所獲得的榮譽點數。 
+你應該盡快把這兩個研究升級點出來。</p>
+    </section>
+
+    <!-- Honour shop -->
+    <section class="card" id="honour-shop">
+      <h2>榮譽商店可以買什麼</h2>
+      <p>榮譽商店中一些重要的商品會在遊戲稍後階段加入：</p>
+      <ul>
+        <li>靈魂石 / 6,000 榮譽點（永遠買你主玩陣營的靈魂石。對 F2P 來說，這是你獲得英雄靈魂石的主要來源）</li>
+        <li>通用部隊外觀 / 傳奇 12,000 榮譽點 / 史詩 1,200 榮譽點</li>
+        <li>傳奇通用英雄碎片 / 每個 300</li>
+        <li>通用專屬裝備碎片 / 每個 400</li>
+        <li>傳奇通用聖物碎片 / 每個 800</li>
+        <li>巨龍精華 / 每個 120（後期你會需要大量巨龍精華，所以這是多拿一些的好來源）</li>
+      </ul>
+
+      <figure>
+        <img src="/images/guildrace6.png" alt="Honour shop example" loading="lazy" / decoding="async">
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER (richiamo standard) -->
+  <div id="footer"></div>
+  <script>
+    fetch("/zh/html/footer.html")
+      .then(res => res.text())
+      .then(html => { document.getElementById("footer").innerHTML = html; })
+      .catch(console.error);
+  </script>
 </body>
 </html>

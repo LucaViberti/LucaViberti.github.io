@@ -2,7 +2,7 @@
 const LangSwitcher = {
   STORAGE_KEY: 'topheroes-lang',
   DEFAULT_LANG: 'en',
-  LANGS: ['en', 'de', 'ko', 'vi', 'zh', 'ja'],
+  LANGS: ['en', 'de', 'ko', 'vi', 'zh', 'tc', 'ja'],
   
   // Rileva la lingua corrente dal path
   getCurrentLang: function() {
@@ -11,6 +11,7 @@ const LangSwitcher = {
     if (path.startsWith('/ko/')) return 'ko';
     if (path.startsWith('/vi/')) return 'vi';
     if (path.startsWith('/zh/')) return 'zh';
+    if (path.startsWith('/tc/')) return 'tc';
     if (path.startsWith('/ja/')) return 'ja';
     return 'en';
   },
@@ -44,6 +45,8 @@ const LangSwitcher = {
       basePath = basePath.slice(3);
     } else if (basePath.startsWith('/zh/')) {
       basePath = basePath.slice(3);
+    } else if (basePath.startsWith('/tc/')) {
+      basePath = basePath.slice(3);
     } else if (basePath.startsWith('/ja/')) {
       basePath = basePath.slice(3);
     }
@@ -69,6 +72,11 @@ const LangSwitcher = {
         return '/zh/index.html';
       }
       return '/zh' + (basePath.startsWith('/') ? basePath : '/' + basePath);
+    } else if (targetLang === 'tc') {
+      if (basePath === '' || basePath === '/index.html' || basePath === '/') {
+        return '/tc/index.html';
+      }
+      return '/tc' + (basePath.startsWith('/') ? basePath : '/' + basePath);
     } else if (targetLang === 'ja') {
       if (basePath === '' || basePath === '/index.html' || basePath === '/') {
         return '/ja/index.html';
@@ -96,6 +104,7 @@ const LangSwitcher = {
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
     const isZH = currentLang === 'zh';
+    const isTC = currentLang === 'tc';
     const isJA = currentLang === 'ja';
     
     return `
@@ -117,7 +126,11 @@ const LangSwitcher = {
       </a>
       <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn ${isZH ? 'active' : ''}">
         <span class="lang-flag">🇨🇳</span>
-        <span>中文</span>
+        <span>中文 (简)</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('tc'); return false;" class="lang-btn ${isTC ? 'active' : ''}">
+        <span class="lang-flag">🇭🇰</span>
+        <span>中文 (繁)</span>
       </a>
       <a href="#" onclick="LangSwitcher.switchLanguage('ja'); return false;" class="lang-btn ${isJA ? 'active' : ''}">
         <span class="lang-flag">🇯🇵</span>
@@ -146,6 +159,7 @@ const LangSwitcher = {
     const isKO = currentLang === 'ko';
     const isVI = currentLang === 'vi';
     const isZH = currentLang === 'zh';
+    const isTC = currentLang === 'tc';
     const isJA = currentLang === 'ja';
     
     const container = document.createElement('div');
@@ -245,6 +259,10 @@ const LangSwitcher = {
       <a href="#" onclick="LangSwitcher.switchLanguage('zh'); return false;" class="lang-btn-fixed ${isZH ? 'active' : ''}">
         <span class="lang-flag">🇨🇳</span>
         <span>ZH</span>
+      </a>
+      <a href="#" onclick="LangSwitcher.switchLanguage('tc'); return false;" class="lang-btn-fixed ${isTC ? 'active' : ''}">
+        <span class="lang-flag">🇭🇰</span>
+        <span>TC</span>
       </a>
       <a href="#" onclick="LangSwitcher.switchLanguage('ja'); return false;" class="lang-btn-fixed ${isJA ? 'active' : ''}">
         <span class="lang-flag">🇯🇵</span>

@@ -321,3 +321,6 @@ const LangSwitcher = {
     if (existing) existing.remove();
   }
 };
+
+// Espone il selettore in modo affidabile per i loader esterni.
+window.LangSwitcher = LangSwitcher;

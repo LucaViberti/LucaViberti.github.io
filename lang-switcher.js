@@ -3,16 +3,21 @@ const LangSwitcher = {
   STORAGE_KEY: 'topheroes-lang',
   DEFAULT_LANG: 'en',
   LANGS: ['en', 'de', 'ko', 'vi', 'zh', 'tc', 'ja'],
+
+  hasLangPrefix: function(pathname, lang) {
+    const path = (pathname || '').toLowerCase();
+    return path === `/${lang}` || path.startsWith(`/${lang}/`);
+  },
   
   // Rileva la lingua corrente dal path
   getCurrentLang: function() {
-    const path = window.location.pathname;
-    if (path.startsWith('/de/')) return 'de';
-    if (path.startsWith('/ko/')) return 'ko';
-    if (path.startsWith('/vi/')) return 'vi';
-    if (path.startsWith('/zh/')) return 'zh';
-    if (path.startsWith('/tc/')) return 'tc';
-    if (path.startsWith('/ja/')) return 'ja';
+    const path = window.location.pathname.toLowerCase();
+    if (this.hasLangPrefix(path, 'de')) return 'de';
+    if (this.hasLangPrefix(path, 'ko')) return 'ko';
+    if (this.hasLangPrefix(path, 'vi')) return 'vi';
+    if (this.hasLangPrefix(path, 'zh')) return 'zh';
+    if (this.hasLangPrefix(path, 'tc')) return 'tc';
+    if (this.hasLangPrefix(path, 'ja')) return 'ja';
     return 'en';
   },
   
@@ -37,17 +42,17 @@ const LangSwitcher = {
     
     // Rimuovi i prefissi di lingua dal path
     let basePath = currentPath;
-    if (basePath.startsWith('/de/')) {
+    if (this.hasLangPrefix(basePath, 'de')) {
       basePath = basePath.slice(3);
-    } else if (basePath.startsWith('/ko/')) {
+    } else if (this.hasLangPrefix(basePath, 'ko')) {
       basePath = basePath.slice(3);
-    } else if (basePath.startsWith('/vi/')) {
+    } else if (this.hasLangPrefix(basePath, 'vi')) {
       basePath = basePath.slice(3);
-    } else if (basePath.startsWith('/zh/')) {
+    } else if (this.hasLangPrefix(basePath, 'zh')) {
       basePath = basePath.slice(3);
-    } else if (basePath.startsWith('/tc/')) {
+    } else if (this.hasLangPrefix(basePath, 'tc')) {
       basePath = basePath.slice(3);
-    } else if (basePath.startsWith('/ja/')) {
+    } else if (this.hasLangPrefix(basePath, 'ja')) {
       basePath = basePath.slice(3);
     }
     

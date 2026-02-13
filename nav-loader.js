@@ -1,4 +1,9 @@
 (function () {
+  function hasLangPrefix(pathname, lang) {
+    const p = (pathname || '').toLowerCase();
+    return p === `/${lang}` || p.startsWith(`/${lang}/`);
+  }
+
   function ensureLangSwitcher() {
     return new Promise((resolve) => {
       if (window.LangSwitcher) return resolve(true);
@@ -21,23 +26,23 @@
 
   function getLangFromPath() {
     const p = (window.location.pathname || '').toLowerCase();
-    if (p.startsWith('/ko/')) return 'ko';
-    if (p.startsWith('/de/')) return 'de';
-    if (p.startsWith('/vi/')) return 'vi';
-    if (p.startsWith('/tc/')) return 'tc';
-    if (p.startsWith('/zh/')) return 'zh';
-    if (p.startsWith('/ja/')) return 'ja';
+    if (hasLangPrefix(p, 'ko')) return 'ko';
+    if (hasLangPrefix(p, 'de')) return 'de';
+    if (hasLangPrefix(p, 'vi')) return 'vi';
+    if (hasLangPrefix(p, 'tc')) return 'tc';
+    if (hasLangPrefix(p, 'zh')) return 'zh';
+    if (hasLangPrefix(p, 'ja')) return 'ja';
     return 'en';
   }
 
   function stripLangPrefix(pathname) {
     let p = pathname || '';
-    if (p.startsWith('/de/')) return p.slice(3);
-    if (p.startsWith('/ko/')) return p.slice(3);
-    if (p.startsWith('/vi/')) return p.slice(3);
-    if (p.startsWith('/tc/')) return p.slice(3);
-    if (p.startsWith('/zh/')) return p.slice(3);
-    if (p.startsWith('/ja/')) return p.slice(3);
+    if (hasLangPrefix(p, 'de')) return p.slice(3);
+    if (hasLangPrefix(p, 'ko')) return p.slice(3);
+    if (hasLangPrefix(p, 'vi')) return p.slice(3);
+    if (hasLangPrefix(p, 'tc')) return p.slice(3);
+    if (hasLangPrefix(p, 'zh')) return p.slice(3);
+    if (hasLangPrefix(p, 'ja')) return p.slice(3);
     return p;
   }
 
@@ -179,6 +184,7 @@
       de: 'de',
       ko: 'ko',
       vi: 'vi',
+      tc: 'zh-Hant',
       zh: 'zh',
       ja: 'ja'
     };
@@ -212,6 +218,7 @@
       de: 'de_DE',
       ko: 'ko_KR',
       vi: 'vi_VN',
+      tc: 'zh_TW',
       zh: 'zh_CN',
       ja: 'ja_JP'
     };
@@ -237,7 +244,7 @@
       '@id': canonicalUrl + '#webpage',
       name: document.title,
       url: canonicalUrl,
-      inLanguage: currentLang,
+      inLanguage: ({ tc: 'zh-Hant' }[currentLang] || currentLang),
       description: description,
       image: ogImageUrl,
       isPartOf: {
@@ -367,7 +374,14 @@
     const navPath = getNavPath(lang);
 
     try {
-      const res = await fetch(navPath);
+      let res = await fetch(navPath);
+      if (!res.ok && navPath !== '/html/nav.html') {
+        console.warn(`Navbar not found at ${navPath}, fallback to English nav.`);
+        res = await fetch('/html/nav.html');
+      }
+      if (!res.ok) {
+        throw new Error(`Navbar request failed with status ${res.status}`);
+      }
       const html = await res.text();
       navContainer.innerHTML = html;
 

@@ -140,4 +140,27 @@
 
   nav { position: relative; z-index: 10; }
   nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  nav .has-flyout { position: relative; display: flex; align-items: center; }
+  nav .has-flyout > a { flex: 1; }
+  nav .has-flyout > .flyout-toggle {
+    background: transparent;
+    border: 0;
+    color: #d1d1d6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+  nav .has-flyout > .flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: none;
+    min-width: 220px;
+    z-index: 1200;
+  }
+  nav .has-flyout:hover > .flyout,
+  nav .has-flyout.open > .flyout { display: block; }
 </style>

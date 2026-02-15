@@ -216,13 +216,16 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 /* 모바일에서 카드 사이 구분 */
 @media (max-width: 1023px){
   .th-beginner .section-card + .section-card { margin-top: 8px; }
-}
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
 
 /* 섹션 번호 태그(장식용) */
 .th-beginner .kicker {
   display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
   text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
   padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
+  .th-beginner .content {
+    min-width: 0;
+  }
 }
 
 /* 맨 위로 링크 */
@@ -286,7 +289,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
   <div class="layout">
     <!-- 데스크톱에서 고정되는 목차 -->
-    <nav class="toc" aria-label="이 페이지에서">
+    <aside class="toc" aria-label="이 페이지에서">
       <h3>목차</h3>
       <ol>
         <li><a href="#intro">소개 및 첫 번째 단계</a></li>
@@ -306,7 +309,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <li><a href="#worldmap">월드 맵 – 적, 자원, 연합 공격</a></li>
         <li><a href="#conclusion">일반적인 결론</a></li>
       </ol>
-    </nav>
+    </aside>
 
     <!-- 오른쪽 컬럼: 콘텐츠 카드 -->
     <div class="content">
@@ -521,7 +524,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
 <div id="footer"></div>
 <script>
-  fetch("/html/footer.html")
+  fetch("/ko/html/footer.html")
     .then(res => res.text())
     .then(html => { document.getElementById("footer").innerHTML = html; });
 </script>

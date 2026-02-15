@@ -138,12 +138,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 }
 @media (min-width: 1024px){
   .th-beginner .layout {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
     align-items: start;
   }
   .th-beginner .toc {
     position: sticky; top: 20px;
     margin: 0; /* moved into grid, no extra gap */
+  }
+  .th-beginner .content {
+    min-width: 0;
   }
   
 }
@@ -286,7 +289,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
   <div class="layout">
     <!-- Sticky TOC on desktop -->
-    <nav class="toc" aria-label="On this page">
+    <aside class="toc" aria-label="On this page">
       <h3>Contents</h3>
       <ol>
         <li><a href="#intro">Introduction and First Steps</a></li>
@@ -306,7 +309,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <li><a href="#worldmap">World Map – Enemy, Resources, Rally</a></li>
         <li><a href="#conclusion">General Conclusion</a></li>
       </ol>
-    </nav>
+    </aside>
 
     <!-- Right column: content cards -->
     <div class="content">

@@ -138,12 +138,15 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 }
 @media (min-width: 1024px){
   .th-beginner .layout {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
     align-items: start;
   }
   .th-beginner .toc {
     position: sticky; top: 20px;
     margin: 0; /* moved into grid, no extra gap */
+  }
+  .th-beginner .content {
+    min-width: 0;
   }
   
 }
@@ -286,7 +289,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
   <div class="layout">
     <!-- Sticky TOC on desktop -->
-    <nav class="toc" aria-label="On this page">
+    <aside class="toc" aria-label="このページ内">
       <h3>目次</h3>
       <ol>
         <li><a href="#intro">はじめに・最初のステップ</a></li>
@@ -306,7 +309,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
         <li><a href="#worldmap">ワールドマップ：敵・資源・集結</a></li>
         <li><a href="#conclusion">総まとめ</a></li>
       </ol>
-    </nav>
+    </aside>
 
     <!-- Right column: content cards -->
     <div class="content">
@@ -521,7 +524,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 
 <div id="footer"></div>
 <script>
-  fetch("/html/footer.html")
+  fetch("/ja/html/footer.html")
     .then(res => res.text())
     .then(html => { document.getElementById("footer").innerHTML = html; });
 </script>

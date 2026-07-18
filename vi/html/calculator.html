@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="vi">
 <head>
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
 
   <meta charset="UTF-8">
-  <title>Calcolatore punti Rush Events</title>
+  <title>Máy tính điểm Rush Events</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -53,7 +53,7 @@
       border-top: 1px solid #ccc;
     }
   </style>
-  <meta name="description" content="Calcolatore punti Rush Events - TopHeroes Guide." />
+  <meta name="description" content="Máy tính điểm Rush Events - TopHeroes Guide." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://www.guidetopheroes.com/vi/html/calculator.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/calculator.html" />
@@ -64,8 +64,8 @@
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/calculator.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/calculator.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/calculator.html" />
-  <meta property="og:title" content="Calcolatore punti Rush Events" />
-  <meta property="og:description" content="Calcolatore punti Rush Events - TopHeroes Guide." />
+  <meta property="og:title" content="Máy tính điểm Rush Events" />
+  <meta property="og:description" content="Máy tính điểm Rush Events - TopHeroes Guide." />
   <meta property="og:url" content="https://www.guidetopheroes.com/vi/html/calculator.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TopHeroes Guide" />
@@ -79,79 +79,72 @@
   <meta property="og:locale:alternate" content="zh_TW" />
   <meta property="og:locale:alternate" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Calcolatore punti Rush Events" />
-  <meta name="twitter:description" content="Calcolatore punti Rush Events - TopHeroes Guide." />
+  <meta name="twitter:title" content="Máy tính điểm Rush Events" />
+  <meta name="twitter:description" content="Máy tính điểm Rush Events - TopHeroes Guide." />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/vi/html/calculator.html#webpage", "name": "Calcolatore punti Rush Events", "url": "https://www.guidetopheroes.com/vi/html/calculator.html", "inLanguage": "vi", "description": "Calcolatore punti Rush Events - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/vi/html/calculator.html#webpage", "name": "Máy tính điểm Rush Events", "url": "https://www.guidetopheroes.com/vi/html/calculator.html", "inLanguage": "vi", "description": "Máy tính điểm Rush Events - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
 </head>
 <body>
-  <h1>Calcolatore punti Rush Events</h1>
-  <p class="description">Inserisci le quantità per ciascun elemento per calcolare i punti totali.</p>
+  <h1>Máy tính điểm Rush Events</h1>
+  <p class="description">Nhập số lượng cho từng mục để tính tổng điểm.</p>
   <div class="row">
-    <label for="books">Libri:</label>
+    <label for="books">Sách:</label>
     <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
     <span class="points" id="booksPoints">0</span>
-    <span class="formula">punti (x&nbsp;/&nbsp;10)</span>
+    <span class="formula">điểm (x&nbsp;/&nbsp;10)</span>
   </div>
   <div class="row">
-    <label for="essence">Essenza&nbsp;pet:</label>
+    <label for="essence">Tinh&nbsp;chất&nbsp;thú&nbsp;cưng:</label>
     <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
     <span class="points" id="essencePoints">0</span>
-    <span class="formula">punti (y&nbsp;&times;&nbsp;15)</span>
+    <span class="formula">điểm (y&nbsp;&times;&nbsp;15)</span>
   </div>
   <div class="row">
-    <label for="food">Cibo&nbsp;pet:</label>
+    <label for="food">Thức&nbsp;ăn&nbsp;thú&nbsp;cưng:</label>
     <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
     <span class="points" id="foodPoints">0</span>
-    <span class="formula">punti (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+    <span class="formula">điểm (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
   </div>
   <div class="row">
-    <label for="uncommon">Pet&nbsp;non&nbsp;comune:</label>
+    <label for="uncommon">Thú&nbsp;cưng&nbsp;không&nbsp;phổ&nbsp;biến:</label>
     <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
     <span class="points" id="uncommonPoints">0</span>
-    <span class="formula">punti (q&nbsp;&times;&nbsp;150)</span>
+    <span class="formula">điểm (q&nbsp;&times;&nbsp;150)</span>
   </div>
   <div class="row">
-    <label for="rare">Pet&nbsp;raro:</label>
+    <label for="rare">Thú&nbsp;cưng&nbsp;hiếm:</label>
     <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
     <span class="points" id="rarePoints">0</span>
-    <span class="formula">punti (r&nbsp;&times;&nbsp;900)</span>
+    <span class="formula">điểm (r&nbsp;&times;&nbsp;900)</span>
   </div>
-  <div id="total">Totale: 0 punti</div>
+  <div id="total">Tổng: 0 điểm</div>
 
   <script>
-    // Funzione per aggiornare i punti ogni volta che un campo cambia valore
     function updatePoints() {
-      // Leggi i valori degli input, convertendo eventuali stringhe vuote in 0
       const x = parseFloat(document.getElementById('books').value) || 0;
       const y = parseFloat(document.getElementById('essence').value) || 0;
       const z = parseFloat(document.getElementById('food').value) || 0;
       const q = parseFloat(document.getElementById('uncommon').value) || 0;
       const r = parseFloat(document.getElementById('rare').value) || 0;
 
-      // Calcola i punteggi individuali secondo le formule fornite
       const bookPoints = x / 10;
       const essencePoints = y * 15;
       const foodPoints = (z * 3) / 10;
       const uncommonPoints = q * 150;
       const rarePoints = r * 900;
 
-      // Aggiorna le colonne dei punti per ciascun elemento, con un decimale
       document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
       document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
       document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
       document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
       document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
 
-      // Calcola il totale sommando tutti i punteggi
       const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
-      // Aggiorna l'etichetta del totale
-      document.getElementById('total').textContent = 'Totale: ' + total.toFixed(1) + ' punti';
+      document.getElementById('total').textContent = 'Tổng: ' + total.toFixed(1) + ' điểm';
     }
 
-    // Inizializza i valori al caricamento della pagina
     updatePoints();
   </script>
 </body>

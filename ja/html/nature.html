@@ -9,237 +9,67 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes ガイド - Nature</title>
+
+  <title>TopHeroes Guide - ネイチャーヒーロー</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
+
   <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
+header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
+header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
+header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
+header .site-info{display:flex;flex-direction:column;align-items:center;}
+nav{width:100%;margin-top:10px;}
+nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+nav ul li{position:relative;}
+nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
+nav ul li a:hover{color:#fff;}
+nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
+nav ul li:hover ul{display:block;}
+nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
+nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
 
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+main{padding:40px 20px;max-width:1000px;margin:0 auto;}
+section{margin-bottom:40px;}
+footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
 
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
+header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
+header .tagline{color:#b0b6c7;}
+nav ul{gap:20px;}
+nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
+nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
+nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
+nav ul li ul li a{font-size:.85rem;}
+nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
+.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
+.lead{color:#4b5563;margin-bottom:28px;}
 
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
+.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
+.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
 
-nav {
-  width: 100%;
-  margin-top: 10px;
-}
+.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
+.hero .txt{flex:1 1 300px;min-width:260px;}
+.hero ul{margin:8px 0 0 18px;}
+.hero li{margin:2px 0;}
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+.lineup-wrapper{display:grid;gap:18px;}
+.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
+.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
+.lineup-row:last-of-type{border-bottom:none;}
+.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
+.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
+.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
 
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: #d1d1d6;
-  text-decoration: none;
-  padding: 10px 8px;
-  font-size: 0.85rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #FFFFFF;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1f1f21;
-  border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  margin: 0;
-}
-
-nav ul li ul li a {
-  display: block;
-  padding: 8px 20px;
-  color: #d1d1d6;
-  white-space: nowrap;
-}
-
-nav ul li ul li a:hover {
-  background: #2c2c2e;
-  color: #FFFFFF;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-.donation-section {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: #f5f5f7;
-  border-top: 1px solid #e5e5e5;
-}
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.donation-button:hover {
-  background: #2389b5;
-}
-
-
-/* Enhanced navigation styling */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-
-header .tagline {
-  color: #b0b6c7;
-}
-
-nav ul {
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #ccd0dd;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  padding: 12px 6px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-  border-bottom-color: #29abe0;
-}
-
-nav ul li ul {
-  background: #1c2133;
-  border: 1px solid #2b2f3a;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-nav ul li ul li a {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-nav ul li ul li a:hover {
-  background: #25314d;
-  color: #ffffff;
-}
-
-.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
-.hero-card{background:#fff;border:1px solid #e6e9ef;border-radius:10px;padding:18px;box-shadow:0 2px 6px rgba(0,0,0,.04);transition:box-shadow .2s}
-.hero-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
-.hero-name{margin:0 0 8px;font-size:1.15rem;color:#1e2541}
-.hero-desc{color:#6b7280;font-size:.92rem;margin-bottom:12px}
-.hero-meta{font-size:.88rem;color:#9ca3af}
-.hero-meta strong{color:#374151}
-.inline-code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:.92em;color:#111827}
-
-.best-lineup{ 
-  background:#f9fafb;
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-  padding:18px;
-  margin:24px 0;
-  box-shadow:0 1px 3px rgba(0,0,0,.04)
-}
-.best-lineup h3{
-  margin:0 0 12px;
-  color:#1f2937;
-  font-size:1.15rem
-}
-.best-lineup p{
-  margin:6px 0;
-  color:#4b5563;
-  font-size:.95rem
-}
-
-.container{max-width:1100px;margin:0 auto;padding:32px 20px}
-h1,h2{color:#1e2541}
-h1{font-size:2.2rem;margin-bottom:8px}
-h2{font-size:1.6rem;margin-top:36px;margin-bottom:14px;padding-bottom:6px;border-bottom:2px solid #e5e7eb}
-h3{font-size:1.2rem;margin-top:24px;color:#374151}
-p{color:#4b5563;margin-bottom:14px;line-height:1.7}
-ul,ol{color:#4b5563;line-height:1.7;margin-left:22px}
-a{color:#2563eb;text-decoration:none;transition:color .2s}
-a:hover{color:#1d4ed8}
-
+@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
   </style>
-  <meta name="description" content="TopHeroes ガイド - Nature - TopHeroes Guide." />
+
+  <meta name="description" content="TopHeroes Nature（ネイチャー）ヒーローガイド：おすすめ編成、役割、採用優先度と入れ替え目安。" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://www.guidetopheroes.com/ja/html/nature.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/nature.html" />
@@ -250,8 +80,9 @@ a:hover{color:#1d4ed8}
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/nature.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/nature.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/nature.html" />
-  <meta property="og:title" content="TopHeroes ガイド - Nature" />
-  <meta property="og:description" content="TopHeroes ガイド - Nature - TopHeroes Guide." />
+
+  <meta property="og:title" content="TopHeroes Guide - ネイチャーヒーロー" />
+  <meta property="og:description" content="TopHeroes Nature（ネイチャー）ヒーローガイド：おすすめ編成、役割、採用優先度と入れ替え目安。" />
   <meta property="og:url" content="https://www.guidetopheroes.com/ja/html/nature.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TopHeroes Guide" />
@@ -264,130 +95,293 @@ a:hover{color:#1d4ed8}
   <meta property="og:locale:alternate" content="vi_VN" />
   <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:locale:alternate" content="zh_TW" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes ガイド - Nature" />
-  <meta name="twitter:description" content="TopHeroes ガイド - Nature - TopHeroes Guide." />
+  <meta name="twitter:title" content="TopHeroes Guide - ネイチャーヒーロー" />
+  <meta name="twitter:description" content="TopHeroes Nature（ネイチャー）ヒーローガイド：おすすめ編成、役割、採用優先度と入れ替え目安。" />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/nature.html#webpage", "name": "TopHeroes ガイド - Nature", "url": "https://www.guidetopheroes.com/html/nature.html", "inLanguage": "ja", "description": "TopHeroes ガイド - Nature - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.guidetopheroes.com/html/nature.html#webpage","name":"TopHeroes Guide - ネイチャーヒーロー","url":"https://www.guidetopheroes.com/html/nature.html","inLanguage":"ja","description":"TopHeroes Nature（ネイチャー）ヒーローガイド：おすすめ編成、役割、採用優先度と入れ替え目安。","image":"https://www.guidetopheroes.com/images/og-image.svg","isPartOf":{"@type":"WebSite","name":"TopHeroes Guide","url":"https://www.guidetopheroes.com"}}
+  </script>
+
+  <script type="application/ld+json" id="seo-breadcrumbs">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.guidetopheroes.com/index.html"},{"@type":"ListItem","position":2,"name":"ネイチャー","item":"https://www.guidetopheroes.com/html/nature.html"}]}
   </script>
 </head>
+
 <body>
-<div id="navbar"></div>
-<script src="/nav-loader.js" defer></script>
+  <div id="navbar"></div>
+  <script src="/nav-loader.js" defer></script>
 
-<div class="container">
-  <h1>Nature</h1>
-  <p>Natureはバランス型の編成です。ヒーローの成長曲線が優秀で、ゲーム内でも屈指のサポートヒーローを擁します。トップ層のヒーローはTidecaller、Pixie、Monkで、エンドゲームでも安定した選択肢になります。編成の自由度が高く、サポート・火力・耐久をうまく融合できます。</p>
+  <main>
+    <section id="nature-heroes">
+      <h2 class="page-title">ネイチャー — レジェンド & ミシック ヒーロー</h2>
+      <p class="lead">ネイチャーの主要ヒーローについて、役割・主要スキル・採用や交代のタイミングをまとめています。</p>
+      <p class="lead">関連：<a href="heroes.html">全ヒーロー</a>、<a href="league.html">リーグ</a>、<a href="horde.html">ホード</a>。</p>
 
-  <div class="best-lineup">
-    <h3>おすすめ編成</h3>
-    <p><strong>メイン編成：</strong>前列：Monk、Altar Marshal｜中列：Pixie、Petalis｜後列：Forest Maiden、Tidecaller。</p>
-    <p><strong>火力重視編成：</strong>前列：Monk、Altar Marshal｜中列：Pixie、（入手できれば）Windwalker または Ne Zha｜後列：Tidecaller、Forest Maiden。</p>
-    <p><strong>補足：</strong>Tidecallerは（全陣営を含めて）ゲーム最強クラスのヒーローと言ってもいい存在です。Pixieはエンドゲームでも十分通用します。Forest Maidenは後半で強力なヒーラーになります。Windwalkerは強力なアタッカーですが、基本的にはNe Zhaに置き換えられます。Treeguard／Druid／Sageは序盤に使えますが、最終的には入れ替え推奨です。</p>
-  </div>
+      <div class="card">
+        <h3>おすすめ編成 — ネイチャー</h3>
+        <div class="lineup-wrapper">
 
-  <h2>Nature ヒーロー解説</h2>
+          <div class="lineup-card">
+            <h3>メイン</h3>
+            <div class="lineup-row">
+              <div class="lineup-label">前列</div>
+              <div class="lineup-heroes">
+                <img src="/images/monk.jpeg" alt="Monk" loading="lazy" decoding="async">
+                <img src="/images/altarmarshal.png" alt="Altar Marshal" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="lineup-row">
+              <div class="lineup-label">中列</div>
+              <div class="lineup-heroes">
+                <img src="/images/pixie.jpeg" alt="Pixie" loading="lazy" decoding="async">
+                <img src="/images/petalis.png" alt="Petalis" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="lineup-row">
+              <div class="lineup-label">後列</div>
+              <div class="lineup-heroes">
+                <img src="/images/forest.jpeg" alt="Forest Maiden" loading="lazy" decoding="async">
+                <img src="/images/tidecaller.jpeg" alt="Tidecaller" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <p class="lineup-note">メモ：サーバーにまだ Petalis がいない場合は、代わりに Windwalker を使ってください。</p>
+          </div>
 
-  <div class="hero-grid">
+          <div class="lineup-card">
+            <h3>火力重視（ネイチャー運用時のベスト）</h3>
+            <div class="lineup-row">
+              <div class="lineup-label">前列</div>
+              <div class="lineup-heroes">
+                <img src="/images/monk.jpeg" alt="Monk" loading="lazy" decoding="async">
+                <img src="/images/altarmarshal.png" alt="Altar Marshal" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="lineup-row">
+              <div class="lineup-label">中列</div>
+              <div class="lineup-heroes">
+                <img src="/images/pixie.jpeg" alt="Pixie" loading="lazy" decoding="async">
+                <img src="/images/petalis.png" alt="Petalis" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="lineup-row">
+              <div class="lineup-label">後列</div>
+              <div class="lineup-heroes">
+                <img src="/images/windwalker.jpeg" alt="Windwalker" loading="lazy" decoding="async">
+                <img src="/images/tidecaller.jpeg" alt="Tidecaller" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <p class="lineup-note">メモ：与ダメージは尖りませんが、ネイチャーを使うなら現状これがベストな選択肢です。</p>
+          </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Treeguard</h3>
-      <p class="hero-desc">最も基本的なNatureタンク。ステータスが低めで、スキル構成も古いです。</p>
-      <p class="hero-meta"><strong>運用：</strong>序盤のつなぎ。中盤までにMonkやSageへ置き換え。</p>
-    </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Druid</h3>
-      <p class="hero-desc">Natureの序盤ヒーラー。序盤は安定しますが、後半は伸び悩みます。</p>
-      <p class="hero-meta"><strong>運用：</strong>序盤〜中盤のヒーラー。最終的にはTidecallerに置き換え。</p>
-    </div>
+      <!-- Treeguard -->
+      <div class="card">
+        <h3>Treeguard</h3>
+        <div class="role">タンク</div>
+        <div class="hero">
+          <img src="/images/treeguard.jpeg" alt="Treeguard" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Growth</em>：最大HPを増加させ、被ダメージを軽減し、自身を回復。</li>
+              <li><em>Timber Shell</em>：被ダメージ軽減と最大HPを増加させ、回復。</li>
+              <li><em>Vine</em>：Growth 発動中、攻撃時に追加ダメージと毒を付与。</li>
+              <li><em>Titanwood Assault</em>：棘を召喚してダメージを与え、回復。</li>
+              <li><em>Vitality Surge</em>：ダメージを増加させ、回復。</li>
+            </ul>
+            <p>自己回復も持つ堅実な序盤タンク。後で <strong>Monk</strong> に交代しましょう。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Windwalker</h3>
-      <p class="hero-desc">火力が高いアタッカー。前線寄りの安定したダメージ源になります。</p>
-      <p class="hero-meta"><strong>運用：</strong>Ne Zha入手まで有用。もしくはPixie中心構成へ移行。</p>
-    </div>
+      <!-- Druid -->
+      <div class="card">
+        <h3>Druid</h3>
+        <div class="role">ヒーラー</div>
+        <div class="hero">
+          <img src="/images/druid.jpeg" alt="Druid" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Nature’s Blessing</em>：味方1体を回復。</li>
+              <li><em>Healing Rain</em>：複数の味方を回復。</li>
+              <li><em>Force of Nature</em>：ダメージを吸収するシールドを付与。</li>
+              <li><em>Nature’s Call</em>：Treeman を2体召喚。</li>
+              <li><em>Natural Affinity</em>：Treeman のHPを強化。</li>
+            </ul>
+            <p>Treeman を召喚する序盤のヒーラー。後々 <strong>Tidecaller</strong>、少なくとも <strong>Ne Zha</strong> に交代しましょう。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Forest Maiden</h3>
-      <p class="hero-desc">回復と支援バフを提供。序盤は弱いですが、エンドゲームでは強力です。</p>
-      <p class="hero-meta"><strong>運用：</strong>状況次第。終盤の多くの編成で活躍。</p>
-    </div>
+      <!-- Windwalker -->
+      <div class="card">
+        <h3>Windwalker</h3>
+        <div class="role">ダメージディーラー</div>
+        <div class="hero">
+          <img src="/images/windwalker.jpeg" alt="Windwalker" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Swift Arrow</em>：攻撃速度と通常攻撃ダメージを上昇させ、一定回数の射撃後に再装填。</li>
+              <li><em>Windwalker’s Blade</em>：最も近い敵を攻撃し、一瞬だけ被ダメージをブロック。</li>
+              <li><em>Favorable Wind</em>：通常攻撃が Swift Arrow のチャージを消費しないことがある。</li>
+              <li><em>Powerful Ricochet</em>：ダメージを与え、対象をスタン。</li>
+              <li><em>Preparation</em>：Swift Arrow の再装填速度を上昇。</li>
+            </ul>
+            <p>最初に手に入るネイチャーの火力枠。後で <strong>Ne Zha</strong> に交代しましょう。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Pixie</h3>
-      <p class="hero-desc">Natureの超強力アタッカー。エンドゲームまで十分に通用します。</p>
-      <p class="hero-meta"><strong>運用：</strong>主軸。育成コストは高いが投資価値あり。</p>
-    </div>
+      <!-- Forest Maiden -->
+      <div class="card">
+        <h3>Forest Maiden</h3>
+        <div class="role">サポート</div>
+        <div class="hero">
+          <img src="/images/forest.jpeg" alt="Forest Maiden" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Baa-Baa Charge</em>：羊を召喚し、ダメージとスタンを付与。</li>
+              <li><em>Sheepherd</em>：子羊を1体召喚。</li>
+              <li><em>Song of Life</em>：ユニットが死亡・生贄になるたびに、全ヒーローのHPを少し回復。</li>
+              <li><em>Shepherd’s Bell</em>：周囲の味方に被ダメージ軽減を付与。</li>
+              <li><em>Revenge</em>：ユニットが死亡・生贄になるたびに、全ヒーローが永続的にダメージ上昇を獲得。</li>
+            </ul>
+            <p>ユニット召喚と回復を兼ね備えた強力なサポート。終盤でも十分活躍できます。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Sage</h3>
-      <p class="hero-desc">耐久はそこそこ。Monk入手までの中盤タンクとしては十分です。</p>
-      <p class="hero-meta"><strong>運用：</strong>Monk（または上位タンク）入手まで安定枠。</p>
-    </div>
+      <!-- Pixie -->
+      <div class="card">
+        <h3>Pixie</h3>
+        <div class="role">ダメージディーラー</div>
+        <div class="hero">
+          <img src="/images/pixie.jpeg" alt="Pixie" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Root Absorption</em>：根を召喚してダメージを与え、攻撃力を奪う。</li>
+              <li><em>Sunflower Core</em>：コアを召喚し、敵にダメージとスタンを付与。</li>
+              <li><em>Nature’s Harmony</em>：生存しているネイチャーヒーロー1体につき被ダメージ軽減を獲得。</li>
+              <li><em>Bewildering Powder</em>：敵の命中率を低下させ、ダメージを付与。</li>
+              <li><em>Forest Ally</em>：ユニットが死亡・生贄になるたびに Sunflower Core のクールダウンが短縮。</li>
+            </ul>
+            <p>序盤から優秀な火力ヒーローで、ミシックヒーローが揃うまで強さを維持。終盤でも十分通用します。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Watcher</h3>
-      <p class="hero-desc">火力が弱く、ユーティリティも微妙。おすすめしません。</p>
-      <p class="hero-meta"><strong>運用：</strong>育成非推奨。ベンチ要員（または素材）。</p>
-    </div>
+      <!-- Sage -->
+      <div class="card">
+        <h3>Sage</h3>
+        <div class="role">タンク</div>
+        <div class="hero">
+          <img src="/images/sage.jpeg" alt="Sage" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Harmonic Balance</em>：被弾時に部分的なダメージ無効化と回復を獲得。</li>
+              <li><em>Transformation</em>：熊に変身し、HP・HP吸収・ダメージを獲得。</li>
+              <li><em>Power of the Wild</em>：Transformation 後、ダメージを吸収するシールドを獲得。</li>
+              <li><em>Serene State</em>：ダメージを与え、攻撃速度を低下させ、バフを1つ解除。</li>
+              <li><em>Robust Skin</em>：熊形態で戦闘不能になった場合、HPを残して元の姿に戻る。</li>
+            </ul>
+            <p>2人目に手に入るネイチャーのタンク。終盤まで編成に残しておきましょう。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Monk（Mythic）</h3>
-      <p class="hero-desc">Nature最強タンク。高い自己回復・被ダメ軽減・ユーティリティを兼ね備えます。</p>
-      <p class="hero-meta"><strong>運用：</strong>最適解タンク。優先育成。</p>
-      <p class="hero-meta"><strong>スキル：</strong></p>
-      <ul>
-        <li><span class="inline-code">Mountain Strike</span> – 範囲攻撃＋ノックバック＋シールド</li>
-        <li><span class="inline-code">Ultimate Zen Power</span> – 自身にシールド＋怒気（Rage）増加</li>
-      </ul>
-    </div>
+      <!-- Watcher -->
+      <div class="card">
+        <h3>Watcher</h3>
+        <div class="role">ダメージディーラー</div>
+        <div class="hero">
+          <img src="/images/watcher.jpeg" alt="Watcher" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Plant Purge</em>：旋風を発生させ、敵にダメージ・毒・低下を付与。</li>
+              <li><em>Wilt</em>：ダメージと毒を付与。</li>
+              <li><em>Slowdown</em>：通常攻撃が敵の攻撃速度を低下させる。</li>
+              <li><em>Crow Attack</em>：カウンター効果を獲得し、被弾時にダメージを与えつつ回復。</li>
+              <li><em>Wheatfield Watcher</em>：ネイチャーヒーローのダメージを増加。</li>
+            </ul>
+            <p>全体的に弱めのヒーロー。育成優先度は低く、覚醒不可・専用装備なしです。</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="hero-card">
-      <h3 class="hero-name">Tidecaller（Mythic）</h3>
-      <p class="hero-desc">ゲーム全体でも最強クラスと言われる存在。万能なヒーラー兼サポートで、ほぼどんな編成にも入ります。</p>
-      <p class="hero-meta"><strong>運用：</strong>ほぼ固定採用。全プレイヤー最優先級の育成対象。</p>
-      <p class="hero-meta"><strong>スキル：</strong></p>
-      <ul>
-        <li><span class="inline-code">Flowing Stream</span> – 低HPの味方を回復＋シールド</li>
-        <li><span class="inline-code">Ocean's Blessing</span> – 味方を復活＋継続回復</li>
-      </ul>
-      <p class="hero-meta" style="margin-top:8px;font-style:italic">TidecallerはNature編成の中核であり、混成（多陣営）チームでも最上位の選択肢です。</p>
-    </div>
+      <!-- Monk -->
+      <div class="card">
+        <h3>Monk</h3>
+        <div class="role">タンク</div>
+        <div class="hero">
+          <img src="/images/monk.jpeg" alt="Monk" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Mountain Strike</em>：ダメージを与え、最大HPを増加させ、ダメージ無効化を付与。</li>
+              <li><em>Ultimate Zen Power</em>：回避と被ダメージ軽減を付与し、被弾時にカウンター攻撃。</li>
+              <li><em>Thundering Kick</em>：Mountain Strike の後、一定確率でスタンを追加。</li>
+              <li><em>Fiery Breath</em>：ダメージを与え、状態異常無効を付与。</li>
+              <li><em>Merciful Victor</em>：ユニットが死亡・生贄になるとシールドを獲得。</li>
+              <li><em>Guardian Messenger</em>：出征兵1000体ごとに兵士HPを増加。</li>
+            </ul>
+            <p>最初のミシック級ネイチャーヒーロー。火力も出せる優秀なタンクで、<strong>Treeguard</strong> と交代しましょう。</p>
+          </div>
+        </div>
+      </div>
 
-  </div>
+      <!-- Tidecaller -->
+      <div class="card">
+        <h3>Tidecaller</h3>
+        <div class="role">ダメージディーラー</div>
+        <div class="hero">
+          <img src="/images/tidecaller.jpeg" alt="Tidecaller" loading="lazy" decoding="async">
+          <div class="txt">
+            <strong>スキル</strong>
+            <ul>
+              <li><em>Hydro Hammer</em>：ダメージを与え、スタンさせ、水の守護霊を召喚。</li>
+              <li><em>Ascend</em>：ダメージを与え、敵を打ち上げ、Water Lord を召喚。</li>
+              <li><em>Surge</em>：通常攻撃が味方全体を回復。</li>
+              <li><em>Purification Lance</em>：ダメージを与え、遠距離攻撃の精霊を召喚。</li>
+              <li><em>Evolve</em>：通常攻撃が追加で1体にヒットするようになる。</li>
+              <li><em>War Messenger</em>：出征兵1000体ごとに兵士攻撃力を増加。</li>
+            </ul>
+            <p>ネイチャー最強、そしてゲーム屈指の最強ヒーローとも言われる存在。ネイチャー編成には必須級です。</p>
+          </div>
+        </div>
+      </div>
 
-</div>
+    </section>
+  </main>
 
-<div id="footer"></div>
-<script>
-  fetch("/html/footer.html")
-    .then(res=>res.text())
-    .then(html=>{document.getElementById("footer").innerHTML=html;});
-</script>
+  <div id="footer"></div>
+  <script>
+    fetch("/ja/html/footer.html")
+      .then(res=>res.text())
+      .then(html=>{document.getElementById("footer").innerHTML=html;});
+  </script>
 
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
-  function addIcon(el,word){
-    const img=document.createElement('img');
-    img.src=icons[word];
-    img.alt=word+' symbol';
-    img.style.height='1em';
-    img.style.marginLeft='0.3em';
-    el.appendChild(img);
-  }
-  document.querySelectorAll('a').forEach(a=>{
-    const t=a.textContent.trim();
-    if(icons[t]) addIcon(a,t);
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
+    function addIcon(el,word){
+      const img=document.createElement('img');
+      img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
+      el.appendChild(img);
+    }
+    document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+    document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
   });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
-    const t=h.textContent.trim();
-    if(icons[t]) addIcon(h,t);
-  });
-});
-</script>
-
+  </script>
 </body>
 </html>

@@ -2423,7 +2423,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv 10
-      - "ð\x9F\x8F"
+      - 🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vb
@@ -2494,7 +2494,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 20
-      - "ð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vc
@@ -2608,7 +2608,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 30
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅
       - cls: fb tc vb
         t: 2 Universal Shard
     - - cls: th-left tc vc
@@ -2772,7 +2772,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 40
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
     - - cls: th-left tc vc
@@ -2888,7 +2888,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 45
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
   - id: tbl-skin-epic
@@ -2972,7 +2972,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv 10
-      - "ð\x9F\x8F"
+      - 🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vb
@@ -3043,7 +3043,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 20
-      - "ð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vc
@@ -3157,7 +3157,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 30
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅
       - cls: fb tc vb
         t: 2 Universal Shard
     - - cls: th-left tc vc
@@ -3321,7 +3321,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 40
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
     - - cls: th-left tc vc
@@ -3437,7 +3437,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 45
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
   - id: tbl-skin-legend
@@ -3521,7 +3521,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv 10
-      - "ð\x9F\x8F"
+      - 🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vb
@@ -3592,7 +3592,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 20
-      - "ð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅
       - cls: fb tc vb
         t: 1 Universal Shard
     - - cls: th-left tc vc
@@ -3706,7 +3706,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 30
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅
       - cls: fb tc vb
         t: 2 Universal Shard
     - - cls: th-left tc vc
@@ -3870,7 +3870,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 40
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
     - - cls: th-left tc vc
@@ -3986,7 +3986,7 @@
     - - cls: th-left fb tc vb
         th: true
         t: Lv. 45
-      - "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+      - 🏅🏅🏅🏅🏅
       - cls: fb tc vb
         t: 3 Universal Shard
 - id: relic

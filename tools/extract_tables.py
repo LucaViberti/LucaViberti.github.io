@@ -60,6 +60,12 @@ def read(rel: str) -> str:
         return fh.read()
 
 
+# Python's \s matches U+0085 (NEL) and U+00A0, which appear inside doubly
+# encoded characters. Collapsing whitespace with \s would eat those bytes and
+# corrupt the character, so restrict normalisation to real spacing.
+WHITESPACE = re.compile(r"[ \t\r\n\f\v]+")
+
+
 def classes_of(attrs: str) -> str:
     """Normalise a cell's class= and style= into a single class string."""
     out: list[str] = []
@@ -94,7 +100,11 @@ def parse_rows(chunk: str, kind: str) -> list[list[dict]]:
             tag, attrs, inner = cm.group(1), cm.group(2), cm.group(3)
             cell = {
                 "tag": tag,
-                "text": inner.strip(),
+                # str.strip() removes U+0085 (NEL) and U+00A0, which are the
+                # trailing bytes of doubly-encoded characters. The page carried
+                # a medal emoji in that state, and a plain strip() silently ate
+                # its last byte; only trim real spacing.
+                "text": inner.strip(" \t\r\n\f\v"),
                 "cls": classes_of(attrs),
             }
             for attr in ("colspan", "rowspan"):

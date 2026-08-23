@@ -55,7 +55,7 @@
   </script>
 {%- endif %}
 </head>
-<body>
+<body{{ page.body_attrs_str }}>
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
 {% if page.stripe_donation %}

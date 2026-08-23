@@ -7,7 +7,6 @@ adventure:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 anniversary:
@@ -17,7 +16,6 @@ anniversary:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   style: anniversary
 arms-race:
   kind: page
@@ -26,7 +24,6 @@ arms-race:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 beginners:
@@ -36,7 +33,6 @@ beginners:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: beginners
 building:
@@ -46,7 +42,6 @@ building:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: building
 calculator:
@@ -56,7 +51,6 @@ calculator:
   body_attrs: ''
   has_adsense: false
   has_breadcrumbs: false
-  itemscope_html: false
   style: calculator
 classicadv:
   kind: page
@@ -65,7 +59,6 @@ classicadv:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: classicadv
 events:
@@ -75,7 +68,6 @@ events:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 exclusive-gear:
@@ -85,7 +77,6 @@ exclusive-gear:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 gear:
@@ -95,7 +86,6 @@ gear:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: gear
 generaladv:
@@ -105,7 +95,6 @@ generaladv:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: generaladv
 guild-race:
@@ -115,7 +104,6 @@ guild-race:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   style: guild-race
 guildboss:
   kind: page
@@ -124,7 +112,6 @@ guildboss:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 heroes:
@@ -134,7 +121,6 @@ heroes:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: heroes
 horde:
@@ -144,7 +130,6 @@ horde:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: faction
   body_from: heroes
@@ -155,7 +140,6 @@ index:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   stripe_donation: true
   faction_icons: true
   style: index
@@ -166,7 +150,6 @@ kingdom:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 league:
@@ -176,7 +159,6 @@ league:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: faction
   body_from: heroes
@@ -187,7 +169,6 @@ lord-gear:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: lord-gear
 nature:
@@ -197,7 +178,6 @@ nature:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: true
-  itemscope_html: false
   faction_icons: true
   style: faction
   body_from: heroes
@@ -208,7 +188,6 @@ pets:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: pets
 privacy:
@@ -218,8 +197,8 @@ privacy:
   body_attrs: class="pp"
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: true
   style: privacy
+  html_itemtype: https://schema.org/PrivacyPolicy
 quick-tips:
   kind: page
   main_attrs: null
@@ -227,7 +206,6 @@ quick-tips:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   style: quick-tips
 relic:
   kind: page
@@ -236,7 +214,6 @@ relic:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: simple-page
 research:
@@ -246,7 +223,6 @@ research:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: research
 seasononeadv:
@@ -256,7 +232,6 @@ seasononeadv:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: seasononeadv
 shop:
@@ -266,7 +241,6 @@ shop:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: shop
 spring:
@@ -276,7 +250,6 @@ spring:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   style: spring
 thanks:
   kind: standalone
@@ -285,7 +258,6 @@ thanks:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   style: thanks
 tips:
   kind: page
@@ -294,7 +266,6 @@ tips:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   table_ui: true
   style: tips
   body_from: tables
@@ -305,6 +276,5 @@ villagers:
   body_attrs: ''
   has_adsense: true
   has_breadcrumbs: false
-  itemscope_html: false
   faction_icons: true
   style: villagers

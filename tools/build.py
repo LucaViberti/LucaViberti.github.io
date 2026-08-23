@@ -340,21 +340,24 @@ def render_page(lang: str, slug: str, entry: dict) -> str:
         "kind": "page",
         "style": None,
         "main_attrs": None,
+        "body_attrs": "",
+        "html_itemtype": None,
         "has_adsense": False,
         "has_breadcrumbs": False,
-        "itemscope_html": False,
         "stripe_donation": False,
         "faction_icons": False,
         "table_ui": False,
     }
     page.update(entry)
-    page["html_extra_attrs"] = (
-        ' itemscope itemtype="https://schema.org/WebPage"'
-        if entry.get("itemscope_html")
-        else ""
-    )
+
+    itemtype = entry.get("html_itemtype")
+    page["html_extra_attrs"] = f' itemscope itemtype="{itemtype}"' if itemtype else ""
     ma = entry.get("main_attrs")
     page["main_attrs_str"] = f" {ma}" if ma else ""
+    # privacy.html carries class="pp" on <body>, and its whole stylesheet is
+    # scoped to that class - dropping the attribute left the page unstyled.
+    ba = entry.get("body_attrs")
+    page["body_attrs_str"] = f" {ba}" if ba else ""
 
     template = env.get_template(
         "standalone.html.j2" if entry.get("kind") == "standalone" else "page.html.j2"

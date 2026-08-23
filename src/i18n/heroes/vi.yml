@@ -1,0 +1,281 @@
+# Hero page text for 'vi'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: Sát thương
+  tank: Đỡ đòn
+  support: Hỗ trợ
+  healer: Hồi máu
+  tank_dps: Đỡ đòn / Sát thương
+  support_dps: Hỗ trợ / Gây sát thương
+  healer_support: Hồi máu / Hỗ trợ
+lineup_labels:
+  front: Trước
+  middle: Giữa
+  back: Sau
+factions:
+  league:
+    lineups:
+      main:
+        title: Chính
+        note: 'Ghi chú: theo meta hiện tại, dù Bishop là tướng Mythic nhưng không nằm trong đội hình chính.'
+      against-bosses-damage-focus:
+        title: Đánh boss (tập trung sát thương)
+        note: 'Ghi chú: nếu boss gây sát thương quá lớn khiến quân chết nhiều, đổi Astrologer lấy Adjudicator và đưa Adjudicator lên hàng trước.'
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: Gây sát thương và áp dụng hiệu ứng đốt.
+          Meteor Blaze: Sát thương diện rộng.
+          Ember: Khi HP thấp, tăng sức tấn công.
+          Flame Shield: Tạo khiên và gây sát thương lên kẻ địch xung quanh.
+          Elemental Mastery: Tăng sát thương kỹ năng.
+        note: DPS League mạnh nhất đầu game. Giữ cô ấy trong đội hình League; về sau vẫn dùng được.
+      secret-keeper:
+        skills:
+          Arcane Shield: Tăng giảm sát thương và gỡ debuff.
+          Forbidden Realm: Câm lặng kẻ địch và gây sát thương.
+          Arcane Link: Tăng HP.
+          Spell Reflection: Gây sát thương và tạm miễn nhiễm sát thương trong chốc lát.
+          Arcane Guardian: Tạo khiên hấp thụ sát thương.
+        note: Tank League Legendary đầu tiên. Mạnh đầu game; về sau thay bằng <strong>Rose Princess</strong> nếu bạn đã dùng <strong>Adjudicator</strong>.
+      astrologer:
+        skills:
+          Ray Beam: Gây sát thương và tăng tỉ lệ chí mạng.
+          Solar Beam: Nhiều đòn đánh liên tiếp.
+          Foresight: Tăng tỉ lệ chí mạng.
+          Arc Light: Gây sát thương và có thể tăng thêm sát thương gây ra.
+          Insights: Tăng sát thương chí mạng.
+        note: DPS đơn mục tiêu rất tốt đầu game (Guild/World Boss). Về sau ưu tiên <strong>Paragon</strong> và <strong>Bishop</strong>.
+      hostess:
+        skills:
+          Evasive Technique: Vào trạng thái phản đòn; tăng giảm sát thương, gây sát thương và hồi HP.
+          100T Hammer!: Gây sát thương và làm choáng.
+          Agile Footwork: Định kỳ né 1 lần sát thương.
+          Drunken Brawl: Giảm sát thương, hồi máu, gây sát thương và làm choáng.
+          Inn Keeper: Tăng ATK/HP cho đội ngay cả khi không ra trận.
+        note: Tank tạm ổn đầu game kèm tiện ích. Thay khi bạn có <strong>Adjudicator</strong> hoặc <strong>Rose Princess</strong>.
+      bard:
+        skills:
+          Cheer: Tăng tốc di chuyển và tốc đánh; có thể gây sát thương.
+          Resonant Chord: Gây sát thương và làm choáng.
+          Endgame Serenade: Sau Resonant Chord, giảm hồi chiêu kỹ năng cho đồng minh.
+          Grace: Tăng tỉ lệ chí mạng; có thể gây sát thương.
+          Fight Song: Tăng tỉ lệ chí mạng cho tướng League.
+        note: 'Hỗ trợ tốt: tốc, chí mạng và giảm hồi chiêu. Có thể “chen” vào cả team cuối game.'
+      nun:
+        skills:
+          Therapy: Hồi máu cho 1 đồng minh và tăng hồi máu nhận vào.
+          Radiant Song: Tăng HP tối đa và giảm sát thương cuối cùng cho đồng minh trong một thời gian.
+          Holy Grace: Tự tăng giảm sát thương.
+          Prayer of Healing: Hồi máu cho toàn đội.
+          Sacred Union: Tăng HP tối đa cho tướng League.
+        note: Healer chủ lực từ đầu tới cuối game. Giữ cô ấy trong đội hình League.
+      adjudicator:
+        skills:
+          Guardian Discipline: Gây sát thương, choáng, tăng giảm sát thương và miễn khống chế trong một thời gian.
+          Shield of Faith: Triệu hồi khiên cực lớn; hết thời gian sẽ nổ gây sát thương.
+          Indomitable: Tăng giảm sát thương cho toàn đội.
+          Judgment: Gây sát thương, choáng và tự hồi máu.
+          Eternal: Bất tử gần-khi-chết; HP không thể xuống dưới 1 khi hiệu ứng còn.
+        note: Một trong những tank mạnh nhất game. Scale cực tốt theo sao. Trụ cột của team League cuối game.
+      paragon:
+        skills:
+          Commanding Call: Gây sát thương; cấp khiên cho đồng minh.
+          Celestial Blade: Miễn khống chế, gây sát thương, cộng dồn đốt; đồng thời tăng giảm sát thương.
+          Final Verdict: Tăng sát thương lên kẻ địch còn trên 70% HP.
+          Moral Fury: Tăng ATK cho đồng minh và gây sát thương.
+          Ultimate Execution: Tăng tầm đánh và thêm mục tiêu; tăng sát thương đòn đánh thường.
+          Conqueror: Mỗi tướng League Legendary+ tăng sát thương công thành; đủ 6 tướng League thì tăng tỉ lệ chí mạng kỹ năng.
+        note: Thường là DPS chính của League. Thay <strong>Astrologer</strong> bằng cô ấy ngay khi có.
+      rose-princess:
+        skills:
+          Be Brave: Nhận cộng dồn Can Đảm (giảm sát thương). Khi bị đánh, chuyển 1 cộng dồn thành Oán Hận.
+          Bloom: Tiêu thụ Oán Hận để gây sát thương và áp hiệu ứng Cấm Hồi Máu.
+          Thorns: Gây sát thương; cộng thêm sát thương theo số cộng dồn Oán Hận.
+          Weapon Up!: Giảm sát thương tỉ lệ theo ATK của cô ấy.
+          Roses: Nhận Can Đảm và HP khi kẻ địch chết.
+          Guardian Messenger: Tăng HP binh lính theo mỗi 1000 quân triển khai.
+        note: Lúc mới có thì bình thường, nhưng càng nhiều sao càng “khét” vì vừa tank vừa đấm rất đau.
+      bishop:
+        skills:
+          Fair Strike: Hiệu quả hơn khi đánh các đơn vị được triệu hồi reminder.
+          Divine Descent: Gây sát thương; tăng ATK và giảm sát thương; đòn đánh thường thành AoE trong một thời gian.
+          Solar Shield: Tăng chí mạng và kháng chí mạng.
+          Confession: Gây sát thương và áp Weaken (giảm sát thương kỹ năng được khuếch đại), rất mạnh khi gặp summon.
+          Sacred Burst: Kích hoạt sát thương AoE khi kẻ địch chết.
+          War Messenger: Tăng ATK binh lính theo mỗi 1000 quân triển khai.
+        note: DPS rất cao, thường nhỉnh kém <strong>Paragon</strong> một chút trung bình, nhưng vẫn xứng đáng cuối game. Khi có chỗ, dùng cùng Paragon.
+    lineups_title: Đội hình mạnh nhất — League
+  nature:
+    lineups:
+      main:
+        title: Chính (Main)
+        note: 'Ghi chú: nếu server của bạn chưa có Petalis, hãy thay bằng Windwalker.'
+      damage-focus-best-with-nature:
+        title: Tập trung sát thương (tốt nhất nếu buộc phải chơi Nature)
+        note: 'Ghi chú: sát thương sẽ không “điên” như các phe khác, nhưng nếu bạn cần chạy Nature thì đây là lựa chọn tốt nhất.'
+    heroes:
+      treeguard:
+        skills:
+          Growth: Tăng HP tối đa, giảm sát thương nhận vào và tự hồi máu.
+          Timber Shell: Tăng giảm sát thương và HP tối đa, đồng thời hồi máu.
+          Vine: Khi Growth đang hoạt động, đòn đánh gây thêm sát thương và độc.
+          Titanwood Assault: Triệu hồi gai gây sát thương và hồi máu.
+          Vitality Surge: Tăng sát thương và hồi máu.
+        note: Tank khởi đầu ổn, có tự hồi máu. Về sau hãy thay bằng <strong>Monk</strong>.
+      druid:
+        skills:
+          Nature’s Blessing: Hồi máu cho 1 đồng minh.
+          Healing Rain: Hồi máu cho nhiều đồng minh.
+          Force of Nature: Tạo khiên hấp thụ sát thương.
+          Nature’s Call: Triệu hồi 2 Treemen.
+          Natural Affinity: Tăng HP cho Treemen.
+        note: Healer khởi đầu có triệu hồi Treemen. Về sau thay bằng <strong>Tidecaller</strong> hoặc ít nhất là <strong>Ne Zha</strong>.
+      windwalker:
+        skills:
+          Swift Arrow: Tăng tốc đánh và sát thương đòn thường, sau một số phát sẽ nạp lại.
+          Windwalker’s Blade: Tấn công kẻ địch gần nhất và chặn sát thương trong chốc lát.
+          Favorable Wind: Đòn thường có thể không tiêu tốn lượt của Swift Arrow.
+          Powerful Ricochet: Gây sát thương và làm choáng mục tiêu.
+          Preparation: Tăng tốc độ nạp lại Swift Arrow.
+        note: DPS Nature đầu tiên của bạn. Về sau thay bằng <strong>Ne Zha</strong>.
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: Triệu hồi cừu gây sát thương và làm choáng kẻ địch.
+          Sheepherd: Triệu hồi một con cừu non.
+          Song of Life: Khi đơn vị chết hoặc bị hi sinh, tất cả tướng hồi một lượng HP.
+          Shepherd’s Bell: Tăng giảm sát thương cho đồng minh ở gần.
+          Revenge: Mỗi khi đơn vị chết/hi sinh, tất cả tướng tăng vĩnh viễn sát thương.
+        note: 'Support mạnh: có triệu hồi và hồi máu. Tốt cả về late game.'
+      pixie:
+        skills:
+          Root Absorption: Triệu hồi rễ cây gây sát thương và “cướp” tấn công.
+          Sunflower Core: Triệu hồi lõi gây sát thương và làm choáng kẻ địch.
+          Nature’s Harmony: Tăng giảm sát thương theo số tướng Nature còn sống.
+          Bewildering Powder: Giảm tỉ lệ trúng đòn của địch và gây sát thương.
+          Forest Ally: Mỗi đơn vị chết/hi sinh giảm hồi chiêu Sunflower Core.
+        note: DPS đầu game cực mạnh và vẫn ổn cho tới khi bạn có Mythic. Thậm chí có thể dùng về end game.
+      sage:
+        skills:
+          Harmonic Balance: Nhận một phần miễn nhiễm sát thương và hồi máu khi bị tấn công.
+          Transformation: Hóa gấu, tăng HP, hút máu và gây sát thương.
+          Power of the Wild: Sau khi Transformation, nhận khiên hấp thụ sát thương.
+          Serene State: Gây sát thương, làm chậm tốc đánh và xóa 1 buff của địch.
+          Robust Skin: Nếu chết khi đang hóa gấu, trở lại dạng thường với một phần HP.
+        note: Tank Nature thứ hai bạn sẽ có. Giữ trong đội hình đến tận late game.
+      watcher:
+        skills:
+          Plant Purge: Tạo lốc xoáy gây sát thương, độc và làm chậm kẻ địch.
+          Wilt: Gây sát thương và độc.
+          Slowdown: Đòn thường giảm tốc đánh của địch.
+          Crow Attack: Nhận trạng thái phản đòn; gây sát thương và hồi máu khi bị đánh.
+          Wheatfield Watcher: Tăng sát thương cho tướng Nature.
+        note: Lựa chọn yếu, không khuyến khích đầu tư nhiều. Không thể awaken và không có exclusive gear.
+      monk:
+        skills:
+          Mountain Strike: Gây sát thương, tăng HP tối đa và nhận miễn nhiễm sát thương.
+          Ultimate Zen Power: Tăng né tránh, giảm sát thương và phản đòn khi bị đánh.
+          Thundering Kick: Có cơ hội nối tiếp Mountain Strike bằng một cú làm choáng.
+          Fiery Breath: Gây sát thương và nhận miễn nhiễm khống chế.
+          Merciful Victor: Nhận khiên khi đơn vị chết hoặc bị hi sinh.
+          Guardian Messenger: Tăng HP lính mỗi 1000 lính được triển khai.
+        note: Mythic Nature đầu tiên của bạn. Tank mạnh và cũng gây sát thương. Thay <strong>Treeguard</strong> bằng hắn.
+      tidecaller:
+        skills:
+          Hydro Hammer: Gây sát thương, làm choáng và triệu hồi vệ thần nguyên tố nước.
+          Ascend: Gây sát thương, hất tung và triệu hồi Water Lord.
+          Surge: Đòn thường hồi máu cho toàn đội.
+          Purification Lance: Gây sát thương và triệu hồi nguyên tố tầm xa.
+          Evolve: Đòn thường có thể trúng thêm 1 mục tiêu.
+          War Messenger: Tăng tấn công lính mỗi 1000 lính được triển khai.
+        note: Tướng Nature mạnh nhất, và có thể là mạnh nhất game. Bắt buộc phải có nếu bạn chơi Nature.
+    lineups_title: Đội hình tốt nhất — Nature
+  horde:
+    lineups:
+      main:
+        title: Chủ lực
+        note: 'Lưu ý: để Wanderer ở hàng trước để tận dụng kỹ năng của anh ta.'
+      damage-focus-best-vs-bosses:
+        title: Tập trung sát thương (tốt nhất khi đánh boss)
+        note: 'Lưu ý: từ đội hình thường, chỉ cần đổi Beastmaster sang Wilderness Hunter. Đây là đội hình gây sát thương tốt nhất.'
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: Hồi máu cho đồng minh có HP thấp nhất.
+          Ancestor’s Soul: Nhập hồn vào đồng minh có HP thấp nhất, ngăn tử vong trong thời gian ngắn.
+          Rain Blessing: Tăng hiệu quả hồi máu của toàn đội.
+          Restorative Totem: Triệu hồi totem hồi máu, phục hồi HP.
+          Wolf Soul: Triệu hồi 2 con sói.
+        note: Healer Horde đầu tiên bạn nhận được. Rất mạnh lúc đầu, nhưng về sau hãy thay bằng <strong>Witch</strong>.
+      swordmaster:
+        skills:
+          Whirlwind: Tấn công kẻ địch xung quanh.
+          Blade Storm: Xoay người gây sát thương.
+          Battle Will: Một lần tránh chết, giữ 1 HP trong thời gian ngắn.
+          Crazy Cut: Gây sát thương và nhận giảm sát thương.
+          Suppression: Tăng sát thương dựa trên lượng HP đã mất.
+        note: Một tanker có thể gây thêm chút sát thương. Hãy thay bằng <strong>Desert Prince</strong> sớm nhất có thể.
+      barbarian:
+        skills:
+          Fortified Defense: Tạo khiên hấp thụ sát thương.
+          Taunt: Ép kẻ địch tấn công tướng này.
+          Insatiable Hunger: Tăng HP và Tấn công.
+          Savage Strike: Gây sát thương và làm choáng.
+          Eye of Insight: Giảm sát thương kỹ năng nhận vào.
+          Horde Defender: Tăng giảm sát thương cho tất cả tướng Horde trong đội hình.
+        note: Một tanker đầu game khá ổn. Về sau thay bằng <strong>Desert Prince</strong> hoặc <strong>Beastmaster</strong>. Vẫn hữu dụng cuối game, đặc biệt khi gặp đội Nature.
+      warlock:
+        skills:
+          Whispered Shadows: Gây sát thương và hồi máu cho đồng minh.
+          Bloodlust: Cho hút HP và tăng tốc đánh cho đồng minh.
+          Shadow Rite: Tăng HP cho toàn bộ tướng Horde.
+          Debilitation: Giảm sát thương kỹ năng và giảm sát thương của kẻ địch.
+          Malicious Passion: Tăng sát thương cho đồng minh Horde.
+        note: Một tướng hỗ trợ rất mạnh. Cung cấp buff/debuff, cực kỳ giá trị cả trong PvE cuối game.
+      wilderness:
+        skills:
+          Barb: Tăng đòn đánh thường và gây hiệu ứng chảy máu.
+          Fatal Prayer: Gây sát thương, hất lùi kẻ địch và tăng tấn công.
+          Hunter: Tăng tấn công.
+          Impulse Instinct: Tăng tốc đánh.
+          Tradition: Tăng sát thương cho tướng Horde trong đội hình.
+        note: Damage dealer Horde đầu tiên. Hãy thay bằng <strong>Wu Kong</strong> hoặc <strong>Desert Maiden</strong> sớm nhất có thể.
+      soulmancer:
+        skills:
+          Soul Link: Chia sẻ sát thương với một đồng minh và miễn nhiễm một phần sát thương đó.
+          Soul Recall: Khi gần chết, gây sát thương và không thể chết trong một lúc, sau đó hy sinh.
+          Soul Empowerment: Tăng HP cho tướng Horde trong đội hình.
+          Soul Freeze: Gây sát thương và có thể đóng băng mục tiêu.
+          Pain Diffusion: Khi HP xuống dưới ngưỡng, lập tức kích hoạt Soul Freeze.
+        note: Một tướng hỗ trợ tăng sức mạnh tốt theo sao. Kéo dài khả năng sống sót của đội và được dùng rất nhiều cuối game.
+      desert-prince:
+        skills:
+          Royal Armor: Tạo khiên hấp thụ sát thương.
+          Sand’s Blessing: Nhận thêm HP và gây sát thương chuẩn dựa trên HP tối đa.
+          Royal Treasury: Khi Royal Armor kích hoạt, tăng sát thương kỹ năng cho đồng minh.
+          Scorching Scimitar: Gây sát thương chuẩn.
+          Eye of Insight: Giảm sát thương kỹ năng nhận vào.
+          Enthusiast: Mỗi tướng Horde Legendary+ trong đội hình tăng tỷ lệ chết/bị thương của kẻ địch.
+        note: Một trong những tướng mạnh nhất game. Vừa tanker vừa gây sát thương cực tốt, <strong>bắt buộc có</strong> trong mọi đội hình Horde. Hãy thay <strong>Swordmaster</strong> (hoặc <strong>Barbarian</strong>
+          nếu sao tương đương) ngay khi bạn có tướng này.
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: Gây sát thương, về sau còn tăng tốc độ.
+          Lightning Storm: Gây sát thương và hất tung kẻ địch.
+          Wind of Freedom: Cho né tránh (dodge) cho toàn đội hình.
+          Tornado: Niệm lốc xoáy chặn đạn, sau đó gây sát thương.
+          Wind Field: Mỗi lần dùng Tornado tăng tấn công cho đội.
+          War Messenger: Tăng tấn công lính mỗi 1000 lính được triển khai.
+        note: Mythic đầu tiên bạn nhận được. Một damage dealer top giúp đội bạn cạnh tranh với các phe khác. Hãy thay một tướng hỗ trợ hoặc DD yếu hơn ngay lập tức.
+      witch:
+        skills:
+          Dark Healing: Hồi máu cho đồng minh.
+          Dread Golem: Triệu hồi golem gây sợ hãi kẻ địch và gây chút sát thương.
+          Curse Fire: Sau Dark Healing, cho giảm sát thương và hồi máu cho đồng minh ngẫu nhiên.
+          Dark Magic Boost: Tăng tấn công cho đồng minh và tạo lá chắn chống choáng tạm thời.
+          Guardian Messenger: Tăng HP lính theo mỗi 1000 lính được triển khai.
+        note: Một healer mạnh kèm tiện ích hỗ trợ. Hãy thay <strong>Shaman</strong> ngay khi bạn có cô ấy.
+    lineups_title: Đội hình tốt nhất — Horde
+skills_label: Kỹ năng
+skill_separator: ': '

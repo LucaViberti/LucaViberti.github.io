@@ -1,0 +1,284 @@
+# Hero page text for 'tc'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: 輸出
+  tank: 坦克
+  support: 輔助
+  healer: 治療
+  tank_dps: 坦克 / 輸出
+  support_dps: 輔助 / 輸出
+  healer_support: 治療 / 輔助
+lineup_labels:
+  front: 前排
+  middle: 中排
+  back: 後排
+factions:
+  league:
+    lineups:
+      main:
+        title: 主隊
+        note: 備註：以目前版本環境而言，即使 Bishop 是神話英雄，他也不在主隊陣容中。
+      against-bosses-damage-focus:
+        title: 打首領（偏重傷害）
+        note: 備註：如果首領輸出很高導致你計程車兵一直陣亡，把 Astrologer 換成 Adjudicator，並將他移到前排。
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: 造成傷害並施加燃燒。
+          Meteor Blaze: 範圍傷害。
+          Ember: 生命值偏低時，獲得攻擊提升。
+          Flame Shield: 獲得護盾並對附近敵人造成傷害。
+          Elemental Mastery: 提升技能傷害。
+        note: 你前期最強的聯盟輸出之一。留在聯盟陣容裡，後期也仍然可用。
+      secret-keeper:
+        skills:
+          Arcane Shield: 提高減傷並移除負面效果。
+          Forbidden Realm: 沉默敵人並造成傷害。
+          Arcane Link: 提升生命值。
+          Spell Reflection: 造成傷害並短暫免疫傷害。
+          Arcane Guardian: 獲得可吸收傷害的護盾。
+        note: 第一位傳說聯盟坦克。前期好用；後期如果你已經在用 <strong>Adjudicator</strong>，可用 <strong>Rose Princess</strong> 取代。
+      astrologer:
+        skills:
+          Ray Beam: 造成傷害並提高暴擊率。
+          Solar Beam: 多段命中。
+          Foresight: 提升暴擊率。
+          Arc Light: 造成傷害，並可進一步提高造成的傷害。
+          Insights: 提升暴擊傷害。
+        note: 前期很強的單體輸出（公會/世界首領）。後期更推薦 <strong>Paragon</strong> 與 <strong>Bishop</strong>。
+      hostess:
+        skills:
+          Evasive Technique: 進入反擊狀態；獲得減傷、造成傷害並回復生命。
+          100T Hammer!: 造成傷害並眩暈。
+          Agile Footwork: 週期性閃避一次傷害。
+          Drunken Brawl: 減傷、治療、造成傷害並眩暈。
+          Inn Keeper: 即使未上陣也會提高隊伍 ATK/HP。
+        note: 前期坦克還行且有功能性。拿到 <strong>Adjudicator</strong> 或 <strong>Rose Princess</strong> 後就可以換掉。
+      bard:
+        skills:
+          Cheer: 提高移動與攻擊速度；可能造成傷害。
+          Resonant Chord: 造成傷害並眩暈。
+          Endgame Serenade: 在 Resonant Chord 之後，降低盟友技能冷卻時間。
+          Grace: 提高暴擊率；可能造成傷害。
+          Fight Song: 提高聯盟英雄的暴擊率。
+        note: 很不錯的輔助：加速、暴擊與冷卻縮減。甚至能塞進終局隊伍。
+      nun:
+        skills:
+          Therapy: 治療一名盟友並提高其受到的治療量。
+          Radiant Song: 一段時間內提高盟友最大生命值並降低最終受到的傷害。
+          Holy Grace: 使自己獲得減傷。
+          Prayer of Healing: 治療所有盟友。
+          Sacred Union: 提高聯盟英雄的最大生命值。
+        note: 從前期到後期的主力治療。聯盟陣容必留。
+      adjudicator:
+        skills:
+          Guardian Discipline: 造成傷害、眩暈、減傷，並在一段時間內免疫控制。
+          Shield of Faith: 召喚巨大的護盾；結束時造成傷害。
+          Indomitable: 使所有盟友獲得減傷。
+          Judgment: 造成傷害、眩暈並自我治療。
+          Eternal: 瀕死時無敵；效果期間生命值不會低於 1。
+        note: 遊戲中最強坦克之一。非常吃星等且成長性極佳。終局聯盟隊核心。
+      paragon:
+        skills:
+          Commanding Call: 造成傷害並為盟友提供護盾。
+          Celestial Blade: 免疫控制、造成傷害、疊加燃燒層數，並獲得減傷。
+          Final Verdict: 對生命值高於 70% 的敵人造成更高傷害。
+          Moral Fury: 提高盟友攻擊並造成傷害。
+          Ultimate Execution: 延長攻擊距離並增加一個額外目標；提升普攻傷害。
+          Conqueror: 每名傳說+聯盟英雄提升城堡攻擊；擁有 6 名聯盟英雄時，獲得技能暴擊率。
+        note: 通常是你的聯盟主力輸出。拿到她後就用她取代 <strong>Astrologer</strong>。
+      rose-princess:
+        skills:
+          Be Brave: 獲得勇氣層數（減傷）。受到傷害時會把一層轉為怨恨。
+          Bloom: 消耗怨恨層數造成傷害並施加禁療。
+          Thorns: 造成傷害；每層怨恨會額外提高傷害。
+          Weapon Up!: 減傷會隨她的攻擊力提升。
+          Roses: 敵人死亡時獲得勇氣並回復生命。
+          Guardian Messenger: 每部署 1000 名士兵提高士兵生命值。
+        note: 剛開始不算亮眼，但升星後會成為頂級聯盟英雄之一：能扛又打得很痛。
+      bishop:
+        skills:
+          Fair Strike: 對召喚單位特別有效。
+          Divine Descent: 造成傷害；提高攻擊與減傷；一段時間內普攻變為範圍傷害。
+          Solar Shield: 提高暴擊與抗暴。
+          Confession: 造成傷害並施加虛弱（降低被放大的技能傷害），對召喚物很強。
+          Sacred Burst: 敵人死亡時觸發範圍傷害。
+          War Messenger: 每部署 1000 名士兵提高士兵攻擊。
+        note: 高輸出，平均略低於 <strong>Paragon</strong>，但仍然是終局等級的英雄。能放就跟 Paragon 一起上。
+    lineups_title: 最佳陣容 — 聯盟
+  nature:
+    lineups:
+      main:
+        title: 主隊
+        note: 備註：如果你的伺服器還沒有 Petalis，就用 Windwalker 取代她。
+      damage-focus-best-with-nature:
+        title: 偏重傷害（自然最佳配置）
+        note: 備註：傷害不會高到誇張，但如果你必須玩自然，這是你能用的最佳選擇。
+    heroes:
+      treeguard:
+        skills:
+          Growth: 提高最大生命值、降低受到的傷害，並治療自身。
+          Timber Shell: 提高減傷與最大生命值，並治療。
+          Vine: 當 Growth 生效時，攻擊會造成額外傷害與中毒。
+          Titanwood Assault: 召喚荊棘，造成傷害並治療。
+          Vitality Surge: 提高傷害並治療。
+        note: 不錯的開局坦克，帶一點自我治療。後期用 <strong>Monk</strong> 取代他。
+      druid:
+        skills:
+          Nature’s Blessing: 治療一名盟友。
+          Healing Rain: 治療多名盟友。
+          Force of Nature: 提供可吸收傷害的護盾。
+          Nature’s Call: 召喚 2 個樹人。
+          Natural Affinity: 提高樹人生命值。
+        note: 開局治療，會召喚樹人。後期用 <strong>Tidecaller</strong>，或至少用 <strong>Ne Zha</strong> 取代。
+      windwalker:
+        skills:
+          Swift Arrow: 提高攻速與普攻傷害，射出一定次數後重新裝填。
+          Windwalker’s Blade: 攻擊最近的敵人，並短暫格擋來襲傷害。
+          Favorable Wind: 普攻有機率不消耗 Swift Arrow 次數。
+          Powerful Ricochet: 造成傷害並使目標暈眩。
+          Preparation: 提升 Swift Arrow 的裝填速度。
+        note: 你的第一位自然輸出。後期用 <strong>Ne Zha</strong> 取代。
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: 召喚綿羊造成傷害並暈眩敵人。
+          Sheepherd: 召喚一隻小羊。
+          Song of Life: 當單位死亡或被犧牲時，所有英雄回復部分生命。
+          Shepherd’s Bell: 為附近盟友提供減傷。
+          Revenge: 每次單位死亡或被犧牲，所有英雄獲得永久傷害提升。
+        note: 很強的輔助英雄，能召喚單位並提供治療。後期也依然好用。
+      pixie:
+        skills:
+          Root Absorption: 召喚樹根造成傷害並偷取攻擊力。
+          Sunflower Core: 召喚核心，傷害並暈眩敵人。
+          Nature’s Harmony: 每有一名存活的自然英雄，就獲得一層減傷。
+          Bewildering Powder: 降低敵人命中率並造成傷害。
+          Forest Ally: 每個死亡/被犧牲的單位都會降低 Sunflower Core 冷卻時間。
+        note: 前期超強輸出，直到神話英雄出現前都很能打。終局也依然可用。
+      sage:
+        skills:
+          Harmonic Balance: 獲得部分傷害免疫，被攻擊時治療自身。
+          Transformation: 變身成熊，獲得生命值、吸血與傷害提升。
+          Power of the Wild: 變身後獲得可吸收傷害的護盾。
+          Serene State: 造成傷害、降低攻速並移除一個增益效果。
+          Robust Skin: 若 Sage 在熊形態死亡，會回復成人形並保留部分生命值。
+        note: 你會拿到的第二位自然坦克。可以一路用到後期。
+      watcher:
+        skills:
+          Plant Purge: 製造旋風，造成傷害、中毒並減速敵人。
+          Wilt: 造成傷害並中毒。
+          Slowdown: 普攻會降低敵人攻速。
+          Crow Attack: 獲得反擊狀態，被擊中時造成傷害並治療。
+          Wheatfield Watcher: 提高自然英雄傷害。
+        note: 整體偏弱，不太建議投入太多資源。無法覺醒，也沒有專屬裝備。
+      monk:
+        skills:
+          Mountain Strike: 造成傷害、提高最大生命值，並獲得傷害免疫。
+          Ultimate Zen Power: 獲得閃避、減傷，並在被擊中時反擊。
+          Thundering Kick: 有機率在 Mountain Strike 之後追加暈眩。
+          Fiery Breath: 造成傷害並獲得控制免疫。
+          Merciful Victor: 當單位死亡或被犧牲時獲得護盾。
+          Guardian Messenger: 每部署 1000 名士兵提高士兵生命值。
+        note: 你的第一位自然神話英雄。強力坦克，同時也能打出傷害。用他取代 <strong>Treeguard</strong>。
+      tidecaller:
+        skills:
+          Hydro Hammer: 造成傷害、暈眩，並召喚守護水元素。
+          Ascend: 造成傷害、擊飛敵人，並召喚水之領主。
+          Surge: 普攻會治療所有盟友。
+          Purification Lance: 造成傷害並召喚遠端元素。
+          Evolve: 普攻可額外命中一個目標。
+          War Messenger: 每部署 1000 名士兵提高士兵攻擊。
+        note: 自然系最強英雄，也可能是整個遊戲最強的英雄。任何自然隊都必備。
+    lineups_title: 最佳陣容 — 自然
+  horde:
+    lineups:
+      main:
+        title: 主隊
+        note: 備註：讓 Wanderer 留在前排以發揮其技能效果。
+      damage-focus-best-vs-bosses:
+        title: 輸出向陣容（對首領最佳）
+        note: 備註：在一般陣容的基礎上，將 Beastmaster 換成 Wilderness Hunter，即為輸出最高的陣容。
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: 治療生命值最低的隊友。
+          Ancestor’s Soul: 附身於生命值最低的隊友，短時間內使其免於死亡。
+          Rain Blessing: 提升所有隊友的治療效果。
+          Restorative Totem: 召喚治療圖騰以恢復生命值。
+          Wolf Soul: 召喚 2 隻狼。
+        note: 你最早獲得的部落治療者。前期表現優秀，但後期建議換成 <strong>Witch</strong>。
+        skill_names:
+          Ancestor’s Soul: Ancestor's Soul
+      swordmaster:
+        skills:
+          Whirlwind: 攻擊周圍敵人。
+          Blade Storm: 旋轉造成傷害。
+          Battle Will: 短時間內以 1 點生命值免於死亡一次。
+          Crazy Cut: 造成傷害並獲得傷害減免。
+          Suppression: 根據已損失的生命值提升傷害。
+        note: 一位同時能輸出的坦克。建議儘快換成 <strong>Desert Prince</strong>。
+      barbarian:
+        skills:
+          Fortified Defense: 獲得可吸收傷害的護盾。
+          Taunt: 強制敵人攻擊此英雄。
+          Insatiable Hunger: 提升生命值與攻擊力。
+          Savage Strike: 造成傷害並使敵人暈眩。
+          Eye of Insight: 減少所受的技能傷害。
+          Horde Defender: 提升隊列中所有部落英雄的傷害減免。
+        note: 前期穩定的坦克。後期可換成 <strong>Desert Prince</strong> 或 <strong>Beastmaster</strong>，在對戰自然陣營時依然實用。
+      warlock:
+        skills:
+          Whispered Shadows: 造成傷害並治療隊友。
+          Bloodlust: 獲得生命偷取，並提升隊友的攻擊速度。
+          Shadow Rite: 提升所有部落英雄的生命值。
+          Debilitation: 降低敵人的技能傷害與傷害減免。
+          Malicious Passion: 提升部落友軍英雄的傷害。
+        note: 強力的輔助英雄，提供增益與減益效果，在後期 PvE 中也相當有價值。
+      wilderness:
+        skills:
+          Barb: 提升普通攻擊並施加流血效果。
+          Fatal Prayer: 造成傷害、擊退敵人並提升攻擊力。
+          Hunter: 提升攻擊力。
+          Impulse Instinct: 提升攻擊速度。
+          Tradition: 提升隊列中部落英雄的傷害。
+        note: 最早獲得的部落輸出英雄。建議儘快換成 <strong>Wu Kong</strong> 或 <strong>Desert Maiden</strong>。
+      soulmancer:
+        skills:
+          Soul Link: 與隊友分擔傷害，並對其中一部分免疫。
+          Soul Recall: 瀕死時造成傷害並在短時間內免於死亡，隨後消散。
+          Soul Empowerment: 提升隊列中部落英雄的生命值。
+          Soul Freeze: 造成傷害並可能凍結目標。
+          Pain Diffusion: 生命值低於門檻時立即觸發 Soul Freeze。
+        note: 一位隨星級提升而強力的輔助英雄，能延長隊伍的續戰能力，後期廣泛使用。
+      desert-prince:
+        skills:
+          Royal Armor: 獲得可吸收傷害的護盾。
+          Sand’s Blessing: 獲得額外生命值，並根據最大生命值造成真實傷害。
+          Royal Treasury: Royal Armor 啟動時提升隊友的技能傷害。
+          Scorching Scimitar: 造成真實傷害。
+          Eye of Insight: 減少所受的技能傷害。
+          Enthusiast: 隊列中每有一位傳奇以上的部落英雄，即提升敵方死亡／重傷比例。
+        note: 遊戲中數一數二強力的英雄。既是坦克又能造成優秀傷害，是每個部落陣容的<strong>必備</strong>英雄。取得後應立即換掉 <strong>Swordmaster</strong>（若星級相近則優先換掉 <strong>Barbarian</strong>）。
+        skill_names:
+          Sand’s Blessing: Sand's Blessing
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: 造成傷害，後期也會提升速度。
+          Lightning Storm: 造成傷害並將敵人擊飛。
+          Wind of Freedom: 使隊列中所有英雄獲得閃避。
+          Tornado: 引動旋風阻擋投射物，隨後造成傷害。
+          Wind Field: 每次施放 Tornado 提升隊伍攻擊力。
+          War Messenger: 每部署 1000 名士兵，提升士兵攻擊力。
+        note: 你獲得的第一位神話英雄。頂級輸出英雄，能讓你的隊伍與其他陣營一較高下。取得後應立即換掉輔助或較弱的輸出英雄。
+      witch:
+        skills:
+          Dark Healing: 治療隊友。
+          Dread Golem: 召喚魔像使敵人恐懼並造成少量傷害。
+          Curse Fire: 施放 Dark Healing 後，隨機為隊友提供傷害減免與治療。
+          Dark Magic Boost: 提升隊友攻擊力並賦予暫時的暈眩護盾。
+          Guardian Messenger: 每部署 1000 名士兵，提升士兵生命值。
+        note: 一位強力的治療兼輔助英雄。取得後應立即換掉 <strong>Shaman</strong>。
+    lineups_title: 最佳陣容 — 部落
+skills_label: 技能
+skill_separator: ：

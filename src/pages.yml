@@ -147,6 +147,7 @@ horde:
   itemscope_html: false
   faction_icons: true
   style: faction
+  body_from: heroes
 index:
   kind: page
   main_attrs: itemscope itemtype="https://schema.org/Article"
@@ -178,6 +179,7 @@ league:
   itemscope_html: false
   faction_icons: true
   style: faction
+  body_from: heroes
 lord-gear:
   kind: page
   main_attrs: null
@@ -198,6 +200,7 @@ nature:
   itemscope_html: false
   faction_icons: true
   style: faction
+  body_from: heroes
 pets:
   kind: page
   main_attrs: null

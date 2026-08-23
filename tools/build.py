@@ -224,6 +224,52 @@ def render_tables_body(lang: str, t: dict) -> str:
     return env.get_template("tips.html.j2").render(sections=sections, t=t, term=term)
 
 
+_HEROES: dict | None = None
+_HERO_I18N: dict[str, dict] = {}
+
+
+def hero_data() -> dict:
+    global _HEROES
+    if _HEROES is None:
+        path = os.path.join(SRC, "data", "heroes.yml")
+        _HEROES = load_yaml(path) if os.path.exists(path) else {"factions": {}}
+    return _HEROES
+
+
+def hero_i18n(lang: str) -> dict:
+    if lang not in _HERO_I18N:
+        path = os.path.join(SRC, "i18n", "heroes", f"{lang}.yml")
+        _HERO_I18N[lang] = (load_yaml(path) or {}) if os.path.exists(path) else {}
+    return _HERO_I18N[lang]
+
+
+def render_heroes(lang: str, faction_id: str) -> str:
+    """Render the lineup block and hero cards for one faction page."""
+    faction = hero_data()["factions"][faction_id]
+    tr = hero_i18n(lang).get("factions", {}).get(faction_id, {})
+    base = hero_i18n(lang)
+    en = hero_i18n(DEFAULT).get("factions", {}).get(faction_id, {})
+
+    # Fall back to the English sentence when a skill was never translated -
+    # three Korean Horde skills were missing entirely before this.
+    en_skills = {hid: h.get("skills", {}) for hid, h in en.get("heroes", {}).items()}
+
+    context = {
+        "lineups_title": tr.get("lineups_title", en.get("lineups_title", "")),
+        "lineups": tr.get("lineups", en.get("lineups", {})),
+        "heroes": tr.get("heroes", {}),
+        "roles": base.get("roles", {}),
+        "lineup_labels": base.get("lineup_labels", {}),
+        "skills_label": base.get("skills_label", "Skills"),
+    }
+    return env.get_template("heroes.html.j2").render(
+        faction=faction,
+        tr=context,
+        sep=base.get("skill_separator", ": "),
+        en_skills=en_skills,
+    )
+
+
 def faction_icon_pairs(lang: str) -> list[tuple[str, str]]:
     """(display name, image) for every spelling this language uses."""
     images = FACTIONS["images"]
@@ -277,6 +323,10 @@ def render_page(lang: str, slug: str, entry: dict) -> str:
             content_path = os.path.join(SRC, "content", DEFAULT, f"{slug}.html")
         with open(content_path, encoding="utf-8") as fh:
             content = fh.read().rstrip("\n")
+        if entry.get("body_from") == "heroes":
+            content = content.replace(
+                "<!-- heroes -->", render_heroes(lang, slug).strip()
+            )
 
     # Templates run with StrictUndefined so a typo fails the build rather than
     # silently rendering nothing; fill in the optional flags explicitly.

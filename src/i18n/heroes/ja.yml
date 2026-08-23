@@ -1,0 +1,280 @@
+# Hero page text for 'ja'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: ダメージディーラー
+  tank: タンク
+  support: サポート
+  healer: ヒーラー
+  tank_dps: タンク / ダメージディーラー
+  support_dps: サポート／アタッカー
+  healer_support: ヒーラー／サポート
+lineup_labels:
+  front: 前列
+  middle: 中列
+  back: 後列
+factions:
+  league:
+    lineups:
+      main:
+        title: メイン
+        note: メモ：現環境では、Bishop はミシックですが「メイン編成」に入らないことが多いです。
+      against-bosses-damage-focus:
+        title: ボス向け（火力重視）
+        note: メモ：ボス火力が高く兵が落ちるなら、Astrologer を Adjudicator に入れ替えて前列へ。
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: ダメージ＋燃焼（Burn）付与。
+          Meteor Blaze: 範囲ダメージ。
+          Ember: HP が低い時に攻撃力が上昇。
+          Flame Shield: シールド付与＋周囲にダメージ。
+          Elemental Mastery: スキルダメージ増加。
+        note: 序盤の League 最強格 DPS。League 編成で長く使えます（後半でも十分採用候補）。
+      secret-keeper:
+        skills:
+          Arcane Shield: 被ダメ軽減を上げ、デバフ解除。
+          Forbidden Realm: 敵を沈黙させつつダメージ。
+          Arcane Link: HP 増加。
+          Spell Reflection: ダメージ＋短時間の被ダメ無効。
+          Arcane Guardian: ダメージを吸収するシールド付与。
+        note: 最初に手に入るレジェンド級の League タンク。序盤は優秀。すでに <strong>Adjudicator</strong> を使っているなら、後で <strong>Rose Princess</strong> に寄せるのが無難。
+      astrologer:
+        skills:
+          Ray Beam: クリ率アップ付きのダメージ。
+          Solar Beam: 多段ヒット。
+          Foresight: クリ率増加。
+          Arc Light: ダメージ（追加で与ダメが伸びることあり）。
+          Insights: クリダメ増加。
+        note: 序盤の単体火力が強く、ギルド/ワールドボス向き。後半は基本 <strong>Paragon</strong> と <strong>Bishop</strong> を優先。
+      hostess:
+        skills:
+          Evasive Technique: カウンター状態。被ダメ軽減＋反撃ダメ＋回復。
+          100T Hammer!: ダメージ＋スタン。
+          Agile Footwork: 一定間隔で 1 回分の被ダメを回避。
+          Drunken Brawl: 被ダメ軽減＋回復＋ダメージ＋スタン。
+          Inn Keeper: 未出撃でもチーム ATK/HP を上げる。
+        note: 序盤のつなぎタンクとしては悪くない。<strong>Adjudicator</strong> または <strong>Rose Princess</strong> を取ったら基本入れ替え。
+      bard:
+        skills:
+          Cheer: 移動＆攻撃速度アップ（＋ダメージの可能性）。
+          Resonant Chord: ダメージ＋スタン。
+          Endgame Serenade: Resonant Chord 後、味方のスキルCT短縮。
+          Grace: クリ率アップ（＋ダメージの可能性）。
+          Fight Song: League ヒーローのクリ率増加。
+        note: 速度・クリ・CT短縮をまとめて供給できる優秀サポ。終盤でも採用枠に残りやすいです。
+      nun:
+        skills:
+          Therapy: 味方 1 体を回復＋回復受け取り量アップ。
+          Radiant Song: 味方の最大HP＆最終被ダメ軽減を一定時間増加。
+          Holy Grace: 自身の被ダメ軽減。
+          Prayer of Healing: 全体回復。
+          Sacred Union: League ヒーローの最大HP増加。
+        note: 序盤から終盤までの主力ヒーラー。League をやるなら基本ずっと採用。
+      adjudicator:
+        skills:
+          Guardian Discipline: ダメージ＋スタン＋被ダメ軽減＋CC無効（一定時間）。
+          Shield of Faith: 巨大シールド召喚。終了時にダメージ。
+          Indomitable: 味方全体に被ダメ軽減。
+          Judgment: ダメージ＋スタン＋自己回復。
+          Eternal: 瀕死時に短時間無敵。効果中 HP が 1 未満にならない。
+        note: ゲーム屈指のタンク。星（育成）で伸びが大きく、League の最終枠に残る定番。
+      paragon:
+        skills:
+          Commanding Call: ダメージ＋味方にシールド付与。
+          Celestial Blade: CC無効＋ダメージ＋燃焼スタック付与＋被ダメ軽減獲得。
+          Final Verdict: HP 70% 以上の敵への与ダメ増加。
+          Moral Fury: 味方の攻撃力アップ＋ダメージ。
+          Ultimate Execution: 攻撃範囲拡大＋追加ターゲット。通常攻撃ダメージ増加。
+          Conqueror: Legendary+ の League 数で城攻撃が上がる。6体でスキルクリ率獲得。
+        note: League の主力DPSになりがち。入手したら基本 <strong>Astrologer</strong> から置き換え。
+      rose-princess:
+        skills:
+          Be Brave: Courage（被ダメ軽減）スタック獲得。被弾で Resentment に変換。
+          Bloom: Resentment を消費してダメージ＋回復禁止（Heal Ban）。
+          Thorns: ダメージ。Resentment スタック数で追加ダメ。
+          Weapon Up!: 被ダメ軽減が ATK 依存で伸びる。
+          Roses: 敵撃破で Courage と HP を獲得。
+          Guardian Messenger: 出征兵 1000 ごとに兵士 HP 増加。
+        note: 序盤は地味でも、星が伸びると一気に化けるタイプ。硬くて普通に殴りも痛い上位枠。
+      bishop:
+        skills:
+          Fair Strike: 召喚ユニット相手に効果が高い。
+          Divine Descent: ダメージ＋ATK/被ダメ軽減上昇。一定時間通常攻撃が範囲化。
+          Solar Shield: クリ率＆クリ耐性アップ。
+          Confession: ダメージ＋Weaken（増幅系スキルダメ低下）。召喚系に強い。
+          Sacred Burst: 敵撃破時に範囲ダメージ発動。
+          War Messenger: 出征兵 1000 ごとに兵士攻撃力増加。
+        note: 平均火力は <strong>Paragon</strong> に少し届かないことが多いが、十分に終盤採用級。可能なら Paragon と並べたい枠。
+    lineups_title: おすすめ編成 — League
+  nature:
+    lineups:
+      main:
+        title: メイン
+        note: メモ：サーバーにまだ Petalis がいない場合は、代わりに Windwalker を使ってください。
+      damage-focus-best-with-nature:
+        title: 火力重視（ネイチャー運用時のベスト）
+        note: メモ：与ダメージは尖りませんが、ネイチャーを使うなら現状これがベストな選択肢です。
+    heroes:
+      treeguard:
+        skills:
+          Growth: 最大HPを増加させ、被ダメージを軽減し、自身を回復。
+          Timber Shell: 被ダメージ軽減と最大HPを増加させ、回復。
+          Vine: Growth 発動中、攻撃時に追加ダメージと毒を付与。
+          Titanwood Assault: 棘を召喚してダメージを与え、回復。
+          Vitality Surge: ダメージを増加させ、回復。
+        note: 自己回復も持つ堅実な序盤タンク。後で <strong>Monk</strong> に交代しましょう。
+      druid:
+        skills:
+          Nature’s Blessing: 味方1体を回復。
+          Healing Rain: 複数の味方を回復。
+          Force of Nature: ダメージを吸収するシールドを付与。
+          Nature’s Call: Treeman を2体召喚。
+          Natural Affinity: Treeman のHPを強化。
+        note: Treeman を召喚する序盤のヒーラー。後々 <strong>Tidecaller</strong>、少なくとも <strong>Ne Zha</strong> に交代しましょう。
+      windwalker:
+        skills:
+          Swift Arrow: 攻撃速度と通常攻撃ダメージを上昇させ、一定回数の射撃後に再装填。
+          Windwalker’s Blade: 最も近い敵を攻撃し、一瞬だけ被ダメージをブロック。
+          Favorable Wind: 通常攻撃が Swift Arrow のチャージを消費しないことがある。
+          Powerful Ricochet: ダメージを与え、対象をスタン。
+          Preparation: Swift Arrow の再装填速度を上昇。
+        note: 最初に手に入るネイチャーの火力枠。後で <strong>Ne Zha</strong> に交代しましょう。
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: 羊を召喚し、ダメージとスタンを付与。
+          Sheepherd: 子羊を1体召喚。
+          Song of Life: ユニットが死亡・生贄になるたびに、全ヒーローのHPを少し回復。
+          Shepherd’s Bell: 周囲の味方に被ダメージ軽減を付与。
+          Revenge: ユニットが死亡・生贄になるたびに、全ヒーローが永続的にダメージ上昇を獲得。
+        note: ユニット召喚と回復を兼ね備えた強力なサポート。終盤でも十分活躍できます。
+      pixie:
+        skills:
+          Root Absorption: 根を召喚してダメージを与え、攻撃力を奪う。
+          Sunflower Core: コアを召喚し、敵にダメージとスタンを付与。
+          Nature’s Harmony: 生存しているネイチャーヒーロー1体につき被ダメージ軽減を獲得。
+          Bewildering Powder: 敵の命中率を低下させ、ダメージを付与。
+          Forest Ally: ユニットが死亡・生贄になるたびに Sunflower Core のクールダウンが短縮。
+        note: 序盤から優秀な火力ヒーローで、ミシックヒーローが揃うまで強さを維持。終盤でも十分通用します。
+      sage:
+        skills:
+          Harmonic Balance: 被弾時に部分的なダメージ無効化と回復を獲得。
+          Transformation: 熊に変身し、HP・HP吸収・ダメージを獲得。
+          Power of the Wild: Transformation 後、ダメージを吸収するシールドを獲得。
+          Serene State: ダメージを与え、攻撃速度を低下させ、バフを1つ解除。
+          Robust Skin: 熊形態で戦闘不能になった場合、HPを残して元の姿に戻る。
+        note: 2人目に手に入るネイチャーのタンク。終盤まで編成に残しておきましょう。
+      watcher:
+        skills:
+          Plant Purge: 旋風を発生させ、敵にダメージ・毒・低下を付与。
+          Wilt: ダメージと毒を付与。
+          Slowdown: 通常攻撃が敵の攻撃速度を低下させる。
+          Crow Attack: カウンター効果を獲得し、被弾時にダメージを与えつつ回復。
+          Wheatfield Watcher: ネイチャーヒーローのダメージを増加。
+        note: 全体的に弱めのヒーロー。育成優先度は低く、覚醒不可・専用装備なしです。
+      monk:
+        skills:
+          Mountain Strike: ダメージを与え、最大HPを増加させ、ダメージ無効化を付与。
+          Ultimate Zen Power: 回避と被ダメージ軽減を付与し、被弾時にカウンター攻撃。
+          Thundering Kick: Mountain Strike の後、一定確率でスタンを追加。
+          Fiery Breath: ダメージを与え、状態異常無効を付与。
+          Merciful Victor: ユニットが死亡・生贄になるとシールドを獲得。
+          Guardian Messenger: 出征兵1000体ごとに兵士HPを増加。
+        note: 最初のミシック級ネイチャーヒーロー。火力も出せる優秀なタンクで、<strong>Treeguard</strong> と交代しましょう。
+      tidecaller:
+        skills:
+          Hydro Hammer: ダメージを与え、スタンさせ、水の守護霊を召喚。
+          Ascend: ダメージを与え、敵を打ち上げ、Water Lord を召喚。
+          Surge: 通常攻撃が味方全体を回復。
+          Purification Lance: ダメージを与え、遠距離攻撃の精霊を召喚。
+          Evolve: 通常攻撃が追加で1体にヒットするようになる。
+          War Messenger: 出征兵1000体ごとに兵士攻撃力を増加。
+        note: ネイチャー最強、そしてゲーム屈指の最強ヒーローとも言われる存在。ネイチャー編成には必須級です。
+    lineups_title: おすすめ編成 — ネイチャー
+  horde:
+    lineups:
+      main:
+        title: メイン
+        note: メモ：Wanderer はスキルの恩恵を受けるため、前列に置いてください。
+      damage-focus-best-vs-bosses:
+        title: 火力重視（ボス戦に強い）
+        note: メモ：通常編成から Beastmaster を Wilderness Hunter に入れ替えるだけ。ダメージを出すならこの形が最強です。
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: HPが最も低い味方を回復。
+          Ancestor’s Soul: HPが最も低い味方に憑依し、短時間「死亡」を防ぐ。
+          Rain Blessing: 味方全体の回復効果を上昇。
+          Restorative Totem: 回復トーテムを召喚してHPを回復。
+          Wolf Soul: オオカミを2体召喚。
+        note: 最初に入手するホードのヒーラー。序盤は優秀ですが、後々 <strong>Witch</strong> に置き換えるのがおすすめです。
+      swordmaster:
+        skills:
+          Whirlwind: 周囲の敵を攻撃。
+          Blade Storm: 回転してダメージ。
+          Battle Will: 一度だけ、短時間HP1で踏みとどまる。
+          Crazy Cut: ダメージを与え、被ダメ軽減を獲得。
+          Suppression: 失ったHPに応じてダメージが増加。
+        note: タンク寄りで多少火力も出せます。できるだけ早く <strong>Desert Prince</strong> に交代しましょう。
+      barbarian:
+        skills:
+          Fortified Defense: ダメージを吸収するシールドを付与。
+          Taunt: 敵の攻撃対象をこのヒーローに固定。
+          Insatiable Hunger: HPと攻撃力を上昇。
+          Savage Strike: ダメージ＋スタン。
+          Eye of Insight: スキルダメージ被害を軽減。
+          Horde Defender: 編成内ホード全体の被ダメ軽減を上昇。
+        note: 序盤の優秀なタンク。後半は <strong>Desert Prince</strong> または <strong>Beastmaster</strong> に置き換えるのが基本。とはいえ、特に対ネイチャーでは終盤でも役立ちます。
+      warlock:
+        skills:
+          Whispered Shadows: ダメージ＋味方回復。
+          Bloodlust: HP吸収を付与し、味方の攻撃速度を上昇。
+          Shadow Rite: 編成内ホード全体のHPを上昇。
+          Debilitation: 敵のスキルダメージと被ダメ軽減を低下。
+          Malicious Passion: 味方ホードのダメージを上昇。
+        note: 強力なサポート枠。バフとデバフが優秀で、終盤のPvEでも価値が高いです。
+      wilderness:
+        skills:
+          Barb: 通常攻撃を強化し、出血を付与。
+          Fatal Prayer: ダメージ＋ノックバック、さらに攻撃力を上昇。
+          Hunter: 攻撃力上昇。
+          Impulse Instinct: 攻撃速度上昇。
+          Tradition: 編成内ホードのダメージを上昇。
+        note: 最初期のホード火力枠。入手でき次第 <strong>Wu Kong</strong> または <strong>Desert Maiden</strong> に置き換えるのがおすすめです。
+      soulmancer:
+        skills:
+          Soul Link: 味方とダメージを分担し、その一部を無効化。
+          Soul Recall: 瀕死時にダメージを与え、短時間だけ死亡しない。その後に倒れる。
+          Soul Empowerment: 編成内ホードのHPを上昇。
+          Soul Freeze: ダメージ＋凍結の可能性。
+          Pain Diffusion: HPが一定以下になると Soul Freeze を即時発動。
+        note: 星（凸）で伸びるタイプのサポート。チームの生存力を底上げし、終盤でも採用されやすいヒーローです。
+      desert-prince:
+        skills:
+          Royal Armor: ダメージを吸収するシールドを付与。
+          Sand’s Blessing: 最大HPに応じた追加HPを獲得し、最大HP依存の確定ダメージを与える。
+          Royal Treasury: Royal Armor 発動中、味方のスキルダメージを上昇。
+          Scorching Scimitar: 確定ダメージを与える。
+          Eye of Insight: スキルダメージ被害を軽減。
+          Enthusiast: 編成内のレジェンド以上ホードが増えるほど、敵の死亡／負傷率が上昇。
+        note: ゲーム屈指の最重要ヒーロー。タンクなのに火力も出る“必須級”です。入手したら、まずは <strong>Swordmaster</strong>（または星が同程度なら <strong>Barbarian</strong>）を優先して交代。
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: ダメージ（後半は速度上昇も付く）。
+          Lightning Storm: ダメージ＋打ち上げ。
+          Wind of Freedom: 編成全体に回避を付与。
+          Tornado: 飛び道具を防ぐ竜巻をチャネルし、その後ダメージ。
+          Wind Field: Tornado 発動ごとにチーム攻撃力が上昇。
+          War Messenger: 出撃兵士1000体ごとに兵士攻撃力を上昇。
+        note: 最初に入手するミシックヒーロー。超強力な火力枠で、他勢力に対抗できるようになります。取ったら即戦力として編成へ。
+      witch:
+        skills:
+          Dark Healing: 味方を回復。
+          Dread Golem: ゴーレムを召喚し、恐怖付与＋軽いダメージ。
+          Curse Fire: Dark Healing 後、ランダムな味方に被ダメ軽減と回復を付与。
+          Dark Magic Boost: 味方の攻撃力を上げ、短時間のスタン防護を付与。
+          Guardian Messenger: 出撃兵士1000体ごとに兵士HPを上昇。
+        note: 回復と支援が強い優秀ヒーラー。入手したら <strong>Shaman</strong> と交代するのが基本です。
+    lineups_title: おすすめ編成 — ホード
+skills_label: スキル
+skill_separator: ：

@@ -1,0 +1,281 @@
+# Hero page text for 'en'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: Damage Dealer
+  tank: Tank
+  support: Support
+  healer: Healer
+  tank_dps: Tank / Damage Dealer
+  support_dps: Support / Damage Dealer
+  healer_support: Healer / Support
+lineup_labels:
+  front: Front
+  middle: Middle
+  back: Back
+factions:
+  league:
+    lineups:
+      main:
+        title: Main
+        note: 'Note: in the current meta, even though Bishop is a Mythic hero, he is not part of the main lineup.'
+      against-bosses-damage-focus:
+        title: Against bosses (damage focus)
+        note: 'Note: if the boss deals heavy damage and your troops are dying, swap Astrologer with Adjudicator and move him to the front row.'
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: Deals damage and applies burn.
+          Meteor Blaze: Area damage.
+          Ember: When HP is low, gains an attack boost.
+          Flame Shield: Grants a shield and damages nearby enemies.
+          Elemental Mastery: Increases skill damage.
+        note: Your strongest early-game League DPS. Keep her in your League lineup; still usable later on.
+      secret-keeper:
+        skills:
+          Arcane Shield: Increases damage reduction and removes debuffs.
+          Forbidden Realm: Silences enemies and deals damage.
+          Arcane Link: Increases HP.
+          Spell Reflection: Deals damage and becomes immune to damage briefly.
+          Arcane Guardian: Grants a shield that absorbs damage.
+        note: First Legendary League tank. Good early; later, replace with <strong>Rose Princess</strong> if you already run <strong>Adjudicator</strong>.
+      astrologer:
+        skills:
+          Ray Beam: Damage with increased crit rate.
+          Solar Beam: Multiple hits.
+          Foresight: Increases crit rate.
+          Arc Light: Damage that can further increase damage dealt.
+          Insights: Increases crit damage.
+        note: Great early single-target DPS (Guild/World Boss). Later, prefer <strong>Paragon</strong> and <strong>Bishop</strong>.
+      hostess:
+        skills:
+          Evasive Technique: Enters counter state; gains damage reduction, deals damage, and restores HP.
+          100T Hammer!: Damage and stun.
+          Agile Footwork: Periodically dodges one instance of damage.
+          Drunken Brawl: Damage reduction, healing, damage, and stun.
+          Inn Keeper: Increases team ATK/HP even when not deployed.
+        note: Decent early tank with utility. Replace once you get <strong>Adjudicator</strong> or <strong>Rose Princess</strong>.
+      bard:
+        skills:
+          Cheer: Increases movement and attack speed; may deal damage.
+          Resonant Chord: Deals damage and stuns.
+          Endgame Serenade: After Resonant Chord, reduces allies’ skill cooldowns.
+          Grace: Increases crit rate; may deal damage.
+          Fight Song: Increases crit rate for League heroes.
+        note: 'Good support: speed, crit, and cooldown reduction. Can fit even into end‑game teams.'
+      nun:
+        skills:
+          Therapy: Heals an ally and increases healing received.
+          Radiant Song: Increases allies’ max HP and final damage reduction for a time.
+          Holy Grace: Grants self damage reduction.
+          Prayer of Healing: Heals all allies.
+          Sacred Union: Increases max HP of League heroes.
+        note: Your main healer from early to late game. Keep her in your League lineup.
+      adjudicator:
+        skills:
+          Guardian Discipline: Damage, stun, damage reduction, and control immunity for a time.
+          Shield of Faith: Summons a massive shield; on expiry, deals damage.
+          Indomitable: Grants damage reduction to all allies.
+          Judgment: Damage, stun, and self‑healing.
+          Eternal: Near-death invincibility; HP cannot drop below 1 during the effect.
+        note: One of the best tanks in the game. Scales very well with stars. Staple of end‑game League teams.
+      paragon:
+        skills:
+          Commanding Call: Deals damage; grants allies a shield.
+          Celestial Blade: Control immunity, damage, applies burn stacks; gains damage reduction.
+          Final Verdict: Increased damage against enemies above 70% HP.
+          Moral Fury: Raises allies’ attack and deals damage.
+          Ultimate Execution: Extends attack range and adds an extra target; boosts normal attack damage.
+          Conqueror: Each Legendary+ League hero boosts castle attack; with 6 League heroes, gains skill crit rate.
+        note: Usually your primary League DPS. Replace <strong>Astrologer</strong> with her once acquired.
+      rose-princess:
+        skills:
+          Be Brave: Gains stacks of Courage (damage reduction). Taking damage converts a stack to Resentment.
+          Bloom: Consumes Resentment stacks to deal damage and apply Heal Ban.
+          Thorns: Deals damage; extra damage per Resentment stack.
+          Weapon Up!: Damage reduction scales with her ATK.
+          Roses: Gains Courage and HP when enemies die.
+          Guardian Messenger: Increases soldiers’ HP per 1000 deployed.
+        note: Starts modest but becomes a top League hero with stars — a tank that also hits very hard.
+      bishop:
+        skills:
+          Fair Strike: Extra effective versus summoned units.
+          Divine Descent: Damage; increases ATK and damage reduction; normal attacks become AoE for a time.
+          Solar Shield: Increases crit and crit resistance.
+          Confession: Deals damage and applies Weaken (reduces amplified skill damage), strong vs summons.
+          Sacred Burst: Triggers AoE damage when enemies die.
+          War Messenger: Increases soldiers’ attack per 1000 deployed.
+        note: High DPS slightly below <strong>Paragon</strong> on average, but still end‑game worthy — include alongside Paragon where possible.
+    lineups_title: Best lineups — League
+  nature:
+    lineups:
+      main:
+        title: Main
+        note: 'Note: if Petalis is not available in your server yet, replace her with Windwalker.'
+      damage-focus-best-with-nature:
+        title: Damage focus (best with Nature)
+        note: 'Note: it will not deal insane damage, but if you need to run Nature, this is the best option you have.'
+    heroes:
+      treeguard:
+        skills:
+          Growth: Increases max HP, reduces damage taken, and heals self.
+          Timber Shell: Increases damage reduction and max HP, and heals.
+          Vine: While Growth is active, attacks deal extra damage and poison.
+          Titanwood Assault: Summons thorns that deal damage and heal.
+          Vitality Surge: Increases damage and heals.
+        note: Solid starting tank with some self-healing. Replace him later with <strong>Monk</strong>.
+      druid:
+        skills:
+          Nature’s Blessing: Heals one ally.
+          Healing Rain: Heals multiple allies.
+          Force of Nature: Grants a shield that absorbs damage.
+          Nature’s Call: Summons 2 Treemen.
+          Natural Affinity: Boosts Treemen HP.
+        note: The starter healer who summons Treemen. Replace with <strong>Tidecaller</strong> or at least <strong>Ne Zha</strong> later on.
+      windwalker:
+        skills:
+          Swift Arrow: Boosts attack speed and normal attack damage, reloads after a number of shots.
+          Windwalker’s Blade: Attacks nearest enemy and blocks incoming damage briefly.
+          Favorable Wind: Normal attacks may not consume Swift Arrow charges.
+          Powerful Ricochet: Deals damage and stuns a target.
+          Preparation: Increases Swift Arrow reload speed.
+        note: Your first Nature damage dealer. Replace with <strong>Ne Zha</strong> later.
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: Summons sheep that deal damage and stun enemies.
+          Sheepherd: Summons a lamb.
+          Song of Life: When units die or are sacrificed, all heroes recover some HP.
+          Shepherd’s Bell: Grants damage reduction to nearby allies.
+          Revenge: Each time a unit dies or is sacrificed, all heroes gain permanent damage increase.
+        note: A strong support hero that summons units and offers healing. Good even in late game.
+      pixie:
+        skills:
+          Root Absorption: Summons roots that deal damage and steal attack.
+          Sunflower Core: Summons a core that damages and stuns enemies.
+          Nature’s Harmony: Gains damage reduction for each living Nature hero.
+          Bewildering Powder: Reduces enemy hit rate and deals damage.
+          Forest Ally: Each dead/sacrificed unit reduces Sunflower Core cooldown.
+        note: Excellent early damage dealer and remains strong until Mythic heroes. Viable even for end game.
+      sage:
+        skills:
+          Harmonic Balance: Gains partial damage immunity and heals when attacked.
+          Transformation: Transforms into a bear, gaining HP, HP drain, and damage.
+          Power of the Wild: Gains a shield after Transformation that absorbs damage.
+          Serene State: Deals damage, slows attack speed, and removes one buff.
+          Robust Skin: If Sage dies in bear form, reverts with some HP.
+        note: The second Nature tank you’ll get. Keep him in your lineup until late game.
+      watcher:
+        skills:
+          Plant Purge: Creates a whirlwind that damages, poisons, and slows enemies.
+          Wilt: Deals damage and poisons.
+          Slowdown: Normal attacks reduce enemy attack speed.
+          Crow Attack: Gains counterattack, dealing damage and healing when hit.
+          Wheatfield Watcher: Increases damage of Nature heroes.
+        note: A weak option overall — not recommended to invest much in. Cannot be awakened and has no exclusive gear.
+      monk:
+        skills:
+          Mountain Strike: Deals damage, increases max HP, and grants damage immunity.
+          Ultimate Zen Power: Grants dodge, damage reduction, and counterattacks when hit.
+          Thundering Kick: Adds a chance to follow up Mountain Strike with a stun.
+          Fiery Breath: Deals damage and grants control immunity.
+          Merciful Victor: Gains a shield when units die or are sacrificed.
+          Guardian Messenger: Increases soldier HP per 1000 deployed.
+        note: Your first Mythic Nature hero. A strong tank who deals damage as well. Replace <strong>Treeguard</strong> with him.
+      tidecaller:
+        skills:
+          Hydro Hammer: Deals damage, stuns, and summons a guardian water elemental.
+          Ascend: Deals damage, knocks enemies up, and summons Water Lord.
+          Surge: Normal attacks heal all allies.
+          Purification Lance: Deals damage and summons a ranged elemental.
+          Evolve: Normal attacks can hit an additional target.
+          War Messenger: Increases soldier attack per 1000 deployed.
+        note: The best Nature hero, and arguably the strongest hero in the game. A must-have for any Nature team.
+    lineups_title: Best lineups — Nature
+  horde:
+    lineups:
+      main:
+        title: Main
+        note: 'Note: keep Wanderer in the front row to benefit from his skill.'
+      damage-focus-best-vs-bosses:
+        title: Damage focus (best vs bosses)
+        note: 'Note: from the normal lineup, just switch Beastmaster with Wilderness Hunter. This is the best lineup for dealing damage.'
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: Heals allies with the lowest HP.
+          Ancestor’s Soul: Possesses the ally with the lowest HP, preventing death for a short time.
+          Rain Blessing: Increases the healing effect of all allies.
+          Restorative Totem: Summons a healing totem that restores HP.
+          Wolf Soul: Summons 2 wolves.
+        note: The first Horde healer you obtain. Great at the start, but replace her with <strong>Witch</strong> later on.
+      swordmaster:
+        skills:
+          Whirlwind: Attacks surrounding enemies.
+          Blade Storm: Spins and deals damage.
+          Battle Will: Prevents death once by staying at 1 HP for a short time.
+          Crazy Cut: Deals damage and gains damage reduction.
+          Suppression: Increases damage based on missing HP.
+        note: A tank that also deals some damage. Replace him with <strong>Desert Prince</strong> as soon as possible.
+      barbarian:
+        skills:
+          Fortified Defense: Grants a shield that absorbs damage.
+          Taunt: Forces enemies to attack this hero.
+          Insatiable Hunger: Increases HP and Attack.
+          Savage Strike: Deals damage and stuns enemies.
+          Eye of Insight: Reduces skill damage taken.
+          Horde Defender: Increases damage reduction for all Horde heroes in the queue.
+        note: A solid early tank. Replace him later with <strong>Desert Prince</strong> or <strong>Beastmaster</strong>. Still useful in late game, especially against Nature teams.
+      warlock:
+        skills:
+          Whispered Shadows: Deals damage and heals allies.
+          Bloodlust: Grants HP drain and boosts allies’ attack speed.
+          Shadow Rite: Increases HP of all Horde heroes.
+          Debilitation: Reduces enemies’ skill damage and damage reduction.
+          Malicious Passion: Increases damage of allied Horde heroes.
+        note: A strong support hero. Provides buffs and debuffs, very valuable in end game PvE as well.
+      wilderness:
+        skills:
+          Barb: Increases normal attacks and applies bleeding.
+          Fatal Prayer: Deals damage, knocks back enemies, and increases attack.
+          Hunter: Increases attack.
+          Impulse Instinct: Increases attack speed.
+          Tradition: Increases Horde heroes’ damage in the queue.
+        note: The first Horde damage dealer. Replace her with <strong>Wu Kong</strong> or <strong>Desert Maiden</strong> as soon as possible.
+      soulmancer:
+        skills:
+          Soul Link: Shares damage with an ally and becomes immune to part of it.
+          Soul Recall: Upon near-death, deals damage and cannot die for a while, then perishes.
+          Soul Empowerment: Increases HP of Horde heroes in the queue.
+          Soul Freeze: Deals damage and may freeze the target.
+          Pain Diffusion: Triggers Soul Freeze immediately when HP falls below a threshold.
+        note: A support hero that scales well with stars. Extends survivability of the team, widely used in late game.
+      desert-prince:
+        skills:
+          Royal Armor: Grants a shield that absorbs damage.
+          Sand’s Blessing: Gains extra HP and deals true damage based on max HP.
+          Royal Treasury: Increases allies’ skill damage when Royal Armor is activated.
+          Scorching Scimitar: Deals true damage.
+          Eye of Insight: Reduces skill damage taken.
+          Enthusiast: Each Legendary+ Horde hero in queue increases enemy death/wounded ratio.
+        note: One of the best heroes in the game. A tank that also deals excellent damage — a <strong>must-have</strong> for every Horde lineup. Replace <strong>Swordmaster</strong> (or <strong>Barbarian</strong>
+          if they’re at similar stars) as soon as you get him.
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: Deals damage, later increases speed as well.
+          Lightning Storm: Deals damage and launches enemies into the air.
+          Wind of Freedom: Grants dodge to all heroes in queue.
+          Tornado: Channels a whirlwind that blocks projectiles, then deals damage.
+          Wind Field: Each Tornado cast increases team attack.
+          War Messenger: Increases soldier attack for every 1000 soldiers deployed.
+        note: The first Mythic hero you obtain. A top damage dealer that allows your team to compete with other factions. Replace a support or weaker DD with her immediately.
+      witch:
+        skills:
+          Dark Healing: Heals allies.
+          Dread Golem: Summons a golem that fears enemies and deals some damage.
+          Curse Fire: After Dark Healing, grants damage reduction and healing to random allies.
+          Dark Magic Boost: Boosts allies’ attack and grants a temporary stun barrier.
+          Guardian Messenger: Increases soldiers’ HP per 1000 deployed.
+        note: A powerful healer with support utility. Replace <strong>Shaman</strong> with her as soon as you get her.
+    lineups_title: Best lineups — Horde
+skills_label: Skills
+skill_separator: ': '

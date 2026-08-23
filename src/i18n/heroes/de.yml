@@ -1,0 +1,287 @@
+# Hero page text for 'de'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: Schadensausteiler
+  tank: Tank
+  support: Support
+  healer: Heiler
+  tank_dps: Tank / Schadensausteiler
+  support_dps: Support / Schadensausteiler
+  healer_support: Heiler / Support
+lineup_labels:
+  front: Front
+  middle: Mitte
+  back: Back
+factions:
+  league:
+    lineups:
+      main:
+        title: Main
+        note: 'Hinweis: Im aktuellen Meta ist Bishop zwar mythisch, gehört aber nicht zur Standard-Aufstellung.'
+      against-bosses-damage-focus:
+        title: Gegen Bosse (Schaden-Fokus)
+        note: 'Hinweis: Wenn der Boss extrem hart trifft und deine Truppen sterben, tausche Astrologer gegen Adjudicator und stelle ihn nach vorne.'
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: Verursacht Schaden und fügt Brennen hinzu.
+          Meteor Blaze: Flächenschaden.
+          Ember: Bei wenig HP erhält sie einen Angriffs-Boost.
+          Flame Shield: Gewährt ein Schild und schädigt nahe Gegner.
+          Elemental Mastery: Erhöht Skill-Schaden.
+        note: Dein stärkster Liga-DPS im Early-Game. Bleibt in vielen Setups lange spielbar.
+      secret-keeper:
+        skills:
+          Arcane Shield: Erhöht Schadensreduktion und entfernt Debuffs.
+          Forbidden Realm: Bringt Gegner zum Schweigen und verursacht Schaden.
+          Arcane Link: Erhöht HP.
+          Spell Reflection: Verursacht Schaden und wird kurzzeitig immun.
+          Arcane Guardian: Gewährt ein absorbierendes Schild.
+        note: Erster legendärer Liga-Tank. Gut früh; später oft durch <strong>Rose Princess</strong> ersetzt, wenn du bereits <strong>Adjudicator</strong> spielst.
+      astrologer:
+        skills:
+          Ray Beam: Schaden mit erhöhter Krit-Chance.
+          Solar Beam: Mehrfachtreffer.
+          Foresight: Erhöht Krit-Chance.
+          Arc Light: Schaden, der den verursachten Schaden weiter erhöhen kann.
+          Insights: Erhöht Krit-Schaden.
+        note: Starker Single-Target-DPS früh (Gilden-/Weltboss). Später sind <strong>Paragon</strong> und <strong>Bishop</strong> meist besser.
+      hostess:
+        skills:
+          Evasive Technique: Konter-Status; Schadensreduktion, Schaden und Heilung.
+          100T Hammer!: Schaden und Betäubung.
+          Agile Footwork: Weicht periodisch einer Schadensinstanz aus.
+          Drunken Brawl: Schadensreduktion, Heilung, Schaden und Betäubung.
+          Inn Keeper: Erhöht Team-ATK/HP auch ohne Einsatz.
+        note: Solider Early-Tank mit Utility. Ersetzen, sobald du <strong>Adjudicator</strong> oder <strong>Rose Princess</strong> bekommst.
+      bard:
+        skills:
+          Cheer: Erhöht Bewegungs- und Angriffstempo; kann Schaden verursachen.
+          Resonant Chord: Verursacht Schaden und betäubt.
+          Endgame Serenade: Nach Resonant Chord sinken Skill-Cooldowns der Verbündeten.
+          Grace: Erhöht Krit-Chance; kann Schaden verursachen.
+          Fight Song: Erhöht Krit-Chance für Liga-Helden.
+        note: 'Sehr guter Support: Tempo, Krit und Cooldown-Reduktion. Passt auch in späte Teams.'
+      nun:
+        skills:
+          Therapy: Heilt einen Verbündeten und erhöht erhaltene Heilung.
+          Radiant Song: Erhöht Max-HP und finale Schadensreduktion für kurze Zeit.
+          Holy Grace: Gewährt ihr selbst Schadensreduktion.
+          Prayer of Healing: Heilt alle Verbündeten.
+          Sacred Union: Erhöht Max-HP von Liga-Helden.
+        note: Dein Main-Heiler von früh bis spät. In Liga praktisch immer gesetzt.
+      adjudicator:
+        skills:
+          Guardian Discipline: Schaden, Stun, Schadensreduktion und kurzzeitig CC-Immunität.
+          Shield of Faith: Riesiges Schild; beim Auslaufen verursacht es Schaden.
+          Indomitable: Gewährt allen Verbündeten Schadensreduktion.
+          Judgment: Schaden, Stun und Selbstheilung.
+          Eternal: Nahe Tod Unverwundbarkeit; HP fallen währenddessen nicht unter 1.
+        note: Einer der besten Tanks im Spiel. Skaliert extrem gut mit Sternen. Endgame-Stammplatz in Liga.
+      paragon:
+        skills:
+          Commanding Call: Schaden; gewährt Verbündeten ein Schild.
+          Celestial Blade: CC-Immunität, Schaden, Brand-Stacks; erhält Schadensreduktion.
+          Final Verdict: Mehr Schaden gegen Ziele über 70% HP.
+          Moral Fury: Erhöht Angriff der Verbündeten und verursacht Schaden.
+          Ultimate Execution: Mehr Reichweite + Extra-Ziel; verstärkt normale Angriffe.
+          Conqueror: Jede legendäre+ Liga-Einheit erhöht Burg-Angriff; mit 6 Liga-Helden zusätzliche Skill-Krit-Chance.
+        note: Meist dein Haupt-DPS in Liga. Ersetzt <strong>Astrologer</strong>, sobald verfügbar.
+      rose-princess:
+        skills:
+          Be Brave: Stapel Mut (Schadensreduktion). Schaden wandelt Stapel in Groll um.
+          Bloom: Verbraucht Groll-Stapel für Schaden + Heil-Sperre.
+          Thorns: Schaden, zusätzlicher Schaden pro Groll-Stapel.
+          Weapon Up!: Schadensreduktion skaliert mit ihrem ATK.
+          Roses: Erhält Mut und HP, wenn Gegner sterben.
+          Guardian Messenger: Erhöht Soldaten-HP pro 1000 eingesetzte Soldaten.
+        note: Startet „okay“, wird mit Sternen aber absurd stark. Tank, der gleichzeitig richtig reinhaut.
+      bishop:
+        skills:
+          Fair Strike: Besonders effektiv gegen beschworene Einheiten.
+          Divine Descent: Schaden; erhöht ATK und Schadensreduktion; normale Angriffe werden kurz AoE.
+          Solar Shield: Erhöht Krit und Krit-Resistenz.
+          Confession: Schaden + Schwächen (reduziert verstärkten Skill-Schaden), stark gegen Summons.
+          Sacred Burst: AoE-Schaden, wenn Gegner sterben.
+          War Messenger: Erhöht Soldaten-Angriff pro 1000 eingesetzte Soldaten.
+        note: Sehr hoher DPS, im Schnitt etwas unter <strong>Paragon</strong>, aber absolut Endgame-tauglich. Wenn möglich zusammen mit Paragon spielen.
+    lineups_title: Beste Aufstellungen — Liga
+  nature:
+    lineups:
+      main:
+        title: Main
+        note: 'Hinweis: Wenn Petalis auf deinem Server noch nicht verfügbar ist, ersetze sie durch Windwalker.'
+      damage-focus-best-with-nature:
+        title: Schaden-Fokus (beste Option mit Natur)
+        note: 'Hinweis: Der Schaden ist nicht „krank“, aber wenn du Natur spielen musst, ist das die beste realistische Option.'
+    heroes:
+      treeguard:
+        skills:
+          Growth: Erhöht max. HP, reduziert erlittenen Schaden und heilt sich selbst.
+          Timber Shell: Erhöht Schadensreduktion und max. HP und heilt.
+          Vine: Solange Growth aktiv ist, verursachen Angriffe zusätzlichen Schaden und Gift.
+          Titanwood Assault: Beschwört Dornen, die Schaden verursachen und heilen.
+          Vitality Surge: Erhöht Schaden und heilt.
+        note: Solider Start-Tank mit etwas Self-Heal. Später durch <strong>Monk</strong> ersetzen.
+      druid:
+        skills:
+          Nature’s Blessing: Heilt einen Verbündeten.
+          Healing Rain: Heilt mehrere Verbündete.
+          Force of Nature: Gewährt einen Schild, der Schaden absorbiert.
+          Nature’s Call: Beschwört 2 Treemen.
+          Natural Affinity: Erhöht die HP der Treemen.
+        note: Starter-Heiler, der Treemen beschwört. Später durch <strong>Tidecaller</strong> ersetzen oder mindestens durch <strong>Ne Zha</strong>.
+        skill_names:
+          Nature’s Blessing: Natur’s Blessing
+          Force of Nature: Force of Natur
+          Nature’s Call: Natur’s Call
+      windwalker:
+        skills:
+          Swift Arrow: Erhöht Angriffstempo und normalen Angriffsschaden; lädt nach einer Anzahl Schüsse nach.
+          Windwalker’s Blade: Greift den nächsten Gegner an und blockt kurzzeitig eingehenden Schaden.
+          Favorable Wind: Normale Angriffe verbrauchen möglicherweise keine Swift-Arrow-Ladungen.
+          Powerful Ricochet: Verursacht Schaden und betäubt ein Ziel.
+          Preparation: Erhöht die Nachladegeschwindigkeit von Swift Arrow.
+        note: Dein erster Natur-DD. Später durch <strong>Ne Zha</strong> ersetzen.
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: Beschwört Schafe, die Schaden verursachen und Gegner betäuben.
+          Sheepherd: Beschwört ein Lamm.
+          Song of Life: Wenn Einheiten sterben oder geopfert werden, erhalten alle Helden etwas HP zurück.
+          Shepherd’s Bell: Gewährt Verbündeten in der Nähe Schadensreduktion.
+          Revenge: Jedes Mal, wenn eine Einheit stirbt oder geopfert wird, erhalten alle Helden permanenten Schadensbonus.
+        note: Starker Support, beschwört Einheiten und liefert Heilung/Utility. Auch im Late Game noch gut.
+      pixie:
+        skills:
+          Root Absorption: Beschwört Wurzeln, die Schaden verursachen und Angriff stehlen.
+          Sunflower Core: Beschwört einen Kern, der Schaden verursacht und Gegner betäubt.
+          Nature’s Harmony: Erhält Schadensreduktion pro lebendem Natur-Helden.
+          Bewildering Powder: Senkt die Trefferchance des Gegners und verursacht Schaden.
+          Forest Ally: Jede tote/geopferte Einheit reduziert den Cooldown von Sunflower Core.
+        note: Extrem stark im Early Game und bleibt bis zu den Mythic-Helden relevant. Auch Endgame-viable.
+        skill_names:
+          Nature’s Harmony: Natur’s Harmony
+      sage:
+        skills:
+          Harmonic Balance: Erhält teilweise Schadensimmunität und heilt, wenn er getroffen wird.
+          Transformation: Verwandelt sich in einen Bären, erhält HP, HP-Drain und mehr Schaden.
+          Power of the Wild: Nach der Transformation erhält er einen Schild, der Schaden absorbiert.
+          Serene State: Verursacht Schaden, verlangsamt das Angriffstempo und entfernt einen Buff.
+          Robust Skin: Stirbt Sage in Bärenform, kehrt er mit etwas HP zurück.
+        note: Der zweite Natur-Tank, den du bekommst. Im Lineup behalten, bis du wirklich im Late Game bist.
+      watcher:
+        skills:
+          Plant Purge: Erzeugt einen Wirbelwind, der Schaden verursacht, vergiftet und verlangsamt.
+          Wilt: Verursacht Schaden und vergiftet.
+          Slowdown: Normale Angriffe senken das Angriffstempo des Gegners.
+          Crow Attack: Erhält Konterstatus, verursacht Schaden und heilt beim Getroffenwerden.
+          Wheatfield Watcher: Erhöht den Schaden von Natur-Helden.
+        note: Insgesamt eher schwach. Nicht wirklich empfehlenswert, viel zu investieren. Kann nicht erweckt werden und hat keine exklusive Ausrüstung.
+      monk:
+        skills:
+          Mountain Strike: Verursacht Schaden, erhöht max. HP und gewährt Schadensimmunität.
+          Ultimate Zen Power: Gewährt Ausweichen, Schadensreduktion und kontert, wenn er getroffen wird.
+          Thundering Kick: Chance, Mountain Strike mit einem Stun-Follow-up zu erweitern.
+          Fiery Breath: Verursacht Schaden und gewährt Kontrolle-Immunität.
+          Merciful Victor: Erhält einen Schild, wenn Einheiten sterben oder geopfert werden.
+          Guardian Messenger: Erhöht Soldaten-HP pro 1000 eingesetzter Soldaten.
+        note: Dein erster mythischer Natur-Held. Starker Tank, der auch Schaden macht. Ersetze <strong>Treeguard</strong> durch ihn.
+      tidecaller:
+        skills:
+          Hydro Hammer: Verursacht Schaden, betäubt und beschwört einen Wasserwächter-Elementar.
+          Ascend: Verursacht Schaden, schleudert Gegner hoch und beschwört Water Lord.
+          Surge: Normale Angriffe heilen alle Verbündeten.
+          Purification Lance: Verursacht Schaden und beschwört einen Fernkampf-Elementar.
+          Evolve: Normale Angriffe können ein zusätzliches Ziel treffen.
+          War Messenger: Erhöht Soldaten-Angriff pro 1000 eingesetzter Soldaten.
+        note: Der beste Natur-Held und vermutlich einer der stärksten Helden im ganzen Spiel. Pflicht in jedem Natur-Team.
+    lineups_title: Beste Lineups — Natur
+  horde:
+    lineups:
+      main:
+        title: Standard
+        note: 'Hinweis: Halte Wanderer in der Frontreihe, damit du von seiner Fähigkeit profitierst.'
+      damage-focus-best-vs-bosses:
+        title: Schaden-Fokus (am besten gegen Bosse)
+        note: 'Hinweis: Tausche in der Standard-Aufstellung einfach Beastmaster gegen Wilderness Hunter. Das ist die beste Aufstellung für maximalen Schaden.'
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: Heilt Verbündete mit den niedrigsten HP.
+          Ancestor’s Soul: Besessenheit auf dem Verbündeten mit den niedrigsten HP; verhindert für kurze Zeit den Tod.
+          Rain Blessing: Erhöht die Heilwirkung aller Verbündeten.
+          Restorative Totem: Beschwört ein Heil-Totem, das HP wiederherstellt.
+          Wolf Soul: Beschwört 2 Wölfe.
+        note: Der erste Horde-Heiler, den du bekommst. Stark am Anfang, aber ersetze sie später durch <strong>Witch</strong>.
+      swordmaster:
+        skills:
+          Whirlwind: Greift Gegner im Umkreis an.
+          Blade Storm: Dreht sich und verursacht Schaden.
+          Battle Will: Verhindert einmal den Tod, indem er kurzzeitig bei 1 HP bleibt.
+          Crazy Cut: Verursacht Schaden und erhält Schadensreduktion.
+          Suppression: Erhöht den Schaden basierend auf fehlenden HP.
+        note: Ein Tank, der auch etwas Schaden macht. Ersetze ihn so schnell wie möglich durch <strong>Desert Prince</strong>.
+      barbarian:
+        skills:
+          Fortified Defense: Gewährt ein Schild, das Schaden absorbiert.
+          Taunt: Zwingt Gegner, diesen Helden anzugreifen.
+          Insatiable Hunger: Erhöht HP und Angriff.
+          Savage Strike: Verursacht Schaden und betäubt Gegner.
+          Eye of Insight: Reduziert erlittenen Fähigkeitsschaden.
+          Horde Defender: Erhöht die Schadensreduktion für alle Horde-Helden in der Warteschlange.
+        note: Ein solider Tank fürs frühe Spiel. Ersetze ihn später durch <strong>Desert Prince</strong> oder <strong>Beastmaster</strong>. Im Late Game weiterhin nützlich, besonders gegen Natur-Teams.
+      warlock:
+        skills:
+          Whispered Shadows: Verursacht Schaden und heilt Verbündete.
+          Bloodlust: Gewährt Lebensraub und erhöht die Angriffsgeschwindigkeit der Verbündeten.
+          Shadow Rite: Erhöht die HP aller Horde-Helden.
+          Debilitation: Senkt den Fähigkeitsschaden der Gegner und deren Schadensreduktion.
+          Malicious Passion: Erhöht den Schaden verbündeter Horde-Helden.
+        note: Sehr starker Support. Liefert Buffs und Debuffs, im Endgame auch in PvE extrem wertvoll.
+      wilderness:
+        skills:
+          Barb: Verstärkt normale Angriffe und verursacht Blutung.
+          Fatal Prayer: Verursacht Schaden, stößt Gegner zurück und erhöht den Angriff.
+          Hunter: Erhöht den Angriff.
+          Impulse Instinct: Erhöht die Angriffsgeschwindigkeit.
+          Tradition: Erhöht den Schaden der Horde-Helden in der Warteschlange.
+        note: Der erste Horde-Schadensausteiler. Ersetze sie so schnell wie möglich durch <strong>Wu Kong</strong> oder <strong>Desert Maiden</strong>.
+      soulmancer:
+        skills:
+          Soul Link: Teilt Schaden mit einem Verbündeten und wird gegen einen Teil davon immun.
+          Soul Recall: Beim Beinahe-Tod verursacht er Schaden, kann eine Zeit lang nicht sterben und fällt danach.
+          Soul Empowerment: Erhöht die HP der Horde-Helden in der Warteschlange.
+          Soul Freeze: Verursacht Schaden und kann das Ziel einfrieren.
+          Pain Diffusion: Löst <em>Soul Freeze</em> sofort aus, wenn die HP unter einen Schwellenwert fallen.
+        note: Ein Support, der mit Sternen sehr gut skaliert. Erhöht die Überlebensfähigkeit des Teams und wird im Late Game häufig gespielt.
+      desert-prince:
+        skills:
+          Royal Armor: Gewährt ein Schild, das Schaden absorbiert.
+          Sand’s Blessing: Erhält zusätzliche HP und verursacht wahren Schaden basierend auf maximalen HP.
+          Royal Treasury: Erhöht den Fähigkeitsschaden der Verbündeten, wenn <em>Royal Armor</em> aktiv ist.
+          Scorching Scimitar: Verursacht wahren Schaden.
+          Eye of Insight: Reduziert erlittenen Fähigkeitsschaden.
+          Enthusiast: Jeder legendäre+ Horde-Held in der Warteschlange erhöht das Verhältnis Gegner-Tote/Verwundete.
+        note: 'Einer der besten Helden im Spiel. Ein Tank, der gleichzeitig sehr starken Schaden macht: ein <strong>Muss</strong> für jede Horde-Aufstellung. Ersetze <strong>Swordmaster</strong> (oder <strong>Barbarian</strong>,
+          falls ähnliche Sterne) sofort, sobald du ihn bekommst.'
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: Verursacht Schaden und erhöht später zusätzlich die Geschwindigkeit.
+          Lightning Storm: Verursacht Schaden und wirft Gegner in die Luft.
+          Wind of Freedom: Gewährt Ausweichen für alle Helden in der Warteschlange.
+          Tornado: Kanalisiert einen Wirbelwind, der Projektile blockiert, und verursacht danach Schaden.
+          Wind Field: Jeder Tornado erhöht den Team-Angriff.
+          War Messenger: Erhöht den Soldatenangriff pro 1000 eingesetzten Soldaten.
+        note: Der erste mythische Held, den du bekommst. Ein Top-Damage-Dealer, der dich mit anderen Fraktionen konkurrenzfähig macht. Ersetze sofort einen schwächeren Damage Dealer oder Support.
+      witch:
+        skills:
+          Dark Healing: Heilt Verbündete.
+          Dread Golem: Beschwört einen Golem, der Gegner fürchtet und etwas Schaden verursacht.
+          Curse Fire: Nach <em>Dark Healing</em> erhält ein zufälliger Verbündeter Schadensreduktion und zusätzliche Heilung.
+          Dark Magic Boost: Erhöht den Angriff der Verbündeten und gewährt kurzzeitig eine Betäubungs-Barriere.
+          Guardian Messenger: Erhöht die Soldaten-HP pro 1000 eingesetzten Soldaten.
+        note: Ein sehr starker Heiler mit Support-Utility. Ersetze <strong>Shaman</strong> sofort, sobald du sie bekommst.
+    lineups_title: Beste Aufstellungen – Horde
+skills_label: Fähigkeiten
+skill_separator: ': '

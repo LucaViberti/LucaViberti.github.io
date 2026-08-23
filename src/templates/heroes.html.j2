@@ -1,0 +1,59 @@
+{#-
+  Lineups and hero cards for a faction page.
+
+  Structure comes from src/data/heroes.yml and is shared by every language;
+  only the sentences are translated. That is what stops the pages drifting:
+  a hero, a portrait or a skill can no longer exist in one language and be
+  missing from another, and the role label is an id with one translation each
+  rather than free text typed into each page.
+
+  A language may still override the hero name or a skill name (Korean shows
+  translated hero names on Nature and Horde), so those fall back per language
+  rather than being forced to English.
+-#}
+<div class="card">
+  <h3>{{ tr.lineups_title }}</h3>
+  <div class="lineup-wrapper">
+{%- for lineup in faction.lineups %}
+{%- set lt = tr.lineups.get(lineup.id, {}) %}
+    <div class="lineup-card">
+      <h3>{{ lt.get('title', lineup.id) }}</h3>
+{%- for row in lineup.rows %}
+      <div class="lineup-row">
+        <div class="lineup-label">{{ tr.lineup_labels.get(row.label, row.label) }}</div>
+        <div class="lineup-heroes">
+{%- for h in row.heroes %}
+          <img src="{{ h.image }}" alt="{{ h.alt }}" loading="lazy" decoding="async">
+{%- endfor %}
+        </div>
+      </div>
+{%- endfor %}
+{%- if lt.get('note') %}
+      <p class="lineup-note">{{ lt.note }}</p>
+{%- endif %}
+    </div>
+{%- endfor %}
+  </div>
+</div>
+{% for hero in faction.heroes %}
+{%- set ht = tr.heroes.get(hero.id, {}) %}
+<!-- {{ hero.name }} -->
+<div class="card">
+  <h3>{{ ht.get('name', hero.name) }}</h3>
+  <div class="role">{{ tr.roles.get(hero.role, hero.role) }}</div>
+  <div class="hero">
+    <img src="{{ hero.image }}" alt="{{ hero.alt }}" loading="lazy" decoding="async">
+    <div class="txt">
+      <strong>{{ tr.skills_label }}</strong>
+      <ul>
+{%- for skill in hero.skills %}
+        <li><em>{{ ht.get('skill_names', {}).get(skill, skill) }}</em>{{ sep }}{{ ht.get('skills', {}).get(skill) or en_skills.get(hero.id, {}).get(skill, '') }}</li>
+{%- endfor %}
+      </ul>
+{%- if ht.get('note') %}
+      <p>{{ ht.note }}</p>
+{%- endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}

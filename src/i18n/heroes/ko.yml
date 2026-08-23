@@ -1,0 +1,468 @@
+# Hero page text for 'ko'.
+# Structure (which heroes, which portraits, which skills) lives in
+# src/data/heroes.yml and is shared by every language.
+roles:
+  dps: 딜러
+  tank: 탱크
+  support: 서포트
+  healer: 힐러
+  tank_dps: 탱크 / 딜러
+  support_dps: DPS (신화 - 게임 체인저)
+  healer_support: 서포트
+lineup_labels:
+  front: 전방
+  middle: 중앙
+  back: 후방
+factions:
+  league:
+    lineups:
+      main:
+        title: 메인
+        note: '참고: 현재 메타에서는 Bishop이 신화 영웅이지만 메인 구성에는 포함되지 않습니다.'
+      against-bosses-damage-focus:
+        title: 보스전 (딜 집중)
+        note: 보스 피해가 강해 병력이 버티지 못하면 Astrologer 대신 Adjudicator를 전방에 배치하세요.
+    heroes:
+      pyromancer:
+        skills:
+          Detonate: 피해를 주고 화상 효과 부여.
+          Meteor Blaze: 범위 피해.
+          Ember: HP가 낮을수록 공격력 증가.
+          Flame Shield: 보호막 부여 및 근접 적 피해.
+          Elemental Mastery: 스킬 피해 증가.
+        note: 초반 리그 최고의 DPS 중 하나입니다. 이후에도 계속 사용 가능합니다.
+        skill_names:
+          Detonate: 폭파
+          Meteor Blaze: 유성 화염
+          Ember: 불씨
+          Flame Shield: 화염 방패
+          Elemental Mastery: 원소 숙련
+      secret-keeper:
+        skills:
+          Arcane Shield: 피해 감소 증가 및 디버프 제거.
+          Forbidden Realm: 적 침묵 및 피해.
+          Arcane Link: HP 증가.
+          Spell Reflection: 피해를 입히고 잠시 피해 면역 상태가 됨.
+          Arcane Guardian: 피해를 흡수하는 보호막 부여.
+        note: 첫 번째 전설 리그 탱크입니다. 초반에는 좋지만, 이미 <strong>Adjudicator</strong>를 사용 중이라면 나중에 <strong>Rose Princess</strong>로 교체하세요.
+        skill_names:
+          Arcane Shield: 비전 보호막
+          Forbidden Realm: 금단의 영역
+          Arcane Link: 비전 연결
+          Spell Reflection: 주문 반사
+          Arcane Guardian: 비전 수호자
+      astrologer:
+        skills:
+          Ray Beam: 치명타 확률 증가와 함께 피해.
+          Solar Beam: 다중 타격.
+          Foresight: 치명타 확률 증가.
+          Arc Light: 피해를 입히며 이후 피해량을 추가로 증가시킬 수 있음.
+          Insights: 치명타 피해 증가.
+        note: 초반 단일 대상 딜러(길드/월드 보스)로 훌륭합니다. 이후에는 <strong>Paragon</strong>과 <strong>Bishop</strong>을 우선하세요.
+        skill_names:
+          Ray Beam: 광선
+          Solar Beam: 태양광선
+          Foresight: 예지
+          Arc Light: 아크 라이트
+          Insights: 통찰
+      hostess:
+        skills:
+          Evasive Technique: 반격 상태 돌입; 피해 감소, 피해, HP 회복 획득.
+          100T Hammer!: 피해 및 기절.
+          Agile Footwork: 주기적으로 피해 한 번을 회피.
+          Drunken Brawl: 피해 감소, 치유, 피해, 기절.
+          Inn Keeper: 배치되지 않아도 팀 공격력/HP 증가.
+        note: 유틸리티를 갖춘 괜찮은 초반 탱크입니다. <strong>Adjudicator</strong>나 <strong>Rose Princess</strong>를 얻으면 교체하세요.
+        skill_names:
+          Evasive Technique: 회피 기술
+          100T Hammer!: 100톤 망치!
+          Agile Footwork: 민첩한 발놀림
+          Drunken Brawl: 취권 난투
+          Inn Keeper: 여관 주인
+      bard:
+        skills:
+          Cheer: 이동 속도와 공격 속도 증가; 피해를 줄 수도 있음.
+          Resonant Chord: 피해 및 기절.
+          Endgame Serenade: 공명의 화음 이후, 아군 스킬 쿨다운 감소.
+          Grace: 치명타 확률 증가; 피해를 줄 수도 있음.
+          Fight Song: 리그 영웅의 치명타 확률 증가.
+        note: 속도, 치명타, 쿨다운 감소를 제공하는 좋은 서포터입니다. 엔드게임 팀에도 충분히 어울립니다.
+        skill_names:
+          Cheer: 응원
+          Resonant Chord: 공명의 화음
+          Endgame Serenade: 엔드게임 세레나데
+          Grace: 은총
+          Fight Song: 투지의 노래
+      nun:
+        skills:
+          Therapy: 아군 치유 및 받는 치유량 증가.
+          Radiant Song: 일정 시간 아군 최대 HP와 최종 피해 감소 증가.
+          Holy Grace: 자신에게 피해 감소 부여.
+          Prayer of Healing: 모든 아군 치유.
+          Sacred Union: 리그 영웅의 최대 HP 증가.
+        note: 초반부터 후반까지 사용할 메인 힐러입니다. 리그 편성에 계속 유지하세요.
+        skill_names:
+          Therapy: 치료
+          Radiant Song: 찬란한 노래
+          Holy Grace: 신성한 은총
+          Prayer of Healing: 치유의 기도
+          Sacred Union: 신성한 결속
+      adjudicator:
+        skills:
+          Guardian Discipline: 피해, 기절, 피해 감소, 그리고 일정 시간 제어 면역.
+          Shield of Faith: 거대한 보호막 소환; 만료 시 피해를 입힘.
+          Indomitable: 모든 아군에게 피해 감소 부여.
+          Judgment: 피해, 기절, 자가 치유.
+          Eternal: 빈사 상태 무적; 효과 지속 중 HP가 1 아래로 떨어지지 않음.
+        note: 게임 내 최고의 탱크 중 하나입니다. 별 강화 효과가 매우 뛰어납니다. 엔드게임 리그 팀의 필수 요소입니다.
+        skill_names:
+          Guardian Discipline: 수호자의 계율
+          Shield of Faith: 신념의 방패
+          Indomitable: 불굴
+          Judgment: 심판
+          Eternal: 영원
+      paragon:
+        skills:
+          Commanding Call: 피해를 입히고 아군에게 보호막 부여.
+          Celestial Blade: 제어 면역, 피해, 화상 중첩 부여; 피해 감소 획득.
+          Final Verdict: HP 70% 이상인 적에게 증가된 피해.
+          Moral Fury: 아군 공격력 증가 및 피해.
+          Ultimate Execution: 공격 범위 확장 및 대상 1명 추가; 평타 피해 증가.
+          Conqueror: 전설 이상 리그 영웅 1명당 성 공격력 증가; 리그 영웅 6명 보유 시 스킬 치명타 확률 획득.
+        note: 대개 메인 리그 딜러로 사용됩니다. 획득하면 <strong>Astrologer</strong>를 교체하세요.
+        skill_names:
+          Commanding Call: 지휘의 외침
+          Celestial Blade: 천상의 검
+          Final Verdict: 최종 선고
+          Moral Fury: 정의의 분노
+          Ultimate Execution: 궁극의 처형
+          Conqueror: 정복자
+      rose-princess:
+        skills:
+          Be Brave: 용기(피해 감소) 중첩 획득. 피해를 받으면 중첩 하나가 원한으로 전환됨.
+          Bloom: 원한 중첩을 소모하여 피해를 입히고 치유 금지 부여.
+          Thorns: 피해를 입힘; 원한 중첩당 추가 피해.
+          Weapon Up!: 공격력에 비례해 피해 감소 증가.
+          Roses: 적이 죽으면 용기와 HP 획득.
+          Guardian Messenger: 배치된 병사 1000명당 HP 증가.
+        note: 초반에는 평범하지만 별 강화를 거치면 최상급 리그 영웅이 됩니다 — 강력한 피해도 함께 지니는 탱크입니다.
+        skill_names:
+          Be Brave: 용기를 내
+          Bloom: 개화
+          Thorns: 가시
+          Weapon Up!: 무장 강화!
+          Roses: 장미
+          Guardian Messenger: 수호 전령
+      bishop:
+        skills:
+          Fair Strike: 소환수를 상대로 추가 효과.
+          Divine Descent: 피해; 공격력과 피해 감소 증가; 일정 시간 평타가 범위 공격으로 전환.
+          Solar Shield: 치명타와 치명타 저항 증가.
+          Confession: 피해를 입히고 약화(증폭된 스킬 피해 감소) 부여, 소환수에게 강력함.
+          Sacred Burst: 적이 죽으면 범위 피해 발동.
+          War Messenger: 배치된 병사 1000명당 공격력 증가.
+        note: 평균적으로 <strong>Paragon</strong>보다 약간 낮은 딜량이지만 여전히 엔드게임에서 활약합니다 — 가능하다면 Paragon과 함께 기용하세요.
+        skill_names:
+          Fair Strike: 공정한 일격
+          Divine Descent: 신성한 강림
+          Solar Shield: 태양의 보호막
+          Confession: 고해
+          Sacred Burst: 신성한 폭발
+          War Messenger: 전쟁 전령
+    lineups_title: 최고의 구성 — 리그
+  nature:
+    lineups:
+      main:
+        title: 메인
+        note: '참고: 서버에 아직 페탈리스가 없다면 윈드워커로 교체하세요.'
+      damage-focus-best-with-nature:
+        title: 데미지 집중 (자연 최선)
+        note: '참고: 압도적인 피해를 주진 못하지만, 자연을 꼭 써야 한다면 최선의 선택입니다.'
+    heroes:
+      treeguard:
+        skills:
+          Growth: 최대 HP 증가, 받는 피해 감소, 자가 치유.
+          Timber Shell: 피해 감소와 최대 HP 증가, 치유.
+          Vine: 성장이 활성화된 동안 공격 시 추가 피해와 중독 부여.
+          Titanwood Assault: 가시를 소환해 피해와 치유.
+          Vitality Surge: 피해와 치유 증가.
+        note: 약간의 자가 치유를 갖춘 든든한 초반 탱크입니다. 이후 <strong>수도사</strong>로 교체하세요.
+        skill_names:
+          Growth: 성장
+          Timber Shell: 목재 껍질
+          Vine: 덩굴
+          Titanwood Assault: 티탄우드 강타
+          Vitality Surge: 활력의 쇄도
+        name: 나무 수호자
+      druid:
+        skills:
+          Nature’s Blessing: 아군 한 명 치유.
+          Healing Rain: 다수 아군 치유.
+          Force of Nature: 피해를 흡수하는 보호막 부여.
+          Nature’s Call: 트리맨 2체 소환.
+          Natural Affinity: 트리맨의 HP 증가.
+        note: 트리맨을 소환하는 초반 힐러입니다. 이후 <strong>파도 술사</strong>, 최소한 <strong>Ne Zha</strong>로 교체하세요.
+        skill_names:
+          Nature’s Blessing: 자연의 축복
+          Healing Rain: 치유의 비
+          Force of Nature: 자연의 힘
+          Nature’s Call: 자연의 부름
+          Natural Affinity: 자연 친화
+        name: 드루이드
+      windwalker:
+        skills:
+          Swift Arrow: 공격 속도와 평타 피해 증가, 일정 발수 이후 재장전.
+          Windwalker’s Blade: 가장 가까운 적을 공격하고 잠시 피해를 차단.
+          Favorable Wind: 평타가 신속의 화살 충전을 소모하지 않을 수 있음.
+          Powerful Ricochet: 피해를 입히고 대상 기절.
+          Preparation: 신속의 화살 재장전 속도 증가.
+        note: 첫 번째 자연 딜러입니다. 이후 <strong>Ne Zha</strong>로 교체하세요.
+        skill_names:
+          Swift Arrow: 신속의 화살
+          Windwalker’s Blade: 윈드워커의 칼날
+          Favorable Wind: 순풍
+          Powerful Ricochet: 강력한 도탄
+          Preparation: 준비
+        name: 윈드워커
+      forest-maiden:
+        skills:
+          Baa-Baa Charge: 양을 소환해 피해를 입히고 적을 기절.
+          Sheepherd: 새끼 양 소환.
+          Song of Life: 유닛이 죽거나 희생될 때 모든 영웅이 HP를 일부 회복.
+          Shepherd’s Bell: 근처 아군에게 피해 감소 부여.
+          Revenge: 유닛이 죽거나 희생될 때마다 모든 영웅이 영구 피해 증가 획득.
+        note: 유닛을 소환하고 치유를 제공하는 강력한 서포터입니다. 후반까지도 우수합니다.
+        skill_names:
+          Baa-Baa Charge: 바바 돌격
+          Sheepherd: 양치기
+          Song of Life: 생명의 노래
+          Shepherd’s Bell: 양치기의 종
+          Revenge: 복수
+        name: 숲 소녀
+      pixie:
+        skills:
+          Root Absorption: 뿌리를 소환해 피해를 입히고 공격력 흡수.
+          Sunflower Core: 코어를 소환해 적에게 피해와 기절 부여.
+          Nature’s Harmony: 살아있는 자연 영웅 수만큼 피해 감소 획득.
+          Bewildering Powder: 적 명중률 감소와 피해.
+          Forest Ally: 죽거나 희생된 유닛마다 해바라기 코어 쿨다운 감소.
+        note: 뛰어난 초반 딜러이며 신화 영웅이 나올 때까지 강력함을 유지합니다. 엔드게임에서도 사용 가능합니다.
+        skill_names:
+          Root Absorption: 뿌리 흡수
+          Sunflower Core: 해바라기 코어
+          Nature’s Harmony: 자연의 조화
+          Bewildering Powder: 현혹 가루
+          Forest Ally: 숲의 동료
+        name: 픽시
+      sage:
+        skills:
+          Harmonic Balance: 부분 피해 면역 획득 및 공격받을 때 치유.
+          Transformation: 곰으로 변신해 HP, HP 흡수, 피해 증가.
+          Power of the Wild: 변신 이후 피해를 흡수하는 보호막 획득.
+          Serene State: 피해를 입히고 공격 속도 감소, 버프 하나 제거.
+          Robust Skin: 곰 형태로 사망 시 일부 HP로 부활.
+        note: 두 번째로 얻게 되는 자연 탱크입니다. 후반까지 편성에 유지하세요.
+        skill_names:
+          Harmonic Balance: 조화의 균형
+          Transformation: 변신
+          Power of the Wild: 야생의 힘
+          Serene State: 고요한 상태
+          Robust Skin: 강인한 피부
+        name: 현자
+      watcher:
+        skills:
+          Plant Purge: 회오리를 생성해 적에게 피해, 중독, 둔화 부여.
+          Wilt: 피해와 중독 부여.
+          Slowdown: 평타가 적 공격 속도 감소.
+          Crow Attack: 반격 획득, 피격 시 피해와 치유.
+          Wheatfield Watcher: 자연 영웅의 피해 증가.
+        note: 전체적으로 약한 선택지입니다 — 많은 투자를 추천하지 않습니다. 각성이 불가능하고 전용 장비도 없습니다.
+        skill_names:
+          Plant Purge: 식물 정화
+          Wilt: 시들음
+          Slowdown: 둔화
+          Crow Attack: 까마귀 공격
+          Wheatfield Watcher: 밀밭의 감시자
+        name: 감시자
+      monk:
+        skills:
+          Mountain Strike: 피해를 입히고 최대 HP 증가, 피해 면역 부여.
+          Ultimate Zen Power: 회피와 피해 감소 부여, 피격 시 반격.
+          Thundering Kick: 산의 일격에 이어 기절을 추가할 확률 부여.
+          Fiery Breath: 피해를 입히고 제어 면역 부여.
+          Merciful Victor: 유닛이 죽거나 희생될 때 보호막 획득.
+          Guardian Messenger: 배치된 병사 1000명당 HP 증가.
+        note: 첫 번째 신화 자연 영웅입니다. 피해도 함께 입히는 강력한 탱크입니다. <strong>나무 수호자</strong> 대신 사용하세요.
+        skill_names:
+          Mountain Strike: 산의 일격
+          Ultimate Zen Power: 궁극의 선(禪)의 힘
+          Thundering Kick: 천둥 발차기
+          Fiery Breath: 불꽃 숨결
+          Merciful Victor: 자비로운 승자
+          Guardian Messenger: 수호 전령
+        name: 수도사
+      tidecaller:
+        skills:
+          Hydro Hammer: 피해를 입히고 기절시키며 수호 물의 정령 소환.
+          Ascend: 피해를 입히고 적을 띄우며 물의 군주 소환.
+          Surge: 평타가 모든 아군을 치유.
+          Purification Lance: 피해를 입히고 원거리 정령 소환.
+          Evolve: 평타가 추가 대상을 타격할 수 있음.
+          War Messenger: 배치된 병사 1000명당 공격력 증가.
+        note: 최고의 자연 영웅이며, 게임 내 최강 영웅으로도 꼽힙니다. 어떤 자연 팀에도 필수입니다.
+        skill_names:
+          Hydro Hammer: 수압 망치
+          Ascend: 승천
+          Surge: 쇄도
+          Purification Lance: 정화의 창
+          Evolve: 진화
+          War Messenger: 전쟁 전령
+        name: 파도 술사
+    lineups_title: 최고의 구성 — 자연
+  horde:
+    lineups:
+      main:
+        title: 메인
+        note: <strong>팁:</strong> 사막 왕자(전설)는 호드 최고의 영웅이고 폭풍 소녀(신화)는 게임 체인저입니다.
+      damage-focus-best-vs-bosses:
+        title: 초기 게임
+        note: ''
+    heroes:
+      shaman:
+        skills:
+          Healing Breeze: 팀 치유.
+          Ancestor’s Soul: 팀 보호, 피해 감소.
+          Rain Blessing: 부정적인 효과 제거.
+          Restorative Totem: 행동 불가 저항.
+          Wolf Soul: 전투 중 재생.
+        note: 호드의 완벽한 스타터 힐러입니다. 초반 생존을 담당하며 나중에도 사용됩니다.
+        skill_names:
+          Healing Breeze: 주술 치유
+          Ancestor’s Soul: 신령의 축복
+          Rain Blessing: 음령 분산
+          Restorative Totem: 정령 동료
+          Wolf Soul: 자연의 품
+        name: 샤먼
+      swordmaster:
+        skills:
+          Whirlwind: 회피력 증가, 반격.
+          Blade Storm: 여러 대상 공격.
+          Battle Will: 방어력 증가.
+          Crazy Cut: 동작 속도 증가.
+          Suppression: 상태 이상 저항.
+        note: 호드의 튼튼한 탱크이며 높은 데미지도 입힙니다. 초반부터 후반까지 신뢰할 수 있는 전선 보유자입니다.
+        skill_names:
+          Whirlwind: 검술 마스터
+          Blade Storm: 연쇄 베기
+          Battle Will: 전사의 기지
+          Crazy Cut: 검의 춤
+          Suppression: 강철 의지
+        name: 검술 대사
+      barbarian:
+        skills:
+          Fortified Defense: 범위 피해, 대상 약화.
+          Taunt: 팀 공격력 증가.
+          Insatiable Hunger: 피해 감소, 반사.
+          Savage Strike: 자신 방어 증가, 회피.
+          Eye of Insight: 모든 통계 증가.
+        note: <strong>호드의 최고 전설 영웅입니다.</strong> 탱크 역할을 하면서 무시무시한 데미지를 입히며 팀을 강화합니다. 우선순위 업그레이드.
+        skill_names:
+          Fortified Defense: 모래 폭풍
+          Taunt: 사막의 통치
+          Insatiable Hunger: 모래 갑옷
+          Savage Strike: 신기루
+          Eye of Insight: 사막의 왕
+        name: 사막 왕자
+      warlock:
+        skills:
+          Whispered Shadows: 높은 고정 피해.
+          Bloodlust: 범위 연쇄 피해.
+          Shadow Rite: 반사 데미지.
+          Debilitation: 공격 속도 대폭 증가.
+          Malicious Passion: 모든 피해 증가.
+        note: <strong>신화 호드 영웅으로서 게임 체인저입니다.</strong> 무릿무시한 데미지와 속도로 게임을 지배합니다. 신화로 도달하면 절대적인 DPS가 됩니다.
+        skill_names:
+          Whispered Shadows: 번개 타격
+          Bloodlust: 폭풍
+          Shadow Rite: 전기 방패
+          Debilitation: 번개 속도
+          Malicious Passion: 폭풍의 군주
+        name: 폭풍 소녀
+      wilderness:
+        skills:
+          Barb: 모든 팀 치유.
+          Fatal Prayer: 시드 강화.
+          Hunter: 치유력 증가.
+          Impulse Instinct: 팀 부정 효과 제거.
+          Tradition: 모든 팀 생명력 재생.
+        note: <strong>호드의 최고 힐러입니다.</strong> 강력한 치유와 생존 제공 능력으로 팀을 살린다. 나중 게임에서 필수 선택.
+        skill_names:
+          Barb: 회복 물약
+          Fatal Prayer: 마법 보호
+          Hunter: 약초 학
+          Impulse Instinct: 주술 도움
+          Tradition: 마녀의 축복
+        name: 마녀
+      soulmancer:
+        skills:
+          Soul Link: 체력이 낮을 때 공격력 증가.
+          Soul Recall: 전방 범위 공격.
+          Soul Empowerment: 방어력 증가.
+          Soul Freeze: 피해를 흡수합니다.
+          Pain Diffusion: 모든 데미지 증가.
+        note: 호드의 강력한 탱크 선택지입니다. 높은 통계와 생존력으로 초반 보호합니다.
+        skill_names:
+          Soul Link: 광폭화
+          Soul Recall: 도끼 돌진
+          Soul Empowerment: 가죽 방어
+          Soul Freeze: 분노 유발
+          Pain Diffusion: 야만의 힘
+        name: 야만인
+      desert-prince:
+        skills:
+          Royal Armor: 적 능력력 약화.
+          Sand’s Blessing: 에너지 흡수.
+          Royal Treasury: 팀 피해 감소.
+          Scorching Scimitar: 팀 방어력 증가.
+          Eye of Insight: 능력 피해 증가.
+        note: 호드의 다재다능한 서포터입니다. 상황에 따라 적을 약화시키거나 팀을 강화합니다.
+        skill_names:
+          Royal Armor: 암흑 저주
+          Sand’s Blessing: 영혼 추출
+          Royal Treasury: 섀도우 보호
+          Scorching Scimitar: 어둠의 은혜
+          Eye of Insight: 마법 증폭
+        name: 마술사
+      storm-maiden:
+        skills:
+          Whirlwind Feathers: 높은 고정 피해.
+          Lightning Storm: 범위 공격.
+          Wind of Freedom: 정확도 증가.
+          Tornado: 낮은 체력 시 회피 증가.
+          Wind Field: 모든 통계 증가.
+        note: 호드의 신뢰할 수 있는 DPS입니다. 지속 피해와 정확도로 적을 제압합니다.
+        skill_names:
+          Whirlwind Feathers: 정조준 사격
+          Lightning Storm: 화살비
+          Wind of Freedom: 추적 기술
+          Tornado: 역경 극복
+          Wind Field: 사냥의 기술
+        name: 광야 사냥꾼
+      witch:
+        skills:
+          Dark Healing: 팀을 돕는 영혼 생성.
+          Dread Golem: 팀 방어 증가.
+          Curse Fire: 팀 피해 감소.
+          Dark Magic Boost: 정확도 증가.
+          Guardian Messenger: 모든 팀 통계 증가.
+        note: 호드의 신비로운 서포터입니다. 팀을 강화하고 적을 방해합니다.
+        skill_names:
+          Dark Healing: 영혼 소환
+          Dread Golem: 신령 보호
+          Curse Fire: 영혼 연결
+          Dark Magic Boost: 신령 투시
+          Guardian Messenger: 영혼의 합
+        name: 영혼 술사
+    lineups_title: 최고의 구성 — 호드
+skills_label: 능력
+skill_separator: ': '

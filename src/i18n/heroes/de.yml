@@ -10,9 +10,9 @@ roles:
   support_dps: Support / Schadensausteiler
   healer_support: Heiler / Support
 lineup_labels:
-  front: Front
+  front: Vorne
   middle: Mitte
-  back: Back
+  back: Hinten
 factions:
   league:
     lineups:

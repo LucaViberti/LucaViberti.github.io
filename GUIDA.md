@@ -89,8 +89,24 @@ A sinistra il termine inglese, a destra la traduzione. Se un termine non c'è ne
 file, il sito mostra l'inglese: **niente sparisce mai**, al massimo resta da
 tradurre.
 
-> Stato attuale: il tedesco ha 40 termini tradotti su 500, il vietnamita 4 su 500.
-> Sono i due file da completare per primi.
+> Stato attuale: tutte e 6 le lingue sono complete (271 termini su 271).
+
+Se aggiungi una tabella nuova con parole mai viste prima, comparirà in inglese
+nelle altre lingue finché non aggiungi le righe al glossario. Per i termini
+"a schema" (`Level 34`, `3 same + 15 rare`) c'è una regola per lingua in
+`tools/expand_terms.py`: lanciando
+
+```bash
+python3 tools/expand_terms.py
+```
+
+vengono tradotti automaticamente senza scriverli a mano uno per uno.
+
+Per togliere dai glossari le voci di testo che non esiste più nelle tabelle:
+
+```bash
+python3 tools/prune_terms.py
+```
 
 ### Aggiungere un eroe
 
@@ -203,13 +219,19 @@ Erano tutti presenti prima e invisibili senza confrontare i file a mano:
 
 ## Cosa resta da fare
 
-1. **Completare i glossari delle tabelle** — `src/i18n/terms/de.yml` e
-   `src/i18n/terms/vi.yml` sono quasi vuoti, e al coreano mancano i termini
-   delle 4 sezioni recuperate.
-2. **Etichette formazione in tedesco** — `Front` e `Back` sono rimaste in
-   inglese (solo `Mitte` è tradotto). In `src/i18n/heroes/de.yml`.
-3. **Tre abilità coreane** mai tradotte (Horde Defender, Enthusiast,
-   War Messenger): ora mostrano l'inglese.
+Niente di bloccante: il sito è coerente in tutte e 7 le lingue e i controlli
+passano puliti.
+
+Cose che si possono migliorare quando vuoi:
+
+1. **Meta description non tradotte** — alcune pagine hanno titolo tradotto ma
+   descrizione ancora in inglese (è il testo che Google mostra nei risultati).
+   Stanno in `src/i18n/<lingua>.yml`.
+2. **Nomi eroi in coreano** — il coreano traduce i nomi degli eroi su Nature e
+   Horde ma non su League. È conservato com'era; se vuoi uniformarlo, si decide
+   in `src/i18n/heroes/ko.yml` (campo `name`).
+3. **Pagine segnaposto** — `arms-race`, `events`, `guildboss`, `kingdom`,
+   `relic` e `exclusive-gear` contengono ancora solo "contenuto in arrivo".
 
 ---
 

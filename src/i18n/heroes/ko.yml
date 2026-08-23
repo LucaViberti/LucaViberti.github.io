@@ -365,6 +365,7 @@ factions:
           Insatiable Hunger: 피해 감소, 반사.
           Savage Strike: 자신 방어 증가, 회피.
           Eye of Insight: 모든 통계 증가.
+          Horde Defender: 대기열의 모든 호드 영웅의 피해 감소를 증가시킵니다.
         note: <strong>호드의 최고 전설 영웅입니다.</strong> 탱크 역할을 하면서 무시무시한 데미지를 입히며 팀을 강화합니다. 우선순위 업그레이드.
         skill_names:
           Fortified Defense: 모래 폭풍
@@ -425,6 +426,7 @@ factions:
           Royal Treasury: 팀 피해 감소.
           Scorching Scimitar: 팀 방어력 증가.
           Eye of Insight: 능력 피해 증가.
+          Enthusiast: 대기열의 전설 등급 이상 호드 영웅마다 적의 사망/부상 비율이 증가합니다.
         note: 호드의 다재다능한 서포터입니다. 상황에 따라 적을 약화시키거나 팀을 강화합니다.
         skill_names:
           Royal Armor: 암흑 저주
@@ -440,6 +442,7 @@ factions:
           Wind of Freedom: 정확도 증가.
           Tornado: 낮은 체력 시 회피 증가.
           Wind Field: 모든 통계 증가.
+          War Messenger: 배치된 병사 1000명당 병사 공격력이 증가합니다.
         note: 호드의 신뢰할 수 있는 DPS입니다. 지속 피해와 정확도로 적을 제압합니다.
         skill_names:
           Whirlwind Feathers: 정조준 사격

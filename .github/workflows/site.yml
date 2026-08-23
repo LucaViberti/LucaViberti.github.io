@@ -1,0 +1,43 @@
+name: Site
+
+# The generated pages are committed to the repository, because that is what
+# GitHub Pages serves. This workflow makes sure they are actually in sync with
+# src/ and that nothing on the site points at something that does not exist.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: python -m pip install --quiet jinja2 pyyaml
+
+      - name: Rebuild the site
+        run: python3 tools/build.py
+
+      - name: Fail if the committed pages are out of date
+        # Someone edited src/ but did not run tools/build.py, so what is served
+        # would not match the sources.
+        run: |
+          if ! git diff --quiet; then
+            echo "::error::The generated pages differ from src/."
+            echo "Run 'python3 tools/build.py' and commit the result."
+            echo
+            git diff --stat
+            exit 1
+          fi
+          echo "Generated pages are in sync with src/."
+
+      - name: Check the site for broken references
+        run: python3 tools/check.py

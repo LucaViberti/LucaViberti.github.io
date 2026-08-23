@@ -118,11 +118,11 @@ tips:
   title: TopHelden Guide - Kostentabellen
   description: TopHelden Guide - Kostentabellen - TopHeroes Guide.
   h1: TopHelden - Kostentabellen
-  intro: This page compiles a large set of utility tables for TopHelden. It's designed to improve planning,
-    resource management, and quick look-ups while playing.
-  index_label: Page index
-  back_to_top: Back to top
-  toggle: Expand/Collapse
+  intro: Diese Seite bündelt eine große Sammlung nützlicher Tabellen für TopHelden. Sie hilft bei Planung,
+    Ressourcenverwaltung und schnellem Nachschlagen während des Spiels.
+  index_label: Seitenindex
+  back_to_top: Nach oben
+  toggle: Ein-/Ausklappen
 villagers:
   title: TopHelden Guide - Dorfbewohner
   description: TopHelden Guide - Dorfbewohner - TopHeroes Guide.

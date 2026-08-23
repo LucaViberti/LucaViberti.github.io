@@ -1,6 +1,6 @@
 # Cost-table terms for 'ja': English term -> translation.
-# Entries where the two sides are identical are terms this language
-# keeps in English (proper nouns, rarity names, and so on).
+# A term with no entry here falls back to English, so the table is
+# never missing a row - only ever untranslated.
 $ Estimated: 推定$
 1 Universal Shard: 汎用シャード×1
 1 same: 同種×1
@@ -496,12 +496,3 @@ Warehouse, League Statue: 倉庫、リーグ像
 Watchtower: 監視塔
 Watchtower, Guild: 監視塔、ギルド
 Wounded Soldier Healing Rate: 負傷兵治療速度
-"ð\x9F\x8F": "ð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"

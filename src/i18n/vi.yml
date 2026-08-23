@@ -118,9 +118,9 @@ tips:
   h1: TopHeroes - Bảng Chi Phí
   intro: Trang này tổng hợp một loạt bảng tiện ích cho TopHeroes. Được thiết kế để giúp bạn lên kế hoạch,
     quản lý tài nguyên và tra cứu nhanh trong lúc chơi.
-  index_label: Page index
-  back_to_top: Back to top
-  toggle: Expand/Collapse
+  index_label: Mục lục trang
+  back_to_top: Về đầu trang
+  toggle: Mở/Đóng
 villagers:
   title: TopHeroes Guide - Dân làng
   description: TopHeroes Guide - Dân làng - TopHeroes Guide.

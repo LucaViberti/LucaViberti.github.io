@@ -169,12 +169,18 @@ def terms_for(lang: str) -> dict:
     return _TERMS[lang]
 
 
-def normalise_cell(cell, part: str) -> dict:
-    """Turn a stored cell into the tag, attributes and text the template needs."""
+def normalise_cell(cell, part: str, term=lambda s: s) -> dict:
+    """Turn a stored cell into the tag, attributes and text the template needs.
+
+    Cell text goes through the glossary too, not just headings: a table whose
+    captions were translated but whose contents were not would look stranger
+    than one left entirely in English.
+    """
     if isinstance(cell, str):
         text, extra = cell, {}
     else:
         text, extra = cell.get("t", ""), cell
+    text = term(text)
 
     is_header = part == "thead" or bool(extra.get("th"))
     tag = "th" if is_header else "td"
@@ -211,10 +217,10 @@ def render_tables_body(lang: str, t: dict) -> str:
             {
                 **table,
                 "thead": [
-                    [normalise_cell(c, "thead") for c in row] for row in table["thead"]
+                    [normalise_cell(c, "thead", term) for c in row] for row in table["thead"]
                 ],
                 "tbody": [
-                    [normalise_cell(c, "tbody") for c in row] for row in table["tbody"]
+                    [normalise_cell(c, "tbody", term) for c in row] for row in table["tbody"]
                 ],
             }
             for table in section["tables"]

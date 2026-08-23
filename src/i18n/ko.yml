@@ -113,9 +113,9 @@ tips:
   description: TopHeroes 가이드 - 비용 표 - TopHeroes Guide.
   h1: TopHeroes - 비용 표
   intro: 이 페이지는 TopHeroes에 대한 다양한 유틸리티 표를 모아놓았습니다. 게임을 플레이하면서 계획 수립, 자원 관리 및 빠른 조회를 개선하기 위해 설계되었습니다.
-  index_label: Page index
+  index_label: 페이지 목차
   back_to_top: 맨 위로 돌아가기
-  toggle: Expand/Collapse
+  toggle: 펼치기/접기
 villagers:
   title: TopHeroes 가이드 - 주민 (Villagers)
   description: TopHeroes 가이드 - 주민 (Villagers) - TopHeroes Guide.

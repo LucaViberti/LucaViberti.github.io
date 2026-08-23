@@ -111,9 +111,9 @@ tips:
   description: TopHeroes ガイド - コスト表 - TopHeroes ガイド。
   h1: TopHeroes - コスト表
   intro: このページには、TopHeroesに関する各種データ表をまとめています。計画立案やリソース管理、プレイ中のすばやい確認に役立つよう構成されています。
-  index_label: Page index
+  index_label: ページ内目次
   back_to_top: ↑ ページ上部へ
-  toggle: Expand/Collapse
+  toggle: 展開／折りたたみ
 villagers:
   title: TopHeroes ガイド - 村人
   description: TopHeroes ガイド - 村人 - TopHeroes ガイド。

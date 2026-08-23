@@ -1,25 +1,45 @@
 # Cost-table terms for 'ko': English term -> translation.
-# Entries where the two sides are identical are terms this language
-# keeps in English (proper nouns, rarity names, and so on).
+# A term with no entry here falls back to English, so the table is
+# never missing a row - only ever untranslated.
 $ Estimated: 예상 금액 ($)
-10 Legendary: 10 Legendary
-10 Mythic: 10 Mythic
-15 Legendary: 15 Legendary
-20 Legendary: 20 Legendary
-5 Legendary: 5 Legendary
+1 Universal Shard: 범용 조각 1개
+1 same: 동일 1개
+1 same + 5 rare: 동일 1개 + 희귀 5개
+10 Legendary: 전설 10개
+10 Mythic: 신화 10개
+15 Legendary: 전설 15개
+2 Universal Shard: 범용 조각 2개
+2 same + 10 rare: 동일 2개 + 희귀 10개
+2 same + 5 rare: 동일 2개 + 희귀 5개
+20 Legendary: 전설 20개
+3 Universal Shard: 범용 조각 3개
+3 rare: 희귀 3개
+3 same + 10 rare: 동일 3개 + 희귀 10개
+3 same + 15 rare: 동일 3개 + 희귀 15개
+4 same + 15 rare: 동일 4개 + 희귀 15개
+5 Legendary: 전설 5개
+5 same + 15 rare: 동일 5개 + 희귀 15개
 50 + 10: 50 + 10
-85 + 10 Dragon Blood: 85 + 10 Dragon Blood
+85 + 10 Dragon Blood: 85 + 10 용의 피
+Adventure Attack Percentage: 어드벤처 공격력 퍼센트
+Adventure HP Percentage: 어드벤처 HP 퍼센트
+Attack Increases When Assisting Allies: 아군 지원 시 공격력 증가
+Attack of All Soldiers: 모든 병사 공격력
+Attribute: 속성
 Awaken: 각성
 Awakening Process: 각성 과정
 B1: B1
 B2: B2
 B3: B3
+Blacksmith: 대장간
 Books: 스킬북
 Books/hero: 책/영웅
 Books/skill: 책/스킬
 Brilliance Level 1: 광휘 레벨 1
 Brilliance Level 2: 광휘 레벨 2
 Brilliance Level 3: 광휘 레벨 3
+Building: 건물
+Building HP: 건물 HP
 Buildings: 건물
 Castle: 성
 Castle (Older Server): 성 (구 서버)
@@ -29,33 +49,92 @@ Castle 1-107: 성 1-107
 Castle 108+: 성 108+
 Castle older: 구 서버 성
 Common               &#9733;: Common               &#9733;
+Construction Speed: 건설 속도
+Daily Resource Plunder Limit: 일일 자원 약탈 한도
+Damage Increase (Against Adventure Boss): 피해 증가 (어드벤처 보스 대상)
+Damage Reduction (Against Adventure Boss): 피해 감소 (어드벤처 보스 대상)
+Defense: 방어
+Defense Break: 방어 관통
 Dragon Essence: 드래곤 에센스
 Enhance Rune: 강화 룬
+Enhance Rune Mine: 강화 룬 광산
+Enhance Rune Mine Yield Boost: 강화 룬 광산 생산 증가
+Epic: 에픽
 Epic                        &#9733;: Epic                        &#9733;
 Epic Relic: 에픽 유물
+Epic Troop Skin: 에픽 부대 스킨
 Epic relic: 에픽 유물
+Epic skin: 에픽 스킨
 Exclusive: 독점 장비
 Exclusive Gear: 독점 장비
+Free Construction Time (sec): 무료 건설 시간 (초)
+Free Tech Speed-up (sec): 무료 연구 가속 (초)
 Gear: 장비
 Gear Level: 장비 레벨
 Gear Stars: 장비 별
 Gold ingot: 금괴
+Guild: 길드
 Guild , Training Ground: 길드, 훈련장
 Guild, Training Ground: 길드, 훈련장
 Guild, Warehouse: 길드, 창고
 Guild, Watchtower: 길드, 감시탑
+HP Increases When Assisting Allies: 아군 지원 시 HP 증가
+HP of All Soldiers: 모든 병사 HP
+Help Accepted: 받은 도움 횟수
 Hero: 영웅
+Hero Attack: 영웅 공격력
+Hero Attack %: 영웅 공격력 %
+Hero Attack Rune: 영웅 공격 룬
+Hero HP: 영웅 HP
+Hero HP %: 영웅 HP %
+Hero HP Rune: 영웅 HP 룬
 Hero Level: 영웅 레벨
 Hero Lv.: 영웅 레벨
+Hero Statue: 영웅 동상
 Hero level: 영웅 레벨
-Info coming soon: Info coming soon
+Horde Barracks: 호드 병영
+Horde Hero Attack: 호드 영웅 공격력
+Horde Hero HP: 호드 영웅 HP
+Horde March Size: 호드 행군 규모
+Horde Soldier Capacity: 호드 병사 수용량
+Horde Soldier Training Cap: 호드 훈련 상한
+Horde Soldier Training Speed: 호드 훈련 속도
+Horde Statue: 호드 동상
+Hospital: 병원
+Hospital Capacity: 병원 수용량
+Increase Enhance Rune Storage Duration (sec): 강화 룬 저장 시간 증가 (초)
+Increase Magic Stone Mine Storage Duration (sec): 마법석 광산 저장 시간 증가 (초)
+Increase Medal Monument Storage Duration (sec): 훈장 기념비 저장 시간 증가 (초)
+Increase Monastery Storage Duration (sec): 수도원 저장 시간 증가 (초)
+Increase Pet Food Factory Storage Time (sec): 펫 사료 공장 저장 시간 증가 (초)
+Increase Ranch Storage Time (sec): 목장 저장 시간 증가 (초)
+Increase Ranch Yield: 목장 생산 증가
+Increase Raw Ore Mine Storage Duration (sec): 원광석 광산 저장 시간 증가 (초)
+Increase Ruby Storage Duration (sec): 루비 저장 시간 증가 (초)
+Increase Sawmill Storage Time (sec): 제재소 저장 시간 증가 (초)
+Increase Sawmill Yield: 제재소 생산 증가
+Increase Stone Mine Storage Duration (sec): 석재 광산 저장 시간 증가 (초)
+Increase the Chance of 1 Additional Villager Visit per Day: 하루 추가 주민 방문 확률 증가
+Info coming soon: 정보 준비 중
+LVL: 레벨
+League Barracks: 리그 병영
+League Hero Attack: 리그 영웅 공격력
+League Hero HP: 리그 영웅 HP
+League March Size: 리그 행군 규모
+League Soldier Capacity: 리그 병사 수용량
+League Soldier Training Cap: 리그 훈련 상한
+League Soldier Training Speed: 리그 훈련 속도
+League Statue: 리그 동상
 League Statue, Warehouse: 리그 동상, 창고
 Leg Hero: 전설 영웅
 Leg relic: 전설 유물
+Legend skin: 전설 스킨
+Legendary: 전설
 Legendary Awakening: 전설 각성
 Legendary Hero: 전설 영웅
 Legendary Heroes: 전설 영웅
 Legendary Relic: 전설 유물
+Legendary Troop Skin: 전설 부대 스킨
 Level: 레벨
 Level 21: 레벨 21
 Level 22: 레벨 22
@@ -93,6 +172,7 @@ Level 53: 레벨 53
 Level 54: 레벨 54
 Level 55: 레벨 55
 Lord Gear: 영주 장비
+Lv 10: 레벨 10
 Lv. 1: 레벨 1
 Lv. 10: 레벨 10
 Lv. 11: 레벨 11
@@ -100,86 +180,152 @@ Lv. 12: 레벨 12
 Lv. 13: 레벨 13
 Lv. 14: 레벨 14
 Lv. 15: 레벨 15
-Lv. 16: Lv. 16
-Lv. 17: Lv. 17
-Lv. 18: Lv. 18
-Lv. 19: Lv. 19
+Lv. 16: 레벨 16
+Lv. 17: 레벨 17
+Lv. 18: 레벨 18
+Lv. 19: 레벨 19
 Lv. 2: 레벨 2
-Lv. 20: Lv. 20
-Lv. 21: Lv. 21
-Lv. 22: Lv. 22
-Lv. 23: Lv. 23
-Lv. 24: Lv. 24
-Lv. 25: Lv. 25
-Lv. 26: Lv. 26
-Lv. 27: Lv. 27
-Lv. 28: Lv. 28
-Lv. 29: Lv. 29
+Lv. 20: 레벨 20
+Lv. 21: 레벨 21
+Lv. 22: 레벨 22
+Lv. 23: 레벨 23
+Lv. 24: 레벨 24
+Lv. 25: 레벨 25
+Lv. 26: 레벨 26
+Lv. 27: 레벨 27
+Lv. 28: 레벨 28
+Lv. 29: 레벨 29
 Lv. 3: 레벨 3
-Lv. 30: Lv. 30
-Lv. 31: Lv. 31
-Lv. 32: Lv. 32
-Lv. 33: Lv. 33
-Lv. 34: Lv. 34
-Lv. 35: Lv. 35
-Lv. 36: Lv. 36
-Lv. 37: Lv. 37
-Lv. 38: Lv. 38
-Lv. 39: Lv. 39
+Lv. 30: 레벨 30
+Lv. 31: 레벨 31
+Lv. 32: 레벨 32
+Lv. 33: 레벨 33
+Lv. 34: 레벨 34
+Lv. 35: 레벨 35
+Lv. 36: 레벨 36
+Lv. 37: 레벨 37
+Lv. 38: 레벨 38
+Lv. 39: 레벨 39
 Lv. 4: 레벨 4
-Lv. 40: Lv. 40
+Lv. 40: 레벨 40
+Lv. 41: 레벨 41
+Lv. 42: 레벨 42
+Lv. 43: 레벨 43
+Lv. 44: 레벨 44
+Lv. 45: 레벨 45
 Lv. 5: 레벨 5
-Lv. 50 Horde Barracks, Hospital: 레벨 50 호드 막사, 병원
+Lv. 50 Horde Barracks, Hospital: 50레벨 호드 병영, 병원
 Lv. 6: 레벨 6
 Lv. 7: 레벨 7
 Lv. 8: 레벨 8
 Lv. 9: 레벨 9
-Lv.40 Research Cottage, Hospital: 레벨 40 연구소, 병원
-Lv.45 League Barracks, Guild: 레벨 45 리그 막사, 길드
-Lv.45 League Barracks, Military Hall: 레벨 45 리그 막사, 군사 홀
-Lv.50 Horde Barracks, Guild: 레벨 50 호드 막사, 길드
+Lv.40 Research Cottage, Hospital: 40레벨 연구 오두막, 병원
+Lv.45 League Barracks, Guild: 45레벨 리그 병영, 길드
+Lv.45 League Barracks, Military Hall: 45레벨 리그 병영, 군사 전당
+Lv.50 Horde Barracks, Guild: 50레벨 호드 병영, 길드
+Magic Stone Mine: 마법석 광산
+Magic Stone Mine Yield Boost: 마법석 광산 생산 증가
 Magic Thread: 마법 실
+March Size: 행군 규모
 Meat: 고기
-Mythic: Mythic
+Medal Hall: 훈장 전당
+Medal Monument: 훈장 기념비
+Medal Monument Yield Boost: 훈장 기념비 생산 증가
+Medals: 훈장
+Monastery: 수도원
+Monastery Yield Boost: 수도원 생산 증가
+Mythic: 신화
 Mythic Hero: 신화 영웅
 Mythic Heroes: 신화 영웅
+Nature Barracks: 네이처 병영
+Nature Hero Attack: 네이처 영웅 공격력
+Nature Hero HP: 네이처 영웅 HP
+Nature March Size: 네이처 행군 규모
+Nature Soldier Capacity: 네이처 병사 수용량
+Nature Soldier Training Cap: 네이처 훈련 상한
+Nature Soldier Training Speed: 네이처 훈련 속도
+Nature Statue: 네이처 동상
 New Server 108+: 신규 서버 108+
 Older Server: 구 서버
-Orichalcum: 오리할콘
+Orichalcum: 오리하르콘
+Pet: 펫
+Pet Food: 펫 사료
+Pet Food Factory: 펫 사료 공장
+Pet Food Factory Yield Boost: 펫 사료 공장 생산 증가
+Pet essence: 펫 에센스
+Pet needed: 필요 펫
 Points: 포인트
+Promotion: 승급
 Promotion Stone: 승급석
+PvP Marching Speed Bonus: PvP 행군 속도 보너스
+Queue: 대기열
+Queue Attack Rune: 대기열 공격 룬
+Ranch: 목장
 Rare                      &#9733;: Rare                      &#9733;
 Rare Relic: 희귀 유물
+Rare Troop Skin: 희귀 부대 스킨
 Rare relic: 희귀 유물
-Refined metal: 정제된 금속
+Rare skin: 희귀 스킨
+Raw Ore Mine: 원광석 광산
+Raw Ore Mine Yield Boost: 원광석 광산 생산 증가
+Reduce Gear Forge Time: 장비 제작 시간 감소
+Reduce Gear Forge Time (sec): 장비 제작 시간 감소 (초)
+Refined metal: 정제 금속
 Relic: 유물
-Research Cottage, Hospital: 연구소, 병원
-Research Cottage, Warehouse: 연구소, 창고
-Research Cottage, Watchtower: 연구소, 감시탑
+Relic HP: 유물 HP
+Relic Mastery Rune: 유물 숙련 룬
+Research Cottage: 연구 오두막
+Research Cottage, Hospital: 연구 오두막, 병원
+Research Cottage, Warehouse: 연구 오두막, 창고
+Research Cottage, Watchtower: 연구 오두막, 감시탑
+Resource Yield Boost (Timber, Stone, Ruby): 자원 생산 증가 (목재, 석재, 루비)
 Ruby: 루비
+Ruby Mine: 루비 광산
+Ruby Yield Increase: 루비 생산 증가
+Rune: 룬
+Sawmill: 제재소
+Scouting Marching Speed Boost: 정찰 행군 속도 증가
 Server 1-107: 서버 1-107
 'Server Choice:': '서버 선택:'
-Shard for single up: 단일 업그레이드 조각
-Shards: 파편
-Shards Full Star: 전체 별 조각
-Shards/upgrade: 파편/업그레이드
+Shard for single up: 1단계당 조각
+Shards: 조각
+Shards Full Star: 만성 조각
+Shards/upgrade: 조각/강화
 Skill Books: 스킬북
 Skill Level: 스킬 레벨
-Soul Stones: 소울 스톤
+Soldier Attack: 병사 공격력
+Soldier Attack Rune: 병사 공격 룬
+Soldier Capacity (Faction): 병사 수용량 (진영)
+Soldier HP: 병사 HP
+Soldier HP Rune: 병사 HP 룬
+Soldier Training Speed: 병사 훈련 속도
+Soul Stones: 영혼석
 Star: 별
 Star Level: 별 레벨
 Star level: 별 레벨
+Step: 단계
+Stone Mine: 석재 광산
+Stone Mine Yield Boost: 석재 광산 생산 증가
+Stone Storage Quantity: 석재 저장량
 Stone and Timber: 석재와 목재
 T1                          &#9733;: T1                          &#9733;
 T2                          &#9733;: T2                          &#9733;
 T3                          &#9733;: T3                          &#9733;
 T4                          &#9733;: T4                          &#9733;
-TOTAL: TOTAL
-Tier: 단계
+TOTAL: 합계
+Tavern: 술집
+Tech Research Rate: 연구 속도
+Tier: 등급
+Timber Storage Quantity: 목재 저장량
+Time Between Free Hero Recruitments Reduced (min): 무료 영웅 모집 대기 시간 감소 (분)
 Total: 합계
-Total shards: 총 파편
-Total till this level: 이 레벨까지의 총합
+Total shards: 총 조각
+Total till this level: 이 레벨까지 합계
+Training Cap: 훈련 상한
+Training Ground: 훈련장
 Training Ground, League Statue: 훈련장, 리그 동상
+Troop Skin: 부대 스킨
+Troop Skin Center: 부대 스킨 센터
 VIP: VIP
 VIP 1: VIP 1
 VIP 10: VIP 10
@@ -199,5 +345,10 @@ VIP 6: VIP 6
 VIP 7: VIP 7
 VIP 8: VIP 8
 VIP 9: VIP 9
+Villager: 주민
+Villagers: 주민
+Warehouse: 창고
 Warehouse, League Statue: 창고, 리그 동상
+Watchtower: 감시탑
 Watchtower, Guild: 감시탑, 길드
+Wounded Soldier Healing Rate: 부상병 치료 속도

@@ -1,26 +1,26 @@
 # Cost-table terms for 'zh': English term -> translation.
-# Entries where the two sides are identical are terms this language
-# keeps in English (proper nouns, rarity names, and so on).
+# A term with no entry here falls back to English, so the table is
+# never missing a row - only ever untranslated.
 $ Estimated: $ 预估
 1 Universal Shard: 1 通用碎片
-1 same: 1 same
-1 same + 5 rare: 1 same + 5 rare
+1 same: 同种 1
+1 same + 5 rare: 同种 1 + 稀有 5
 10 Legendary: 10 传奇
 10 Mythic: 10 神话
 15 Legendary: 15 传奇
 2 Universal Shard: 2 通用碎片
-2 same + 10 rare: 2 same + 10 rare
-2 same + 5 rare: 2 same + 5 rare
+2 same + 10 rare: 同种 2 + 稀有 10
+2 same + 5 rare: 同种 2 + 稀有 5
 20 Legendary: 20 传奇
 3 Universal Shard: 3 通用碎片
-3 rare: 3 rare
-3 same + 10 rare: 3 same + 10 rare
-3 same + 15 rare: 3 same + 15 rare
-4 same + 15 rare: 4 same + 15 rare
+3 rare: 稀有 3
+3 same + 10 rare: 同种 3 + 稀有 10
+3 same + 15 rare: 同种 3 + 稀有 15
+4 same + 15 rare: 同种 4 + 稀有 15
 5 Legendary: 5 传奇
-5 same + 15 rare: 5 same + 15 rare
+5 same + 15 rare: 同种 5 + 稀有 15
 50 + 10: 50 + 10
-85 + 10 Dragon Blood: 85 + 10 Dragon Blood
+85 + 10 Dragon Blood: 85 + 10 龙血
 Adventure Attack Percentage: 冒险攻击力百分比
 Adventure HP Percentage: 冒险生命值百分比
 Attack Increases When Assisting Allies: 协助盟友时攻击力提升
@@ -116,7 +116,7 @@ Increase Sawmill Yield: 提高锯木厂产量
 Increase Stone Mine Storage Duration (sec): 延长采石场保存时间（秒）
 Increase the Chance of 1 Additional Villager Visit per Day: 提高每日额外 1 名村民来访的几率
 Info coming soon: 信息即将推出
-LVL: LVL
+LVL: 等级
 LVL 17/1: LVL 17/1
 LVL 17/2: LVL 17/2
 LVL 18/1: LVL 18/1
@@ -496,12 +496,3 @@ Warehouse, League Statue: 仓库、联盟雕像
 Watchtower: 瞭望塔
 Watchtower, Guild: 瞭望塔、公会
 Wounded Soldier Healing Rate: 伤兵治疗速度
-"ð\x9F\x8F": "ð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"

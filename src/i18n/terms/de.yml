@@ -1,122 +1,122 @@
 # Cost-table terms for 'de': English term -> translation.
-# Entries where the two sides are identical are terms this language
-# keeps in English (proper nouns, rarity names, and so on).
-$ Estimated: $ Estimated
-1 Universal Shard: 1 Universal Shard
-1 same: 1 same
-1 same + 5 rare: 1 same + 5 rare
-10 Legendary: 10 Legendary
-10 Mythic: 10 Mythic
-15 Legendary: 15 Legendary
-2 Universal Shard: 2 Universal Shard
-2 same + 10 rare: 2 same + 10 rare
-2 same + 5 rare: 2 same + 5 rare
-20 Legendary: 20 Legendary
-3 Universal Shard: 3 Universal Shard
-3 rare: 3 rare
-3 same + 10 rare: 3 same + 10 rare
-3 same + 15 rare: 3 same + 15 rare
-4 same + 15 rare: 4 same + 15 rare
-5 Legendary: 5 Legendary
-5 same + 15 rare: 5 same + 15 rare
+# A term with no entry here falls back to English, so the table is
+# never missing a row - only ever untranslated.
+$ Estimated: $ geschätzt
+1 Universal Shard: 1 universeller Splitter
+1 same: 1 gleiche
+1 same + 5 rare: 1 gleiche + 5 seltene
+10 Legendary: 10 legendäre
+10 Mythic: 10 mythische
+15 Legendary: 15 legendäre
+2 Universal Shard: 2 universeller Splitter
+2 same + 10 rare: 2 gleiche + 10 seltene
+2 same + 5 rare: 2 gleiche + 5 seltene
+20 Legendary: 20 legendäre
+3 Universal Shard: 3 universeller Splitter
+3 rare: 3 seltene
+3 same + 10 rare: 3 gleiche + 10 seltene
+3 same + 15 rare: 3 gleiche + 15 seltene
+4 same + 15 rare: 4 gleiche + 15 seltene
+5 Legendary: 5 legendäre
+5 same + 15 rare: 5 gleiche + 15 seltene
 50 + 10: 50 + 10
-85 + 10 Dragon Blood: 85 + 10 Dragon Blood
-Adventure Attack Percentage: Adventure Attack Percentage
-Adventure HP Percentage: Adventure HP Percentage
-Attack Increases When Assisting Allies: Attack Increases When Assisting Allies
-Attack of All Soldiers: Attack of All Soldiers
-Attribute: Attribute
-Awaken: Awaken
-Awakening Process: Awakening Process
+85 + 10 Dragon Blood: 85 + 10 Drachenblut
+Adventure Attack Percentage: Abenteuer-Angriff in Prozent
+Adventure HP Percentage: Abenteuer-LP in Prozent
+Attack Increases When Assisting Allies: Angriff steigt bei Unterstützung von Verbündeten
+Attack of All Soldiers: Angriff aller Soldaten
+Attribute: Attribut
+Awaken: Erwecken
+Awakening Process: Erweckungsprozess
 B1: B1
 B2: B2
 B3: B3
-Blacksmith: Blacksmith
-Books: Books
-Books/hero: Books/hero
-Books/skill: Books/skill
-Brilliance Level 1: Brilliance Level 1
-Brilliance Level 2: Brilliance Level 2
-Brilliance Level 3: Brilliance Level 3
+Blacksmith: Schmiede
+Books: Bücher
+Books/hero: Bücher/Held
+Books/skill: Bücher/Fertigkeit
+Brilliance Level 1: Brillanzstufe 1
+Brilliance Level 2: Brillanzstufe 2
+Brilliance Level 3: Brillanzstufe 3
 Building: Gebäude
-Building HP: Gebäude HP
-Buildings: Gebäudes
-Castle: Castle
-Castle (Older Server): Castle (Older Server)
-Castle (Server 1-107): Castle (Server 1-107)
-Castle (Server 108+): Castle (Server 108+)
-Castle 1-107: Castle 1-107
-Castle 108+: Castle 108+
-Castle older: Castle older
+Building HP: Gebäude-LP
+Buildings: Gebäude
+Castle: Burg
+Castle (Older Server): Burg (älterer Server)
+Castle (Server 1-107): Burg (Server 1-107)
+Castle (Server 108+): Burg (Server 108+)
+Castle 1-107: Burg 1-107
+Castle 108+: Burg 108+
+Castle older: Burg älter
 Common               &#9733;: Common               &#9733;
-Construction Speed: Construction Speed
-Daily Resource Plunder Limit: Daily Resource Plunder Limit
-Damage Increase (Against Adventure Boss): Damage Increase (Against Adventure Boss)
-Damage Reduction (Against Adventure Boss): Damage Reduction (Against Adventure Boss)
-Defense: Defense
-Defense Break: Defense Break
-Dragon Essence: Dragon Essence
-Enhance Rune: Enhance Rune
-Enhance Rune Mine: Enhance Rune Mine
-Enhance Rune Mine Yield Boost: Enhance Rune Mine Yield Boost
-Epic: Epic
+Construction Speed: Baugeschwindigkeit
+Daily Resource Plunder Limit: Tägliches Plünderungslimit
+Damage Increase (Against Adventure Boss): Schadensbonus (gegen Abenteuer-Boss)
+Damage Reduction (Against Adventure Boss): Schadensreduzierung (gegen Abenteuer-Boss)
+Defense: Verteidigung
+Defense Break: Verteidigungsbruch
+Dragon Essence: Drachenessenz
+Enhance Rune: Verstärkungsrune
+Enhance Rune Mine: Verstärkungsrunen-Mine
+Enhance Rune Mine Yield Boost: Verstärkungsrunenminen-Ertragsbonus
+Epic: Episch
 Epic                        &#9733;: Epic                        &#9733;
-Epic Relic: Epic Relic
-Epic Troop Skin: Epic Troop Skin
-Epic relic: Epic relic
-Epic skin: Epic skin
-Exclusive: Exclusive
-Exclusive Gear: Exclusive Ausrüstung
-Free Construction Time (sec): Free Construction Time (sec)
-Free Tech Speed-up (sec): Free Tech Speed-up (sec)
+Epic Relic: Episches Relikt
+Epic Troop Skin: Epischer Truppen-Skin
+Epic relic: Episches Relikt
+Epic skin: Epischer Skin
+Exclusive: Exklusiv
+Exclusive Gear: Exklusive Ausrüstung
+Free Construction Time (sec): Kostenlose Bauzeit (Sek.)
+Free Tech Speed-up (sec): Kostenlose Forschungsbeschleunigung (Sek.)
 Gear: Ausrüstung
-Gear Level: Ausrüstung Level
-Gear Stars: Ausrüstung Stars
-Gold ingot: Gold ingot
-Guild: Guild
-Guild , Training Ground: Guild , Training Ground
-Guild, Training Ground: Guild, Training Ground
-Guild, Warehouse: Guild, Warehouse
-Guild, Watchtower: Guild, Watchtower
-HP Increases When Assisting Allies: HP Increases When Assisting Allies
-HP of All Soldiers: HP of All Soldiers
-Help Accepted: Help Accepted
-Hero: Hero
-Hero Attack: Hero Attack
-Hero Attack %: Hero Attack %
-Hero Attack Rune: Hero Attack Rune
-Hero HP: Hero HP
-Hero HP %: Hero HP %
-Hero HP Rune: Hero HP Rune
-Hero Level: Hero Level
-Hero Lv.: Hero Lv.
-Hero Statue: Hero Statue
-Hero level: Hero level
-Horde Barracks: Horde Barracks
-Horde Hero Attack: Horde Hero Attack
-Horde Hero HP: Horde Hero HP
-Horde March Size: Horde March Size
-Horde Soldier Capacity: Horde Soldier Capacity
-Horde Soldier Training Cap: Horde Soldier Training Cap
-Horde Soldier Training Speed: Horde Soldier Training Speed
-Horde Statue: Horde Statue
-Hospital: Hospital
-Hospital Capacity: Hospital Capacity
-Increase Enhance Rune Storage Duration (sec): Increase Enhance Rune Storage Duration (sec)
-Increase Magic Stone Mine Storage Duration (sec): Increase Magic Stone Mine Storage Duration (sec)
-Increase Medal Monument Storage Duration (sec): Increase Medal Monument Storage Duration (sec)
-Increase Monastery Storage Duration (sec): Increase Monastery Storage Duration (sec)
-Increase Pet Food Factory Storage Time (sec): Increase Pet Food Factory Storage Time (sec)
-Increase Ranch Storage Time (sec): Increase Ranch Storage Time (sec)
-Increase Ranch Yield: Increase Ranch Yield
-Increase Raw Ore Mine Storage Duration (sec): Increase Raw Ore Mine Storage Duration (sec)
-Increase Ruby Storage Duration (sec): Increase Ruby Storage Duration (sec)
-Increase Sawmill Storage Time (sec): Increase Sawmill Storage Time (sec)
-Increase Sawmill Yield: Increase Sawmill Yield
-Increase Stone Mine Storage Duration (sec): Increase Stone Mine Storage Duration (sec)
-Increase the Chance of 1 Additional Villager Visit per Day: Increase the Chance of 1 Additional Villager Visit per Day
-Info coming soon: Info coming soon
-LVL: LVL
+Gear Level: Ausrüstungsstufe
+Gear Stars: Ausrüstungssterne
+Gold ingot: Goldbarren
+Guild: Gilde
+Guild , Training Ground: Gilde, Trainingsgelände
+Guild, Training Ground: Gilde, Trainingsgelände
+Guild, Warehouse: Gilde, Lagerhaus
+Guild, Watchtower: Gilde, Wachturm
+HP Increases When Assisting Allies: LP steigen bei Unterstützung von Verbündeten
+HP of All Soldiers: LP aller Soldaten
+Help Accepted: Angenommene Hilfe
+Hero: Held
+Hero Attack: Heldenangriff
+Hero Attack %: Heldenangriff %
+Hero Attack Rune: Heldenangriffs-Rune
+Hero HP: Helden-LP
+Hero HP %: Helden-LP %
+Hero HP Rune: Helden-LP-Rune
+Hero Level: Heldenlevel
+Hero Lv.: Heldenstufe
+Hero Statue: Heldenstatue
+Hero level: Heldenlevel
+Horde Barracks: Horden-Kaserne
+Horde Hero Attack: Horden-Heldenangriff
+Horde Hero HP: Horden-Helden-LP
+Horde March Size: Horden-Marschgröße
+Horde Soldier Capacity: Horden-Soldatenkapazität
+Horde Soldier Training Cap: Horden-Ausbildungsgrenze
+Horde Soldier Training Speed: Horden-Ausbildungsgeschwindigkeit
+Horde Statue: Horden-Statue
+Hospital: Krankenhaus
+Hospital Capacity: Krankenhauskapazität
+Increase Enhance Rune Storage Duration (sec): Verstärkungsrunen-Lagerzeit erhöhen (Sek.)
+Increase Magic Stone Mine Storage Duration (sec): Magiesteinminen-Lagerzeit erhöhen (Sek.)
+Increase Medal Monument Storage Duration (sec): Medaillenmonument-Lagerzeit erhöhen (Sek.)
+Increase Monastery Storage Duration (sec): Kloster-Lagerzeit erhöhen (Sek.)
+Increase Pet Food Factory Storage Time (sec): Haustierfutter-Lagerzeit erhöhen (Sek.)
+Increase Ranch Storage Time (sec): Ranch-Lagerzeit erhöhen (Sek.)
+Increase Ranch Yield: Ranchertrag erhöhen
+Increase Raw Ore Mine Storage Duration (sec): Roherzminen-Lagerzeit erhöhen (Sek.)
+Increase Ruby Storage Duration (sec): Rubin-Lagerzeit erhöhen (Sek.)
+Increase Sawmill Storage Time (sec): Sägewerk-Lagerzeit erhöhen (Sek.)
+Increase Sawmill Yield: Sägewerkertrag erhöhen
+Increase Stone Mine Storage Duration (sec): Steinminen-Lagerzeit erhöhen (Sek.)
+Increase the Chance of 1 Additional Villager Visit per Day: Chance auf einen zusätzlichen Dorfbewohner-Besuch pro Tag
+Info coming soon: Informationen folgen in Kürze
+LVL: Stufe
 LVL 17/1: LVL 17/1
 LVL 17/2: LVL 17/2
 LVL 18/1: LVL 18/1
@@ -261,215 +261,215 @@ LVL 44/6: LVL 44/6
 LVL 44/7: LVL 44/7
 LVL 44/8: LVL 44/8
 LVL 44/9: LVL 44/9
-League Barracks: Liga Barracks
-League Hero Attack: Liga Hero Attack
-League Hero HP: Liga Hero HP
-League March Size: Liga March Size
-League Soldier Capacity: Liga Soldier Capacity
-League Soldier Training Cap: Liga Soldier Training Cap
-League Soldier Training Speed: Liga Soldier Training Speed
-League Statue: Liga Statue
-League Statue, Warehouse: Liga Statue, Warehouse
-Leg Hero: Leg Hero
-Leg relic: Leg relic
-Legend skin: Legend skin
-Legendary: Legendary
-Legendary Awakening: Legendary Awakening
-Legendary Hero: Legendary Hero
-Legendary Heroes: Legendary Helden
-Legendary Relic: Legendary Relic
-Legendary Troop Skin: Legendary Troop Skin
-Level: Level
-Level 21: Level 21
-Level 22: Level 22
-Level 23: Level 23
-Level 24: Level 24
-Level 25: Level 25
-Level 26: Level 26
-Level 27: Level 27
-Level 28: Level 28
-Level 29: Level 29
-Level 30: Level 30
-Level 31: Level 31
-Level 32: Level 32
-Level 33: Level 33
-Level 34: Level 34
-Level 35: Level 35
-Level 36: Level 36
-Level 37: Level 37
-Level 38: Level 38
-Level 39: Level 39
-Level 40: Level 40
-Level 41: Level 41
-Level 42: Level 42
-Level 43: Level 43
-Level 44: Level 44
-Level 45: Level 45
-Level 46: Level 46
-Level 47: Level 47
-Level 48: Level 48
-Level 49: Level 49
-Level 50: Level 50
-Level 51: Level 51
-Level 52: Level 52
-Level 53: Level 53
-Level 54: Level 54
-Level 55: Level 55
-Lord Gear: Lord Ausrüstung
-Lv 10: Lv 10
-Lv. 1: Lv. 1
-Lv. 10: Lv. 10
-Lv. 11: Lv. 11
-Lv. 12: Lv. 12
-Lv. 13: Lv. 13
-Lv. 14: Lv. 14
-Lv. 15: Lv. 15
-Lv. 16: Lv. 16
-Lv. 17: Lv. 17
-Lv. 18: Lv. 18
-Lv. 19: Lv. 19
-Lv. 2: Lv. 2
-Lv. 20: Lv. 20
-Lv. 21: Lv. 21
-Lv. 22: Lv. 22
-Lv. 23: Lv. 23
-Lv. 24: Lv. 24
-Lv. 25: Lv. 25
-Lv. 26: Lv. 26
-Lv. 27: Lv. 27
-Lv. 28: Lv. 28
-Lv. 29: Lv. 29
-Lv. 3: Lv. 3
-Lv. 30: Lv. 30
-Lv. 31: Lv. 31
-Lv. 32: Lv. 32
-Lv. 33: Lv. 33
-Lv. 34: Lv. 34
-Lv. 35: Lv. 35
-Lv. 36: Lv. 36
-Lv. 37: Lv. 37
-Lv. 38: Lv. 38
-Lv. 39: Lv. 39
-Lv. 4: Lv. 4
-Lv. 40: Lv. 40
-Lv. 41: Lv. 41
-Lv. 42: Lv. 42
-Lv. 43: Lv. 43
-Lv. 44: Lv. 44
-Lv. 45: Lv. 45
-Lv. 5: Lv. 5
-Lv. 50 Horde Barracks, Hospital: Lv. 50 Horde Barracks, Hospital
-Lv. 6: Lv. 6
-Lv. 7: Lv. 7
-Lv. 8: Lv. 8
-Lv. 9: Lv. 9
-Lv.40 Research Cottage, Hospital: Lv.40 Forschung Cottage, Hospital
-Lv.45 League Barracks, Guild: Lv.45 Liga Barracks, Guild
-Lv.45 League Barracks, Military Hall: Lv.45 Liga Barracks, Military Hall
-Lv.50 Horde Barracks, Guild: Lv.50 Horde Barracks, Guild
-Magic Stone Mine: Magic Stone Mine
-Magic Stone Mine Yield Boost: Magic Stone Mine Yield Boost
-Magic Thread: Magic Thread
-March Size: March Size
-Meat: Meat
-Medal Hall: Medal Hall
-Medal Monument: Medal Monument
-Medal Monument Yield Boost: Medal Monument Yield Boost
-Medals: Medals
-Monastery: Monastery
-Monastery Yield Boost: Monastery Yield Boost
-Mythic: Mythic
-Mythic Hero: Mythic Hero
-Mythic Heroes: Mythic Helden
-Nature Barracks: Natur Barracks
-Nature Hero Attack: Natur Hero Attack
-Nature Hero HP: Natur Hero HP
-Nature March Size: Natur March Size
-Nature Soldier Capacity: Natur Soldier Capacity
-Nature Soldier Training Cap: Natur Soldier Training Cap
-Nature Soldier Training Speed: Natur Soldier Training Speed
-Nature Statue: Natur Statue
-New Server 108+: New Server 108+
-Older Server: Older Server
-Orichalcum: Orichalcum
-Pet: Pet
-Pet Food: Pet Food
-Pet Food Factory: Pet Food Factory
-Pet Food Factory Yield Boost: Pet Food Factory Yield Boost
-Pet essence: Pet essence
-Pet needed: Pet needed
-Points: Points
-Promotion: Promotion
-Promotion Stone: Promotion Stone
-PvP Marching Speed Bonus: PvP Marching Speed Bonus
-Queue: Queue
-Queue Attack Rune: Queue Attack Rune
+League Barracks: Liga-Kaserne
+League Hero Attack: Liga-Heldenangriff
+League Hero HP: Liga-Helden-LP
+League March Size: Liga-Marschgröße
+League Soldier Capacity: Liga-Soldatenkapazität
+League Soldier Training Cap: Liga-Ausbildungsgrenze
+League Soldier Training Speed: Liga-Ausbildungsgeschwindigkeit
+League Statue: Liga-Statue
+League Statue, Warehouse: Liga-Statue, Lagerhaus
+Leg Hero: Leg. Held
+Leg relic: Leg. Relikt
+Legend skin: Leg. Skin
+Legendary: Legendär
+Legendary Awakening: Legendäre Erweckung
+Legendary Hero: Legendärer Held
+Legendary Heroes: Legendäre Helden
+Legendary Relic: Legendäres Relikt
+Legendary Troop Skin: Legendärer Truppen-Skin
+Level: Stufe
+Level 21: Stufe 21
+Level 22: Stufe 22
+Level 23: Stufe 23
+Level 24: Stufe 24
+Level 25: Stufe 25
+Level 26: Stufe 26
+Level 27: Stufe 27
+Level 28: Stufe 28
+Level 29: Stufe 29
+Level 30: Stufe 30
+Level 31: Stufe 31
+Level 32: Stufe 32
+Level 33: Stufe 33
+Level 34: Stufe 34
+Level 35: Stufe 35
+Level 36: Stufe 36
+Level 37: Stufe 37
+Level 38: Stufe 38
+Level 39: Stufe 39
+Level 40: Stufe 40
+Level 41: Stufe 41
+Level 42: Stufe 42
+Level 43: Stufe 43
+Level 44: Stufe 44
+Level 45: Stufe 45
+Level 46: Stufe 46
+Level 47: Stufe 47
+Level 48: Stufe 48
+Level 49: Stufe 49
+Level 50: Stufe 50
+Level 51: Stufe 51
+Level 52: Stufe 52
+Level 53: Stufe 53
+Level 54: Stufe 54
+Level 55: Stufe 55
+Lord Gear: Lord-Ausrüstung
+Lv 10: Stufe 10
+Lv. 1: Stufe 1
+Lv. 10: Stufe 10
+Lv. 11: Stufe 11
+Lv. 12: Stufe 12
+Lv. 13: Stufe 13
+Lv. 14: Stufe 14
+Lv. 15: Stufe 15
+Lv. 16: Stufe 16
+Lv. 17: Stufe 17
+Lv. 18: Stufe 18
+Lv. 19: Stufe 19
+Lv. 2: Stufe 2
+Lv. 20: Stufe 20
+Lv. 21: Stufe 21
+Lv. 22: Stufe 22
+Lv. 23: Stufe 23
+Lv. 24: Stufe 24
+Lv. 25: Stufe 25
+Lv. 26: Stufe 26
+Lv. 27: Stufe 27
+Lv. 28: Stufe 28
+Lv. 29: Stufe 29
+Lv. 3: Stufe 3
+Lv. 30: Stufe 30
+Lv. 31: Stufe 31
+Lv. 32: Stufe 32
+Lv. 33: Stufe 33
+Lv. 34: Stufe 34
+Lv. 35: Stufe 35
+Lv. 36: Stufe 36
+Lv. 37: Stufe 37
+Lv. 38: Stufe 38
+Lv. 39: Stufe 39
+Lv. 4: Stufe 4
+Lv. 40: Stufe 40
+Lv. 41: Stufe 41
+Lv. 42: Stufe 42
+Lv. 43: Stufe 43
+Lv. 44: Stufe 44
+Lv. 45: Stufe 45
+Lv. 5: Stufe 5
+Lv. 50 Horde Barracks, Hospital: Stufe 50 Horden-Kaserne, Krankenhaus
+Lv. 6: Stufe 6
+Lv. 7: Stufe 7
+Lv. 8: Stufe 8
+Lv. 9: Stufe 9
+Lv.40 Research Cottage, Hospital: Stufe 40 Forschungshütte, Krankenhaus
+Lv.45 League Barracks, Guild: Stufe 45 Liga-Kaserne, Gilde
+Lv.45 League Barracks, Military Hall: Stufe 45 Liga-Kaserne, Militärhalle
+Lv.50 Horde Barracks, Guild: Stufe 50 Horden-Kaserne, Gilde
+Magic Stone Mine: Magiesteinmine
+Magic Stone Mine Yield Boost: Magiesteinminen-Ertragsbonus
+Magic Thread: Magischer Faden
+March Size: Marschgröße
+Meat: Fleisch
+Medal Hall: Medaillenhalle
+Medal Monument: Medaillenmonument
+Medal Monument Yield Boost: Medaillenmonument-Ertragsbonus
+Medals: Medaillen
+Monastery: Kloster
+Monastery Yield Boost: Kloster-Ertragsbonus
+Mythic: Mythisch
+Mythic Hero: Mythischer Held
+Mythic Heroes: Mythische Helden
+Nature Barracks: Natur-Kaserne
+Nature Hero Attack: Natur-Heldenangriff
+Nature Hero HP: Natur-Helden-LP
+Nature March Size: Natur-Marschgröße
+Nature Soldier Capacity: Natur-Soldatenkapazität
+Nature Soldier Training Cap: Natur-Ausbildungsgrenze
+Nature Soldier Training Speed: Natur-Ausbildungsgeschwindigkeit
+Nature Statue: Natur-Statue
+New Server 108+: Neuer Server 108+
+Older Server: Älterer Server
+Orichalcum: Orichalkum
+Pet: Haustier
+Pet Food: Haustierfutter
+Pet Food Factory: Haustierfutter-Fabrik
+Pet Food Factory Yield Boost: Haustierfutter-Ertragsbonus
+Pet essence: Haustieressenz
+Pet needed: Benötigte Haustiere
+Points: Punkte
+Promotion: Beförderung
+Promotion Stone: Beförderungsstein
+PvP Marching Speed Bonus: PvP-Marschgeschwindigkeitsbonus
+Queue: Warteschlange
+Queue Attack Rune: Warteschlangen-Angriffsrune
 Ranch: Ranch
 Rare                      &#9733;: Rare                      &#9733;
-Rare Relic: Rare Relic
-Rare Troop Skin: Rare Troop Skin
-Rare relic: Rare relic
-Rare skin: Rare skin
-Raw Ore Mine: Raw Ore Mine
-Raw Ore Mine Yield Boost: Raw Ore Mine Yield Boost
-Reduce Gear Forge Time: Reduce Ausrüstung Forge Time
-Reduce Gear Forge Time (sec): Reduce Ausrüstung Forge Time (sec)
-Refined metal: Refined metal
-Relic: Relic
-Relic HP: Relic HP
-Relic Mastery Rune: Relic Mastery Rune
-Research Cottage: Forschung Cottage
-Research Cottage, Hospital: Forschung Cottage, Hospital
-Research Cottage, Warehouse: Forschung Cottage, Warehouse
-Research Cottage, Watchtower: Forschung Cottage, Watchtower
-Resource Yield Boost (Timber, Stone, Ruby): Resource Yield Boost (Timber, Stone, Ruby)
-Ruby: Ruby
-Ruby Mine: Ruby Mine
-Ruby Yield Increase: Ruby Yield Increase
+Rare Relic: Seltenes Relikt
+Rare Troop Skin: Seltener Truppen-Skin
+Rare relic: Seltenes Relikt
+Rare skin: Seltener Skin
+Raw Ore Mine: Roherzmine
+Raw Ore Mine Yield Boost: Roherzminen-Ertragsbonus
+Reduce Gear Forge Time: Schmiedezeit verkürzen
+Reduce Gear Forge Time (sec): Schmiedezeit verkürzen (Sek.)
+Refined metal: Raffiniertes Metall
+Relic: Relikt
+Relic HP: Relikt-LP
+Relic Mastery Rune: Relikt-Meisterschaftsrune
+Research Cottage: Forschungshütte
+Research Cottage, Hospital: Forschungshütte, Krankenhaus
+Research Cottage, Warehouse: Forschungshütte, Lagerhaus
+Research Cottage, Watchtower: Forschungshütte, Wachturm
+Resource Yield Boost (Timber, Stone, Ruby): Ertragsbonus (Holz, Stein, Rubin)
+Ruby: Rubin
+Ruby Mine: Rubinmine
+Ruby Yield Increase: Rubinertrag erhöhen
 Rune: Rune
-Sawmill: Sawmill
-Scouting Marching Speed Boost: Scouting Marching Speed Boost
+Sawmill: Sägewerk
+Scouting Marching Speed Boost: Späher-Marschgeschwindigkeit
 Server 1-107: Server 1-107
-'Server Choice:': 'Server Choice:'
-Shard for single up: Shard for single up
-Shards: Shards
-Shards Full Star: Shards Full Star
-Shards/upgrade: Shards/upgrade
-Skill Books: Skill Books
-Skill Level: Skill Level
-Soldier Attack: Soldier Attack
-Soldier Attack Rune: Soldier Attack Rune
-Soldier Capacity (Faction): Soldier Capacity (Faction)
-Soldier HP: Soldier HP
-Soldier HP Rune: Soldier HP Rune
-Soldier Training Speed: Soldier Training Speed
-Soul Stones: Soul Stones
-Star: Star
-Star Level: Star Level
-Star level: Star level
-Step: Step
-Stone Mine: Stone Mine
-Stone Mine Yield Boost: Stone Mine Yield Boost
-Stone Storage Quantity: Stone Storage Quantity
-Stone and Timber: Stone and Timber
+'Server Choice:': 'Serverwahl:'
+Shard for single up: Splitter pro Stufe
+Shards: Splitter
+Shards Full Star: Splitter für vollen Stern
+Shards/upgrade: Splitter/Verbesserung
+Skill Books: Fertigkeitsbücher
+Skill Level: Fertigkeitsstufe
+Soldier Attack: Soldatenangriff
+Soldier Attack Rune: Soldatenangriffs-Rune
+Soldier Capacity (Faction): Soldatenkapazität (Fraktion)
+Soldier HP: Soldaten-LP
+Soldier HP Rune: Soldaten-LP-Rune
+Soldier Training Speed: Ausbildungsgeschwindigkeit
+Soul Stones: Seelensteine
+Star: Stern
+Star Level: Sternstufe
+Star level: Sternstufe
+Step: Schritt
+Stone Mine: Steinmine
+Stone Mine Yield Boost: Steinminen-Ertragsbonus
+Stone Storage Quantity: Steinlagermenge
+Stone and Timber: Stein und Holz
 T1                          &#9733;: T1                          &#9733;
 T2                          &#9733;: T2                          &#9733;
 T3                          &#9733;: T3                          &#9733;
 T4                          &#9733;: T4                          &#9733;
-TOTAL: TOTAL
-Tavern: Tavern
-Tech Research Rate: Tech Forschung Rate
-Tier: Tier
-Timber Storage Quantity: Timber Storage Quantity
-Time Between Free Hero Recruitments Reduced (min): Time Between Free Hero Recruitments Reduced (min)
-Total: Total
-Total shards: Total shards
-Total till this level: Total till this level
-Training Cap: Training Cap
-Training Ground: Training Ground
-Training Ground, League Statue: Training Ground, Liga Statue
-Troop Skin: Troop Skin
-Troop Skin Center: Troop Skin Center
+TOTAL: GESAMT
+Tavern: Taverne
+Tech Research Rate: Forschungsgeschwindigkeit
+Tier: Rang
+Timber Storage Quantity: Holzlagermenge
+Time Between Free Hero Recruitments Reduced (min): Wartezeit zwischen kostenlosen Anwerbungen verkürzt (Min.)
+Total: Gesamt
+Total shards: Splitter gesamt
+Total till this level: Gesamt bis zu dieser Stufe
+Training Cap: Ausbildungsgrenze
+Training Ground: Trainingsgelände
+Training Ground, League Statue: Trainingsgelände, Liga-Statue
+Troop Skin: Truppen-Skin
+Troop Skin Center: Truppen-Skin-Zentrum
 VIP: VIP
 VIP 1: VIP 1
 VIP 10: VIP 10
@@ -489,19 +489,10 @@ VIP 6: VIP 6
 VIP 7: VIP 7
 VIP 8: VIP 8
 VIP 9: VIP 9
-Villager: Villager
+Villager: Dorfbewohner
 Villagers: Dorfbewohner
-Warehouse: Warehouse
-Warehouse, League Statue: Warehouse, Liga Statue
-Watchtower: Watchtower
-Watchtower, Guild: Watchtower, Guild
-Wounded Soldier Healing Rate: Wounded Soldier Healing Rate
-"ð\x9F\x8F": "ð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
-: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+Warehouse: Lagerhaus
+Warehouse, League Statue: Lagerhaus, Liga-Statue
+Watchtower: Wachturm
+Watchtower, Guild: Wachturm, Gilde
+Wounded Soldier Healing Rate: Heilungsrate verwundeter Soldaten

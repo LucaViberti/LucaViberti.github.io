@@ -1,0 +1,507 @@
+# Cost-table terms for 'ja': English term -> translation.
+# Entries where the two sides are identical are terms this language
+# keeps in English (proper nouns, rarity names, and so on).
+$ Estimated: 推定$
+1 Universal Shard: 汎用シャード×1
+1 same: 同種×1
+1 same + 5 rare: 同種×1 + レア×5
+10 Legendary: レジェンド×10
+10 Mythic: ミシック×10
+15 Legendary: レジェンド×15
+2 Universal Shard: 汎用シャード×2
+2 same + 10 rare: 同種×2 + レア×10
+2 same + 5 rare: 同種×2 + レア×5
+20 Legendary: レジェンド×20
+3 Universal Shard: 汎用シャード×3
+3 rare: レア×3
+3 same + 10 rare: 同種×3 + レア×10
+3 same + 15 rare: 同種×3 + レア×15
+4 same + 15 rare: 同種×4 + レア×15
+5 Legendary: レジェンド×5
+5 same + 15 rare: 同種×5 + レア×15
+50 + 10: 50 + 10
+85 + 10 Dragon Blood: 85 + 10 ドラゴンブラッド
+Adventure Attack Percentage: アドベンチャーATK割合
+Adventure HP Percentage: アドベンチャーHP割合
+Attack Increases When Assisting Allies: 仲間支援時のATK増加
+Attack of All Soldiers: 全兵士ATK
+Attribute: 属性
+Awaken: 覚醒
+Awakening Process: 覚醒プロセス
+B1: B1
+B2: B2
+B3: B3
+Blacksmith: 鍛冶屋
+Books: スキルブック
+Books/hero: ブック数／ヒーロー
+Books/skill: ブック数／スキル
+Brilliance Level 1: Brilliance レベル1
+Brilliance Level 2: Brilliance レベル2
+Brilliance Level 3: Brilliance レベル3
+Building: 建物
+Building HP: 建物HP
+Buildings: 建物
+Castle: 城
+Castle (Older Server): 城（旧サーバー）
+Castle (Server 1-107): 城（サーバー1-107）
+Castle (Server 108+): 城（サーバー108+）
+Castle 1-107: 城 1-107
+Castle 108+: 城 108+
+Castle older: 城（旧）
+Common               &#9733;: コモン               &#9733;
+Construction Speed: 建設速度
+Daily Resource Plunder Limit: 1日の資源略奪上限
+Damage Increase (Against Adventure Boss): ダメージ増加（アドベンチャーボス戦）
+Damage Reduction (Against Adventure Boss): 被ダメージ軽減（アドベンチャーボス戦）
+Defense: 防御力
+Defense Break: 防御貫通
+Dragon Essence: ドラゴンエッセンス
+Enhance Rune: 強化ルーン
+Enhance Rune Mine: 強化ルーン鉱山
+Enhance Rune Mine Yield Boost: 強化ルーン鉱山産出量ブースト
+Epic: エピック
+Epic                        &#9733;: エピック                        &#9733;
+Epic Relic: エピックレリック
+Epic Troop Skin: エピック部隊スキン
+Epic relic: エピックレリック
+Epic skin: エピックスキン
+Exclusive: エクスクルーシブ
+Exclusive Gear: エクスクルーシブ装備
+Free Construction Time (sec): 無料建設時間（秒）
+Free Tech Speed-up (sec): 無料研究時間短縮（秒）
+Gear: 装備
+Gear Level: 装備レベル
+Gear Stars: 装備の星
+Gold ingot: ゴールドインゴット
+Guild: ギルド
+Guild , Training Ground: ギルド、訓練場
+Guild, Training Ground: ギルド、訓練場
+Guild, Warehouse: ギルド、倉庫
+Guild, Watchtower: ギルド、監視塔
+HP Increases When Assisting Allies: 仲間支援時のHP増加
+HP of All Soldiers: 全兵士HP
+Help Accepted: 支援受け入れ数
+Hero: ヒーロー
+Hero Attack: ヒーローATK
+Hero Attack %: ヒーローATK％
+Hero Attack Rune: ヒーローATKルーン
+Hero HP: ヒーローHP
+Hero HP %: ヒーローHP％
+Hero HP Rune: ヒーローHPルーン
+Hero Level: ヒーローレベル
+Hero Lv.: ヒーローLv.
+Hero Statue: ヒーロー像
+Hero level: ヒーローレベル
+Horde Barracks: ホード兵舎
+Horde Hero Attack: ホードヒーローATK
+Horde Hero HP: ホードヒーローHP
+Horde March Size: ホード行軍規模
+Horde Soldier Capacity: ホード兵士収容数
+Horde Soldier Training Cap: ホード兵士訓練上限
+Horde Soldier Training Speed: ホード兵士訓練速度
+Horde Statue: ホード像
+Hospital: 病院
+Hospital Capacity: 病院収容数
+Increase Enhance Rune Storage Duration (sec): 強化ルーン備蓄時間増加（秒）
+Increase Magic Stone Mine Storage Duration (sec): マジックストーン鉱山備蓄時間増加（秒）
+Increase Medal Monument Storage Duration (sec): メダル記念碑備蓄時間増加（秒）
+Increase Monastery Storage Duration (sec): 修道院備蓄時間増加（秒）
+Increase Pet Food Factory Storage Time (sec): ペットフード工場備蓄時間増加（秒）
+Increase Ranch Storage Time (sec): 牧場備蓄時間増加（秒）
+Increase Ranch Yield: 牧場産出量増加
+Increase Raw Ore Mine Storage Duration (sec): 原鉱鉱山備蓄時間増加（秒）
+Increase Ruby Storage Duration (sec): ルビー備蓄時間増加（秒）
+Increase Sawmill Storage Time (sec): 製材所備蓄時間増加（秒）
+Increase Sawmill Yield: 製材所産出量増加
+Increase Stone Mine Storage Duration (sec): 石材鉱山備蓄時間増加（秒）
+Increase the Chance of 1 Additional Villager Visit per Day: 1日の村人追加訪問確率増加
+Info coming soon: 近日公開予定
+LVL: レベル
+LVL 17/1: LVL 17/1
+LVL 17/2: LVL 17/2
+LVL 18/1: LVL 18/1
+LVL 18/2: LVL 18/2
+LVL 19/1: LVL 19/1
+LVL 19/2: LVL 19/2
+LVL 20/1: LVL 20/1
+LVL 20/2: LVL 20/2
+LVL 20/3: LVL 20/3
+LVL 21/1: LVL 21/1
+LVL 21/2: LVL 21/2
+LVL 21/3: LVL 21/3
+LVL 22/1: LVL 22/1
+LVL 22/2: LVL 22/2
+LVL 22/3: LVL 22/3
+LVL 23/1: LVL 23/1
+LVL 23/2: LVL 23/2
+LVL 23/3: LVL 23/3
+LVL 24/1: LVL 24/1
+LVL 24/2: LVL 24/2
+LVL 24/3: LVL 24/3
+LVL 25/1: LVL 25/1
+LVL 25/2: LVL 25/2
+LVL 25/3: LVL 25/3
+LVL 26/1: LVL 26/1
+LVL 26/2: LVL 26/2
+LVL 26/3: LVL 26/3
+LVL 26/4: LVL 26/4
+LVL 27/1: LVL 27/1
+LVL 27/2: LVL 27/2
+LVL 27/3: LVL 27/3
+LVL 27/4: LVL 27/4
+LVL 28/1: LVL 28/1
+LVL 28/2: LVL 28/2
+LVL 28/3: LVL 28/3
+LVL 28/4: LVL 28/4
+LVL 29/1: LVL 29/1
+LVL 29/2: LVL 29/2
+LVL 29/3: LVL 29/3
+LVL 29/4: LVL 29/4
+LVL 30/1: LVL 30/1
+LVL 30/2: LVL 30/2
+LVL 30/3: LVL 30/3
+LVL 30/4: LVL 30/4
+LVL 31/1: LVL 31/1
+LVL 31/2: LVL 31/2
+LVL 31/3: LVL 31/3
+LVL 31/4: LVL 31/4
+LVL 31/5: LVL 31/5
+LVL 32/1: LVL 32/1
+LVL 32/2: LVL 32/2
+LVL 32/3: LVL 32/3
+LVL 32/4: LVL 32/4
+LVL 32/5: LVL 32/5
+LVL 33/1: LVL 33/1
+LVL 33/2: LVL 33/2
+LVL 33/3: LVL 33/3
+LVL 33/4: LVL 33/4
+LVL 33/5: LVL 33/5
+LVL 34/1: LVL 34/1
+LVL 34/2: LVL 34/2
+LVL 34/3: LVL 34/3
+LVL 34/4: LVL 34/4
+LVL 34/5: LVL 34/5
+LVL 34/6: LVL 34/6
+LVL 35/1: LVL 35/1
+LVL 35/2: LVL 35/2
+LVL 35/3: LVL 35/3
+LVL 35/4: LVL 35/4
+LVL 35/5: LVL 35/5
+LVL 35/6: LVL 35/6
+LVL 36/1: LVL 36/1
+LVL 36/2: LVL 36/2
+LVL 36/3: LVL 36/3
+LVL 36/4: LVL 36/4
+LVL 36/5: LVL 36/5
+LVL 36/6: LVL 36/6
+LVL 37/1: LVL 37/1
+LVL 37/2: LVL 37/2
+LVL 37/3: LVL 37/3
+LVL 37/4: LVL 37/4
+LVL 37/5: LVL 37/5
+LVL 37/6: LVL 37/6
+LVL 37/7: LVL 37/7
+LVL 38/1: LVL 38/1
+LVL 38/2: LVL 38/2
+LVL 38/3: LVL 38/3
+LVL 38/4: LVL 38/4
+LVL 38/5: LVL 38/5
+LVL 38/6: LVL 38/6
+LVL 38/7: LVL 38/7
+LVL 39/1: LVL 39/1
+LVL 39/2: LVL 39/2
+LVL 39/3: LVL 39/3
+LVL 39/4: LVL 39/4
+LVL 39/5: LVL 39/5
+LVL 39/6: LVL 39/6
+LVL 39/7: LVL 39/7
+LVL 39/8: LVL 39/8
+LVL 40/1: LVL 40/1
+LVL 40/2: LVL 40/2
+LVL 40/3: LVL 40/3
+LVL 40/4: LVL 40/4
+LVL 40/5: LVL 40/5
+LVL 40/6: LVL 40/6
+LVL 40/7: LVL 40/7
+LVL 40/8: LVL 40/8
+LVL 41/1: LVL 41/1
+LVL 41/2: LVL 41/2
+LVL 41/3: LVL 41/3
+LVL 41/4: LVL 41/4
+LVL 41/5: LVL 41/5
+LVL 41/6: LVL 41/6
+LVL 41/7: LVL 41/7
+LVL 41/8: LVL 41/8
+LVL 41/9: LVL 41/9
+LVL 42/1: LVL 42/1
+LVL 42/2: LVL 42/2
+LVL 42/3: LVL 42/3
+LVL 42/4: LVL 42/4
+LVL 42/5: LVL 42/5
+LVL 42/6: LVL 42/6
+LVL 42/7: LVL 42/7
+LVL 42/8: LVL 42/8
+LVL 42/9: LVL 42/9
+LVL 43/1: LVL 43/1
+LVL 43/2: LVL 43/2
+LVL 43/3: LVL 43/3
+LVL 43/4: LVL 43/4
+LVL 43/5: LVL 43/5
+LVL 43/6: LVL 43/6
+LVL 43/7: LVL 43/7
+LVL 43/8: LVL 43/8
+LVL 43/9: LVL 43/9
+LVL 44/1: LVL 44/1
+LVL 44/10: LVL 44/10
+LVL 44/2: LVL 44/2
+LVL 44/3: LVL 44/3
+LVL 44/4: LVL 44/4
+LVL 44/5: LVL 44/5
+LVL 44/6: LVL 44/6
+LVL 44/7: LVL 44/7
+LVL 44/8: LVL 44/8
+LVL 44/9: LVL 44/9
+League Barracks: リーグ兵舎
+League Hero Attack: リーグヒーローATK
+League Hero HP: リーグヒーローHP
+League March Size: リーグ行軍規模
+League Soldier Capacity: リーグ兵士収容数
+League Soldier Training Cap: リーグ兵士訓練上限
+League Soldier Training Speed: リーグ兵士訓練速度
+League Statue: リーグ像
+League Statue, Warehouse: リーグ像、倉庫
+Leg Hero: レジェンドヒーロー
+Leg relic: レジェンドレリック
+Legend skin: レジェンドスキン
+Legendary: レジェンド
+Legendary Awakening: レジェンド覚醒
+Legendary Hero: レジェンドヒーロー
+Legendary Heroes: レジェンドヒーロー
+Legendary Relic: レジェンドレリック
+Legendary Troop Skin: レジェンド部隊スキン
+Level: レベル
+Level 21: レベル21
+Level 22: レベル22
+Level 23: レベル23
+Level 24: レベル24
+Level 25: レベル25
+Level 26: レベル26
+Level 27: レベル27
+Level 28: レベル28
+Level 29: レベル29
+Level 30: レベル30
+Level 31: レベル31
+Level 32: レベル32
+Level 33: レベル33
+Level 34: レベル34
+Level 35: レベル35
+Level 36: レベル36
+Level 37: レベル37
+Level 38: レベル38
+Level 39: レベル39
+Level 40: レベル40
+Level 41: レベル41
+Level 42: レベル42
+Level 43: レベル43
+Level 44: レベル44
+Level 45: レベル45
+Level 46: レベル46
+Level 47: レベル47
+Level 48: レベル48
+Level 49: レベル49
+Level 50: レベル50
+Level 51: レベル51
+Level 52: レベル52
+Level 53: レベル53
+Level 54: レベル54
+Level 55: レベル55
+Lord Gear: ロード装備
+Lv 10: Lv 10
+Lv. 1: Lv. 1
+Lv. 10: Lv. 10
+Lv. 11: Lv. 11
+Lv. 12: Lv. 12
+Lv. 13: Lv. 13
+Lv. 14: Lv. 14
+Lv. 15: Lv. 15
+Lv. 16: Lv. 16
+Lv. 17: Lv. 17
+Lv. 18: Lv. 18
+Lv. 19: Lv. 19
+Lv. 2: Lv. 2
+Lv. 20: Lv. 20
+Lv. 21: Lv. 21
+Lv. 22: Lv. 22
+Lv. 23: Lv. 23
+Lv. 24: Lv. 24
+Lv. 25: Lv. 25
+Lv. 26: Lv. 26
+Lv. 27: Lv. 27
+Lv. 28: Lv. 28
+Lv. 29: Lv. 29
+Lv. 3: Lv. 3
+Lv. 30: Lv. 30
+Lv. 31: Lv. 31
+Lv. 32: Lv. 32
+Lv. 33: Lv. 33
+Lv. 34: Lv. 34
+Lv. 35: Lv. 35
+Lv. 36: Lv. 36
+Lv. 37: Lv. 37
+Lv. 38: Lv. 38
+Lv. 39: Lv. 39
+Lv. 4: Lv. 4
+Lv. 40: Lv. 40
+Lv. 41: Lv. 41
+Lv. 42: Lv. 42
+Lv. 43: Lv. 43
+Lv. 44: Lv. 44
+Lv. 45: Lv. 45
+Lv. 5: Lv. 5
+Lv. 50 Horde Barracks, Hospital: Lv. 50 ホード兵舎、病院
+Lv. 6: Lv. 6
+Lv. 7: Lv. 7
+Lv. 8: Lv. 8
+Lv. 9: Lv. 9
+Lv.40 Research Cottage, Hospital: Lv.40 研究小屋、病院
+Lv.45 League Barracks, Guild: Lv.45 リーグ兵舎、ギルド
+Lv.45 League Barracks, Military Hall: Lv.45 リーグ兵舎、軍事ホール
+Lv.50 Horde Barracks, Guild: Lv.50 ホード兵舎、ギルド
+Magic Stone Mine: マジックストーン鉱山
+Magic Stone Mine Yield Boost: マジックストーン鉱山産出量ブースト
+Magic Thread: マジックスレッド
+March Size: 行軍規模
+Meat: 肉
+Medal Hall: メダルホール
+Medal Monument: メダル記念碑
+Medal Monument Yield Boost: メダル記念碑産出量ブースト
+Medals: メダル
+Monastery: 修道院
+Monastery Yield Boost: 修道院産出量ブースト
+Mythic: ミシック
+Mythic Hero: ミシックヒーロー
+Mythic Heroes: ミシックヒーロー
+Nature Barracks: ネイチャー兵舎
+Nature Hero Attack: ネイチャーヒーローATK
+Nature Hero HP: ネイチャーヒーローHP
+Nature March Size: ネイチャー行軍規模
+Nature Soldier Capacity: ネイチャー兵士収容数
+Nature Soldier Training Cap: ネイチャー兵士訓練上限
+Nature Soldier Training Speed: ネイチャー兵士訓練速度
+Nature Statue: ネイチャー像
+New Server 108+: 新サーバー108+
+Older Server: 旧サーバー
+Orichalcum: オリハルコン
+Pet: ペット
+Pet Food: ペットフード
+Pet Food Factory: ペットフード工場
+Pet Food Factory Yield Boost: ペットフード工場産出量ブースト
+Pet essence: ペットエッセンス
+Pet needed: 必要なペット
+Points: ポイント
+Promotion: 昇格
+Promotion Stone: 昇格石
+PvP Marching Speed Bonus: PvP行軍速度ボーナス
+Queue: キュー
+Queue Attack Rune: キューATKルーン
+Ranch: 牧場
+Rare                      &#9733;: レア                      &#9733;
+Rare Relic: レアレリック
+Rare Troop Skin: レア部隊スキン
+Rare relic: レアレリック
+Rare skin: レアスキン
+Raw Ore Mine: 原鉱鉱山
+Raw Ore Mine Yield Boost: 原鉱鉱山産出量ブースト
+Reduce Gear Forge Time: 装備鍛造時間短縮
+Reduce Gear Forge Time (sec): 装備鍛造時間短縮（秒）
+Refined metal: 精錬金属
+Relic: レリック
+Relic HP: レリックHP
+Relic Mastery Rune: レリックマスタリールーン
+Research Cottage: 研究小屋
+Research Cottage, Hospital: 研究小屋、病院
+Research Cottage, Warehouse: 研究小屋、倉庫
+Research Cottage, Watchtower: 研究小屋、監視塔
+Resource Yield Boost (Timber, Stone, Ruby): 資源産出量ブースト（木材・石材・ルビー）
+Ruby: ルビー
+Ruby Mine: ルビー鉱山
+Ruby Yield Increase: ルビー産出量増加
+Rune: ルーン
+Sawmill: 製材所
+Scouting Marching Speed Boost: 偵察行軍速度ブースト
+Server 1-107: サーバー1-107
+'Server Choice:': サーバー選択：
+Shard for single up: 1段階あたりのシャード数
+Shards: シャード
+Shards Full Star: ★MAXまでの合計シャード
+Shards/upgrade: 強化あたりのシャード数
+Skill Books: スキルブック
+Skill Level: スキルレベル
+Soldier Attack: 兵士ATK
+Soldier Attack Rune: 兵士ATKルーン
+Soldier Capacity (Faction): 兵士収容数（勢力）
+Soldier HP: 兵士HP
+Soldier HP Rune: 兵士HPルーン
+Soldier Training Speed: 兵士訓練速度
+Soul Stones: ソウルストーン
+Star: ★
+Star Level: ★レベル
+Star level: ★レベル
+Step: ステップ
+Stone Mine: 石材鉱山
+Stone Mine Yield Boost: 石材鉱山産出量ブースト
+Stone Storage Quantity: 石材保管量
+Stone and Timber: 石材と木材
+T1                          &#9733;: T1                          &#9733;
+T2                          &#9733;: T2                          &#9733;
+T3                          &#9733;: T3                          &#9733;
+T4                          &#9733;: T4                          &#9733;
+TOTAL: 合計
+Tavern: 酒場
+Tech Research Rate: 研究速度
+Tier: ティア
+Timber Storage Quantity: 木材保管量
+Time Between Free Hero Recruitments Reduced (min): 無料ヒーロー勧誘間隔短縮（分）
+Total: 合計
+Total shards: シャード合計
+Total till this level: このレベルまでの合計
+Training Cap: 訓練上限
+Training Ground: 訓練場
+Training Ground, League Statue: 訓練場、リーグ像
+Troop Skin: 部隊スキン
+Troop Skin Center: 部隊スキンセンター
+VIP: VIP
+VIP 1: VIP 1
+VIP 10: VIP 10
+VIP 11: VIP 11
+VIP 12: VIP 12
+VIP 13: VIP 13
+VIP 14: VIP 14
+VIP 15: VIP 15
+VIP 16: VIP 16
+VIP 17: VIP 17
+VIP 18: VIP 18
+VIP 2: VIP 2
+VIP 3: VIP 3
+VIP 4: VIP 4
+VIP 5: VIP 5
+VIP 6: VIP 6
+VIP 7: VIP 7
+VIP 8: VIP 8
+VIP 9: VIP 9
+Villager: 村人
+Villagers: 村人
+Warehouse: 倉庫
+Warehouse, League Statue: 倉庫、リーグ像
+Watchtower: 監視塔
+Watchtower, Guild: 監視塔、ギルド
+Wounded Soldier Healing Rate: 負傷兵治療速度
+"ð\x9F\x8F": "ð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"

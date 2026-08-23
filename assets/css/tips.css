@@ -211,3 +211,20 @@ nav ul li ul li a:hover {
 .th-table .th-corner{z-index:8;background:#eaf2fb!important}
 
 .th-table tbody tr:nth-child(odd) td{background:#fcfdff}
+
+/* --------------------------------------------------------------------------
+   Cell alignment utilities.
+
+   These replace the ten inline style strings that used to be repeated on all
+   3,883 cells of this page, in each of the seven languages - 55% of the page's
+   bytes. The declarations are identical to what those style attributes said,
+   so the tables render exactly as before.
+
+   Note .th-table th/td above sets vertical-align:middle for every cell, so
+   these are written to win on specificity where a cell asks for something else.
+   -------------------------------------------------------------------------- */
+.th-table .tc { text-align: center; }
+.th-table .vb { vertical-align: bottom; }
+.th-table .vc { vertical-align: center; }
+.th-table .fb { font-weight: bold; }
+.th-table .wn { white-space: normal; }

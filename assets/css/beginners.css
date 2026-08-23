@@ -224,14 +224,3 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   box-shadow:0 4px 14px rgba(0,0,0,.04);
 }
 .donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
-  
-
-/* --------------------------------------------------------------
-   Merged in from the ko stylesheet(s) during the move to shared
-   stylesheets: these declarations existed only in a translated copy
-   of this page, so keeping them preserves that styling for every
-   language instead of silently dropping it.
-   -------------------------------------------------------------- */
-display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb; padding: 2px 8px; border-radius: 999px; margin-bottom: 8px; .th-beginner .content {
-  min-width: 0;
-}

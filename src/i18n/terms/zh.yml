@@ -1,0 +1,507 @@
+# Cost-table terms for 'zh': English term -> translation.
+# Entries where the two sides are identical are terms this language
+# keeps in English (proper nouns, rarity names, and so on).
+$ Estimated: $ 预估
+1 Universal Shard: 1 通用碎片
+1 same: 1 same
+1 same + 5 rare: 1 same + 5 rare
+10 Legendary: 10 传奇
+10 Mythic: 10 神话
+15 Legendary: 15 传奇
+2 Universal Shard: 2 通用碎片
+2 same + 10 rare: 2 same + 10 rare
+2 same + 5 rare: 2 same + 5 rare
+20 Legendary: 20 传奇
+3 Universal Shard: 3 通用碎片
+3 rare: 3 rare
+3 same + 10 rare: 3 same + 10 rare
+3 same + 15 rare: 3 same + 15 rare
+4 same + 15 rare: 4 same + 15 rare
+5 Legendary: 5 传奇
+5 same + 15 rare: 5 same + 15 rare
+50 + 10: 50 + 10
+85 + 10 Dragon Blood: 85 + 10 Dragon Blood
+Adventure Attack Percentage: 冒险攻击力百分比
+Adventure HP Percentage: 冒险生命值百分比
+Attack Increases When Assisting Allies: 协助盟友时攻击力提升
+Attack of All Soldiers: 全体士兵攻击力
+Attribute: 属性
+Awaken: 觉醒
+Awakening Process: 觉醒流程
+B1: B1
+B2: B2
+B3: B3
+Blacksmith: 铁匠铺
+Books: 技能书
+Books/hero: 每英雄所需书本
+Books/skill: 每技能所需书本
+Brilliance Level 1: 辉煌等级 1
+Brilliance Level 2: 辉煌等级 2
+Brilliance Level 3: 辉煌等级 3
+Building: 建筑
+Building HP: 建筑生命值
+Buildings: 建筑
+Castle: 城堡
+Castle (Older Server): 城堡（旧服务器）
+Castle (Server 1-107): 城堡（服务器 1-107）
+Castle (Server 108+): 城堡（服务器 108+）
+Castle 1-107: 城堡 1-107
+Castle 108+: 城堡 108+
+Castle older: 城堡（旧服务器）
+Common               &#9733;: 普通               &#9733;
+Construction Speed: 建造速度
+Daily Resource Plunder Limit: 每日资源掠夺上限
+Damage Increase (Against Adventure Boss): 伤害提升（对冒险首领）
+Damage Reduction (Against Adventure Boss): 减伤（对冒险首领）
+Defense: 防御
+Defense Break: 防御破坏
+Dragon Essence: 巨龙精华
+Enhance Rune: 强化符文
+Enhance Rune Mine: 强化符文 Mine
+Enhance Rune Mine Yield Boost: 强化符文矿产量提升
+Epic: 史诗
+Epic                        &#9733;: 史诗                        &#9733;
+Epic Relic: 史诗圣物
+Epic Troop Skin: 史诗部队外观
+Epic relic: 史诗圣物
+Epic skin: 史诗外观
+Exclusive: 专属装备
+Exclusive Gear: 专属装备
+Free Construction Time (sec): 免费建造时间（秒）
+Free Tech Speed-up (sec): 免费研究加速时间（秒）
+Gear: 装备
+Gear Level: 装备等级
+Gear Stars: 装备星级
+Gold ingot: 金砖
+Guild: 公会
+Guild , Training Ground: 公会、训练场
+Guild, Training Ground: 公会、训练场
+Guild, Warehouse: 公会、仓库
+Guild, Watchtower: 公会、瞭望塔
+HP Increases When Assisting Allies: 协助盟友时生命值提升
+HP of All Soldiers: 全体士兵生命值
+Help Accepted: 接受帮助次数
+Hero: 英雄
+Hero Attack: 英雄攻击力
+Hero Attack %: 英雄攻击力 %
+Hero Attack Rune: 英雄攻击符文
+Hero HP: 英雄生命值
+Hero HP %: 英雄生命值 %
+Hero HP Rune: 英雄生命符文
+Hero Level: 英雄等级
+Hero Lv.: 英雄等级
+Hero Statue: 英雄 Statue
+Hero level: 英雄等级
+Horde Barracks: 部落兵营
+Horde Hero Attack: 部落英雄攻击力
+Horde Hero HP: 部落英雄生命值
+Horde March Size: 部落行军人数
+Horde Soldier Capacity: 部落士兵容量
+Horde Soldier Training Cap: 部落士兵训练上限
+Horde Soldier Training Speed: 部落士兵训练速度
+Horde Statue: 部落雕像
+Hospital: 医院
+Hospital Capacity: 医院容量
+Increase Enhance Rune Storage Duration (sec): 延长强化符文保存时间（秒）
+Increase Magic Stone Mine Storage Duration (sec): 延长魔法石矿保存时间（秒）
+Increase Medal Monument Storage Duration (sec): 延长勋章纪念碑保存时间（秒）
+Increase Monastery Storage Duration (sec): 延长修道院保存时间（秒）
+Increase Pet Food Factory Storage Time (sec): 延长宠物口粮工厂保存时间（秒）
+Increase Ranch Storage Time (sec): 延长牧场保存时间（秒）
+Increase Ranch Yield: 提高牧场产量
+Increase Raw Ore Mine Storage Duration (sec): 延长原矿矿场保存时间（秒）
+Increase Ruby Storage Duration (sec): 延长红宝石保存时间（秒）
+Increase Sawmill Storage Time (sec): 延长锯木厂保存时间（秒）
+Increase Sawmill Yield: 提高锯木厂产量
+Increase Stone Mine Storage Duration (sec): 延长采石场保存时间（秒）
+Increase the Chance of 1 Additional Villager Visit per Day: 提高每日额外 1 名村民来访的几率
+Info coming soon: 信息即将推出
+LVL: LVL
+LVL 17/1: LVL 17/1
+LVL 17/2: LVL 17/2
+LVL 18/1: LVL 18/1
+LVL 18/2: LVL 18/2
+LVL 19/1: LVL 19/1
+LVL 19/2: LVL 19/2
+LVL 20/1: LVL 20/1
+LVL 20/2: LVL 20/2
+LVL 20/3: LVL 20/3
+LVL 21/1: LVL 21/1
+LVL 21/2: LVL 21/2
+LVL 21/3: LVL 21/3
+LVL 22/1: LVL 22/1
+LVL 22/2: LVL 22/2
+LVL 22/3: LVL 22/3
+LVL 23/1: LVL 23/1
+LVL 23/2: LVL 23/2
+LVL 23/3: LVL 23/3
+LVL 24/1: LVL 24/1
+LVL 24/2: LVL 24/2
+LVL 24/3: LVL 24/3
+LVL 25/1: LVL 25/1
+LVL 25/2: LVL 25/2
+LVL 25/3: LVL 25/3
+LVL 26/1: LVL 26/1
+LVL 26/2: LVL 26/2
+LVL 26/3: LVL 26/3
+LVL 26/4: LVL 26/4
+LVL 27/1: LVL 27/1
+LVL 27/2: LVL 27/2
+LVL 27/3: LVL 27/3
+LVL 27/4: LVL 27/4
+LVL 28/1: LVL 28/1
+LVL 28/2: LVL 28/2
+LVL 28/3: LVL 28/3
+LVL 28/4: LVL 28/4
+LVL 29/1: LVL 29/1
+LVL 29/2: LVL 29/2
+LVL 29/3: LVL 29/3
+LVL 29/4: LVL 29/4
+LVL 30/1: LVL 30/1
+LVL 30/2: LVL 30/2
+LVL 30/3: LVL 30/3
+LVL 30/4: LVL 30/4
+LVL 31/1: LVL 31/1
+LVL 31/2: LVL 31/2
+LVL 31/3: LVL 31/3
+LVL 31/4: LVL 31/4
+LVL 31/5: LVL 31/5
+LVL 32/1: LVL 32/1
+LVL 32/2: LVL 32/2
+LVL 32/3: LVL 32/3
+LVL 32/4: LVL 32/4
+LVL 32/5: LVL 32/5
+LVL 33/1: LVL 33/1
+LVL 33/2: LVL 33/2
+LVL 33/3: LVL 33/3
+LVL 33/4: LVL 33/4
+LVL 33/5: LVL 33/5
+LVL 34/1: LVL 34/1
+LVL 34/2: LVL 34/2
+LVL 34/3: LVL 34/3
+LVL 34/4: LVL 34/4
+LVL 34/5: LVL 34/5
+LVL 34/6: LVL 34/6
+LVL 35/1: LVL 35/1
+LVL 35/2: LVL 35/2
+LVL 35/3: LVL 35/3
+LVL 35/4: LVL 35/4
+LVL 35/5: LVL 35/5
+LVL 35/6: LVL 35/6
+LVL 36/1: LVL 36/1
+LVL 36/2: LVL 36/2
+LVL 36/3: LVL 36/3
+LVL 36/4: LVL 36/4
+LVL 36/5: LVL 36/5
+LVL 36/6: LVL 36/6
+LVL 37/1: LVL 37/1
+LVL 37/2: LVL 37/2
+LVL 37/3: LVL 37/3
+LVL 37/4: LVL 37/4
+LVL 37/5: LVL 37/5
+LVL 37/6: LVL 37/6
+LVL 37/7: LVL 37/7
+LVL 38/1: LVL 38/1
+LVL 38/2: LVL 38/2
+LVL 38/3: LVL 38/3
+LVL 38/4: LVL 38/4
+LVL 38/5: LVL 38/5
+LVL 38/6: LVL 38/6
+LVL 38/7: LVL 38/7
+LVL 39/1: LVL 39/1
+LVL 39/2: LVL 39/2
+LVL 39/3: LVL 39/3
+LVL 39/4: LVL 39/4
+LVL 39/5: LVL 39/5
+LVL 39/6: LVL 39/6
+LVL 39/7: LVL 39/7
+LVL 39/8: LVL 39/8
+LVL 40/1: LVL 40/1
+LVL 40/2: LVL 40/2
+LVL 40/3: LVL 40/3
+LVL 40/4: LVL 40/4
+LVL 40/5: LVL 40/5
+LVL 40/6: LVL 40/6
+LVL 40/7: LVL 40/7
+LVL 40/8: LVL 40/8
+LVL 41/1: LVL 41/1
+LVL 41/2: LVL 41/2
+LVL 41/3: LVL 41/3
+LVL 41/4: LVL 41/4
+LVL 41/5: LVL 41/5
+LVL 41/6: LVL 41/6
+LVL 41/7: LVL 41/7
+LVL 41/8: LVL 41/8
+LVL 41/9: LVL 41/9
+LVL 42/1: LVL 42/1
+LVL 42/2: LVL 42/2
+LVL 42/3: LVL 42/3
+LVL 42/4: LVL 42/4
+LVL 42/5: LVL 42/5
+LVL 42/6: LVL 42/6
+LVL 42/7: LVL 42/7
+LVL 42/8: LVL 42/8
+LVL 42/9: LVL 42/9
+LVL 43/1: LVL 43/1
+LVL 43/2: LVL 43/2
+LVL 43/3: LVL 43/3
+LVL 43/4: LVL 43/4
+LVL 43/5: LVL 43/5
+LVL 43/6: LVL 43/6
+LVL 43/7: LVL 43/7
+LVL 43/8: LVL 43/8
+LVL 43/9: LVL 43/9
+LVL 44/1: LVL 44/1
+LVL 44/10: LVL 44/10
+LVL 44/2: LVL 44/2
+LVL 44/3: LVL 44/3
+LVL 44/4: LVL 44/4
+LVL 44/5: LVL 44/5
+LVL 44/6: LVL 44/6
+LVL 44/7: LVL 44/7
+LVL 44/8: LVL 44/8
+LVL 44/9: LVL 44/9
+League Barracks: 联盟兵营
+League Hero Attack: 联盟英雄攻击力
+League Hero HP: 联盟英雄生命值
+League March Size: 联盟行军人数
+League Soldier Capacity: 联盟士兵容量
+League Soldier Training Cap: 联盟士兵训练上限
+League Soldier Training Speed: 联盟士兵训练速度
+League Statue: 联盟雕像
+League Statue, Warehouse: 联盟雕像、仓库
+Leg Hero: 传奇英雄
+Leg relic: 传奇圣物
+Legend skin: 传奇外观
+Legendary: 传奇
+Legendary Awakening: 传奇觉醒
+Legendary Hero: 传奇英雄
+Legendary Heroes: 传奇英雄
+Legendary Relic: 传奇圣物
+Legendary Troop Skin: 传奇部队外观
+Level: 等级
+Level 21: 等级 21
+Level 22: 等级 22
+Level 23: 等级 23
+Level 24: 等级 24
+Level 25: 等级 25
+Level 26: 等级 26
+Level 27: 等级 27
+Level 28: 等级 28
+Level 29: 等级 29
+Level 30: 等级 30
+Level 31: 等级 31
+Level 32: 等级 32
+Level 33: 等级 33
+Level 34: 等级 34
+Level 35: 等级 35
+Level 36: 等级 36
+Level 37: 等级 37
+Level 38: 等级 38
+Level 39: 等级 39
+Level 40: 等级 40
+Level 41: 等级 41
+Level 42: 等级 42
+Level 43: 等级 43
+Level 44: 等级 44
+Level 45: 等级 45
+Level 46: 等级 46
+Level 47: 等级 47
+Level 48: 等级 48
+Level 49: 等级 49
+Level 50: 等级 50
+Level 51: 等级 51
+Level 52: 等级 52
+Level 53: 等级 53
+Level 54: 等级 54
+Level 55: 等级 55
+Lord Gear: 领主装备
+Lv 10: Lv 10
+Lv. 1: Lv. 1
+Lv. 10: Lv. 10
+Lv. 11: Lv. 11
+Lv. 12: Lv. 12
+Lv. 13: Lv. 13
+Lv. 14: Lv. 14
+Lv. 15: Lv. 15
+Lv. 16: Lv. 16
+Lv. 17: Lv. 17
+Lv. 18: Lv. 18
+Lv. 19: Lv. 19
+Lv. 2: Lv. 2
+Lv. 20: Lv. 20
+Lv. 21: Lv. 21
+Lv. 22: Lv. 22
+Lv. 23: Lv. 23
+Lv. 24: Lv. 24
+Lv. 25: Lv. 25
+Lv. 26: Lv. 26
+Lv. 27: Lv. 27
+Lv. 28: Lv. 28
+Lv. 29: Lv. 29
+Lv. 3: Lv. 3
+Lv. 30: Lv. 30
+Lv. 31: Lv. 31
+Lv. 32: Lv. 32
+Lv. 33: Lv. 33
+Lv. 34: Lv. 34
+Lv. 35: Lv. 35
+Lv. 36: Lv. 36
+Lv. 37: Lv. 37
+Lv. 38: Lv. 38
+Lv. 39: Lv. 39
+Lv. 4: Lv. 4
+Lv. 40: Lv. 40
+Lv. 41: Lv. 41
+Lv. 42: Lv. 42
+Lv. 43: Lv. 43
+Lv. 44: Lv. 44
+Lv. 45: Lv. 45
+Lv. 5: Lv. 5
+Lv. 50 Horde Barracks, Hospital: 等级50 部落兵营、医院
+Lv. 6: Lv. 6
+Lv. 7: Lv. 7
+Lv. 8: Lv. 8
+Lv. 9: Lv. 9
+Lv.40 Research Cottage, Hospital: 等级40 研究小屋、医院
+Lv.45 League Barracks, Guild: 等级45 联盟兵营、公会
+Lv.45 League Barracks, Military Hall: 等级45 联盟兵营、军事厅
+Lv.50 Horde Barracks, Guild: 等级50 部落兵营、公会
+Magic Stone Mine: 魔法石矿
+Magic Stone Mine Yield Boost: 魔法石矿产量提升
+Magic Thread: 魔法丝线
+March Size: 行军人数
+Meat: 肉
+Medal Hall: 勋章厅
+Medal Monument: 勋章纪念碑
+Medal Monument Yield Boost: 勋章纪念碑产量提升
+Medals: 勋章
+Monastery: 修道院
+Monastery Yield Boost: 修道院产量提升
+Mythic: 神话
+Mythic Hero: 神话英雄
+Mythic Heroes: 神话英雄
+Nature Barracks: 自然兵营
+Nature Hero Attack: 自然英雄攻击力
+Nature Hero HP: 自然英雄生命值
+Nature March Size: 自然行军人数
+Nature Soldier Capacity: 自然士兵容量
+Nature Soldier Training Cap: 自然士兵训练上限
+Nature Soldier Training Speed: 自然士兵训练速度
+Nature Statue: 自然雕像
+New Server 108+: 新服务器 108+
+Older Server: 旧服务器
+Orichalcum: 秘银
+Pet: 宠物
+Pet Food: 宠物口粮
+Pet Food Factory: 宠物口粮 Factory
+Pet Food Factory Yield Boost: 宠物口粮工厂产量提升
+Pet essence: 宠物精华
+Pet needed: 所需宠物
+Points: 点数
+Promotion: 晋升
+Promotion Stone: 晋升石
+PvP Marching Speed Bonus: PvP 行军速度加成
+Queue: 队列
+Queue Attack Rune: 队列攻击符文
+Ranch: 牧场
+Rare                      &#9733;: 稀有                      &#9733;
+Rare Relic: 稀有圣物
+Rare Troop Skin: 稀有部队外观
+Rare relic: 稀有圣物
+Rare skin: 稀有外观
+Raw Ore Mine: 原矿矿场
+Raw Ore Mine Yield Boost: 原矿矿场产量提升
+Reduce Gear Forge Time: 缩短装备锻造时间
+Reduce Gear Forge Time (sec): 缩短装备锻造时间（秒）
+Refined metal: 精炼金属
+Relic: 圣物
+Relic HP: 圣物生命值
+Relic Mastery Rune: 圣物精通符文
+Research Cottage: 研究小屋
+Research Cottage, Hospital: 研究小屋、医院
+Research Cottage, Warehouse: 研究小屋、仓库
+Research Cottage, Watchtower: 研究小屋、瞭望塔
+Resource Yield Boost (Timber, Stone, Ruby): 资源产量提升（木材、石头、红宝石）
+Ruby: 红宝石
+Ruby Mine: 红宝石 Mine
+Ruby Yield Increase: 红宝石产量提升
+Rune: 符文
+Sawmill: 锯木厂
+Scouting Marching Speed Boost: 侦察行军速度提升
+Server 1-107: 服务器 1-107
+'Server Choice:': 服务器选择：
+Shard for single up: 单次升级所需碎片
+Shards: 碎片
+Shards Full Star: 满星所需碎片
+Shards/upgrade: 每次升级碎片数
+Skill Books: 技能书
+Skill Level: 技能等级
+Soldier Attack: 士兵攻击力
+Soldier Attack Rune: 士兵攻击符文
+Soldier Capacity (Faction): 士兵容量（阵营）
+Soldier HP: 士兵生命值
+Soldier HP Rune: 士兵生命符文
+Soldier Training Speed: 士兵训练速度
+Soul Stones: 魂石
+Star: 星级
+Star Level: 星级
+Star level: 星级
+Step: 阶段
+Stone Mine: 采石场
+Stone Mine Yield Boost: 采石场产量提升
+Stone Storage Quantity: 石头保存上限
+Stone and Timber: 石头与木材
+T1                          &#9733;: T1                          &#9733;
+T2                          &#9733;: T2                          &#9733;
+T3                          &#9733;: T3                          &#9733;
+T4                          &#9733;: T4                          &#9733;
+TOTAL: 总计
+Tavern: 酒馆
+Tech Research Rate: 科技研究速度
+Tier: 阶段
+Timber Storage Quantity: 木材保存上限
+Time Between Free Hero Recruitments Reduced (min): 免费招募英雄间隔缩短（分钟）
+Total: 总计
+Total shards: 碎片总数
+Total till this level: 累计至此等级
+Training Cap: 训练上限
+Training Ground: 训练场
+Training Ground, League Statue: 训练场、联盟雕像
+Troop Skin: 部队外观
+Troop Skin Center: 部队外观 Center
+VIP: VIP
+VIP 1: VIP 1
+VIP 10: VIP 10
+VIP 11: VIP 11
+VIP 12: VIP 12
+VIP 13: VIP 13
+VIP 14: VIP 14
+VIP 15: VIP 15
+VIP 16: VIP 16
+VIP 17: VIP 17
+VIP 18: VIP 18
+VIP 2: VIP 2
+VIP 3: VIP 3
+VIP 4: VIP 4
+VIP 5: VIP 5
+VIP 6: VIP 6
+VIP 7: VIP 7
+VIP 8: VIP 8
+VIP 9: VIP 9
+Villager: 村民
+Villagers: 村民
+Warehouse: 仓库
+Warehouse, League Statue: 仓库、联盟雕像
+Watchtower: 瞭望塔
+Watchtower, Guild: 瞭望塔、公会
+Wounded Soldier Healing Rate: 伤兵治疗速度
+"ð\x9F\x8F": "ð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+? "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"
+: "ð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F\Nð\x9F\x8F"

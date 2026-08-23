@@ -138,6 +138,92 @@ def jsonld_breadcrumbs(lang: str, slug: str, t: dict, canonical: str) -> str | N
     )
 
 
+# ---------------------------------------------------------------------------
+# data-driven page bodies
+# ---------------------------------------------------------------------------
+
+# Utility classes replacing the ten inline style strings that used to be
+# repeated on all 3,883 cells (55% of the old page's bytes).
+CELL_DEFAULT_CLASS = {
+    "thead-th": "th-top fb tc vb",
+    "tbody-th": "th-left fb vb",
+    "tbody-td": "tc vb",
+}
+
+_TABLE_DATA: dict | None = None
+_TERMS: dict[str, dict] = {}
+
+
+def table_data() -> list:
+    global _TABLE_DATA
+    if _TABLE_DATA is None:
+        path = os.path.join(SRC, "data", "tips.yml")
+        _TABLE_DATA = load_yaml(path) if os.path.exists(path) else []
+    return _TABLE_DATA
+
+
+def terms_for(lang: str) -> dict:
+    if lang not in _TERMS:
+        path = os.path.join(SRC, "i18n", "terms", f"{lang}.yml")
+        _TERMS[lang] = (load_yaml(path) or {}) if os.path.exists(path) else {}
+    return _TERMS[lang]
+
+
+def normalise_cell(cell, part: str) -> dict:
+    """Turn a stored cell into the tag, attributes and text the template needs."""
+    if isinstance(cell, str):
+        text, extra = cell, {}
+    else:
+        text, extra = cell.get("t", ""), cell
+
+    is_header = part == "thead" or bool(extra.get("th"))
+    tag = "th" if is_header else "td"
+    key = f"{part}-{tag}"
+    cls = extra.get("cls", CELL_DEFAULT_CLASS.get(key, ""))
+
+    attrs = ""
+    # A class token of the form "style:x:y" is an inline declaration we could
+    # not express as a utility class; put it back as a style attribute.
+    tokens = [c for c in cls.split() if not c.startswith("style:")]
+    inline = [c[len("style:"):] for c in cls.split() if c.startswith("style:")]
+    if tokens:
+        attrs += f' class="{" ".join(tokens)}"'
+    if inline:
+        attrs += f' style="{";".join(inline)}"'
+    if extra.get("c"):
+        attrs += f' colspan="{extra["c"]}"'
+    if extra.get("r"):
+        attrs += f' rowspan="{extra["r"]}"'
+    return {"tag": tag, "attrs": attrs, "html": text}
+
+
+def render_tables_body(lang: str, t: dict) -> str:
+    """Render the Cost Tables page body for one language."""
+    glossary = terms_for(lang)
+
+    def term(text: str) -> str:
+        return glossary.get(text, text)
+
+    sections = []
+    for section in table_data():
+        s = dict(section)
+        s["tables"] = [
+            {
+                **table,
+                "thead": [
+                    [normalise_cell(c, "thead") for c in row] for row in table["thead"]
+                ],
+                "tbody": [
+                    [normalise_cell(c, "tbody") for c in row] for row in table["tbody"]
+                ],
+            }
+            for table in section["tables"]
+        ]
+        sections.append(s)
+
+    return env.get_template("tips.html.j2").render(sections=sections, t=t, term=term)
+
+
 def faction_icon_pairs(lang: str) -> list[tuple[str, str]]:
     """(display name, image) for every spelling this language uses."""
     images = FACTIONS["images"]
@@ -183,11 +269,14 @@ def render_page(lang: str, slug: str, entry: dict) -> str:
         LANGS[l]["locale"] for l in SITE["hreflang_order"] if l != lang
     ]
 
-    content_path = os.path.join(SRC, "content", lang, f"{slug}.html")
-    if not os.path.exists(content_path):
-        content_path = os.path.join(SRC, "content", DEFAULT, f"{slug}.html")
-    with open(content_path, encoding="utf-8") as fh:
-        content = fh.read().rstrip("\n")
+    if entry.get("body_from") == "tables":
+        content = render_tables_body(lang, t).rstrip("\n")
+    else:
+        content_path = os.path.join(SRC, "content", lang, f"{slug}.html")
+        if not os.path.exists(content_path):
+            content_path = os.path.join(SRC, "content", DEFAULT, f"{slug}.html")
+        with open(content_path, encoding="utf-8") as fh:
+            content = fh.read().rstrip("\n")
 
     # Templates run with StrictUndefined so a typo fails the build rather than
     # silently rendering nothing; fill in the optional flags explicitly.

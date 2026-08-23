@@ -53,6 +53,24 @@ def read(path: str) -> str:
         return fh.read()
 
 
+def looks_like_declarations(selector: str) -> bool:
+    """
+    True when what the regex captured as a selector is really a declaration list.
+
+    Some of the hand-written sheets contain a rule accidentally nested inside
+    another one, e.g. Korean's beginners page had
+
+        .th-beginner .kicker { ...declarations...
+          .th-beginner .content { min-width: 0; }
+        }
+
+    which broke the outer rule. Naive brace matching sees the inner rule's
+    "selector" as the outer rule's declarations, so guard against it rather
+    than copying the mistake into the shared stylesheet.
+    """
+    return ";" in selector or re.search(r"[\w-]+\s*:\s*[^;{]+;", selector) is not None
+
+
 def declarations(css: str) -> "OrderedDict[tuple, str]":
     """Map (normalised-selector, property) -> value, last declaration winning."""
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
@@ -61,6 +79,8 @@ def declarations(css: str) -> "OrderedDict[tuple, str]":
         raw = re.sub(r"\s+", " ", m.group(1)).strip()
         if raw.startswith("@"):
             continue  # at-rules (media queries) are compared as whole blocks
+        if looks_like_declarations(raw):
+            continue
         key = tuple(sorted(s.strip() for s in raw.split(",") if s.strip()))
         for decl in m.group(2).split(";"):
             if ":" not in decl:

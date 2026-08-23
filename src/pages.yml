@@ -294,6 +294,7 @@ tips:
   itemscope_html: false
   table_ui: true
   style: tips
+  body_from: tables
 villagers:
   kind: page
   main_attrs: null

@@ -1,0 +1,68 @@
+{#-
+  The Cost Tables page body, generated from src/data/tips.yml.
+
+  Cell text goes through `term()`, which looks the English wording up in
+  src/i18n/terms/<lang>.yml and falls back to English when a translation has
+  not been written yet - so a new table shows up in every language immediately
+  and can be translated afterwards, instead of the page silently missing whole
+  sections in some languages the way it used to.
+-#}
+<h1 style="display:none">{{ t.h1 }}</h1>
+<div class="thpage">
+  <p class="th-intro">{{ t.intro }}</p>
+  <nav class="th-index" aria-label="{{ t.index_label }}"><ul>
+{%- for section in sections %}<li><a href="#{{ section.id }}">{{ term(section.title) }}</a></li>{% endfor %}
+  </ul></nav>
+
+{% for section in sections %}
+  <section id="{{ section.id }}" class="th-section">
+    <h2>{{ term(section.title) }}</h2>
+{%- if section.get('switcher') %}
+    <div class="th-switcher">
+      <label for="{{ section.switcher.id }}">{{ term(section.switcher.label) }}</label>
+      <select id="{{ section.switcher.id }}">
+{%- for opt in section.switcher.options %}
+        <option value="{{ opt.value }}"{{ ' selected' if opt.get('selected') }}>{{ term(opt.label) }}</option>
+{%- endfor %}
+      </select>
+    </div>
+{%- endif %}
+{%- if section.get('tabs') %}
+    <div class="th-tabs" role="tablist">
+{%- for tab in section.tabs %}
+      <button class="th-tab{{ ' th-active' if tab.get('active') }}" data-target="{{ tab.target }}">{{ term(tab.label) }}</button>
+{%- endfor %}
+    </div>
+{%- endif %}
+    <div class="th-subtables">
+{%- for table in section.tables %}
+      <div id="{{ table.wrap }}" class="th-wrap{{ ' th-visible' if table.get('visible') }}">
+        <div class="th-tablecard">
+          <div class="th-tablehead">
+            <button class="th-collapse" aria-expanded="false" aria-controls="{{ table.id }}-body" title="{{ t.toggle }}">+</button>
+            <strong>{{ term(table.caption) }}</strong>
+          </div>
+          <div class="th-tablebody" id="{{ table.id }}-body" hidden>
+            <div class="th-scroll">
+              <table class="th-table" id="{{ table.id }}">
+                <thead>
+{%- for row in table.thead %}
+                  <tr>{% for c in row %}<{{ c.tag }}{{ c.attrs }}>{{ c.html }}</{{ c.tag }}>{% endfor %}</tr>
+{%- endfor %}
+                </thead>
+                <tbody>
+{%- for row in table.tbody %}
+                  <tr>{% for c in row %}<{{ c.tag }}{{ c.attrs }}>{{ c.html }}</{{ c.tag }}>{% endfor %}</tr>
+{%- endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+{%- endfor %}
+    </div>
+    <p class="th-toplink"><a href="#top">{{ t.back_to_top }}</a></p>
+  </section>
+{% endfor %}
+</div>

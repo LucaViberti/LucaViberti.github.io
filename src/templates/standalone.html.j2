@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ lang.html_lang }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
+  <title>{{ t.title }}</title>
+  <meta name="description" content="{{ t.description }}" />
+  <meta name="robots" content="{{ site.robots }}" />
+{%- if page.style %}
+
+  <link rel="stylesheet" href="/assets/css/{{ page.style }}.css" />
+{%- endif %}
+
+  <link rel="canonical" href="{{ canonical }}" />
+{%- for alt in alternates %}
+  <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.url }}" />
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ x_default }}" />
+
+  <meta property="og:title" content="{{ t.title }}" />
+  <meta property="og:description" content="{{ t.description }}" />
+  <meta property="og:url" content="{{ canonical }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.site_name }}" />
+  <meta property="og:image" content="{{ site.og_image }}" />
+  <meta property="og:image:alt" content="{{ site.og_image_alt }}" />
+  <meta property="og:locale" content="{{ lang.locale }}" />
+{%- for loc in alternate_locales %}
+  <meta property="og:locale:alternate" content="{{ loc }}" />
+{%- endfor %}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ t.title }}" />
+  <meta name="twitter:description" content="{{ t.description }}" />
+  <meta name="twitter:image" content="{{ site.og_image }}" />
+
+  <script type="application/ld+json" id="seo-jsonld">
+{{ jsonld_webpage }}
+  </script>
+</head>
+<body>
+{{ content }}
+</body>
+</html>

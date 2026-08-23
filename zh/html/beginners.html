@@ -9,243 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
   <title>TopHeroes Guide - 新手指南</title>
   <meta name="description" content="TopHeroes 新手指南：入门步骤、村庄与建筑、公会、资源获取、酒馆与碎片、阵营、活动、研究、体力与世界地图。" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
-  <!-- Stripe Buy Button (one-time include) -->
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <link rel="stylesheet" href="/assets/css/beginners.css" />
 
-  <style>
-/* ====== Base styles (from your template) ====== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-nav { width: 100%; margin-top: 10px; }
-nav ul {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
-}
-nav ul li { position: relative; }
-nav ul li a {
-  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
-  font-size: 0.85rem; transition: color 0.3s;
-}
-nav ul li a:hover { color: #FFFFFF; }
-nav ul li ul {
-  display: none; position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%); background: #1f1f21;
-  border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  padding: 10px 0; min-width: 200px; z-index: 1000;
-}
-nav ul li:hover ul { display: block; }
-nav ul li ul li { margin: 0; }
-nav ul li ul li a {
-  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
-}
-nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
-
-main { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
-section { margin-bottom: 40px; }
-
-footer {
-  background: #1f1f21; color: #888; padding: 20px; text-align: center; font-size: 0.8rem;
-}
-
-.donation-section {
-  text-align: center; margin-top: 40px; padding: 20px; background: #f5f5f7; border-top: 1px solid #e5e5e5;
-}
-.donation-button {
-  display: inline-block; background: #29abe0; color: #fff; padding: 12px 24px; border-radius: 30px;
-  text-decoration: none; font-weight: bold; transition: background 0.3s;
-}
-.donation-button:hover { background: #2389b5; }
-
-/* Enhanced navigation styling */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-header .tagline { color: #b0b6c7; }
-nav ul { gap: 20px; }
-nav ul li a {
-  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
-  padding: 12px 6px; border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
-nav ul li ul {
-  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
-}
-nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
-nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
-
-/* ====== Page-specific helpers ====== */
-.page-title { margin-top: 0; font-size: 2rem; }
-.toc {
-  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 28px;
-}
-.toc h3 { margin: 0 0 12px; font-size: 1.1rem; }
-.toc ol { margin: 0; padding-left: 18px; }
-.small { font-size: 0.95rem; color: #4b5563; }
-
-.note {
-  background: #fff8e1; border: 1px solid #ffe08a; border-radius: 8px; padding: 12px 14px; margin: 16px 0;
-}
-
-/* =========================
-   NEW: Main restyle (scoped)
-   ========================= */
-.th-beginner { --card:#fff; --ink:#111; --muted:#4b5563; --border:#e5e7eb; --brand:#29abe0; --head:#1e2541; }
-.th-beginner * { box-sizing: border-box; }
-.th-beginner { color: var(--ink); }
-.th-beginner .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 18px; }
-
-/* Grid: sticky TOC on desktop */
-.th-beginner .layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-@media (min-width: 1024px){
-  .th-beginner .layout {
-    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
-    align-items: start;
-  }
-  .th-beginner .toc {
-    position: sticky; top: 20px;
-    margin: 0; /* moved into grid, no extra gap */
-  }
-  .th-beginner .content {
-    min-width: 0;
-  }
-  
-}
-
-/* Cards for sections */
-.th-beginner .section-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.th-beginner .section-card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-}
-
-/* Headings */
-.th-beginner h2 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
-  line-height: 1.25;
-  color: var(--head);
-}
-.th-beginner h3 {
-  margin-top: 14px;
-  font-size: 1.05rem;
-  color: var(--head);
-}
-
-/* Nice bullets and spacing */
-.th-beginner p { margin: 10px 0 12px; }
-.th-beginner ul, .th-beginner ol { margin: 10px 0 14px 1.2em; }
-.th-beginner li { padding-left: 4px; margin: 6px 0; }
-.th-beginner li::marker { color: var(--brand); }
-
-/* Links */
-.th-beginner a { color: #0b78a3; text-decoration: none; border-bottom: 1px dashed rgba(11,120,163,.35); }
-.th-beginner a:hover { border-bottom-style: solid; }
-
-/* TOC polish */
-.th-beginner .toc { border-color: var(--border); }
-.th-beginner .toc h3 { color: var(--head); font-weight: 600; }
-.th-beginner .toc a { display: inline-block; padding: 2px 0; }
-
-/* Anchor-friendly offset for in-page headings */
-.th-beginner section { scroll-margin-top: 90px; }
-
-/* Emphasis blocks already present as .note – just refine */
-.th-beginner .note {
-  background: linear-gradient(0deg,#fffdf5,#fffdf5);
-  border-color: #ffe08a;
-  font-size: .95rem;
-}
-
-/* Optional table styles (future-proof if you add tables) */
-.th-beginner .table-wrap { overflow-x: auto; }
-.th-beginner table {
-  width: 100%; border-collapse: collapse; border: 1px solid var(--border);
-  background: #fff; border-radius: 10px; overflow: hidden;
-}
-.th-beginner thead th {
-  position: sticky; top: 0; background: #f8fafc; text-align: left;
-  padding: 10px; font-weight: 600; border-bottom: 1px solid var(--border);
-}
-.th-beginner tbody td { padding: 10px; border-bottom: 1px solid var(--border); }
-.th-beginner tbody tr:nth-child(even){ background: #fbfdff; }
-
-/* Subtle separators between cards on mobile */
-@media (max-width: 1023px){
-  .th-beginner .section-card + .section-card { margin-top: 8px; }
-}
-
-/* Small tag for section numbers (purely decorative) */
-.th-beginner .kicker {
-  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; color: #2a90b9; background: #e7f6fd; border: 1px solid #c9eafb;
-  padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;
-}
-
-/* Back-to-top helper */
-.th-beginner .toplink { display:inline-block; margin-top:8px; font-size:.9rem; }
-
-/* ====== Donation blocks (Stripe) ====== */
-.donation-block{
-  border:1px solid #e8eef5; background:#f9fbff;
-  padding:22px 16px; margin:24px 0; border-radius:12px;
-  text-align:center; box-shadow:0 8px 22px rgba(0,0,0,.05);
-}
-.donation-block p{ margin:0 0 10px; color:#334155; font-size:1rem; }
-.donation-card{
-  background:#ffffff; border:1px solid #e5e7eb; border-radius:12px;
-  padding:16px; margin:22px 0; text-align:center;
-  box-shadow:0 4px 14px rgba(0,0,0,.04);
-}
-.donation-card p{ margin:0 0 8px; color:#475569; font-size:.98rem; }
-  </style>
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://www.guidetopheroes.com/zh/html/beginners.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/beginners.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/beginners.html" />
@@ -255,6 +28,7 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/beginners.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/beginners.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/beginners.html" />
+
   <meta property="og:title" content="TopHeroes Guide - 新手指南" />
   <meta property="og:description" content="TopHeroes 新手指南：入门步骤、村庄与建筑、公会、资源获取、酒馆与碎片、阵营、活动、研究、体力与世界地图。" />
   <meta property="og:url" content="https://www.guidetopheroes.com/zh/html/beginners.html" />
@@ -267,14 +41,16 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="ko_KR" />
   <meta property="og:locale:alternate" content="vi_VN" />
-  <meta property="og:locale:alternate" content="ja_JP" />
   <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TopHeroes Guide - 新手指南" />
   <meta name="twitter:description" content="TopHeroes 新手指南：入门步骤、村庄与建筑、公会、资源获取、酒馆与碎片、阵营、活动、研究、体力与世界地图。" />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/beginners.html#webpage", "name": "TopHeroes 指南 - 新手指南", "url": "https://www.guidetopheroes.com/zh/html/beginners.html", "inLanguage": "zh", "description": "TopHeroes 新手指南：入门步骤、村庄与建筑、公会、资源获取、酒馆与碎片、阵营、活动、研究、体力与世界地图。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/beginners.html#webpage", "name": "TopHeroes Guide - 新手指南", "url": "https://www.guidetopheroes.com/zh/html/beginners.html", "inLanguage": "zh", "description": "TopHeroes 新手指南：入门步骤、村庄与建筑、公会、资源获取、酒馆与碎片、阵营、活动、研究、体力与世界地图。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
   <script type="application/ld+json" id="seo-breadcrumbs">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.guidetopheroes.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "新手指南", "item": "https://www.guidetopheroes.com/zh/html/beginners.html"}]}
@@ -285,261 +61,263 @@ nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
 <script src="/nav-loader.js" defer></script>
 
 <main class="th-beginner">
-  <!-- Back-to-top anchor -->
-  <div id="top" aria-hidden="true"></div>
+<!-- Back-to-top anchor -->
+<div id="top" aria-hidden="true"></div>
 
-  <h1 class="page-title">新手指南</h1>
-  <p class="lead small">从这里开始：内核规则、前期最佳优先事项、聪明课金，以及如何在不浪费资源的情况下快速成长。</p>
+<h1 class="page-title">新手指南</h1>
+<p class="lead small">从这里开始：内核规则、前期最佳优先事项、聪明课金，以及如何在不浪费资源的情况下快速成长。</p>
 
-  <div class="layout">
-    <!-- Sticky TOC on desktop -->
-    <aside class="toc" aria-label="本页内容">
-      <h3>目录</h3>
-      <ol>
-        <li><a href="#intro">介绍与入门步骤</a></li>
-        <li><a href="#village">村庄与建筑</a></li>
-        <li><a href="#guild">加入公会</a></li>
-        <li><a href="#farming">资源获取</a></li>
-        <li><a href="#tavern">酒馆与英雄碎片</a></li>
-        <li><a href="#factions">英雄与阵营</a></li>
-        <li><a href="#spending">花真钱课金</a></li>
-        <li><a href="#events">活动</a></li>
-        <li><a href="#research">研究</a></li>
-        <li><a href="#social">社交与世界聊天</a></li>
-        <li><a href="#villagers">村民</a></li>
-        <li><a href="#carriage">马车与掠夺</a></li>
-        <li><a href="#traits">公会特质</a></li>
-        <li><a href="#stamina">体力</a></li>
-        <li><a href="#worldmap">世界地图－敌人、资源、集结</a></li>
-        <li><a href="#conclusion">总结</a></li>
-      </ol>
-    </aside>
+<div class="layout">
+  <!-- Sticky TOC on desktop -->
+  <aside class="toc" aria-label="本页内容">
+    <h3>目录</h3>
+    <ol>
+      <li><a href="#intro">介绍与入门步骤</a></li>
+      <li><a href="#village">村庄与建筑</a></li>
+      <li><a href="#guild">加入公会</a></li>
+      <li><a href="#farming">资源获取</a></li>
+      <li><a href="#tavern">酒馆与英雄碎片</a></li>
+      <li><a href="#factions">英雄与阵营</a></li>
+      <li><a href="#spending">花真钱课金</a></li>
+      <li><a href="#events">活动</a></li>
+      <li><a href="#research">研究</a></li>
+      <li><a href="#social">社交与世界聊天</a></li>
+      <li><a href="#villagers">村民</a></li>
+      <li><a href="#carriage">马车与掠夺</a></li>
+      <li><a href="#traits">公会特质</a></li>
+      <li><a href="#stamina">体力</a></li>
+      <li><a href="#worldmap">世界地图－敌人、资源、集结</a></li>
+      <li><a href="#conclusion">总结</a></li>
+    </ol>
+  </aside>
 
-    <!-- Right column: content cards -->
-    <div class="content">
-      <!-- 1. Introduction -->
-      <section id="intro" class="section-card">
-        <div class="kicker">第 1 节</div>
-        <h2>1. 介绍与入门步骤</h2>
-        <p>当你下载 <em>Top Heroes</em> 并开始游戏时，第一个会看到的是 <strong>Adventure</strong>。前期流程会被引导且几乎是强制的。最重要的是避免浪费之后会非常关键的资源。请记住以下规则：</p>
-        <ul>
-          <li><strong>不要把肉浪费在稀有英雄</strong>（蓝色背景）上。他们不值得升级，之后也不会再用到。</li>
-          <li><strong>不要花钻石</strong>去加速前期流程。等待时间很短，而钻石太珍贵了。</li>
-        </ul>
-        <p>跟着 Adventure 的节奏推进、持续变强，并避免把资源浪费在英雄或不必要的加速上。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+  <!-- Right column: content cards -->
+  <div class="content">
+    <!-- 1. Introduction -->
+    <section id="intro" class="section-card">
+      <div class="kicker">第 1 节</div>
+      <h2>1. 介绍与入门步骤</h2>
+      <p>当你下载 <em>Top Heroes</em> 并开始游戏时，第一个会看到的是 <strong>Adventure</strong>。前期流程会被引导且几乎是强制的。最重要的是避免浪费之后会非常关键的资源。请记住以下规则：</p>
+      <ul>
+        <li><strong>不要把肉浪费在稀有英雄</strong>（蓝色背景）上。他们不值得升级，之后也不会再用到。</li>
+        <li><strong>不要花钻石</strong>去加速前期流程。等待时间很短，而钻石太珍贵了。</li>
+      </ul>
+      <p>跟着 Adventure 的节奏推进、持续变强，并避免把资源浪费在英雄或不必要的加速上。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 2. Village and Buildings -->
-      <section id="village" class="section-card">
-        <div class="kicker">第 2 节</div>
-        <h2>2. 村庄与建筑</h2>
-        <p>在 Adventure 推进一段时间后，你会到达你的 <strong>Village</strong>。你会看到许多建筑需要建造与升级。起初升级是强制的，但很快你就能自由选择优先级。你的首要目标必须是尽快把 <strong>Castle</strong> 升上去，理想是到 <strong>20–25</strong> 级。这会解锁关键建筑，并允许更高的英雄与士兵等级。</p>
-        <p>除了城堡之外，请优先顾好 <strong>Research Cottage</strong>、<strong>Hospital</strong>、<strong>Guild</strong> 与 <strong>Training Ground</strong>（这些都是城堡升级的需求）。别忘了 <strong>Barracks</strong>：每 5 级士兵就会提升 1 级，这会大幅强化你的队列。</p>
-        <p>更多细节请看 <a href="building.html">Buildings</a> 页面。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 2. Village and Buildings -->
+    <section id="village" class="section-card">
+      <div class="kicker">第 2 节</div>
+      <h2>2. 村庄与建筑</h2>
+      <p>在 Adventure 推进一段时间后，你会到达你的 <strong>Village</strong>。你会看到许多建筑需要建造与升级。起初升级是强制的，但很快你就能自由选择优先级。你的首要目标必须是尽快把 <strong>Castle</strong> 升上去，理想是到 <strong>20–25</strong> 级。这会解锁关键建筑，并允许更高的英雄与士兵等级。</p>
+      <p>除了城堡之外，请优先顾好 <strong>Research Cottage</strong>、<strong>Hospital</strong>、<strong>Guild</strong> 与 <strong>Training Ground</strong>（这些都是城堡升级的需求）。别忘了 <strong>Barracks</strong>：每 5 级士兵就会提升 1 级，这会大幅强化你的队列。</p>
+      <p>更多细节请看 <a href="building.html">Buildings</a> 页面。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 3. Joining a Guild -->
-      <section id="guild" class="section-card">
-        <div class="kicker">第 3 节</div>
-        <h2>3. 加入公会</h2>
-        <p>从城堡 7 级开始，你可以加入 <strong>Guild</strong>。这非常关键。目标是加入你服务器 <strong>前 3</strong> 的公会；如果做不到，至少也要前 10。强势公会会很活跃、会收活跃玩家、也会踢掉不活跃的人。别担心，每个人都是差不多同一时间开始，所以你完全可以很快追上。</p>
+    <!-- 3. Joining a Guild -->
+    <section id="guild" class="section-card">
+      <div class="kicker">第 3 节</div>
+      <h2>3. 加入公会</h2>
+      <p>从城堡 7 级开始，你可以加入 <strong>Guild</strong>。这非常关键。目标是加入你服务器 <strong>前 3</strong> 的公会；如果做不到，至少也要前 10。强势公会会很活跃、会收活跃玩家、也会踢掉不活跃的人。别担心，每个人都是差不多同一时间开始，所以你完全可以很快追上。</p>
 
-        <h3 id="guild-help">3.1 帮助与加速</h3>
-        <p><strong>Guild Help</strong> 是巨大优势。每次你开始建造或研究，都要按 <em>Help</em>：公会伙伴可以帮你缩短计时。用加速前，永远先求助并等到帮助完成。加速道具（建造、研究、通用等）可以使用，但<strong>绝对不要用钻石</strong>来加速。请在拿满所有可用帮助后再聪明地用加速。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+      <h3 id="guild-help">3.1 帮助与加速</h3>
+      <p><strong>Guild Help</strong> 是巨大优势。每次你开始建造或研究，都要按 <em>Help</em>：公会伙伴可以帮你缩短计时。用加速前，永远先求助并等到帮助完成。加速道具（建造、研究、通用等）可以使用，但<strong>绝对不要用钻石</strong>来加速。请在拿满所有可用帮助后再聪明地用加速。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 4. Farming Resources -->
-      <section id="farming" class="section-card">
-        <div class="kicker">第 4 节</div>
-        <h2>4. 资源获取</h2>
-        <p>主要资源是 <strong>Timber</strong>、<strong>Stone</strong> 和 <strong>Ruby</strong>。几乎所有事情都会用到。前期最好的方法是推进 Adventure。卡关时，先强化你的队伍再回来尝试。</p>
-        <p>公会活动同样必不可少：</p>
-        <ul>
-          <li><strong>Guild Secret Trial</strong>：小关卡提供资源。公会集体完成可获得额外奖励。</li>
-          <li><strong>Guild Expedition</strong>：每天一次。使用 <em>Blessing</em> 按钮获得增益并拿到 <strong>100 Guild Points</strong>。把 Guild Points 花在公会商店。</li>
-        </ul>
-        <p>其他来源包括 <strong>Expeditions</strong>、每 8 小时刷新任务的 <strong>Bounty Hall</strong>，以及会随时间解锁的 <strong>Stages</strong>。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 4. Farming Resources -->
+    <section id="farming" class="section-card">
+      <div class="kicker">第 4 节</div>
+      <h2>4. 资源获取</h2>
+      <p>主要资源是 <strong>Timber</strong>、<strong>Stone</strong> 和 <strong>Ruby</strong>。几乎所有事情都会用到。前期最好的方法是推进 Adventure。卡关时，先强化你的队伍再回来尝试。</p>
+      <p>公会活动同样必不可少：</p>
+      <ul>
+        <li><strong>Guild Secret Trial</strong>：小关卡提供资源。公会集体完成可获得额外奖励。</li>
+        <li><strong>Guild Expedition</strong>：每天一次。使用 <em>Blessing</em> 按钮获得增益并拿到 <strong>100 Guild Points</strong>。把 Guild Points 花在公会商店。</li>
+      </ul>
+      <p>其他来源包括 <strong>Expeditions</strong>、每 8 小时刷新任务的 <strong>Bounty Hall</strong>，以及会随时间解锁的 <strong>Stages</strong>。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 5. Tavern and Hero Shards -->
-      <section id="tavern" class="section-card">
-        <div class="kicker">第 5 节</div>
-        <h2>5. 酒馆与英雄碎片</h2>
-        <p><strong>Tavern Tokens</strong> 让你能在酒馆获得 <strong>Hero Shards</strong>。前期：随便用没问题。英雄在升星后会变强很多。<strong>不要在前期浪费传奇通用英雄碎片</strong>，留到之后再用。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 5. Tavern and Hero Shards -->
+    <section id="tavern" class="section-card">
+      <div class="kicker">第 5 节</div>
+      <h2>5. 酒馆与英雄碎片</h2>
+      <p><strong>Tavern Tokens</strong> 让你能在酒馆获得 <strong>Hero Shards</strong>。前期：随便用没问题。英雄在升星后会变强很多。<strong>不要在前期浪费传奇通用英雄碎片</strong>，留到之后再用。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 6. Heroes and Factions -->
-      <section id="factions" class="section-card">
-        <div class="kicker">第 6 节</div>
-        <h2>6. <a href="heroes.html">英雄与阵营</a></h2>
-        <p>英雄分属三个阵营：<strong>League</strong>、<strong>Horde</strong> 和 <strong>Nature</strong>。详情请看 <a href="heroes.html">Heroes</a> 页面。请集中打造<strong>一个主力队列</strong>，并以同一阵营的英雄为内核。这能获得阵营增益，而且在 Season 1 会变得更关键。不要试图把所有队列平均养，先把一队养得很强。</p>
-        <ul>
-          <li><strong>League</strong>：前期最容易成形，但中长期可能很花钱，尤其是 F2P。</li>
-          <li><strong>Horde</strong>：需要聪明玩法；不会立刻很强，但长期非常强，通常比 League 更省。</li>
-          <li><strong>Nature</strong>：前期最难养。早期 Nature 英雄偏弱且常被替换；要到很后期才会强。</li>
-        </ul>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 6. Heroes and Factions -->
+    <section id="factions" class="section-card">
+      <div class="kicker">第 6 节</div>
+      <h2>6. <a href="heroes.html">英雄与阵营</a></h2>
+      <p>英雄分属三个阵营：<strong>League</strong>、<strong>Horde</strong> 和 <strong>Nature</strong>。详情请看 <a href="heroes.html">Heroes</a> 页面。请集中打造<strong>一个主力队列</strong>，并以同一阵营的英雄为内核。这能获得阵营增益，而且在 Season 1 会变得更关键。不要试图把所有队列平均养，先把一队养得很强。</p>
+      <ul>
+        <li><strong>League</strong>：前期最容易成形，但中长期可能很花钱，尤其是 F2P。</li>
+        <li><strong>Horde</strong>：需要聪明玩法；不会立刻很强，但长期非常强，通常比 League 更省。</li>
+        <li><strong>Nature</strong>：前期最难养。早期 Nature 英雄偏弱且常被替换；要到很后期才会强。</li>
+      </ul>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- Donation block between sections -->
-      <section class="donation-block" aria-label="Support the project">
-        <p>如果这些技巧对你有帮助，请考虑捐款支持我们的项目。这能让指南保持免费并持续更新。</p>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-        </stripe-buy-button>
-      </section>
+    <!-- Donation block between sections -->
+    <section class="donation-block" aria-label="Support the project">
+      <p>如果这些技巧对你有帮助，请考虑捐款支持我们的项目。这能让指南保持免费并持续更新。</p>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+      </stripe-buy-button>
+    </section>
 
-      <!-- 7. Spending Real Money -->
-      <section id="spending" class="section-card">
-        <div class="kicker">第 7 节</div>
-        <h2>7. 花真钱课金</h2>
-        <p><em>Top Heroes</em> 可以纯 F2P、少量课金或重度课金。不论预算如何，都请一律在官方 <em>Top Heroes</em> 网站购买 <strong>Gold Blocks</strong>。在游戏内购买会少很多福利。从网站购买永远有 <strong>+5% Gold Blocks</strong> 以及里程碑奖励。然后再把 Gold Blocks 用在游戏内。</p>
+    <!-- 7. Spending Real Money -->
+    <section id="spending" class="section-card">
+      <div class="kicker">第 7 节</div>
+      <h2>7. 花真钱课金</h2>
+      <p><em>Top Heroes</em> 可以纯 F2P、少量课金或重度课金。不论预算如何，都请一律在官方 <em>Top Heroes</em> 网站购买 <strong>Gold Blocks</strong>。在游戏内购买会少很多福利。从网站购买永远有 <strong>+5% Gold Blocks</strong> 以及里程碑奖励。然后再把 Gold Blocks 用在游戏内。</p>
 
-        <h3 id="best-purchases">7.1 最值得买的项目</h3>
-        <ul>
-          <li><strong>Monthly Pass</strong>：额外队列（Privilege Queue）、Auto Hunt、广告奖励加倍、每日礼物。性价比最高。从官网买 Gold Blocks 还会在第一个里程碑给它 <strong>30% 折扣</strong>。</li>
-          <li><strong>移除广告（2$）</strong>：永久。让你立刻领取每日广告奖励。长期超值。</li>
-          <li><strong>建造队列</strong>：缺省 1；最多再加 3 个（2$、10$、20$）。永久且非常实用。</li>
-          <li><strong>研究队列</strong>：缺省 1，最多 2。花 10$ 解锁第二队列。永久。</li>
-          <li><strong>Adventure Begin（最划算）</strong>：便宜的限时礼包（3 种版本），几天内给很棒的奖励。</li>
-          <li><strong>礼包</strong>：每日英雄碎片包约 5$；只对大课比较有用。</li>
-          <li><strong>外观（Skins）</strong>：非常强（全域增益）。传奇 30$、神话 100$。大课优先。</li>
-          <li><strong>转盘与骰子活动</strong>：每周轮替。把票券存到有神话英雄时再用。</li>
-          <li><strong>Adventure Battle Pass</strong>：可选（15$、20$，或两个 30$）。加成很强，但非必需。</li>
-          <li><strong>基金</strong>（建造、冒险、战力、成长）：中课很划算。</li>
-          <li><strong>Daily Special</strong>：可选英雄碎片，并提供 <strong>Star Gems</strong>（极度珍贵）。之后甚至会出现神话英雄。</li>
-          <li><strong>每日/每周礼包</strong>：小课价值低；中高课可考虑。</li>
-          <li><strong>钻石商店</strong>：永远不要买（跟礼包同价但没有额外回馈）。</li>
-          <li><strong>VIP 点数</strong>：每次购买都会获得；解锁特权但不要为了升 VIP 而硬买。每日任务也会给 5 点 VIP。</li>
-        </ul>
-        <p>游戏会不断推出新礼包与新活动让你花钱，但上面这些基础项目对新手最重要。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+      <h3 id="best-purchases">7.1 最值得买的项目</h3>
+      <ul>
+        <li><strong>Monthly Pass</strong>：额外队列（Privilege Queue）、Auto Hunt、广告奖励加倍、每日礼物。性价比最高。从官网买 Gold Blocks 还会在第一个里程碑给它 <strong>30% 折扣</strong>。</li>
+        <li><strong>移除广告（2$）</strong>：永久。让你立刻领取每日广告奖励。长期超值。</li>
+        <li><strong>建造队列</strong>：缺省 1；最多再加 3 个（2$、10$、20$）。永久且非常实用。</li>
+        <li><strong>研究队列</strong>：缺省 1，最多 2。花 10$ 解锁第二队列。永久。</li>
+        <li><strong>Adventure Begin（最划算）</strong>：便宜的限时礼包（3 种版本），几天内给很棒的奖励。</li>
+        <li><strong>礼包</strong>：每日英雄碎片包约 5$；只对大课比较有用。</li>
+        <li><strong>外观（Skins）</strong>：非常强（全域增益）。传奇 30$、神话 100$。大课优先。</li>
+        <li><strong>转盘与骰子活动</strong>：每周轮替。把票券存到有神话英雄时再用。</li>
+        <li><strong>Adventure Battle Pass</strong>：可选（15$、20$，或两个 30$）。加成很强，但非必需。</li>
+        <li><strong>基金</strong>（建造、冒险、战力、成长）：中课很划算。</li>
+        <li><strong>Daily Special</strong>：可选英雄碎片，并提供 <strong>Star Gems</strong>（极度珍贵）。之后甚至会出现神话英雄。</li>
+        <li><strong>每日/每周礼包</strong>：小课价值低；中高课可考虑。</li>
+        <li><strong>钻石商店</strong>：永远不要买（跟礼包同价但没有额外回馈）。</li>
+        <li><strong>VIP 点数</strong>：每次购买都会获得；解锁特权但不要为了升 VIP 而硬买。每日任务也会给 5 点 VIP。</li>
+      </ul>
+      <p>游戏会不断推出新礼包与新活动让你花钱，但上面这些基础项目对新手最重要。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 8. Events -->
-      <section id="events" class="section-card">
-        <div class="kicker">第 8 节</div>
-        <h2>8. <a href="events.html">活动</a></h2>
-        <p><em>Top Heroes</em> 有常驻与一次性活动。前期最重要的是 <strong>Top Lord</strong> 活动。只要正常游玩并提升你的 <strong>Influence</strong>，就能拿到很棒的奖励，包括 <strong>Griffon Castle</strong> 外观。城堡外观很稀有，尤其对 F2P 而言。</p>
-        <p>提升 Influence 的方法是把闲置士兵分配给未使用的英雄，并升级 <strong>Barracks</strong> 来提升士兵等级。其他建筑如 <strong>Warehouse</strong>、<strong>Tavern</strong> 与 <strong>Watchtower</strong> 也能提供快速的 Influence 提升。</p>
-        <ul>
-          <li><strong>World Boss</strong>：每日，攻击 5 次。不消耗体力、没有损失。给固定奖励加上少量排行奖励。做完 5 次就好。</li>
-          <li><strong>Ruin Hunt</strong>：世界地图上的每日宝箱任务。每天都要做完。前期不要用钻石刷新。帮助公会成员（优先紫色与金色）。你也可以掠夺他人的 Ruin Hunt，优先 <strong>传奇（金色）等级 4</strong> 宝箱。</li>
-          <li><strong>新手专属活动</strong>：<em>Beginner Goals</em>、<em>Seven Day</em>、<em>Power Rush</em>。只在前几天出现，务必及时完成。</li>
-        </ul>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 8. Events -->
+    <section id="events" class="section-card">
+      <div class="kicker">第 8 节</div>
+      <h2>8. <a href="events.html">活动</a></h2>
+      <p><em>Top Heroes</em> 有常驻与一次性活动。前期最重要的是 <strong>Top Lord</strong> 活动。只要正常游玩并提升你的 <strong>Influence</strong>，就能拿到很棒的奖励，包括 <strong>Griffon Castle</strong> 外观。城堡外观很稀有，尤其对 F2P 而言。</p>
+      <p>提升 Influence 的方法是把闲置士兵分配给未使用的英雄，并升级 <strong>Barracks</strong> 来提升士兵等级。其他建筑如 <strong>Warehouse</strong>、<strong>Tavern</strong> 与 <strong>Watchtower</strong> 也能提供快速的 Influence 提升。</p>
+      <ul>
+        <li><strong>World Boss</strong>：每日，攻击 5 次。不消耗体力、没有损失。给固定奖励加上少量排行奖励。做完 5 次就好。</li>
+        <li><strong>Ruin Hunt</strong>：世界地图上的每日宝箱任务。每天都要做完。前期不要用钻石刷新。帮助公会成员（优先紫色与金色）。你也可以掠夺他人的 Ruin Hunt，优先 <strong>传奇（金色）等级 4</strong> 宝箱。</li>
+        <li><strong>新手专属活动</strong>：<em>Beginner Goals</em>、<em>Seven Day</em>、<em>Power Rush</em>。只在前几天出现，务必及时完成。</li>
+      </ul>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 9. Research -->
-      <section id="research" class="section-card">
-        <div class="kicker">第 9 节</div>
-        <h2>9. 研究</h2>
-        <p>研究在 <strong>Research Cottage</strong> 进行。前期请把重点全部放在 <strong>Combat Expertise</strong>。把它完整做完，才能解锁其他研究树。详情请看 <a href="research.html">Research</a> 页面。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 9. Research -->
+    <section id="research" class="section-card">
+      <div class="kicker">第 9 节</div>
+      <h2>9. 研究</h2>
+      <p>研究在 <strong>Research Cottage</strong> 进行。前期请把重点全部放在 <strong>Combat Expertise</strong>。把它完整做完，才能解锁其他研究树。详情请看 <a href="research.html">Research</a> 页面。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 10. Social -->
-      <section id="social" class="section-card">
-        <div class="kicker">第 10 节</div>
-        <h2>10. 社交与世界聊天</h2>
-        <p>城堡 7 级会解锁 <strong>World Chat</strong>。前期会很吵，但几天内管理员通常会把它整理干净，之后会成为不错的沟通管道。<strong>邀请码</strong>会给一些小奖励（一些碎片、装备、钻石），但不是决定性。你有朋友可以邀请就用，没有就无视。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 10. Social -->
+    <section id="social" class="section-card">
+      <div class="kicker">第 10 节</div>
+      <h2>10. 社交与世界聊天</h2>
+      <p>城堡 7 级会解锁 <strong>World Chat</strong>。前期会很吵，但几天内管理员通常会把它整理干净，之后会成为不错的沟通管道。<strong>邀请码</strong>会给一些小奖励（一些碎片、装备、钻石），但不是决定性。你有朋友可以邀请就用，没有就无视。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 11. Villagers -->
-      <section id="villagers" class="section-card">
-        <div class="kicker">第 11 节</div>
-        <h2>11. 村民</h2>
-        <p>每天都能在你的村庄拯救 <strong>Villagers</strong>（在 Adventure 也可能出现）。完成第一个每日任务会给一张票，可立刻刷新一名村民。拯救后，去 <strong>Talent Hall</strong> 分配村民来强化建筑。前期用 <em>Quick Dispatch</em> 没问题；后期再优化分配以获得更好的加成。请看 <a href="villagers.html">Villagers</a> 页面。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 11. Villagers -->
+    <section id="villagers" class="section-card">
+      <div class="kicker">第 11 节</div>
+      <h2>11. 村民</h2>
+      <p>每天都能在你的村庄拯救 <strong>Villagers</strong>（在 Adventure 也可能出现）。完成第一个每日任务会给一张票，可立刻刷新一名村民。拯救后，去 <strong>Talent Hall</strong> 分配村民来强化建筑。前期用 <em>Quick Dispatch</em> 没问题；后期再优化分配以获得更好的加成。请看 <a href="villagers.html">Villagers</a> 页面。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- 12. Carriage & Plunder -->
-      <section id="carriage" class="section-card">
-        <div class="kicker">第 12 节</div>
-        <h2>12. 马车与掠夺</h2>
-        <p>你每天可以派出 <strong>4 辆马车</strong>。稀有度：普通、非凡、稀有、传奇、神话。务必使用免费刷新去找好奖励，理想是 <strong>英雄碎片</strong>。刷新 5 次后必定出 <strong>传奇</strong>，而城堡 15 级后还有 <strong>5% 几率</strong>出 <strong>神话</strong>。神话与传奇马车不会降稀有度。目标是最大化碎片，尤其是 <strong>传奇通用碎片</strong>。</p>
-        <p><strong>神话马车</strong>可以分享。被分享的马车对所有人都给完整奖励，并提供额外保护。有些服务器会订规则不打满员神话马车（5/5）。如果你服务器没有，就去提议一下，这能保障顶级奖励的安全。</p>
-        <p><strong>掠夺</strong>：你每天可以攻击 <strong>4 辆马车</strong>。挑奖励最好的目标（通常是传奇通用碎片）。攻击失败不会消耗次数。马车最多被攻击两次（<em>神话可被攻击三次</em>）。掠夺前先看 <em>Details</em> 确认是否满员；如果服务器规则禁止攻击满员神话，就别打。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
+    <!-- 12. Carriage & Plunder -->
+    <section id="carriage" class="section-card">
+      <div class="kicker">第 12 节</div>
+      <h2>12. 马车与掠夺</h2>
+      <p>你每天可以派出 <strong>4 辆马车</strong>。稀有度：普通、非凡、稀有、传奇、神话。务必使用免费刷新去找好奖励，理想是 <strong>英雄碎片</strong>。刷新 5 次后必定出 <strong>传奇</strong>，而城堡 15 级后还有 <strong>5% 几率</strong>出 <strong>神话</strong>。神话与传奇马车不会降稀有度。目标是最大化碎片，尤其是 <strong>传奇通用碎片</strong>。</p>
+      <p><strong>神话马车</strong>可以分享。被分享的马车对所有人都给完整奖励，并提供额外保护。有些服务器会订规则不打满员神话马车（5/5）。如果你服务器没有，就去提议一下，这能保障顶级奖励的安全。</p>
+      <p><strong>掠夺</strong>：你每天可以攻击 <strong>4 辆马车</strong>。挑奖励最好的目标（通常是传奇通用碎片）。攻击失败不会消耗次数。马车最多被攻击两次（<em>神话可被攻击三次</em>）。掠夺前先看 <em>Details</em> 确认是否满员；如果服务器规则禁止攻击满员神话，就别打。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
 
-      <!-- Compact donation card later in the page -->
-      <div class="donation-card" aria-label="Support the project">
-        <p>觉得这段内容有用吗？捐款支持我们持续改进这些指南。</p>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-          publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-        </stripe-buy-button>
-      </div>
-
-      <!-- 13. Guild Traits -->
-      <section id="traits" class="section-card">
-        <div class="kicker">第 13 节</div>
-        <h2>13. 公会特质</h2>
-        <p>在 <strong>Guild</strong> 建筑里的 <strong>Traits</strong>，成员可以捐献来解锁增益。<strong>捐献每 30 分钟回复一次</strong>，最多可累积 <strong>20 次</strong>。千万别让它满到 20，不然回复就会停止。你也可以用每次 10 钻石来捐献，但前期不值得。每次捐献也会给 <strong>Guild Points</strong>，可在公会商店使用。最佳花费方式请看 <a href="shop.html">Store</a> 页面。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
-
-      <!-- 14. Stamina -->
-      <section id="stamina" class="section-card">
-        <div class="kicker">第 14 节</div>
-        <h2>14. 体力</h2>
-        <p><strong>体力</strong>用于世界地图的攻击，并会随时间回复。每天有两次可以领取 <strong>80 体力</strong>（至少间隔 4 小时）。<strong>Monthly Privilege</strong> 每天给 50 体力，有加成则给 100。体力道具有 <strong>25 与 50</strong> 的堆栈，前期可以放心使用。避免购买 <strong>5$ 换 150 体力</strong>，性价比很差。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
-
-      <!-- 15. World Map -->
-      <section id="worldmap" class="section-card">
-        <div class="kicker">第 15 节</div>
-        <h2>15. 世界地图－敌人、资源、集结</h2>
-        <p>在世界地图点放大镜，你会看到三个分类：</p>
-        <ul>
-          <li><strong>Enemy</strong>：打守卫（Timber、Stone、Ruby）到 30 级拿资源。前期很有用。另外每天一定要打 <strong>Legend Stash</strong> 3 次，免费拿奖励。</li>
-          <li><strong>Resources</strong>：首次占领会给固定奖励。留下部队就会进入 <strong>Gathering</strong>。能采就采 <strong>Ruby</strong>（尤其是睡觉过夜），Timber 和 Stone 相对不值钱。</li>
-          <li><strong>Rally</strong>：和公会伙伴一起打首领。很适合消耗体力拿奖励。加入集结不花费体力，而且每天前 <strong>50 次</strong>有奖励，能加多少就加多少。</li>
-        </ul>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
-
-      <!-- 16. Conclusion -->
-      <section id="conclusion" class="section-card">
-        <div class="kicker">第 16 节</div>
-        <h2>16. 总结</h2>
-        <p><em>Top Heroes</em> 会奖励细心规划与资源节省。最一开始你可以相对自由地使用大多数道具（除了 <strong>钻石</strong> 与 <strong>传奇通用碎片</strong>）。之后游戏节奏会改变：你要在 <em>Guild Race</em> 或 <em>Arms Guild Race</em> 这类活动中，有策略地投入资源以拿到最大分数。这种思维模式，也就是「存资源，只有在对的时间才花」，才是长期成功的关键。</p>
-        <a class="toplink" href="#top">↑ 返回顶部</a>
-      </section>
-
-      <!-- Optional donation block (kept from base; show/hide as you prefer)
-      <div class="donation-section section-card">
-        <p>如果这份指南帮到了你，考虑小额捐款支持网站持续成长。</p>
-        <a class="donation-button" href="donate.html">捐款</a>
-      </div>
-      -->
+    <!-- Compact donation card later in the page -->
+    <div class="donation-card" aria-label="Support the project">
+      <p>觉得这段内容有用吗？捐款支持我们持续改进这些指南。</p>
+      <stripe-buy-button
+        buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+        publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+      </stripe-buy-button>
     </div>
+
+    <!-- 13. Guild Traits -->
+    <section id="traits" class="section-card">
+      <div class="kicker">第 13 节</div>
+      <h2>13. 公会特质</h2>
+      <p>在 <strong>Guild</strong> 建筑里的 <strong>Traits</strong>，成员可以捐献来解锁增益。<strong>捐献每 30 分钟回复一次</strong>，最多可累积 <strong>20 次</strong>。千万别让它满到 20，不然回复就会停止。你也可以用每次 10 钻石来捐献，但前期不值得。每次捐献也会给 <strong>Guild Points</strong>，可在公会商店使用。最佳花费方式请看 <a href="shop.html">Store</a> 页面。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
+
+    <!-- 14. Stamina -->
+    <section id="stamina" class="section-card">
+      <div class="kicker">第 14 节</div>
+      <h2>14. 体力</h2>
+      <p><strong>体力</strong>用于世界地图的攻击，并会随时间回复。每天有两次可以领取 <strong>80 体力</strong>（至少间隔 4 小时）。<strong>Monthly Privilege</strong> 每天给 50 体力，有加成则给 100。体力道具有 <strong>25 与 50</strong> 的堆栈，前期可以放心使用。避免购买 <strong>5$ 换 150 体力</strong>，性价比很差。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
+
+    <!-- 15. World Map -->
+    <section id="worldmap" class="section-card">
+      <div class="kicker">第 15 节</div>
+      <h2>15. 世界地图－敌人、资源、集结</h2>
+      <p>在世界地图点放大镜，你会看到三个分类：</p>
+      <ul>
+        <li><strong>Enemy</strong>：打守卫（Timber、Stone、Ruby）到 30 级拿资源。前期很有用。另外每天一定要打 <strong>Legend Stash</strong> 3 次，免费拿奖励。</li>
+        <li><strong>Resources</strong>：首次占领会给固定奖励。留下部队就会进入 <strong>Gathering</strong>。能采就采 <strong>Ruby</strong>（尤其是睡觉过夜），Timber 和 Stone 相对不值钱。</li>
+        <li><strong>Rally</strong>：和公会伙伴一起打首领。很适合消耗体力拿奖励。加入集结不花费体力，而且每天前 <strong>50 次</strong>有奖励，能加多少就加多少。</li>
+      </ul>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
+
+    <!-- 16. Conclusion -->
+    <section id="conclusion" class="section-card">
+      <div class="kicker">第 16 节</div>
+      <h2>16. 总结</h2>
+      <p><em>Top Heroes</em> 会奖励细心规划与资源节省。最一开始你可以相对自由地使用大多数道具（除了 <strong>钻石</strong> 与 <strong>传奇通用碎片</strong>）。之后游戏节奏会改变：你要在 <em>Guild Race</em> 或 <em>Arms Guild Race</em> 这类活动中，有策略地投入资源以拿到最大分数。这种思维模式，也就是「存资源，只有在对的时间才花」，才是长期成功的关键。</p>
+      <a class="toplink" href="#top">↑ 返回顶部</a>
+    </section>
+
+    <!-- Optional donation block (kept from base; show/hide as you prefer)
+    <div class="donation-section section-card">
+      <p>如果这份指南帮到了你，考虑小额捐款支持网站持续成长。</p>
+      <a class="donation-button" href="donate.html">捐款</a>
+    </div>
+    -->
   </div>
+</div>
 </main>
 
 <div id="footer"></div>
 <script>
   fetch("/zh/html/footer.html")
     .then(res => res.text())
-    .then(html => { document.getElementById("footer").innerHTML = html; });
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
 </script>
-
 <script>
-/* Icons script from your base (adds small faction icons next to matching words) */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    "League": "/images/league-symbol.jpeg",
+    "联盟": "/images/league-symbol.jpeg",
+    "Nature": "/images/nature-symbol.jpeg",
+    "自然": "/images/nature-symbol.jpeg",
+    "Horde": "/images/horde-symbol.jpeg",
+    "部落": "/images/horde-symbol.jpeg"
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
@@ -549,16 +327,15 @@ document.addEventListener('DOMContentLoaded', function() {
     img.style.marginLeft = '0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
+  document.querySelectorAll('a').forEach(function (a) {
+    const t = a.textContent.trim();
+    if (icons[t]) addIcon(a, t);
   });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+    const t = h.textContent.trim();
+    if (icons[t]) addIcon(h, t);
   });
 });
 </script>
 </body>
 </html>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />

@@ -1,60 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
 
-  <meta charset="UTF-8">
   <title>Rush Events Points Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f7f7f7;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    p.description {
-      margin-bottom: 20px;
-      color: #555;
-    }
-    .row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .row label {
-      width: 150px;
-    }
-    .row input[type="number"] {
-      width: 80px;
-      padding: 5px;
-      margin-right: 10px;
-    }
-    .row span.points {
-      min-width: 100px;
-      display: inline-block;
-      font-weight: bold;
-    }
-    .formula {
-      color: #888;
-      font-size: 0.9em;
-      margin-left: 5px;
-    }
-    #total {
-      font-weight: bold;
-      font-size: 1.2em;
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px solid #ccc;
-    }
-  </style>
   <meta name="description" content="Rush Events Points Calculator - TopHeroes Guide." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="stylesheet" href="/assets/css/calculator.css" />
+
   <link rel="canonical" href="https://www.guidetopheroes.com/html/calculator.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/calculator.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/calculator.html" />
@@ -64,6 +25,7 @@
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/calculator.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/calculator.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/calculator.html" />
+
   <meta property="og:title" content="Rush Events Points Calculator" />
   <meta property="og:description" content="Rush Events Points Calculator - TopHeroes Guide." />
   <meta property="og:url" content="https://www.guidetopheroes.com/html/calculator.html" />
@@ -78,74 +40,76 @@
   <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:locale:alternate" content="zh_TW" />
   <meta property="og:locale:alternate" content="ja_JP" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rush Events Points Calculator" />
   <meta name="twitter:description" content="Rush Events Points Calculator - TopHeroes Guide." />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/calculator.html#webpage", "name": "Rush Events Points Calculator", "url": "https://www.guidetopheroes.com/html/calculator.html", "inLanguage": "en", "description": "Rush Events Points Calculator - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
 </head>
 <body>
-  <h1>Rush Events Points Calculator</h1>
-  <p class="description">Enter the quantities for each item to calculate total points.</p>
-  <div class="row">
-    <label for="books">Books:</label>
-    <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
-    <span class="points" id="booksPoints">0</span>
-    <span class="formula">points (x&nbsp;/&nbsp;10)</span>
-  </div>
-  <div class="row">
-    <label for="essence">Pet&nbsp;Essence:</label>
-    <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
-    <span class="points" id="essencePoints">0</span>
-    <span class="formula">points (y&nbsp;&times;&nbsp;15)</span>
-  </div>
-  <div class="row">
-    <label for="food">Pet&nbsp;Food:</label>
-    <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
-    <span class="points" id="foodPoints">0</span>
-    <span class="formula">points (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
-  </div>
-  <div class="row">
-    <label for="uncommon">Uncommon&nbsp;Pet:</label>
-    <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
-    <span class="points" id="uncommonPoints">0</span>
-    <span class="formula">points (q&nbsp;&times;&nbsp;150)</span>
-  </div>
-  <div class="row">
-    <label for="rare">Rare&nbsp;Pet:</label>
-    <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
-    <span class="points" id="rarePoints">0</span>
-    <span class="formula">points (r&nbsp;&times;&nbsp;900)</span>
-  </div>
-  <div id="total">Total: 0 points</div>
+<h1>Rush Events Points Calculator</h1>
+<p class="description">Enter the quantities for each item to calculate total points.</p>
+<div class="row">
+  <label for="books">Books:</label>
+  <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="booksPoints">0</span>
+  <span class="formula">points (x&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="essence">Pet&nbsp;Essence:</label>
+  <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="essencePoints">0</span>
+  <span class="formula">points (y&nbsp;&times;&nbsp;15)</span>
+</div>
+<div class="row">
+  <label for="food">Pet&nbsp;Food:</label>
+  <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="foodPoints">0</span>
+  <span class="formula">points (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="uncommon">Uncommon&nbsp;Pet:</label>
+  <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="uncommonPoints">0</span>
+  <span class="formula">points (q&nbsp;&times;&nbsp;150)</span>
+</div>
+<div class="row">
+  <label for="rare">Rare&nbsp;Pet:</label>
+  <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="rarePoints">0</span>
+  <span class="formula">points (r&nbsp;&times;&nbsp;900)</span>
+</div>
+<div id="total">Total: 0 points</div>
 
-  <script>
-    function updatePoints() {
-      const x = parseFloat(document.getElementById('books').value) || 0;
-      const y = parseFloat(document.getElementById('essence').value) || 0;
-      const z = parseFloat(document.getElementById('food').value) || 0;
-      const q = parseFloat(document.getElementById('uncommon').value) || 0;
-      const r = parseFloat(document.getElementById('rare').value) || 0;
+<script>
+  function updatePoints() {
+    const x = parseFloat(document.getElementById('books').value) || 0;
+    const y = parseFloat(document.getElementById('essence').value) || 0;
+    const z = parseFloat(document.getElementById('food').value) || 0;
+    const q = parseFloat(document.getElementById('uncommon').value) || 0;
+    const r = parseFloat(document.getElementById('rare').value) || 0;
 
-      const bookPoints = x / 10;
-      const essencePoints = y * 15;
-      const foodPoints = (z * 3) / 10;
-      const uncommonPoints = q * 150;
-      const rarePoints = r * 900;
+    const bookPoints = x / 10;
+    const essencePoints = y * 15;
+    const foodPoints = (z * 3) / 10;
+    const uncommonPoints = q * 150;
+    const rarePoints = r * 900;
 
-      document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
-      document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
-      document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
-      document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
-      document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
+    document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
+    document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
+    document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
+    document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
+    document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
 
-      const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
-      document.getElementById('total').textContent = 'Total: ' + total.toFixed(1) + ' points';
-    }
+    const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
+    document.getElementById('total').textContent = 'Total: ' + total.toFixed(1) + ' points';
+  }
 
-    updatePoints();
-  </script>
+  updatePoints();
+</script>
 </body>
 </html>

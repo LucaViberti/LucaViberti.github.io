@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="{{ lang.html_lang }}"{{ page.html_extra_attrs }}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
+  <title>{{ t.title }}</title>
+  <meta name="description" content="{{ t.description }}" />
+  <meta name="robots" content="{{ site.robots }}" />
+{%- if page.has_adsense %}
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}"
+     crossorigin="anonymous"></script>
+{%- endif %}
+{%- if page.style %}
+
+  <link rel="stylesheet" href="/assets/css/{{ page.style }}.css" />
+{%- endif %}
+
+  <link rel="canonical" href="{{ canonical }}" />
+{%- for alt in alternates %}
+  <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.url }}" />
+{%- endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ x_default }}" />
+
+  <meta property="og:title" content="{{ t.title }}" />
+  <meta property="og:description" content="{{ t.description }}" />
+  <meta property="og:url" content="{{ canonical }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.site_name }}" />
+  <meta property="og:image" content="{{ site.og_image }}" />
+  <meta property="og:image:alt" content="{{ site.og_image_alt }}" />
+  <meta property="og:locale" content="{{ lang.locale }}" />
+{%- for loc in alternate_locales %}
+  <meta property="og:locale:alternate" content="{{ loc }}" />
+{%- endfor %}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ t.title }}" />
+  <meta name="twitter:description" content="{{ t.description }}" />
+  <meta name="twitter:image" content="{{ site.og_image }}" />
+
+  <script type="application/ld+json" id="seo-jsonld">
+{{ jsonld_webpage }}
+  </script>
+{%- if jsonld_breadcrumbs %}
+  <script type="application/ld+json" id="seo-breadcrumbs">
+{{ jsonld_breadcrumbs }}
+  </script>
+{%- endif %}
+</head>
+<body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
+{% if page.stripe_donation %}
+<section class="stripe-donation" aria-label="{{ t.support_aria }}">
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <stripe-buy-button
+    buy-button-id="{{ site.stripe.buy_button_id }}"
+    publishable-key="{{ site.stripe.publishable_key }}">
+  </stripe-buy-button>
+</section>
+{% endif %}
+<main{{ page.main_attrs_str }}>
+{{ content }}
+</main>
+
+<div id="footer"></div>
+<script>
+  fetch("{{ footer_url }}")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
+{%- if page.faction_icons %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const icons = {
+{%- for name, image in faction_icons %}
+    {{ name|tojson }}: {{ image|tojson }}{{ "," if not loop.last }}
+{%- endfor %}
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function (a) {
+    const t = a.textContent.trim();
+    if (icons[t]) addIcon(a, t);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+    const t = h.textContent.trim();
+    if (icons[t]) addIcon(h, t);
+  });
+});
+</script>
+{%- endif %}
+{%- if page.table_ui %}
+<script src="/assets/js/tables.js" defer></script>
+{%- endif %}
+</body>
+</html>

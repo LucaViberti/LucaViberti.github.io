@@ -1,178 +1,352 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- German Pages (Deutsch) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.guidetopheroes.com/de/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/heroes.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/league.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/nature.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/horde.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/gear.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/exclusive-gear.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/pets.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/building.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/villagers.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/lord-gear.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/relic.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/research.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/generaladv.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/classicadv.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/seasononeadv.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/shop.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/kingdom.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/guild-race.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/guildboss.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/arms-race.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/events.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.guidetopheroes.com/de/html/adventure.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/adventure.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/adventure.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
     <loc>https://www.guidetopheroes.com/de/html/anniversary.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/anniversary.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/anniversary.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
-    <loc>https://www.guidetopheroes.com/de/html/quick-tips.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.guidetopheroes.com/de/html/tips.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.guidetopheroes.com/de/html/arms-race.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/arms-race.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/arms-race.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
     <loc>https://www.guidetopheroes.com/de/html/beginners.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/beginners.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/beginners.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/building.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/building.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/building.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
     <loc>https://www.guidetopheroes.com/de/html/calculator.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/calculator.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
-    <loc>https://www.guidetopheroes.com/de/html/privacy.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.guidetopheroes.com/de/html/classicadv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/classicadv.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/classicadv.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
-    <loc>https://www.guidetopheroes.com/de/html/thanks.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.guidetopheroes.com/de/html/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/events.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/events.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/exclusive-gear.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/exclusive-gear.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/exclusive-gear.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/gear.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/gear.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/gear.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/generaladv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/generaladv.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/generaladv.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/guild-race.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/guild-race.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/guild-race.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/guildboss.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/guildboss.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/guildboss.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/heroes.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/heroes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/heroes.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/horde.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/horde.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/horde.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/index.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/index.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/index.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/kingdom.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/kingdom.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/kingdom.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/league.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/league.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/league.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/lord-gear.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/lord-gear.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/lord-gear.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/nature.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/nature.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/nature.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/pets.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/pets.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/pets.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/quick-tips.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/quick-tips.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/quick-tips.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/relic.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/relic.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/relic.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/research.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/research.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/research.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/seasononeadv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/seasononeadv.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/seasononeadv.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/shop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/shop.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/spring.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/spring.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/spring.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/tips.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/tips.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/tips.html" />
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.guidetopheroes.com/de/html/villagers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/villagers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/villagers.html" />
+    <lastmod>2026-08-23</lastmod>
   </url>
 </urlset>

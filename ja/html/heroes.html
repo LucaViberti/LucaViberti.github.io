@@ -9,179 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
   <title>TopHeroes Guide - ヒーロー</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
-     crossorigin="anonymous"></script>
-  <style>
-/* Base */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
-
-/* Header/Nav (immutati rispetto al tuo file) */
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-nav { width: 100%; margin-top: 10px; }
-nav ul {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
-}
-nav ul li { position: relative; }
-nav ul li a {
-  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
-  font-size: 0.85rem; transition: color 0.3s;
-}
-nav ul li a:hover { color: #FFFFFF; }
-nav ul li ul {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  padding: 10px 0; min-width: 200px; z-index: 1000;
-}
-nav ul li:hover ul { display: block; }
-nav ul li ul li { margin: 0; }
-nav ul li ul li a {
-  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
-}
-nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
-
-/* Enhanced navigation styling (come nel tuo file) */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-header .tagline { color: #b0b6c7; }
-nav ul { gap: 20px; }
-nav ul li a {
-  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
-  padding: 12px 6px; border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
-nav ul li ul {
-  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
-}
-nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
-nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
-
-/* ---------- CONTENT REFRESH (solo main) ---------- */
-main {
-  padding: 40px 20px 48px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* intestazione pagina */
-.page-header {
-  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
-  border: 1px solid #e6e8ee;
-  border-radius: 16px;
-  padding: 24px 20px;
-  margin-bottom: 24px;
-}
-.page-header h1 {
-  margin: 0 0 6px;
-  font-size: clamp(1.4rem, 3.2vw, 2rem);
-  letter-spacing: -0.015em;
-}
-.page-header .lead {
-  margin: 0;
-  color: #444;
-}
-
-/* griglia fazioni */
-.faction-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-.faction-card {
-  background: #ffffff;
-  border: 1px solid #ececf0;
-  border-radius: 14px;
-  padding: 16px;
-  transition: box-shadow .15s ease, transform .15s ease;
-}
-.faction-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.06); transform: translateY(-2px); }
-.faction-card h3 { margin: 4px 0 8px; }
-
-/* pannelli informativi */
-.panel {
-  background: #ffffff;
-  border: 1px solid #ececf0;
-  border-radius: 14px;
-  padding: 16px;
-  margin-top: 18px;
-}
-.panel ul {
-  margin: 8px 0 0 18px;
-}
-.panel ul.two-cols {
-  columns: 2;
-  column-gap: 24px;
-}
-@media (max-width: 640px) {
-  .panel ul.two-cols { columns: 1; }
-}
-
-/* sezione pulsante donazioni (coerente col resto) */
-.donation-section {
-  text-align: center;
-  margin-top: 28px;
-  padding: 18px;
-  background: #f7fafc;
-  border: 1px solid #e8eef5;
-  border-radius: 12px;
-}
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
-}
-.donation-button:hover { background: #2389b5; }
-
-/* Footer (stile base come nel tuo) */
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-  </style>
   <meta name="description" content="TopHeroes heroes guide with factions (League, Nature, Horde), shard priorities, and epic traits to choose who to build." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/css/heroes.css" />
+
   <link rel="canonical" href="https://www.guidetopheroes.com/ja/html/heroes.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/heroes.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/heroes.html" />
@@ -191,7 +28,8 @@ footer {
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/heroes.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/heroes.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/heroes.html" />
-  <meta property="og:title" content="TopHeroes Guide - Heroes" />
+
+  <meta property="og:title" content="TopHeroes Guide - ヒーロー" />
   <meta property="og:description" content="TopHeroes heroes guide with factions (League, Nature, Horde), shard priorities, and epic traits to choose who to build." />
   <meta property="og:url" content="https://www.guidetopheroes.com/ja/html/heroes.html" />
   <meta property="og:type" content="website" />
@@ -205,89 +43,89 @@ footer {
   <meta property="og:locale:alternate" content="vi_VN" />
   <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:locale:alternate" content="zh_TW" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes Guide - Heroes" />
+  <meta name="twitter:title" content="TopHeroes Guide - ヒーロー" />
   <meta name="twitter:description" content="TopHeroes heroes guide with factions (League, Nature, Horde), shard priorities, and epic traits to choose who to build." />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/html/heroes.html#webpage", "name": "TopHeroes Guide - Heroes", "url": "https://www.guidetopheroes.com/html/heroes.html", "inLanguage": "ja", "description": "TopHeroes heroes guide with factions (League, Nature, Horde), shard priorities, and epic traits to choose who to build.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/ja/html/heroes.html#webpage", "name": "TopHeroes Guide - ヒーロー", "url": "https://www.guidetopheroes.com/ja/html/heroes.html", "inLanguage": "ja", "description": "TopHeroes heroes guide with factions (League, Nature, Horde), shard priorities, and epic traits to choose who to build.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
   <script type="application/ld+json" id="seo-breadcrumbs">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.guidetopheroes.com/index.html"}, {"@type": "ListItem", "position": 2, "name": "ヒーロー", "item": "https://www.guidetopheroes.com/html/heroes.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.guidetopheroes.com/ja/index.html"}, {"@type": "ListItem", "position": 2, "name": "ヒーロー", "item": "https://www.guidetopheroes.com/ja/html/heroes.html"}]}
   </script>
 </head>
 <body>
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
 
-  <!-- ===== MAIN: solo formattazione, testi invariati ===== -->
-  <main id="main-content" itemscope itemtype="https://schema.org/Article">
-    
-    <section id="heroes" class="page-header">
-      <h1 itemprop="headline">ヒーロー</h1>
-      <p class="lead">ゲームには3つの勢力があります：<a href="league.html">リーグ</a>、<a href="nature.html">ネイチャー</a>、<a href="horde.html">ホード</a>。</p>
-    </section>
+<main id="main-content" itemscope itemtype="https://schema.org/Article">
+<section id="heroes" class="page-header">
+  <h1 itemprop="headline">ヒーロー</h1>
+  <p class="lead">ゲームには3つの勢力があります：<a href="league.html">リーグ</a>、<a href="nature.html">ネイチャー</a>、<a href="horde.html">ホード</a>。</p>
+</section>
 
-    <section class="panel">
-      <p>いずれは、どの勢力を育てていくか選ぶ必要があります。</p>
+<section class="panel">
+  <p>いずれは、どの勢力を育てていくか選ぶ必要があります。</p>
 
-      <div class="faction-grid">
-        <article class="faction-card" aria-labelledby="league-title">
-          <h3 id="league-title"><a href="league.html">リーグ</a></h3>
-          <p>序盤が非常に強く、開始時のリーグ系ヒーローの欠片を多く入手できます。リーグはゲーム全体を通して戦えます。終盤はホードに弱い一方、ネイチャーには強いです。</p>
-        </article>
+  <div class="faction-grid">
+    <article class="faction-card" aria-labelledby="league-title">
+      <h3 id="league-title"><a href="league.html">リーグ</a></h3>
+      <p>序盤が非常に強く、開始時のリーグ系ヒーローの欠片を多く入手できます。リーグはゲーム全体を通して戦えます。終盤はホードに弱い一方、ネイチャーには強いです。</p>
+    </article>
 
-        <article class="faction-card" aria-labelledby="nature-title">
-          <h3 id="nature-title"><a href="nature.html">ネイチャー</a></h3>
-          <p>序盤は強いですが、リーグほどではありません。中盤はリーグとホード相手に苦戦しがち。終盤はネイチャーが非常に強力になります。終盤はリーグ相手に苦戦しつつも、ホードには強いです。</p>
-        </article>
+    <article class="faction-card" aria-labelledby="nature-title">
+      <h3 id="nature-title"><a href="nature.html">ネイチャー</a></h3>
+      <p>序盤は強いですが、リーグほどではありません。中盤はリーグとホード相手に苦戦しがち。終盤はネイチャーが非常に強力になります。終盤はリーグ相手に苦戦しつつも、ホードには強いです。</p>
+    </article>
 
-        <article class="faction-card" aria-labelledby="horde-title">
-          <h3 id="horde-title"><a href="horde.html">ホード</a></h3>
-          <p>この勢力は序盤の育成難易度が最も高いです。最初のミシックヒーロー（ストームメイデン）を入手するまでは苦戦します。終盤はおそらく最強の勢力。ネイチャーには弱いですが、リーグには非常に強いです。</p>
-        </article>
-      </div>
-    </section>
+    <article class="faction-card" aria-labelledby="horde-title">
+      <h3 id="horde-title"><a href="horde.html">ホード</a></h3>
+      <p>この勢力は序盤の育成難易度が最も高いです。最初のミシックヒーロー（ストームメイデン）を入手するまでは苦戦します。終盤はおそらく最強の勢力。ネイチャーには弱いですが、リーグには非常に強いです。</p>
+    </article>
+  </div>
+</section>
 
-    <section class="panel" aria-labelledby="traits-title">
-      <h3 id="traits-title">エピックヒーローの特性</h3>
-      <p>レジェンド／ミシック以外にも育成すべきヒーローがいます。エピック（紫）ヒーローには特性（Traits）があり、強力なバフを得られます。12スター（銀スター2つ）に到達すると特性を解放できます。</p>
-      <p>最大で3つ目の特性まで強化できます。特性レベルの上限は30です。</p>
-      <ul class="two-cols">
-        <li>ブロウラー：研究速度</li>
-        <li>ナイト：兵士訓練速度</li>
-        <li>レンジャー：ルビー採集速度</li>
-        <li>プリーステス：回復速度</li>
-        <li>ダンサー：回復速度</li>
-        <li>ミニスター：回復速度</li>
-        <li>アウトロー：木材採集速度</li>
-        <li>ローグ：石材採集速度</li>
-      </ul>
-    </section>
+<section class="panel" aria-labelledby="traits-title">
+  <h3 id="traits-title">エピックヒーローの特性</h3>
+  <p>レジェンド／ミシック以外にも育成すべきヒーローがいます。エピック（紫）ヒーローには特性（Traits）があり、強力なバフを得られます。12スター（銀スター2つ）に到達すると特性を解放できます。</p>
+  <p>最大で3つ目の特性まで強化できます。特性レベルの上限は30です。</p>
+  <ul class="two-cols">
+    <li>ブロウラー：研究速度</li>
+    <li>ナイト：兵士訓練速度</li>
+    <li>レンジャー：ルビー採集速度</li>
+    <li>プリーステス：回復速度</li>
+    <li>ダンサー：回復速度</li>
+    <li>ミニスター：回復速度</li>
+    <li>アウトロー：木材採集速度</li>
+    <li>ローグ：石材採集速度</li>
+  </ul>
+</section>
 
-    <section class="panel" aria-labelledby="shards-title">
-      <h3 id="shards-title">欠片と昇格</h3>
-      <p>ユニバーサルのレジェンド欠片は温存して、ミシックヒーローにだけ使いましょう。レジェンドヒーローの欠片は酒場で入手できます。</p>
-      <p>ほとんどのレジェンドヒーローは、12スター到達後にミシックへ昇格できます。昇格すると大幅に強化され、スキルも強くなり、新しいスキルも追加されます。必要な昇格石は合計9個です。昇格は4つの区分（ティア）に分かれており、各ティアで大きめの強化が入ります。</p>
-    </section>
+<section class="panel" aria-labelledby="shards-title">
+  <h3 id="shards-title">欠片と昇格</h3>
+  <p>ユニバーサルのレジェンド欠片は温存して、ミシックヒーローにだけ使いましょう。レジェンドヒーローの欠片は酒場で入手できます。</p>
+  <p>ほとんどのレジェンドヒーローは、12スター到達後にミシックへ昇格できます。昇格すると大幅に強化され、スキルも強くなり、新しいスキルも追加されます。必要な昇格石は合計9個です。昇格は4つの区分（ティア）に分かれており、各ティアで大きめの強化が入ります。</p>
+</section>
+</main>
 
-    
-    <div id="footer"></div> 
+<div id="footer"></div>
 <script>
-  fetch("/html/footer.html")
+  fetch("/ja/html/footer.html")
     .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    })
-    .catch(err => console.error('Footer load failed:', err));
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
 </script>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    "League": "/images/league-symbol.jpeg",
+    "リーグ": "/images/league-symbol.jpeg",
+    "Nature": "/images/nature-symbol.jpeg",
+    "ネイチャー": "/images/nature-symbol.jpeg",
+    "Horde": "/images/horde-symbol.jpeg",
+    "ホード": "/images/horde-symbol.jpeg"
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
@@ -297,13 +135,13 @@ document.addEventListener('DOMContentLoaded', function() {
     img.style.marginLeft = '0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
+  document.querySelectorAll('a').forEach(function (a) {
+    const t = a.textContent.trim();
+    if (icons[t]) addIcon(a, t);
   });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+    const t = h.textContent.trim();
+    if (icons[t]) addIcon(h, t);
   });
 });
 </script>

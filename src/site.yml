@@ -1,0 +1,96 @@
+# ---------------------------------------------------------------------------
+# Global site configuration.
+# This file is the single source of truth for anything that appears on every
+# page: the domain, the set of languages, and the shared social/SEO defaults.
+# ---------------------------------------------------------------------------
+
+site_name: TopHeroes Guide
+base_url: https://www.guidetopheroes.com
+
+# Shared social image used by og:image / twitter:image on every page.
+og_image: https://www.guidetopheroes.com/images/og-image.svg
+og_image_alt: TopHeroes Guide cover image
+
+# Google AdSense client id. Emitted on content pages only.
+adsense_client: ca-pub-7174478441144796
+
+robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+
+# Stripe "buy button" shown on the home page. Both values are publishable
+# client-side identifiers (they are already public in the served HTML) - the
+# secret key is never part of this repository.
+stripe:
+  buy_button_id: buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL
+  publishable_key: pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY
+
+# The reference language. Everything else is a translation of this.
+default_language: en
+
+# ---------------------------------------------------------------------------
+# Languages.
+#   dir       directory prefix on disk and in URLs ("" = site root, for English)
+#   html_lang value of the <html lang="..."> attribute
+#   hreflang  value used in <link rel="alternate" hreflang="...">
+#   locale    value used in og:locale / og:locale:alternate
+#
+# Note the "tc" folder holds Traditional Chinese: the folder name and the
+# language tag deliberately differ (tc -> zh-Hant / zh_TW).
+# ---------------------------------------------------------------------------
+languages:
+  en:
+    dir: ""
+    html_lang: en
+    hreflang: en
+    locale: en_US
+    name: English
+  de:
+    dir: de
+    html_lang: de
+    hreflang: de
+    locale: de_DE
+    name: Deutsch
+  ja:
+    dir: ja
+    html_lang: ja
+    hreflang: ja
+    locale: ja_JP
+    name: 日本語
+  ko:
+    dir: ko
+    html_lang: ko
+    hreflang: ko
+    locale: ko_KR
+    name: 한국어
+  tc:
+    dir: tc
+    html_lang: zh-Hant
+    hreflang: zh-Hant
+    locale: zh_TW
+    name: 繁體中文
+  vi:
+    dir: vi
+    html_lang: vi
+    hreflang: vi
+    locale: vi_VN
+    name: Tiếng Việt
+  zh:
+    dir: zh
+    html_lang: zh
+    hreflang: zh
+    locale: zh_CN
+    name: 简体中文
+
+# Order in which hreflang alternates are emitted, so the output is stable.
+hreflang_order: [en, de, ko, vi, zh, tc, ja]
+
+# ---------------------------------------------------------------------------
+# Legacy URLs kept alive as redirects.
+#
+# /html/index.html is a second copy of the home page that nothing links to. Two
+# URLs serving the same content split their search ranking, so each language's
+# copy now redirects to that language's real home page and is marked noindex.
+# Deleting them outright would 404 any existing bookmark or inbound link.
+# ---------------------------------------------------------------------------
+redirects:
+  - from: html/index.html
+    to: index

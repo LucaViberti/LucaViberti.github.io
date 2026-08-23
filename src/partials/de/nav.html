@@ -1,0 +1,148 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes Leitfaden</h1>
+    <div id="header-lang-selector" class="header-lang-selector"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/de/index.html">Start</a></li>
+
+      <li class="has-sub">
+        <a href="/de/html/heroes.html">Helden</a>
+        <ul class="dropdown">
+          <li><a href="/de/html/heroes.html">Übersicht</a></li>
+          <li><a href="/de/html/league.html">Liga</a></li>
+          <li><a href="/de/html/nature.html">Natur</a></li>
+          <li><a href="/de/html/horde.html">Horde</a></li>
+
+          <li class="has-flyout">
+            <a href="/de/html/gear.html">Ausrüstung</a>
+            <button class="flyout-toggle" aria-label="Mehr zu Ausrüstung" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/de/html/exclusive-gear.html">Exklusive Ausrüstung</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/de/html/pets.html">Pets</a></li>
+        </ul>
+      </li>
+
+      <li class="has-sub">
+        <a href="/de/html/building.html">Gebäude</a>
+        <ul class="dropdown">
+          <li><a href="/de/html/building.html">Übersicht</a></li>
+          <li><a href="/de/html/villagers.html">Dorfbewohner</a></li>
+          <li><a href="/de/html/lord-gear.html">Lord-Ausrüstung</a></li>
+          <li><a href="/de/html/relic.html">Reliktehalle</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/de/html/research.html">Forschung</a></li>
+
+      <li class="has-sub">
+        <a href="/de/html/generaladv.html">Adventure</a>
+        <ul class="dropdown">
+          <li><a href="/de/html/generaladv.html">Übersicht</a></li>
+          <li><a href="/de/html/classicadv.html">Klassik</a></li>
+          <li><a href="/de/html/seasononeadv.html">Season 1</a></li>
+        </ul>
+      </li>
+
+      <li class="has-sub">
+        <a href="/de/html/events.html">Events</a>
+        <ul class="dropdown">
+          <li><a href="/de/html/guild-race.html">Gildenrennen</a></li>
+          <li><a href="/de/html/arms-race.html">Arms Race</a></li>
+          <li><a href="/de/html/kingdom.html">KvK</a></li>
+          <li><a href="/de/html/guildboss.html">Gildenboss</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/de/html/beginners.html">Anfänger</a></li>
+      <li><a href="/de/html/shop.html">Shop</a></li>
+      <li><a href="/de/html/tips.html">Kostentabellen</a></li>
+      <li><a href="/de/html/quick-tips.html">Quick Tipps</a></li>
+
+      <li class="has-sub">
+        <a href="#">Support</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Spenden (Stripe)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/de/html/privacy.html">Datenschutz</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  .site-info {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0 4px;
+  }
+
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .header-lang-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+
+  @media (max-width: 640px) {
+    .site-info { padding: 0 0 2px; }
+    .site-title { font-size: clamp(1.45rem, 8vw, 2rem); }
+    .header-lang-selector { margin-top: 6px; }
+  }
+
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  nav .has-flyout { position: relative; display: flex; align-items: center; }
+  nav .has-flyout > a { flex: 1; }
+  nav .has-flyout > .flyout-toggle {
+    background: transparent;
+    border: 0;
+    color: #d1d1d6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+  nav .has-flyout > .flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: none;
+    min-width: 220px;
+    z-index: 1200;
+  }
+  nav .has-flyout:hover > .flyout,
+  nav .has-flyout.open > .flyout { display: block; }
+</style>

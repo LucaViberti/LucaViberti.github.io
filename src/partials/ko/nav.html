@@ -1,0 +1,148 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes 가이드</h1>
+    <div id="header-lang-selector" class="header-lang-selector"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/ko/index.html">홈</a></li>
+
+      <li class="has-sub">
+        <a href="/ko/html/heroes.html">영웅</a>
+        <ul class="dropdown">
+          <li><a href="/ko/html/heroes.html">개요</a></li>
+          <li><a href="/ko/html/league.html">리그</a></li>
+          <li><a href="/ko/html/nature.html">자연</a></li>
+          <li><a href="/ko/html/horde.html">호드</a></li>
+
+          <li class="has-flyout">
+            <a href="/ko/html/gear.html">장비</a>
+            <button class="flyout-toggle" aria-label="장비 더보기" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/ko/html/exclusive-gear.html">전용 장비</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/ko/html/pets.html">펫</a></li>
+        </ul>
+      </li>
+
+      <li class="has-sub">
+        <a href="/ko/html/building.html">건설</a>
+        <ul class="dropdown">
+          <li><a href="/ko/html/building.html">개요</a></li>
+          <li><a href="/ko/html/villagers.html">주민</a></li>
+          <li><a href="/ko/html/lord-gear.html">로드 장비</a></li>
+          <li><a href="/ko/html/relic.html">유물의 전당</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ko/html/research.html">연구</a></li>
+
+      <li class="has-sub">
+        <a href="/ko/html/generaladv.html">어드벤처</a>
+        <ul class="dropdown">
+          <li><a href="/ko/html/generaladv.html">개요</a></li>
+          <li><a href="/ko/html/classicadv.html">클래식</a></li>
+          <li><a href="/ko/html/seasononeadv.html">시즌 1</a></li>
+        </ul>
+      </li>
+
+      <li class="has-sub">
+        <a href="/ko/html/events.html">이벤트</a>
+        <ul class="dropdown">
+          <li><a href="/ko/html/guild-race.html">길드 레이스</a></li>
+          <li><a href="/ko/html/arms-race.html">군비 경쟁</a></li>
+          <li><a href="/ko/html/kingdom.html">왕국 대전 (KvK)</a></li>
+          <li><a href="/ko/html/guildboss.html">길드 보스</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ko/html/beginners.html">초보자 가이드</a></li>
+      <li><a href="/ko/html/shop.html">상점</a></li>
+      <li><a href="/ko/html/tips.html">비용 표</a></li>
+      <li><a href="/ko/html/quick-tips.html">빠른 팁</a></li>
+
+      <li class="has-sub">
+        <a href="#">후원하기</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Stripe로 기부하기</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ko/html/privacy.html">개인정보 · 정책</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  .site-info {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0 4px;
+  }
+
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .header-lang-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+
+  @media (max-width: 640px) {
+    .site-info { padding: 0 0 2px; }
+    .site-title { font-size: clamp(1.45rem, 8vw, 2rem); }
+    .header-lang-selector { margin-top: 6px; }
+  }
+
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  nav .has-flyout { position: relative; display: flex; align-items: center; }
+  nav .has-flyout > a { flex: 1; }
+  nav .has-flyout > .flyout-toggle {
+    background: transparent;
+    border: 0;
+    color: #d1d1d6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+  nav .has-flyout > .flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: none;
+    min-width: 220px;
+    z-index: 1200;
+  }
+  nav .has-flyout:hover > .flyout,
+  nav .has-flyout.open > .flyout { display: block; }
+</style>

@@ -4,168 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
 
-  <!-- SEO -->
   <title>TopHeroes Guide – Chiến thuật, Tướng, Phiêu lưu & Sự kiện</title>
   <meta name="description" content="TopHeroes Guide: hướng dẫn ngắn gọn về Tướng (League, Nature, Horde), chế độ Phiêu lưu (Classic, Season 1), Sự kiện và mẹo cho người mới. Chiến thuật thực tế, dễ áp dụng để tiến bộ nhanh hơn." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
-  <style>
-/* Base */
-body{
-  margin:0; padding:0;
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
-  background:#f5f5f7; line-height:1.6; color:#111;
-}
+  <link rel="stylesheet" href="/assets/css/index.css" />
 
-/* Header/Nav */
-header{
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,.4);
-  border-bottom: 1px solid #2b2f3a;
-  padding:12px 20px; display:flex; flex-direction:column; align-items:center;
-}
-header h1{margin:0; color:#f5f5f7; font-size:1.5rem;}
-header .tagline{margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap;}
-header .site-info{display:flex; flex-direction:column; align-items:center;}
-nav{width:100%; margin-top:10px;}
-nav ul{list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px}
-nav ul li{position:relative;}
-nav ul li a{
-  color:#ccd0dd; text-decoration:none; text-transform:uppercase; font-weight:500; letter-spacing:.05em;
-  padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s,border-bottom-color .3s;
-  font-size:.85rem;
-}
-nav ul li a:hover{color:#fff; border-bottom-color:#29abe0;}
-nav ul li ul{
-  display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
-  background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; min-width:200px; z-index:1000;
-}
-nav ul li:hover ul{display:block;}
-nav ul li ul li a{display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; font-size:.85rem;}
-nav ul li ul li a:hover{background:#25314d; color:#fff;}
-
-main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
-
-/* Hero intro */
-.hero{
-  background: linear-gradient(180deg,#ffffff 0%,#f7f8fb 100%);
-  border:1px solid #ececf0; border-radius:16px; padding:28px 22px; margin-bottom:20px;
-}
-.hero h1{
-  margin:0 0 10px; font-size:clamp(1.5rem,3.2vw,2.1rem); letter-spacing:-0.015em;
-}
-.hero p{margin:0; color:#444;}
-.hero p + p{margin-top:8px}
-
-/* Event Banner */
-.event-banner{
-  background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
-  border:2px solid #e94560; border-radius:16px; padding:20px 24px; margin-bottom:24px;
-  box-shadow:0 8px 24px rgba(233,69,96,0.3);
-  display:flex; flex-direction:column; align-items:center; text-align:center;
-}
-.event-banner h2{
-  margin:0 0 8px; font-size:1.5rem; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.2);
-}
-.event-banner p{
-  margin:0 0 14px; color:#fff; font-size:1rem;
-}
-.event-banner a{
-  background:#fff; color:#e94560; padding:10px 24px; border-radius:30px;
-  text-decoration:none; font-weight:700; transition:transform .2s, box-shadow .2s;
-  display:inline-block;
-}
-.event-banner a:hover{
-  transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.2);
-}
-
-/* Quick sections (mini-cards) */
-.section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
-.quick-sections{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;
-}
-.mini-card{
-  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;
-  transition: box-shadow .15s ease, transform .15s ease;
-  display:flex; flex-direction:column;
-}
-.mini-card:hover{box-shadow:0 8px 22px rgba(0,0,0,.06); transform:translateY(-2px);}
-.mini-card h3{margin:0 0 6px; font-size:1.05rem;}
-.mini-card p{margin:0; color:#4b5563; font-size:.95rem; flex-grow:1;}
-.mini-card .meta{margin-top:8px; font-size:.85rem; color:#6b7280}
-
-/* Pulsanti */
-.mini-card a{
-  margin-top:12px;
-  align-self:flex-start;
-  background:#29abe0;
-  color:#fff !important;
-  padding:6px 12px;
-  border-radius:6px;
-  font-size:.85rem;
-  font-weight:500;
-  text-decoration:none;
-  transition:background .2s;
-}
-.mini-card a:hover{background:#2389b5;}
-
-/* Contact card */
-.contact-card{
-  background:#fff; border:1px solid #e8eef5; border-radius:12px; padding:22px; margin-top:26px;
-}
-.contact-card h2{margin:0 0 6px; font-size:1.25rem; color:#1e2541;}
-.contact-card p{margin:0 0 12px; color:#4b5563;}
-.th-contact label{display:block; margin:0 0 12px;}
-.th-contact input,.th-contact textarea{
-  width:100%; padding:.9rem; border:1px solid #dfe3ea; border-radius:10px; font:inherit; background:#fff;
-}
-.th-contact textarea{resize:vertical; min-height:120px}
-
-/* FIX privacy layout */
-.th-contact input[type="checkbox"]{ width:auto; }
-.th-privacy label{ flex:1; display:block; }
-.th-privacy{ display:flex; gap:.6rem; align-items:flex-start; font-size:.9rem; color:#4b5563; margin-top:6px; }
-
-.th-actions{margin-top:12px; display:flex; gap:10px; align-items:center;}
-.th-btn{
-  display:inline-block; background:#29abe0; color:#fff; padding:10px 16px; border:0; border-radius:10px;
-  font-weight:600; cursor:pointer; transition:background .2s;
-}
-.th-btn:hover{background:#2389b5;}
-.th-hint{opacity:.75; font-size:.9rem; margin:0}
-.th-error{color:#b91c1c}
-.th-ok{color:#166534}
-
-/* Donation + footer */
-.donation-section{
-  text-align:center; margin-top:28px; padding:18px;
-  background:#f7fafc; border:1px solid #e8eef5; border-radius:12px;
-}
-.donation-button{
-  display:inline-block; background:#29abe0; color:#fff; padding:10px 18px;
-  border-radius:30px; text-decoration:none; font-weight:600; transition:background .2s;
-}
-.donation-button:hover{background:#2389b5;}
-
-footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem;}
-
-/* Stripe block */
-.stripe-donation{
-  text-align:center;
-  padding:16px;
-  background:#fff;
-  border-bottom:1px solid #e5e7eb;
-}
-  </style>
   <link rel="canonical" href="https://www.guidetopheroes.com/vi/index.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/index.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/index.html" />
@@ -175,6 +28,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/index.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/index.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/index.html" />
+
   <meta property="og:title" content="TopHeroes Guide – Chiến thuật, Tướng, Phiêu lưu & Sự kiện" />
   <meta property="og:description" content="TopHeroes Guide: hướng dẫn ngắn gọn về Tướng (League, Nature, Horde), chế độ Phiêu lưu (Classic, Season 1), Sự kiện và mẹo cho người mới. Chiến thuật thực tế, dễ áp dụng để tiến bộ nhanh hơn." />
   <meta property="og:url" content="https://www.guidetopheroes.com/vi/index.html" />
@@ -189,143 +43,155 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:locale:alternate" content="zh_TW" />
   <meta property="og:locale:alternate" content="ja_JP" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TopHeroes Guide – Chiến thuật, Tướng, Phiêu lưu & Sự kiện" />
   <meta name="twitter:description" content="TopHeroes Guide: hướng dẫn ngắn gọn về Tướng (League, Nature, Horde), chế độ Phiêu lưu (Classic, Season 1), Sự kiện và mẹo cho người mới. Chiến thuật thực tế, dễ áp dụng để tiến bộ nhanh hơn." />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/vi/index.html#webpage", "name": "TopHeroes Guide – Chiến thuật, Tướng, Phiêu lưu & Sự kiện", "url": "https://www.guidetopheroes.com/vi/index.html", "inLanguage": "vi", "description": "TopHeroes Guide: hướng dẫn ngắn gọn về Tướng (League, Nature, Horde), chế độ Phiêu lưu (Classic, Season 1), Sự kiện và mẹo cho người mới. Chiến thuật thực tế, dễ áp dụng để tiến bộ nhanh hơn.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
 </head>
 <body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
 
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
-  <script src="/nav-loader.js" defer></script>
+<section class="stripe-donation" aria-label="Hỗ trợ dự án">
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <stripe-buy-button
+    buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
+    publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
+  </stripe-buy-button>
+</section>
 
-  <!-- STRIPE DONATION BUTTON -->
-  <section class="stripe-donation" aria-label="Hỗ trợ dự án">
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <stripe-buy-button
-      buy-button-id="buy_btn_1S2fL7EfHZNZWQ4apIV8bWdL"
-      publishable-key="pk_live_51S1B6HEfHZNZWQ4aCY8KdA0Zy48qLqWinfcISGrjZuGjhqFoTMRzeKjkCiVX97waGxxmsmtmy11MMBtALhUXEYGS002FP4htTY">
-    </stripe-buy-button>
-  </section>
+<main itemscope itemtype="https://schema.org/Article">
+<!-- HERO INTRO -->
+<section class="hero" aria-label="Chào mừng">
+  <h1 itemprop="headline">TopHeroes Guide</h1>
+  <p>Các hướng dẫn ngắn gọn, thực tế để tiến bộ nhanh hơn trong <strong>TopHeroes</strong>: Tướng theo phe, chế độ Phiêu lưu, Sự kiện và mẹo cho người mới.</p>
+  <p>Mọi thứ được sắp xếp theo thẻ nhanh và checklist để giúp bạn quyết định nên nâng ai, nâng gì và lên kế hoạch tài nguyên như thế nào.</p>
+</section>
 
+<!-- EVENT BANNER -->
+<div class="event-banner" aria-label="Sự kiện giới hạn">
+  <h2>🌸 Mùa Xuân của Ngựa – Sự kiện giới hạn!</h2>
+  <p>Hướng dẫn đầy đủ cho sự kiện Mùa xuân: chiến thuật pinball, ưu tiên chi tiêu và lập kế hoạch mua sắm.</p>
+  <a href="/vi/html/spring.html">Xem Hướng dẫn Sự kiện Mùa xuân →</a>
+</div>
 
-  <main itemscope itemtype="https://schema.org/Article">
-    <!-- HERO INTRO -->
-    <section class="hero" aria-label="Chào mừng">
-      <h1 itemprop="headline">TopHeroes Guide</h1>
-      <p>Các hướng dẫn ngắn gọn, thực tế để tiến bộ nhanh hơn trong <strong>TopHeroes</strong>: Tướng theo phe, chế độ Phiêu lưu, Sự kiện và mẹo cho người mới.</p>
-      <p>Mọi thứ được sắp xếp theo thẻ nhanh và checklist để giúp bạn quyết định nên nâng ai, nâng gì và lên kế hoạch tài nguyên như thế nào.</p>
-    </section>
+<!-- QUICK SECTIONS -->
+<h2 class="section-head">Khám phá hướng dẫn</h2>
+<div class="quick-sections" aria-label="Các mục chính">
+  <article class="mini-card">
+    <h3>Tướng</h3>
+    <p>Tổng quan theo phe và build cốt lõi: League, Nature, Horde.</p>
+    <a href="/vi/html/heroes.html">Đi tới Tướng</a>
+  </article>
 
-    <!-- EVENT BANNER -->
-    <div class="event-banner" aria-label="Sự kiện giới hạn">
-      <h2>🌸 Mùa Xuân của Ngựa – Sự kiện giới hạn!</h2>
-      <p>Hướng dẫn đầy đủ cho sự kiện Mùa xuân: chiến thuật pinball, ưu tiên chi tiêu và lập kế hoạch mua sắm.</p>
-      <a href="/vi/html/spring.html">Xem Hướng dẫn Sự kiện Mùa xuân →</a>
+  <article class="mini-card">
+    <h3>Phiêu lưu</h3>
+    <p>Cách hoạt động của Phiêu lưu, kiến thức bản đồ cơ bản và phần thưởng.</p>
+    <a href="/vi/html/generaladv.html">Đi tới Phiêu lưu</a>
+  </article>
+
+  <article class="mini-card">
+    <h3>Sự kiện</h3>
+    <p>Chiến thuật nhanh cho Guild Race, Arms Race, KvK và Guild Boss. Sắp ra mắt</p>
+    <!-- <a href="/vi/html/events.html">Go to Events</a> -->
+  </article>
+
+  <article class="mini-card">
+    <h3>Hướng dẫn cho người mới</h3>
+    <p>Ưu tiên đầu game, đội hình khởi đầu và quản lý tài nguyên.</p>
+     <a href="/vi/html/beginners.html">Đi tới Người mới</a> 
+  </article>
+
+  <article class="mini-card">
+    <h3>Bảng chi phí</h3>
+    <p>Bảng chi phí tài nguyên và nâng cấp để giúp bạn lên kế hoạch tiến trình.</p>
+    <a href="/vi/html/tips.html">Đi tới Bảng chi phí</a>
+  </article>
+
+  <article class="mini-card">
+    <h3>Mẹo nhanh</h3>
+    <p>Mẹo nhanh, thực tế để tối ưu thói quen hằng ngày và chuẩn bị sự kiện.</p>
+    <a href="/vi/html/quick-tips.html">Đi tới Mẹo nhanh</a>
+  </article>
+</div>
+
+<!-- CONTACT FORM -->
+<section class="contact-card" aria-label="Liên hệ">
+  <h2>Liên hệ</h2>
+  <p>Có câu hỏi, gợi ý hoặc góp ý? Gửi tin nhắn cho chúng tôi và chúng tôi sẽ trả lời qua email.</p>
+
+  <form class="th-contact"
+        action="https://formspree.io/f/mrbazyyz"
+        method="POST" autocomplete="on">
+    <label>
+      Email của bạn
+      <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
+    </label>
+
+    <label>
+      Tin nhắn
+      <textarea name="message" required rows="6" placeholder="Viết tin nhắn của bạn..."></textarea>
+    </label>
+
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+           style="position:absolute;left:-10000px;opacity:0">
+
+    <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
+    <input type="hidden" name="_next" value="https://www.guidetopheroes.com/vi/html/thanks.html">
+
+    <div class="th-privacy">
+      <input type="checkbox" id="consent" required>
+      <label for="consent">
+        Tôi đồng ý cho xử lý dữ liệu của mình (email và nội dung tin nhắn) chỉ với mục đích nhận phản hồi.
+        Đọc <a href="/vi/html/privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a> của chúng tôi.
+      </label>
     </div>
 
-    <!-- QUICK SECTIONS -->
-    <h2 class="section-head">Khám phá hướng dẫn</h2>
-    <div class="quick-sections" aria-label="Các mục chính">
-      <article class="mini-card">
-        <h3>Tướng</h3>
-        <p>Tổng quan theo phe và build cốt lõi: League, Nature, Horde.</p>
-        <a href="/vi/html/heroes.html">Đi tới Tướng</a>
-      </article>
-
-      <article class="mini-card">
-        <h3>Phiêu lưu</h3>
-        <p>Cách hoạt động của Phiêu lưu, kiến thức bản đồ cơ bản và phần thưởng.</p>
-        <a href="/vi/html/generaladv.html">Đi tới Phiêu lưu</a>
-      </article>
-
-      <article class="mini-card">
-        <h3>Sự kiện</h3>
-        <p>Chiến thuật nhanh cho Guild Race, Arms Race, KvK và Guild Boss. Sắp ra mắt</p>
-        <!-- <a href="/vi/html/events.html">Go to Events</a> -->
-      </article>
-
-      <article class="mini-card">
-        <h3>Hướng dẫn cho người mới</h3>
-        <p>Ưu tiên đầu game, đội hình khởi đầu và quản lý tài nguyên.</p>
-         <a href="/vi/html/beginners.html">Đi tới Người mới</a> 
-      </article>
-
-      <article class="mini-card">
-        <h3>Bảng chi phí</h3>
-        <p>Bảng chi phí tài nguyên và nâng cấp để giúp bạn lên kế hoạch tiến trình.</p>
-        <a href="/vi/html/tips.html">Đi tới Bảng chi phí</a>
-      </article>
-
-      <article class="mini-card">
-        <h3>Mẹo nhanh</h3>
-        <p>Mẹo nhanh, thực tế để tối ưu thói quen hằng ngày và chuẩn bị sự kiện.</p>
-        <a href="/vi/html/quick-tips.html">Đi tới Mẹo nhanh</a>
-      </article>
+    <div class="th-actions">
+      <button type="submit" class="th-btn">Gửi</button>
     </div>
+  </form>
+</section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact-card" aria-label="Liên hệ">
-      <h2>Liên hệ</h2>
-      <p>Có câu hỏi, gợi ý hoặc góp ý? Gửi tin nhắn cho chúng tôi và chúng tôi sẽ trả lời qua email.</p>
+<!-- Footer import -->
+</main>
 
-      <form class="th-contact"
-            action="https://formspree.io/f/mrbazyyz"
-            method="POST" autocomplete="on">
-        <label>
-          Email của bạn
-          <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
-        </label>
-
-        <label>
-          Tin nhắn
-          <textarea name="message" required rows="6" placeholder="Viết tin nhắn của bạn..."></textarea>
-        </label>
-
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
-               style="position:absolute;left:-10000px;opacity:0">
-
-        <input type="hidden" name="_subject" value="New message from TopHeroes Guide">
-        <input type="hidden" name="_next" value="https://www.guidetopheroes.com/vi/html/thanks.html">
-
-        <div class="th-privacy">
-          <input type="checkbox" id="consent" required>
-          <label for="consent">
-            Tôi đồng ý cho xử lý dữ liệu của mình (email và nội dung tin nhắn) chỉ với mục đích nhận phản hồi.
-            Đọc <a href="/vi/html/privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a> của chúng tôi.
-          </label>
-        </div>
-
-        <div class="th-actions">
-          <button type="submit" class="th-btn">Gửi</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- Footer import -->
-    <div id="footer"></div>
-  </main>
-
-  <script>
-    fetch("/vi/html/footer.html")
-  <!-- Icon injection -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const icons = {'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
-      function addIcon(el, word){
-        const img=document.createElement('img');
-        img.src=icons[word]; img.alt=word+' symbol'; img.loading='lazy';
-        img.style.height='1em'; img.style.marginLeft='0.3em';
-        el.appendChild(img);
-      }
-      document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
-        const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);
-      });
-    });
-  </script>
+<div id="footer"></div>
+<script>
+  fetch("/vi/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const icons = {
+    "League": "/images/league-symbol.jpeg",
+    "Nature": "/images/nature-symbol.jpeg",
+    "Horde": "/images/horde-symbol.jpeg"
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function (a) {
+    const t = a.textContent.trim();
+    if (icons[t]) addIcon(a, t);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+    const t = h.textContent.trim();
+    if (icons[t]) addIcon(h, t);
+  });
+});
+</script>
 </body>
 </html>

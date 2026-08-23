@@ -1,0 +1,60 @@
+<h1>Rush Events 積分計算機</h1>
+<p class="description">輸入各項目的數量以計算總積分。</p>
+<div class="row">
+  <label for="books">書籍：</label>
+  <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="booksPoints">0</span>
+  <span class="formula">積分 (x&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="essence">寵物精華：</label>
+  <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="essencePoints">0</span>
+  <span class="formula">積分 (y&nbsp;&times;&nbsp;15)</span>
+</div>
+<div class="row">
+  <label for="food">寵物飼料：</label>
+  <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="foodPoints">0</span>
+  <span class="formula">積分 (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="uncommon">罕見寵物：</label>
+  <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="uncommonPoints">0</span>
+  <span class="formula">積分 (q&nbsp;&times;&nbsp;150)</span>
+</div>
+<div class="row">
+  <label for="rare">稀有寵物：</label>
+  <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="rarePoints">0</span>
+  <span class="formula">積分 (r&nbsp;&times;&nbsp;900)</span>
+</div>
+<div id="total">總計：0 積分</div>
+
+<script>
+  function updatePoints() {
+    const x = parseFloat(document.getElementById('books').value) || 0;
+    const y = parseFloat(document.getElementById('essence').value) || 0;
+    const z = parseFloat(document.getElementById('food').value) || 0;
+    const q = parseFloat(document.getElementById('uncommon').value) || 0;
+    const r = parseFloat(document.getElementById('rare').value) || 0;
+
+    const bookPoints = x / 10;
+    const essencePoints = y * 15;
+    const foodPoints = (z * 3) / 10;
+    const uncommonPoints = q * 150;
+    const rarePoints = r * 900;
+
+    document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
+    document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
+    document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
+    document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
+    document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
+
+    const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
+    document.getElementById('total').textContent = '總計：' + total.toFixed(1) + ' 積分';
+  }
+
+  updatePoints();
+</script>

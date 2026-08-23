@@ -9,92 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
   <title>公会竞赛</title>
   <meta name="description" content="公会竞赛指南：玩法机制、推荐与避免的任务、奖励节奏、S1 研究加成，以及荣誉商店优先购买。" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
 
-  <style>
-    /* ===== CONTENT-ONLY styles (non toccano nav/footer) ===== */
-    :root{
-      --bg:#f7f8fb; --card:#ffffff; --border:#e6e9ef; --head:#1e2541;
-      --text:#0f1220; --muted:#667085; --ink2:#374151; --accent:#29abe0;
-    }
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
-      line-height:1.65;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    }
-    header{
-      background:linear-gradient(180deg,#1e2541 0%,#141720 100%);
-      box-shadow:0 2px 4px rgba(0,0,0,.4);
-      border-bottom:1px solid #2b2f3a;
-      padding:12px 20px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
-    header .site-info{display:flex;flex-direction:column;align-items:center;}
+  <link rel="stylesheet" href="/assets/css/guild-race.css" />
 
-    /* Contenitore della pagina */
-    main.content{max-width:1080px; margin:0 auto; padding:40px 18px 56px;}
-    @media (min-width: 768px){ main.content{padding:48px 24px 72px;} }
-
-    /* Header pagina */
-    .page-header{
-      background:linear-gradient(180deg,#ffffff 0%, #f7f8fb 100%);
-      border:1px solid #ececf0; border-radius:16px; padding:24px 20px; margin:0 0 22px;
-      box-shadow:0 2px 6px rgba(0,0,0,.03);
-    }
-    .page-header h1{
-      margin:0 0 6px; font-size:clamp(1.6rem,3.2vw,2.2rem); color:var(--head);
-      letter-spacing:-.015em; font-weight:800;
-    }
-    .page-header .lead{margin:0; color:var(--ink2); font-size:1rem}
-
-    /* TOC */
-    .toc{
-      background:var(--card); border:1px solid var(--border); border-radius:14px;
-      padding:16px 18px; margin:18px 0 22px; box-shadow:0 4px 12px rgba(16,19,25,.04);
-    }
-    .toc h3{margin:0 0 8px; font-size:1.05rem; color:var(--head); letter-spacing:.01em}
-    .toc ol{margin:0; padding-left:18px}
-    .toc a{color:var(--ink2); text-decoration:none}
-    .toc a:hover{color:#0b7cab; text-decoration:underline}
-
-    /* Card sezioni */
-    .card{
-      background:var(--card); border:1px solid var(--border); border-radius:14px;
-      padding:22px 22px; margin:18px 0; box-shadow:0 6px 18px rgba(16,19,25,.05);
-    }
-    .card h2{font-size:1.35rem; margin:0 0 10px; color:var(--head); letter-spacing:-.01em}
-    .card h3{font-size:1.08rem; margin:14px 0 6px; color:#1f2937;}
-    .muted{color:var(--muted); font-size:.96rem;}
-    .content p{margin:0 0 12px}
-    .content ul{margin:10px 0 0 22px}
-    .content li{margin:4px 0}
-
-    /* Immagini: più piccole e coerenti */
-    figure{margin:14px 0; display:flex; flex-direction:column; align-items:center}
-    figure img{
-      display:block; border-radius:10px; border:1px solid #edf0f5;
-      width:100%; max-width:720px; height:auto; box-shadow:0 2px 8px rgba(0,0,0,.04);
-    }
-    figcaption{font-size:.9rem; color:var(--muted); margin-top:6px}
-
-    /* Evidenzia l'ancora attiva (solo estetico) */
-    :target > h2{position:relative}
-    :target > h2::after{
-      content:""; position:absolute; left:0; bottom:-8px; width:72px; height:2px; background:var(--accent);
-      border-radius:2px;
-    }
-
-    /* contenitori nav/footer caricati esternamente */
-    #navbar,#footer{margin:0;}
-  </style>
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://www.guidetopheroes.com/zh/html/guild-race.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/guild-race.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/guild-race.html" />
@@ -104,7 +28,8 @@
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/guild-race.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/guild-race.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/guild-race.html" />
-  <meta property="og:title" content="TopHeroes 指南 - 公会竞赛" />
+
+  <meta property="og:title" content="公会竞赛" />
   <meta property="og:description" content="公会竞赛指南：玩法机制、推荐与避免的任务、奖励节奏、S1 研究加成，以及荣誉商店优先购买。" />
   <meta property="og:url" content="https://www.guidetopheroes.com/zh/html/guild-race.html" />
   <meta property="og:type" content="website" />
@@ -116,27 +41,26 @@
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="ko_KR" />
   <meta property="og:locale:alternate" content="vi_VN" />
-  <meta property="og:locale:alternate" content="ja_JP" />
   <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="公会竞赛" />
   <meta name="twitter:description" content="公会竞赛指南：玩法机制、推荐与避免的任务、奖励节奏、S1 研究加成，以及荣誉商店优先购买。" />
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/guild-race.html#webpage", "name": "TopHeroes 指南 - 公会竞赛", "url": "https://www.guidetopheroes.com/zh/html/guild-race.html", "inLanguage": "zh", "description": "公会竞赛指南：玩法机制、推荐与避免的任务、奖励节奏、S1 研究加成，以及荣誉商店优先购买。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/guild-race.html#webpage", "name": "公会竞赛", "url": "https://www.guidetopheroes.com/zh/html/guild-race.html", "inLanguage": "zh", "description": "公会竞赛指南：玩法机制、推荐与避免的任务、奖励节奏、S1 研究加成，以及荣誉商店优先购买。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
   <script type="application/ld+json" id="seo-breadcrumbs">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.guidetopheroes.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "公会竞赛", "item": "https://www.guidetopheroes.com/zh/html/guild-race.html"}]}
   </script>
 </head>
 <body>
+<div id="navbar"></div>
+<script src="/nav-loader.js" defer></script>
 
-  <!-- NAVBAR standard -->
-  <div id="navbar"></div>
-  <script src="/nav-loader.js" defer></script>
-
-  <!-- ===== CONTENUTO ===== -->
-  <main class="content" itemscope itemtype="https://schema.org/Article">
+<main class="content" itemscope itemtype="https://schema.org/Article">
     <section class="page-header">
       <h1 itemprop="headline">公会竞赛</h1>
       <p class="lead">玩法机制、哪些任务该优先（或避免）、奖励节奏、S1 加成，以及荣誉商店该买什么。</p>
@@ -263,15 +187,14 @@
         <img src="/images/guildrace6.png" alt="Honour shop example" loading="lazy" / decoding="async">
       </figure>
     </section>
-  </main>
+</main>
 
-  <!-- FOOTER (richiamo standard) -->
-  <div id="footer"></div>
-  <script>
-    fetch("/zh/html/footer.html")
-      .then(res => res.text())
-      .then(html => { document.getElementById("footer").innerHTML = html; })
-      .catch(console.error);
-  </script>
+<div id="footer"></div>
+<script>
+  fetch("/zh/html/footer.html")
+    .then(res => res.text())
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
+</script>
 </body>
 </html>

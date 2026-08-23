@@ -9,180 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+
   <title>TopHeroes Guide - 英雄</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
-     crossorigin="anonymous"></script>
-  <style>
-/* Base */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #f5f5f7;
-  line-height: 1.6;
-}
-
-/* Header/Nav (immutati rispetto al tuo file) */
-header {
-  background: #16171A;
-  padding: 12px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header h1 {
-  margin: 0;
-  color: #f5f5f7;
-  font-size: 1.5rem;
-}
-header .tagline {
-  margin-left: 12px;
-  color: #888;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-header .site-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-nav { width: 100%; margin-top: 10px; }
-nav ul {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
-}
-nav ul li { position: relative; }
-nav ul li a {
-  color: #d1d1d6; text-decoration: none; padding: 10px 8px;
-  font-size: 0.85rem; transition: color 0.3s;
-}
-nav ul li a:hover { color: #FFFFFF; }
-nav ul li ul {
-  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #1f1f21; border-radius: 6px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  padding: 10px 0; min-width: 200px; z-index: 1000;
-}
-nav ul li:hover ul { display: block; }
-nav ul li ul li { margin: 0; }
-nav ul li ul li a {
-  display: block; padding: 8px 20px; color: #d1d1d6; white-space: nowrap;
-}
-nav ul li ul li a:hover { background: #2c2c2e; color: #FFFFFF; }
-
-/* Enhanced navigation styling (come nel tuo file) */
-header {
-  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #2b2f3a;
-}
-header .tagline { color: #b0b6c7; }
-nav ul { gap: 20px; }
-nav ul li a {
-  color: #ccd0dd; text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em;
-  padding: 12px 6px; border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-nav ul li a:hover { color: #ffffff; border-bottom-color: #29abe0; }
-nav ul li ul {
-  background: #1c2133; border: 1px solid #2b2f3a; border-radius: 6px; padding: 10px 0;
-}
-nav ul li ul li a { padding: 8px 20px; font-size: 0.85rem; }
-nav ul li ul li a:hover { background: #25314d; color: #ffffff; }
-
-/* ---------- CONTENT REFRESH (solo main) ---------- */
-main {
-  padding: 40px 20px 48px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* intestazione pagina */
-.page-header {
-  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
-  border: 1px solid #e6e8ee;
-  border-radius: 16px;
-  padding: 24px 20px;
-  margin-bottom: 24px;
-}
-.page-header h1 {
-  margin: 0 0 6px;
-  font-size: clamp(1.4rem, 3.2vw, 2rem);
-  letter-spacing: -0.015em;
-}
-.page-header .lead {
-  margin: 0;
-  color: #444;
-}
-
-/* griglia fazioni */
-.faction-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-.faction-card {
-  background: #ffffff;
-  border: 1px solid #ececf0;
-  border-radius: 14px;
-  padding: 16px;
-  transition: box-shadow .15s ease, transform .15s ease;
-}
-.faction-card:hover { box-shadow: 0 8px 22px rgba(0,0,0,.06); transform: translateY(-2px); }
-.faction-card h3 { margin: 4px 0 8px; }
-
-/* pannelli informativi */
-.panel {
-  background: #ffffff;
-  border: 1px solid #ececf0;
-  border-radius: 14px;
-  padding: 16px;
-  margin-top: 18px;
-}
-.panel ul {
-  margin: 8px 0 0 18px;
-}
-.panel ul.two-cols {
-  columns: 2;
-  column-gap: 24px;
-}
-@media (max-width: 640px) {
-  .panel ul.two-cols { columns: 1; }
-}
-
-/* sezione pulsante donazioni (coerente col resto) */
-.donation-section {
-  text-align: center;
-  margin-top: 28px;
-  padding: 18px;
-  background: #f7fafc;
-  border: 1px solid #e8eef5;
-  border-radius: 12px;
-}
-.donation-button {
-  display: inline-block;
-  background: #29abe0;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
-}
-.donation-button:hover { background: #2389b5; }
-
-/* Footer (stile base come nel tuo) */
-footer {
-  background: #1f1f21;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-  </style>
-
   <meta name="description" content="TopHeroes 英雄指南：阵营（联盟、自然、部落）、碎片优先级与史诗特性，帮你决定该培养谁。" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
+     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/css/heroes.css" />
+
   <link rel="canonical" href="https://www.guidetopheroes.com/zh/html/heroes.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/heroes.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/heroes.html" />
@@ -192,7 +28,8 @@ footer {
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/heroes.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/heroes.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/heroes.html" />
-  <meta property="og:title" content="TopHeroes 指南 - 英雄" />
+
+  <meta property="og:title" content="TopHeroes Guide - 英雄" />
   <meta property="og:description" content="TopHeroes 英雄指南：阵营（联盟、自然、部落）、碎片优先级与史诗特性，帮你决定该培养谁。" />
   <meta property="og:url" content="https://www.guidetopheroes.com/zh/html/heroes.html" />
   <meta property="og:type" content="website" />
@@ -204,8 +41,8 @@ footer {
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="ko_KR" />
   <meta property="og:locale:alternate" content="vi_VN" />
-  <meta property="og:locale:alternate" content="ja_JP" />
   <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TopHeroes Guide - 英雄" />
@@ -213,83 +50,82 @@ footer {
   <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
 
   <script type="application/ld+json" id="seo-jsonld">
-{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.guidetopheroes.com/zh/html/heroes.html#webpage","name":"TopHeroes 指南 - 英雄","url":"https://www.guidetopheroes.com/zh/html/heroes.html","inLanguage":"zh","description":"TopHeroes 英雄指南：阵营（联盟、自然、部落）、碎片优先级与史诗特性，帮你决定该培养谁。","image":"https://www.guidetopheroes.com/images/og-image.svg","isPartOf":{"@type":"WebSite","name":"TopHeroes Guide","url":"https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/zh/html/heroes.html#webpage", "name": "TopHeroes Guide - 英雄", "url": "https://www.guidetopheroes.com/zh/html/heroes.html", "inLanguage": "zh", "description": "TopHeroes 英雄指南：阵营（联盟、自然、部落）、碎片优先级与史诗特性，帮你决定该培养谁。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
   <script type="application/ld+json" id="seo-breadcrumbs">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.guidetopheroes.com/zh/index.html"},{"@type":"ListItem","position":2,"name":"英雄","item":"https://www.guidetopheroes.com/zh/html/heroes.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.guidetopheroes.com/zh/index.html"}, {"@type": "ListItem", "position": 2, "name": "英雄", "item": "https://www.guidetopheroes.com/zh/html/heroes.html"}]}
   </script>
 </head>
 <body>
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
 
-  <!-- ===== MAIN: solo formattazione, testi invariati ===== -->
-  <main id="main-content" itemscope itemtype="https://schema.org/Article">
+<main id="main-content" itemscope itemtype="https://schema.org/Article">
+<section id="heroes" class="page-header">
+  <h1 itemprop="headline">英雄</h1>
+  <p class="lead">游戏中有三个阵营：<a href="league.html">联盟</a>、<a href="nature.html">自然</a>、以及 <a href="horde.html">部落</a>。</p>
+</section>
 
-    <section id="heroes" class="page-header">
-      <h1 itemprop="headline">英雄</h1>
-      <p class="lead">游戏中有三个阵营：<a href="league.html">联盟</a>、<a href="nature.html">自然</a>、以及 <a href="horde.html">部落</a>。</p>
-    </section>
+<section class="panel">
+  <p>在某个阶段，你必须选择要主力培养哪一个阵营。</p>
 
-    <section class="panel">
-      <p>在某个阶段，你必须选择要主力培养哪一个阵营。</p>
+  <div class="faction-grid">
+    <article class="faction-card" aria-labelledby="league-title">
+      <h3 id="league-title"><a href="league.html">联盟</a></h3>
+      <p>前期非常强势，而且你会拿到大量起手联盟英雄的碎片。联盟可以一路竞争到后期。终局对部落较弱，但对自然表现很好。</p>
+    </article>
 
-      <div class="faction-grid">
-        <article class="faction-card" aria-labelledby="league-title">
-          <h3 id="league-title"><a href="league.html">联盟</a></h3>
-          <p>前期非常强势，而且你会拿到大量起手联盟英雄的碎片。联盟可以一路竞争到后期。终局对部落较弱，但对自然表现很好。</p>
-        </article>
+    <article class="faction-card" aria-labelledby="nature-title">
+      <h3 id="nature-title"><a href="nature.html">自然</a></h3>
+      <p>前期很强，但没有联盟那么强。中期会比较吃力，对联盟与部落都不太好打。到了后期，自然非常强，对联盟略吃亏，但对部落非常有优势。</p>
+    </article>
 
-        <article class="faction-card" aria-labelledby="nature-title">
-          <h3 id="nature-title"><a href="nature.html">自然</a></h3>
-          <p>前期很强，但没有联盟那么强。中期会比较吃力，对联盟与部落都不太好打。到了后期，自然非常强，对联盟略吃亏，但对部落非常有优势。</p>
-        </article>
+    <article class="faction-card" aria-labelledby="horde-title">
+      <h3 id="horde-title"><a href="horde.html">部落</a></h3>
+      <p>这个阵营前期最难养成。在你拿到第一个神话英雄（Storm Maiden）之前，部落会打得很辛苦。终局大概是最强的阵营：对自然较弱，但对联盟非常强势。</p>
+    </article>
+  </div>
+</section>
 
-        <article class="faction-card" aria-labelledby="horde-title">
-          <h3 id="horde-title"><a href="horde.html">部落</a></h3>
-          <p>这个阵营前期最难养成。在你拿到第一个神话英雄（Storm Maiden）之前，部落会打得很辛苦。终局大概是最强的阵营：对自然较弱，但对联盟非常强势。</p>
-        </article>
-      </div>
-    </section>
+<section class="panel" aria-labelledby="traits-title">
+  <h3 id="traits-title">史诗英雄特性</h3>
+  <p>另外也有一些非传奇／神话英雄值得升级。所有史诗英雄（紫色）都有「特性」，能提供不错的增益。当史诗英雄达到 12 星（2 颗银星）后即可解锁特性。</p>
+  <p>特性最多可点到第三条。特性等级上限为 30。</p>
+  <ul class="two-cols">
+    <li>Brawler：研究速度</li>
+    <li>Knight：士兵训练速度</li>
+    <li>Ranger：红宝石采集速度</li>
+    <li>Priestess：治疗速度</li>
+    <li>Dancer：治疗速度</li>
+    <li>Minister：治疗速度</li>
+    <li>Outlaw：木材采集速度</li>
+    <li>Rogue：石头采集速度</li>
+  </ul>
+</section>
 
-    <section class="panel" aria-labelledby="traits-title">
-      <h3 id="traits-title">史诗英雄特性</h3>
-      <p>另外也有一些非传奇／神话英雄值得升级。所有史诗英雄（紫色）都有「特性」，能提供不错的增益。当史诗英雄达到 12 星（2 颗银星）后即可解锁特性。</p>
-      <p>特性最多可点到第三条。特性等级上限为 30。</p>
-      <ul class="two-cols">
-        <li>Brawler：研究速度</li>
-        <li>Knight：士兵训练速度</li>
-        <li>Ranger：红宝石采集速度</li>
-        <li>Priestess：治疗速度</li>
-        <li>Dancer：治疗速度</li>
-        <li>Minister：治疗速度</li>
-        <li>Outlaw：木材采集速度</li>
-        <li>Rogue：石头采集速度</li>
-      </ul>
-    </section>
+<section class="panel" aria-labelledby="shards-title">
+  <h3 id="shards-title">碎片与晋升</h3>
+  <p>建议把通用传奇碎片存起来，只用在神话英雄身上。因为传奇英雄的碎片可以在酒馆取得。</p>
+  <p>几乎所有传奇英雄在达到 12 星后都可以晋升为神话英雄。晋升后会变得更强：技能更好，并且会添加一个技能。总共需要 9 颗晋升石。晋升分为四个阶段（tiers），每个阶段都会给你更大的增益。</p>
+</section>
+</main>
 
-    <section class="panel" aria-labelledby="shards-title">
-      <h3 id="shards-title">碎片与晋升</h3>
-      <p>建议把通用传奇碎片存起来，只用在神话英雄身上。因为传奇英雄的碎片可以在酒馆取得。</p>
-      <p>几乎所有传奇英雄在达到 12 星后都可以晋升为神话英雄。晋升后会变得更强：技能更好，并且会添加一个技能。总共需要 9 颗晋升石。晋升分为四个阶段（tiers），每个阶段都会给你更大的增益。</p>
-    </section>
-
-    <div id="footer"></div>
+<div id="footer"></div>
 <script>
   fetch("/zh/html/footer.html")
     .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    })
-    .catch(err => console.error('Footer load failed:', err));
+    .then(html => { document.getElementById("footer").innerHTML = html; })
+    .catch(err => console.error("Footer load failed:", err));
 </script>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const icons = {
-    'League':'/images/league-symbol.jpeg',
-    'Nature':'/images/nature-symbol.jpeg',
-    'Horde':'/images/horde-symbol.jpeg'
+    "League": "/images/league-symbol.jpeg",
+    "联盟": "/images/league-symbol.jpeg",
+    "Nature": "/images/nature-symbol.jpeg",
+    "自然": "/images/nature-symbol.jpeg",
+    "Horde": "/images/horde-symbol.jpeg",
+    "部落": "/images/horde-symbol.jpeg"
   };
   function addIcon(el, word) {
     const img = document.createElement('img');
@@ -299,13 +135,13 @@ document.addEventListener('DOMContentLoaded', function() {
     img.style.marginLeft = '0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(function(a) {
-    const text = a.textContent.trim();
-    if (icons[text]) addIcon(a, text);
+  document.querySelectorAll('a').forEach(function (a) {
+    const t = a.textContent.trim();
+    if (icons[t]) addIcon(a, t);
   });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
-    const text = h.textContent.trim();
-    if (icons[text]) addIcon(h, text);
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+    const t = h.textContent.trim();
+    if (icons[t]) addIcon(h, t);
   });
 });
 </script>

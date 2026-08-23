@@ -1,0 +1,153 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes ガイド</h1>
+    <div id="header-lang-selector" class="header-lang-selector"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/ja/index.html">ホーム</a></li>
+
+      <!-- HEROES -->
+      <li class="has-sub">
+        <a href="/ja/html/heroes.html">ヒーロー</a>
+        <ul class="dropdown">
+          <li><a href="/ja/html/heroes.html">概要</a></li>
+          <li><a href="/ja/html/league.html">League</a></li>
+          <li><a href="/ja/html/nature.html">Nature</a></li>
+          <li><a href="/ja/html/horde.html">Horde</a></li>
+
+          <li class="has-flyout">
+            <a href="/ja/html/gear.html">装備</a>
+            <button class="flyout-toggle" aria-label="装備の項目をさらに表示" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/ja/html/exclusive-gear.html">専用装備</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/ja/html/pets.html">ペット</a></li>
+        </ul>
+      </li>
+
+      <!-- BUILDING -->
+      <li class="has-sub">
+        <a href="/ja/html/building.html">建築</a>
+        <ul class="dropdown">
+          <li><a href="/ja/html/building.html">概要</a></li>
+          <li><a href="/ja/html/villagers.html">住民</a></li>
+          <li><a href="/ja/html/lord-gear.html">ロード装備</a></li>
+          <li><a href="/ja/html/relic.html">レリックホール</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ja/html/research.html">研究</a></li>
+
+      <!-- ADVENTURE -->
+      <li class="has-sub">
+        <a href="/ja/html/generaladv.html">アドベンチャー</a>
+        <ul class="dropdown">
+          <li><a href="/ja/html/generaladv.html">概要</a></li>
+          <li><a href="/ja/html/classicadv.html">クラシック</a></li>
+          <li><a href="/ja/html/seasononeadv.html">シーズン1</a></li>
+        </ul>
+      </li>
+
+      <!-- EVENTS -->
+      <li class="has-sub">
+        <a href="/ja/html/events.html">イベント</a>
+        <ul class="dropdown">
+          <li><a href="/ja/html/guild-race.html">ギルドレース</a></li>
+          <li><a href="/ja/html/arms-race.html">アームズレース</a></li>
+          <li><a href="/ja/html/kingdom.html">KvK</a></li>
+          <li><a href="/ja/html/guildboss.html">ギルドボス</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ja/html/beginners.html">初心者ガイド</a></li>
+      <li><a href="/ja/html/shop.html">ショップ</a></li>
+      <li><a href="/ja/html/tips.html">コスト表</a></li>
+      <li><a href="/ja/html/quick-tips.html">クイックTips</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="#">応援する</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Stripeで寄付</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/ja/html/privacy.html">ポリシー＆プライバシー</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  .site-info {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0 4px;
+  }
+
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .header-lang-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+
+  @media (max-width: 640px) {
+    .site-info { padding: 0 0 2px; }
+    .site-title { font-size: clamp(1.45rem, 8vw, 2rem); }
+    .header-lang-selector { margin-top: 6px; }
+  }
+
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  nav .has-flyout { position: relative; display: flex; align-items: center; }
+  nav .has-flyout > a { flex: 1; }
+  nav .has-flyout > .flyout-toggle {
+    background: transparent;
+    border: 0;
+    color: #d1d1d6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+  nav .has-flyout > .flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: none;
+    min-width: 220px;
+    z-index: 1200;
+  }
+  nav .has-flyout:hover > .flyout,
+  nav .has-flyout.open > .flyout { display: block; }
+</style>

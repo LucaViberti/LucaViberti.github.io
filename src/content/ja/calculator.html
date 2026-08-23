@@ -1,0 +1,60 @@
+<h1>Rush Events ポイント計算機</h1>
+<p class="description">各項目の数量を入力して合計ポイントを計算します。</p>
+<div class="row">
+  <label for="books">書物：</label>
+  <input id="books" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="booksPoints">0</span>
+  <span class="formula">ポイント (x&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="essence">ペットエッセンス：</label>
+  <input id="essence" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="essencePoints">0</span>
+  <span class="formula">ポイント (y&nbsp;&times;&nbsp;15)</span>
+</div>
+<div class="row">
+  <label for="food">ペットフード：</label>
+  <input id="food" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="foodPoints">0</span>
+  <span class="formula">ポイント (z&nbsp;&times;&nbsp;3&nbsp;/&nbsp;10)</span>
+</div>
+<div class="row">
+  <label for="uncommon">アンコモンペット：</label>
+  <input id="uncommon" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="uncommonPoints">0</span>
+  <span class="formula">ポイント (q&nbsp;&times;&nbsp;150)</span>
+</div>
+<div class="row">
+  <label for="rare">レアペット：</label>
+  <input id="rare" type="number" min="0" step="1" value="0" oninput="updatePoints()" />
+  <span class="points" id="rarePoints">0</span>
+  <span class="formula">ポイント (r&nbsp;&times;&nbsp;900)</span>
+</div>
+<div id="total">合計：0 ポイント</div>
+
+<script>
+  function updatePoints() {
+    const x = parseFloat(document.getElementById('books').value) || 0;
+    const y = parseFloat(document.getElementById('essence').value) || 0;
+    const z = parseFloat(document.getElementById('food').value) || 0;
+    const q = parseFloat(document.getElementById('uncommon').value) || 0;
+    const r = parseFloat(document.getElementById('rare').value) || 0;
+
+    const bookPoints = x / 10;
+    const essencePoints = y * 15;
+    const foodPoints = (z * 3) / 10;
+    const uncommonPoints = q * 150;
+    const rarePoints = r * 900;
+
+    document.getElementById('booksPoints').textContent = bookPoints.toFixed(1);
+    document.getElementById('essencePoints').textContent = essencePoints.toFixed(1);
+    document.getElementById('foodPoints').textContent = foodPoints.toFixed(1);
+    document.getElementById('uncommonPoints').textContent = uncommonPoints.toFixed(1);
+    document.getElementById('rarePoints').textContent = rarePoints.toFixed(1);
+
+    const total = bookPoints + essencePoints + foodPoints + uncommonPoints + rarePoints;
+    document.getElementById('total').textContent = '合計：' + total.toFixed(1) + ' ポイント';
+  }
+
+  updatePoints();
+</script>

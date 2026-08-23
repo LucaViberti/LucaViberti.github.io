@@ -1,0 +1,93 @@
+<!-- HERO INTRO -->
+<section class="hero" aria-label="ようこそ">
+  <h1 itemprop="headline">TopHeroes ガイド</h1>
+  <p><strong>TopHeroes</strong> をもっと速く進めるための、短く実用的なガイド：勢力別ヒーロー、アドベンチャーモード、イベント、初心者向けのコツ。</p>
+  <p>誰を育成するか、何を強化するか、リソースをどう計画するかをすぐ決められるように、クイックカードとチェックリストで整理しています。</p>
+</section>
+
+<!-- EVENT BANNER -->
+<div class="event-banner" aria-label="期間限定イベント">
+  <h2>🌸 駿馬の泉 – 期間限定イベント！</h2>
+  <p>春イベントの完全ガイド：ピンボール戦略、消費の優先度、購入計画。</p>
+  <a href="/ja/html/spring.html">春イベントガイドを見る →</a>
+</div>
+
+<!-- QUICK SECTIONS -->
+<h2 class="section-head">ガイドを探す</h2>
+<div class="quick-sections" aria-label="メインセクション">
+  <article class="mini-card">
+    <h3>ヒーロー</h3>
+    <p>勢力の概要と基本ビルド：リーグ、ネイチャー、ホード。</p>
+    <a href="/ja/html/heroes.html">ヒーローへ</a>
+  </article>
+
+  <article class="mini-card">
+    <h3>アドベンチャー</h3>
+    <p>アドベンチャーの仕組み、マップの基本、報酬。</p>
+    <a href="/ja/html/generaladv.html">アドベンチャーへ</a>
+  </article>
+
+  <article class="mini-card">
+    <h3>イベント</h3>
+    <p>ギルドレース、アームズレース、KvK、ギルドボス向けのクイック戦略。近日公開</p>
+    <!-- <a href="/html/events.html">Go to Events</a> -->
+  </article>
+
+  <article class="mini-card">
+    <h3>初心者ガイド</h3>
+    <p>序盤の優先事項、スターターチーム、リソース管理。</p>
+     <a href="/ja/html/beginners.html">初心者ガイドへ</a> 
+  </article>
+
+  <article class="mini-card">
+    <h3>コスト表</h3>
+    <p>進行計画に役立つ、資源と強化コストの表。</p>
+    <a href="/ja/html/tips.html">コスト表へ</a>
+  </article>
+
+  <article class="mini-card">
+    <h3>クイックTips</h3>
+    <p>日課やイベント準備を改善するための、速くて実用的なコツ。</p>
+    <a href="/ja/html/quick-tips.html">クイックTipsへ</a>
+  </article>
+</div>
+
+<!-- CONTACT FORM -->
+<section class="contact-card" aria-label="お問い合わせ">
+  <h2>お問い合わせ</h2>
+  <p>質問・提案・フィードバックがあれば、メッセージを送ってください。メールで返信します。</p>
+
+  <form class="th-contact"
+        action="https://formspree.io/f/mrbazyyz"
+        method="POST" autocomplete="on">
+    <label>
+      メールアドレス
+      <input type="email" name="email" required placeholder="you@example.com" inputmode="email">
+    </label>
+
+    <label>
+      メッセージ
+      <textarea name="message" required rows="6" placeholder="メッセージを入力してください..."></textarea>
+    </label>
+
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+           style="position:absolute;left:-10000px;opacity:0">
+
+    <input type="hidden" name="_subject" value="TopHeroes Guide からの新しいメッセージ">
+    <input type="hidden" name="_next" value="https://www.guidetopheroes.com/ja/html/thanks.html">
+
+    <div class="th-privacy">
+      <input type="checkbox" id="consent" required>
+      <label for="consent">
+        返信を行う目的に限り、私のデータ（メールアドレスとメッセージ）の処理に同意します。
+        <a href="/ja/html/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>をお読みください。
+      </label>
+    </div>
+
+    <div class="th-actions">
+      <button type="submit" class="th-btn">送信</button>
+    </div>
+  </form>
+</section>
+
+<!-- Footer import -->

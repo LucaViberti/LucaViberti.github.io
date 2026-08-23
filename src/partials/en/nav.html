@@ -1,0 +1,153 @@
+<header>
+  <div class="site-info">
+    <h1 class="site-title">TopHeroes Guide</h1>
+    <div id="header-lang-selector" class="header-lang-selector"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+
+      <!-- HEROES -->
+      <li class="has-sub">
+        <a href="/html/heroes.html">Heroes</a>
+        <ul class="dropdown">
+          <li><a href="/html/heroes.html">Overview</a></li>
+          <li><a href="/html/league.html">League</a></li>
+          <li><a href="/html/nature.html">Nature</a></li>
+          <li><a href="/html/horde.html">Horde</a></li>
+
+          <li class="has-flyout">
+            <a href="/html/gear.html">Gear</a>
+            <button class="flyout-toggle" aria-label="More for Gear" aria-expanded="false" aria-controls="gear-flyout">▾</button>
+            <ul id="gear-flyout" class="flyout">
+              <li><a href="/html/exclusive-gear.html">Exclusive Gear</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/html/pets.html">Pets</a></li>
+        </ul>
+      </li>
+
+      <!-- BUILDING -->
+      <li class="has-sub">
+        <a href="/html/building.html">Building</a>
+        <ul class="dropdown">
+          <li><a href="/html/building.html">Overview</a></li>
+          <li><a href="/html/villagers.html">Villagers</a></li>
+          <li><a href="/html/lord-gear.html">Lord Gear</a></li>
+          <li><a href="/html/relic.html">Relics Hall</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/html/research.html">Research</a></li>
+
+      <!-- ADVENTURE -->
+      <li class="has-sub">
+        <a href="/html/generaladv.html">Adventure</a>
+        <ul class="dropdown">
+          <li><a href="/html/generaladv.html">Overview</a></li>
+          <li><a href="/html/classicadv.html">Classic</a></li>
+          <li><a href="/html/seasononeadv.html">Season 1</a></li>
+        </ul>
+      </li>
+
+      <!-- EVENTS -->
+      <li class="has-sub">
+        <a href="/html/events.html">Events</a>
+        <ul class="dropdown">
+          <li><a href="/html/guild-race.html">Guild Race</a></li>
+          <li><a href="/html/arms-race.html">Arms Race</a></li>
+          <li><a href="/html/kingdom.html">KvK</a></li>
+          <li><a href="/html/guildboss.html">Guild Boss</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/html/beginners.html">Beginners Guide</a></li>
+      <li><a href="/html/shop.html">Shop</a></li>
+      <li><a href="/html/tips.html">Cost Tables</a></li>
+      <li><a href="/html/quick-tips.html">Quick Tips</a></li>
+
+      <!-- SUPPORT US -->
+      <li class="has-sub">
+        <a href="#">Support Us</a>
+        <ul class="dropdown">
+          <li><a href="https://ko-fi.com/landaadvice" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://donate.stripe.com/8x29AT3q37Sl4BJg127AI00" target="_blank" rel="noopener noreferrer">Donate with Stripe</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/html/privacy.html">Policy &amp; Privacy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  nav ul li a { font-size: 0.85rem; }
+  nav ul li ul li a { font-size: 0.85rem; }
+
+  .site-info {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0 4px;
+  }
+
+  .site-title{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight:700;
+    background: linear-gradient(90deg,#29abe0,#7dd3fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    margin:0;
+    padding:8px 0;
+    text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .header-lang-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+
+  @media (max-width: 640px) {
+    .site-info { padding: 0 0 2px; }
+    .site-title { font-size: clamp(1.45rem, 8vw, 2rem); }
+    .header-lang-selector { margin-top: 6px; }
+  }
+
+  nav { position: relative; z-index: 10; }
+  nav ul li .dropdown li a { position: relative; z-index: 2; }
+
+  nav .has-flyout { position: relative; display: flex; align-items: center; }
+  nav .has-flyout > a { flex: 1; }
+  nav .has-flyout > .flyout-toggle {
+    background: transparent;
+    border: 0;
+    color: #d1d1d6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    line-height: 1;
+  }
+  nav .has-flyout > .flyout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: none;
+    min-width: 220px;
+    z-index: 1200;
+  }
+  nav .has-flyout:hover > .flyout,
+  nav .has-flyout.open > .flyout { display: block; }
+</style>

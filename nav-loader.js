@@ -289,6 +289,7 @@
 
     // se finisce con / -> index.html (opzionale, ma utile se hai root)
     if (p.endsWith('/')) p += 'index.html';
+    p = p.replace(/\/html\/index\.html$/, '/index.html');
 
     return p;
   }
@@ -304,12 +305,13 @@
       // risolve href relativo -> pathname assoluto
       let linkPath;
       try {
-        linkPath = normalizePath(new URL(raw, window.location.origin).pathname);
+        linkPath = normalizePath(new URL(raw, window.location.href).pathname);
       } catch {
         return;
       }
 
       if (linkPath === currentPath) {
+        a.setAttribute('aria-current', 'page');
         a.style.color = '#fff';
         a.style.borderBottomColor = '#29abe0';
       }
@@ -318,19 +320,37 @@
 
   function initNavInteractions(navRoot) {
     const isTouch = window.matchMedia('(hover: none)').matches;
+    const closeMenus = () => {
+      navRoot.querySelectorAll('li.open').forEach((li) => li.classList.remove('open'));
+      navRoot.querySelectorAll('li.has-sub').forEach((li) => li.classList.add('closed'));
+      navRoot.querySelectorAll('[aria-expanded]').forEach((el) => el.setAttribute('aria-expanded', 'false'));
+    };
 
     navRoot.querySelectorAll('nav li.has-sub > a').forEach((link) => {
+      link.setAttribute('aria-haspopup', 'true');
+      link.setAttribute('aria-expanded', 'false');
+      link.parentElement.addEventListener('pointerenter', () => link.parentElement.classList.remove('closed'));
+      link.parentElement.addEventListener('focusin', () => link.parentElement.classList.remove('closed'));
       link.addEventListener('click', function (e) {
         const li = this.parentElement;
         if (!isTouch) return;
 
         if (!li.classList.contains('open')) {
           e.preventDefault();
+          closeMenus();
+          li.classList.remove('closed');
           li.classList.add('open');
-          navRoot.querySelectorAll('nav li.has-sub').forEach((other) => {
-            if (other !== li) other.classList.remove('open');
-          });
+          this.setAttribute('aria-expanded', 'true');
         }
+      });
+      link.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowDown') return;
+        e.preventDefault();
+        closeMenus();
+        link.parentElement.classList.remove('closed');
+        link.parentElement.classList.add('open');
+        link.setAttribute('aria-expanded', 'true');
+        link.parentElement.querySelector('.dropdown a')?.focus();
       });
     });
 
@@ -351,16 +371,13 @@
     document.addEventListener('click', (e) => {
       const nav = navRoot.querySelector('nav');
       if (!nav || nav.contains(e.target)) return;
-      navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-      navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+      closeMenus();
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
-      navRoot.querySelectorAll('nav li.has-sub').forEach((li) => li.classList.remove('open'));
-      navRoot.querySelectorAll('.has-flyout .flyout-toggle').forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-      navRoot.querySelectorAll('.has-flyout').forEach((li) => li.classList.remove('open'));
+      if (navRoot.querySelector('nav')?.contains(document.activeElement)) document.activeElement.blur();
+      closeMenus();
     });
   }
 

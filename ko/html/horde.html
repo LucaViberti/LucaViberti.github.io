@@ -9,93 +9,110 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes 가이드 - 호드 영웅</title>
+  <title>TopHeroes Guide – Horde — 전설 영웅</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
   <style>
-body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#f5f5f7;line-height:1.6;}
-header{background:#16171A;padding:12px 20px;display:flex;flex-direction:column;align-items:center;}
-header h1{margin:0;color:#f5f5f7;font-size:1.5rem;}
-header .tagline{margin-left:12px;color:#888;font-size:.9rem;white-space:nowrap;}
-header .site-info{display:flex;flex-direction:column;align-items:center;}
-nav{width:100%;margin-top:10px;}
-nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
-nav ul li{position:relative;}
-nav ul li a{color:#d1d1d6;text-decoration:none;padding:10px 8px;font-size:.85rem;transition:color .3s;}
-nav ul li a:hover{color:#fff;}
-nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1f1f21;border-radius:6px;box-shadow:0 8px 16px rgba(0,0,0,.3);padding:10px 0;min-width:200px;z-index:1000;}
-nav ul li:hover ul{display:block;}
-nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
-nav ul li ul li a:hover{background:#2c2c2e;color:#fff;}
+body {
+  margin:0; padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:#f5f5f7; line-height:1.6;
+}
 
-main{padding:40px 20px;max-width:1000px;margin:0 auto;}
-section{margin-bottom:40px;}
-footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
+header { background:#16171A; padding:12px 20px; display:flex; flex-direction:column; align-items:center; }
+header h1 { margin:0; color:#f5f5f7; font-size:1.5rem; }
+header .tagline { margin-left:12px; color:#888; font-size:.9rem; white-space:nowrap; }
+header .site-info { display:flex; flex-direction:column; align-items:center; }
 
-header{background:linear-gradient(180deg,#1e2541 0%,#141720 100%);box-shadow:0 2px 4px rgba(0,0,0,.4);border-bottom:1px solid #2b2f3a;}
-header .tagline{color:#b0b6c7;}
-nav ul{gap:20px;}
-nav ul li a{text-transform:uppercase;font-weight:500;letter-spacing:.05em;padding:12px 6px;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;color:#ccd0dd;}
-nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
-nav ul li ul{background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;}
-nav ul li ul li a{font-size:.85rem;}
-nav ul li ul li a:hover{background:#25314d;color:#fff;}
+nav { width:100%; margin-top:10px; }
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+nav ul li { position:relative; }
+nav ul li a { color:#d1d1d6; text-decoration:none; padding:10px 8px; font-size:.85rem; transition:color .3s; }
+nav ul li a:hover { color:#fff; }
+nav ul li ul { display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); background:#1f1f21; border-radius:6px; box-shadow:0 8px 16px rgba(0,0,0,.3); padding:10px 0; min-width:200px; z-index:1000; }
+nav ul li:hover ul { display:block; }
+nav ul li ul li a { display:block; padding:8px 20px; color:#d1d1d6; white-space:nowrap; }
+nav ul li ul li a:hover { background:#2c2c2e; color:#fff; }
 
-.page-title{font-size:2rem;margin-bottom:12px;color:#1e2541;}
-.lead{color:#4b5563;margin-bottom:28px;}
+main { padding:40px 20px; max-width:1000px; margin:0 auto; }
+section { margin-bottom:40px; }
+footer { background:#1f1f21; color:#888; padding:20px; text-align:center; font-size:.8rem; }
 
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.04);margin-bottom:22px;}
-.card h3{margin:0 0 6px;color:#1f2937;font-size:1.15rem;}
-.role{font-size:.9rem;color:#6b7280;margin-bottom:8px;}
+header { background:linear-gradient(180deg,#1e2541 0%,#141720 100%); box-shadow:0 2px 4px rgba(0,0,0,.4); border-bottom:1px solid #2b2f3a; }
+header .tagline { color:#b0b6c7; }
+nav ul { gap:20px; }
+nav ul li a { text-transform:uppercase; font-weight:500; letter-spacing:.05em; padding:12px 6px; border-bottom:2px solid transparent; transition:color .3s, border-bottom-color .3s; color:#ccd0dd; }
+nav ul li a:hover { color:#fff; border-bottom-color:#29abe0; }
+nav ul li ul { background:#1c2133; border:1px solid #2b2f3a; border-radius:6px; padding:10px 0; }
+nav ul li ul li a { font-size:.85rem; }
+nav ul li ul li a:hover { background:#25314d; color:#fff; }
 
-.hero{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;}
-.hero img{max-width:14%;min-width:110px;height:auto;border-radius:6px;border:1px solid #e5e7eb;}
-.hero .txt{flex:1 1 300px;min-width:260px;}
-.hero ul{margin:8px 0 0 18px;}
-.hero li{margin:2px 0;}
+.page-title { font-size:2rem; margin-bottom:12px; color:#1e2541; }
+.lead { color:#4b5563; margin-bottom:28px; }
 
-.lineup-wrapper{display:grid;gap:18px;}
-.lineup-card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.03);}
-.lineup-card h3{margin:0 0 12px;font-size:1.05rem;color:#1f2937;text-transform:uppercase;letter-spacing:.08em;}
-.lineup-row{display:flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px dashed #e5e7eb;}
-.lineup-row:last-of-type{border-bottom:none;}
-.lineup-label{font-size:.85rem;font-weight:600;color:#6b7280;width:70px;text-transform:uppercase;letter-spacing:.08em;}
-.lineup-heroes{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.lineup-heroes img{width:54px;height:54px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.06);}
-.lineup-note{margin:12px 0 0;font-size:.9rem;color:#4b5563;}
+.card {
+  background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.04); margin-bottom:22px;
+}
+.card h3 { margin:0 0 6px; color:#1f2937; font-size:1.15rem; }
+.role { font-size:.9rem; color:#6b7280; margin-bottom:8px; }
 
-@media (max-width:768px){.hero{flex-direction:column}.hero img{max-width:100%}}
+.hero { display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; }
+.hero img {
+  max-width:14%; min-width:110px;
+  height:auto; border-radius:6px; border:1px solid #e5e7eb;
+}
+.hero .txt { flex:1 1 300px; min-width:260px; }
+.hero ul { margin:8px 0 0 18px; }
+.hero li { margin:2px 0; }
+
+.lineup-wrapper { display:grid; gap:18px; }
+.lineup-card { background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px; padding:16px 18px; box-shadow:0 2px 8px rgba(0,0,0,.03); }
+.lineup-card h3 { margin:0 0 12px; font-size:1.05rem; color:#1f2937; text-transform:uppercase; letter-spacing:.08em; }
+.lineup-row { display:flex; align-items:center; gap:12px; padding:6px 0; border-bottom:1px dashed #e5e7eb; }
+.lineup-row:last-of-type { border-bottom:none; }
+.lineup-label { font-size:.85rem; font-weight:600; color:#6b7280; width:70px; text-transform:uppercase; letter-spacing:.08em; }
+.lineup-heroes { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.lineup-heroes img { width:54px; height:54px; object-fit:cover; border-radius:8px; border:1px solid #e5e7eb; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,.06); }
+.lineup-note { margin:12px 0 0; font-size:.9rem; color:#4b5563; }
+
+@media (max-width:768px) {
+  .hero { flex-direction:column; }
+  .hero img { max-width:100%; }
+}
   </style>
-  <meta name="description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
+  <meta name="description" content="TopHeroes 가이드 - Horde 영웅" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.guidetopheroes.com/ko/html/horde.html" />
-  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/horde.html" />
-  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/horde.html" />
-  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/horde.html" />
-  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/horde.html" />
-  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/horde.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/horde.html" />
-  <meta property="og:title" content="TopHeroes 가이드 - 호드 영웅" />
-  <meta property="og:description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
+  <meta property="og:title" content="TopHeroes Guide – Horde — 전설 영웅" />
+  <meta property="og:description" content="TopHeroes 가이드 - Horde 영웅" />
   <meta property="og:url" content="https://www.guidetopheroes.com/ko/html/horde.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TopHeroes Guide" />
   <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
   <meta property="og:image:alt" content="TopHeroes Guide cover image" />
   <meta property="og:locale" content="ko_KR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes Guide – Horde — 전설 영웅" />
+  <meta name="twitter:description" content="TopHeroes 가이드 - Horde 영웅" />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
+  <link rel="canonical" href="https://www.guidetopheroes.com/ko/html/horde.html" />
+  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/horde.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/horde.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/horde.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/horde.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/horde.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/horde.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/horde.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/horde.html" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="vi_VN" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes 가이드 - 호드 영웅" />
-  <meta name="twitter:description" content="TopHeroes Horde heroes guide with lineups, roles, and picks." />
-  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/ko/html/horde.html#webpage", "name": "TopHeroes 가이드 - 호드 영웅", "url": "https://www.guidetopheroes.com/ko/html/horde.html", "inLanguage": "ko", "description": "TopHeroes Horde heroes guide with lineups, roles, and picks.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
-  </script>
-  <script type="application/ld+json" id="seo-breadcrumbs">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.guidetopheroes.com/ko/index.html"}, {"@type": "ListItem", "position": 2, "name": "Horde", "item": "https://www.guidetopheroes.com/ko/html/horde.html"}]}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/ko/html/horde.html#webpage", "name": "TopHeroes Guide – Horde — 전설 영웅", "url": "https://www.guidetopheroes.com/ko/html/horde.html", "inLanguage": "ko", "description": "TopHeroes 가이드 - Horde 영웅", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
 </head>
 <body>
@@ -103,242 +120,247 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 <script src="/nav-loader.js" defer></script>
 
 <main>
-  <section id="horde-heroes">
-    <h2 class="page-title">호드 — 전설 영웅</h2>
-    <p class="lead">호드 팩션 가이드: 전사, 주문술사, 추천 구성 및 핵심 경험담.</p>
-    <p class="lead">Related: <a href="heroes.html">All heroes</a>, <a href="league.html">League</a>, <a href="nature.html">Nature</a>.</p>
+  <section id="horde-legendary">
+    <h2 class="page-title">Horde — 전설 영웅</h2>
+    <p class="lead">주요 Horde 전설 영웅의 역할, 스킬과 활용 방법을 소개합니다.</p>
+    <p class="lead">관련 문서: <a href="heroes.html">모든 영웅</a>, <a href="league.html">League</a>, <a href="nature.html">Nature</a>.</p>
 
     <div class="card">
-      <h3>최고의 구성 — 호드</h3>
+      <h3>최적 편성 — Horde</h3>
       <div class="lineup-wrapper">
         <div class="lineup-card">
-          <h3>메인</h3>
+          <h3>주력 편성</h3>
           <div class="lineup-row">
-            <div class="lineup-label">전방</div>
+            <div class="lineup-label">전열</div>
             <div class="lineup-heroes">
-              <img src="/images/desert-prince.jpeg" alt="사막 왕자" loading="lazy" decoding="async">
-              <img src="/images/swordmaster.jpeg" alt="검술 대사" loading="lazy" decoding="async">
+              <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
+              <img src="/images/wanderer.png" alt="Wanderer" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="lineup-row">
-            <div class="lineup-label">중앙</div>
+            <div class="lineup-label">중열</div>
             <div class="lineup-heroes">
-              <img src="/images/storm-maiden.jpeg" alt="폭풍 소녀" loading="lazy" decoding="async">
-              <img src="/images/warlock.jpeg" alt="마술사" loading="lazy" decoding="async">
+              <img src="/images/beastmaster.png" alt="Beastmaster" loading="lazy" decoding="async">
+              <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="lineup-row">
-            <div class="lineup-label">후방</div>
+            <div class="lineup-label">후열</div>
             <div class="lineup-heroes">
-              <img src="/images/shaman.jpeg" alt="샤먼" loading="lazy" decoding="async">
-              <img src="/images/witch.jpeg" alt="마녀" loading="lazy" decoding="async">
+              <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
+              <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
             </div>
           </div>
-          <div class="lineup-note"><strong>팁:</strong> 사막 왕자(전설)는 호드 최고의 영웅이고 폭풍 소녀(신화)는 게임 체인저입니다.</div>
+          <p class="lineup-note">참고: Wanderer의 스킬 효과를 받으려면 전열에 유지하세요.</p>
         </div>
 
         <div class="lineup-card">
-          <h3>초기 게임</h3>
+          <h3>피해량 중심 (보스 상대 최적 편성)</h3>
           <div class="lineup-row">
-            <div class="lineup-label">전방</div>
+            <div class="lineup-label">전열</div>
             <div class="lineup-heroes">
-              <img src="/images/swordmaster.jpeg" alt="검술 대사" loading="lazy" decoding="async">
-              <img src="/images/barbarian.jpeg" alt="야만인" loading="lazy" decoding="async">
+              <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
+              <img src="/images/wanderer.png" alt="Wanderer" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="lineup-row">
-            <div class="lineup-label">중앙</div>
+            <div class="lineup-label">중열</div>
             <div class="lineup-heroes">
-              <img src="/images/wilderness-hunter.jpeg" alt="광야 사냥꾼" loading="lazy" decoding="async">
+              <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
+              <img src="/images/wilderness.jpeg" alt="Wilderness Hunter" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="lineup-row">
-            <div class="lineup-label">후방</div>
+            <div class="lineup-label">후열</div>
             <div class="lineup-heroes">
-              <img src="/images/shaman.jpeg" alt="샤먼" loading="lazy" decoding="async">
-              <img src="/images/soulmancer.jpeg" alt="영혼 술사" loading="lazy" decoding="async">
+              <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
+              <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
             </div>
           </div>
+          <p class="lineup-note">참고: 일반 편성에서 Beastmaster만 Wilderness Hunter로 바꾸세요. 피해량을 위한 최적 편성입니다.</p>
         </div>
       </div>
     </div>
 
     <!-- Shaman -->
     <div class="card">
-      <h3>샤먼</h3>
-      <div class="role">힐러 (스타터)</div>
+      <h3>Shaman</h3>
+      <div class="role">힐러</div>
       <div class="hero">
-        <img src="/images/shaman.jpeg" alt="샤먼" loading="lazy" decoding="async">
+        <img src="/images/shaman.jpeg" alt="Shaman" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>주술 치유</em>: 팀 치유.</li>
-            <li><em>신령의 축복</em>: 팀 보호, 피해 감소.</li>
-            <li><em>음령 분산</em>: 부정적인 효과 제거.</li>
-            <li><em>정령 동료</em>: 행동 불가 저항.</li>
-            <li><em>자연의 품</em>: 전투 중 재생.</li>
+            <li><em>Healing Breeze</em>: HP가 가장 낮은 아군을 회복합니다.</li>
+            <li><em>Ancestor’s Soul</em>: HP가 가장 낮은 아군에게 빙의하여 잠시 죽음을 막습니다.</li>
+            <li><em>Rain Blessing</em>: 모든 아군의 회복 효과를 늘립니다.</li>
+            <li><em>Restorative Totem</em>: HP를 회복하는 치유 토템을 소환합니다.</li>
+            <li><em>Wolf Soul</em>: 늑대 두 마리를 소환합니다.</li>
           </ul>
-          <p>호드의 완벽한 스타터 힐러입니다. 초반 생존을 담당하며 나중에도 사용됩니다.</p>
+          <p>처음 얻게 되는 Horde 힐러입니다. 초반에는 좋지만 후반 교체 대상: <strong>Witch</strong> (후반에 교체).</p>
         </div>
       </div>
     </div>
 
     <!-- Swordmaster -->
     <div class="card">
-      <h3>검술 대사</h3>
-      <div class="role">탱크</div>
+      <h3>Swordmaster</h3>
+      <div class="role">탱커</div>
       <div class="hero">
-        <img src="/images/swordmaster.jpeg" alt="검술 대사" loading="lazy" decoding="async">
+        <img src="/images/swordmaster.jpeg" alt="Swordmaster" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>검술 마스터</em>: 회피력 증가, 반격.</li>
-            <li><em>연쇄 베기</em>: 여러 대상 공격.</li>
-            <li><em>전사의 기지</em>: 방어력 증가.</li>
-            <li><em>검의 춤</em>: 동작 속도 증가.</li>
-            <li><em>강철 의지</em>: 상태 이상 저항.</li>
+            <li><em>Whirlwind</em>: 주변 적을 공격합니다.</li>
+            <li><em>Blade Storm</em>: 회전하며 피해를 줍니다.</li>
+            <li><em>Battle Will</em>: 잠시 HP 1을 유지하여 죽음을 한 번 막습니다.</li>
+            <li><em>Crazy Cut</em>: 피해를 주고 피해 감소를 얻습니다.</li>
+            <li><em>Suppression</em>: 잃은 HP에 비례하여 피해를 늘립니다.</li>
           </ul>
-          <p>호드의 튼튼한 탱크이며 높은 데미지도 입힙니다. 초반부터 후반까지 신뢰할 수 있는 전선 보유자입니다.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Desert Prince (best legend) -->
-    <div class="card">
-      <h3>사막 왕자</h3>
-      <div class="role">탱크/DPS (최고)</div>
-      <div class="hero">
-        <img src="/images/desert-prince.jpeg" alt="사막 왕자" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>능력</strong>
-          <ul>
-            <li><em>모래 폭풍</em>: 범위 피해, 대상 약화.</li>
-            <li><em>사막의 통치</em>: 팀 공격력 증가.</li>
-            <li><em>모래 갑옷</em>: 피해 감소, 반사.</li>
-            <li><em>신기루</em>: 자신 방어 증가, 회피.</li>
-            <li><em>사막의 왕</em>: 모든 통계 증가.</li>
-          </ul>
-          <p><strong>호드의 최고 전설 영웅입니다.</strong> 탱크 역할을 하면서 무시무시한 데미지를 입히며 팀을 강화합니다. 우선순위 업그레이드.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Storm Maiden (mythic, game changer) -->
-    <div class="card">
-      <h3>폭풍 소녀</h3>
-      <div class="role">DPS (신화 - 게임 체인저)</div>
-      <div class="hero">
-        <img src="/images/storm-maiden.jpeg" alt="폭풍 소녀" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>능력</strong>
-          <ul>
-            <li><em>번개 타격</em>: 높은 고정 피해.</li>
-            <li><em>폭풍</em>: 범위 연쇄 피해.</li>
-            <li><em>전기 방패</em>: 반사 데미지.</li>
-            <li><em>번개 속도</em>: 공격 속도 대폭 증가.</li>
-            <li><em>폭풍의 군주</em>: 모든 피해 증가.</li>
-          </ul>
-          <p><strong>신화 호드 영웅으로서 게임 체인저입니다.</strong> 무릿무시한 데미지와 속도로 게임을 지배합니다. 신화로 도달하면 절대적인 DPS가 됩니다.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Witch (best healer) -->
-    <div class="card">
-      <h3>마녀</h3>
-      <div class="role">힐러/서포트 (최고의 힐러)</div>
-      <div class="hero">
-        <img src="/images/witch.jpeg" alt="마녀" loading="lazy" decoding="async">
-        <div class="txt">
-          <strong>능력</strong>
-          <ul>
-            <li><em>회복 물약</em>: 모든 팀 치유.</li>
-            <li><em>마법 보호</em>: 시드 강화.</li>
-            <li><em>약초 학</em>: 치유력 증가.</li>
-            <li><em>주술 도움</em>: 팀 부정 효과 제거.</li>
-            <li><em>마녀의 축복</em>: 모든 팀 생명력 재생.</li>
-          </ul>
-          <p><strong>호드의 최고 힐러입니다.</strong> 강력한 치유와 생존 제공 능력으로 팀을 살린다. 나중 게임에서 필수 선택.</p>
+          <p>피해도 주는 탱커입니다. 교체 대상: <strong>Desert Prince</strong> (가능한 한 빨리 교체).</p>
         </div>
       </div>
     </div>
 
     <!-- Barbarian -->
     <div class="card">
-      <h3>야만인</h3>
-      <div class="role">탱크</div>
+      <h3>Barbarian</h3>
+      <div class="role">탱커</div>
       <div class="hero">
-        <img src="/images/barbarian.jpeg" alt="야만인" loading="lazy" decoding="async">
+        <img src="/images/barbarian.jpeg" alt="Barbarian" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>광폭화</em>: 체력이 낮을 때 공격력 증가.</li>
-            <li><em>도끼 돌진</em>: 전방 범위 공격.</li>
-            <li><em>가죽 방어</em>: 방어력 증가.</li>
-            <li><em>분노 유발</em>: 피해를 흡수합니다.</li>
-            <li><em>야만의 힘</em>: 모든 데미지 증가.</li>
+            <li><em>Fortified Defense</em>: 피해를 흡수하는 보호막을 부여합니다.</li>
+            <li><em>Taunt</em>: 적이 이 영웅을 공격하도록 강제합니다.</li>
+            <li><em>Insatiable Hunger</em>: HP와 공격력을 늘립니다.</li>
+            <li><em>Savage Strike</em>: 적에게 피해를 주고 기절시킵니다.</li>
+            <li><em>Eye of Insight</em>: 받는 스킬 피해를 줄입니다.</li>
+            <li><em>Horde Defender</em>: 편성된 모든 Horde 영웅의 피해 감소를 늘립니다.</li>
           </ul>
-          <p>호드의 강력한 탱크 선택지입니다. 높은 통계와 생존력으로 초반 보호합니다.</p>
+          <p>안정적인 초반 탱커입니다. 후반 교체 대상: <strong>Desert Prince</strong> 또는 <strong>Beastmaster</strong>. 후반에도 특히 Nature 팀을 상대할 때 유용합니다.</p>
         </div>
       </div>
     </div>
 
     <!-- Warlock -->
     <div class="card">
-      <h3>마술사</h3>
-      <div class="role">서포트/DPS</div>
+      <h3>Warlock</h3>
+      <div class="role">지원 / 딜러</div>
       <div class="hero">
-        <img src="/images/warlock.jpeg" alt="마술사" loading="lazy" decoding="async">
+        <img src="/images/warlock.jpeg" alt="Warlock" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>암흑 저주</em>: 적 능력력 약화.</li>
-            <li><em>영혼 추출</em>: 에너지 흡수.</li>
-            <li><em>섀도우 보호</em>: 팀 피해 감소.</li>
-            <li><em>어둠의 은혜</em>: 팀 방어력 증가.</li>
-            <li><em>마법 증폭</em>: 능력 피해 증가.</li>
+            <li><em>Whispered Shadows</em>: 피해를 주고 아군을 회복합니다.</li>
+            <li><em>Bloodlust</em>: 체력 흡수를 부여하고 아군의 공격 속도를 높입니다.</li>
+            <li><em>Shadow Rite</em>: 모든 Horde 영웅의 HP를 늘립니다.</li>
+            <li><em>Debilitation</em>: 적의 스킬 피해와 피해 감소를 낮춥니다.</li>
+            <li><em>Malicious Passion</em>: 아군 Horde 영웅의 피해량을 늘립니다.</li>
           </ul>
-          <p>호드의 다재다능한 서포터입니다. 상황에 따라 적을 약화시키거나 팀을 강화합니다.</p>
+          <p>버프와 디버프를 제공하는 강력한 지원 영웅으로, 후반 PvE에서도 매우 유용합니다.</p>
         </div>
       </div>
     </div>
 
-    <!-- Wilderness Hunter -->
+    <!-- Wilderness -->
     <div class="card">
-      <h3>광야 사냥꾼</h3>
-      <div class="role">DPS</div>
+      <h3>Wilderness</h3>
+      <div class="role">딜러</div>
       <div class="hero">
-        <img src="/images/wilderness-hunter.jpeg" alt="광야 사냥꾼" loading="lazy" decoding="async">
+        <img src="/images/wilderness.jpeg" alt="Wilderness" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>정조준 사격</em>: 높은 고정 피해.</li>
-            <li><em>화살비</em>: 범위 공격.</li>
-            <li><em>추적 기술</em>: 정확도 증가.</li>
-            <li><em>역경 극복</em>: 낮은 체력 시 회피 증가.</li>
-            <li><em>사냥의 기술</em>: 모든 통계 증가.</li>
+            <li><em>Barb</em>: 일반 공격을 강화하고 출혈을 부여합니다.</li>
+            <li><em>Fatal Prayer</em>: 피해를 주고 적을 밀쳐내며 공격력을 높입니다.</li>
+            <li><em>Hunter</em>: 공격력을 높입니다.</li>
+            <li><em>Impulse Instinct</em>: 공격 속도를 높입니다.</li>
+            <li><em>Tradition</em>: 편성된 Horde 영웅의 피해를 늘립니다.</li>
           </ul>
-          <p>호드의 신뢰할 수 있는 DPS입니다. 지속 피해와 정확도로 적을 제압합니다.</p>
+          <p>첫 Horde 딜러입니다. 교체 대상: <strong>Wu Kong</strong> 또는 <strong>Desert Maiden</strong> (가능한 한 빨리 교체).</p>
         </div>
       </div>
     </div>
 
     <!-- Soulmancer -->
     <div class="card">
-      <h3>영혼 술사</h3>
-      <div class="role">서포트</div>
+      <h3>Soulmancer</h3>
+      <div class="role">지원</div>
       <div class="hero">
-        <img src="/images/soulmancer.jpeg" alt="영혼 술사" loading="lazy" decoding="async">
+        <img src="/images/soulmancer.jpeg" alt="Soulmancer" loading="lazy" decoding="async">
         <div class="txt">
-          <strong>능력</strong>
+          <strong>스킬</strong>
           <ul>
-            <li><em>영혼 소환</em>: 팀을 돕는 영혼 생성.</li>
-            <li><em>신령 보호</em>: 팀 방어 증가.</li>
-            <li><em>영혼 연결</em>: 팀 피해 감소.</li>
-            <li><em>신령 투시</em>: 정확도 증가.</li>
-            <li><em>영혼의 합</em>: 모든 팀 통계 증가.</li>
+            <li><em>Soul Link</em>: 아군과 피해를 공유하고 그 일부에 면역이 됩니다.</li>
+            <li><em>Soul Recall</em>: 죽음 직전에 피해를 주고 잠시 죽지 않지만 이후 사망합니다.</li>
+            <li><em>Soul Empowerment</em>: 편성된 Horde 영웅의 HP를 늘립니다.</li>
+            <li><em>Soul Freeze</em>: 피해를 주며 대상을 빙결시킬 수 있습니다.</li>
+            <li><em>Pain Diffusion</em>: HP가 기준 이하가 되면 즉시 Soul Freeze를 발동합니다.</li>
           </ul>
-          <p>호드의 신비로운 서포터입니다. 팀을 강화하고 적을 방해합니다.</p>
+          <p>별 등급에 따라 잘 성장하는 지원 영웅입니다. 팀의 생존 시간을 늘려 후반에 널리 사용됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desert Prince -->
+    <div class="card">
+      <h3>Desert Prince</h3>
+      <div class="role">탱커 / 딜러</div>
+      <div class="hero">
+        <img src="/images/desert.jpeg" alt="Desert Prince" loading="lazy" decoding="async">
+        <div class="txt">
+          <strong>스킬</strong>
+          <ul>
+            <li><em>Royal Armor</em>: 피해를 흡수하는 보호막을 부여합니다.</li>
+            <li><em>Sand’s Blessing</em>: 추가 HP를 얻고 최대 HP에 비례한 고정 피해를 줍니다.</li>
+            <li><em>Royal Treasury</em>: Royal Armor 발동 시 아군의 스킬 피해를 늘립니다.</li>
+            <li><em>Scorching Scimitar</em>: 고정 피해를 줍니다.</li>
+            <li><em>Eye of Insight</em>: 받는 스킬 피해를 줄입니다.</li>
+            <li><em>Enthusiast</em>: 편성된 전설 이상 Horde 영웅마다 적의 사망/부상 비율을 높입니다.</li>
+          </ul>
+          <p>게임 최고의 영웅 중 하나로 뛰어난 피해량까지 갖춘 탱커입니다. <strong>필수 영웅</strong> 이며 모든 Horde 편성에 필요합니다. 교체 대상: <strong>Swordmaster</strong> (또는 <strong>Barbarian</strong> 별 등급이 비슷하다면). 획득하는 즉시 교체하세요.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Storm Maiden -->
+    <div class="card">
+      <h3>Storm Maiden</h3>
+      <div class="role">딜러</div>
+      <div class="hero">
+        <img src="/images/storm.jpeg" alt="Storm Maiden" loading="lazy" decoding="async">
+        <div class="txt">
+          <strong>스킬</strong>
+          <ul>
+            <li><em>Whirlwind Feathers</em>: 피해를 주며 나중에는 속도도 높입니다.</li>
+            <li><em>Lightning Storm</em>: 피해를 주고 적을 공중에 띄웁니다.</li>
+            <li><em>Wind of Freedom</em>: 편성된 모든 영웅에게 회피를 부여합니다.</li>
+            <li><em>Tornado</em>: 투사체를 막는 회오리를 시전한 뒤 피해를 줍니다.</li>
+            <li><em>Wind Field</em>: Tornado를 쓸 때마다 팀의 공격력이 높아집니다.</li>
+            <li><em>War Messenger</em>: 배치한 병사 1000명마다 병사의 공격력을 늘립니다.</li>
+          </ul>
+          <p>처음 얻게 되는 신화 영웅입니다. 다른 팩션과 경쟁할 수 있게 해 주는 최고의 딜러로, 지원 영웅이나 약한 딜러와 즉시 교체하세요.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Witch -->
+    <div class="card">
+      <h3>Witch</h3>
+      <div class="role">힐러 / 지원</div>
+      <div class="hero">
+        <img src="/images/witch.jpeg" alt="Witch" loading="lazy" decoding="async">
+        <div class="txt">
+          <strong>스킬</strong>
+          <ul>
+            <li><em>Dark Healing</em>: 아군을 회복합니다.</li>
+            <li><em>Dread Golem</em>: 적에게 공포와 일부 피해를 주는 골렘을 소환합니다.</li>
+            <li><em>Curse Fire</em>: Dark Healing 후 무작위 아군에게 피해 감소와 회복을 부여합니다.</li>
+            <li><em>Dark Magic Boost</em>: 아군의 공격력을 높이고 일시적인 기절 보호막을 부여합니다.</li>
+            <li><em>Guardian Messenger</em>: 배치한 병사 1000명마다 병사의 HP를 늘립니다.</li>
+          </ul>
+          <p>지원 능력을 겸비한 강력한 힐러입니다. 교체할 영웅: <strong>Shaman</strong> (획득하는 즉시 교체).</p>
         </div>
       </div>
     </div>
@@ -348,34 +370,21 @@ nav ul li ul li a:hover{background:#25314d;color:#fff;}
 
 <div id="footer"></div>
 <script>
-  fetch("/ko/html/footer.html")
+  fetch('/ko/html/footer.html')
     .then(res=>res.text())
     .then(html=>{document.getElementById("footer").innerHTML=html;});
 </script>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  const icons={
-    '연맹':'/images/league-symbol.jpeg',
-    '자연':'/images/nature-symbol.jpeg',
-    '호드':'/images/horde-symbol.jpeg'
-  };
+  const icons={'League':'/images/league-symbol.jpeg','Nature':'/images/nature-symbol.jpeg','Horde':'/images/horde-symbol.jpeg'};
   function addIcon(el,word){
     const img=document.createElement('img');
-    img.src=icons[word];
-    img.alt=word+' 기호';
-    img.style.height='1em';
-    img.style.marginLeft='0.3em';
+    img.src=icons[word]; img.alt=word+' symbol'; img.style.height='1em'; img.style.marginLeft='0.3em';
     el.appendChild(img);
   }
-  document.querySelectorAll('a').forEach(a=>{
-    const t=a.textContent.trim();
-    if(icons[t]) addIcon(a,t);
-  });
-  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{
-    const t=h.textContent.trim();
-    if(icons[t]) addIcon(h,t);
-  });
+  document.querySelectorAll('a').forEach(a=>{const t=a.textContent.trim(); if(icons[t]) addIcon(a,t);});
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{const t=h.textContent.trim(); if(icons[t]) addIcon(h,t);});
 });
 </script>
 </body>

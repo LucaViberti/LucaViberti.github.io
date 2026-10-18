@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
-  <title>TopHeroes 가이드 - 펫</title>
+  <title>TopHeroes Guide – 펫</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7174478441144796"
      crossorigin="anonymous"></script>
   <style>
@@ -21,156 +21,442 @@ body {
   line-height: 1.6;
 }
 
-/* --- stile invariato --- */
-header { background: linear-gradient(180deg, #1e2541 0%, #141720 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.4); border-bottom: 1px solid #2b2f3a; padding: 12px 20px; display:flex; flex-direction:column; align-items:center; }
-header h1 { margin:0; color:#f5f5f7; font-size:1.5rem; }
-header .tagline { margin-left:12px; color:#b0b6c7; font-size:.9rem; white-space:nowrap; }
-header .site-info { display:flex; flex-direction:column; align-items:center; }
-
-nav{width:100%;margin-top:10px;}
-nav ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
-nav ul li{position:relative;}
-nav ul li a{color:#ccd0dd;text-decoration:none;padding:12px 6px;font-size:.85rem;text-transform:uppercase;font-weight:500;letter-spacing:.05em;border-bottom:2px solid transparent;transition:color .3s,border-bottom-color .3s;}
-nav ul li a:hover{color:#fff;border-bottom-color:#29abe0;}
-nav ul li ul{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1c2133;border:1px solid #2b2f3a;border-radius:6px;padding:10px 0;min-width:200px;z-index:1000;}
-nav ul li:hover ul{display:block;}
-nav ul li ul li a{display:block;padding:8px 20px;color:#d1d1d6;white-space:nowrap;}
-nav ul li ul li a:hover{background:#25314d;color:#fff;}
-
-main{padding:40px 20px;max-width:1000px;margin:0 auto;}
-footer{background:#1f1f21;color:#888;padding:20px;text-align:center;font-size:.8rem;}
-
-.pets-shell{
-  background:linear-gradient(180deg,#ffffff 0%,#f4f6fd 55%,#eef2ff 100%);
-  border:1px solid #d9deee;border-radius:18px;
-  box-shadow:0 12px 34px rgba(23,38,77,.1);
-  padding:34px;
+header {
+  background: #16171A;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.pets-shell h2{margin:0 0 18px;font-size:2.15rem;color:#1c2742;}
-.pets-shell h3{margin:30px 0 12px;font-size:1.75rem;color:#1e2e54;border-bottom:1px solid #dfe4f4;padding-bottom:6px;}
-.pets-shell p,.pets-shell li{font-size:1.06rem;color:#1f2a44;}
-.pets-shell ul{margin:8px 0 12px 24px;}
-.pet-inline{display:inline-flex;background:#fff;border:1px solid #d7dff2;border-radius:14px;padding:6px;box-shadow:0 6px 14px rgba(18,37,78,.14);}
-.pet-inline img{width:120px;height:120px;object-fit:cover;border-radius:10px;}
-.pet-inline.small img{width:96px;height:96px;}
-.inline-link{color:#1f65d6;font-weight:700;text-decoration:none;}
-.inline-link:hover{text-decoration:underline;}
-  </style>
-  <meta name="description" content="TopHeroes 가이드 - 펫 - TopHeroes Guide." />
+
+header h1 {
+  margin: 0;
+  color: #f5f5f7;
+  font-size: 1.5rem;
+}
+
+header .tagline {
+  margin-left: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+header .site-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #d1d1d6;
+  text-decoration: none;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f21;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 0;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 8px 20px;
+  color: #d1d1d6;
+  white-space: nowrap;
+}
+
+nav ul li ul li a:hover {
+  background: #2c2c2e;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background: #1f1f21;
+  color: #888;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.donation-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e5;
+}
+.donation-button {
+  display: inline-block;
+  background: #29abe0;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.donation-button:hover {
+  background: #2389b5;
+}
+
+
+/* Enhanced navigation styling */
+header {
+  background: linear-gradient(180deg, #1e2541 0%, #141720 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  border-bottom: 1px solid #2b2f3a;
+}
+
+header .tagline {
+  color: #b0b6c7;
+}
+
+nav ul {
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ccd0dd;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 12px 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #29abe0;
+}
+
+nav ul li ul {
+  background: #1c2133;
+  border: 1px solid #2b2f3a;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+nav ul li ul li a {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+nav ul li ul li a:hover {
+  background: #25314d;
+  color: #ffffff;
+}
+
+
+
+.pets-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f6fd 55%, #eef2ff 100%);
+  border: 1px solid #d9deee;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(23, 38, 77, 0.1);
+  padding: 34px;
+}
+
+.pets-shell h2 {
+  margin: 0 0 18px;
+  font-size: 2.15rem;
+  color: #1c2742;
+  letter-spacing: 0.01em;
+}
+
+.pets-shell h3 {
+  margin: 30px 0 12px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #1e2e54;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dfe4f4;
+}
+
+.pets-shell p,
+.pets-shell li {
+  font-size: 1.06rem;
+  color: #1f2a44;
+}
+
+.pets-shell p {
+  margin: 10px 0 12px;
+}
+
+.pets-shell ul {
+  margin: 8px 0 12px 24px;
+  padding: 0;
+}
+
+.pets-shell li {
+  margin-bottom: 10px;
+}
+
+.pets-inline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 12px 0 8px;
+}
+
+.pet-inline {
+  margin: 6px 12px 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #d7dff2;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(18, 37, 78, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(18, 37, 78, 0.18);
+}
+
+.pet-inline img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dfe4f2;
+}
+
+.pet-inline.small img {
+  width: 96px;
+  height: 96px;
+}
+
+.inline-link {
+  color: #1f65d6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+
+</style>
+  <meta name="description" content="TopHeroes 가이드 - 펫" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.guidetopheroes.com/ko/html/pets.html" />
-  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/pets.html" />
-  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/pets.html" />
-  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/pets.html" />
-  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/pets.html" />
-  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/pets.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/pets.html" />
-  <meta property="og:title" content="TopHeroes 가이드 - 펫" />
-  <meta property="og:description" content="TopHeroes 가이드 - 펫 - TopHeroes Guide." />
+  <meta property="og:title" content="TopHeroes Guide – 펫" />
+  <meta property="og:description" content="TopHeroes 가이드 - 펫" />
   <meta property="og:url" content="https://www.guidetopheroes.com/ko/html/pets.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TopHeroes Guide" />
   <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
   <meta property="og:image:alt" content="TopHeroes Guide cover image" />
   <meta property="og:locale" content="ko_KR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes Guide – 펫" />
+  <meta name="twitter:description" content="TopHeroes 가이드 - 펫" />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
+  <link rel="canonical" href="https://www.guidetopheroes.com/ko/html/pets.html" />
+  <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/html/pets.html" />
+  <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/html/pets.html" />
+  <link rel="alternate" hreflang="ko" href="https://www.guidetopheroes.com/ko/html/pets.html" />
+  <link rel="alternate" hreflang="vi" href="https://www.guidetopheroes.com/vi/html/pets.html" />
+  <link rel="alternate" hreflang="zh" href="https://www.guidetopheroes.com/zh/html/pets.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/html/pets.html" />
+  <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/html/pets.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/html/pets.html" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="vi_VN" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes 가이드 - 펫" />
-  <meta name="twitter:description" content="TopHeroes 가이드 - 펫 - TopHeroes Guide." />
-  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <meta property="og:locale:alternate" content="ja_JP" />
   <script type="application/ld+json" id="seo-jsonld">
-{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/ko/html/pets.html#webpage", "name": "TopHeroes 가이드 - 펫", "url": "https://www.guidetopheroes.com/ko/html/pets.html", "inLanguage": "ko", "description": "TopHeroes 가이드 - 펫 - TopHeroes Guide.", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
+{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/ko/html/pets.html#webpage", "name": "TopHeroes Guide – 펫", "url": "https://www.guidetopheroes.com/ko/html/pets.html", "inLanguage": "ko", "description": "TopHeroes 가이드 - 펫", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
 </head>
 <body>
 <div id="navbar"></div>
 <script src="/nav-loader.js" defer></script>
+  <main>
+    <section id="pets">
+      <div class="pets-shell">
+        <h2>펫</h2>
+        <p>펫은 영웅 편성을 강화하는 데 필수적인 핵심 성장 시스템입니다. 영구적인 능력치 보너스와 팩션별 추가 효과로 전체 전투력에 직접 영향을 줍니다.</p>
 
-<main>
-<section id="pets">
-<div class="pets-shell">
+        <h3>펫 분류</h3>
+        <p>펫은 팩션 전용 펫과 전체 영웅 펫의 두 종류로 나뉩니다.</p>
+        <ul>
+          <li><strong>팩션 전용 펫</strong>: 특정 팩션 (League, Horde, Nature)의 영웅에게 더 강한 능력치 보너스를 제공합니다.
+            <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9" loading="lazy" decoding="async"></span>
+          </li>
+          <li><strong>전체 영웅 펫</strong>: 팩션과 관계없이 모든 영웅에게 일반 보너스를 제공합니다.
+            <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8" loading="lazy" decoding="async"></span>
+          </li>
+        </ul>
 
-<h2>펫</h2>
-<p>펫은 핵심 성장 시스템이며 영웅 편성을 강화하는 데 필수적입니다. 영구적인 능력치 보너스와 팩션 기반 추가 효과를 제공하여 전체 전투력에 직접적인 영향을 줍니다.</p>
+        <h3>주력 팩션에 맞는 펫 선택</h3>
+        <p>펫에 투자하기 전에 주력 팩션을 정하는 것이 중요합니다. 효율과 전투력을 높이려면 주력 펫도 같은 팩션에 맞추세요.</p>
+        <p>초반에 팩션을 지원하는 펫:</p>
+        <ul>
+          <li><strong>League</strong>: Eggy</li>
+          <li><strong>Horde</strong>: Howli (전체 영웅 펫이지만 Horde 전용 스킬 때문에 사용)</li>
+          <li><strong>Nature</strong>: Cactini</li>
+        </ul>
+        <p>Howli는 순수한 Horde 전용 능력치 펫이 아닙니다. 기본 보너스는 모든 영웅에게 적용되지만, 편성에 충분한 수의 Horde 영웅이 있으면 전용 스킬이 발동합니다. 모든 펫이 전설 등급에 도달하면 이 메커니즘을 갖습니다.</p>
+        <div class="pets-inline-row" aria-label="Pet references 4 and 3">
+          <span class="pet-inline"><img src="/images/pet4.jpeg" alt="Pet 4" loading="lazy" decoding="async"></span>
+          <span class="pet-inline"><img src="/images/pet3.png" alt="Pet 3" loading="lazy" decoding="async"></span>
+        </div>
 
-<h3>펫 분류</h3>
-<p>펫은 크게 두 가지로 나뉩니다: 팩션 전용 펫과 전체 영웅 펫.</p>
-<ul>
-  <li><strong>팩션 전용 펫</strong>: 특정 팩션(리그, 호드, 자연)에 속한 영웅에게 더 강력한 보너스를 제공합니다.
-    <span class="pet-inline small"><img src="/images/pet9.jpeg" alt="Pet 9" loading="lazy" decoding="async"></span>
-  </li>
-  <li><strong>전체 영웅 펫</strong>: 팩션과 관계없이 모든 영웅에게 적용되는 일반 보너스를 제공합니다.
-    <span class="pet-inline small"><img src="/images/pet8.jpeg" alt="Pet 8" loading="lazy" decoding="async"></span>
-  </li>
-</ul>
+        <h3>배치된 펫과 배치되지 않은 펫</h3>
+        <p>편성에 배치된 펫은 직접 보너스를 제공합니다. 배치되지 않은 펫도 패시브 버프를 제공하므로 주력 펫뿐 아니라 여러 펫을 성장시키는 것이 중요합니다.</p>
 
-<h3>주력 팩션에 따른 펫 선택</h3>
-<p>펫에 자원을 투자하기 전에 자신의 주력 팩션을 명확히 하는 것이 매우 중요합니다. 주력 펫은 반드시 해당 팩션과 일치해야 효율과 전투력이 극대화됩니다.</p>
-<ul>
-  <li><strong>리그</strong>: Eggy</li>
-  <li><strong>호드</strong>: Howli (전체 영웅 펫이지만 호드 전용 스킬 때문에 사용)</li>
-  <li><strong>자연</strong>: Cactini</li>
-</ul>
+        <h3>펫 등급</h3>
+        <p>처음에는 두 등급의 펫이 있습니다:</p>
+        <ul>
+          <li><strong>일반 (초록)</strong>: 펫 먹이를 얻기 위해 안심하고 방생할 수 있습니다.
+            <span class="pet-inline small"><img src="/images/pet7.jpeg" alt="Pet 7" loading="lazy" decoding="async"></span>
+          </li>
+          <li><strong>희귀 (파랑)</strong>: 승급에 필수적이므로 보관해야 합니다.
+            <span class="pet-inline small"><img src="/images/pet6.jpeg" alt="Pet 6" loading="lazy" decoding="async"></span>
+          </li>
+        </ul>
 
-<p>Howli는 순수한 호드 전용 능력치 펫은 아닙니다. 기본 보너스는 전체 영웅에게 적용되지만, 충분한 수의 호드 영웅이 편성되었을 때 발동되는 전용 스킬을 보유합니다. 이 메커니즘은 모든 펫이 전설 등급에 도달하면 공통으로 적용됩니다.</p>
+        <h3>레벨업과 승급</h3>
+        <p>펫을 강화하는 두 방법은 레벨업과 승급입니다.</p>
+        <ul>
+          <li><strong>레벨업</strong>: 펫 먹이를 사용하며 전설 등급부터는 펫 정수도 필요합니다.
+            <span class="pet-inline small"><img src="/images/pet1.jpeg" alt="Pet 1" loading="lazy" decoding="async"></span>
+          </li>
+          <li><strong>승급</strong>: 등급과 별 단계를 올립니다. 먹이가 아니라 중복 펫이 필요합니다.
+            <span class="pet-inline small"><img src="/images/pet2.jpeg" alt="Pet 2" loading="lazy" decoding="async"></span>
+          </li>
+        </ul>
+        <p>두 시스템은 서로 연관됩니다. 레벨 제한을 넘으려면 승급해야 하며, 승급에는 최소 펫 레벨이 필요합니다.</p>
+        <p>모든 레벨업과 승급 비용은 다음 표를 확인하세요: <a class="inline-link" href="/ko/html/tips.html">비용 표</a> 페이지.</p>
 
-<h3>배치 펫과 비배치 펫</h3>
-<p>편성에 배치된 펫은 능력치를 직접 제공합니다. 하지만 배치되지 않은 펫도 패시브 보너스를 제공하므로, 주력 펫만이 아니라 여러 펫을 성장시키는 것이 중요합니다.</p>
+        <h3>중복 펫 관리</h3>
+        <p>각 펫은 최고 레벨 개체 하나만 보너스를 제공합니다. 같은 펫 여러 마리의 버프는 중첩되지 않습니다.</p>
+        <p>따라서 다음을 권장합니다:</p>
+        <ul>
+          <li>종류마다 한 마리만 보관하고 성장시키세요.</li>
+          <li>실수로 방생하지 않도록 잠그세요.</li>
+          <li>나머지 중복 개체는 승급 재료로만 사용하세요.</li>
+        </ul>
+        <div class="pets-inline-row" aria-label="Pet reference 10">
+          <span class="pet-inline"><img src="/images/pet10.jpeg" alt="Pet 10" loading="lazy" decoding="async"></span>
+        </div>
 
-<h3>펫 희귀도</h3>
-<ul>
-  <li><strong>언커먼(초록)</strong>: 펫 사료 획득을 위해 안전하게 해제 가능</li>
-  <li><strong>레어(파랑)</strong>: 승급에 필요하므로 반드시 보관</li>
-</ul>
+        <h3>보조 편성의 펫</h3>
+        <p>보조 편성에도 주력 팩션을 우선하세요. 여러 팩션 전용 펫에 투자하기보다 보조 편성에 맞는 팩션 스킬을 가진 전체 영웅 펫을 쓰는 것이 더 현명할 때가 많습니다.</p>
 
-<h3>레벨업 vs 승급</h3>
-<ul>
-  <li><strong>레벨업</strong>: 펫 사료 사용, 전설 이후에는 펫 정수 필요</li>
-  <li><strong>승급</strong>: 희귀도와 별 상승, 중복 펫 필요</li>
-</ul>
+        <h3>후반 펫</h3>
+        <p>후반에는 진정한 팩션 전용 펫이 등장합니다. Horde는 Flickerkit을 해금하여 Horde 전용 능력치 보너스를 얻을 수 있습니다.</p>
+        <p>자원이 충분하면 Horde 주력 펫을 Howli에서 Flickerkit으로 바꾸는 것을 고려하세요.</p>
+        <span class="pet-inline"><img src="/images/pet5.jpeg" alt="Pet 5" loading="lazy" decoding="async"></span>
 
-<p>두 시스템은 상호 의존적이며, 레벨 제한은 승급으로 해제되고 승급에는 최소 레벨이 필요합니다.</p>
-<p>모든 비용 표는 <a class="inline-link" href="/ko/html/tips.html">비용 표</a> 페이지를 참고하세요.</p>
+        <h3>펫 획득 방법</h3>
+        <p>일일 현상금 퀘스트에서 몬스터를 처치하면 알을 얻고 펫 파라다이스에서 부화할 수 있습니다.</p>
+        <ul>
+          <li>알은 초록색 또는 파란색입니다.</li>
+          <li>두 종류의 알 모두 일반 또는 희귀 펫을 서로 다른 확률로 제공합니다.</li>
+        </ul>
+        <p>매일 다이아를 사용해 현상금 몬스터를 추가 해금하는 것을 강력히 권장합니다. 알 획득량과 장기적인 성장이 크게 늘어납니다.</p>
+        <p>알 부화와 펫 파라다이스 활용 방법은 다음을 확인하세요: <a class="inline-link" href="/ko/html/building.html">건설</a> 섹션의 설명. <strong>펫 파라다이스</strong>.</p>
 
-<h3>중복 펫 관리</h3>
-<p>각 펫은 최고 레벨의 한 마리만 보너스를 제공합니다. 중복 보너스는 적용되지 않습니다.</p>
-<ul>
-  <li>각 펫은 한 마리만 육성</li>
-  <li>실수 방지를 위해 잠금</li>
-  <li>나머지는 승급 재료로 사용</li>
-</ul>
+        <h3>최종 권장 사항</h3>
+        <p>항상 주력 팩션을 지원하는 펫에 자원을 집중하세요. 팩션 전용 펫이 가장 높은 가치를 제공하며 전체 영웅 펫은 보조 및 패시브 강화용으로 유용합니다.</p>
+      </div>
+    </section>
 
-<h3>보조 편성용 펫</h3>
-<p>보조 큐에서도 주력 팩션을 우선해야 하며, 전체 영웅 펫 중 전용 스킬이 맞는 펫을 활용하는 것이 효율적입니다.</p>
-
-<h3>고급 펫</h3>
-<p>후반부에는 진정한 팩션 전용 펫이 등장합니다. 호드의 경우 Flickerkit이 해금되며 호드 전용 능력치를 제공합니다.</p>
-
-<h3>펫 획득 방법</h3>
-<p>펫은 일일 현상금 퀘스트로 획득하며, 몬스터 처치 시 알을 얻고 펫 파라다이스에서 부화합니다.</p>
-<ul>
-  <li>알은 초록 또는 파랑</li>
-  <li>희귀도는 확률 기반</li>
-</ul>
-
-<p>다이아를 사용해 현상금 몬스터를 추가 개방하는 것을 강력히 추천합니다.</p>
-<p>펫 파라다이스 최적화는 <a class="inline-link" href="/ko/html/building.html">건설</a> 섹션을 참고하세요.</p>
-
-<h3>최종 정리</h3>
-<p>항상 주력 팩션을 지원하는 펫에 집중하세요. 팩션 전용 펫이 가장 높은 가치를 제공하며, 전체 영웅 펫은 보조 및 패시브 용도로 유용합니다.</p>
-
-</div>
-</section>
-
+    </main>
 <div id="footer"></div>
 <script>
-  fetch("/ko/html/footer.html")
+  fetch('/ko/html/footer.html')
     .then(res => res.text())
     .then(html => { document.getElementById("footer").innerHTML = html; });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const icons = {
+    'League':'/images/league-symbol.jpeg',
+    'Nature':'/images/nature-symbol.jpeg',
+    'Horde':'/images/horde-symbol.jpeg'
+  };
+  function addIcon(el, word) {
+    const img = document.createElement('img');
+    img.src = icons[word];
+    img.alt = word + ' symbol';
+    img.style.height = '1em';
+    img.style.marginLeft = '0.3em';
+    el.appendChild(img);
+  }
+  document.querySelectorAll('a').forEach(function(a) {
+    const text = a.textContent.trim();
+    if (icons[text]) addIcon(a, text);
+  });
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+    const text = h.textContent.trim();
+    if (icons[text]) addIcon(h, text);
+  });
+});
+</script>
 </body>
 </html>

@@ -20,7 +20,7 @@ def add_ja_hreflang(content: str, filename: str) -> str:
     
     # Estrai il percorso della pagina
     if filename == 'index.html':
-        page_path = '/html/index.html'
+        page_path = '/index.html'
     else:
         page_path = f'/html/{filename}'
     
@@ -54,13 +54,13 @@ def add_ja_hreflang(content: str, filename: str) -> str:
 def fix_japanese_pages():
     """Processa tutti i file HTML nella directory ja/html/"""
     
-    ja_html_dir = Path("/workspaces/LucaViberti.github.io/ja/html")
+    ja_html_dir = Path(__file__).resolve().parent / "ja" / "html"
     
     if not ja_html_dir.exists():
         print(f"✗ Directory {ja_html_dir} non esiste")
         return False
     
-    html_files = list(ja_html_dir.glob("*.html"))
+    html_files = list(ja_html_dir.glob("*.html")) + [ja_html_dir.parent / "index.html"]
     
     if not html_files:
         print(f"✗ Nessun file HTML trovato in {ja_html_dir}")
@@ -100,12 +100,12 @@ def fix_japanese_pages():
     if errors:
         print(f"✗ Errori: {len(errors)}")
     
-    return fixed_count > 0
+    return not errors
 
 if __name__ == "__main__":
-    os.chdir("/workspaces/LucaViberti.github.io")
+    os.chdir(Path(__file__).resolve().parent)
     success = fix_japanese_pages()
     if success:
-        print(f"\n✓ Operazione completata!")
+        print(f"\n✓ Metadati giapponesi verificati; nessuna traduzione sovrascritta.")
     else:
         print(f"\n✗ Nessun file è stato processato")

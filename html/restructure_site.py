@@ -23,8 +23,8 @@ To use this script:
 2. Run it with Python 3: `python restructure_site.py`.
 3. Commit and push the changes back to GitHub.
 
-Note: The script is idempotent – running it multiple times should not
-cause additional changes once the structure has been reorganized.
+This is a legacy migration script. It refuses to run on an already organized
+or multilingual checkout, where flattening paths could overwrite translations.
 """
 
 import os
@@ -83,7 +83,9 @@ def process_html(content: str) -> str:
 
 
 def main() -> None:
-    repo_root = Path(os.getcwd())
+    repo_root = Path(__file__).resolve().parent.parent
+    if (repo_root / "html").is_dir() or any((repo_root / lang).is_dir() for lang in ("de", "ja", "ko", "vi", "zh", "tc")):
+        raise SystemExit("This repository is already organized. Refusing to flatten pages or overwrite translations.")
     html_dir = repo_root / "html"
     images_dir = repo_root / "images"
 
@@ -94,6 +96,7 @@ def main() -> None:
     # Collect a list of files to process; avoid descending into target dirs
     for root, dirs, files in os.walk(repo_root):
         # Skip the output directories themselves
+        dirs[:] = [name for name in dirs if not name.startswith(".")]
         rel_root = Path(root).relative_to(repo_root)
         if rel_root == Path("html") or rel_root == Path("images"):
             # Do not recurse into html or images once created

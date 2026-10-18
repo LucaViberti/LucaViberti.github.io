@@ -1,0 +1,50 @@
+/* Shared behavior for the navigation fragments in every language. */
+nav li.has-sub.open > .dropdown,
+nav li.has-sub:focus-within > .dropdown {
+  display: block;
+}
+
+nav li.has-sub.closed > .dropdown {
+  display: none;
+}
+
+nav a:focus-visible,
+nav button:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 3px;
+}
+
+.th-contact input,
+.th-contact textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  nav > ul {
+    gap: 8px 14px;
+  }
+
+  nav ul li > .dropdown {
+    position: fixed;
+    top: auto;
+    left: 5vw;
+    width: 90vw;
+    max-height: 60vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transform: none;
+  }
+
+  nav .has-flyout {
+    flex-wrap: wrap;
+  }
+
+  nav .has-flyout > .flyout {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+}

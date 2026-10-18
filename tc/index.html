@@ -65,28 +65,6 @@ main{padding:32px 20px 56px; max-width:1000px; margin:0 auto;}
 .hero p{margin:0; color:#444;}
 .hero p + p{margin-top:8px}
 
-/* Event Banner */
-.event-banner{
-  background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
-  border:2px solid #e94560; border-radius:16px; padding:20px 24px; margin-bottom:24px;
-  box-shadow:0 8px 24px rgba(233,69,96,0.3);
-  display:flex; flex-direction:column; align-items:center; text-align:center;
-}
-.event-banner h2{
-  margin:0 0 8px; font-size:1.5rem; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.2);
-}
-.event-banner p{
-  margin:0 0 14px; color:#fff; font-size:1rem;
-}
-.event-banner a{
-  background:#fff; color:#e94560; padding:10px 24px; border-radius:30px;
-  text-decoration:none; font-weight:700; transition:transform .2s, box-shadow .2s;
-  display:inline-block;
-}
-.event-banner a:hover{
-  transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.2);
-}
-
 /* Quick sections (mini-cards) */
 .section-head{margin:28px 6px 10px; color:#1e2541; font-size:1.25rem;}
 .quick-sections{
@@ -165,6 +143,17 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   border-bottom:1px solid #e5e7eb;
 }
   </style>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TopHeroes Guide" />
+  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopHeroes 指南 – 策略、英雄、冒險和活動" />
+  <meta name="twitter:description" content="TopHeroes 指南：關於英雄（聯盟、自然、部落）、冒險模式（經典、第一季）、活動和新手提示的精簡指南。短小實用的策略，讓你進步更快。" />
+  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
+
   <link rel="canonical" href="https://www.guidetopheroes.com/tc/index.html" />
   <link rel="alternate" hreflang="en" href="https://www.guidetopheroes.com/index.html" />
   <link rel="alternate" hreflang="de" href="https://www.guidetopheroes.com/de/index.html" />
@@ -174,22 +163,12 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   <link rel="alternate" hreflang="zh-Hant" href="https://www.guidetopheroes.com/tc/index.html" />
   <link rel="alternate" hreflang="ja" href="https://www.guidetopheroes.com/ja/index.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.guidetopheroes.com/index.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TopHeroes Guide" />
-  <meta property="og:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
-  <meta property="og:image:alt" content="TopHeroes Guide cover image" />
-  <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="ko_KR" />
   <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="zh_CN" />
   <meta property="og:locale:alternate" content="ja_JP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TopHeroes 指南 – 策略、英雄、冒險和活動" />
-  <meta name="twitter:description" content="TopHeroes 指南：關於英雄（聯盟、自然、部落）、冒險模式（經典、第一季）、活動和新手提示的精簡指南。短小實用的策略，讓你進步更快。" />
-  <meta name="twitter:image" content="https://www.guidetopheroes.com/images/og-image.svg" />
-
   <script type="application/ld+json" id="seo-jsonld">
 {"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.guidetopheroes.com/tc/index.html#webpage", "name": "TopHeroes 指南 – 策略、英雄、冒險和活動", "url": "https://www.guidetopheroes.com/tc/index.html", "inLanguage": "zh-Hant", "description": "TopHeroes 指南：關於英雄（聯盟、自然、部落）、冒險模式（經典、第一季）、活動和新手提示的精簡指南。短小實用的策略，讓你進步更快。", "image": "https://www.guidetopheroes.com/images/og-image.svg", "isPartOf": {"@type": "WebSite", "name": "TopHeroes Guide", "url": "https://www.guidetopheroes.com"}}
   </script>
@@ -217,13 +196,6 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
       <p>在 <strong>TopHeroes</strong> 中快速進步的短小實用指南：陣營英雄、冒險模式、活動和新手提示。</p>
       <p>一切都整理成快速卡片和清單，幫助你決定培養誰、升級什麼，以及如何規劃資源。</p>
     </section>
-
-    <!-- EVENT BANNER -->
-    <div class="event-banner" aria-label="限時活動">
-      <h2>🌸 駿馬之春 – 限時活動！</h2>
-      <p>春季活動完整指南：彈珠策略、消費優先順序和購買規劃。</p>
-      <a href="/tc/html/spring.html">檢視春季活動指南 →</a>
-    </div>
 
     <!-- QUICK SECTIONS -->
     <h2 class="section-head">探索指南</h2>
@@ -308,7 +280,7 @@ footer{background:#1f1f21; color:#888; padding:20px; text-align:center; font-siz
   </main>
 
   <script>
-    fetch("/tc/html/footer.html")
+    fetch('/tc/html/footer.html')
       .then(res => res.text())
       .then(html => { document.getElementById("footer").innerHTML = html; })
       .catch(err => console.error('Footer load failed:', err));

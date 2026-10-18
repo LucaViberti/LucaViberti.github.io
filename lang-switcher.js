@@ -12,6 +12,15 @@ const LangSwitcher = {
     tc: { label: '中文 (繁)', short: 'TC', flag: '🇭🇰' },
     ja: { label: '日本語', short: 'JA', flag: '🇯🇵' }
   },
+  UI: {
+    en: { label: 'Language', choose: 'Choose language', list: 'Language list' },
+    de: { label: 'Sprache', choose: 'Sprache wählen', list: 'Sprachen' },
+    ko: { label: '언어', choose: '언어 선택', list: '언어 목록' },
+    vi: { label: 'Ngôn ngữ', choose: 'Chọn ngôn ngữ', list: 'Danh sách ngôn ngữ' },
+    zh: { label: '语言', choose: '选择语言', list: '语言列表' },
+    tc: { label: '語言', choose: '選擇語言', list: '語言清單' },
+    ja: { label: '言語', choose: '言語を選択', list: '言語一覧' }
+  },
 
   hasLangPrefix: function(pathname, lang) {
     const path = (pathname || '').toLowerCase();
@@ -33,13 +42,22 @@ const LangSwitcher = {
   // Salva la lingua preferita
   setPreferredLang: function(lang) {
     if (this.LANGS.includes(lang)) {
-      localStorage.setItem(this.STORAGE_KEY, lang);
+      try {
+        localStorage.setItem(this.STORAGE_KEY, lang);
+      } catch {
+        // Navigation must also work when browser storage is unavailable.
+      }
     }
   },
 
   // Legge la lingua preferita
   getPreferredLang: function() {
-    return localStorage.getItem(this.STORAGE_KEY) || this.DEFAULT_LANG;
+    try {
+      const lang = localStorage.getItem(this.STORAGE_KEY);
+      return this.LANGS.includes(lang) ? lang : this.DEFAULT_LANG;
+    } catch {
+      return this.DEFAULT_LANG;
+    }
   },
 
   stripLangPrefix: function(pathname) {
@@ -55,12 +73,14 @@ const LangSwitcher = {
 
   // Converte un path da una lingua all'altra
   switchPath: function(targetLang) {
+    if (!this.LANGS.includes(targetLang)) return window.location.pathname;
     const currentPath = window.location.pathname;
     const currentLang = this.getCurrentLang();
 
     if (currentLang === targetLang) return currentPath;
 
-    const basePath = this.stripLangPrefix(currentPath);
+    let basePath = this.stripLangPrefix(currentPath);
+    if (basePath === '/html/index.html') basePath = '/index.html';
 
     if (targetLang === 'en') {
       if (basePath === '' || basePath === '/') return '/index.html';
@@ -75,9 +95,10 @@ const LangSwitcher = {
 
   // Cambia lingua e naviga
   switchLanguage: function(targetLang) {
+    if (!this.LANGS.includes(targetLang)) return;
     this.setPreferredLang(targetLang);
     const newPath = this.switchPath(targetLang);
-    window.location.href = newPath;
+    window.location.href = newPath + window.location.search + window.location.hash;
   },
 
   createLangOptionButtons: function(currentLang) {
@@ -98,6 +119,7 @@ const LangSwitcher = {
   createHeaderSelector: function() {
     const currentLang = this.getCurrentLang();
     const currentMeta = this.LANG_META[currentLang] || this.LANG_META.en;
+    const ui = this.UI[currentLang] || this.UI.en;
 
     return `
       <style>
@@ -249,15 +271,15 @@ const LangSwitcher = {
         }
       </style>
 
-      <button type="button" class="th-lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose language">
+      <button type="button" class="th-lang-toggle" aria-haspopup="listbox" aria-controls="th-lang-menu" aria-expanded="false" aria-label="${ui.choose}">
         <span class="th-toggle-left">
           <span class="th-lang-flag" aria-hidden="true">${currentMeta.flag}</span>
-          <span class="th-toggle-label">Language: ${currentMeta.label}</span>
+          <span class="th-toggle-label">${ui.label}: ${currentMeta.label}</span>
         </span>
         <span class="th-caret" aria-hidden="true">▾</span>
       </button>
 
-      <div class="th-lang-menu" role="listbox" aria-label="Language list">
+      <div id="th-lang-menu" class="th-lang-menu" role="listbox" aria-label="${ui.list}">
         ${this.createLangOptionButtons(currentLang)}
       </div>
     `;
@@ -281,12 +303,37 @@ const LangSwitcher = {
     const closeMenu = () => {
       element.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
+      options.forEach((option) => { option.tabIndex = -1; });
     };
 
     const openMenu = () => {
       element.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
+      options.forEach((option) => { option.tabIndex = 0; });
     };
+
+    closeMenu();
+
+    element.addEventListener('keydown', (event) => {
+      if (['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) {
+        event.preventDefault();
+        openMenu();
+        const items = Array.from(options);
+        const current = items.indexOf(document.activeElement);
+        const index = event.key === 'Home' ? 0 : event.key === 'End' ? items.length - 1
+          : event.key === 'ArrowDown' ? (current + 1) % items.length
+          : (current < 0 ? items.length - 1 : (current - 1 + items.length) % items.length);
+        items[index].focus();
+      } else if (event.key === 'Escape') {
+        event.preventDefault();
+        closeMenu();
+        toggle.focus();
+      }
+    });
+
+    element.addEventListener('focusout', (event) => {
+      if (!element.contains(event.relatedTarget)) closeMenu();
+    });
 
     toggle.addEventListener('click', () => {
       const isOpen = element.classList.contains('open');

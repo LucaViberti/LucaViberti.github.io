@@ -1,47 +1,71 @@
 #!/usr/bin/env python3
-"""
-Converte tutti i file HTML nella cartella tc da cinese semplificato a cinese tradizionale.
-"""
-import os
-from opencc import OpenCC
+"""Convert text in traditional Chinese pages, preserving URLs and code.
 
-# Crea il convertitore da semplificato a tradizionale (Taiwan standard)
-cc = OpenCC('s2twp')  # Simplified to Traditional (Taiwan) with phrases
+Optional dependency: pip install opencc-python-reimplemented==0.1.7
+"""
+from html.parser import HTMLParser
+from pathlib import Path
 
-def convert_file(filepath):
-    """Converte un singolo file da cinese semplificato a tradizionale."""
-    print(f"Convertendo: {filepath}")
-    
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Converti il contenuto
-    converted = cc.convert(content)
-    
-    # Scrivi il file convertito
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(converted)
-    
-    print(f"✓ Completato: {filepath}")
+
+class TextConverter(HTMLParser):
+    def __init__(self, convert):
+        super().__init__(convert_charrefs=False)
+        self.convert = convert
+        self.output = []
+        self.skip = 0
+
+    def handle_starttag(self, tag, attrs):
+        self.output.append(self.get_starttag_text())
+        if tag in ('script', 'style'):
+            self.skip += 1
+
+    def handle_startendtag(self, tag, attrs):
+        self.output.append(self.get_starttag_text())
+
+    def handle_endtag(self, tag):
+        self.output.append(f'</{tag}>')
+        if tag in ('script', 'style'):
+            self.skip -= 1
+
+    def handle_data(self, data):
+        self.output.append(data if self.skip else self.convert(data))
+
+    def handle_entityref(self, name):
+        self.output.append(f'&{name};')
+
+    def handle_charref(self, name):
+        self.output.append(f'&#{name};')
+
+    def handle_comment(self, data):
+        self.output.append(f'<!--{data}-->')
+
+    def handle_decl(self, decl):
+        self.output.append(f'<!{decl}>')
+
+
+def convert_file(path, convert):
+    path = Path(path)
+    original = path.read_text(encoding='utf-8')
+    parser = TextConverter(convert)
+    parser.feed(original)
+    parser.close()
+    result = ''.join(parser.output)
+    if result != original:
+        path.write_text(result, encoding='utf-8')
+        return True
+    return False
+
 
 def main():
-    """Converte tutti i file HTML nella cartella tc."""
-    tc_dir = '/workspaces/LucaViberti.github.io/tc'
-    
-    # Converti index.html nella root di tc
-    index_file = os.path.join(tc_dir, 'index.html')
-    if os.path.exists(index_file):
-        convert_file(index_file)
-    
-    # Converti tutti i file HTML nella sottocartella html
-    html_dir = os.path.join(tc_dir, 'html')
-    if os.path.exists(html_dir):
-        for filename in os.listdir(html_dir):
-            if filename.endswith('.html'):
-                filepath = os.path.join(html_dir, filename)
-                convert_file(filepath)
-    
-    print("\n✅ Conversione completata!")
+    try:
+        from opencc import OpenCC
+    except ImportError:
+        raise SystemExit('Install the optional tool: pip install opencc-python-reimplemented==0.1.7')
+    root = Path(__file__).resolve().parent / 'tc'
+    converter = OpenCC('s2twp')
+    changed = sum(convert_file(path, converter.convert) for path in sorted(root.rglob('*.html')))
+    print(f'Converted text in {changed} pages; URLs, attributes and scripts preserved.')
+
 
 if __name__ == '__main__':
     main()
